@@ -21,6 +21,7 @@
 
 #include <stdlib.h>
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 #include <signal.h>
 #include <qapplication.h>
