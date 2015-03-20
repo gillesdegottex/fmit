@@ -1,8 +1,8 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html>
 	<head>
-		<title>Free Music Instrument Tuner (FMIT) Homepage</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Free Music Instrument Tuner (FMIT) Doc</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<meta name="GENERATOR" content="hands and eyes">
 		<link text="text/css" href="style.css" rel="stylesheet">
 	</head>
@@ -52,63 +52,103 @@
 		</div>
 		<div id="content">
 
+		<center>
+			<h2>Developer Documentation</h2>
+		</center>
+
+		<h3>Extern Libraries (versions are thoses of my system, a Suse 11.2)</h3>
+		<ul>
+			<li><a href="http://www.trolltech.com/products/qt/">qt3-mt</a> for the
+			GUI and the QThread class. (version 3.3.8b)</li>
+			<li><a href="http://www.opengl.org/">GL1/GLU1/glut3</a> for the
+			QGLWidget (versions 7.6/090301)</li>
+			<li><a href="http://www.fftw.org/">FFTW3</a> for the FFT (versions 3.2.2)</li>
+			<p>
+		</ul>
+		Optional
+		<ul>
+			<li><a href="http://www.alsa-project.org/">alsa</a> the ALSA
+			developpment library, for sound input (version 1.0.21)</li>
+			<li><a href="http://jackit.sf.net/">jack</a> the JACK
+			developpment library, for sound input (version 0.116.2)</li>
+			<li><a href="http://www.portaudio.com/">portaudio</a> the Portaudio
+			developpment library, for sound input (version 19-262)</li>
+		</ul>
+
+		<h3>Intern Libraries</h3>
+		<ul>
+			<li><h4>Music</h4>
+			<a href="http://home.gna.org/fanr/doc/Music/index.html">here</a> you will find a library
+			merged inside the project wich contains all algorithms, usefull
+			fonctions and mathematic procedures about music.
+			<p>
+			</li>
+			<li><h4>CppAddons</h4>
+			and <a href="http://home.gna.org/fanr/doc/CppAddons/index.html">here</a> another library
+			merged inside the project wich contains usefull C++ fonctions, one or
+			two simple design patterns, etc.
+			</li>
+		</ul>
+
+		<h3>To compile fmit</h3>
+		<ul>
+			<li><i>Install extern libraries</i><br>
+			Theses following packages should be installed:<br>
+
+			<ul>
+				<li>for Suse: qt3-devel Mesa-devel freeglut-devel fftw3-devel alsa-devel jack-devel portaudio-devel</li>
+				<li>for Ubuntu/Debian: libqt3-mt-dev, libgl1-mesa-dev, libglu1-mesa-dev, freeglut3-dev,
+libasound2-dev, libjack0.100.0-dev, fftw3-dev</li>
+				<li>for Debian: libqt3-mt-dev xlibmesa-gl-dev xlibmesa-glu-dev
+				freeglut3-dev libasound2-dev ...</li>
+				<li>for Mandrake: libqt3-devel
+				libxorg-x11-devel libMesaGLU*-devel libMesaglut*-devel
+				libalsa2-devel libjack-devel</li>
+			</ul>
+
+			<p>
+			<li><i>Get the sources</i><br>
+			on <a
+				href="http://gna.org/files/?group=fmit">tarball</a> or <a
+				href="https://gna.org/cvs/?group=fmit">CVS</a>
+			</li>
+			<p>
+			<li><i>Decompress</i> and go inside the project dir<br>
+			<code>$ uz fmit-0.98.1.tar.bz2</code><br>
+			<code>$ cd fmit</code>
+			<p>
+            <li><i>Create a build directory</i><br>
+            <code>$ mkdir build</code><br>
+            <code>$ cd build</code>
+            <p>
+			<li><i>Configure</i><br>
+			<code>$ cmake ..</code>
+<!--			with <i>YAMakefile</i> (a GNU compatible make must be available)<br>-->
+<!--			<code>$ make configure</code>-->
+<!--			<p>-->
+			<p>
+			or, for example, disable JACK support (see the output of "<code>$ cmake -L ..</code>" for more options)<br>
+<!--			<code>$ make features="enable-capture-jack" configure</code>-->
+			<code>$ cmake -D SOUNDSYSTEM_USE_JACK=OFF ..</code>
+			<p>
+			with cygwin, use these following configure options (with FMIT version >= 0.97.4)<br>
+			</li>
+			<p>
+			<li><i>Compile</i><br>
+			<code>$ make</code><br>
+			<p>
+			and finally, you can run fmit from the working dir:<br>
+			<code>$ ./src/fmit</code><br>
+			<p>
+			or install it (as root !)<br>
+			<code># make install</code><br>
+			</li>
+		</ul>
+		see
+		<a href="http://cvs.gna.org/viewcvs/fmit/fmit/README.txt?rev=HEAD&content-type=text/vnd.viewcvs-markup">README.txt</a>
+<!--		and <a href="http://cvs.gna.org/viewcvs/fmit/fmit/README?rev=HEAD&content-type=text/vnd.viewcvs-markup">README</a>-->
+		file for more information.
 		<p>
-        <br/>
-		FMIT is a graphical utility for tuning your musical instruments, with error and volume history and advanced features like microtonal tuning, statistics, and various views like waveform shape, harmonics ratios and real-time Discrete Fourier Transform (DFT). All views and advanced features are optional so that the interface can also be very simple.
-        <br/>
-
-        <br/>
-        <h2>!! Currently, I don't have time for maintaining this software anymore.
-        Thus, do not hesitate to fork it on GitHub !!
-        </h2>
-        
-        <br/>
-        <br/>
-
-<!-- 		<center>the simplest configuration</center> -->
-		<center><img src="figs/usual.png" alt="simple view"></center>
-		<p>
-		<table><tr>
-		<td>
-		<h3>Current features</h3>
-		<ul>
-			<li>Error history</li>
-			<li>Volume history</li>
-			<li>Statistics</li>
-			<li>Tunning scales<br/> (Werckmeister III, Kirnberger III, Diatonic and Meantone)</li>
-			<li>Microtonal tuning (with Scala file support)</li>
-			<li>Harmonic ratios</li>
-			<li>Wave shape</li>
-			<li>Discrete Fourier Transform view</li>
-			<li>Translations for: français</li>
-		</ul>
-		</td>
-		<td valign="top">
-		<h3>Running on</h3>
-		<ul>
-			<li><img align="center" src="figs/logo-linux.jpg"/> Linux</li>
-			<li><img align="center" src="figs/logo-freebsd-beasty.jpg"/> FreeBSD</li>
-			<li><img align="center" src="figs/logo-cygwin.jpg"/> Windows/Cygwin</li>
-		</ul>
-		</td>
-		<td valign="top">
-		<h3>Supported capture systems</h3>
-		<ul>
-			<li><img align="center" src="figs/logo-jack.jpg"/> JACK</li>
-			<li><img align="center" src="figs/logo-alsa.jpg"/> Alsa</li>
-			<li>PortAudio</li>
-			<li>OSS</li>
-		</ul>
-		</td>
-		</tr></table>
-
-		<h3>Thanks to</h3>
-		<ul>
-			<li>Contributor: Florian Hars for the tunning scales</li>
-			<li>Packagers: Toni Graffy and all the PackMan team ! (SuSE); Damian Wrobel (Fedora); Ludovic Reslinger (Debian); Edward Tomasz Napierala (FreeBSD)</li>
-			<li>Donators: Joel Brandt, Martin Lynch, ...</li>
-			<li>John Anderson for the microtonal module request; Scott Bahling for the request of the scales in cents; Jacob Shapiro to help me make FMIT working under Windows/Cygwin; Peter; ...</li>
-		</ul>
 		</div>
 		<div id="footer">
 			<div style="float: left; padding-left: 1em; padding-top: 0.5em;">

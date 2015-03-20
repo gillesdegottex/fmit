@@ -1,8 +1,8 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html>
 	<head>
-		<title>Free Music Instrument Tuner (FMIT) Homepage</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Free Music Instrument Tuner (FMIT) FAQ</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<meta name="GENERATOR" content="hands and eyes">
 		<link text="text/css" href="style.css" rel="stylesheet">
 	</head>
@@ -52,63 +52,50 @@
 		</div>
 		<div id="content">
 
+		<center>
+			<h2>FAQ</h2>
+		</center>
+		<br>
+		<h3>Users questions</h3>
+		<b>Q: I launched fmit executable, but it blocks immediatly, without errors.</b><br>
+		A: Stop other audio programs like jackd or any program wich could
+		keep the capture device jealously.<br>
+		(it should never append in last releases)
 		<p>
-        <br/>
-		FMIT is a graphical utility for tuning your musical instruments, with error and volume history and advanced features like microtonal tuning, statistics, and various views like waveform shape, harmonics ratios and real-time Discrete Fourier Transform (DFT). All views and advanced features are optional so that the interface can also be very simple.
-        <br/>
+        <b>Q: Sound is incoming into FMIT, the <i>Note Stability</i> is grey but nothing else happen</b><br>
+        A: 1) Try to increase the input volume by changing your mixer configuration. 2) Try to decrease the <i>Volume treshold</i> value under "Configuration/Sound Analysis/Algorithm" (move slider to the left)<br>
+        <p>
+        <b>Q: FMIT get no sound at all, nothing happens</b><br>
+        or<br>
+        <b>Q: FMIT get sound, but the arrow shakes in all directions</b><br>
+        A: Maybe your desired input channel is not correctly selected in your mixer settings. For example, the analog input is selected instead of the microphone. Try to change the recording channel.
+		<br>
+        <br>
 
-        <br/>
-        <h2>!! Currently, I don't have time for maintaining this software anymore.
-        Thus, do not hesitate to fork it on GitHub !!
-        </h2>
-        
-        <br/>
-        <br/>
+		<h3>Compilation questions</h3>
 
-<!-- 		<center>the simplest configuration</center> -->
-		<center><img src="figs/usual.png" alt="simple view"></center>
+        <b>Q: Which ./configure options I have to use with Windows/Cygwin ?</b><br>
+        A: These ones should be ok (never tested ...):<br/>
+        <code>$ cmake -D SOUNDSYSTEM_USE_ALSA=OFF -D SOUNDSYSTEM_USE_JACK=OFF -D SOUNDSYSTEM_USE_OSS=ON -D SOUNDSYSTEM_USE_PORTAUDIO=OFF ..</code>
+
+        <br><br>
+        <h4>For versions under 0.98.0</h4>
+
+		<b>Q: Which ./configure options I have to use with Windows/Cygwin ?</b><br>
+		A: These ones:<br/>
+		<code>$ ./configure --enable-alsa=no --enable-jack=no --enable-oss=yes --with-Qt-dir=/lib/qt3 --with-Qt-include-dir=/usr/include/qt3</code>
+		<br>
+
 		<p>
-		<table><tr>
-		<td>
-		<h3>Current features</h3>
-		<ul>
-			<li>Error history</li>
-			<li>Volume history</li>
-			<li>Statistics</li>
-			<li>Tunning scales<br/> (Werckmeister III, Kirnberger III, Diatonic and Meantone)</li>
-			<li>Microtonal tuning (with Scala file support)</li>
-			<li>Harmonic ratios</li>
-			<li>Wave shape</li>
-			<li>Discrete Fourier Transform view</li>
-			<li>Translations for: français</li>
-		</ul>
-		</td>
-		<td valign="top">
-		<h3>Running on</h3>
-		<ul>
-			<li><img align="center" src="figs/logo-linux.jpg"/> Linux</li>
-			<li><img align="center" src="figs/logo-freebsd-beasty.jpg"/> FreeBSD</li>
-			<li><img align="center" src="figs/logo-cygwin.jpg"/> Windows/Cygwin</li>
-		</ul>
-		</td>
-		<td valign="top">
-		<h3>Supported capture systems</h3>
-		<ul>
-			<li><img align="center" src="figs/logo-jack.jpg"/> JACK</li>
-			<li><img align="center" src="figs/logo-alsa.jpg"/> Alsa</li>
-			<li>PortAudio</li>
-			<li>OSS</li>
-		</ul>
-		</td>
-		</tr></table>
+		<b>Q: I got errors like: <code>.yam_tmp/objects/HelpContents.cpp:215: error: duplicate `const'</code> while compiling !</b><br>
+		A: This is a know bug in the qt uic 3.3.0 code generator. There is 2 solutions:
+				<ul>
+				<li>Manually edit all affected cpp files and remove each duplicated const</li>
+				<li>Upgrade your qt-devel package</li>
+				</ul>
+		<br>
 
-		<h3>Thanks to</h3>
-		<ul>
-			<li>Contributor: Florian Hars for the tunning scales</li>
-			<li>Packagers: Toni Graffy and all the PackMan team ! (SuSE); Damian Wrobel (Fedora); Ludovic Reslinger (Debian); Edward Tomasz Napierala (FreeBSD)</li>
-			<li>Donators: Joel Brandt, Martin Lynch, ...</li>
-			<li>John Anderson for the microtonal module request; Scott Bahling for the request of the scales in cents; Jacob Shapiro to help me make FMIT working under Windows/Cygwin; Peter; ...</li>
-		</ul>
+		<p>
 		</div>
 		<div id="footer">
 			<div style="float: left; padding-left: 1em; padding-top: 0.5em;">
