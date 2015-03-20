@@ -1,3 +1,7 @@
+2015-03-20
+    * Moved to GitHub.com
+    * Tag v0.99.6
+
 2011-01-22 Gilles Degottex <gilles.degottex@gmail.com>
     * fix portaudio compilation
     * ALSA and PortAudio seems to be exclusive now: avoid them to meet each other
