@@ -1,0 +1,100 @@
+For 1.0
+Update german translation
+Update icon
+
+remove ConfigForm.png
+update french translation
+
+automatiser le seuil de réaction
+automatiser d'autres choses ?
+
+Add low-pass filter to avoid problems with high sampling rate
+
+Fix bug (voir mail)
+
+ 1. Would it be possible to have a celeste offset i.e. where you could add a
+ constant value (Hz) to every note: +5Hz to -5Hz , this would be usefull for
+ tuning the celeste on the organ!
+
+ 2. Would it be possible to have the note names only using sharps i.e. A#, C#,
+ D#, F#, G# this is what I have always encountered in the organ building
+ world.
+ - pouvoir passer d'un naming scheme � l'autre.
+
+ 3. I would really like to use fmit. But it doesn't compile with the newest
+ version of Jack. It complains about "CaptureThread.cpp:(.text+0x7276):
+ undefined reference to `jack_error_callback'". It does compile with an
+ older version of Jack, but that version of Jack won't work with the
+ version of FFADO that works with my audio interface. Any chance you
+ could update fmit to compile with the newest version of Jack?
+
+ 4. (voir mail de Jean-Jacques Sacr�): probl�me de chargement d'un
+ fichier de traduction. en effet, si PACKAGE_NAME correspond pas au path
+ d'installation, �a marche pas. nouveaut� dans la lib qt ?
+
+ 5. (voir mail de wayne): implementer le low-pass filter
+
+Two remarks (of details):
+
+    - as also can be seen on your welcome page, to my knowledge, 329.6Hz
+is E3 rather than E4: since I remarked this for the whole frequency
+range, it's probably due to the lack of a minus one somewhere in an
+integer part operation.
+
+    - I found that the default sound level for incoming audio is very
+low so that setting is first required before using fmit; possibly, it
+would be set higher in the next release.
+
+
+unification of scales system
+
+volume à partir de la somme des harmoniques pas de la valeur max
+	perceptive volume from weighted spectrum ? loudness ? de Bark ?
+high pass with FIR
+band pass ranges with low pass
+tests corrects des working transport possibles
+shortcuts
+
+Doc
+	speak about 50hz on web site FAQ
+	Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.
+
+algo
+	sep en bandes avec resampling ?
+	Quantizer
+		Viterbi
+    Detection automatique de la présence d'un son
+
+interface
+	statistics
+			average on last n secondes, throw too old notes
+			keep the history of the note (not only an average over the note)
+			be able to drop too short notes
+			average of volume
+			mean or median averaging
+		post-process notes with Viterbi
+	harm struct
+		add inharmonicity values in cents
+		phase
+	DFT
+		enveloppe LPC
+		adapt win length to f0, proportional to nb_periods
+	Spectrogram
+	microtonal view
+		autodetect octave
+?		stretch scale view to the complet scale length (not always 12 !)
+		create your own scales inside FMIT
+	configure
+?		'restore factory settings' bug for ui_chkJACKAutoConnect and his source
+
+code cleaning
+	use AutoQSetting under Views
+
+COMMANDS =======================================================================
+lupdate ../ui ../src -ts fmit_fr.ts
+lupdate ../ui ../src -ts fmit_de.ts
+linguist tr/fmit_fr.ts
+lrelease tr/fmit_fr.ts
+
+cmake -DCMAKE_BUILD_TYPE:STRING=Debug
+

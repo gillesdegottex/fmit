@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Gilles Degottex <gilles.degottex@gmail.com> -->
+<application>
+  <id type="desktop">fmit.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>FMIT</name>
+  <summary>Free Musical Instrument Tuner (FMIT). Tool for tuning musical instrument</summary>
+  <description>
+    <p>
+      A tool to tune your musical instrument with real-time features.
+    </p>
+    <p>Features include traces of frequency and volume, statistics, various scales available (Werckmeister III, Kirnberger III, Diatonic, Meantone, etc.), Microtonal tuning (with Scala file support), harmonics amplitude, wave shape, Discrete Fourier Transform (DFT).
+    Features are also optional and can be hidden to obtain a very simple view.
+    </p>
+  </description>
+  <screenshots>
+    <screenshot width="300" height="361">http://home.gna.org/fmit/figs/simple.png</screenshot>
+    <screenshot type="default" width="600" height="417">http://home.gna.org/fmit/figs/complete.png</screenshot>
+    <screenshot width="600" height="289">http://home.gna.org/fmit/figs/microtonal.png</screenshot>
+    <screenshot width="600" height="158">http://home.gna.org/fmit/figs/statistics.png</screenshot>
+</screenshots>
+  <url type="homepage">http://home.gna.org/fmit/</url>
+  <updatecontact>gilles.degottex@gmail.com</updatecontact>
+</application>

@@ -1,0 +1,1818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConfigForm</class>
+ <widget class="QDialog" name="ConfigForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>672</width>
+    <height>822</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Configuration</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/fmit/images/configForm.png</normaloff>:/fmit/images/configForm.png</iconset>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <property name="margin">
+    <number>11</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tabPageGeneral">
+      <attribute name="title">
+       <string>General</string>
+      </attribute>
+      <layout class="QVBoxLayout">
+       <item>
+        <widget class="QCheckBox" name="ui_chkFullScreen">
+         <property name="toolTip">
+          <string>Raise the window to the whole screen when the program is started
+(You can also use the shortcut 'f').</string>
+         </property>
+         <property name="whatsThis">
+          <string>Raise the window to the whole screen when the program is started
+(You can also use the shortcut 'f').</string>
+         </property>
+         <property name="text">
+          <string>Start in full-screen</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="ui_chkAutoSaveOnExit">
+         <property name="text">
+          <string>Auto-save configuration and layout on exit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QLabel" name="textLabel1_7_1">
+           <property name="toolTip">
+            <string>The used tuning scale to determine note frequency values. Useful for tuning historic intruments.</string>
+           </property>
+           <property name="whatsThis">
+            <string>The used tuning scale to determine note frequency values. Useful for tuning historic intruments.</string>
+           </property>
+           <property name="text">
+            <string>Tuning scale</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="ui_cbTuning">
+           <property name="toolTip">
+            <string>The used tuning scale to determine note frequency values. Useful for tuning historic intruments.</string>
+           </property>
+           <property name="whatsThis">
+            <string>The used tuning scale to determine note frequency values. Useful for tuning historic intruments.</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Chromatic</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Werckmeister III</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Kirnberger III</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Diatonic</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Meantone (1/4)</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QLabel" name="textLabel1_7">
+           <property name="toolTip">
+            <string>The used tonality.
+Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</string>
+           </property>
+           <property name="whatsThis">
+            <string>The used tonality.
+Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</string>
+           </property>
+           <property name="text">
+            <string>Tonality</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="ui_cbTonality">
+           <property name="toolTip">
+            <string>The used tonality.
+Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</string>
+           </property>
+           <property name="whatsThis">
+            <string>The used tonality.
+Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>C (Do)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Bb (Sib)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Eb (Mib)</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QLabel" name="textLabel3_3">
+           <property name="toolTip">
+            <string>Use anglo-saxon or latin note names:
+anglo-saxon: C D E F G A B
+latin: Do Re Mi Fa Sol La Si</string>
+           </property>
+           <property name="whatsThis">
+            <string>Use anglo-saxon or latin note names:
+anglo-saxon: C D E F G A B
+latin: Do Re Mi Fa Sol La Si</string>
+           </property>
+           <property name="text">
+            <string>Note names</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="ui_cbNotesName">
+           <property name="toolTip">
+            <string>Use anglo-saxon or latin note names:
+anglo-saxon: C D E F G A B
+latin: Do Re Mi Fa Sol La Si</string>
+           </property>
+           <property name="whatsThis">
+            <string>Use anglo-saxon or latin note names:
+anglo-saxon: C D E F G A B
+latin: Do Re Mi Fa Sol La Si</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Anglo-Saxon</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Latin</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="ui_chkShowA4Offset">
+         <property name="text">
+          <string>Show the spin box for the A4 offset</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacer5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>110</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="textLabel1_5">
+         <property name="font">
+          <font/>
+         </property>
+         <property name="text">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Right-click every view to show up their properties!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacer5_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>100</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabPageCaptureSystem">
+      <attribute name="title">
+       <string>Capture System</string>
+      </attribute>
+      <layout class="QVBoxLayout">
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QLabel" name="ui_lblSelectedCaptureSystem">
+           <property name="toolTip">
+            <string>The capture system (e.g. JACK, ALSA, OSS, PortAudio)</string>
+           </property>
+           <property name="whatsThis">
+            <string>The capture system (e.g. JACK, ALSA, OSS, PortAudio)</string>
+           </property>
+           <property name="text">
+            <string>The capture system</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="ui_cbTransports">
+           <property name="toolTip">
+            <string>Selected the capture system (e.g. JACK, ALSA, OSS, PortAudio)</string>
+           </property>
+           <property name="whatsThis">
+            <string>Selected the capture system (e.g. JACK, ALSA, OSS, PortAudio)</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QCheckBox" name="ui_chkAutoDetect">
+           <property name="toolTip">
+            <string>Auto detect a working capture system at FMIT startup.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Auto detect a working capture system at FMIT startup.</string>
+           </property>
+           <property name="text">
+            <string>Auto-detect an available capture system at startup</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="ui_btnAutoDetect">
+           <property name="toolTip">
+            <string>Auto detect a working capture system at FMIT startup.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Auto detect a working capture system at FMIT startup.</string>
+           </property>
+           <property name="text">
+            <string>Auto detect now</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ui_grpJACK">
+         <property name="title">
+          <string>JACK</string>
+         </property>
+         <layout class="QVBoxLayout">
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel" name="textLabel1">
+              <property name="toolTip">
+               <string>The name of this FMIT instance in the JACK connections.</string>
+              </property>
+              <property name="whatsThis">
+               <string>The name of this FMIT instance in the JACK connections.</string>
+              </property>
+              <property name="text">
+               <string>Client name</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit7">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>The name of this FMIT instance in the JACK connections.</string>
+              </property>
+              <property name="whatsThis">
+               <string>The name of this FMIT instance in the JACK connections.</string>
+              </property>
+              <property name="text">
+               <string>fmit</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QCheckBox" name="ui_chkJACKAutoConnect">
+              <property name="toolTip">
+               <string>Automatically connect FMIT to the following source at startup (e.g. alsa_pcm:capture_1)</string>
+              </property>
+              <property name="whatsThis">
+               <string>Automatically connect FMIT to the following source at startup (e.g. alsa_pcm:capture_1)</string>
+              </property>
+              <property name="text">
+               <string>automaticaly connect to...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="ui_txtJACKSourcePort">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>Automatically connect FMIT to the following source at startup (e.g. alsa_pcm:capture_1)</string>
+              </property>
+              <property name="whatsThis">
+               <string>Automatically connect FMIT to the following source at startup (e.g. alsa_pcm:capture_1)</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel" name="textLabel3">
+              <property name="toolTip">
+               <string>Sampling rate of the JACK server</string>
+              </property>
+              <property name="whatsThis">
+               <string>Sampling rate of the JACK server</string>
+              </property>
+              <property name="text">
+               <string>JACK sampling rate</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="ui_lblJACKSamplingRate">
+              <property name="toolTip">
+               <string>Sampling rate of the JACK server</string>
+              </property>
+              <property name="whatsThis">
+               <string>Sampling rate of the JACK server</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ui_grpALSA">
+         <property name="title">
+          <string>ALSA</string>
+         </property>
+         <layout class="QVBoxLayout">
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel" name="textLabel1_2">
+              <property name="toolTip">
+               <string>The name of the ALSA device to use.</string>
+              </property>
+              <property name="whatsThis">
+               <string>The name of the ALSA device to use.</string>
+              </property>
+              <property name="text">
+               <string>Device name</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="ui_txtALSAPCMName">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>The name of the ALSA device to use.</string>
+              </property>
+              <property name="whatsThis">
+               <string>The name of the ALSA device to use.</string>
+              </property>
+              <property name="text">
+               <string>default</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel" name="textLabel4">
+              <property name="toolTip">
+               <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+              </property>
+              <property name="whatsThis">
+               <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+              </property>
+              <property name="text">
+               <string>Sampling rate</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="_2">
+              <item>
+               <widget class="QSpinBox" name="ui_spinALSASamplingRate">
+                <property name="toolTip">
+                 <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+                </property>
+                <property name="whatsThis">
+                 <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+                </property>
+                <property name="minimum">
+                 <number>8000</number>
+                </property>
+                <property name="maximum">
+                 <number>96000</number>
+                </property>
+                <property name="value">
+                 <number>22050</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="ui_chkALSASamplingRateMax">
+                <property name="toolTip">
+                 <string>Set the sampling rate to the maximum possible value.</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Set the sampling rate to the maximum possible value.</string>
+                </property>
+                <property name="text">
+                 <string>set to max</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="textLabel1_5_2_2">
+            <property name="text">
+             <string>Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="ui_chkALSAMixMultipleChannels">
+            <property name="text">
+             <string>Mix channels if there are multiple (if unchecked, the first channel will be used)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ui_grpOSS">
+         <property name="title">
+          <string>OSS</string>
+         </property>
+         <layout class="QVBoxLayout">
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel" name="textLabel1_2_2">
+              <property name="toolTip">
+               <string>The name of the OSS device to connect to</string>
+              </property>
+              <property name="whatsThis">
+               <string>The name of the OSS device to connect to</string>
+              </property>
+              <property name="text">
+               <string>Device name</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="ui_txtOSSPCMName">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>The name of the OSS device to connect to</string>
+              </property>
+              <property name="whatsThis">
+               <string>The name of the OSS device to connect to</string>
+              </property>
+              <property name="text">
+               <string>/dev/dsp</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel" name="textLabel4_3">
+              <property name="toolTip">
+               <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+              </property>
+              <property name="whatsThis">
+               <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+              </property>
+              <property name="text">
+               <string>Sampling rate</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QSpinBox" name="ui_spinOSSSamplingRate">
+                <property name="toolTip">
+                 <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+                </property>
+                <property name="whatsThis">
+                 <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+                </property>
+                <property name="minimum">
+                 <number>8000</number>
+                </property>
+                <property name="maximum">
+                 <number>96000</number>
+                </property>
+                <property name="value">
+                 <number>22050</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="ui_chkOSSSamplingRateMax">
+                <property name="toolTip">
+                 <string>Set the sampling rate to the maximum possible value.</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Set the sampling rate to the maximum possible value.</string>
+                </property>
+                <property name="text">
+                 <string>set to max</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="textLabel1_5_2">
+            <property name="text">
+             <string>Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="ui_chkOSSMixMultipleChannels">
+            <property name="text">
+             <string>Mix channels if there are multiple (if unchecked, the first channel will be used)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ui_grpPortAudio">
+         <property name="title">
+          <string>PortAudio</string>
+         </property>
+         <layout class="QVBoxLayout">
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel" name="textLabel1_8">
+              <property name="toolTip">
+               <string>The name of the PortAudio device to connect to</string>
+              </property>
+              <property name="whatsThis">
+               <string>The name of the PortAudio device to connect to</string>
+              </property>
+              <property name="text">
+               <string>Device name</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="ui_cbPortAudioDeviceName">
+              <property name="toolTip">
+               <string>The name of the PortAudio device to connect to</string>
+              </property>
+              <property name="whatsThis">
+               <string>The name of the PortAudio device to connect to</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>default</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel" name="textLabel4_2">
+              <property name="toolTip">
+               <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+              </property>
+              <property name="whatsThis">
+               <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+              </property>
+              <property name="text">
+               <string>Sampling rate</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QSpinBox" name="ui_spinPortAudioSamplingRate">
+                <property name="toolTip">
+                 <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+                </property>
+                <property name="whatsThis">
+                 <string>The chosen sampling rate.
+Do not use a too big sampling rate. 22050Hz should be enough in most cases.</string>
+                </property>
+                <property name="minimum">
+                 <number>8000</number>
+                </property>
+                <property name="maximum">
+                 <number>96000</number>
+                </property>
+                <property name="value">
+                 <number>22050</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="ui_chkPortAudioSamplingRateMax">
+                <property name="toolTip">
+                 <string>Set the sampling rate to the maximum possible value.</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Set the sampling rate to the maximum possible value.</string>
+                </property>
+                <property name="text">
+                 <string>set to max</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="textLabel1_5_2_2_2">
+            <property name="text">
+             <string>Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="ui_chkPortAudioMixMultipleChannels">
+            <property name="text">
+             <string>Mix channels if there are multiple (if unchecked, the first channel will be used)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacer6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>16</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabPageSoundAnalysis">
+      <attribute name="title">
+       <string>Sound Analysis</string>
+      </attribute>
+      <layout class="QVBoxLayout">
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QLabel" name="textLabel1_4">
+           <property name="toolTip">
+            <string>Time between each sound analysis.
+Can be increased to get less CPU usage (but less temporal precision).</string>
+           </property>
+           <property name="whatsThis">
+            <string>Time between each sound analysis.
+Can be increased to get less CPU usage (but less temporal precision).</string>
+           </property>
+           <property name="text">
+            <string>Refresh time</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="ui_spinRefreshTime">
+           <property name="toolTip">
+            <string>Time between each sound analysis.
+Can be increased to get less CPU usage (but less temporal precision).</string>
+           </property>
+           <property name="whatsThis">
+            <string>Time between each sound analysis.
+Can be increased to get less CPU usage (but less temporal precision).</string>
+           </property>
+           <property name="suffix">
+            <string> ms</string>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>2000</number>
+           </property>
+           <property name="value">
+            <number>20</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QLabel" name="textLabel7">
+           <property name="toolTip">
+            <string>Range of possible notes from the lowest to the highest around the A4 reference note.
+Smaller the range, smaller the CPU usage.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Range of possible notes from the lowest to the highest around the A4 reference note.
+Smaller the range, smaller the CPU usage.</string>
+           </property>
+           <property name="text">
+            <string>Notes range</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout">
+           <item>
+            <widget class="QSpinBox" name="ui_spinMinHT">
+             <property name="toolTip">
+              <string>Lowest semitone from the A4 reference note.
+It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</string>
+             </property>
+             <property name="whatsThis">
+              <string>Lowest semitone from the A4 reference note.
+It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</string>
+             </property>
+             <property name="minimum">
+              <number>-96</number>
+             </property>
+             <property name="maximum">
+              <number>96</number>
+             </property>
+             <property name="value">
+              <number>-36</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="ui_txtMinHT">
+             <property name="toolTip">
+              <string>Lowest semitone from the A4 reference note.
+It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</string>
+             </property>
+             <property name="whatsThis">
+              <string>Lowest semitone from the A4 reference note.
+It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout">
+           <item>
+            <widget class="QSpinBox" name="ui_spinMaxHT">
+             <property name="toolTip">
+              <string>Highest semitone from the A4 reference note.</string>
+             </property>
+             <property name="whatsThis">
+              <string>Highest semitone from the A4 reference note.</string>
+             </property>
+             <property name="minimum">
+              <number>-96</number>
+             </property>
+             <property name="maximum">
+              <number>96</number>
+             </property>
+             <property name="value">
+              <number>48</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="ui_txtMaxHT">
+             <property name="toolTip">
+              <string>Highest semitone from the A4 reference note.</string>
+             </property>
+             <property name="whatsThis">
+              <string>Highest semitone from the A4 reference note.</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ui_grpRangeFiltering">
+         <property name="toolTip">
+          <string>Filter the sound below the lowest semitone and above the highest semitone to avoid artefacts and noises in all the following steps of the sound analysis.</string>
+         </property>
+         <property name="whatsThis">
+          <string>Filter the sound below the lowest semitone and above the highest semitone to avoid artefacts and noises in all the following steps of the sound analysis.</string>
+         </property>
+         <property name="title">
+          <string>Notes range filtering</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout">
+          <item>
+           <widget class="QRadioButton" name="ui_rdRangeFilteringRectangular">
+            <property name="text">
+             <string>Rectangular filter: bad precision, but very fast</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="ui_rdRangeFilteringFIR">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>FIR filter: good precision, but more costly in CPU usage</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox7_2_3">
+         <property name="toolTip">
+          <string>Algorithm settings</string>
+         </property>
+         <property name="whatsThis">
+          <string>Algorithm settings</string>
+         </property>
+         <property name="title">
+          <string>Algorithm</string>
+         </property>
+         <layout class="QGridLayout">
+          <item row="1" column="1">
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QSlider" name="ui_sldVolumeTreshold">
+              <property name="toolTip">
+               <string>Ignore all sounds with volume below this threshold [dB]
+(Shown as a red line in various views)</string>
+              </property>
+              <property name="whatsThis">
+               <string>Ignore all sounds with volume below this threshold [dB]
+(Shown as a red line in various views)</string>
+              </property>
+              <property name="minimum">
+               <number>-100</number>
+              </property>
+              <property name="maximum">
+               <number>0</number>
+              </property>
+              <property name="value">
+               <number>-28</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TicksBelow</enum>
+              </property>
+              <property name="tickInterval">
+               <number>6</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="ui_spinVolumeTreshold">
+              <property name="toolTip">
+               <string>Ignore all sounds with volume below this threshold [dB]
+(Shown as a red line in various views)</string>
+              </property>
+              <property name="whatsThis">
+               <string>Ignore all sounds with volume below this threshold [dB]
+(Shown as a red line in various views)</string>
+              </property>
+              <property name="suffix">
+               <string> dB</string>
+              </property>
+              <property name="minimum">
+               <number>-100</number>
+              </property>
+              <property name="maximum">
+               <number>0</number>
+              </property>
+              <property name="value">
+               <number>-28</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="1">
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QSlider" name="ui_sldCombedFFTAudibilityRatio">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="toolTip">
+               <string>Ignore weak sub-harmonics.
+This threshold is defined between two neighbors frequency components.
+Prevents underestimation errors.</string>
+              </property>
+              <property name="whatsThis">
+               <string>Ignore weak sub-harmonics.
+This threshold is defined between two neighbors frequency components.
+Prevents underestimation errors.</string>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>15</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TicksBelow</enum>
+              </property>
+              <property name="tickInterval">
+               <number>6</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="ui_spinCombedFFTAudibilityRatio">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="toolTip">
+               <string>Ignore weak sub-harmonics.
+This threshold is defined between two neighbors frequency components.
+Prevents underestimation errors.</string>
+              </property>
+              <property name="whatsThis">
+               <string>Ignore weak sub-harmonics.
+This threshold is defined between two neighbors frequency components.
+Prevents underestimation errors.</string>
+              </property>
+              <property name="suffix">
+               <string> dB</string>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>15</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="ui_chkAlgoUseSubHarmTresh">
+            <property name="toolTip">
+             <string>Ignore weak sub-harmonics.
+This threshold is defined between two neighbors frequency components.
+Prevents underestimation errors.</string>
+            </property>
+            <property name="whatsThis">
+             <string>Ignore weak sub-harmonics.
+This threshold is defined between two neighbors frequency components.
+Prevents underestimation errors.</string>
+            </property>
+            <property name="text">
+             <string>Use sub-harmonic audibility threshold</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QSlider" name="ui_sldWindowSizeFactor">
+              <property name="toolTip">
+               <string>Factor defining the window size (from the lowest possible period defined by the notes range).
+The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</string>
+              </property>
+              <property name="whatsThis">
+               <string>Factor defining the window size (from the lowest possible period defined by the notes range).
+The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>8</number>
+              </property>
+              <property name="pageStep">
+               <number>10</number>
+              </property>
+              <property name="value">
+               <number>4</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TicksBelow</enum>
+              </property>
+              <property name="tickInterval">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="ui_spinWindowSizeFactor">
+              <property name="toolTip">
+               <string>Factor defining the window size (from the lowest possible period defined by the notes range).
+The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</string>
+              </property>
+              <property name="whatsThis">
+               <string>Factor defining the window size (from the lowest possible period defined by the notes range).
+The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>8</number>
+              </property>
+              <property name="value">
+               <number>4</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="textLabel1_6">
+            <property name="toolTip">
+             <string>Factor defining the window size (from the lowest possible period defined by the notes range).
+The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</string>
+            </property>
+            <property name="whatsThis">
+             <string>Factor defining the window size (from the lowest possible period defined by the notes range).
+The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</string>
+            </property>
+            <property name="text">
+             <string>Window size factor</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="textLabel3_2">
+            <property name="toolTip">
+             <string>Ignore all sounds with volume below this threshold [dB]
+(Shown as a red line in various views)</string>
+            </property>
+            <property name="whatsThis">
+             <string>Ignore all sounds with volume below this threshold [dB]
+(Shown as a red line in various views)</string>
+            </property>
+            <property name="text">
+             <string>Volume threshold</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="up_grpFreqRefinement">
+         <property name="toolTip">
+          <string>Frequency refinement settings</string>
+         </property>
+         <property name="whatsThis">
+          <string>Frequency refinement settings</string>
+         </property>
+         <property name="title">
+          <string>Frequency refinement</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <layout class="QGridLayout">
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="ui_rdUseFreqRefinement">
+            <property name="toolTip">
+             <string>Use a refinement method in frequency domain: compute the mean of the quasi-harmonic related spectral peaks (the option allows to chose the number of harmonics to use).</string>
+            </property>
+            <property name="whatsThis">
+             <string>Use a refinement method in frequency domain: compute the mean of the quasi-harmonic related spectral peaks (the option allows to chose the number of harmonics to use).</string>
+            </property>
+            <property name="text">
+             <string>Maximum number of harmonics</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QRadioButton" name="ui_rdUseTimeRefinement">
+            <property name="toolTip">
+             <string>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</string>
+            </property>
+            <property name="whatsThis">
+             <string>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</string>
+            </property>
+            <property name="text">
+             <string>Maximum number of periods</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QSlider" name="ui_sldTimeRefinMaxPeriod">
+              <property name="toolTip">
+               <string>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</string>
+              </property>
+              <property name="whatsThis">
+               <string>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>64</number>
+              </property>
+              <property name="pageStep">
+               <number>10</number>
+              </property>
+              <property name="value">
+               <number>16</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TicksBelow</enum>
+              </property>
+              <property name="tickInterval">
+               <number>8</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="ui_spinTimeRefinMaxPeriod">
+              <property name="toolTip">
+               <string>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</string>
+              </property>
+              <property name="whatsThis">
+               <string>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>64</number>
+              </property>
+              <property name="value">
+               <number>4</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="1">
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QSlider" name="ui_sldFreqRefinMaxHarm">
+              <property name="toolTip">
+               <string>Use a refinement method in frequency domain: compute the mean of the quasi-harmonic related spectral peaks (the option allows to chose the number of harmonics to use).</string>
+              </property>
+              <property name="whatsThis">
+               <string>Use a refinement method in frequency domain: compute the mean of the quasi-harmonic related spectral peaks (the option allows to chose the number of harmonics to use).</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>64</number>
+              </property>
+              <property name="pageStep">
+               <number>10</number>
+              </property>
+              <property name="value">
+               <number>8</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TicksBelow</enum>
+              </property>
+              <property name="tickInterval">
+               <number>8</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="ui_spinFreqRefinMaxHarm">
+              <property name="toolTip">
+               <string>Frequency domain fundamental refinement:
+mean of the fundamental relative frequencies of the harmonics.
+Choose the number of harmonics to use.</string>
+              </property>
+              <property name="whatsThis">
+               <string>Frequency domain fundamental refinement:
+mean of the fundamental relative frequencies of the harmonics.
+Choose the number of harmonics to use.</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>64</number>
+              </property>
+              <property name="value">
+               <number>8</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ui_grpQuantizer">
+         <property name="toolTip">
+          <string>Quantizer settings</string>
+         </property>
+         <property name="whatsThis">
+          <string>Quantizer settings</string>
+         </property>
+         <property name="title">
+          <string>Quantizer</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout">
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QLabel" name="textLabel1_3">
+              <property name="toolTip">
+               <string>Quantize the analysis results: ignore frequency jumps, fill gaps, ignore short notes.
+The smaller the value, the faster the tuner. However, by decreasing the value, the computed frequency will be more unstable.</string>
+              </property>
+              <property name="whatsThis">
+               <string>Quantize the analysis results: ignore frequency jumps, fill gaps, ignore short notes.
+The smaller the value, the faster the tuner. However, by decreasing the value, the computed frequency will be more unstable.</string>
+              </property>
+              <property name="text">
+               <string>Latency</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="ui_spinErrorLatency">
+              <property name="toolTip">
+               <string>Quantize the analysis results: ignore frequency jumps, fill gaps, ignore short notes.
+The smaller the value, the faster the tuner. However, by decreasing the value, the computed frequency will be more unstable.</string>
+              </property>
+              <property name="whatsThis">
+               <string>Quantize the analysis results: ignore frequency jumps, fill gaps, ignore short notes.
+The smaller the value, the faster the tuner. However, by decreasing the value, the computed frequency will be more unstable.</string>
+              </property>
+              <property name="suffix">
+               <string> ms</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>4000</number>
+              </property>
+              <property name="value">
+               <number>125</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacer8">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <widget class="QPushButton" name="ui_btnRestoreFactorySettings">
+       <property name="toolTip">
+        <string>Restore settings as if you just installed FMIT (requires to restart FMIT).</string>
+       </property>
+       <property name="whatsThis">
+        <string>Restore settings as if you just installed FMIT (requires to restart FMIT).</string>
+       </property>
+       <property name="text">
+        <string>Restore &amp;factory settings</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="spacer3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonOk">
+       <property name="toolTip">
+        <string>Use these settings and quit the configuration panel (it is required to click on the &quot;Save settings&quot; button to permanently keep these settings for each FMIT start)</string>
+       </property>
+       <property name="whatsThis">
+        <string>Use these settings and quit the configuration panel (it is required to click on the &quot;Save settings&quot; button to permanently keep these settings for each FMIT start)</string>
+       </property>
+       <property name="text">
+        <string>&amp;OK</string>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonCancel">
+       <property name="toolTip">
+        <string>Discard any changes and quit the configuration panel</string>
+       </property>
+       <property name="whatsThis">
+        <string>Discard any changes and quit the configuration panel</string>
+       </property>
+       <property name="text">
+        <string>&amp;Cancel</string>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../src/fmit.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonOk</sender>
+   <signal>clicked()</signal>
+   <receiver>ConfigForm</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>ConfigForm</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_chkALSASamplingRateMax</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ui_spinALSASamplingRate</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_chkJACKAutoConnect</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ui_txtJACKSourcePort</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_chkPortAudioSamplingRateMax</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ui_spinPortAudioSamplingRate</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_chkOSSSamplingRateMax</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ui_spinOSSSamplingRate</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_sldCombedFFTAudibilityRatio</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ui_spinCombedFFTAudibilityRatio</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_spinCombedFFTAudibilityRatio</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ui_sldCombedFFTAudibilityRatio</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_sldVolumeTreshold</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ui_spinVolumeTreshold</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_spinVolumeTreshold</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ui_sldVolumeTreshold</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_chkAlgoUseSubHarmTresh</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ui_spinCombedFFTAudibilityRatio</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_chkAlgoUseSubHarmTresh</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ui_sldCombedFFTAudibilityRatio</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_sldFreqRefinMaxHarm</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ui_spinFreqRefinMaxHarm</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_spinFreqRefinMaxHarm</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ui_sldFreqRefinMaxHarm</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_sldWindowSizeFactor</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ui_spinWindowSizeFactor</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_spinWindowSizeFactor</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ui_sldWindowSizeFactor</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_sldTimeRefinMaxPeriod</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ui_spinTimeRefinMaxPeriod</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ui_spinTimeRefinMaxPeriod</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ui_sldTimeRefinMaxPeriod</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

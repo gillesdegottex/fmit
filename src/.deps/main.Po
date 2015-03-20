@@ -1,0 +1,792 @@
+main.o: main.cpp ../config.h /usr/include/stdlib.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h \
+ /usr/lib/gcc/i586-suse-linux/4.4/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/xlocale.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/c++/4.4/iostream \
+ /usr/include/c++/4.4/i586-suse-linux/bits/c++config.h \
+ /usr/include/c++/4.4/i586-suse-linux/bits/os_defines.h \
+ /usr/include/c++/4.4/i586-suse-linux/bits/cpu_defines.h \
+ /usr/include/c++/4.4/ostream /usr/include/c++/4.4/ios \
+ /usr/include/c++/4.4/iosfwd /usr/include/c++/4.4/bits/stringfwd.h \
+ /usr/include/c++/4.4/bits/postypes.h /usr/include/c++/4.4/cwchar \
+ /usr/include/c++/4.4/cstddef /usr/include/wchar.h /usr/include/stdio.h \
+ /usr/lib/gcc/i586-suse-linux/4.4/include/stdarg.h \
+ /usr/include/bits/wchar.h /usr/include/c++/4.4/exception \
+ /usr/include/c++/4.4/bits/char_traits.h \
+ /usr/include/c++/4.4/bits/stl_algobase.h \
+ /usr/include/c++/4.4/bits/functexcept.h \
+ /usr/include/c++/4.4/exception_defines.h \
+ /usr/include/c++/4.4/bits/cpp_type_traits.h \
+ /usr/include/c++/4.4/ext/type_traits.h \
+ /usr/include/c++/4.4/ext/numeric_traits.h \
+ /usr/include/c++/4.4/bits/stl_pair.h /usr/include/c++/4.4/bits/move.h \
+ /usr/include/c++/4.4/bits/concept_check.h \
+ /usr/include/c++/4.4/bits/stl_iterator_base_types.h \
+ /usr/include/c++/4.4/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/4.4/bits/stl_iterator.h \
+ /usr/include/c++/4.4/debug/debug.h /usr/include/c++/4.4/bits/localefwd.h \
+ /usr/include/c++/4.4/i586-suse-linux/bits/c++locale.h \
+ /usr/include/c++/4.4/clocale /usr/include/locale.h \
+ /usr/include/bits/locale.h /usr/include/c++/4.4/cctype \
+ /usr/include/ctype.h /usr/include/c++/4.4/bits/ios_base.h \
+ /usr/include/c++/4.4/ext/atomicity.h \
+ /usr/include/c++/4.4/i586-suse-linux/bits/gthr.h \
+ /usr/include/c++/4.4/i586-suse-linux/bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/signal.h /usr/include/bits/setjmp.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ /usr/include/c++/4.4/i586-suse-linux/bits/atomic_word.h \
+ /usr/include/c++/4.4/bits/locale_classes.h /usr/include/c++/4.4/string \
+ /usr/include/c++/4.4/bits/allocator.h \
+ /usr/include/c++/4.4/i586-suse-linux/bits/c++allocator.h \
+ /usr/include/c++/4.4/ext/new_allocator.h /usr/include/c++/4.4/new \
+ /usr/include/c++/4.4/bits/ostream_insert.h \
+ /usr/include/c++/4.4/cxxabi-forced.h \
+ /usr/include/c++/4.4/bits/stl_function.h \
+ /usr/include/c++/4.4/backward/binders.h \
+ /usr/include/c++/4.4/bits/basic_string.h \
+ /usr/include/c++/4.4/initializer_list \
+ /usr/include/c++/4.4/bits/basic_string.tcc \
+ /usr/include/c++/4.4/bits/locale_classes.tcc \
+ /usr/include/c++/4.4/streambuf /usr/include/c++/4.4/bits/streambuf.tcc \
+ /usr/include/c++/4.4/bits/basic_ios.h \
+ /usr/include/c++/4.4/bits/locale_facets.h /usr/include/c++/4.4/cwctype \
+ /usr/include/wctype.h \
+ /usr/include/c++/4.4/i586-suse-linux/bits/ctype_base.h \
+ /usr/include/c++/4.4/bits/streambuf_iterator.h \
+ /usr/include/c++/4.4/i586-suse-linux/bits/ctype_inline.h \
+ /usr/include/c++/4.4/bits/locale_facets.tcc \
+ /usr/include/c++/4.4/bits/basic_ios.tcc \
+ /usr/include/c++/4.4/bits/ostream.tcc /usr/include/c++/4.4/istream \
+ /usr/include/c++/4.4/bits/istream.tcc /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/asm/sigcontext.h \
+ /usr/include/linux/types.h /usr/include/asm/types.h \
+ /usr/include/asm-generic/int-ll64.h /usr/include/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h /usr/include/asm/posix_types.h \
+ /usr/include/asm/posix_types_32.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/lib/qt3/include/qapplication.h \
+ /usr/lib/qt3/include/qdesktopwidget.h /usr/lib/qt3/include/qwidget.h \
+ /usr/lib/qt3/include/qwindowdefs.h /usr/lib/qt3/include/qobjectdefs.h \
+ /usr/lib/qt3/include/qglobal.h /usr/lib/qt3/include/qconfig.h \
+ /usr/lib/qt3/include/qmodules.h /usr/lib/qt3/include/qfeatures.h \
+ /usr/lib/qt3/include/qstring.h /usr/lib/qt3/include/qcstring.h \
+ /usr/lib/qt3/include/qmemarray.h /usr/lib/qt3/include/qgarray.h \
+ /usr/lib/qt3/include/qshared.h /usr/lib/qt3/include/qwinexport.h \
+ /usr/include/string.h \
+ /usr/lib/gcc/i586-suse-linux/4.4/include-fixed/limits.h \
+ /usr/lib/gcc/i586-suse-linux/4.4/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/bits/stdio_lim.h /usr/lib/qt3/include/qnamespace.h \
+ /usr/lib/qt3/include/qobject.h /usr/lib/qt3/include/qevent.h \
+ /usr/lib/qt3/include/qregion.h /usr/lib/qt3/include/qrect.h \
+ /usr/lib/qt3/include/qsize.h /usr/lib/qt3/include/qpoint.h \
+ /usr/lib/qt3/include/qmime.h /usr/lib/qt3/include/qmap.h \
+ /usr/lib/qt3/include/qdatastream.h /usr/lib/qt3/include/qiodevice.h \
+ /usr/lib/qt3/include/qpair.h /usr/lib/qt3/include/qvaluelist.h \
+ /usr/lib/qt3/include/qtl.h /usr/lib/qt3/include/qtextstream.h \
+ /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/bits/sys_errlist.h /usr/include/bits/stdio.h \
+ /usr/include/c++/4.4/iterator \
+ /usr/include/c++/4.4/bits/stream_iterator.h /usr/include/c++/4.4/list \
+ /usr/include/c++/4.4/bits/stl_list.h /usr/include/c++/4.4/bits/list.tcc \
+ /usr/include/c++/4.4/map /usr/include/c++/4.4/bits/stl_tree.h \
+ /usr/include/c++/4.4/bits/stl_map.h \
+ /usr/include/c++/4.4/bits/stl_multimap.h \
+ /usr/lib/qt3/include/qpaintdevice.h /usr/lib/qt3/include/qpalette.h \
+ /usr/lib/qt3/include/qcolor.h /usr/lib/qt3/include/qstringlist.h \
+ /usr/lib/qt3/include/qstrlist.h /usr/lib/qt3/include/qptrlist.h \
+ /usr/lib/qt3/include/qglist.h /usr/lib/qt3/include/qptrcollection.h \
+ /usr/lib/qt3/include/qbrush.h /usr/lib/qt3/include/qfont.h \
+ /usr/lib/qt3/include/qfontmetrics.h /usr/lib/qt3/include/qfontinfo.h \
+ /usr/lib/qt3/include/qsizepolicy.h /usr/lib/qt3/include/qasciidict.h \
+ /usr/lib/qt3/include/qgdict.h /usr/lib/qt3/include/qtranslator.h \
+ /usr/lib/qt3/include/qtextcodec.h /usr/include/GL/glut.h \
+ /usr/include/GL/freeglut_std.h /usr/include/GL/gl.h \
+ /usr/include/GL/glext.h /usr/include/GL/glu.h ../libs/CppAddons/CAMath.h \
+ /usr/include/math.h /usr/include/bits/huge_val.h \
+ /usr/include/bits/huge_valf.h /usr/include/bits/huge_vall.h \
+ /usr/include/bits/inf.h /usr/include/bits/nan.h \
+ /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h \
+ /usr/include/bits/mathinline.h /usr/include/c++/4.4/cmath \
+ /usr/include/c++/4.4/bits/cmath.tcc /usr/include/c++/4.4/complex \
+ /usr/include/c++/4.4/sstream /usr/include/c++/4.4/bits/sstream.tcc \
+ CustomInstrumentTunerForm.h ../ui/InstrumentTunerForm.h \
+ /usr/lib/qt3/include/qvariant.h /usr/lib/qt3/include/qpixmap.h \
+ /usr/lib/qt3/include/qmainwindow.h /usr/lib/qt3/include/qtoolbar.h \
+ /usr/lib/qt3/include/qdockwindow.h /usr/lib/qt3/include/qframe.h \
+ /usr/include/c++/4.4/deque /usr/include/c++/4.4/bits/stl_construct.h \
+ /usr/include/c++/4.4/bits/stl_uninitialized.h \
+ /usr/include/c++/4.4/bits/stl_deque.h \
+ /usr/include/c++/4.4/bits/deque.tcc /usr/lib/qt3/include/qtimer.h \
+ /usr/lib/qt3/include/qdial.h /usr/lib/qt3/include/qrangecontrol.h \
+ /usr/lib/qt3/include/qsettings.h /usr/lib/qt3/include/qdatetime.h \
+ ../libs/Music/Music.h /usr/include/assert.h /usr/include/c++/4.4/vector \
+ /usr/include/c++/4.4/bits/stl_vector.h \
+ /usr/include/c++/4.4/bits/stl_bvector.h \
+ /usr/include/c++/4.4/bits/vector.tcc /usr/include/c++/4.4/limits \
+ ../libs/CppAddons/StringAddons.h ../libs/Music/TimeAnalysis.h \
+ ../libs/Music/Algorithm.h ../libs/Music/Music.h \
+ ../libs/Music/CumulativeDiff.h ../libs/Music/FreqAnalysis.h \
+ ../libs/Music/Convolution.h /usr/include/fftw3.h \
+ ../libs/Music/MultiCumulativeDiffAlgo.h \
+ ../libs/Music/CumulativeDiffAlgo.h ../libs/Music/CombedFT.h \
+ ../libs/Music/CFFTW3.h ../libs/Music/Filter.h AutoQSettings.h \
+ /usr/lib/qt3/include/qcheckbox.h /usr/lib/qt3/include/qbutton.h \
+ /usr/lib/qt3/include/qkeysequence.h /usr/lib/qt3/include/qspinbox.h \
+ /usr/lib/qt3/include/qlineedit.h /usr/lib/qt3/include/qcombobox.h \
+ /usr/lib/qt3/include/qgroupbox.h /usr/lib/qt3/include/qradiobutton.h \
+ CaptureThread.h /usr/lib/qt3/include/qobject.h \
+ /usr/lib/qt3/include/qthread.h /usr/lib/qt3/include/qmutex.h \
+ /usr/lib/qt3/include/qsemaphore.h /usr/lib/qt3/include/qwaitcondition.h \
+ /usr/lib/qt3/include/qmutex.h ../ui/ConfigForm.h \
+ /usr/lib/qt3/include/qdialog.h LatencyMonoQuantizer.h \
+ /usr/lib/qt3/include/qdatetime.h MonoQuantizer.h DummyMonoQuantizer.h \
+ modules/DialView.h /usr/lib/qt3/include/qframe.h \
+ /usr/lib/qt3/include/qaction.h /usr/lib/qt3/include/qiconset.h \
+ /usr/lib/qt3/include/qpixmap.h modules/View.h \
+ /usr/lib/qt3/include/qpopupmenu.h /usr/lib/qt3/include/qmenudata.h \
+ /usr/lib/qt3/include/qsignal.h /usr/lib/qt3/include/qvariant.h \
+ /usr/lib/qt3/include/qlabel.h modules/../AutoQSettings.h \
+ modules/GLGraph.h /usr/lib/qt3/include/qgl.h \
+ /usr/lib/qt3/include/qglcolormap.h modules/GLErrorHistory.h \
+ modules/GLVolumeHistory.h modules/MicrotonalView.h \
+ /usr/lib/qt3/include/qwidget.h /usr/lib/qt3/include/qpushbutton.h \
+ /usr/lib/qt3/include/qfiledialog.h /usr/lib/qt3/include/qdir.h \
+ /usr/lib/qt3/include/qfileinfo.h /usr/lib/qt3/include/qfile.h \
+ /usr/lib/qt3/include/qdialog.h /usr/lib/qt3/include/qurloperator.h \
+ /usr/lib/qt3/include/qurl.h /usr/lib/qt3/include/qnetworkprotocol.h \
+ /usr/lib/qt3/include/qurlinfo.h /usr/lib/qt3/include/qdict.h \
+ /usr/lib/qt3/include/qtooltip.h modules/GLSample.h \
+ modules/GLFreqStruct.h modules/GLFT.h ../libs/Music/CFFTW3.h \
+ modules/GLStatistics.h
+
+../config.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/lib/gcc/i586-suse-linux/4.4/include/stddef.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/time.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/4.4/iostream:
+
+/usr/include/c++/4.4/i586-suse-linux/bits/c++config.h:
+
+/usr/include/c++/4.4/i586-suse-linux/bits/os_defines.h:
+
+/usr/include/c++/4.4/i586-suse-linux/bits/cpu_defines.h:
+
+/usr/include/c++/4.4/ostream:
+
+/usr/include/c++/4.4/ios:
+
+/usr/include/c++/4.4/iosfwd:
+
+/usr/include/c++/4.4/bits/stringfwd.h:
+
+/usr/include/c++/4.4/bits/postypes.h:
+
+/usr/include/c++/4.4/cwchar:
+
+/usr/include/c++/4.4/cstddef:
+
+/usr/include/wchar.h:
+
+/usr/include/stdio.h:
+
+/usr/lib/gcc/i586-suse-linux/4.4/include/stdarg.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/c++/4.4/exception:
+
+/usr/include/c++/4.4/bits/char_traits.h:
+
+/usr/include/c++/4.4/bits/stl_algobase.h:
+
+/usr/include/c++/4.4/bits/functexcept.h:
+
+/usr/include/c++/4.4/exception_defines.h:
+
+/usr/include/c++/4.4/bits/cpp_type_traits.h:
+
+/usr/include/c++/4.4/ext/type_traits.h:
+
+/usr/include/c++/4.4/ext/numeric_traits.h:
+
+/usr/include/c++/4.4/bits/stl_pair.h:
+
+/usr/include/c++/4.4/bits/move.h:
+
+/usr/include/c++/4.4/bits/concept_check.h:
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/4.4/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/4.4/bits/stl_iterator.h:
+
+/usr/include/c++/4.4/debug/debug.h:
+
+/usr/include/c++/4.4/bits/localefwd.h:
+
+/usr/include/c++/4.4/i586-suse-linux/bits/c++locale.h:
+
+/usr/include/c++/4.4/clocale:
+
+/usr/include/locale.h:
+
+/usr/include/bits/locale.h:
+
+/usr/include/c++/4.4/cctype:
+
+/usr/include/ctype.h:
+
+/usr/include/c++/4.4/bits/ios_base.h:
+
+/usr/include/c++/4.4/ext/atomicity.h:
+
+/usr/include/c++/4.4/i586-suse-linux/bits/gthr.h:
+
+/usr/include/c++/4.4/i586-suse-linux/bits/gthr-default.h:
+
+/usr/include/pthread.h:
+
+/usr/include/sched.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/signal.h:
+
+/usr/include/bits/setjmp.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/usr/include/c++/4.4/i586-suse-linux/bits/atomic_word.h:
+
+/usr/include/c++/4.4/bits/locale_classes.h:
+
+/usr/include/c++/4.4/string:
+
+/usr/include/c++/4.4/bits/allocator.h:
+
+/usr/include/c++/4.4/i586-suse-linux/bits/c++allocator.h:
+
+/usr/include/c++/4.4/ext/new_allocator.h:
+
+/usr/include/c++/4.4/new:
+
+/usr/include/c++/4.4/bits/ostream_insert.h:
+
+/usr/include/c++/4.4/cxxabi-forced.h:
+
+/usr/include/c++/4.4/bits/stl_function.h:
+
+/usr/include/c++/4.4/backward/binders.h:
+
+/usr/include/c++/4.4/bits/basic_string.h:
+
+/usr/include/c++/4.4/initializer_list:
+
+/usr/include/c++/4.4/bits/basic_string.tcc:
+
+/usr/include/c++/4.4/bits/locale_classes.tcc:
+
+/usr/include/c++/4.4/streambuf:
+
+/usr/include/c++/4.4/bits/streambuf.tcc:
+
+/usr/include/c++/4.4/bits/basic_ios.h:
+
+/usr/include/c++/4.4/bits/locale_facets.h:
+
+/usr/include/c++/4.4/cwctype:
+
+/usr/include/wctype.h:
+
+/usr/include/c++/4.4/i586-suse-linux/bits/ctype_base.h:
+
+/usr/include/c++/4.4/bits/streambuf_iterator.h:
+
+/usr/include/c++/4.4/i586-suse-linux/bits/ctype_inline.h:
+
+/usr/include/c++/4.4/bits/locale_facets.tcc:
+
+/usr/include/c++/4.4/bits/basic_ios.tcc:
+
+/usr/include/c++/4.4/bits/ostream.tcc:
+
+/usr/include/c++/4.4/istream:
+
+/usr/include/c++/4.4/bits/istream.tcc:
+
+/usr/include/bits/signum.h:
+
+/usr/include/bits/siginfo.h:
+
+/usr/include/bits/sigaction.h:
+
+/usr/include/bits/sigcontext.h:
+
+/usr/include/asm/sigcontext.h:
+
+/usr/include/linux/types.h:
+
+/usr/include/asm/types.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/asm/bitsperlong.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/asm/posix_types.h:
+
+/usr/include/asm/posix_types_32.h:
+
+/usr/include/bits/sigstack.h:
+
+/usr/include/sys/ucontext.h:
+
+/usr/include/bits/sigthread.h:
+
+/usr/lib/qt3/include/qapplication.h:
+
+/usr/lib/qt3/include/qdesktopwidget.h:
+
+/usr/lib/qt3/include/qwidget.h:
+
+/usr/lib/qt3/include/qwindowdefs.h:
+
+/usr/lib/qt3/include/qobjectdefs.h:
+
+/usr/lib/qt3/include/qglobal.h:
+
+/usr/lib/qt3/include/qconfig.h:
+
+/usr/lib/qt3/include/qmodules.h:
+
+/usr/lib/qt3/include/qfeatures.h:
+
+/usr/lib/qt3/include/qstring.h:
+
+/usr/lib/qt3/include/qcstring.h:
+
+/usr/lib/qt3/include/qmemarray.h:
+
+/usr/lib/qt3/include/qgarray.h:
+
+/usr/lib/qt3/include/qshared.h:
+
+/usr/lib/qt3/include/qwinexport.h:
+
+/usr/include/string.h:
+
+/usr/lib/gcc/i586-suse-linux/4.4/include-fixed/limits.h:
+
+/usr/lib/gcc/i586-suse-linux/4.4/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/include/bits/xopen_lim.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/lib/qt3/include/qnamespace.h:
+
+/usr/lib/qt3/include/qobject.h:
+
+/usr/lib/qt3/include/qevent.h:
+
+/usr/lib/qt3/include/qregion.h:
+
+/usr/lib/qt3/include/qrect.h:
+
+/usr/lib/qt3/include/qsize.h:
+
+/usr/lib/qt3/include/qpoint.h:
+
+/usr/lib/qt3/include/qmime.h:
+
+/usr/lib/qt3/include/qmap.h:
+
+/usr/lib/qt3/include/qdatastream.h:
+
+/usr/lib/qt3/include/qiodevice.h:
+
+/usr/lib/qt3/include/qpair.h:
+
+/usr/lib/qt3/include/qvaluelist.h:
+
+/usr/lib/qt3/include/qtl.h:
+
+/usr/lib/qt3/include/qtextstream.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+/usr/include/c++/4.4/iterator:
+
+/usr/include/c++/4.4/bits/stream_iterator.h:
+
+/usr/include/c++/4.4/list:
+
+/usr/include/c++/4.4/bits/stl_list.h:
+
+/usr/include/c++/4.4/bits/list.tcc:
+
+/usr/include/c++/4.4/map:
+
+/usr/include/c++/4.4/bits/stl_tree.h:
+
+/usr/include/c++/4.4/bits/stl_map.h:
+
+/usr/include/c++/4.4/bits/stl_multimap.h:
+
+/usr/lib/qt3/include/qpaintdevice.h:
+
+/usr/lib/qt3/include/qpalette.h:
+
+/usr/lib/qt3/include/qcolor.h:
+
+/usr/lib/qt3/include/qstringlist.h:
+
+/usr/lib/qt3/include/qstrlist.h:
+
+/usr/lib/qt3/include/qptrlist.h:
+
+/usr/lib/qt3/include/qglist.h:
+
+/usr/lib/qt3/include/qptrcollection.h:
+
+/usr/lib/qt3/include/qbrush.h:
+
+/usr/lib/qt3/include/qfont.h:
+
+/usr/lib/qt3/include/qfontmetrics.h:
+
+/usr/lib/qt3/include/qfontinfo.h:
+
+/usr/lib/qt3/include/qsizepolicy.h:
+
+/usr/lib/qt3/include/qasciidict.h:
+
+/usr/lib/qt3/include/qgdict.h:
+
+/usr/lib/qt3/include/qtranslator.h:
+
+/usr/lib/qt3/include/qtextcodec.h:
+
+/usr/include/GL/glut.h:
+
+/usr/include/GL/freeglut_std.h:
+
+/usr/include/GL/gl.h:
+
+/usr/include/GL/glext.h:
+
+/usr/include/GL/glu.h:
+
+../libs/CppAddons/CAMath.h:
+
+/usr/include/math.h:
+
+/usr/include/bits/huge_val.h:
+
+/usr/include/bits/huge_valf.h:
+
+/usr/include/bits/huge_vall.h:
+
+/usr/include/bits/inf.h:
+
+/usr/include/bits/nan.h:
+
+/usr/include/bits/mathdef.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/include/bits/mathinline.h:
+
+/usr/include/c++/4.4/cmath:
+
+/usr/include/c++/4.4/bits/cmath.tcc:
+
+/usr/include/c++/4.4/complex:
+
+/usr/include/c++/4.4/sstream:
+
+/usr/include/c++/4.4/bits/sstream.tcc:
+
+CustomInstrumentTunerForm.h:
+
+../ui/InstrumentTunerForm.h:
+
+/usr/lib/qt3/include/qvariant.h:
+
+/usr/lib/qt3/include/qpixmap.h:
+
+/usr/lib/qt3/include/qmainwindow.h:
+
+/usr/lib/qt3/include/qtoolbar.h:
+
+/usr/lib/qt3/include/qdockwindow.h:
+
+/usr/lib/qt3/include/qframe.h:
+
+/usr/include/c++/4.4/deque:
+
+/usr/include/c++/4.4/bits/stl_construct.h:
+
+/usr/include/c++/4.4/bits/stl_uninitialized.h:
+
+/usr/include/c++/4.4/bits/stl_deque.h:
+
+/usr/include/c++/4.4/bits/deque.tcc:
+
+/usr/lib/qt3/include/qtimer.h:
+
+/usr/lib/qt3/include/qdial.h:
+
+/usr/lib/qt3/include/qrangecontrol.h:
+
+/usr/lib/qt3/include/qsettings.h:
+
+/usr/lib/qt3/include/qdatetime.h:
+
+../libs/Music/Music.h:
+
+/usr/include/assert.h:
+
+/usr/include/c++/4.4/vector:
+
+/usr/include/c++/4.4/bits/stl_vector.h:
+
+/usr/include/c++/4.4/bits/stl_bvector.h:
+
+/usr/include/c++/4.4/bits/vector.tcc:
+
+/usr/include/c++/4.4/limits:
+
+../libs/CppAddons/StringAddons.h:
+
+../libs/Music/TimeAnalysis.h:
+
+../libs/Music/Algorithm.h:
+
+../libs/Music/Music.h:
+
+../libs/Music/CumulativeDiff.h:
+
+../libs/Music/FreqAnalysis.h:
+
+../libs/Music/Convolution.h:
+
+/usr/include/fftw3.h:
+
+../libs/Music/MultiCumulativeDiffAlgo.h:
+
+../libs/Music/CumulativeDiffAlgo.h:
+
+../libs/Music/CombedFT.h:
+
+../libs/Music/CFFTW3.h:
+
+../libs/Music/Filter.h:
+
+AutoQSettings.h:
+
+/usr/lib/qt3/include/qcheckbox.h:
+
+/usr/lib/qt3/include/qbutton.h:
+
+/usr/lib/qt3/include/qkeysequence.h:
+
+/usr/lib/qt3/include/qspinbox.h:
+
+/usr/lib/qt3/include/qlineedit.h:
+
+/usr/lib/qt3/include/qcombobox.h:
+
+/usr/lib/qt3/include/qgroupbox.h:
+
+/usr/lib/qt3/include/qradiobutton.h:
+
+CaptureThread.h:
+
+/usr/lib/qt3/include/qobject.h:
+
+/usr/lib/qt3/include/qthread.h:
+
+/usr/lib/qt3/include/qmutex.h:
+
+/usr/lib/qt3/include/qsemaphore.h:
+
+/usr/lib/qt3/include/qwaitcondition.h:
+
+/usr/lib/qt3/include/qmutex.h:
+
+../ui/ConfigForm.h:
+
+/usr/lib/qt3/include/qdialog.h:
+
+LatencyMonoQuantizer.h:
+
+/usr/lib/qt3/include/qdatetime.h:
+
+MonoQuantizer.h:
+
+DummyMonoQuantizer.h:
+
+modules/DialView.h:
+
+/usr/lib/qt3/include/qframe.h:
+
+/usr/lib/qt3/include/qaction.h:
+
+/usr/lib/qt3/include/qiconset.h:
+
+/usr/lib/qt3/include/qpixmap.h:
+
+modules/View.h:
+
+/usr/lib/qt3/include/qpopupmenu.h:
+
+/usr/lib/qt3/include/qmenudata.h:
+
+/usr/lib/qt3/include/qsignal.h:
+
+/usr/lib/qt3/include/qvariant.h:
+
+/usr/lib/qt3/include/qlabel.h:
+
+modules/../AutoQSettings.h:
+
+modules/GLGraph.h:
+
+/usr/lib/qt3/include/qgl.h:
+
+/usr/lib/qt3/include/qglcolormap.h:
+
+modules/GLErrorHistory.h:
+
+modules/GLVolumeHistory.h:
+
+modules/MicrotonalView.h:
+
+/usr/lib/qt3/include/qwidget.h:
+
+/usr/lib/qt3/include/qpushbutton.h:
+
+/usr/lib/qt3/include/qfiledialog.h:
+
+/usr/lib/qt3/include/qdir.h:
+
+/usr/lib/qt3/include/qfileinfo.h:
+
+/usr/lib/qt3/include/qfile.h:
+
+/usr/lib/qt3/include/qdialog.h:
+
+/usr/lib/qt3/include/qurloperator.h:
+
+/usr/lib/qt3/include/qurl.h:
+
+/usr/lib/qt3/include/qnetworkprotocol.h:
+
+/usr/lib/qt3/include/qurlinfo.h:
+
+/usr/lib/qt3/include/qdict.h:
+
+/usr/lib/qt3/include/qtooltip.h:
+
+modules/GLSample.h:
+
+modules/GLFreqStruct.h:
+
+modules/GLFT.h:
+
+../libs/Music/CFFTW3.h:
+
+modules/GLStatistics.h:

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=FMIT
+GenericName=Musical Instrument Tuner
+GenericName[de]=Stimmgerät für Musikinstrumente
+GenericName[fr]=Accordeur d'instrument de musique
+Comment=Tune musical instruments
+Comment[de]=Musikinstrumente stimmen
+Comment[fr]=Accorde un instrument de musique
+Icon=fmit
+TryExec=fmit
+Exec=fmit
+Terminal=false
+Categories=Tuner;Audio;AudioVideo;Qt;
+StartupNotify=true

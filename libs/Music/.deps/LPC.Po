@@ -1,0 +1,3 @@
+LPC.o: LPC.cpp LPC.h
+
+LPC.h:
