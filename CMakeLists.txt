@@ -160,7 +160,7 @@ SET(CPACK_SOURCE_IGNORE_FILES
     .deps ".*\\\\.ui~"
     CMakeFiles cmake_install.cmake CMakeCache.txt
     Makefile
-    contrib build dwl remez old test
-    test_build.sh sync_dwl.sh
+    build dwl remez old test
+    test_build.sh
 )
 INCLUDE(CPack)
