@@ -1,7 +1,7 @@
                                    FMIT
                         Free Music Instrument Tuner
                               Version 0.99.6
-                   https://github.com/gillesdegottex/fmit
+                   http://gillesdegottex.github.io/fmit/
 
 
 This software is coded in C/C++ using the Qt library (http://qt-project.org).
