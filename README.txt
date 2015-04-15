@@ -1,13 +1,26 @@
+
                                    FMIT
                         Free Music Instrument Tuner
                               Version 0.99.6
-                   https://github.com/gillesdegottex/fmit
+                   http://gillesdegottex.github.io/fmit/
 
+FMIT is a graphical utility for tuning your musical instruments, with error
+and volume history and advanced features like microtonal tuning, statistics,
+and various views like waveform shape, harmonics ratios and real-time Discrete
+Fourier Transform (DFT). All views and advanced features are optional so that
+the interface can also be very simple.
 
 This software is coded in C/C++ using the Qt library (http://qt-project.org).
 It is stored as a GitHub project (https://github.com/gillesdegottex/fmit).
 (It was previously stored on gna.org (https://gna.org/projects/fmit)
 for versions<=0.99.5).
+
+Goals
+    * Estimate the fundamental frequency (f0) of an audio signal, in real-time.
+      (the f0, not the perceived pitch)
+    * Keep any view optional so that the interface can be as simple as possible.
+      (make it easy to see on a distant screen)
+    * Support as many sound systems as possible.
 
 
 Copyright (c) 2004 Gilles Degottex <gilles.degottex@gmail.com>
