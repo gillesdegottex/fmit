@@ -46,27 +46,3 @@ Contributors
     John Anderson for the microtonal module request; Scott Bahling for the
     request of the scales in cents; Jacob Shapiro for his help tp make FMIT
     working under Windows/Cygwin; Peter;
-
-
-Compilation & Installation
-
-    FMIT currently uses cmake:
-
-    To compile FMIT:
-    From fmit package directory, create a directory build:
-    $ mkdir build
-    $ cd build
-    Configure with standard options (see below for options):
-    $ cmake ..
-
-    Then as usual:
-    Compile
-    $ make
-    and install as root
-    # make install
-
-    ------------------ For non-standard compilation ------------------
-    check options:
-    $ cmake -L ..
-    To change an option, for example configure with PortAudio:
-    $ cmake -D SOUNDSYSTEM_USE_PORTAUDIO=ON ..

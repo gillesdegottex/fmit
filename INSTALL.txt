@@ -1,0 +1,46 @@
+                        Compilation & Installation
+
+
+Necessary libraries
+
+    qt3-mt for the GUI and the QThread class. (last checked version 3.3.8b)
+    GL1/GLU1/glut3 for the QGLWidget (last checked versions 7.6/090301)
+    FFTW3 for the FFT (last checked versions 3.2.2)
+
+Optional libraries
+    alsa the ALSA developpment library, for sound input (last checked version 1.0.21)
+    jack the JACK developpment library, for sound input (last checked version 0.116.2)
+    portaudio the Portaudio developpment library, for sound input (last checked version 19-262)
+
+
+Under Unix OS ------------------------------------------------------------------
+
+FMIT currently uses cmake.
+
+To compile:
+    From fmit package directory, create a directory build:
+    $ mkdir build
+    $ cd build
+    Configure with standard options (see below for options):
+    $ cmake ..
+
+Then as usual:
+    Compile
+    $ make
+    and install as root
+    # make install
+
+
+For non-standard compilation,  check options:
+    $ cmake -L ..
+
+    To change an option, for example configure with PortAudio:
+    $ cmake -D SOUNDSYSTEM_USE_PORTAUDIO=ON ..
+
+
+
+Under Windows/Cygwin -----------------------------------------------------------
+
+These configuration options should be ok (never tested personally ...):
+$ cmake -D SOUNDSYSTEM_USE_ALSA=OFF -D SOUNDSYSTEM_USE_JACK=OFF -D SOUNDSYSTEM_USE_OSS=ON -D SOUNDSYSTEM_USE_PORTAUDIO=OFF ..
+
