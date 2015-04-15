@@ -16,7 +16,6 @@
 				<tr><td><a href="configure.html">Configure</a></td></tr>
 				<tr><td><a href="faq.html">FAQ</a></td></tr>
 				<tr><td style="padding: 0.5em;"></td></tr>
-				<tr><td><a href="doc.html">developer-doc</a></td></tr>
 				<tr><td><a href="https://github.com/gillesdegottex/fmit">on GitHub.com</a></td></tr>
 			</table>
 			<h5>Current version</h5>
@@ -56,7 +55,6 @@
 			<h2>FAQ</h2>
 		</center>
 		<br>
-		<h3>Users questions</h3>
 		<b>Q: I launched fmit executable, but it blocks immediatly, without errors.</b><br>
 		A: Stop other audio programs like jackd or any program wich could
 		keep the capture device jealously.<br>
@@ -71,35 +69,14 @@
         A: Maybe your desired input channel is not correctly selected in your mixer settings. For example, the analog input is selected instead of the microphone. Try to change the recording channel.
 		<br>
         <br>
-
-		<h3>Compilation questions</h3>
-
-        <b>Q: Which ./configure options I have to use with Windows/Cygwin ?</b><br>
-        A: These ones should be ok (never tested ...):<br/>
-        <code>$ cmake -D SOUNDSYSTEM_USE_ALSA=OFF -D SOUNDSYSTEM_USE_JACK=OFF -D SOUNDSYSTEM_USE_OSS=ON -D SOUNDSYSTEM_USE_PORTAUDIO=OFF ..</code>
-
-        <br><br>
-        <h4>For versions under 0.98.0</h4>
-
-		<b>Q: Which ./configure options I have to use with Windows/Cygwin ?</b><br>
-		A: These ones:<br/>
-		<code>$ ./configure --enable-alsa=no --enable-jack=no --enable-oss=yes --with-Qt-dir=/lib/qt3 --with-Qt-include-dir=/usr/include/qt3</code>
-		<br>
-
-		<p>
-		<b>Q: I got errors like: <code>.yam_tmp/objects/HelpContents.cpp:215: error: duplicate `const'</code> while compiling !</b><br>
-		A: This is a know bug in the qt uic 3.3.0 code generator. There is 2 solutions:
-				<ul>
-				<li>Manually edit all affected cpp files and remove each duplicated const</li>
-				<li>Upgrade your qt-devel package</li>
-				</ul>
-		<br>
+        <br>
+        (I know this is very please-check-the-plug advises ... though most questions are about this kind of issues.)
 
 		<p>
 		</div>
 		<div id="footer">
 			<div style="float: left; padding-left: 1em; padding-top: 0.5em;">
-			<h6 style="margin: 0em; padding: 0em;">Version March 2015, <a href="mailto:gilles.degottex@gmail.com?subject=fmit">Gilles Degottex</a></h6>
+			<h6 style="margin: 0em; padding: 0em;">Version April 2015, <a href="mailto:gilles.degottex@gmail.com?subject=fmit">Gilles Degottex</a></h6>
 			</div>
 		</div>
 	</body>
