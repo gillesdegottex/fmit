@@ -127,13 +127,13 @@ ADD_SUBDIRECTORY(src)
 
 # Desktop files
 INSTALL(FILES
-  fmit.desktop
+  distrib/fmit.desktop
   DESTINATION share/applications
 )
 
 # AppData file
 INSTALL(FILES
-  fmit.appdata.xml
+  distrib/fmit.appdata.xml
   DESTINATION share/appdata
 )
 
