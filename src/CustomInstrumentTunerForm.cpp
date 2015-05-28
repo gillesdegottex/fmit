@@ -681,7 +681,7 @@ void CustomInstrumentTunerForm::configure()
     // Checking PortAudio devices while capturing using ALSA seems to crash ALSA
     // thus, stop everything while configuring and capture again when exiting the configuration panel
     m_capture_thread.stopCapture();
-    
+
 	noteRangeChanged();
 
 	if(m_capture_thread.getCurrentTransportIndex()<m_config_form.ui_cbTransports->count());
@@ -974,9 +974,9 @@ void CustomInstrumentTunerForm::helpAbout()
 	QString text;
 	text = "<h2>Free Music Instrument Tuner</h2>";
 	text += tr("<h3>Version ")+PACKAGE_VERSION;
-	text += tr("</h3><p><h3>Website:</h3><p>homepage: <a href=\"http://home.gna.org/fmit\">http://home.gna.org/fmit</a>");
-	text += tr("<p>development site: <a href=\"http://gna.org/projects/fmit\">http://gna.org/projects/fmit</a>");
-	text += tr("<p>donation link: <a href=\"http://home.gna.org/fmit/donation.html\">http://home.gna.org/fmit/donation.html</a>");
+	text += tr("</h3><p><h3>Website:</h3><p>homepage: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
+	text += tr("<p>development site: <a href=\"http://github.com/gillesdegottex/fmit\">http://github.com/gillesdegottex/fmit</a>");
+	text += tr("<p>donation link: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
 	text += tr("<p><h3>Author:</h3><p>Gilles Degottex <a href=\"mailto:gilles.degottex@gmail.com\">gilles.degottex@gmail.com</a>");
 #ifdef PACKAGER_STRING
 	if(PACKAGER_STRING!="")
