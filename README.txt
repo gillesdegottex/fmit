@@ -52,10 +52,9 @@ Disclaimer
 Contributors
     Florian Hars for the tunning scales, Arnout Engelen for the JACK issues
 
-    Packagers: Toni Graffy and all the PackMan team ! (SuSE); Ludovic Reslinger
-    (Debian); Edward Tomasz Napierala (FreeBSD)
-    Donators: Joel Brandt, Martin Lynch, you
+    Packagers: Toni Graffy and all the PackMan team, Ludovic Reslinger, Edward
+               Tomasz Napierala
     Other helpful people:
     John Anderson for the microtonal module request; Scott Bahling for the
-    request of the scales in cents; Jacob Shapiro for his help tp make FMIT
+    request of the scales in cents; Jacob Shapiro for his help to make FMIT
     working under Windows/Cygwin; Peter;

@@ -12,7 +12,7 @@ endif(COMMAND cmake_policy)
 SET (PACKAGE_NAME "fmit")
 SET (VERSION_MAJOR "0")
 SET (VERSION_MINOR "99")
-SET (VERSION_PATCH "5")
+SET (VERSION_PATCH "6")
 SET (VERSION_SUFFIX "")
 SET (PACKAGE_VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}${VERSION_SUFFIX})
 MESSAGE(STATUS "${PACKAGE_NAME} ${PACKAGE_VERSION} (install in ${CMAKE_INSTALL_PREFIX})")
@@ -127,13 +127,13 @@ ADD_SUBDIRECTORY(src)
 
 # Desktop files
 INSTALL(FILES
-  fmit.desktop
+  distrib/fmit.desktop
   DESTINATION share/applications
 )
 
 # AppData file
 INSTALL(FILES
-  fmit.appdata.xml
+  distrib/fmit.appdata.xml
   DESTINATION share/appdata
 )
 
