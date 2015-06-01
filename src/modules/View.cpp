@@ -75,7 +75,7 @@ View::View(const QString& name, QWidget* parent)
 {
 	// settings
 	QWidgetAction* caption = new QWidgetAction(&m_popup_menu);
-	caption->setDefaultWidget(new Title(QString("<b>%1</b>").arg(QObject::tr(m_name.toAscii().constData())), &m_popup_menu));
+	caption->setDefaultWidget(new Title(QString("<b>%1</b>").arg(m_name), &m_popup_menu));
 	m_popup_menu.addAction(caption);
 
 	m_popup_menu.addSeparator();

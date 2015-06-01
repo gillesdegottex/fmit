@@ -39,7 +39,7 @@ protected:
 			{setAlignment(Qt::AlignCenter);}
 	};
 
-	const QString m_name;
+	QString m_name;
 	QWidget* m_parent;
 	QMenu m_popup_menu;
 

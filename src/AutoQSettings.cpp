@@ -25,7 +25,7 @@ AutoQSettings::AutoQSettings(const QString& domain, const QString& product, cons
 	: QSettings(QSettings::UserScope, domain, product)
 {
 	beginGroup(QString("/")+product+setting_version+"/");
-    cerr << "AutoQSettings: " << fileName().toStdString() << endl;
+//    cout << "INFO: AutoQSettings: " << fileName().toStdString() << endl;
 }
 
 void AutoQSettings::add(QCheckBox* el)

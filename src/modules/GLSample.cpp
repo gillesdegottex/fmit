@@ -166,7 +166,7 @@ using namespace std;
 
 GLSample::GLSample(QWidget* parent)
 : QGLWidget(parent)
-, View(tr("Wave form"), this)
+, View(tr("Waveform"), this)
 , m_max_value(1.0)
 {
 	// settings
