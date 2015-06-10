@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="ru">
 <context>
     <name>ConfigForm</name>
     <message>
@@ -98,7 +100,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options:&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Right-click every view to show up their properties!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -242,7 +244,7 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
     <message>
         <location filename="../ui/ConfigForm.ui" line="208"/>
         <source>Show the spin box for the A4 offset</source>
-        <translation type="unfinished"/>
+        <translation>Показать поле редактирования для смещения ноты A4</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="271"/>
@@ -394,7 +396,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
         <location filename="../ui/ConfigForm.ui" line="939"/>
         <location filename="../ui/ConfigForm.ui" line="942"/>
         <source>Filter the sound below the lowest semitone and above the highest semitone to avoid artefacts and noises in all the following steps of the sound analysis.</source>
-        <translation type="unfinished"/>
+        <translation>Отфильтровывать звук ниже самого низкого полутона и выше самого высокого полутона, чтобы избежать артефактов и шума во всех следующих шагах анализа звука.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="945"/>
@@ -423,7 +425,9 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
         <source>Ignore weak sub-harmonics.
 This threshold is defined between two neighbors frequency components.
 Prevents underestimation errors.</source>
-        <translation type="unfinished"/>
+        <translation>Игнорировать слабые суб-гармоники.
+Этот порог определяется между двумя соседними составляющими частоты.
+Предотвращает занижение значимости ошибки.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1128"/>
@@ -434,7 +438,8 @@ Prevents underestimation errors.</source>
         <location filename="../ui/ConfigForm.ui" line="1188"/>
         <source>Factor defining the window size (from the lowest possible period defined by the notes range).
 The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</source>
-        <translation type="unfinished"/>
+        <translation>Коэффициент, определяющий размер окна (от самого низкого возможного периода, определенного диапазоном нот).
+Чем больше этот коэффициент, тем более стабилен анализ. Тем не менее, за счет увеличения этого фактора, FMIT понадобится больше ресурсов процессора и реагировать изменения звука будет ниже.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1393"/>
@@ -443,25 +448,26 @@ The bigger this factor, the more stable the analysis. However, by increasing thi
         <location filename="../ui/ConfigForm.ui" line="1412"/>
         <source>Quantize the analysis results: ignore frequency jumps, fill gaps, ignore short notes.
 The smaller the value, the faster the tuner. However, by decreasing the value, the computed frequency will be more unstable.</source>
-        <translation type="unfinished"/>
+        <translation>Квантование результатов анализа: игнорировать скачки частоты, заполнить пробелы, игнорировать короткие ноты.
+Чем меньше значение, тем быстрее тюнер. Тем не менее, путем уменьшения значения, вычисленные частоты будут более нестабильными.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1459"/>
         <location filename="../ui/ConfigForm.ui" line="1462"/>
         <source>Restore settings as if you just installed FMIT (requires to restart FMIT).</source>
-        <translation type="unfinished"/>
+        <translation>Восстановить настройки так, будто вы только установили FMIT (требуется перезапуск FMIT)</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1488"/>
         <location filename="../ui/ConfigForm.ui" line="1491"/>
         <source>Use these settings and quit the configuration panel (it is required to click on the &quot;Save settings&quot; button to permanently keep these settings for each FMIT start)</source>
-        <translation type="unfinished"/>
+        <translation>Использовать эти настройки и покинуть окно настройки (требуется нажать на кнопку &quot;Сохранить настройки&quot;, чтобы сохранить эти настройки для каждого запуска FMIT)</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1507"/>
         <location filename="../ui/ConfigForm.ui" line="1510"/>
         <source>Discard any changes and quit the configuration panel</source>
-        <translation type="unfinished"/>
+        <translation>Отменить все изменения и покинуть окно настройки.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="817"/>
@@ -533,7 +539,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
         <location filename="../ui/ConfigForm.ui" line="1317"/>
         <location filename="../ui/ConfigForm.ui" line="1320"/>
         <source>Use a refinement method in frequency domain: compute the mean of the quasi-harmonic related spectral peaks (the option allows to chose the number of harmonics to use).</source>
-        <translation type="unfinished"/>
+        <translation>Используйте метод уточнения в области частот: вычислить среднее значение квазигармонических связанных спектральных пиков (опция позволяет выбрать количество гармоник для использования).</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1245"/>
@@ -543,7 +549,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
         <location filename="../ui/ConfigForm.ui" line="1294"/>
         <location filename="../ui/ConfigForm.ui" line="1297"/>
         <source>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</source>
-        <translation type="unfinished"/>
+        <translation>Используйте метод уточнения во временной области: вычислить среднее значение различных длин периодов (опция позволяет выбрать количество периодов для использования).</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1348"/>
@@ -551,7 +557,9 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
         <source>Frequency domain fundamental refinement:
 mean of the fundamental relative frequencies of the harmonics.
 Choose the number of harmonics to use.</source>
-        <translation type="unfinished"/>
+        <translation>Основное уточнение частотной области:
+среднее значение из основных относительных частот гармоник.
+Выберите количество гармоник.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1238"/>
@@ -633,7 +641,7 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="979"/>
         <source>&lt;p&gt;donation link: &lt;a href=&quot;http://home.gna.org/fmit/donation.html&quot;&gt;http://home.gna.org/fmit/donation.html&lt;/a&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;p&gt;для пожертвований: &lt;a href=&quot;http://home.gna.org/fmit/donation.html&quot;&gt;http://home.gna.org/fmit/donation.html&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="980"/>
@@ -648,7 +656,7 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="995"/>
         <source>about_box</source>
-        <translation type="unfinished"/>
+        <translation>О программе</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="996"/>
@@ -666,12 +674,12 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <location filename="../src/modules/DialView.cpp" line="15"/>
         <source>Dial</source>
-        <translation type="unfinished"/>
+        <translation>Шкала</translation>
     </message>
     <message>
         <location filename="../src/modules/DialView.cpp" line="22"/>
         <source>Show tolerance</source>
-        <translation type="unfinished"/>
+        <translation>Показать погрешность</translation>
     </message>
     <message>
         <location filename="../src/modules/DialView.cpp" line="28"/>
@@ -704,7 +712,7 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <location filename="../src/modules/GLErrorHistory.cpp" line="233"/>
         <source>Keep previous notes</source>
-        <translation>Сохранять предыдущие ноты</translation>
+        <translation>Сохранить предыдущие ноты</translation>
     </message>
     <message>
         <location filename="../src/modules/GLErrorHistory.cpp" line="239"/>
@@ -724,7 +732,7 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <location filename="../src/modules/GLErrorHistory.cpp" line="361"/>
         <source>Error</source>
-        <translation>Ошибка</translation>
+        <translation>Error</translation>
     </message>
 </context>
 <context>
@@ -796,31 +804,31 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <location filename="../src/modules/GLGraph.cpp" line="222"/>
         <source>Auto scale</source>
-        <translation type="unfinished"/>
+        <translation>Автоматическое масштабирование</translation>
     </message>
     <message>
         <location filename="../src/modules/GLGraph.cpp" line="230"/>
         <location filename="../src/modules/GLGraph.cpp" line="237"/>
         <source>Scale factor</source>
-        <translation type="unfinished"/>
+        <translation>Масштаб</translation>
     </message>
     <message>
         <location filename="../src/modules/GLGraph.cpp" line="251"/>
         <location filename="../src/modules/GLGraph.cpp" line="258"/>
         <source>Duration</source>
-        <translation type="unfinished"/>
+        <translation>Продолжительность</translation>
     </message>
     <message>
         <location filename="../src/modules/GLGraph.cpp" line="272"/>
         <location filename="../src/modules/GLGraph.cpp" line="279"/>
         <source>Max height</source>
-        <translation type="unfinished"/>
+        <translation>Максимальная высота</translation>
     </message>
     <message>
         <location filename="../src/modules/GLGraph.cpp" line="206"/>
         <location filename="../src/modules/GLGraph.cpp" line="436"/>
         <source>Captured Sound</source>
-        <translation type="unfinished"/>
+        <translation>Захваченный звук</translation>
     </message>
 </context>
 <context>
@@ -828,13 +836,13 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <location filename="../src/modules/GLSample.cpp" line="179"/>
         <source>Show fading</source>
-        <translation type="unfinished"/>
+        <translation>Показать спад</translation>
     </message>
     <message>
         <location filename="../src/modules/GLSample.cpp" line="186"/>
         <location filename="../src/modules/GLSample.cpp" line="194"/>
         <source>Number of fading</source>
-        <translation type="unfinished"/>
+        <translation>Число спада</translation>
     </message>
     <message>
         <location filename="../src/modules/GLSample.cpp" line="169"/>
@@ -853,52 +861,52 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="352"/>
         <source>Keep notes when hidden</source>
-        <translation type="unfinished"/>
+        <translation>Сохранить ноты в свернутом состоянии</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="360"/>
         <source>Keep n values</source>
-        <translation type="unfinished"/>
+        <translation>Сохранить значения n</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="369"/>
         <source>Keep this number of values in the computation of the statistics</source>
-        <translation type="unfinished"/>
+        <translation>Сохранить этот ряд значений при расчете статистических данных</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="383"/>
         <source>Show standard deviation</source>
-        <translation type="unfinished"/>
+        <translation>Показать стандартное отклонение</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="389"/>
         <source>Scale auto</source>
-        <translation type="unfinished"/>
+        <translation>Автоматическое масштабирование</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="398"/>
         <source>Scale min</source>
-        <translation type="unfinished"/>
+        <translation>Минимальное значение шкалы</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="407"/>
         <source>Scale min value (in semi-tones)</source>
-        <translation type="unfinished"/>
+        <translation>Минимальное значение шкалы (в полутонах)</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="425"/>
         <source>Scale max</source>
-        <translation type="unfinished"/>
+        <translation>Максимальное значение шкалы</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="434"/>
         <source>Scale max value (in semi-tones)</source>
-        <translation type="unfinished"/>
+        <translation>Максимальное значение шкалы (в полутонах)</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="450"/>
         <source>Show tolerance</source>
-        <translation type="unfinished"/>
+        <translation>Показать погрешность</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="456"/>
@@ -932,7 +940,7 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <location filename="../src/modules/GLVolumeHistory.cpp" line="207"/>
         <source>Keep previous notes</source>
-        <translation>Сохранять предыдущие ноты</translation>
+        <translation>Сохранить предыдущие ноты</translation>
     </message>
     <message>
         <location filename="../src/modules/GLVolumeHistory.cpp" line="272"/>
@@ -1003,7 +1011,7 @@ p</source>
         <location filename="../ui/InstrumentTunerForm.ui" line="49"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="52"/>
         <source>Keep the data in the error and volume views (shortcut &quot;k&quot;).</source>
-        <translation type="unfinished"/>
+        <translation>Сохранить данные в режимах отображения ошибок и громкости (горячая клавиша &quot;k&quot;)</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="111"/>
@@ -1011,7 +1019,9 @@ p</source>
         <source>Volume in dB.
 Computed in the frequency domain, from the maximum bin.
 The maximum is reached when the signal energy is maximal NOT when the sound is saturated in the time domain.</source>
-        <translation type="unfinished"/>
+        <translation>Громкость в дБ.
+Вычисленная в частотной области от максимального bin.
+Максимум достигается, когда сила сигнала максимальна, а не когда звук сатурирован в области времени.</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="148"/>
@@ -1021,7 +1031,11 @@ red       : the capture system is not working.
 grey     : the capture system is OK, but there is not enough sound.
 orange : the analysis conditions are bad (like saturation)
 green   : a note is beeing analyzed and analysis conditions are OK.</source>
-        <translation type="unfinished"/>
+        <translation>В соответствии со следующими цветами:
+красный     : захват звука отключен.
+серый         : захват звука производится, но сила сигнала недостаточна.
+оранжевый : плохие условия для анализа (напр. сатурация)
+зеленый     : нота определяется, условия анализа хорошие.</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="189"/>
@@ -1131,12 +1145,12 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <location filename="../src/modules/MicrotonalView.cpp" line="301"/>
         <location filename="../src/modules/MicrotonalView.cpp" line="308"/>
         <source>Root&apos;s octave</source>
-        <translation type="unfinished"/>
+        <translation>Октава тоники</translation>
     </message>
     <message>
         <location filename="../src/modules/MicrotonalView.cpp" line="322"/>
         <source>Keep root to left side</source>
-        <translation type="unfinished"/>
+        <translation>Держать тонику по левому краю</translation>
     </message>
     <message>
         <location filename="../src/modules/MicrotonalView.cpp" line="327"/>
