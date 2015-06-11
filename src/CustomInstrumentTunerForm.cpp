@@ -171,8 +171,8 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	// link scales
 	connect(m_dialTune->setting_spinScale, SIGNAL(valueChanged(int)), m_glErrorHistory->setting_spinScale, SLOT(setValue(int)));
 	connect(m_glErrorHistory->setting_spinScale, SIGNAL(valueChanged(int)), m_dialTune->setting_spinScale, SLOT(setValue(int)));
-	connect(m_dialTune->setting_useCents, SIGNAL(toggled(bool)), m_glErrorHistory->setting_useCents, SLOT(setOn(bool)));
-	connect(m_glErrorHistory->setting_useCents, SIGNAL(toggled(bool)), m_dialTune->setting_useCents, SLOT(setOn(bool)));
+    connect(m_dialTune->setting_useCents, SIGNAL(toggled(bool)), m_glErrorHistory->setting_useCents, SLOT(setChecked(bool)));
+    connect(m_glErrorHistory->setting_useCents, SIGNAL(toggled(bool)), m_dialTune->setting_useCents, SLOT(setChecked(bool)));
 
 	m_glVolumeHistory = new GLVolumeHistory(centralWidget());
 	connect(m_config_form.ui_spinVolumeTreshold, SIGNAL(valueChanged(int)), m_glVolumeHistory, SLOT(setVolumeTreshold(int)));
@@ -181,9 +181,9 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	ui_volumeLayout->addWidget(m_glVolumeHistory);
 
 	// link keep settings
-	connect(ui_btnKeepErrorHistory, SIGNAL(toggled(bool)), m_glErrorHistory->setting_keep, SLOT(setOn(bool)));
-	connect(m_glErrorHistory->setting_keep, SIGNAL(toggled(bool)), m_glVolumeHistory->setting_keep, SLOT(setOn(bool)));
-	connect(m_glErrorHistory->setting_keep, SIGNAL(toggled(bool)), ui_btnKeepErrorHistory, SLOT(setOn(bool)));
+    connect(ui_btnKeepErrorHistory, SIGNAL(toggled(bool)), m_glErrorHistory->setting_keep, SLOT(setChecked(bool)));
+    connect(m_glErrorHistory->setting_keep, SIGNAL(toggled(bool)), m_glVolumeHistory->setting_keep, SLOT(setChecked(bool)));
+    connect(m_glErrorHistory->setting_keep, SIGNAL(toggled(bool)), ui_btnKeepErrorHistory, SLOT(setChecked(bool)));
 
 	m_glSample = new GLSample(centralWidget());
 	connect(m_glSample->setting_show, SIGNAL(toggled(bool)), this, SLOT(update_views()));
@@ -213,11 +213,11 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 
 	connect(m_dialTune->setting_spinScale, SIGNAL(valueChanged(int)), m_glStatistics->setting_spinScale, SLOT(setValue(int)));
 	connect(m_glStatistics->setting_spinScale, SIGNAL(valueChanged(int)), m_dialTune->setting_spinScale, SLOT(setValue(int)));
-	connect(m_dialTune->setting_useCents, SIGNAL(toggled(bool)), m_glStatistics->setting_useCents, SLOT(setOn(bool)));
-	connect(m_glStatistics->setting_useCents, SIGNAL(toggled(bool)), m_dialTune->setting_useCents, SLOT(setOn(bool)));
+    connect(m_dialTune->setting_useCents, SIGNAL(toggled(bool)), m_glStatistics->setting_useCents, SLOT(setChecked(bool)));
+    connect(m_glStatistics->setting_useCents, SIGNAL(toggled(bool)), m_dialTune->setting_useCents, SLOT(setChecked(bool)));
 
-	connect(m_dialTune->setting_showTolerance, SIGNAL(toggled(bool)), m_glStatistics->setting_showTolerance, SLOT(setOn(bool)));
-	connect(m_glStatistics->setting_showTolerance, SIGNAL(toggled(bool)), m_dialTune->setting_showTolerance, SLOT(setOn(bool)));
+    connect(m_dialTune->setting_showTolerance, SIGNAL(toggled(bool)), m_glStatistics->setting_showTolerance, SLOT(setChecked(bool)));
+    connect(m_glStatistics->setting_showTolerance, SIGNAL(toggled(bool)), m_dialTune->setting_showTolerance, SLOT(setChecked(bool)));
 
     connect(&m_config_form, SIGNAL(accepted()), this, SLOT(configure_ok()));
     connect(&m_config_form, SIGNAL(rejected()), this, SLOT(configure_cancel()));
@@ -778,8 +778,8 @@ void CustomInstrumentTunerForm::configure_ok()
 
 	SetSemitoneBounds(m_config_form.ui_spinMinHT->value(), m_config_form.ui_spinMaxHT->value());
 
-	ui_spinA3Offset->setShown(m_config_form.ui_chkShowA4Offset->isChecked());
-	ui_lblA3Offset->setShown(m_config_form.ui_chkShowA4Offset->isChecked());
+    ui_spinA3Offset->setVisible(m_config_form.ui_chkShowA4Offset->isChecked());
+    ui_lblA3Offset->setVisible(m_config_form.ui_chkShowA4Offset->isChecked());
 
 	//	if(m_note!=-1000)
 	//		ui_txtNote->setText(h2n(m_note));

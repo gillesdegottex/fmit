@@ -28,7 +28,7 @@ using namespace std;
 #include <qtranslator.h>
 #include <GL/glut.h>
 
-#include <CppAddons/CAMath.h>
+#include "CppAddons/CAMath.h"
 
 #include "CustomInstrumentTunerForm.h"
 CustomInstrumentTunerForm* g_main_form = NULL;
@@ -45,7 +45,7 @@ void signal_term(int sig)
 {
 	cerr << "No No ! Pleeeeeease ... *argl*" << endl;
 	cerr << endl;
-	cerr << PACKAGE_NAME << " nastily killed with signal " << sig << endl;
+    cerr << PACKAGE_NAME << " nastily killed with signal " << sig << endl;
 
 	exit(sig);
 }

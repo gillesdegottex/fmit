@@ -63,7 +63,7 @@ bool CaptureThreadImplALSA::is_available()
 		try
 		{
 			int err = -1;
-			if((err=snd_pcm_open(&m_alsa_capture_handle, m_source.toAscii().constData(), SND_PCM_STREAM_CAPTURE, SND_PCM_NONBLOCK)) < 0)
+            if((err=snd_pcm_open(&m_alsa_capture_handle, m_source.toLatin1().constData(), SND_PCM_STREAM_CAPTURE, SND_PCM_NONBLOCK)) < 0)
 			{
 				if(err==-19)	// TODO risks of changes for the error code
 					throw QString("invalid source '")+m_source+"'";
@@ -126,7 +126,7 @@ void CaptureThreadImplALSA::set_params(bool test)
 
 	if(m_source=="")
 		throw QString("ALSA: set the source first");
-	if((err=snd_pcm_open(&m_alsa_capture_handle, m_source.toAscii().constData(), SND_PCM_STREAM_CAPTURE, SND_PCM_NONBLOCK)) < 0)
+    if((err=snd_pcm_open(&m_alsa_capture_handle, m_source.toLatin1().constData(), SND_PCM_STREAM_CAPTURE, SND_PCM_NONBLOCK)) < 0)
 	{
 		//					cerr << "err=" << err << ":" << snd_strerror(err) << endl;
 

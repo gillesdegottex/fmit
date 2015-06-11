@@ -23,7 +23,7 @@
 
 #include <deque>
 using namespace std;
-#include <qgl.h>
+#include <QGLWidget>
 #include <qaction.h>
 class QTimer;
 #include "View.h"

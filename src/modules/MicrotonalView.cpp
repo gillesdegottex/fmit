@@ -173,7 +173,7 @@ using namespace Music;
 
 void MScale::load_scala(const QString& file_name)
 {
-	ifstream file(file_name.toAscii().constData());
+    ifstream file(file_name.toLatin1().constData());
 
 	if(!file.is_open())
 		throw MicrotonalView::tr("Unkown filename: '")+file_name+"'";
@@ -326,7 +326,7 @@ MicrotonalView::MicrotonalView(QWidget* parent)
 
 	setting_loadScale = new QAction(tr("Load Scala file ..."), this);
 	m_popup_menu.addAction(setting_loadScale);
-	connect(setting_loadScale, SIGNAL(activated()), this, SLOT(loadScale()));
+    connect(setting_loadScale, SIGNAL(triggered()), this, SLOT(loadScale()));
 
 	m_popup_menu.addMenu(&ui_scale_menu);
 
