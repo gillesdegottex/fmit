@@ -1,7 +1,7 @@
 
                                    FMIT
                         Free Music Instrument Tuner
-                              Version 0.99.6
+                              Version 0.99.9
                    http://gillesdegottex.github.io/fmit/
 
 FMIT is a graphical utility for tuning your musical instruments, with error
@@ -27,9 +27,13 @@ Copyright (c) 2004 Gilles Degottex <gilles.degottex@gmail.com>
 
 
 License
-    This software is under the GPL (v2) License. See the file LICENSE.txt
-    or http://www.gnu.org/licenses/gpl-2.0.html
-    Some internal libs of this software (see directories in libs) are under
+    Most of the code of this software is under the GPL (v2) License.
+    See the file COPYING_GPL.txt or http://www.gnu.org/licenses/gpl-2.0.html
+
+    Some abstract or helper classes are under LGPL (v2.1).
+    See the file COPYING_LGPL.txt or http://www.gnu.org/licenses/lgpl-2.1.html
+
+    The internal libs of this software (see directories in libs) are also under
     the LGPL (v2) License (see the respective directory for more details).
 
 Disclaimer
