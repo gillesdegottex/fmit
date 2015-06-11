@@ -14,7 +14,7 @@
    <string>Free Music Instrument Tuner</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../src/fmit.qrc">
+   <iconset resource="fmit.qrc">
     <normaloff>:/fmit/ui/images/fmit.png</normaloff>:/fmit/ui/images/fmit.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -440,7 +440,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="../src/fmit.qrc">
+    <iconset resource="fmit.qrc">
      <normaloff>:/fmit/ui/images/pause.png</normaloff>:/fmit/ui/images/pause.png</iconset>
    </property>
    <property name="text">
@@ -461,7 +461,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
   </action>
   <action name="configAction">
    <property name="icon">
-    <iconset resource="../src/fmit.qrc">
+    <iconset resource="fmit.qrc">
      <normaloff>:/fmit/ui/images/config.png</normaloff>:/fmit/ui/images/config.png</iconset>
    </property>
    <property name="text">
@@ -473,7 +473,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
   </action>
   <action name="saveSettingsAction">
    <property name="icon">
-    <iconset resource="../src/fmit.qrc">
+    <iconset resource="fmit.qrc">
      <normaloff>:/fmit/ui/images/saveSettings.png</normaloff>:/fmit/ui/images/saveSettings.png</iconset>
    </property>
    <property name="text">
@@ -494,7 +494,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
   </action>
   <action name="helpAboutAction">
    <property name="icon">
-    <iconset resource="../src/fmit.qrc">
+    <iconset resource="fmit.qrc">
      <normaloff>:/fmit/ui/images/helpAbout.png</normaloff>:/fmit/ui/images/helpAbout.png</iconset>
    </property>
    <property name="text">
@@ -513,12 +513,12 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="../src/fmit.qrc"/>
+  <include location="fmit.qrc"/>
  </resources>
  <connections>
   <connection>
    <sender>helpAboutAction</sender>
-   <signal>activated()</signal>
+   <signal>triggered()</signal>
    <receiver>InstrumentTunerForm</receiver>
    <slot>helpAbout()</slot>
    <hints>
@@ -534,7 +534,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
   </connection>
   <connection>
    <sender>configAction</sender>
-   <signal>activated()</signal>
+   <signal>triggered()</signal>
    <receiver>InstrumentTunerForm</receiver>
    <slot>configure()</slot>
    <hints>
@@ -582,7 +582,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
   </connection>
   <connection>
    <sender>saveSettingsAction</sender>
-   <signal>activated()</signal>
+   <signal>triggered()</signal>
    <receiver>InstrumentTunerForm</receiver>
    <slot>saveSettings()</slot>
    <hints>
