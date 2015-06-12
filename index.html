@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>FMIT by gillesdegottex</title>
+    <title>Free Music Instrument Tuner (FMIT)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -13,81 +13,54 @@
     <section class="page-header">
       <h1 class="project-name">FMIT</h1>
       <h2 class="project-tagline">Free Music Instrument Tuner (FMIT)</h2>
-      <a href="https://github.com/gillesdegottex/fmit" class="btn">View on GitHub</a>
-      <a href="https://github.com/gillesdegottex/fmit/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/gillesdegottex/fmit/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="index.html" class="btn">Home</a>
+      <a href="ss.html" class="btn">Screenshots</a>
+      <a href="faq.html" class="btn">FAQ</a>
+      <a href="http://github.com/gillesdegottex/fmit/releases" target="_blank" class="btn">Releases/Download</a>
+      <a href="http://github.com/gillesdegottex/fmit" target="_blank" class="btn">View on GitHub</a>
+<!--       <a href="https://github.com/gillesdegottex/fmit/tarball/master" class="btn">Download .tar.gz</a> -->
     </section>
 
     <section class="main-content">
-      <pre><code>                               FMIT
-                    Free Music Instrument Tuner
-                          Version 1.0.0
-               http://gillesdegottex.github.io/fmit/
-</code></pre>
 
-<p>FMIT is a graphical utility for tuning your musical instruments, with error
-and volume history and advanced features like microtonal tuning, statistics,
-and various views like waveform shape, harmonics ratios and real-time Discrete
-Fourier Transform (DFT). All views and advanced features are optional so that
-the interface can also be very simple.</p>
+    <h3>Summary</h3>
+    FMIT is a graphical utility for tuning your musical instruments, with error
+    and volume history and advanced features like microtonal tuning, statistics,
+    and various views like waveform shape, harmonics ratios and real-time Discrete
+    Fourier Transform (DFT). All views and advanced features are optional so that
+    the interface can also be very simple.
 
-<p>This software is coded in C/C++ using the Qt library (<a href="http://qt-project.org">http://qt-project.org</a>).
-It is stored as a GitHub project (<a href="https://github.com/gillesdegottex/fmit">https://github.com/gillesdegottex/fmit</a>).
-(It was previously stored on gna.org (<a href="https://gna.org/projects/fmit">https://gna.org/projects/fmit</a>)
-for versions&lt;=0.99.5).</p>
 
-<p>Goals
-    * Estimate the fundamental frequency (f0) of an audio signal, in real-time.
-      (the f0, not the perceived pitch)
-    * Keep any view optional so that the interface can be as simple as possible.
-      (make it easy to see on a distant screen)
-    * Support as many sound systems as possible.</p>
+    <h3>Features</h3>
+    <ul>    
+    <li>Estimation of the fundamental frequency (f0) of an audio signal, in real-time.<br/>
+      (the f0, not the perceived pitch)</li>
+    <li>Any view is optional so that the interface can be as simple as possible.<br/>
+      (make it easy to see on a distant screen)</li>
+    <li>Support as many sound systems as possible.</li>
+    </ul>
 
-<p>Copyright (c) 2004 Gilles Degottex <a href="mailto:gilles.degottex@gmail.com">gilles.degottex@gmail.com</a></p>
 
-<p>License
-    Most of the code of this software is under the GPL (v2) License.
-    See the file COPYING_GPL.txt or <a href="http://www.gnu.org/licenses/gpl-2.0.html">http://www.gnu.org/licenses/gpl-2.0.html</a></p>
+    <h3>Technicalities</h3>
+    <p>This software runs under Linux<img width="16" style="padding:0; box-shadow: none; margin-left:2px; margin-top: -10px; margin-bottom:-4px" src="figs/tux.png"/><br/>
+    (Windows <img width="18" style="padding:0; box-shadow: none; margin-top: -10px; margin-left:-3px; margin-bottom:-3px" src="figs/windows.png"/> and Mac <img width="15" style="padding:0; box-shadow: none; margin-top: -10px; margin-left:-2px; margin-bottom:-2px" src="figs/apple.png"/> supports are planned for a future release)<br/>
+    <br/>
+    It is coded in C/C++ using the <a href="http://qt-project.org" target="_blank">Qt library <img width="16" src="figs/Qt_logo.png"/></a><br/>
+    Most of the programming code is under <a href="http://github.com/gillesdegottex/fmit/blob/master/COPYING_GPL.txt">GPL (v2) License</a>
+    and <br/>Copyright &copy; 2004 <a href="mailto:gilles.degottex@gmail.com" target="_blank">Gilles Degottex</a>, and under <a href="http://github.com/gillesdegottex/fmit/blob/master/COPYING_LGPL.txt">LGPL (v2) License</a>, otherwise.<br/>
+    See the file <a href="http://github.com/gillesdegottex/fmit/blob/master/README.txt" target="_blank">README.txt</a> for more details.
 
-<pre><code>Some abstract or helper classes are under LGPL (v2.1).
-See the file COPYING_LGPL.txt or http://www.gnu.org/licenses/lgpl-2.1.html
 
-The internal libs of this software (see directories in libs) are also under
-the LGPL (v2) License (see the respective directory for more details).
-</code></pre>
-
-<p>Disclaimer
-    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
-    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-    POSSIBILITY OF SUCH DAMAGE.
-    ALSO, THE COPYRIGHT HOLDERS AND CONTRIBUTORS DO NOT TAKE ANY LEGAL
-    RESPONSIBILITY REGARDING THE IMPLEMENTATIONS OF THE PROCESSING TECHNIQUES
-    OR ALGORITHMS (E.G. CONSEQUENCES OF BUGS OR ERRONEOUS IMPLEMENTATIONS).
-    See the GNU General Public License (LICENSE.txt) for additional details.</p>
-
-<p>Contributors
-    Florian Hars for the tunning scales, Arnout Engelen for the JACK issues</p>
-
-<pre><code>Packagers: Toni Graffy and all the PackMan team, Ludovic Reslinger, Edward
-           Tomasz Napierala
-Other helpful people:
-John Anderson for the microtonal module request; Scott Bahling for the
-request of the scales in cents; Jacob Shapiro for his help to make FMIT
-working under Windows/Cygwin; Peter;
-</code></pre>
+    <h3>Credits</h3>
+    Developing an open-source software would be impossible without external, direct or indirect help. Thus, 1000 Thanks to the following geeks:<br/>
+    Florian Hars for the tunning scales; Arnout Engelen for the JACK issues; John Anderson for the microtonal module idea; Scott Bahling for the scales in cents; Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.<br/>
+    Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro (Portuguese), Florian Maier (German).<br/>
+    Packagers: Toni Graffy and all the PackMan team, Ludovic Reslinger, Edward Tomasz Napierala, John Wright.<br/>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/gillesdegottex/fmit">FMIT</a> is maintained by <a href="https://github.com/gillesdegottex">gillesdegottex</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+        <span class="site-footer-owner">For bug repports or idea suggestions, raise an <a target="_blank"  href="http://github.com/gillesdegottex/fmit/issues">issue on GitHub <img width="16" style="box-shadow: none; margin-top:-4px" src="figs/blacktocat.png"/></a> or send me an <a href="mailto:gilles.degottex@gmail.com?subject=fmit" target="_blank">e-mail</a></span>
+<!--        <span class="site-footer-owner"><a href="https://github.com/gillesdegottex/fmit">FMIT</a> is maintained by <a href="https://github.com/gillesdegottex">gillesdegottex</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>-->
       </footer>
 
     </section>
