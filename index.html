@@ -1,110 +1,108 @@
-<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
-<html>
-	<head>
-		<title>Free Music Instrument Tuner (FMIT) Homepage</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="GENERATOR" content="hands and eyes">
-		<link text="text/css" href="style.css" rel="stylesheet">
-	</head>
-	<body link="#0000FF" vlink="#800080">
-        <?php include_once("analyticstracking.php") ?>
-		<div id="sidebar">
-<!--			<h5>Menu</h5>-->
-			<table id="menu" width="100%">
-				<tr><td><a href="index.html">Home</a></td></tr>
-				<tr><td><a href="ss.html">Screen shots</a></td></tr>
-				<tr><td><a href="https://github.com/gillesdegottex/fmit/releases">Download</a></td></tr>
-				<tr><td><a href="configure.html">Configure</a></td></tr>
-				<tr><td><a href="faq.html">FAQ</a></td></tr>
-				<tr><td style="padding: 0.5em;"></td></tr>
-				<tr><td><a href="https://github.com/gillesdegottex/fmit">on GitHub.com</a></td></tr>
-			</table>
-			<h5>Current version</h5>
-			<center>1.0.0</center>
-			<p>released on</p>
-			<center>June, 12th 2015</center>
-			<h5>Donate</h5>
-			<center>
-			<p>
-			You like FMIT ? click below !
-			</p>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>FMIT by gillesdegottex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">FMIT</h1>
+      <h2 class="project-tagline">Free Music Instrument Tuner (FMIT)</h2>
+      <a href="https://github.com/gillesdegottex/fmit" class="btn">View on GitHub</a>
+      <a href="https://github.com/gillesdegottex/fmit/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/gillesdegottex/fmit/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-butcc-donate.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-"></form>
+    <section class="main-content">
+      <pre><code>                               FMIT
+                    Free Music Instrument Tuner
+                          Version 1.0.0
+               http://gillesdegottex.github.io/fmit/
+</code></pre>
 
-<!-- 			<a href="donation.html"><img style="border: 0px;"  src="http://www.paypal.com/en_US/i/btn/x-click-butcc-donate.gif"/></a> -->
-			</center>
-<!--			<p style="margin-top: 4em; text-align: center;">
-			<a href="https://gna.org"><img style="border: 0px;"  src="http://gna.org/cookbook/download.php?file_id=600"/></a>
-			</p>-->
-		</div>
-		<div id="header">
-			<h1>Free Music Instrument Tuner (FMIT)</h1>
-		</div>
-		<div id="content">
+<p>FMIT is a graphical utility for tuning your musical instruments, with error
+and volume history and advanced features like microtonal tuning, statistics,
+and various views like waveform shape, harmonics ratios and real-time Discrete
+Fourier Transform (DFT). All views and advanced features are optional so that
+the interface can also be very simple.</p>
 
-		<p>
-        <br/>
-		FMIT is a graphical utility for tuning your musical instruments, with error and volume history and advanced features like microtonal tuning, statistics, and various views like waveform shape, harmonics ratios and real-time Discrete Fourier Transform (DFT). All views and advanced features are optional so that the interface can also be very simple.
-        <br/>
+<p>This software is coded in C/C++ using the Qt library (<a href="http://qt-project.org">http://qt-project.org</a>).
+It is stored as a GitHub project (<a href="https://github.com/gillesdegottex/fmit">https://github.com/gillesdegottex/fmit</a>).
+(It was previously stored on gna.org (<a href="https://gna.org/projects/fmit">https://gna.org/projects/fmit</a>)
+for versions&lt;=0.99.5).</p>
 
-        <br/>
-        <br/>
-        <br/>
+<p>Goals
+    * Estimate the fundamental frequency (f0) of an audio signal, in real-time.
+      (the f0, not the perceived pitch)
+    * Keep any view optional so that the interface can be as simple as possible.
+      (make it easy to see on a distant screen)
+    * Support as many sound systems as possible.</p>
 
-<!-- 		<center>the simplest configuration</center> -->
-		<center><img src="figs/usual.png" alt="simple view"></center>
-		<p>
-		<table><tr>
-		<td>
-		<h3>Current features</h3>
-		<ul>
-			<li>Error history</li>
-			<li>Volume history</li>
-			<li>Statistics</li>
-			<li>Tunning scales<br/> (Werckmeister III, Kirnberger III, Diatonic and Meantone)</li>
-			<li>Microtonal tuning (with Scala file support)</li>
-			<li>Harmonic ratios</li>
-			<li>Wave shape</li>
-			<li>Discrete Fourier Transform view</li>
-			<li>Translations for: français</li>
-		</ul>
-		</td>
-		<td valign="top">
-		<h3>Running on</h3>
-		<ul>
-			<li><img align="center" src="figs/logo-linux.jpg"/> Linux</li>
-			<li><img align="center" src="figs/logo-freebsd-beasty.jpg"/> FreeBSD</li>
-			<li><img align="center" src="figs/logo-cygwin.jpg"/> Windows/Cygwin</li>
-		</ul>
-		</td>
-		<td valign="top">
-		<h3>Supported capture systems</h3>
-		<ul>
-			<li><img align="center" src="figs/logo-jack.jpg"/> JACK</li>
-			<li><img align="center" src="figs/logo-alsa.jpg"/> Alsa</li>
-			<li>PortAudio</li>
-			<li>OSS</li>
-		</ul>
-		</td>
-		</tr></table>
+<p>Copyright (c) 2004 Gilles Degottex <a href="mailto:gilles.degottex@gmail.com">gilles.degottex@gmail.com</a></p>
 
-		<h3>Thanks to</h3>
-		<ul>
-			<li>Contributor: Florian Hars for the tunning scales</li>
-			<li>Packagers: Toni Graffy and all the PackMan team ! (SuSE); Damian Wrobel (Fedora); Ludovic Reslinger (Debian); Edward Tomasz Napierala (FreeBSD)</li>
-			<li>Donators: Joel Brandt, Martin Lynch, ...</li>
-			<li>John Anderson for the microtonal module request; Scott Bahling for the request of the scales in cents; Jacob Shapiro to help me make FMIT working under Windows/Cygwin; Peter; ...</li>
-		</ul>
-		</div>
-		<div id="footer">
-			<div style="float: left; padding-left: 1em; padding-top: 0.5em;">
-			<h6 style="margin: 0em; padding: 0em;">Version June 2015, <a href="mailto:gilles.degottex@gmail.com?subject=fmit">Gilles Degottex</a></h6>
-			</div>
-		</div>
-	</body>
+<p>License
+    Most of the code of this software is under the GPL (v2) License.
+    See the file COPYING_GPL.txt or <a href="http://www.gnu.org/licenses/gpl-2.0.html">http://www.gnu.org/licenses/gpl-2.0.html</a></p>
+
+<pre><code>Some abstract or helper classes are under LGPL (v2.1).
+See the file COPYING_LGPL.txt or http://www.gnu.org/licenses/lgpl-2.1.html
+
+The internal libs of this software (see directories in libs) are also under
+the LGPL (v2) License (see the respective directory for more details).
+</code></pre>
+
+<p>Disclaimer
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+    POSSIBILITY OF SUCH DAMAGE.
+    ALSO, THE COPYRIGHT HOLDERS AND CONTRIBUTORS DO NOT TAKE ANY LEGAL
+    RESPONSIBILITY REGARDING THE IMPLEMENTATIONS OF THE PROCESSING TECHNIQUES
+    OR ALGORITHMS (E.G. CONSEQUENCES OF BUGS OR ERRONEOUS IMPLEMENTATIONS).
+    See the GNU General Public License (LICENSE.txt) for additional details.</p>
+
+<p>Contributors
+    Florian Hars for the tunning scales, Arnout Engelen for the JACK issues</p>
+
+<pre><code>Packagers: Toni Graffy and all the PackMan team, Ludovic Reslinger, Edward
+           Tomasz Napierala
+Other helpful people:
+John Anderson for the microtonal module request; Scott Bahling for the
+request of the scales in cents; Jacob Shapiro for his help to make FMIT
+working under Windows/Cygwin; Peter;
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/gillesdegottex/fmit">FMIT</a> is maintained by <a href="https://github.com/gillesdegottex">gillesdegottex</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-32339002-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
 </html>
+
