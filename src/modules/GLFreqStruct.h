@@ -22,7 +22,7 @@
 
 #include <vector>
 using namespace std;
-#include <qgl.h>
+#include <QGLWidget>
 #include <qspinbox.h>
 #include <qaction.h>
 #include "View.h"

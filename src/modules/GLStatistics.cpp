@@ -346,7 +346,7 @@ GLStatistics::GLStatistics(QWidget* parent)
 
 	setting_reset = new QAction(tr("Reset statistics"), this);
 	setting_reset->setShortcut('r');
-	connect(setting_reset, SIGNAL(activated()), this, SLOT(reset()));
+    connect(setting_reset, SIGNAL(triggered()), this, SLOT(reset()));
 	m_popup_menu.addAction(setting_reset);
 
 	setting_keep_hidden = new QAction(tr("Keep notes when hidden"), this);

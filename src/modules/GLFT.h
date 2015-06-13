@@ -24,7 +24,7 @@
 using namespace std;
 #include <Music/CFFTW3.h>
 // using namespace Music;
-#include <qgl.h>
+#include <QGLWidget>
 #include <qspinbox.h>
 #include <qaction.h>
 #include "View.h"
