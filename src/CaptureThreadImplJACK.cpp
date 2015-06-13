@@ -55,7 +55,7 @@ bool CaptureThreadImplJACK::is_available()
 		try
 		{
 			//m_jack_client = jack_client_new((m_capture_thread->m_name+"_test").latin1());
-            m_jack_client = jack_client_open((m_capture_thread->m_name+"_test").toAscii().constData(), JackNoStartServer, NULL);
+            m_jack_client = jack_client_open((m_capture_thread->m_name+"_test").toLatin1().constData(), JackNoStartServer, NULL);
             if(m_jack_client==NULL)
 				throw QString("unknown reason");
 		}
@@ -158,7 +158,7 @@ int CaptureThreadImplJACK::jackProcess(jack_nframes_t nframes)
 
 void CaptureThreadImplJACK::capture_init()
 {
-    m_jack_client = jack_client_open(m_capture_thread->m_name.toAscii().constData(), JackNoStartServer, NULL);
+    m_jack_client = jack_client_open(m_capture_thread->m_name.toLatin1().constData(), JackNoStartServer, NULL);
 	if(!m_jack_client)
 		throw QString("JACK: cannot create client, JACK deamon is running ?");
 
@@ -181,7 +181,7 @@ void CaptureThreadImplJACK::capture_init()
     {
         QString dest = QString(jack_get_client_name(m_jack_client))+":input";
         cerr << "CaptureThread: INFO: JACK: auto-connect '" << m_source.toStdString() << "' with '" << dest.toStdString() << "'" << endl;
-        if((err=jack_connect(m_jack_client, m_source.toAscii().constData(), dest.toAscii().constData()))!=0)
+        if((err=jack_connect(m_jack_client, m_source.toLatin1().constData(), dest.toLatin1().constData()))!=0)
             m_capture_thread->emitError(QString("JACK: Invalid source '")+m_source+"'");
     }
 

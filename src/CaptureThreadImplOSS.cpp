@@ -69,7 +69,7 @@ bool CaptureThreadImplOSS::is_available()
 	{
 		try
 		{
-			if((m_fd_in = open (m_source.toAscii().constData(), O_RDONLY, 0)) == -1)
+            if((m_fd_in = open (m_source.toLatin1().constData(), O_RDONLY, 0)) == -1)
 				throw QString(strerror(errno));
 		}
 		catch(QString error)
@@ -114,7 +114,7 @@ void CaptureThreadImplOSS::set_params(bool test)
 {
 	if(m_source=="")
 		throw QString("OSS: set the source first");
-	if((m_fd_in = open (m_source.toAscii().constData(), O_RDONLY, 0))==-1)
+    if((m_fd_in = open (m_source.toLatin1().constData(), O_RDONLY, 0))==-1)
 		throw QString("OSS: ")+QString(strerror(errno));
 
 	if(!test)

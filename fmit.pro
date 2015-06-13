@@ -1,30 +1,74 @@
 
 
+# Audio Capture System: acs_qt, acs_alsa, acs_jack, acs_portaudio, acs_oss
+
+CONFIG += acs_alsa acs_jack acs_portaudio acs_oss
 
 
 # TODO
 DEFINES += "PACKAGE_NAME=\\\"FMIT\\\""
-DEFINES += "PACKAGE_VERSION=\\\"1.99.0\\\""
+DEFINES += "PACKAGE_VERSION=\\\"1.0.80\\\""
 DEFINES += "PREFIX=\\\"/usr/local/\\\""
-
-
-# ------------------------------------------------
-
-DEFINES += CAPTURE_ALSA
-
-message($$DEFINES)
 
 
 # ------------------------------------------------------------------------------
 # (modify the following at your own risks !) -----------------------------------
 
+message(CONFIG=$$CONFIG)
+
+# Manage Architectures
+win32:message(For Windows)
+unix:message(For Linux)
+msvc:message(Using MSVC compiler)
+gcc:message(Using GCC compiler)
+contains(QT_ARCH, i386):message(For 32bits)
+contains(QT_ARCH, x86_64):message(For 64bits)
+
+# ------------------------------------------------------------------------------
+# Manage options for Audio Capture System --------------------------------------
+
+CONFIG(acs_qt) {
+    message(Audio Capture System: Request Qt support)
+    DEFINES += CAPTURE_QT
+}
+
+CONFIG(acs_alsa) {
+    message(Audio Capture System: Request ALSA support)
+    DEFINES += CAPTURE_ALSA
+    SOURCES += src/CaptureThreadImplALSA.cpp
+    LIBS += -lasound
+}
+
+CONFIG(acs_jack) {
+    message(Audio Capture System: Request JACK support)
+    SOURCES += src/CaptureThreadImplJACK.cpp
+    DEFINES += CAPTURE_JACK
+    LIBS += -ljack
+}
+
+CONFIG(acs_portaudio) {
+    message(Audio Capture System: Request PortAudio support)
+    DEFINES += CAPTURE_PORTAUDIO
+    SOURCES += src/CaptureThreadImplPortAudio.cpp
+    LIBS += -lportaudio
+}
+
+CONFIG(acs_oss) {
+    message(Audio Capture System: Request OSS support)
+    DEFINES += CAPTURE_OSS
+    SOURCES += src/CaptureThreadImplOSS.cpp
+    LIBS += -lasound
+}
+
+# Common configurations --------------------------------------------------------
+
 QT       += core gui opengl
-
-LIBS += -lglut -lGLU -lGL -lfftw3 -lasound
-
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 INCLUDEPATH += libs
+
+LIBS += -lglut -lGLU -lGL -lfftw3
+
 
 TARGET = fmit
 TEMPLATE = app
@@ -34,10 +78,6 @@ SOURCES +=  src/main.cpp \
             src/CustomInstrumentTunerForm.cpp \
             src/AutoQSettings.cpp \
             src/CaptureThread.cpp \
-            src/CaptureThreadImplALSA.cpp \
-#            src/CaptureThreadImplJACK.cpp \
-#            src/CaptureThreadImplOSS.cpp \
-#            src/CaptureThreadImplPortAudio.cpp \
             src/DummyMonoQuantizer.cpp \
             src/LatencyMonoQuantizer.cpp \
             src/MonoQuantizer.cpp \
@@ -73,8 +113,6 @@ SOURCES +=  src/main.cpp \
 HEADERS  += src/CustomInstrumentTunerForm.h \
             src/AutoQSettings.h \
             src/CaptureThread.h \
-            src/CaptureThreadImplALSA.h \
-#            src/CaptureThreadImplJACK.h \
             src/DummyMonoQuantizer.h \
             src/LatencyMonoQuantizer.h \
             src/MonoQuantizer.h \
