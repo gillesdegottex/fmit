@@ -53,7 +53,7 @@ void signal_term(int sig)
 
 int main(int argc, char** argv)
 {
-	cerr << "Free Music Instrument Tuner version " << PACKAGE_VERSION << " built at " << __DATE__ << " " << __TIME__ << endl;
+	cerr << "Free Music Instrument Tuner version " << PACKAGE_VERSION << endl;
 	cerr << "Install directory '" << PREFIX << "'" << endl;
 
 	signal(SIGINT, signal_interrupt);
