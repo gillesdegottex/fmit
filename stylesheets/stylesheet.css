@@ -76,7 +76,7 @@ a {
   margin-bottom: -1rem;
   background: url('../figs/fmit.png') no-repeat;
   background-position: 30% center;
-  background-size: 100px 50px;
+  background-size: 70px 70px;
 }
 
 @media screen and (min-width: 64em) {
