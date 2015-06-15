@@ -1,19 +1,19 @@
 
 
-# Audio Capture System: acs_qt, acs_alsa, acs_jack, acs_portaudio, acs_oss
+# Audio Capture Systems: acs_qt, acs_alsa, acs_jack, acs_portaudio, acs_oss
 CONFIG += acs_qt
-
-
-# TODO
-DEFINES += "PACKAGE_NAME=\\\"FMIT\\\""
-DEFINES += "PACKAGE_VERSION=\\\"1.0.80\\\""
-DEFINES += "PREFIX=\\\"/usr/local/\\\""
 
 
 # ------------------------------------------------------------------------------
 # (modify the following at your own risks !) -----------------------------------
 
 message(CONFIG=$$CONFIG)
+
+# Generate the version number from git
+# (if fail, fall back on the version present in the README.txt file)
+FMITVERSIONGITPRO = $$system(git describe --tags --always)
+message(Version from Git: $$FMITVERSIONGITPRO)
+DEFINES += FMITVERSIONGIT=$$system(git describe --tags --always)
 
 # Manage Architectures
 win32:message(For Windows)
@@ -60,9 +60,6 @@ CONFIG(acs_oss) {
     SOURCES += src/CaptureThreadImplOSS.cpp
     LIBS += -lasound
 }
-
-INCLUDEPATH += "C:\Users\Norwin\Documents\GitHub\lib\fftw-3.3.4-dll64"
-
 
 # FFTW -------------------------------------------------------------------------
 win32 {
@@ -191,4 +188,13 @@ HEADERS  += src/CustomInstrumentTunerForm.h \
 FORMS    += ui/InstrumentTunerForm.ui \
             ui/ConfigForm.ui
 
-RESOURCES += ui/fmit.qrc
+RESOURCES += fmit.qrc
+
+TRANSLATIONS = tr/fmit_de.ts \
+               tr/fmit_el.ts \
+               tr/fmit_en.ts \
+               tr/fmit_fr.ts \
+               tr/fmit_pt.ts \
+               tr/fmit_ru.ts
+
+CONFIG += embed_manifest_exe

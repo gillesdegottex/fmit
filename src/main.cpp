@@ -26,7 +26,9 @@ using namespace std;
 #include <qapplication.h>
 #include <qtextcodec.h>
 #include <qtranslator.h>
+#include <QLibraryInfo>
 #include <GL/glut.h>
+#include "qthelper.h"
 
 #include "CppAddons/CAMath.h"
 
@@ -35,21 +37,28 @@ CustomInstrumentTunerForm* g_main_form = NULL;
 
 int main(int argc, char** argv)
 {
-    cout << "Free Music Instrument Tuner version " << PACKAGE_VERSION << endl;
-    cout << "Install directory '" << PREFIX << "'" << endl;
+    QString fmitversiongit(STR(FMITVERSIONGIT));
+
+    cout << "Free Music Instrument Tuner (Version " << fmitversiongit.toLatin1().constData() << ")" << endl;
 
 	QApplication a(argc, argv, true);
 
 	glutInit(&argc, argv);
 
-//	cout << "LANG=" << QTextCodec::locale() << endl;
-
-	QTranslator tr_fmit;
-	QString trFile = QString("fmit_") + QLocale::system().name();
-	QString trPath = QString(PREFIX) + QString("/share/fmit/tr");
-    cout << "Looking up translation '" << trFile.toStdString() << "' in '" << trPath.toStdString() << "'" << endl;
-	tr_fmit.load(trFile, trPath);
-	a.installTranslator(&tr_fmit);
+    // Load translation
+//    cout << "Language=" << QLocale::system().name().toLatin1().constData() << endl;
+    QTranslator qtTranslator;
+    qtTranslator.load("qt_" + QLocale::system().name(),
+           QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    a.installTranslator(&qtTranslator);
+    QTranslator fmitTranslator;
+    QString trFile = QString("fmit_")+QLocale::system().name();
+    cout << "Requested translation file: " << trFile.toLatin1().constData() << endl;
+//    QString trPath = "C:/Users/Norwin/Documents/GitHub/fmit/tr/";
+    QString trPath = QCoreApplication::applicationDirPath()+"/tr/";
+    cout << "QCoreApplication::applicationDirPath(): " << trPath.toLatin1().constData() << endl;
+    fmitTranslator.load(trFile, trPath);
+    a.installTranslator(&fmitTranslator);
 
 	g_main_form = new CustomInstrumentTunerForm();
 
