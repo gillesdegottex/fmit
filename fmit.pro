@@ -61,15 +61,54 @@ CONFIG(acs_oss) {
     LIBS += -lasound
 }
 
+INCLUDEPATH += "C:\Users\Norwin\Documents\GitHub\lib\fftw-3.3.4-dll64"
+
+
+# FFTW -------------------------------------------------------------------------
+win32 {
+    isEmpty(FFT_LIBDIR) {
+        contains(QMAKE_TARGET.arch, x86_64) {
+            FFT_LIBDIR = "$$_PRO_FILE_PWD_/../lib/fftw-3.3.4-dll64"
+        } else {
+            FFT_LIBDIR = "$$_PRO_FILE_PWD_/../lib/fftw-3.3.4-dll32"
+        }
+    }
+    message(FFT_LIBDIR=$$FFT_LIBDIR)
+    INCLUDEPATH += $$FFT_LIBDIR
+    LIBS += -L$$FFT_LIBDIR
+    msvc: LIBS += $$FFT_LIBDIR/libfftw3-3.lib
+    gcc: LIBS += -lfftw3-3
+}
+unix {
+    LIBS += -lfftw3
+}
+
+# Open GL ----------------------------------------------------------------------
+win32 {
+    isEmpty(GLUT_LIBDIR) {
+        GLUT_LIBDIR = "$$_PRO_FILE_PWD_/../lib/freeglut-MSVC-3.0.0-1.mp/freeglut"
+    }
+
+    message(GLUT_LIBDIR=$$GLUT_LIBDIR)
+    INCLUDEPATH += $$GLUT_LIBDIR/include
+
+    contains(QMAKE_TARGET.arch, x86_64) {
+        msvc: LIBS += $$GLUT_LIBDIR/lib/x64/freeglut.lib
+    } else {
+        msvc: LIBS += $$GLUT_LIBDIR/lib/freeglut.lib
+    }
+}
+unix {
+    LIBS += -lglut -lGLU -lGL
+}
+
+
 # Common configurations --------------------------------------------------------
 
-QT       += core gui opengl
+QT += core gui opengl
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 INCLUDEPATH += libs
-
-LIBS += -lglut -lGLU -lGL -lfftw3
-
 
 TARGET = fmit
 TEMPLATE = app

@@ -295,7 +295,7 @@ void GLFT::spinWinLengthChanged(int num)
 		m_plan.resize(fftlen);
 		m_components.resize(m_plan.size()/2);
 
-        cerr << "GLFT: INFO: window length=" << win.size() << "ms FFT length=" << m_plan.size() << endl;
+        cout << "GLFT: INFO: window length=" << win.size() << "ms FFT length=" << m_plan.size() << endl;
 	}
 }
 
@@ -405,7 +405,7 @@ void GLFT::paintGL()
 		for(int i=0; i<int(m_components.size()); i++)
 			m_components[i] = mod(m_plan.out[i]);
 
-//		cerr << "m_minA=" << m_minA << " m_maxA=" << m_maxA << endl;
+//		cout << "m_minA=" << m_minA << " m_maxA=" << m_maxA << endl;
 		double y;
 		glBegin(GL_LINE_STRIP);
 		glColor3f(0.4, 0.4, 0.5);
