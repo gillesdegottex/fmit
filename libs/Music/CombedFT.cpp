@@ -95,7 +95,7 @@ namespace Music
 
 	void CombedFT::apply(const deque<double>& buff)
 	{
-// 		cerr << getAmplitudeTreshold() << " " << getComponentTreshold() << " " << m_audib_ratio << endl;
+// 		cout << getAmplitudeTreshold() << " " << getComponentTreshold() << " " << m_audib_ratio << endl;
 
 		if(int(buff.size())<getMinSize() || m_win.empty())	return;
 
@@ -193,7 +193,7 @@ namespace Music
 	 			m_f0 /= max_index;
 		}
 
-// 		cerr << " final: " << GetSamplingRate() << ":" << m_f0 << endl;
+// 		cout << " final: " << GetSamplingRate() << ":" << m_f0 << endl;
 	}
 	CombedFT::~CombedFT()
 	{

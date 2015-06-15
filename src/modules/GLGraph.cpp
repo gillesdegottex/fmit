@@ -306,7 +306,7 @@ void GLGraph::load()
 }
 void GLGraph::clearSettings()
 {
-// 	cerr << "GLGraph::clearSettings" << endl;
+// 	cout << "GLGraph::clearSettings" << endl;
 	s_settings->remove("showWaveForm");
 	s_settings->remove("autoScale");
 	s_settings->remove("setting_spinScaleFactor");
@@ -395,7 +395,7 @@ void GLGraph::refreshGraph()
 
 void GLGraph::update_maxs()
 {
-//	cerr << "GLGraph::update_maxs " << m_sampling_rate << endl;
+//	cout << "GLGraph::update_maxs " << m_sampling_rate << endl;
 
 	if(m_queue.empty())	return;
 
@@ -426,9 +426,9 @@ void GLGraph::update_maxs()
 
 void GLGraph::base_paint(float graph_gray)
 {
-// 	cerr << "GLGraph::base_paint " << m_queue.size() << ":" << m_maxs.size() << endl;
+// 	cout << "GLGraph::base_paint " << m_queue.size() << ":" << m_maxs.size() << endl;
 
-// 	cerr<<"m_pending_queue="<<m_pending_queue.size()<<" m_queue="<<m_queue.size()<<" m_maxs="<<m_maxs.size()<<endl;
+// 	cout<<"m_pending_queue="<<m_pending_queue.size()<<" m_queue="<<m_queue.size()<<" m_maxs="<<m_maxs.size()<<endl;
 
 	int width = QGLWidget::width();
 

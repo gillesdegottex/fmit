@@ -75,7 +75,7 @@ bool CaptureThreadImplJACK::is_available()
 
 void CaptureThreadImplJACK::setSamplingRate(int value)
 {
-	cerr << "CaptureThread: ERROR: JACK: setSamplingRate not available with JACK ! change the JACK server sampling rate instead" << endl;
+    cout << "CaptureThread: ERROR: JACK: setSamplingRate not available with JACK ! change the JACK server sampling rate instead" << endl;
 }
 
 void CaptureThreadImplJACK::startCapture()
@@ -100,7 +100,7 @@ void CaptureThreadImplJACK::stopCapture()
 void CaptureThreadImplJACK::JackShutdown(void* arg){((CaptureThreadImplJACK*)arg)->jackShutdown();}
 void CaptureThreadImplJACK::jackShutdown()
 {
-//     cerr << "CaptureThreadImplJACK::jackShutdown" << endl;
+//     cout << "CaptureThreadImplJACK::jackShutdown" << endl;
 
 	m_jack_client = NULL;
     m_jack_port = NULL;
@@ -111,7 +111,7 @@ void CaptureThreadImplJACK::jackShutdown()
     }
 
 	m_capture_thread->emitError("JACK: server shutdown !");
-//     cerr << "~CaptureThreadImplJACK::jackShutdown" << endl;
+//     cout << "~CaptureThreadImplJACK::jackShutdown" << endl;
 }
 
 int CaptureThreadImplJACK::JackSampleRate(jack_nframes_t nframes, void* arg){return ((CaptureThreadImplJACK*)arg)->jackSampleRate(nframes);}
@@ -133,7 +133,7 @@ int CaptureThreadImplJACK::jackSampleRate(jack_nframes_t nframes)
 int CaptureThreadImplJACK::JackProcess(jack_nframes_t nframes, void* arg){return ((CaptureThreadImplJACK*)arg)->jackProcess(nframes);}
 int CaptureThreadImplJACK::jackProcess(jack_nframes_t nframes)
 {
-// 	cerr << "CaptureThreadImplJACK::jackProcess '" << nframes << "'" << endl;
+// 	cout << "CaptureThreadImplJACK::jackProcess '" << nframes << "'" << endl;
 
     if(!m_jack_client || !m_jack_port || !m_ringbuffer) return 0;
 	if(m_capture_thread->m_pause || !m_capture_thread->m_capturing || nframes<=0)	return 0;
@@ -146,12 +146,12 @@ int CaptureThreadImplJACK::jackProcess(jack_nframes_t nframes)
 
     int characters_written = jack_ringbuffer_write(m_ringbuffer, (const char *) ((void *) (in)), g_jack_sample_size*nframes);
     if (characters_written < g_jack_sample_size*nframes)
-        cerr << "CaptureThreadImplJACK::jackProcess Can not write all frames: ringbuffer full?" << endl;
+        cout << "CaptureThreadImplJACK::jackProcess Can not write all frames: ringbuffer full?" << endl;
 
 //     int toread = jack_ringbuffer_read_space(m_ringbuffer);
-//     cerr << "CaptureThreadImplJACK::jackProcess " << characters_written/g_jack_sample_size << " values written, " << toread/g_jack_sample_size << " to read" << endl;
+//     cout << "CaptureThreadImplJACK::jackProcess " << characters_written/g_jack_sample_size << " values written, " << toread/g_jack_sample_size << " to read" << endl;
 
-//     cerr << "~CaptureThreadImplJACK::jackProcess" << endl;
+//     cout << "~CaptureThreadImplJACK::jackProcess" << endl;
 
 	return 0;
 }
@@ -166,7 +166,7 @@ void CaptureThreadImplJACK::capture_init()
 	jack_on_shutdown(m_jack_client, JackShutdown, (void*)this);
 	jack_set_sample_rate_callback(m_jack_client, JackSampleRate, (void*)this);
 
-    cerr << "CaptureThread: INFO: JACK: sampling rate=" << jack_get_sample_rate(m_jack_client) << endl;
+    cout << "CaptureThread: INFO: JACK: sampling rate=" << jack_get_sample_rate(m_jack_client) << endl;
     m_ringbuffer = jack_ringbuffer_create(g_jack_sample_size*jack_get_sample_rate(m_jack_client)); // one second buffer
 
     int err=0;
@@ -180,7 +180,7 @@ void CaptureThreadImplJACK::capture_init()
 	if(m_source!="")
     {
         QString dest = QString(jack_get_client_name(m_jack_client))+":input";
-        cerr << "CaptureThread: INFO: JACK: auto-connect '" << m_source.toStdString() << "' with '" << dest.toStdString() << "'" << endl;
+        cout << "CaptureThread: INFO: JACK: auto-connect '" << m_source.toStdString() << "' with '" << dest.toStdString() << "'" << endl;
         if((err=jack_connect(m_jack_client, m_source.toLatin1().constData(), dest.toLatin1().constData()))!=0)
             m_capture_thread->emitError(QString("JACK: Invalid source '")+m_source+"'");
     }
@@ -196,24 +196,24 @@ void CaptureThreadImplJACK::capture_init()
 }
 void CaptureThreadImplJACK::capture_loop()
 {
-//     cerr << "CaptureThreadImplJACK::capture_loop " << g_jack_sample_size << endl;
+//     cout << "CaptureThreadImplJACK::capture_loop " << g_jack_sample_size << endl;
 
     char dest[JACK_BUFF_SIZE*g_jack_sample_size];
 
     m_wait_for_start = false;
     while(m_loop && m_jack_client && m_jack_port && m_ringbuffer)
     {
-//         cerr << "CaptureThreadImplJACK::capture_loop toread=" << toread/g_jack_sample_size << endl;
+//         cout << "CaptureThreadImplJACK::capture_loop toread=" << toread/g_jack_sample_size << endl;
         int read = jack_ringbuffer_read(m_ringbuffer, dest, JACK_BUFF_SIZE*g_jack_sample_size);
         if(read>0)
         {
             if(!m_capture_thread->m_pause)
             {
-//                 cerr << "CaptureThreadImplJACK::capture_loop locking" << endl;
+//                 cout << "CaptureThreadImplJACK::capture_loop locking" << endl;
                 m_capture_thread->m_lock.lock();
 
 //                 int toread = jack_ringbuffer_read_space(m_ringbuffer);
-//                 cerr << "CaptureThreadImplJACK::capture_loop in deque='" << m_capture_thread->m_values.size() << "' still toread=" << toread/g_jack_sample_size << endl;
+//                 cout << "CaptureThreadImplJACK::capture_loop in deque='" << m_capture_thread->m_values.size() << "' still toread=" << toread/g_jack_sample_size << endl;
 
                 if(g_jack_sample_size==4)
                     for(int i=0; i<(read/g_jack_sample_size); i++)
@@ -231,18 +231,18 @@ void CaptureThreadImplJACK::capture_loop()
                 m_capture_thread->m_packet_size_sll += (read/g_jack_sample_size);
 
                 m_capture_thread->m_lock.unlock();
-//                 cerr << "CaptureThreadImplJACK::capture_loop unlocked" << endl;
+//                 cout << "CaptureThreadImplJACK::capture_loop unlocked" << endl;
             }
         }
         else
             msleep(10);
     }
 
-//     cerr << "~CaptureThreadImplJACK::capture_loop" << endl;
+//     cout << "~CaptureThreadImplJACK::capture_loop" << endl;
 }
 void CaptureThreadImplJACK::capture_finished()
 {
-// 	cerr << "CaptureThreadImplJACK::capture_finished" << endl;
+// 	cout << "CaptureThreadImplJACK::capture_finished" << endl;
 
 	if(m_jack_client!=NULL)
 	{
@@ -261,7 +261,7 @@ void CaptureThreadImplJACK::capture_finished()
 }
 void CaptureThreadImplJACK::run()
 {
-//  cerr << "CaptureThread: INFO: JACK: capture thread entered" << endl;
+//  cout << "CaptureThread: INFO: JACK: capture thread entered" << endl;
 
 //  while(m_alive)  // TODO need to keep alsa thread alive to let PortAudio working after ALSA !! TODO same for JACK ???
     {
@@ -272,7 +272,7 @@ void CaptureThreadImplJACK::run()
 
         try
         {
-//             cerr << "CaptureThread: INFO: JACK: capture thread running" << endl;
+//             cout << "CaptureThread: INFO: JACK: capture thread running" << endl;
 
             capture_init();
 
@@ -289,7 +289,7 @@ void CaptureThreadImplJACK::run()
         catch(QString error)
         {
             m_loop = false;
-            cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+            cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
             m_capture_thread->emitError(error);
         }
         m_wait_for_start = false;
@@ -298,14 +298,14 @@ void CaptureThreadImplJACK::run()
 
         m_in_run = false;
 
-//         cerr << "CaptureThread: INFO: JACK: capture thread stop running" << endl;
+//         cout << "CaptureThread: INFO: JACK: capture thread stop running" << endl;
     }
 
-//     cerr << "CaptureThread: INFO: JACK: capture thread exited" << endl;
+//     cout << "CaptureThread: INFO: JACK: capture thread exited" << endl;
 }
 CaptureThreadImplJACK::~CaptureThreadImplJACK()
 {
-//  cerr << "CaptureThreadImplJACK::~CaptureThreadImplJACK" << endl;
+//  cout << "CaptureThreadImplJACK::~CaptureThreadImplJACK" << endl;
 
     m_alive = false;
 
@@ -314,6 +314,6 @@ CaptureThreadImplJACK::~CaptureThreadImplJACK()
     while(isRunning())
         msleep(50);
 
-//  cerr << "~CaptureThreadImplJACK::~CaptureThreadImplJACK" << endl;
+//  cout << "~CaptureThreadImplJACK::~CaptureThreadImplJACK" << endl;
 }
 #endif

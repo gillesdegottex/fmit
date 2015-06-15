@@ -101,7 +101,7 @@ void CaptureThreadImplQt::capture_finished()
 
 void CaptureThreadImplQt::startCapture()
 {
-//    cerr << "CaptureThreadImplQt::startCapture" << endl;
+//    cout << "CaptureThreadImplQt::startCapture" << endl;
 
     try
     {
@@ -110,13 +110,13 @@ void CaptureThreadImplQt::startCapture()
     catch(QString error)
     {
         capture_finished();
-        cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+        cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
         m_capture_thread->emitError(error);
     }
 }
 void CaptureThreadImplQt::stopCapture()
 {
-//    cerr << "CaptureThreadImplQt::stopCapture" << endl;
+//    cout << "CaptureThreadImplQt::stopCapture" << endl;
 
     try
     {
@@ -124,7 +124,7 @@ void CaptureThreadImplQt::stopCapture()
     }
     catch(QString error)
     {
-        cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+        cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
         m_capture_thread->emitError(error);
     }
 }
@@ -161,7 +161,7 @@ void CaptureThreadImplQt::set_params(bool test) {
     format.setChannelCount(1);
     if(!m_audioInputDevice.isFormatSupported(format)) {
         QString err_msg = QString("ALSA: cannot set channel count to 1");
-        cerr << "CaptureThread: WARNING: " << err_msg.toStdString() << endl;
+        cout << "CaptureThread: WARNING: " << err_msg.toStdString() << endl;
         format.setChannelCount(2);
         if(!m_audioInputDevice.isFormatSupported(format))
             throw QString("Qt: Cannot set number of channels to 1 or 2");
@@ -173,7 +173,7 @@ void CaptureThreadImplQt::set_params(bool test) {
     {
         int old_sampling_rate = m_sampling_rate;
 
-        cerr << "CaptureThread: INFO: Qt: sampling rate set to max or undefined, try to determinate it." << endl;
+        cout << "CaptureThread: INFO: Qt: sampling rate set to max or undefined, try to determinate it." << endl;
 
         QList<int> sampling_rates;
         #ifdef Q_OS_WIN
@@ -200,14 +200,14 @@ void CaptureThreadImplQt::set_params(bool test) {
                 throw QString("Qt: Cannot set any sample rate");
 
             m_sampling_rate = sampling_rates.front();
-            cerr << "CaptureThread: INFO: Qt: Try sampling rate " << m_sampling_rate << " ..." << flush;
+            cout << "CaptureThread: INFO: Qt: Try sampling rate " << m_sampling_rate << " ..." << flush;
 
             format.setSampleRate(m_sampling_rate);
 
             foundsr = m_audioInputDevice.isFormatSupported(format);
 
-            if(!foundsr)	cerr << " failed" << endl;
-            else            cerr << " success" << endl;
+            if(!foundsr)	cout << " failed" << endl;
+            else            cout << " success" << endl;
 
             sampling_rates.pop_front();
         }
@@ -246,7 +246,7 @@ void CaptureThreadImplQt::set_params(bool test) {
 
 void CaptureThreadImplQt::setSamplingRate(int value)
 {
-//    cerr << "CaptureThreadImplQt::setSamplingRate " << value << endl;
+//    cout << "CaptureThreadImplQt::setSamplingRate " << value << endl;
 
 	assert(value>0 || value==CaptureThread::SAMPLING_RATE_MAX);
 
@@ -265,7 +265,7 @@ void CaptureThreadImplQt::setSamplingRate(int value)
 			}
 			catch(QString error)
 			{
-				cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+                cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
 				m_capture_thread->emitError(error);
 			}
 
@@ -278,7 +278,7 @@ void CaptureThreadImplQt::setSamplingRate(int value)
 		if(was_running)	m_capture_thread->startCapture();
 	}
 
-// 	cerr << "~CaptureThreadImplQt::setSamplingRate" << endl;
+// 	cout << "~CaptureThreadImplQt::setSamplingRate" << endl;
 }
 
 void CaptureThreadImplQt::audioStateChanged(QAudio::State state) {
@@ -303,7 +303,7 @@ void CaptureThreadImplQt::audioStateChanged(QAudio::State state) {
 
 void CaptureThreadImplQt::audioDataReady()
 {
-//    cerr << "CaptureThreadImplQt::audioDataReady " << m_audioInput->bytesReady() << endl;
+//    cout << "CaptureThreadImplQt::audioDataReady " << m_audioInput->bytesReady() << endl;
 
     if(m_audioInput) {
         m_capture_thread->m_lock.lock();

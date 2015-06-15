@@ -42,14 +42,6 @@ int main(int argc, char** argv)
 
 	glutInit(&argc, argv);
 
-//	if(a.argc()>1)
-//	{
-//		if(a.argc()>2 && (QString(a.argv()[1])=="-d" || QString(a.argv()[1])=="--device"))
-//		{
-//			cout << "used device: " << a.argv()[2] << endl;
-//		}
-//	}
-
 //	cout << "LANG=" << QTextCodec::locale() << endl;
 
 	QTranslator tr_fmit;

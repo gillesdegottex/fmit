@@ -32,7 +32,7 @@ DummyMonoQuantizer::DummyMonoQuantizer()
 
 void DummyMonoQuantizer::quantize(double freq)
 {
-// 	cerr << "DummyMonoQuantizer::quantize " << freq << endl;
+// 	cout << "DummyMonoQuantizer::quantize " << freq << endl;
 
 	double current_time = m_time.elapsed();
 

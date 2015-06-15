@@ -84,7 +84,7 @@ void RangedCumulativeDiff::receive(const deque<double>& buff, size_t start)
 		}
 //		m_error = max(m_error, err);
 		m_error = m_min_error;
-//		cerr << m_error << endl;
+//		cout << m_error << endl;
 //		m_error += err;
 //		m++;
 	}

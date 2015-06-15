@@ -33,7 +33,7 @@ namespace Music
 	, m_duration(m_latency_factor/m_freq)
 	, m_wave(int(m_duration*GetSamplingRate()))
 	{
-//		cerr << "Convolution::Convolution " << ht << endl;
+//		cout << "Convolution::Convolution " << ht << endl;
 		double c = - 2.0*Math::Pi * m_freq / GetSamplingRate();
 
 		double u = Usefull(Win_Sinc(gauss_factor));

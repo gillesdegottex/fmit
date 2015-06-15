@@ -243,7 +243,7 @@ MScale::MScale(const QString& file_name, FileType type)
 	if(type==SCALA)	load_scala(file_name);
 	else
 	{
-		cerr << "MicrotonalView::Scale::Scale unsupported file type '" << type << "'" << endl;
+        cout << "MicrotonalView::Scale::Scale unsupported file type '" << type << "'" << endl;
 	}
 }
 
@@ -258,7 +258,7 @@ QRoot::QRoot(MicrotonalView* view, int ht)
 : QPushButton(view)
 , m_ht(ht)
 {
-//	cerr << "QRoot::QRoot " << m_ht << endl;
+//	cout << "QRoot::QRoot " << m_ht << endl;
 
 // 	if(ht>8) ht+=12;
 
@@ -383,7 +383,7 @@ void MicrotonalView::load()
 			MScale* scale = new MScale(*it, MScale::SCALA);
 			setting_scales.push_back(scale);
 		}
-		catch(QString error){cerr << "MicrotonalView::load " << error.toStdString() << endl;}
+        catch(QString error){cout << "MicrotonalView::load " << error.toStdString() << endl;}
 	}
 	refreshScaleList();
 
@@ -476,7 +476,7 @@ void MicrotonalView::selectScale(const QString& name)
 
 	if(index==-1)
 	{
-		cerr << "MicrotonalView::selectScale unknown scale '" << name.toStdString() << "'" << endl;
+        cout << "MicrotonalView::selectScale unknown scale '" << name.toStdString() << "'" << endl;
 		return;
 	}
 
@@ -540,7 +540,7 @@ void MicrotonalView::updateCursor(float freq)
 
 void MicrotonalView::selectRoot(int ht)
 {
-//	cerr << "MicrotonalView::selectRoot " << ht << endl;
+//	cout << "MicrotonalView::selectRoot " << ht << endl;
 
 	if(ht==setting_selectedRoot)
 	{
@@ -811,7 +811,7 @@ void MicrotonalView::loadScale()
 		setting_lastScalesDirectory = dlg_file.directory().path();
 #endif
 		s_settings->setValue("MicrotonalView_lastScalesDirectory", setting_lastScalesDirectory);
-//		cerr << "setting_lastScalesDirectory=" << setting_lastScalesDirectory << endl;
+//		cout << "setting_lastScalesDirectory=" << setting_lastScalesDirectory << endl;
 		try
 		{
 #ifdef QT3_SUPPORT

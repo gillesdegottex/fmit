@@ -35,7 +35,7 @@ class Listener
 	bool m_isListenning;
 
 protected:
-	void todo(const string& fn){cerr << typeid(this).name() << "::" << fn << " not yet implemented" << endl;}
+    void todo(const string& fn){cout << typeid(this).name() << "::" << fn << " not yet implemented" << endl;}
 
 public:
 	Listener() : m_isListenning(false) {}

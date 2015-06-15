@@ -250,7 +250,7 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	connect((QObject*)&m_timer_refresh, SIGNAL(timeout()), this, SLOT(refresh()));
 	m_timer_refresh.start(m_config_form.ui_spinRefreshTime->value());
 
-//     cerr << __FILE__ << " " << __LINE__ << endl;
+//     cout << __FILE__ << " " << __LINE__ << endl;
 }
 
 void CustomInstrumentTunerForm::transportChanged(const QString& name)
@@ -299,7 +299,7 @@ void CustomInstrumentTunerForm::toggleFullScreen()
 
 void CustomInstrumentTunerForm::noteRangeChanged()
 {
-	//	cerr << "CustomInstrumentTunerForm::noteRangeChanged" << endl;
+    //	cout << "CustomInstrumentTunerForm::noteRangeChanged" << endl;
 
 	m_config_form.ui_txtMinHT->setText(QString::fromStdString(h2n(m_config_form.ui_spinMinHT->value())) + " = " + QString::number(h2f(m_config_form.ui_spinMinHT->value())) + " hz");
 	m_config_form.ui_txtMaxHT->setText(QString::fromStdString(h2n(m_config_form.ui_spinMaxHT->value())) + " = " + QString::number(h2f(m_config_form.ui_spinMaxHT->value())) + " hz");
@@ -307,7 +307,7 @@ void CustomInstrumentTunerForm::noteRangeChanged()
 
 void CustomInstrumentTunerForm::errorRaised(const QString& error)
 {
-	//	cerr << "CustomInstrumentTunerForm::errorRaised " << error << endl;
+    //	cout << "CustomInstrumentTunerForm::errorRaised " << error << endl;
 
 	statusBar()->showMessage(QString("ERROR: ")+error);
 
@@ -318,7 +318,7 @@ void CustomInstrumentTunerForm::errorRaised(const QString& error)
 
 void CustomInstrumentTunerForm::samplingRateChanged(int sampling_rate)
 {
-//	cerr << "CustomInstrumentTunerForm::samplingRateChanged " << sampling_rate << endl;
+//	cout << "CustomInstrumentTunerForm::samplingRateChanged " << sampling_rate << endl;
 
 	Music::SetSamplingRate(sampling_rate);
 
@@ -338,7 +338,7 @@ void CustomInstrumentTunerForm::ui_spinAFreq_valueChanged(int AFreq)
 	if(m_config_form.ui_chkShowA4Offset->isChecked())
 		A = h2f(ui_spinA3Offset->value()*1/100.0f, A);
 	Music::SetAFreq(A);
-//	cerr << A << endl;
+//	cout << A << endl;
 }
 void CustomInstrumentTunerForm::ui_spinAOffset_valueChanged(int offset)
 {
@@ -346,12 +346,12 @@ void CustomInstrumentTunerForm::ui_spinAOffset_valueChanged(int offset)
 	if(m_config_form.ui_chkShowA4Offset->isChecked())
 		A = h2f(offset*1/100.0f, ui_spinAFreq->value());
 	Music::SetAFreq(A);
-//	cerr << A << endl;
+//	cout << A << endl;
 }
 
 void CustomInstrumentTunerForm::tuningFreqChanged(float freq)
 {
-	//	cerr << "CustomInstrumentTunerForm::tuningFreqChanged " << freq << endl;
+    //	cout << "CustomInstrumentTunerForm::tuningFreqChanged " << freq << endl;
 
 	if(freq==0.0f)
 	{
@@ -398,17 +398,17 @@ void CustomInstrumentTunerForm::refresh()
 	int limit = int( m_capture_thread.getSamplingRate() /
 			(1.0/(m_config_form.ui_spinRefreshTime->value()/1000.0) - 1));
 
-// 	cerr << "REFRESH ";
+// 	cout << "REFRESH ";
 
 	m_capture_thread.lock();
-//     cerr << "CustomInstrumentTunerForm::refresh locked, values to read=" << m_capture_thread.m_values.size() << endl;
+//     cout << "CustomInstrumentTunerForm::refresh locked, values to read=" << m_capture_thread.m_values.size() << endl;
 	int nb_new_data = 0;
 	while(!m_capture_thread.m_values.empty() &&
 			  (m_capture_thread.m_values.size()>m_capture_thread.getPacketSizeSinceLastLock() || nb_new_data<limit))
 	{
-// 		cerr << m_capture_thread.m_values.back() << " ";
+// 		cout << m_capture_thread.m_values.back() << " ";
 		double value = (*m_range_filter)(m_capture_thread.m_values.back());
-// 		cerr << value << " ";
+// 		cout << value << " ";
 		m_capture_thread.m_values.pop_back();
 
 		m_queue.push_front(value);
@@ -418,9 +418,9 @@ void CustomInstrumentTunerForm::refresh()
 		nb_new_data++;
 	}
 	m_capture_thread.unlock();
-//     cerr << "CustomInstrumentTunerForm::refresh unlocked" << endl;
+//     cout << "CustomInstrumentTunerForm::refresh unlocked" << endl;
 
-// 	cerr << endl;
+// 	cout << endl;
 
 	int max_size = max(m_range_filter->getLength(), max(m_glGraph->getLength(), m_algo_combedfft->getMinSize()));
 	while(!m_queue.empty() && int(m_queue.size())>max_size)
@@ -471,7 +471,7 @@ void CustomInstrumentTunerForm::refresh()
 			}
 		}
 
-// 		cerr << "2) test freq=" << m_test_freq <<endl;
+// 		cout << "2) test freq=" << m_test_freq <<endl;
 
 		m_quantizer->quantize(freq);
 
@@ -536,7 +536,7 @@ void CustomInstrumentTunerForm::refresh()
 
 void CustomInstrumentTunerForm::noteStarted(double freq, double dt)
 {
-// 	cerr << "CustomInstrumentTunerForm::noteStarted " << freq << "," << dt << endl;
+// 	cout << "CustomInstrumentTunerForm::noteStarted " << freq << "," << dt << endl;
 
 	// set the compared freq
 	if(m_microtonalView->setting_show->isChecked() && m_microtonalView->hasTuningFreqSelected())
@@ -570,7 +570,7 @@ void CustomInstrumentTunerForm::noteStarted(double freq, double dt)
 void CustomInstrumentTunerForm::noteFinished(double freq, double dt)
 {
 	m_compared_freq = 0.0;
-// 	cerr << "CustomInstrumentTunerForm::noteFinished " << freq << "," << dt << endl;
+// 	cout << "CustomInstrumentTunerForm::noteFinished " << freq << "," << dt << endl;
 }
 
 void CustomInstrumentTunerForm::refresh_data_sample()
@@ -609,7 +609,7 @@ void CustomInstrumentTunerForm::refresh_data_harmonics()
 
 void CustomInstrumentTunerForm::refresh_views()
 {
-// 	cerr << "CustomInstrumentTunerForm::refresh_views " << endl;
+// 	cout << "CustomInstrumentTunerForm::refresh_views " << endl;
 
 //	m_dialTune->repaint();
 
@@ -723,7 +723,7 @@ void CustomInstrumentTunerForm::configure()
 		}
 		catch(QString error)
 		{
-			cerr << "CustomInstrumentTunerForm: ERROR: " << error.toStdString() << endl;
+            cout << "CustomInstrumentTunerForm: ERROR: " << error.toStdString() << endl;
 		}
 		Pa_Terminate();
 	}
@@ -758,7 +758,7 @@ void CustomInstrumentTunerForm::configure()
         }
         catch(QString error)
         {
-            cerr << "CustomInstrumentTunerForm: ERROR: " << error.toStdString() << endl;
+            cout << "CustomInstrumentTunerForm: ERROR: " << error.toStdString() << endl;
         }
     }
 #endif
@@ -814,7 +814,7 @@ void CustomInstrumentTunerForm::configure_ok()
 
 	//	m_dialTune->setError(-10.0f);
 
-// 	cerr << "b" << endl;
+// 	cout << "b" << endl;
 
 	// Capture
 #ifdef CAPTURE_QT
@@ -878,7 +878,7 @@ void CustomInstrumentTunerForm::configure_ok()
 	m_glGraph->m_treshold = invlp(m_config_form.ui_spinVolumeTreshold->value());
 	m_glGraph->clearValues();
 
-// 	cerr << "c" << endl;
+// 	cout << "c" << endl;
 
 	if(m_config_form.ui_grpRangeFiltering->isChecked())
 	{
@@ -903,7 +903,7 @@ void CustomInstrumentTunerForm::configure_ok()
 	m_algo_combedfft->setAmplitudeTreshold(invlp(double(m_config_form.ui_spinVolumeTreshold->value())));
 	m_algo_combedfft->setComponentTreshold(invlp(double(m_config_form.ui_spinVolumeTreshold->value())));
 
-// 	cerr << "d" << endl;
+// 	cout << "d" << endl;
 
 	// Quantizers
 	m_quantizer->reset();
@@ -915,7 +915,7 @@ void CustomInstrumentTunerForm::configure_ok()
 	else
 		m_quantizer = &m_dummy_quantizer;
 
-// 	cerr << invlp(-m_config_form.ui_spinCombedFFTAudibilityRatio->value()) << endl;
+// 	cout << invlp(-m_config_form.ui_spinCombedFFTAudibilityRatio->value()) << endl;
 
 	if(!pauseAction->isChecked() && !m_capture_thread.isCapturing())
 		m_capture_thread.startCapture();
@@ -943,7 +943,7 @@ void CustomInstrumentTunerForm::saveSettings()
 }
 void CustomInstrumentTunerForm::loadSettings()
 {
-//     cerr << __FILE__ << ":" << __LINE__ << endl;
+//     cout << __FILE__ << ":" << __LINE__ << endl;
 
 	m_settings.load();
 	View::loadAll();
@@ -980,7 +980,7 @@ void CustomInstrumentTunerForm::loadSettings()
         }
         catch(QString error)
         {
-    //		cerr << "CustomInstrumentTunerForm: ERROR: " << error << endl;
+    //		cout << "CustomInstrumentTunerForm: ERROR: " << error << endl;
         }
     }
 #endif
@@ -995,14 +995,14 @@ void CustomInstrumentTunerForm::loadSettings()
             if(err != paNoError)
                 throw QString("PortAudio: CustomInstrumentTunerForm::loadSettings:Pa_Initialize ")+Pa_GetErrorText(err);
             int	numDevices = Pa_GetDeviceCount();
-    //         cerr << "PortAudio devices:"<< endl;
+    //         cout << "PortAudio devices:"<< endl;
             int saved_index = -1;
             m_config_form.ui_cbPortAudioDeviceName->clear();
             const PaDeviceInfo* deviceInfo;
             for(int i=0; i<numDevices; i++)
             {
                 deviceInfo = Pa_GetDeviceInfo(i);
-    //             cerr << "    " << QString(deviceInfo->name).toStdString() << endl;
+    //             cout << "    " << QString(deviceInfo->name).toStdString() << endl;
                 m_config_form.ui_cbPortAudioDeviceName->addItem(QString(deviceInfo->name));
                 if(QString(deviceInfo->name)==saved_device)
                     saved_index = i;
@@ -1012,7 +1012,7 @@ void CustomInstrumentTunerForm::loadSettings()
         }
         catch(QString error)
         {
-    //		cerr << "CustomInstrumentTunerForm: ERROR: " << error << endl;
+    //		cout << "CustomInstrumentTunerForm: ERROR: " << error << endl;
         }
         Pa_Terminate();
     }
@@ -1045,7 +1045,7 @@ void CustomInstrumentTunerForm::helpAbout()
 	text += tr("<h3>Version ")+PACKAGE_VERSION;
 	text += tr("</h3><p><h3>Website:</h3><p>homepage: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
 	text += tr("<p>development site: <a href=\"http://github.com/gillesdegottex/fmit\">http://github.com/gillesdegottex/fmit</a>");
-	text += tr("<p>donation link: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
+//	text += tr("<p>donation link: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
 	text += tr("<p><h3>Author:</h3><p>Gilles Degottex <a href=\"mailto:gilles.degottex@gmail.com\">gilles.degottex@gmail.com</a>");
 #ifdef PACKAGER_STRING
 	if(PACKAGER_STRING!="")

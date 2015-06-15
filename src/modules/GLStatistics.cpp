@@ -246,7 +246,7 @@ void GLStatistics::addNote(int ht, float err)
 	if(ht<setting_scale_min->minimum() || ht>setting_scale_max->maximum())
 		return;
 
-// 	cerr << "ht=" << ht << endl;
+// 	cout << "ht=" << ht << endl;
 
 	if(!setting_scale_auto->isChecked())
 	{
@@ -270,7 +270,7 @@ void GLStatistics::addNote(int ht, float err)
 		}
 		else if(ht<setting_scale_min->value())
 		{
-// 			cerr << "min: ";
+// 			cout << "min: ";
 			int min_ht = ht;
 			vector<AverageNote> avg_notes(setting_scale_max->value()-min_ht+1);
 			for(int i=0; i<setting_scale_min->value()-min_ht; i++)
@@ -280,12 +280,12 @@ void GLStatistics::addNote(int ht, float err)
 			m_avg_notes = avg_notes;
 			setting_scale_min->setValue(ht);
 /*			for(size_t i=0; i<m_avg_notes.size(); i++)
-				cerr << m_avg_notes[i].ht << " ";
-			cerr << "[" << setting_scale_min->value() << ":" << setting_scale_max->value() << "]" << endl;*/
+                cout << m_avg_notes[i].ht << " ";
+            cout << "[" << setting_scale_min->value() << ":" << setting_scale_max->value() << "]" << endl;*/
 		}
 		else if(ht>setting_scale_max->value())
 		{
-// 			cerr << "max: ";
+// 			cout << "max: ";
 			int max_ht = ht;
 			vector<AverageNote> avg_notes(max_ht-setting_scale_min->value()+1);
 			for(size_t i=0; i<m_avg_notes.size(); i++)
@@ -295,11 +295,11 @@ void GLStatistics::addNote(int ht, float err)
 			m_avg_notes = avg_notes;
 			setting_scale_max->setValue(ht);
 /*			for(size_t i=0; i<m_avg_notes.size(); i++)
-				cerr << m_avg_notes[i].ht << " ";
-			cerr << "[" << setting_scale_min->value() << ":" << setting_scale_max->value() << "]" << endl;*/
+                cout << m_avg_notes[i].ht << " ";
+            cout << "[" << setting_scale_min->value() << ":" << setting_scale_max->value() << "]" << endl;*/
 		}
 
-// 		cerr << setting_scale_min->value()-ht << endl;
+// 		cout << setting_scale_min->value()-ht << endl;
 
 		m_avg_notes[ht-setting_scale_min->value()].addErr(err);
 	}
@@ -561,7 +561,7 @@ void GLStatistics::drawTextTickCent(int r, int dy)
 
 void GLStatistics::paintGL()
 {
-// 	cerr << "GLStatistics::paintGL " << m_notes.size() << endl;
+// 	cout << "GLStatistics::paintGL " << m_notes.size() << endl;
 
 	glClear(GL_COLOR_BUFFER_BIT);
 

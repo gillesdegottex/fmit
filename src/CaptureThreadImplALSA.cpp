@@ -36,7 +36,7 @@ using namespace std;
 
 void alsa_error_handler(const char *file, int line, const char *function, int err, const char *fmt, ...)
 {
-	cerr << "alsa_error_handler: " << file << ":" << line << " " << function << " err=" << err << endl;
+    cout << "alsa_error_handler: " << file << ":" << line << " " << function << " err=" << err << endl;
 }
 
 CaptureThreadImplALSA::CaptureThreadImplALSA(CaptureThread* capture_thread)
@@ -91,7 +91,7 @@ bool CaptureThreadImplALSA::is_available()
 
 	m_status = "OK";
 
-	//	cerr << "CaptureThread: INFO: ALSA seems available" << endl;
+    //	cout << "CaptureThread: INFO: ALSA seems available" << endl;
 
 	return true;
 }
@@ -117,10 +117,10 @@ void CaptureThreadImplALSA::stopCapture()
 
 void CaptureThreadImplALSA::set_params(bool test)
 {
-//	cerr << "ALSA: Recognized sample formats are" << endl;
+//	cout << "ALSA: Recognized sample formats are" << endl;
 //	for (int k = 0; k < SND_PCM_FORMAT_LAST; ++(unsigned long) k) {
 //		const char *s = snd_pcm_format_name((snd_pcm_format_t)k);
-//		if (s)	cerr << s << endl;
+//		if (s)	cout << s << endl;
 //	}
 	int err=0;
 
@@ -128,7 +128,7 @@ void CaptureThreadImplALSA::set_params(bool test)
 		throw QString("ALSA: set the source first");
     if((err=snd_pcm_open(&m_alsa_capture_handle, m_source.toLatin1().constData(), SND_PCM_STREAM_CAPTURE, SND_PCM_NONBLOCK)) < 0)
 	{
-		//					cerr << "err=" << err << ":" << snd_strerror(err) << endl;
+        //					cout << "err=" << err << ":" << snd_strerror(err) << endl;
 
 		if(err==-19)	// TODO risks of changes for the error code
 			throw QString("ALSA: Invalid Source '")+m_source+"'";
@@ -162,11 +162,11 @@ void CaptureThreadImplALSA::set_params(bool test)
 					throw QString("ALSA: cannot set any format (")+QString(snd_strerror(err))+")";
 
 				m_format = formats.front();
-				cerr << "CaptureThread: INFO: ALSA: try to set format to " << snd_pcm_format_description(m_format) << flush;
+                cout << "CaptureThread: INFO: ALSA: try to set format to " << snd_pcm_format_description(m_format) << flush;
 				err=snd_pcm_hw_params_set_format(m_alsa_capture_handle, m_alsa_hw_params, m_format);
 
-				if(err<0)	cerr << " failed" << endl;
-				else		cerr << " success" << endl;
+                if(err<0)	cout << " failed" << endl;
+                else		cout << " success" << endl;
 
 				formats.pop_front();
 			}
@@ -176,7 +176,7 @@ void CaptureThreadImplALSA::set_params(bool test)
 			if((err=snd_pcm_hw_params_set_format(m_alsa_capture_handle, m_alsa_hw_params, m_format))<0)
 			{
 				QString err_msg = QString("ALSA: cannot set format (")+QString(snd_strerror(err))+")";
-				cerr << "CaptureThread: ERROR: " << err_msg.toStdString() << endl;
+                cout << "CaptureThread: ERROR: " << err_msg.toStdString() << endl;
 			}
 		}
 
@@ -185,12 +185,12 @@ void CaptureThreadImplALSA::set_params(bool test)
 		if((err=snd_pcm_hw_params_set_channels_near(m_alsa_capture_handle, m_alsa_hw_params, &channel_count)) < 0)
 		{
 			QString err_msg = QString("ALSA: cannot set channel count (")+QString(snd_strerror(err))+")";
-			cerr << "CaptureThread: WARNING: " << err_msg.toStdString() << endl;
+            cout << "CaptureThread: WARNING: " << err_msg.toStdString() << endl;
 		}
 		if(channel_count>1)
 		{
 			QString err_msg = QString("ALSA: cannot set channel count to one (")+QString::number(channel_count)+" instead)";
-			cerr << "CaptureThread: WARNING: " << err_msg.toStdString() << endl;
+            cout << "CaptureThread: WARNING: " << err_msg.toStdString() << endl;
 		}
 
 		setFormatDescrsAndFns(snd_pcm_format_width(m_format)/8, snd_pcm_format_signed(m_format), false, channel_count);
@@ -200,7 +200,7 @@ void CaptureThreadImplALSA::set_params(bool test)
 	{
 		int old_sampling_rate = m_sampling_rate;
 
-		cerr << "CaptureThread: INFO: ALSA: sampling rate set to max or undefined, try to determinate it." << endl;
+        cout << "CaptureThread: INFO: ALSA: sampling rate set to max or undefined, try to determinate it." << endl;
 
 		list<int> sampling_rates;
 		sampling_rates.push_front(8000);	sampling_rates.push_front(11025);	sampling_rates.push_front(16000);
@@ -214,12 +214,12 @@ void CaptureThreadImplALSA::set_params(bool test)
 				throw QString("ALSA: cannot set any sample rate (")+QString(snd_strerror(err))+")";
 
 			m_sampling_rate = sampling_rates.front();
-			cerr << "CaptureThread: INFO: ALSA: try sampling rate " << m_sampling_rate << " ..." << flush;
+            cout << "CaptureThread: INFO: ALSA: try sampling rate " << m_sampling_rate << " ..." << flush;
 			unsigned int rrate = m_sampling_rate;
 			err = snd_pcm_hw_params_set_rate(m_alsa_capture_handle, m_alsa_hw_params, rrate, 0);
 
-			if(err<0)	cerr << " failed" << endl;
-			else		cerr << " success" << endl;
+            if(err<0)	cout << " failed" << endl;
+            else		cout << " success" << endl;
 
 			sampling_rates.pop_front();
 		}
@@ -245,7 +245,7 @@ void CaptureThreadImplALSA::set_params(bool test)
 
 void CaptureThreadImplALSA::setSamplingRate(int value)
 {
-// 	cerr << "CaptureThreadImplALSA::setSamplingRate " << value << endl;
+// 	cout << "CaptureThreadImplALSA::setSamplingRate " << value << endl;
 
 	assert(value>0 || value==CaptureThread::SAMPLING_RATE_MAX);
 
@@ -264,7 +264,7 @@ void CaptureThreadImplALSA::setSamplingRate(int value)
 			}
 			catch(QString error)
 			{
-				cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+                cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
 				m_capture_thread->emitError(error);
 			}
 
@@ -277,7 +277,7 @@ void CaptureThreadImplALSA::setSamplingRate(int value)
 		if(was_running)	m_capture_thread->startCapture();
 	}
 
-// 	cerr << "~CaptureThreadImplALSA::setSamplingRate" << endl;
+// 	cout << "~CaptureThreadImplALSA::setSamplingRate" << endl;
 }
 
 void CaptureThreadImplALSA::capture_init()
@@ -295,7 +295,7 @@ void CaptureThreadImplALSA::capture_init()
 }
 void CaptureThreadImplALSA::capture_loop()
 {
-// 	cerr << "CaptureThreadImplALSA::capture_loop" << endl;
+// 	cout << "CaptureThreadImplALSA::capture_loop" << endl;
 
 	m_wait_for_start = false;
 	while(m_loop)
@@ -306,14 +306,14 @@ void CaptureThreadImplALSA::capture_loop()
 
 		if(ret_val<0)
 		{
-			cerr << "CaptureThread: WARNING: ALSA: " << snd_strerror(ret_val) << endl;
+            cout << "CaptureThread: WARNING: ALSA: " << snd_strerror(ret_val) << endl;
 			while((ret_val = snd_pcm_prepare(m_alsa_capture_handle)) < 0)
 			{
                 if (ret_val == -ESTRPIPE)
                     continue;
 
 				msleep(1000);
-				cerr << "ALSA: cannot prepare audio interface (" << snd_strerror(ret_val) << ")" << endl;
+                cout << "ALSA: cannot prepare audio interface (" << snd_strerror(ret_val) << ")" << endl;
 //				throw QString("ALSA: cannot prepare audio interface (")+QString(snd_strerror(ret_val))+")";
 			}
 		}
@@ -323,7 +323,7 @@ void CaptureThreadImplALSA::capture_loop()
 			{
 				m_capture_thread->m_lock.lock();
 
-// 				cerr << "CaptureThreadImplALSA::capture_loop " << m_capture_thread->m_values.size() << endl;
+// 				cout << "CaptureThreadImplALSA::capture_loop " << m_capture_thread->m_values.size() << endl;
 
 				for(int i=0; i<ret_val*m_channel_count; i++)
 					addValue(this, decodeValue(m_alsa_buffer, i), i);
@@ -341,7 +341,7 @@ void CaptureThreadImplALSA::capture_loop()
 		}
 	}
 
-// 	cerr << "~CaptureThreadImplALSA::capture_loop" << endl;
+// 	cout << "~CaptureThreadImplALSA::capture_loop" << endl;
 }
 void CaptureThreadImplALSA::capture_finished()
 {
@@ -361,7 +361,7 @@ void CaptureThreadImplALSA::capture_finished()
 
 void CaptureThreadImplALSA::run()
 {
-// 	cerr << "CaptureThread: INFO: ALSA: capture thread entered" << endl;
+// 	cout << "CaptureThread: INFO: ALSA: capture thread entered" << endl;
 
 // 	while(m_alive)	// TODO need to keep alsa thread alive to let PortAudio working after ALSA !!
 	{
@@ -372,7 +372,7 @@ void CaptureThreadImplALSA::run()
 
 		try
 		{
-			//			cerr << "CaptureThread: INFO: capture thread running" << endl;
+            //			cout << "CaptureThread: INFO: capture thread running" << endl;
 
 			capture_init();
 
@@ -389,7 +389,7 @@ void CaptureThreadImplALSA::run()
 		catch(QString error)
 		{
 			m_loop = false;
-			cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+            cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
 			m_capture_thread->emitError(error);
 		}
 		m_wait_for_start = false;
@@ -398,15 +398,15 @@ void CaptureThreadImplALSA::run()
 
 		m_in_run = false;
 
-		//		cerr << "CaptureThread: INFO: capture thread stop running" << endl;
+        //		cout << "CaptureThread: INFO: capture thread stop running" << endl;
 	}
 
-// 	cerr << "CaptureThread: INFO: ALSA: capture thread exited" << endl;
+// 	cout << "CaptureThread: INFO: ALSA: capture thread exited" << endl;
 }
 
 CaptureThreadImplALSA::~CaptureThreadImplALSA()
 {
-// 	cerr << "CaptureThreadImplALSA::~CaptureThreadImplALSA" << endl;
+// 	cout << "CaptureThreadImplALSA::~CaptureThreadImplALSA" << endl;
 
 	m_alive = false;
 
@@ -415,7 +415,7 @@ CaptureThreadImplALSA::~CaptureThreadImplALSA()
 	while(isRunning())
 		msleep(10);
 
-// 	cerr << "~CaptureThreadImplALSA::~CaptureThreadImplALSA" << endl;
+// 	cout << "~CaptureThreadImplALSA::~CaptureThreadImplALSA" << endl;
 }
 
 #endif

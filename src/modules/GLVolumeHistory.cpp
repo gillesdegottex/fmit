@@ -262,7 +262,7 @@ void GLVolumeHistory::initializeGL()
 
 void GLVolumeHistory::paintGL()
 {
-// 	cerr << "GLVolumeHistory::paintGL " << m_notes.size() << endl;
+// 	cout << "GLVolumeHistory::paintGL " << m_notes.size() << endl;
 
 	glClear(GL_COLOR_BUFFER_BIT);
 
@@ -338,7 +338,7 @@ void GLVolumeHistory::paintGL()
 
 		float step = float(width()-s)/total_size;
 
-//		cerr << "total_size=" << total_size << " step=" << step << endl;
+//		cout << "total_size=" << total_size << " step=" << step << endl;
 
 		int curr_total = 0;
 		for(size_t i=0; i<m_notes.size(); i++)

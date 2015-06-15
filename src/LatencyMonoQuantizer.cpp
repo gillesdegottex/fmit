@@ -35,7 +35,7 @@ LatencyMonoQuantizer::LatencyMonoQuantizer()
 
 void LatencyMonoQuantizer::quantize(double freq)
 {
-// 	cerr << "LatencyMonoQuantizer::quantize " << freq << " m_states=" << m_states.size() << endl;
+// 	cout << "LatencyMonoQuantizer::quantize " << freq << " m_states=" << m_states.size() << endl;
 
 	double current_time = m_time.elapsed();
 
@@ -66,7 +66,7 @@ void LatencyMonoQuantizer::quantize(double freq)
 		}
 	}
 
-// 	cerr << m_current_center_freq << ", " << current_center_freq << ", " << m_avg_freq << ", max_dens=" << max_dens << ", m_states.size()=" << m_states.size() << endl;
+// 	cout << m_current_center_freq << ", " << current_center_freq << ", " << m_avg_freq << ", max_dens=" << max_dens << ", m_states.size()=" << m_states.size() << endl;
 
 	m_confidence = double(max_dens)/m_states.size();
 

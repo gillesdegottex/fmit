@@ -192,7 +192,7 @@ namespace Music
 // NeuralNetGaussAlgo
 	void NeuralNetGaussAlgo::init()
 	{
-		cerr << "NeuralNetGaussAlgo::init" << endl;
+        cout << "NeuralNetGaussAlgo::init" << endl;
 
 		SingleResConvolutionTransform::init();
 
@@ -206,7 +206,7 @@ namespace Music
 
 	void NeuralNetGaussAlgo::apply(const deque<double>& buff)
 	{
-//		cerr << "NeuralNetGaussAlgo::apply " << m_components_treshold << endl;
+//		cout << "NeuralNetGaussAlgo::apply " << m_components_treshold << endl;
 
 		m_components_max = 0.0;
 		for(size_t h=0; h<size(); h++)
@@ -269,7 +269,7 @@ namespace Music
 
 				double formant_mod = mod(m_convolutions[h]->m_value);
 
-//				cerr<<formant_mod<<" "<<getComponentsTreshold()<<endl;
+//				cout<<formant_mod<<" "<<getComponentsTreshold()<<endl;
 
 //				if(formant_mod > getComponentsTreshold())
 				{
@@ -300,7 +300,7 @@ namespace Music
 //			while(m_first_fond+1<int(size()) && m_components[m_first_fond+1] > m_components[m_first_fond])
 //				m_first_fond++;
 
-//		cerr << "m_first_fond=" << m_first_fond << endl;
+//		cout << "m_first_fond=" << m_first_fond << endl;
 	}
 
 	TwoVoiceMHT::TwoVoiceMHT(double AFreq, int dataBySecond, double rep, double win_factor, int minHT, int maxHT)
