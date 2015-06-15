@@ -36,7 +36,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "C:\Users\Norwin\Documents\GitHub\fmit\distrib\FMIT-{#MyAppVersion}-Win64bit\*"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Norwin\Documents\GitHub\fmit\distrib\FMIT-{#MyAppVersion}-Win64bit\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 ; Source: "C:\Users\Norwin\Documents\GitHub\MSVC2012_OpenGL_64bit\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

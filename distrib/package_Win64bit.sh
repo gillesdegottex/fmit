@@ -1,5 +1,5 @@
 #http://doc.qt.io/qt-5/windows-deployment.html
-
+# TODO Get version with git ?
 VERSION=1.1.0
 
 PACKAGENAME=FMIT-$VERSION-Win64bit

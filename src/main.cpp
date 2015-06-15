@@ -55,12 +55,18 @@ int main(int argc, char** argv)
     QString trFile = QString("fmit_")+QLocale::system().name();
     cout << "Requested translation file: " << trFile.toLatin1().constData() << endl;
 //    QString trPath = "C:/Users/Norwin/Documents/GitHub/fmit/tr/";
-    QString trPath = QCoreApplication::applicationDirPath()+"/tr/";
-    cout << "QCoreApplication::applicationDirPath(): " << trPath.toLatin1().constData() << endl;
+
+    #ifdef Q_OS_WIN32
+        QString trPath = QCoreApplication::applicationDirPath()+"/tr/";
+    #else
+        QString trPath = QString(PREFIX) + QString("/share/fmit/tr");
+    #endif
+
+//    cout << "QCoreApplication::applicationDirPath(): " << trPath.toLatin1().constData() << endl;
     fmitTranslator.load(trFile, trPath);
     a.installTranslator(&fmitTranslator);
 
-	g_main_form = new CustomInstrumentTunerForm();
+    g_main_form = new CustomInstrumentTunerForm();
 
 	g_main_form->show();
 
