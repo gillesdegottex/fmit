@@ -20,7 +20,7 @@
 
 #include <limits>
 
-#include "libs/Music/Music.h"
+#include "Music/Music.h"
 
 void Note::init()
 {
