@@ -80,6 +80,45 @@ class CaptureThreadImpl
 	virtual ~CaptureThreadImpl(){}
 };
 
+// ---------------------- the Qt implementation ---------------------
+
+#ifdef CAPTURE_QT
+#include <QAudioDeviceInfo>
+#include <QAudioInput>
+class CaptureThreadImplQt : public QObject, public CaptureThreadImpl
+{
+    Q_OBJECT
+
+    void set_params(bool test=false);
+
+    void capture_init();
+    void capture_finished();
+
+    const QList<QAudioDeviceInfo> m_availableAudioInputDevices;
+    QAudioDeviceInfo    m_audioInputDevice;
+    QAudioInput*        m_audioInput;
+    QIODevice*          m_audioInputIODevice;
+
+    QAudio::State       m_state;
+
+    QAudioFormat        m_format;
+
+  public:
+    CaptureThreadImplQt(CaptureThread* capture_thread);
+
+    virtual void setSamplingRate(int rate);
+    virtual void startCapture();
+    virtual void stopCapture();
+    virtual bool is_available();
+
+    ~CaptureThreadImplQt();
+
+public slots:
+    void audioStateChanged(QAudio::State state);
+    void audioDataReady();
+};
+#endif
+
 // ---------------------- the ALSA implementation ---------------------
 
 #ifdef CAPTURE_ALSA
@@ -241,6 +280,9 @@ class CaptureThread : public QObject
 	Q_OBJECT
 
 	friend class CaptureThreadImpl;
+#ifdef CAPTURE_QT
+    friend class CaptureThreadImplQt;
+#endif
 #ifdef CAPTURE_ALSA
 	friend class CaptureThreadImplALSA;
 #endif

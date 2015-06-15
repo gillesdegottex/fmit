@@ -141,6 +141,7 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	m_config_form.ui_grpJACK->hide();
 	m_config_form.ui_grpPortAudio->hide();
 	m_config_form.ui_grpOSS->hide();
+    m_config_form.ui_grpQt->hide();
 
 	ui_lblA3Offset->hide();
 	ui_spinA3Offset->hide();
@@ -265,11 +266,13 @@ void CustomInstrumentTunerForm::selectTransport(const QString& name)
 	m_config_form.ui_grpJACK->hide();
 	m_config_form.ui_grpPortAudio->hide();
 	m_config_form.ui_grpOSS->hide();
+    m_config_form.ui_grpQt->hide();
 
 	if(name=="ALSA")			m_config_form.ui_grpALSA->show();
 	else if(name=="JACK")		m_config_form.ui_grpJACK->show();
 	else if(name=="PortAudio")	m_config_form.ui_grpPortAudio->show();
 	else if(name=="OSS")		m_config_form.ui_grpOSS->show();
+    else if(name=="Qt")         m_config_form.ui_grpQt->show();
 }
 void CustomInstrumentTunerForm::autoDetectTransport()
 {
@@ -315,11 +318,11 @@ void CustomInstrumentTunerForm::errorRaised(const QString& error)
 
 void CustomInstrumentTunerForm::samplingRateChanged(int sampling_rate)
 {
-	cerr << "CustomInstrumentTunerForm::samplingRateChanged " << sampling_rate << endl;
+//	cerr << "CustomInstrumentTunerForm::samplingRateChanged " << sampling_rate << endl;
 
 	Music::SetSamplingRate(sampling_rate);
 
-        m_rect_range_filter.reset(int(GetSamplingRate()/2000.0));
+    m_rect_range_filter.reset(int(GetSamplingRate()/2000.0));
 //         m_fir_range_filter.setImpulseResponse(fir1_lowpass(400, 2/400));
 // 	m_rect_range_filter.reset(int(GetSamplingRate()/h2f(GetSemitoneMin())));
     m_glFT->spinWinLengthChanged(m_glFT->setting_winlen->value());
@@ -734,6 +737,11 @@ void CustomInstrumentTunerForm::configure()
 	m_config_form.ui_grpOSS->setTitle(m_capture_thread.getTransport("OSS")->getDescription());
 	m_config_form.ui_spinOSSSamplingRate->setValue(m_capture_thread.getSamplingRate());
 #endif
+#ifdef CAPTURE_QT
+    m_config_form.ui_grpQt->setTitle(m_capture_thread.getTransport("Qt")->getDescription());
+    m_config_form.ui_spinQtSamplingRate->setValue(m_capture_thread.getSamplingRate());
+    // TODO List available devices
+#endif
 
     m_config_form.adjustSize();
 	m_config_form.show();
@@ -789,6 +797,17 @@ void CustomInstrumentTunerForm::configure_ok()
 // 	cerr << "b" << endl;
 
 	// Capture
+#ifdef CAPTURE_QT
+    if(m_config_form.ui_cbTransports->currentText()=="Qt")
+    {
+        m_capture_thread.selectTransport("Qt");
+        m_capture_thread.setSource(m_config_form.ui_cbQtDeviceName->currentText());
+        if(m_config_form.ui_chkQtSamplingRateMax->isChecked())
+            m_capture_thread.setSamplingRate(CaptureThread::SAMPLING_RATE_MAX);
+        else
+            m_capture_thread.setSamplingRate(m_config_form.ui_spinQtSamplingRate->value());
+    }
+#endif
 #ifdef CAPTURE_ALSA
 	if(m_config_form.ui_cbTransports->currentText()=="ALSA")
 	{
@@ -895,6 +914,9 @@ void CustomInstrumentTunerForm::saveSettings()
 
 	// sound capture
 	m_settings.setValue(m_config_form.ui_cbTransports->objectName(), m_config_form.ui_cbTransports->currentText());
+#ifdef CAPTURE_QT
+    m_settings.setValue(m_config_form.ui_cbQtDeviceName->objectName(), m_config_form.ui_cbQtDeviceName->currentText());
+#endif
 #ifdef CAPTURE_PORTAUDIO
 	m_settings.setValue(m_config_form.ui_cbPortAudioDeviceName->objectName(), m_config_form.ui_cbPortAudioDeviceName->currentText());
 #endif
@@ -918,35 +940,62 @@ void CustomInstrumentTunerForm::loadSettings()
 			if(m_config_form.ui_cbTransports->itemText(i)==saved_transport)
 				m_config_form.ui_cbTransports->setCurrentIndex(i);
 
-#ifdef CAPTURE_PORTAUDIO
-	QString saved_device = m_settings.value(m_config_form.ui_cbPortAudioDeviceName->objectName(), "default").toString();
-	try
-	{
-		PaError err;
-		err = Pa_Initialize();
-		if(err != paNoError)
-			throw QString("PortAudio: CustomInstrumentTunerForm::loadSettings:Pa_Initialize ")+Pa_GetErrorText(err);
-		int	numDevices = Pa_GetDeviceCount();
-//         cerr << "PortAudio devices:"<< endl;
-        int saved_index = -1;
-		m_config_form.ui_cbPortAudioDeviceName->clear();
-		const PaDeviceInfo* deviceInfo;
-		for(int i=0; i<numDevices; i++)
-		{
-			deviceInfo = Pa_GetDeviceInfo(i);
-//             cerr << "    " << QString(deviceInfo->name).toStdString() << endl;
-			m_config_form.ui_cbPortAudioDeviceName->addItem(QString(deviceInfo->name));
-			if(QString(deviceInfo->name)==saved_device)
-				saved_index = i;
-		}
-		if(saved_index!=-1)
-			m_config_form.ui_cbPortAudioDeviceName->setCurrentIndex(saved_index);
+#ifdef CAPTURE_QT
+    {
+        QString saved_device = m_settings.value(m_config_form.ui_cbQtDeviceName->objectName(), "default").toString();
+        try
+        {
+            QList<QAudioDeviceInfo> devices = QAudioDeviceInfo::availableDevices(QAudio::AudioInput);
+
+            int saved_index = -1;
+            m_config_form.ui_cbQtDeviceName->clear();
+            for(int i=0; i<devices.count(); i++)
+            {
+                m_config_form.ui_cbQtDeviceName->addItem(devices.at(i).deviceName());
+                if(devices.at(i).deviceName()==saved_device)
+                    saved_index = i;
+            }
+            if(saved_index!=-1)
+                m_config_form.ui_cbQtDeviceName->setCurrentIndex(saved_index);
+        }
+        catch(QString error)
+        {
+    //		cerr << "CustomInstrumentTunerForm: ERROR: " << error << endl;
+        }
     }
-	catch(QString error)
-	{
-//		cerr << "CustomInstrumentTunerForm: ERROR: " << error << endl;
-	}
-	Pa_Terminate();
+#endif
+
+#ifdef CAPTURE_PORTAUDIO
+    {
+        QString saved_device = m_settings.value(m_config_form.ui_cbPortAudioDeviceName->objectName(), "default").toString();
+        try
+        {
+            PaError err;
+            err = Pa_Initialize();
+            if(err != paNoError)
+                throw QString("PortAudio: CustomInstrumentTunerForm::loadSettings:Pa_Initialize ")+Pa_GetErrorText(err);
+            int	numDevices = Pa_GetDeviceCount();
+    //         cerr << "PortAudio devices:"<< endl;
+            int saved_index = -1;
+            m_config_form.ui_cbPortAudioDeviceName->clear();
+            const PaDeviceInfo* deviceInfo;
+            for(int i=0; i<numDevices; i++)
+            {
+                deviceInfo = Pa_GetDeviceInfo(i);
+    //             cerr << "    " << QString(deviceInfo->name).toStdString() << endl;
+                m_config_form.ui_cbPortAudioDeviceName->addItem(QString(deviceInfo->name));
+                if(QString(deviceInfo->name)==saved_device)
+                    saved_index = i;
+            }
+            if(saved_index!=-1)
+                m_config_form.ui_cbPortAudioDeviceName->setCurrentIndex(saved_index);
+        }
+        catch(QString error)
+        {
+    //		cerr << "CustomInstrumentTunerForm: ERROR: " << error << endl;
+        }
+        Pa_Terminate();
+    }
 #endif
 }
 

@@ -67,6 +67,9 @@ CaptureThread::CaptureThread(const QString& name)
 
 	m_name = name;
 
+#ifdef CAPTURE_QT
+    m_impls.push_back(new CaptureThreadImplQt(this));
+#endif
 #ifdef CAPTURE_JACK
 	m_impls.push_back(new CaptureThreadImplJACK(this));
 #endif

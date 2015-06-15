@@ -1,8 +1,7 @@
 
 
 # Audio Capture System: acs_qt, acs_alsa, acs_jack, acs_portaudio, acs_oss
-
-CONFIG += acs_alsa acs_jack acs_portaudio acs_oss
+CONFIG += acs_qt acs_alsa
 
 
 # TODO
@@ -30,6 +29,8 @@ contains(QT_ARCH, x86_64):message(For 64bits)
 CONFIG(acs_qt) {
     message(Audio Capture System: Request Qt support)
     DEFINES += CAPTURE_QT
+    QT += multimedia
+    SOURCES += src/CaptureThreadImplQt.cpp
 }
 
 CONFIG(acs_alsa) {
