@@ -740,7 +740,27 @@ void CustomInstrumentTunerForm::configure()
 #ifdef CAPTURE_QT
     m_config_form.ui_grpQt->setTitle(m_capture_thread.getTransport("Qt")->getDescription());
     m_config_form.ui_spinQtSamplingRate->setValue(m_capture_thread.getSamplingRate());
-    // TODO List available devices
+    {
+        QString saved_device = m_settings.value(m_config_form.ui_cbQtDeviceName->objectName(), "default").toString();
+        try
+        {
+            QList<QAudioDeviceInfo> devices = QAudioDeviceInfo::availableDevices(QAudio::AudioInput);
+
+            int current_index = -1;
+            m_config_form.ui_cbQtDeviceName->clear();
+            for(int i=0; i<devices.count(); i++) {
+                m_config_form.ui_cbQtDeviceName->addItem(devices.at(i).deviceName());
+                if(devices.at(i).deviceName()==m_capture_thread.getTransport("Qt")->getSource())
+                    current_index = i;
+            }
+            if(current_index!=-1)
+                m_config_form.ui_cbQtDeviceName->setCurrentIndex(current_index);
+        }
+        catch(QString error)
+        {
+            cerr << "CustomInstrumentTunerForm: ERROR: " << error.toStdString() << endl;
+        }
+    }
 #endif
 
     m_config_form.adjustSize();

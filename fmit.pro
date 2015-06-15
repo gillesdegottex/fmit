@@ -1,7 +1,7 @@
 
 
 # Audio Capture System: acs_qt, acs_alsa, acs_jack, acs_portaudio, acs_oss
-CONFIG += acs_qt acs_alsa
+CONFIG += acs_qt
 
 
 # TODO
