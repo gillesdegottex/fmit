@@ -1047,7 +1047,7 @@ void CustomInstrumentTunerForm::helpAbout()
     QString fmitversiongit(STR(FMITVERSIONGIT));
     QString	fmitversion;
     if(fmitversiongit.length()>0) {
-        fmitversion = QString("Version ") + fmitversiongit;
+        fmitversion = tr("Version ") + fmitversiongit;
     }
     else {
         QFile readmefile(":/README.txt");
@@ -1059,7 +1059,7 @@ void CustomInstrumentTunerForm::helpAbout()
     }
     text += tr("<h3>Version ")+fmitversion;
 
-    text += " (compiled by "+QString(COMPILER)+" for ";
+    text += tr(" (compiled by ")+QString(COMPILER)+tr(" for ");
     #ifdef Q_PROCESSOR_X86_32
       text += "32bits";
     #endif
@@ -1068,13 +1068,13 @@ void CustomInstrumentTunerForm::helpAbout()
     #endif
     text += ")";
 
-	text += tr("</h3><p><h3>Website:</h3><p>homepage: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
-	text += tr("<p>development site: <a href=\"http://github.com/gillesdegottex/fmit\">http://github.com/gillesdegottex/fmit</a>");
+    text += "</h3><p><h3>"+tr("Website: ")+"</h3><p>"+tr("Homepage: ")+"<a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>";
+    text += "<p>"+tr("Development site: ")+"<a href=\"http://github.com/gillesdegottex/fmit\">http://github.com/gillesdegottex/fmit</a>";
 //	text += tr("<p>donation link: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
-	text += tr("<p><h3>Author:</h3><p>Gilles Degottex <a href=\"mailto:gilles.degottex@gmail.com\">gilles.degottex@gmail.com</a>");
+    text += "<p><h3>"+tr("Author: ")+"</h3><p>Gilles Degottex <a href=\"mailto:gilles.degottex@gmail.com\">gilles.degottex@gmail.com</a>";
 #ifdef PACKAGER_STRING
 	if(PACKAGER_STRING!="")
-		text += tr("<p><h3>Packager:</h3><p>")+QString(PACKAGER_STRING).replace(QChar('<'),"[").replace(QChar('>'),"]");
+        text += "<p><h3>"+tr("Packager: ")+"</h3><p>"+QString(PACKAGER_STRING).replace(QChar('<'),"[").replace(QChar('>'),"]");
 #endif
 
 	QDialog about_dlg(this);
@@ -1086,7 +1086,7 @@ void CustomInstrumentTunerForm::helpAbout()
 	QSpacerItem* spacer1;
 	QSpacerItem* spacer2;
 
-	about_dlg.setObjectName( tr("about_box") );
+    about_dlg.setObjectName("about_box");
 	about_dlg.setWindowTitle( tr("About Free Music Instrument Tuner") );
 
 	Form2Layout = new QVBoxLayout( &about_dlg );
