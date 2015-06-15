@@ -33,30 +33,10 @@ using namespace std;
 #include "CustomInstrumentTunerForm.h"
 CustomInstrumentTunerForm* g_main_form = NULL;
 
-void signal_interrupt(int sig)
-{
-	cerr << "Interrupt" << endl;
-
-	delete g_main_form;
-
-	exit(sig);
-}
-void signal_term(int sig)
-{
-	cerr << "No No ! Pleeeeeease ... *argl*" << endl;
-	cerr << endl;
-    cerr << PACKAGE_NAME << " nastily killed with signal " << sig << endl;
-
-	exit(sig);
-}
-
 int main(int argc, char** argv)
 {
-    cerr << "Free Music Instrument Tuner version " << PACKAGE_VERSION << endl;
-	cerr << "Install directory '" << PREFIX << "'" << endl;
-
-	signal(SIGINT, signal_interrupt);
-	signal(SIGTERM, signal_term);
+    cout << "Free Music Instrument Tuner version " << PACKAGE_VERSION << endl;
+    cout << "Install directory '" << PREFIX << "'" << endl;
 
 	QApplication a(argc, argv, true);
 
@@ -66,16 +46,16 @@ int main(int argc, char** argv)
 //	{
 //		if(a.argc()>2 && (QString(a.argv()[1])=="-d" || QString(a.argv()[1])=="--device"))
 //		{
-//			cerr << "used device: " << a.argv()[2] << endl;
+//			cout << "used device: " << a.argv()[2] << endl;
 //		}
 //	}
 
-//	cerr << "LANG=" << QTextCodec::locale() << endl;
+//	cout << "LANG=" << QTextCodec::locale() << endl;
 
 	QTranslator tr_fmit;
 	QString trFile = QString("fmit_") + QLocale::system().name();
 	QString trPath = QString(PREFIX) + QString("/share/fmit/tr");
-	cerr << "Looking up translation '" << trFile.toStdString() << "' in '" << trPath.toStdString() << "'" << endl;
+    cout << "Looking up translation '" << trFile.toStdString() << "' in '" << trPath.toStdString() << "'" << endl;
 	tr_fmit.load(trFile, trPath);
 	a.installTranslator(&tr_fmit);
 
