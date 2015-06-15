@@ -178,7 +178,7 @@ const vector<CaptureThreadImpl*>& CaptureThread::getTransports() const
 }
 void CaptureThread::listTransports()
 {
-    cout << "CaptureThread: INFO: Built in transports" << endl;
+    cout << "CaptureThread: INFO: Built-in transports" << endl;
 	for(vector<CaptureThreadImpl*>::iterator it=m_impls.begin(); it!=m_impls.end(); it++)
         cout << "CaptureThread: INFO:	" << (*it)->getStatus().toStdString() << "	" << (*it)->m_name.toStdString() << "	" << (*it)->m_descr.toStdString() << endl;
 }
