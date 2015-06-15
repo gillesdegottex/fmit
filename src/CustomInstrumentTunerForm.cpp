@@ -51,6 +51,7 @@ using namespace std;
 #include <Music/Convolution.h>
 using namespace Music;
 #include "modules/View.h"
+#include "qthelper.h"
 
 CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 : m_config_form(this)
@@ -1040,9 +1041,33 @@ void CustomInstrumentTunerForm::restoreFactorySettings()
 
 void CustomInstrumentTunerForm::helpAbout()
 {
-	QString text;
-	text = "<h2>Free Music Instrument Tuner</h2>";
-	text += tr("<h3>Version ")+PACKAGE_VERSION;
+    QString text;
+    text = "<h2>Free Music Instrument Tuner</h2>";
+
+    QString fmitversiongit(STR(FMITVERSIONGIT));
+    QString	fmitversion;
+    if(fmitversiongit.length()>0) {
+        fmitversion = QString("Version ") + fmitversiongit;
+    }
+    else {
+        QFile readmefile(":/README.txt");
+        readmefile.open(QFile::ReadOnly | QFile::Text);
+        QTextStream readmefilestream(&readmefile);
+        readmefilestream.readLine();
+        readmefilestream.readLine();
+        fmitversion = readmefilestream.readLine().simplified();
+    }
+    text += tr("<h3>Version ")+fmitversion;
+
+    text += " (compiled by "+QString(COMPILER)+" for ";
+    #ifdef Q_PROCESSOR_X86_32
+      text += "32bits";
+    #endif
+    #ifdef Q_PROCESSOR_X86_64
+      text += "64bits";
+    #endif
+    text += ")";
+
 	text += tr("</h3><p><h3>Website:</h3><p>homepage: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
 	text += tr("<p>development site: <a href=\"http://github.com/gillesdegottex/fmit\">http://github.com/gillesdegottex/fmit</a>");
 //	text += tr("<p>donation link: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
