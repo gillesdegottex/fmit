@@ -22,7 +22,7 @@
 
 #include <deque>
 using namespace std;
-#include <qgl.h>
+#include <QGLWidget>
 #include <qaction.h>
 #include <qspinbox.h>
 class QTimer;

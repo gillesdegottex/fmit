@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/fmit">
+        <file>ui/images/config.png</file>
+        <file>ui/images/configForm.png</file>
+        <file>ui/images/fmit.png</file>
+        <file>ui/images/helpAbout.png</file>
+        <file>ui/images/pause.png</file>
+        <file>ui/images/saveSettings.png</file>
+        <file>README.txt</file>
+    </qresource>
+</RCC>

@@ -69,7 +69,7 @@ bool CaptureThreadImplOSS::is_available()
 	{
 		try
 		{
-			if((m_fd_in = open (m_source.toAscii().constData(), O_RDONLY, 0)) == -1)
+            if((m_fd_in = open (m_source.toLatin1().constData(), O_RDONLY, 0)) == -1)
 				throw QString(strerror(errno));
 		}
 		catch(QString error)
@@ -86,7 +86,7 @@ bool CaptureThreadImplOSS::is_available()
 
 	m_status = "OK";
 
-	//	cerr << "CaptureThread: INFO: OSS seems available" << endl;
+    //	cout << "CaptureThread: INFO: OSS seems available" << endl;
 
 	return true;
 }
@@ -114,7 +114,7 @@ void CaptureThreadImplOSS::set_params(bool test)
 {
 	if(m_source=="")
 		throw QString("OSS: set the source first");
-	if((m_fd_in = open (m_source.toAscii().constData(), O_RDONLY, 0))==-1)
+    if((m_fd_in = open (m_source.toLatin1().constData(), O_RDONLY, 0))==-1)
 		throw QString("OSS: ")+QString(strerror(errno));
 
 	if(!test)
@@ -150,7 +150,7 @@ void CaptureThreadImplOSS::set_params(bool test)
 		/*		if(m_channel_count>1)	// TODO
 		{
 			QString err_msg = QString("OSS: cannot set channel count to one (")+QString::number(m_channel_count)+" instead)";
-			cerr << "CaptureThread: WARNING: " << err_msg << endl;
+            cout << "CaptureThread: WARNING: " << err_msg << endl;
 		}*/
 
 		setFormatDescrsAndFns(2, true, false, channel_count);
@@ -160,7 +160,7 @@ void CaptureThreadImplOSS::set_params(bool test)
 	{
 		int old_sampling_rate = m_sampling_rate;
 
-		cerr << "CaptureThread: INFO: OSS: sampling rate set to max or undefined, try to determinate it." << endl;
+        cout << "CaptureThread: INFO: OSS: sampling rate set to max or undefined, try to determinate it." << endl;
 
 		list<int> sampling_rates;
 		sampling_rates.push_front(8000);	sampling_rates.push_front(11025);	sampling_rates.push_front(16000);
@@ -174,11 +174,11 @@ void CaptureThreadImplOSS::set_params(bool test)
 				throw QString("OSS: cannot set any sample rate (%1)").arg(strerror(errno));
 
 			m_sampling_rate = sampling_rates.front();
-			cerr << "CaptureThread: INFO: OSS: try sampling rate " << m_sampling_rate << " ..." << flush;
+            cout << "CaptureThread: INFO: OSS: try sampling rate " << m_sampling_rate << " ..." << flush;
 			err = ioctl(m_fd_in, SNDCTL_DSP_SPEED, &m_sampling_rate);
 
-			if(err==-1)	cerr << " failed" << endl;
-			else		cerr << " success" << endl;
+            if(err==-1)	cout << " failed" << endl;
+            else		cout << " success" << endl;
 
 			sampling_rates.pop_front();
 		}
@@ -195,7 +195,7 @@ void CaptureThreadImplOSS::set_params(bool test)
 
 void CaptureThreadImplOSS::setSamplingRate(int value)
 {
-// 	cerr << "CaptureThreadImplOSS::setSamplingRate " << value << endl;
+// 	cout << "CaptureThreadImplOSS::setSamplingRate " << value << endl;
 
 	assert(value>0 || value==CaptureThread::SAMPLING_RATE_MAX);
 
@@ -214,7 +214,7 @@ void CaptureThreadImplOSS::setSamplingRate(int value)
 			}
 			catch(QString error)
 			{
-				cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+                cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
 				m_capture_thread->emitError(error);
 			}
 
@@ -227,7 +227,7 @@ void CaptureThreadImplOSS::setSamplingRate(int value)
 		if(was_running)	m_capture_thread->startCapture();
 	}
 
-// 	cerr << "~CaptureThreadImplOSS::setSamplingRate" << endl;
+// 	cout << "~CaptureThreadImplOSS::setSamplingRate" << endl;
 }
 
 void CaptureThreadImplOSS::capture_init()
@@ -238,7 +238,7 @@ void CaptureThreadImplOSS::capture_init()
 }
 void CaptureThreadImplOSS::capture_loop()
 {
-// 	cerr << "CaptureThreadImplOSS::capture_loop" << endl;
+// 	cout << "CaptureThreadImplOSS::capture_loop" << endl;
 
 	bool format_signed = true;
 	int l=0;
@@ -250,7 +250,7 @@ void CaptureThreadImplOSS::capture_loop()
 
 		if(ret_val==-1)
 		{
-			cerr << "CaptureThread: WARNING: OSS: " << strerror(errno) << endl;
+            cout << "CaptureThread: WARNING: OSS: " << strerror(errno) << endl;
 			msleep(1000);	// TODO which behavior ?
 //  			m_loop = false;// TODO which behavior ?
 		}
@@ -278,7 +278,7 @@ void CaptureThreadImplOSS::capture_loop()
 		}
 	}
 
-// 	cerr << "~CaptureThreadImplOSS::capture_loop" << endl;
+// 	cout << "~CaptureThreadImplOSS::capture_loop" << endl;
 }
 void CaptureThreadImplOSS::capture_finished()
 {
@@ -297,7 +297,7 @@ void CaptureThreadImplOSS::capture_finished()
 
 void CaptureThreadImplOSS::run()
 {
-// 	cerr << "CaptureThread: INFO: OSS: capture thread entered" << endl;
+// 	cout << "CaptureThread: INFO: OSS: capture thread entered" << endl;
 
 // 	while(m_alive)	// TODO ?? need to keep oss thread alive to let PortAudio working after ALSA ??
 	{
@@ -308,7 +308,7 @@ void CaptureThreadImplOSS::run()
 
 		try
 		{
-			//			cerr << "CaptureThread: INFO: capture thread running" << endl;
+            //			cout << "CaptureThread: INFO: capture thread running" << endl;
 
 			capture_init();
 
@@ -325,7 +325,7 @@ void CaptureThreadImplOSS::run()
 		catch(QString error)
 		{
 			m_loop = false;
-			cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+            cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
 			m_capture_thread->emitError(error);
 		}
 		m_wait_for_start = false;
@@ -334,15 +334,15 @@ void CaptureThreadImplOSS::run()
 
 		m_in_run = false;
 
-		//		cerr << "CaptureThread: INFO: capture thread stop running" << endl;
+        //		cout << "CaptureThread: INFO: capture thread stop running" << endl;
 	}
 
-// 	cerr << "CaptureThread: INFO: OSS: capture thread exited" << endl;
+// 	cout << "CaptureThread: INFO: OSS: capture thread exited" << endl;
 }
 
 CaptureThreadImplOSS::~CaptureThreadImplOSS()
 {
-// 	cerr << "CaptureThreadImplOSS::~CaptureThreadImplOSS" << endl;
+// 	cout << "CaptureThreadImplOSS::~CaptureThreadImplOSS" << endl;
 
 	m_alive = false;
 
@@ -351,7 +351,7 @@ CaptureThreadImplOSS::~CaptureThreadImplOSS()
 	while(isRunning())
 		msleep(10);
 
-// 	cerr << "~CaptureThreadImplOSS::~CaptureThreadImplOSS" << endl;
+// 	cout << "~CaptureThreadImplOSS::~CaptureThreadImplOSS" << endl;
 }
 
 #endif

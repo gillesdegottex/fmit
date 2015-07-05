@@ -153,7 +153,7 @@ namespace Music
 				// (the previous criteria seems sufficient to remove high comp.)
 
 //				LOG(if(crit_min)
-//					cerr << "ih=" << ih <<
+//					cout << "ih=" << ih <<
 //					" harm_min=(("<<is_minima(ih-12)<<","<<is_minima(ih-12-1)<<","<<is_minima(ih-12+1)<<"),("<<
 //						is_minima(ih-19)<<","<<is_minima(ih-19-1)<<","<<is_minima(ih-19+1)<<"),("<<
 //						is_minima(ih-24)<<","<<is_minima(ih-24-1)<<","<<is_minima(ih-24+1)<<"))"<< crit_min <<
@@ -174,7 +174,7 @@ namespace Music
 					i=19;	if(ih-i>=0)	{sum+=wh*(m_components_max-m_components[ih-i]);	n++;}
 					i=24;	if(ih-i>=0)	{sum+=wh*(m_components_max-m_components[ih-i]);	n++;}
 
-					LOG(cerr << "ih=" << ih << " sum=" << sum << endl;)
+                    LOG(cout << "ih=" << ih << " sum=" << sum << endl;)
 
 					// get the "best"
 					if(sum>max_sum)
@@ -206,12 +206,12 @@ namespace Music
 				}
 			}
 
-// 			cerr << "ff: " << m_first_fond << endl;
+// 			cout << "ff: " << m_first_fond << endl;
 
 			if(m_first_fond!=-1)
 				m_is_fondamental[m_first_fond] = true;
 
-			LOG(cerr << "m_first_fond=" << m_first_fond << endl;)
+            LOG(cout << "m_first_fond=" << m_first_fond << endl;)
 		}
 	}
 	MultiCumulativeDiffAlgo::~MultiCumulativeDiffAlgo()

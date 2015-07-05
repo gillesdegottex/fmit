@@ -351,7 +351,7 @@ void GLErrorHistory::drawTextTickCent(int r, int dy)
 
 void GLErrorHistory::paintGL()
 {
-// 	cerr << "GLErrorHistory::paintGL " << m_notes.size() << endl;
+// 	cout << "GLErrorHistory::paintGL " << m_notes.size() << endl;
 
 	glClear(GL_COLOR_BUFFER_BIT);
 
@@ -452,7 +452,7 @@ void GLErrorHistory::paintGL()
 
 		float step = float(width()-ticks_size)/total_size;
 
-//		cerr << "total_size=" << total_size << " step=" << step << endl;
+//		cout << "total_size=" << total_size << " step=" << step << endl;
 
 		int curr_total = 0;
 		for(size_t i=0; i<m_notes.size(); i++)

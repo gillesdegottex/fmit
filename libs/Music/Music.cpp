@@ -110,7 +110,7 @@ void Music::SetAFreq(double AFreq)
 
 void Music::SetSemitoneBounds(int semitone_min, int semitone_max)
 {
-// 	cerr << "Music::SetSemitoneBounds" << endl;
+// 	cout << "Music::SetSemitoneBounds" << endl;
 
 	s_semitone_min = semitone_min;
 	s_semitone_max = semitone_max;

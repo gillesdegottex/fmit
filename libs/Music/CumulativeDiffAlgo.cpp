@@ -77,7 +77,7 @@ namespace Music
 		// use a relative threshold
 		double threshold = m_noise_threshold*max_vol;
 
-//	cerr << "min=" << min_length << " max=" << m_max_length << " threshold=" << treshold << endl;
+//	cout << "min=" << min_length << " max=" << m_max_length << " threshold=" << treshold << endl;
 
 		double r = 0.0;
 		size_t s;
@@ -87,18 +87,18 @@ namespace Music
 		while((r=diff(buff, m_max_length, s+1))>threshold && s<m_max_length)
 			s++;
 
-//	cerr << "s=" << s << " r=" << r << endl;
+//	cout << "s=" << s << " r=" << r << endl;
 		double old_r = r;
 		while(s+1<m_max_length && (r=diff(buff, m_max_length, s+1))<old_r)
 		{
-//	cerr << "s=" << s << " r=" << r << endl;
+//	cout << "s=" << s << " r=" << r << endl;
 			s++;
 			old_r = r;
 		}
 
-//	cerr << "s=" << s << " r=" << old_r << endl;
+//	cout << "s=" << s << " r=" << old_r << endl;
 
-//	cerr << "absolute threshold=" << m_noise_threshold << " max volume="<<max_vol<<" relative threshold="<<threshold << " s="<<s << " m_max_length="<<m_max_length << endl;
+//	cout << "absolute threshold=" << m_noise_threshold << " max volume="<<max_vol<<" relative threshold="<<threshold << " s="<<s << " m_max_length="<<m_max_length << endl;
 
 		m_wave_length = (s<m_max_length)?s:0;
 	}
@@ -132,7 +132,7 @@ namespace Music
 
 		if(buff.size()<2*max_length)	return;
 
-	cerr << "min=" << min_length << " max=" << max_length << " noise=" << m_noise_treshold << endl;
+    cout << "min=" << min_length << " max=" << max_length << " noise=" << m_noise_treshold << endl;
 
 		double r = 1.0;
 		double max_vol = 0.0;
@@ -142,11 +142,11 @@ namespace Music
 			max_vol = max(max_vol, buff[s]);
 
 			r = norm_squar_diff(buff, s);
-//	cerr << "s=" << s << " r=" << r << endl;
+//	cout << "s=" << s << " r=" << r << endl;
 		}
 		s--;
-	cerr << "s=" << s << " r=" << r << endl;
-//	cerr << "---" << endl;
+    cout << "s=" << s << " r=" << r << endl;
+//	cout << "---" << endl;
 		double old_r;
 		do
 		{
@@ -154,24 +154,24 @@ namespace Music
 			old_r = r;
 
 			r = norm_squar_diff(buff, s);
-//	cerr << "s=" << s << " r=" << r << endl;
+//	cout << "s=" << s << " r=" << r << endl;
 		}
 		while(r<old_r && s<max_length);
 
 		r = old_r;
 		s--;
-	cerr << "s=" << s << " r=" << r << endl;
+    cout << "s=" << s << " r=" << r << endl;
 
-	cerr << "m_noise_treshold=" << m_noise_treshold << " max_vol=" << max_vol << " r=" << r << endl;
+    cout << "m_noise_treshold=" << m_noise_treshold << " max_vol=" << max_vol << " r=" << r << endl;
 
 		m_freq = 0.0;
 		if(max_vol>m_noise_treshold && s<max_length)
 		{
-						cerr << "r=" << r << " m_noise_treshold=" << m_noise_treshold << endl;
+                        cout << "r=" << r << " m_noise_treshold=" << m_noise_treshold << endl;
 			m_freq = double(m_sampling_rate)/s;
 		}
 
-	cerr << "m_sampling_rate=" << m_sampling_rate << " freq=" << m_freq << endl;
+    cout << "m_sampling_rate=" << m_sampling_rate << " freq=" << m_freq << endl;
 	}
 */
 }

@@ -60,8 +60,8 @@ bool CaptureThreadImplPortAudio::is_available()
 			for(int i=0; i<numDevices; i++ )
 			{
 				deviceInfo = Pa_GetDeviceInfo( i );
-				cerr << deviceInfo->name << endl;
-				cerr << deviceInfo->defaultSampleRate << endl;
+                cout << deviceInfo->name << endl;
+                cout << deviceInfo->defaultSampleRate << endl;
 			}*/
 		}
 		catch(QString error)
@@ -81,7 +81,7 @@ bool CaptureThreadImplPortAudio::is_available()
 
 void CaptureThreadImplPortAudio::setSamplingRate(int value)
 {
-// 	cerr << "CaptureThreadImplPortAudio::setSamplingRate " << value << endl;
+// 	cout << "CaptureThreadImplPortAudio::setSamplingRate " << value << endl;
 
 	assert(value>0 || value==CaptureThread::SAMPLING_RATE_MAX);
 
@@ -100,7 +100,7 @@ void CaptureThreadImplPortAudio::setSamplingRate(int value)
 			}
 			catch(QString error)
 			{
-				cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+                cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
 				m_capture_thread->emitError(error);
 			}
 
@@ -110,7 +110,7 @@ void CaptureThreadImplPortAudio::setSamplingRate(int value)
 			}
 			catch(QString error)
 			{
-				cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+                cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
 				m_capture_thread->emitError(error);
 			}
 		}
@@ -120,7 +120,7 @@ void CaptureThreadImplPortAudio::setSamplingRate(int value)
 		if(was_running)	m_capture_thread->startCapture();
 	}
 
-// 	cerr << "~CaptureThreadImplPortAudio::setSamplingRate" << endl;
+// 	cout << "~CaptureThreadImplPortAudio::setSamplingRate" << endl;
 }
 
 int CaptureThreadImplPortAudio::PortAudioCallback( const void *inputBuffer, void *outputBuffer,
@@ -182,15 +182,15 @@ void CaptureThreadImplPortAudio::set_params(bool test)
 		}
 
 		if(params.device==paNoDevice)
-			cerr << "CaptureThread: INFO: PortAudio: cannot determine selected source \"" << m_source.toStdString() << "\"" << endl;
+            cout << "CaptureThread: INFO: PortAudio: cannot determine selected source \"" << m_source.toStdString() << "\"" << endl;
 	}
 
 	if(!test)
 	{
 		if(params.device==paNoDevice)
-			cerr << "CaptureThread: INFO: PortAudio: using default device" << endl;
+            cout << "CaptureThread: INFO: PortAudio: using default device" << endl;
 		else
-			cerr << "CaptureThread: INFO: PortAudio: using \"" << m_source.toStdString() << "\"" << endl;
+            cout << "CaptureThread: INFO: PortAudio: using \"" << m_source.toStdString() << "\"" << endl;
 
 		setFormatDescrsAndFns(4, true, true, 1); // TODO do something if nbchannel=1 not supported
 	}
@@ -199,7 +199,7 @@ void CaptureThreadImplPortAudio::set_params(bool test)
 	{
 		int old_sampling_rate = m_sampling_rate;
 
-		cerr << "CaptureThread: INFO: PortAudio: sampling rate set to max or undefined, try to determinate it." << endl;
+        cout << "CaptureThread: INFO: PortAudio: sampling rate set to max or undefined, try to determinate it." << endl;
 
 		list<int> sampling_rates;
 		sampling_rates.push_front(8000);	sampling_rates.push_front(11025);	sampling_rates.push_front(16000);
@@ -216,17 +216,17 @@ void CaptureThreadImplPortAudio::set_params(bool test)
 			if(m_err != paNoError)	throw QString("PortAudio: set_params:Pa_Initialize ")+Pa_GetErrorText(m_err);
 
 			m_sampling_rate = sampling_rates.front();
-			cerr << "CaptureThread: INFO: PortAudio: try sampling rate " << m_sampling_rate << " ..." << flush;
+            cout << "CaptureThread: INFO: PortAudio: try sampling rate " << m_sampling_rate << " ..." << flush;
 
-// 			cerr << "nbc1 " << params.channelCount << endl;
+// 			cout << "nbc1 " << params.channelCount << endl;
 
 			if(params.device==paNoDevice)
 				m_err = Pa_OpenDefaultStream(&m_stream, 1, 0, paFloat32, m_sampling_rate, 0, PortAudioCallback, this);
 			else
 				m_err = Pa_OpenStream(&m_stream, &params, NULL, m_sampling_rate, 0, paNoFlag, PortAudioCallback, this);
 
-			if(m_err != paNoError)	cerr << " failed" << endl;
-			else					cerr << " success" << endl;
+            if(m_err != paNoError)	cout << " failed" << endl;
+            else					cout << " success" << endl;
 
 			sampling_rates.pop_front();
 		}
@@ -236,8 +236,8 @@ void CaptureThreadImplPortAudio::set_params(bool test)
 	}
 	else
 	{
-// 		cerr << "nbc2 " << params.channelCount << endl;
-// 		cerr << "dev2 " << params.device << "/" << paNoDevice << endl;
+// 		cout << "nbc2 " << params.channelCount << endl;
+// 		cout << "dev2 " << params.device << "/" << paNoDevice << endl;
 
 		if(params.device==paNoDevice)
 		{
@@ -301,7 +301,7 @@ void CaptureThreadImplPortAudio::startCapture()
 	catch(QString error)
 	{
 		capture_finished();
-		cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+        cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
 		m_capture_thread->emitError(error);
 	}
 }
@@ -313,7 +313,7 @@ void CaptureThreadImplPortAudio::stopCapture()
 	}
 	catch(QString error)
 	{
-		cerr << "CaptureThread: ERROR: " << error.toStdString() << endl;
+        cout << "CaptureThread: ERROR: " << error.toStdString() << endl;
 		m_capture_thread->emitError(error);
 	}
 }

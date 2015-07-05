@@ -23,7 +23,6 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -50,6 +49,8 @@ void AddValue2ChannelMix(CaptureThreadImpl* impl, double value, int i)
 }
 void AddValue1Channel(CaptureThreadImpl* impl, double value, int i)
 {
+    Q_UNUSED(i)
+
 	impl->m_capture_thread->m_values.push_front(value);
 }
 
@@ -67,6 +68,9 @@ CaptureThread::CaptureThread(const QString& name)
 
 	m_name = name;
 
+#ifdef CAPTURE_QT
+    m_impls.push_back(new CaptureThreadImplQt(this));
+#endif
 #ifdef CAPTURE_JACK
 	m_impls.push_back(new CaptureThreadImplJACK(this));
 #endif
@@ -93,7 +97,7 @@ void CaptureThread::autoDetectTransport()
 	if(m_current_impl!=NULL)
 		old_name = m_current_impl->m_name;
 
-	cerr << "CaptureThread: INFO: Auto detecting a working transport ... " << flush;
+    cout << "CaptureThread: INFO: Auto detecting a working transport ... " << flush;
 
 	CaptureThreadImpl* impl = NULL;
 	for(vector<CaptureThreadImpl*>::iterator it=m_impls.begin(); impl==NULL && it!=m_impls.end(); it++)
@@ -104,7 +108,7 @@ void CaptureThread::autoDetectTransport()
 	{
 		m_current_impl = impl;
 
-		cerr << "using " << m_current_impl->m_name.toStdString() << endl;
+        cout << "using " << m_current_impl->m_name.toStdString() << endl;
 
 		if(m_current_impl->m_name!=old_name)
 			emit(transportChanged(m_current_impl->m_name));
@@ -114,7 +118,7 @@ void CaptureThread::autoDetectTransport()
 	}
 	else
 	{
-		cerr << "no working transport !" << endl;
+        cout << "no working transport !" << endl;
 
 		if(old_name!="")
 			emit(transportChanged(""));
@@ -122,7 +126,7 @@ void CaptureThread::autoDetectTransport()
 }
 void CaptureThread::selectTransport(const QString& name)
 {
-	cerr << "CaptureThread: INFO: using " << name.toStdString() << " transport" << endl;
+    cout << "CaptureThread: INFO: using " << name.toStdString() << " transport" << endl;
 	if(getCurrentTransport() && name==getCurrentTransport()->getName())	return;
 
 	bool was_capturing = isCapturing();
@@ -140,7 +144,7 @@ void CaptureThread::selectTransport(const QString& name)
 
 	if(impl==NULL)
 	{
-		cerr << "CaptureThread: ERROR: unknown transport '" << name.toStdString() << "'" << endl;
+        cout << "CaptureThread: ERROR: unknown transport '" << name.toStdString() << "'" << endl;
 		throw QString("CaptureThread: ERROR: unknown transport '")+name+"'";
 	}
 
@@ -154,10 +158,10 @@ void CaptureThread::selectTransport(const QString& name)
 }
 void CaptureThread::selectTransport(int index)
 {
-	assert(index>=0 && index<m_impls.size());
+    assert(index>=0 && index<int(m_impls.size()));
 
 	if(m_impls[index]==getCurrentTransport())	return;
-		cerr << "CaptureThread: INFO: change transport to " << m_impls[index]->getName().toStdString() << " transport" << endl;
+        cout << "CaptureThread: INFO: change transport to " << m_impls[index]->getName().toStdString() << " transport" << endl;
 
 	bool was_capturing = isCapturing();
 	if(was_capturing)
@@ -176,9 +180,9 @@ const vector<CaptureThreadImpl*>& CaptureThread::getTransports() const
 }
 void CaptureThread::listTransports()
 {
-	cerr << "CaptureThread: INFO: Built in transports" << endl;
+    cout << "CaptureThread: INFO: Built-in transports" << endl;
 	for(vector<CaptureThreadImpl*>::iterator it=m_impls.begin(); it!=m_impls.end(); it++)
-		cerr << "CaptureThread: INFO:	" << (*it)->getStatus().toStdString() << "	" << (*it)->m_name.toStdString() << "	" << (*it)->m_descr.toStdString() << endl;
+        cout << "CaptureThread: INFO:	" << (*it)->getStatus().toStdString() << "	" << (*it)->m_name.toStdString() << "	" << (*it)->m_descr.toStdString() << endl;
 }
 const CaptureThreadImpl* CaptureThread::getCurrentTransport() const
 {
@@ -186,7 +190,7 @@ const CaptureThreadImpl* CaptureThread::getCurrentTransport() const
 }
 int CaptureThread::getCurrentTransportIndex() const
 {
-	for(int i=0; i<m_impls.size(); i++)
+    for(size_t i=0; i<m_impls.size(); i++)
 		if(m_impls[i]==getCurrentTransport())
 			return i;
 
@@ -245,13 +249,13 @@ void CaptureThread::startCapture()
 }
 void CaptureThread::stopCapture()
 {
-	//	cerr << "CaptureThread::stopCapture" << endl;
+    //	cout << "CaptureThread::stopCapture" << endl;
 
 	if(m_current_impl==NULL)	return;
 
 	m_current_impl->stopCapture();
 
-	//	cerr << "/CaptureThread::stopCapture" << endl;
+    //	cout << "/CaptureThread::stopCapture" << endl;
 }
 
 void CaptureThread::toggleCapture(bool run)
@@ -286,7 +290,7 @@ void CaptureThread::setSource(const QString& name)
 {
 	if(m_current_impl==NULL)
 	{
-		cerr << "CaptureThread: setSource: ERROR: select a transport first" << endl;
+        cout << "CaptureThread: setSource: ERROR: select a transport first" << endl;
 		return;
 	}
 
@@ -368,5 +372,5 @@ void CaptureThreadImpl::setFormatDescrsAndFns(int format_size, bool format_signe
 			addValue = AddValue2ChannelFirst;
 	}
 
-	cerr << "CaptureThread: INFO: format is " << (m_format_signed?"signed":"unsigned") << " " << (m_format_float?"float":"integer") << " " << m_format_size*8 << "bits with " << m_channel_count << " channel(s)" << endl;
+    cout << "CaptureThread: INFO: format is " << (m_format_signed?"signed":"unsigned") << " " << (m_format_float?"float":"integer") << " " << m_format_size*8 << "bits with " << m_channel_count << " channel(s)" << endl;
 }

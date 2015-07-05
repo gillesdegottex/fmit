@@ -51,6 +51,7 @@ using namespace std;
 #include <Music/Convolution.h>
 using namespace Music;
 #include "modules/View.h"
+#include "qthelper.h"
 
 CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 : m_config_form(this)
@@ -141,6 +142,7 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	m_config_form.ui_grpJACK->hide();
 	m_config_form.ui_grpPortAudio->hide();
 	m_config_form.ui_grpOSS->hide();
+    m_config_form.ui_grpQt->hide();
 
 	ui_lblA3Offset->hide();
 	ui_spinA3Offset->hide();
@@ -171,8 +173,8 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	// link scales
 	connect(m_dialTune->setting_spinScale, SIGNAL(valueChanged(int)), m_glErrorHistory->setting_spinScale, SLOT(setValue(int)));
 	connect(m_glErrorHistory->setting_spinScale, SIGNAL(valueChanged(int)), m_dialTune->setting_spinScale, SLOT(setValue(int)));
-	connect(m_dialTune->setting_useCents, SIGNAL(toggled(bool)), m_glErrorHistory->setting_useCents, SLOT(setOn(bool)));
-	connect(m_glErrorHistory->setting_useCents, SIGNAL(toggled(bool)), m_dialTune->setting_useCents, SLOT(setOn(bool)));
+    connect(m_dialTune->setting_useCents, SIGNAL(toggled(bool)), m_glErrorHistory->setting_useCents, SLOT(setChecked(bool)));
+    connect(m_glErrorHistory->setting_useCents, SIGNAL(toggled(bool)), m_dialTune->setting_useCents, SLOT(setChecked(bool)));
 
 	m_glVolumeHistory = new GLVolumeHistory(centralWidget());
 	connect(m_config_form.ui_spinVolumeTreshold, SIGNAL(valueChanged(int)), m_glVolumeHistory, SLOT(setVolumeTreshold(int)));
@@ -181,9 +183,9 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	ui_volumeLayout->addWidget(m_glVolumeHistory);
 
 	// link keep settings
-	connect(ui_btnKeepErrorHistory, SIGNAL(toggled(bool)), m_glErrorHistory->setting_keep, SLOT(setOn(bool)));
-	connect(m_glErrorHistory->setting_keep, SIGNAL(toggled(bool)), m_glVolumeHistory->setting_keep, SLOT(setOn(bool)));
-	connect(m_glErrorHistory->setting_keep, SIGNAL(toggled(bool)), ui_btnKeepErrorHistory, SLOT(setOn(bool)));
+    connect(ui_btnKeepErrorHistory, SIGNAL(toggled(bool)), m_glErrorHistory->setting_keep, SLOT(setChecked(bool)));
+    connect(m_glErrorHistory->setting_keep, SIGNAL(toggled(bool)), m_glVolumeHistory->setting_keep, SLOT(setChecked(bool)));
+    connect(m_glErrorHistory->setting_keep, SIGNAL(toggled(bool)), ui_btnKeepErrorHistory, SLOT(setChecked(bool)));
 
 	m_glSample = new GLSample(centralWidget());
 	connect(m_glSample->setting_show, SIGNAL(toggled(bool)), this, SLOT(update_views()));
@@ -213,11 +215,11 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 
 	connect(m_dialTune->setting_spinScale, SIGNAL(valueChanged(int)), m_glStatistics->setting_spinScale, SLOT(setValue(int)));
 	connect(m_glStatistics->setting_spinScale, SIGNAL(valueChanged(int)), m_dialTune->setting_spinScale, SLOT(setValue(int)));
-	connect(m_dialTune->setting_useCents, SIGNAL(toggled(bool)), m_glStatistics->setting_useCents, SLOT(setOn(bool)));
-	connect(m_glStatistics->setting_useCents, SIGNAL(toggled(bool)), m_dialTune->setting_useCents, SLOT(setOn(bool)));
+    connect(m_dialTune->setting_useCents, SIGNAL(toggled(bool)), m_glStatistics->setting_useCents, SLOT(setChecked(bool)));
+    connect(m_glStatistics->setting_useCents, SIGNAL(toggled(bool)), m_dialTune->setting_useCents, SLOT(setChecked(bool)));
 
-	connect(m_dialTune->setting_showTolerance, SIGNAL(toggled(bool)), m_glStatistics->setting_showTolerance, SLOT(setOn(bool)));
-	connect(m_glStatistics->setting_showTolerance, SIGNAL(toggled(bool)), m_dialTune->setting_showTolerance, SLOT(setOn(bool)));
+    connect(m_dialTune->setting_showTolerance, SIGNAL(toggled(bool)), m_glStatistics->setting_showTolerance, SLOT(setChecked(bool)));
+    connect(m_glStatistics->setting_showTolerance, SIGNAL(toggled(bool)), m_dialTune->setting_showTolerance, SLOT(setChecked(bool)));
 
     connect(&m_config_form, SIGNAL(accepted()), this, SLOT(configure_ok()));
     connect(&m_config_form, SIGNAL(rejected()), this, SLOT(configure_cancel()));
@@ -249,7 +251,7 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	connect((QObject*)&m_timer_refresh, SIGNAL(timeout()), this, SLOT(refresh()));
 	m_timer_refresh.start(m_config_form.ui_spinRefreshTime->value());
 
-//     cerr << __FILE__ << " " << __LINE__ << endl;
+//     cout << __FILE__ << " " << __LINE__ << endl;
 }
 
 void CustomInstrumentTunerForm::transportChanged(const QString& name)
@@ -265,11 +267,13 @@ void CustomInstrumentTunerForm::selectTransport(const QString& name)
 	m_config_form.ui_grpJACK->hide();
 	m_config_form.ui_grpPortAudio->hide();
 	m_config_form.ui_grpOSS->hide();
+    m_config_form.ui_grpQt->hide();
 
 	if(name=="ALSA")			m_config_form.ui_grpALSA->show();
 	else if(name=="JACK")		m_config_form.ui_grpJACK->show();
 	else if(name=="PortAudio")	m_config_form.ui_grpPortAudio->show();
 	else if(name=="OSS")		m_config_form.ui_grpOSS->show();
+    else if(name=="Qt")         m_config_form.ui_grpQt->show();
 }
 void CustomInstrumentTunerForm::autoDetectTransport()
 {
@@ -296,7 +300,7 @@ void CustomInstrumentTunerForm::toggleFullScreen()
 
 void CustomInstrumentTunerForm::noteRangeChanged()
 {
-	//	cerr << "CustomInstrumentTunerForm::noteRangeChanged" << endl;
+    //	cout << "CustomInstrumentTunerForm::noteRangeChanged" << endl;
 
 	m_config_form.ui_txtMinHT->setText(QString::fromStdString(h2n(m_config_form.ui_spinMinHT->value())) + " = " + QString::number(h2f(m_config_form.ui_spinMinHT->value())) + " hz");
 	m_config_form.ui_txtMaxHT->setText(QString::fromStdString(h2n(m_config_form.ui_spinMaxHT->value())) + " = " + QString::number(h2f(m_config_form.ui_spinMaxHT->value())) + " hz");
@@ -304,7 +308,7 @@ void CustomInstrumentTunerForm::noteRangeChanged()
 
 void CustomInstrumentTunerForm::errorRaised(const QString& error)
 {
-	//	cerr << "CustomInstrumentTunerForm::errorRaised " << error << endl;
+    //	cout << "CustomInstrumentTunerForm::errorRaised " << error << endl;
 
 	statusBar()->showMessage(QString("ERROR: ")+error);
 
@@ -315,11 +319,11 @@ void CustomInstrumentTunerForm::errorRaised(const QString& error)
 
 void CustomInstrumentTunerForm::samplingRateChanged(int sampling_rate)
 {
-	cerr << "CustomInstrumentTunerForm::samplingRateChanged " << sampling_rate << endl;
+//	cout << "CustomInstrumentTunerForm::samplingRateChanged " << sampling_rate << endl;
 
 	Music::SetSamplingRate(sampling_rate);
 
-        m_rect_range_filter.reset(int(GetSamplingRate()/2000.0));
+    m_rect_range_filter.reset(int(GetSamplingRate()/2000.0));
 //         m_fir_range_filter.setImpulseResponse(fir1_lowpass(400, 2/400));
 // 	m_rect_range_filter.reset(int(GetSamplingRate()/h2f(GetSemitoneMin())));
     m_glFT->spinWinLengthChanged(m_glFT->setting_winlen->value());
@@ -335,7 +339,7 @@ void CustomInstrumentTunerForm::ui_spinAFreq_valueChanged(int AFreq)
 	if(m_config_form.ui_chkShowA4Offset->isChecked())
 		A = h2f(ui_spinA3Offset->value()*1/100.0f, A);
 	Music::SetAFreq(A);
-//	cerr << A << endl;
+//	cout << A << endl;
 }
 void CustomInstrumentTunerForm::ui_spinAOffset_valueChanged(int offset)
 {
@@ -343,12 +347,12 @@ void CustomInstrumentTunerForm::ui_spinAOffset_valueChanged(int offset)
 	if(m_config_form.ui_chkShowA4Offset->isChecked())
 		A = h2f(offset*1/100.0f, ui_spinAFreq->value());
 	Music::SetAFreq(A);
-//	cerr << A << endl;
+//	cout << A << endl;
 }
 
 void CustomInstrumentTunerForm::tuningFreqChanged(float freq)
 {
-	//	cerr << "CustomInstrumentTunerForm::tuningFreqChanged " << freq << endl;
+    //	cout << "CustomInstrumentTunerForm::tuningFreqChanged " << freq << endl;
 
 	if(freq==0.0f)
 	{
@@ -395,17 +399,17 @@ void CustomInstrumentTunerForm::refresh()
 	int limit = int( m_capture_thread.getSamplingRate() /
 			(1.0/(m_config_form.ui_spinRefreshTime->value()/1000.0) - 1));
 
-// 	cerr << "REFRESH ";
+// 	cout << "REFRESH ";
 
 	m_capture_thread.lock();
-//     cerr << "CustomInstrumentTunerForm::refresh locked, values to read=" << m_capture_thread.m_values.size() << endl;
+//     cout << "CustomInstrumentTunerForm::refresh locked, values to read=" << m_capture_thread.m_values.size() << endl;
 	int nb_new_data = 0;
 	while(!m_capture_thread.m_values.empty() &&
 			  (m_capture_thread.m_values.size()>m_capture_thread.getPacketSizeSinceLastLock() || nb_new_data<limit))
 	{
-// 		cerr << m_capture_thread.m_values.back() << " ";
+// 		cout << m_capture_thread.m_values.back() << " ";
 		double value = (*m_range_filter)(m_capture_thread.m_values.back());
-// 		cerr << value << " ";
+// 		cout << value << " ";
 		m_capture_thread.m_values.pop_back();
 
 		m_queue.push_front(value);
@@ -415,9 +419,9 @@ void CustomInstrumentTunerForm::refresh()
 		nb_new_data++;
 	}
 	m_capture_thread.unlock();
-//     cerr << "CustomInstrumentTunerForm::refresh unlocked" << endl;
+//     cout << "CustomInstrumentTunerForm::refresh unlocked" << endl;
 
-// 	cerr << endl;
+// 	cout << endl;
 
 	int max_size = max(m_range_filter->getLength(), max(m_glGraph->getLength(), m_algo_combedfft->getMinSize()));
 	while(!m_queue.empty() && int(m_queue.size())>max_size)
@@ -468,7 +472,7 @@ void CustomInstrumentTunerForm::refresh()
 			}
 		}
 
-// 		cerr << "2) test freq=" << m_test_freq <<endl;
+// 		cout << "2) test freq=" << m_test_freq <<endl;
 
 		m_quantizer->quantize(freq);
 
@@ -533,7 +537,7 @@ void CustomInstrumentTunerForm::refresh()
 
 void CustomInstrumentTunerForm::noteStarted(double freq, double dt)
 {
-// 	cerr << "CustomInstrumentTunerForm::noteStarted " << freq << "," << dt << endl;
+// 	cout << "CustomInstrumentTunerForm::noteStarted " << freq << "," << dt << endl;
 
 	// set the compared freq
 	if(m_microtonalView->setting_show->isChecked() && m_microtonalView->hasTuningFreqSelected())
@@ -567,7 +571,7 @@ void CustomInstrumentTunerForm::noteStarted(double freq, double dt)
 void CustomInstrumentTunerForm::noteFinished(double freq, double dt)
 {
 	m_compared_freq = 0.0;
-// 	cerr << "CustomInstrumentTunerForm::noteFinished " << freq << "," << dt << endl;
+// 	cout << "CustomInstrumentTunerForm::noteFinished " << freq << "," << dt << endl;
 }
 
 void CustomInstrumentTunerForm::refresh_data_sample()
@@ -606,7 +610,7 @@ void CustomInstrumentTunerForm::refresh_data_harmonics()
 
 void CustomInstrumentTunerForm::refresh_views()
 {
-// 	cerr << "CustomInstrumentTunerForm::refresh_views " << endl;
+// 	cout << "CustomInstrumentTunerForm::refresh_views " << endl;
 
 //	m_dialTune->repaint();
 
@@ -720,7 +724,7 @@ void CustomInstrumentTunerForm::configure()
 		}
 		catch(QString error)
 		{
-			cerr << "CustomInstrumentTunerForm: ERROR: " << error.toStdString() << endl;
+            cout << "CustomInstrumentTunerForm: ERROR: " << error.toStdString() << endl;
 		}
 		Pa_Terminate();
 	}
@@ -733,6 +737,31 @@ void CustomInstrumentTunerForm::configure()
 #ifdef CAPTURE_OSS
 	m_config_form.ui_grpOSS->setTitle(m_capture_thread.getTransport("OSS")->getDescription());
 	m_config_form.ui_spinOSSSamplingRate->setValue(m_capture_thread.getSamplingRate());
+#endif
+#ifdef CAPTURE_QT
+    m_config_form.ui_grpQt->setTitle(m_capture_thread.getTransport("Qt")->getDescription());
+    m_config_form.ui_spinQtSamplingRate->setValue(m_capture_thread.getSamplingRate());
+    {
+        QString saved_device = m_settings.value(m_config_form.ui_cbQtDeviceName->objectName(), "default").toString();
+        try
+        {
+            QList<QAudioDeviceInfo> devices = QAudioDeviceInfo::availableDevices(QAudio::AudioInput);
+
+            int current_index = -1;
+            m_config_form.ui_cbQtDeviceName->clear();
+            for(int i=0; i<devices.count(); i++) {
+                m_config_form.ui_cbQtDeviceName->addItem(devices.at(i).deviceName());
+                if(devices.at(i).deviceName()==m_capture_thread.getTransport("Qt")->getSource())
+                    current_index = i;
+            }
+            if(current_index!=-1)
+                m_config_form.ui_cbQtDeviceName->setCurrentIndex(current_index);
+        }
+        catch(QString error)
+        {
+            cout << "CustomInstrumentTunerForm: ERROR: " << error.toStdString() << endl;
+        }
+    }
 #endif
 
     m_config_form.adjustSize();
@@ -778,17 +807,28 @@ void CustomInstrumentTunerForm::configure_ok()
 
 	SetSemitoneBounds(m_config_form.ui_spinMinHT->value(), m_config_form.ui_spinMaxHT->value());
 
-	ui_spinA3Offset->setShown(m_config_form.ui_chkShowA4Offset->isChecked());
-	ui_lblA3Offset->setShown(m_config_form.ui_chkShowA4Offset->isChecked());
+    ui_spinA3Offset->setVisible(m_config_form.ui_chkShowA4Offset->isChecked());
+    ui_lblA3Offset->setVisible(m_config_form.ui_chkShowA4Offset->isChecked());
 
 	//	if(m_note!=-1000)
 	//		ui_txtNote->setText(h2n(m_note));
 
 	//	m_dialTune->setError(-10.0f);
 
-// 	cerr << "b" << endl;
+// 	cout << "b" << endl;
 
 	// Capture
+#ifdef CAPTURE_QT
+    if(m_config_form.ui_cbTransports->currentText()=="Qt")
+    {
+        m_capture_thread.selectTransport("Qt");
+        m_capture_thread.setSource(m_config_form.ui_cbQtDeviceName->currentText());
+        if(m_config_form.ui_chkQtSamplingRateMax->isChecked())
+            m_capture_thread.setSamplingRate(CaptureThread::SAMPLING_RATE_MAX);
+        else
+            m_capture_thread.setSamplingRate(m_config_form.ui_spinQtSamplingRate->value());
+    }
+#endif
 #ifdef CAPTURE_ALSA
 	if(m_config_form.ui_cbTransports->currentText()=="ALSA")
 	{
@@ -839,7 +879,7 @@ void CustomInstrumentTunerForm::configure_ok()
 	m_glGraph->m_treshold = invlp(m_config_form.ui_spinVolumeTreshold->value());
 	m_glGraph->clearValues();
 
-// 	cerr << "c" << endl;
+// 	cout << "c" << endl;
 
 	if(m_config_form.ui_grpRangeFiltering->isChecked())
 	{
@@ -864,7 +904,7 @@ void CustomInstrumentTunerForm::configure_ok()
 	m_algo_combedfft->setAmplitudeTreshold(invlp(double(m_config_form.ui_spinVolumeTreshold->value())));
 	m_algo_combedfft->setComponentTreshold(invlp(double(m_config_form.ui_spinVolumeTreshold->value())));
 
-// 	cerr << "d" << endl;
+// 	cout << "d" << endl;
 
 	// Quantizers
 	m_quantizer->reset();
@@ -876,7 +916,7 @@ void CustomInstrumentTunerForm::configure_ok()
 	else
 		m_quantizer = &m_dummy_quantizer;
 
-// 	cerr << invlp(-m_config_form.ui_spinCombedFFTAudibilityRatio->value()) << endl;
+// 	cout << invlp(-m_config_form.ui_spinCombedFFTAudibilityRatio->value()) << endl;
 
 	if(!pauseAction->isChecked() && !m_capture_thread.isCapturing())
 		m_capture_thread.startCapture();
@@ -895,13 +935,16 @@ void CustomInstrumentTunerForm::saveSettings()
 
 	// sound capture
 	m_settings.setValue(m_config_form.ui_cbTransports->objectName(), m_config_form.ui_cbTransports->currentText());
+#ifdef CAPTURE_QT
+    m_settings.setValue(m_config_form.ui_cbQtDeviceName->objectName(), m_config_form.ui_cbQtDeviceName->currentText());
+#endif
 #ifdef CAPTURE_PORTAUDIO
 	m_settings.setValue(m_config_form.ui_cbPortAudioDeviceName->objectName(), m_config_form.ui_cbPortAudioDeviceName->currentText());
 #endif
 }
 void CustomInstrumentTunerForm::loadSettings()
 {
-//     cerr << __FILE__ << ":" << __LINE__ << endl;
+//     cout << __FILE__ << ":" << __LINE__ << endl;
 
 	m_settings.load();
 	View::loadAll();
@@ -918,35 +961,62 @@ void CustomInstrumentTunerForm::loadSettings()
 			if(m_config_form.ui_cbTransports->itemText(i)==saved_transport)
 				m_config_form.ui_cbTransports->setCurrentIndex(i);
 
-#ifdef CAPTURE_PORTAUDIO
-	QString saved_device = m_settings.value(m_config_form.ui_cbPortAudioDeviceName->objectName(), "default").toString();
-	try
-	{
-		PaError err;
-		err = Pa_Initialize();
-		if(err != paNoError)
-			throw QString("PortAudio: CustomInstrumentTunerForm::loadSettings:Pa_Initialize ")+Pa_GetErrorText(err);
-		int	numDevices = Pa_GetDeviceCount();
-//         cerr << "PortAudio devices:"<< endl;
-        int saved_index = -1;
-		m_config_form.ui_cbPortAudioDeviceName->clear();
-		const PaDeviceInfo* deviceInfo;
-		for(int i=0; i<numDevices; i++)
-		{
-			deviceInfo = Pa_GetDeviceInfo(i);
-//             cerr << "    " << QString(deviceInfo->name).toStdString() << endl;
-			m_config_form.ui_cbPortAudioDeviceName->addItem(QString(deviceInfo->name));
-			if(QString(deviceInfo->name)==saved_device)
-				saved_index = i;
-		}
-		if(saved_index!=-1)
-			m_config_form.ui_cbPortAudioDeviceName->setCurrentIndex(saved_index);
+#ifdef CAPTURE_QT
+    {
+        QString saved_device = m_settings.value(m_config_form.ui_cbQtDeviceName->objectName(), "default").toString();
+        try
+        {
+            QList<QAudioDeviceInfo> devices = QAudioDeviceInfo::availableDevices(QAudio::AudioInput);
+
+            int saved_index = -1;
+            m_config_form.ui_cbQtDeviceName->clear();
+            for(int i=0; i<devices.count(); i++)
+            {
+                m_config_form.ui_cbQtDeviceName->addItem(devices.at(i).deviceName());
+                if(devices.at(i).deviceName()==saved_device)
+                    saved_index = i;
+            }
+            if(saved_index!=-1)
+                m_config_form.ui_cbQtDeviceName->setCurrentIndex(saved_index);
+        }
+        catch(QString error)
+        {
+    //		cout << "CustomInstrumentTunerForm: ERROR: " << error << endl;
+        }
     }
-	catch(QString error)
-	{
-//		cerr << "CustomInstrumentTunerForm: ERROR: " << error << endl;
-	}
-	Pa_Terminate();
+#endif
+
+#ifdef CAPTURE_PORTAUDIO
+    {
+        QString saved_device = m_settings.value(m_config_form.ui_cbPortAudioDeviceName->objectName(), "default").toString();
+        try
+        {
+            PaError err;
+            err = Pa_Initialize();
+            if(err != paNoError)
+                throw QString("PortAudio: CustomInstrumentTunerForm::loadSettings:Pa_Initialize ")+Pa_GetErrorText(err);
+            int	numDevices = Pa_GetDeviceCount();
+    //         cout << "PortAudio devices:"<< endl;
+            int saved_index = -1;
+            m_config_form.ui_cbPortAudioDeviceName->clear();
+            const PaDeviceInfo* deviceInfo;
+            for(int i=0; i<numDevices; i++)
+            {
+                deviceInfo = Pa_GetDeviceInfo(i);
+    //             cout << "    " << QString(deviceInfo->name).toStdString() << endl;
+                m_config_form.ui_cbPortAudioDeviceName->addItem(QString(deviceInfo->name));
+                if(QString(deviceInfo->name)==saved_device)
+                    saved_index = i;
+            }
+            if(saved_index!=-1)
+                m_config_form.ui_cbPortAudioDeviceName->setCurrentIndex(saved_index);
+        }
+        catch(QString error)
+        {
+    //		cout << "CustomInstrumentTunerForm: ERROR: " << error << endl;
+        }
+        Pa_Terminate();
+    }
 #endif
 }
 
@@ -971,16 +1041,40 @@ void CustomInstrumentTunerForm::restoreFactorySettings()
 
 void CustomInstrumentTunerForm::helpAbout()
 {
-	QString text;
-	text = "<h2>Free Music Instrument Tuner</h2>";
-	text += tr("<h3>Version ")+PACKAGE_VERSION;
-	text += tr("</h3><p><h3>Website:</h3><p>homepage: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
-	text += tr("<p>development site: <a href=\"http://github.com/gillesdegottex/fmit\">http://github.com/gillesdegottex/fmit</a>");
-	text += tr("<p>donation link: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
-	text += tr("<p><h3>Author:</h3><p>Gilles Degottex <a href=\"mailto:gilles.degottex@gmail.com\">gilles.degottex@gmail.com</a>");
+    QString text;
+    text = "<h2>Free Music Instrument Tuner</h2>";
+
+    QString fmitversiongit(STR(FMITVERSIONGIT));
+    QString	fmitversion;
+    if(fmitversiongit.length()>0) {
+        fmitversion = tr("Version ") + fmitversiongit;
+    }
+    else {
+        QFile readmefile(":/README.txt");
+        readmefile.open(QFile::ReadOnly | QFile::Text);
+        QTextStream readmefilestream(&readmefile);
+        readmefilestream.readLine();
+        readmefilestream.readLine();
+        fmitversion = readmefilestream.readLine().simplified();
+    }
+    text += tr("<h3>Version ")+fmitversion;
+
+    text += tr(" (compiled by ")+QString(COMPILER)+tr(" for ");
+    #ifdef Q_PROCESSOR_X86_32
+      text += "32bits";
+    #endif
+    #ifdef Q_PROCESSOR_X86_64
+      text += "64bits";
+    #endif
+    text += ")";
+
+    text += "</h3><p><h3>"+tr("Website: ")+"</h3><p>"+tr("Homepage: ")+"<a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>";
+    text += "<p>"+tr("Development site: ")+"<a href=\"http://github.com/gillesdegottex/fmit\">http://github.com/gillesdegottex/fmit</a>";
+//	text += tr("<p>donation link: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
+    text += "<p><h3>"+tr("Author: ")+"</h3><p>Gilles Degottex <a href=\"mailto:gilles.degottex@gmail.com\">gilles.degottex@gmail.com</a>";
 #ifdef PACKAGER_STRING
 	if(PACKAGER_STRING!="")
-		text += tr("<p><h3>Packager:</h3><p>")+QString(PACKAGER_STRING).replace(QChar('<'),"[").replace(QChar('>'),"]");
+        text += "<p><h3>"+tr("Packager: ")+"</h3><p>"+QString(PACKAGER_STRING).replace(QChar('<'),"[").replace(QChar('>'),"]");
 #endif
 
 	QDialog about_dlg(this);
@@ -992,7 +1086,7 @@ void CustomInstrumentTunerForm::helpAbout()
 	QSpacerItem* spacer1;
 	QSpacerItem* spacer2;
 
-	about_dlg.setObjectName( tr("about_box") );
+    about_dlg.setObjectName("about_box");
 	about_dlg.setWindowTitle( tr("About Free Music Instrument Tuner") );
 
 	Form2Layout = new QVBoxLayout( &about_dlg );

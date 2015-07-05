@@ -48,7 +48,7 @@ namespace Music
 	 *	ainsi calcul√©e entre ces deux z√©ro (qui ne se correspondent donc pas) sera fausse.
 	 *	example: une fr√©quence tr√®s basse avec une seule harmonique tr√®s tr√®s
 	 *	haute.
-	 *	- il faut utiliser des z√©ros significatifs ... et ... et ... et voil‡†.
+	 *	- il faut utiliser des z√©ros significatifs ... et ... et ... et voil‡ .
 	 *	- ou encore Ècarter les solutions trop ÈlognÈes de la moyenne
 	 */
 	double GetAveragePeriodFromApprox(const std::deque<double>& queue, int approx, int n)
@@ -63,7 +63,7 @@ namespace Music
 			if(queue[i]<0 && queue[i+1]>0)				// if it cross the axis
 				ups.push_back(i);
 
-// 		cerr << "approx=" << approx << " ups.size()=" << ups.size();
+// 		cout << "approx=" << approx << " ups.size()=" << ups.size();
 		if(ups.empty())
 			return 0.0;
 
@@ -71,9 +71,9 @@ namespace Music
 		int period_low_bound = int(GetSamplingRate()/h2f(ht+1))-2;
 		int period_high_bound = int(GetSamplingRate()/h2f(ht-1))+2;
 
-// 		cerr << " ht=" << ht << " lb=" << period_low_bound << " rb=" << period_high_bound;
+// 		cout << " ht=" << ht << " lb=" << period_low_bound << " rb=" << period_high_bound;
 
-// 		cerr << " periods=(";
+// 		cout << " periods=(";
 
 		double period = 0.0;
 		int count = 0;
@@ -87,7 +87,7 @@ namespace Music
 			int higher_i_seek = i_seek;
 			int high_bound = min(int(queue.size())-1, ups[i]+period_high_bound);
 
-// 			cerr << "{" << low_bound << ":" << i_seek << ":" << high_bound << "}";
+// 			cout << "{" << low_bound << ":" << i_seek << ":" << high_bound << "}";
 
 			if(low_bound+1>=int(queue.size()))
 				i = ups.size();										// stop loop
@@ -109,13 +109,13 @@ namespace Music
 						i_seek = higher_i_seek;
 				}
 
-// 				cerr << i_seek << "=>";
+// 				cout << i_seek << "=>";
 
 				if(low_bound<i_seek && i_seek<high_bound)
 				{
 					double per = InterpolatedPeriod(queue, ups[i], i_seek);
 
-// 					cerr << "f=" << GetSamplingRate()/per << " ";
+// 					cout << "f=" << GetSamplingRate()/per << " ";
 
 					period += per;
 					count++;
@@ -128,7 +128,7 @@ namespace Music
 
 		period /= count;
 
-// 		cerr << ")=" << GetSamplingRate()/period << "(" << count << ")" << endl;
+// 		cout << ")=" << GetSamplingRate()/period << "(" << count << ")" << endl;
 
 		return period;
 	}
@@ -182,14 +182,14 @@ namespace Music
 		if(queue.size()<approx*1.5)
 			return 0.0;
 
-// 		cerr << queue.size() << "=>" << approx << " n=" << n << endl;
+// 		cout << queue.size() << "=>" << approx << " n=" << n << endl;
 
 		double wave_length = 0.0;
 		int count = 0;
 		int seek = 0;
 		while(count<n && seek<int(queue.size()) && seek!=-1)
 		{
-// 			cerr << "new " << flush;
+// 			cout << "new " << flush;
 
 			// in one period, compute the energy over approx/4
 			int w = int(approx/4);		// TODO ptr un peu long
@@ -217,19 +217,19 @@ namespace Music
 			}
 			seek += i_max;
 
-// 			cerr << "max-seek=" << seek << " " << flush;
+// 			cout << "max-seek=" << seek << " " << flush;
 
 			int old_seek=seek;
 			// go back to the previous zero
 			while(seek>=0 && !(queue[seek]<=0 && queue[seek+1]>0) && seek>old_seek-approx/2)
 				seek--;
 
-// 			cerr << "zero-seek=" << seek << " " << flush;
+// 			cout << "zero-seek=" << seek << " " << flush;
 
 			if(seek<0 || seek<=old_seek-approx/2)
 			{
 				seek += int(approx);
-// 				cerr << endl;
+// 				cout << endl;
 				continue;
 			}
 
@@ -251,7 +251,7 @@ namespace Music
 			if(sright>=int(queue.size()) || bright>=int(queue.size()))
 			{
 				seek = -1;
-// 				cerr << endl;
+// 				cout << endl;
 				continue;
 			}
 
@@ -262,23 +262,23 @@ namespace Music
 			if(abs(sw-approx)<abs(bw-approx))	wl = sw;
 			else								wl = bw;
 
-// 			cerr << "wl=" << wl << flush;
+// 			cout << "wl=" << wl << flush;
 
 			wave_length += wl;
 			count++;
 
 			seek += int(0.9*approx);
 
-// 			cerr << endl;
+// 			cout << endl;
 		}
 
-// 		cerr << "("<<count<<")"<< flush;
+// 		cout << "("<<count<<")"<< flush;
 
 		if(count==0)	return 0.0;
 
 		wave_length /= count;
 
-// 		cerr << GetSamplingRate()/wave_length << endl;
+// 		cout << GetSamplingRate()/wave_length << endl;
 
 		return wave_length;
 	}

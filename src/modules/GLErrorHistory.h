@@ -23,7 +23,7 @@
 
 #include <deque>
 using namespace std;
-#include <qgl.h>
+#include <QGLWidget>
 #include <qspinbox.h>
 #include <qsettings.h>
 #include <qaction.h>

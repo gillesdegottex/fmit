@@ -19,6 +19,10 @@
 #ifndef _Note_h_
 #define _Note_h_
 
+#include <QString>
+#include <deque>
+using namespace std;
+
 class Note
 {
   public:

@@ -37,9 +37,9 @@ namespace Music
 		double m_amplitude_treshold;
 		double m_max_amplitude;
 
-		virtual void samplingRateChanged()					{cerr<<__FILE__<<":"<<__LINE__<<" Algorithm::samplingRateChanged Not Yet Implemented"<<endl;}
-		virtual void AFreqChanged()							{cerr<<__FILE__<<":"<<__LINE__<<" Algorithm::AFreqChanged Not Yet Implemented"<<endl;}
-		virtual void semitoneBoundsChanged()				{cerr<<__FILE__<<":"<<__LINE__<<" Algorithm::semitoneBoundsChanged Not Yet Implemented"<<endl;}
+        virtual void samplingRateChanged()					{cout<<__FILE__<<":"<<__LINE__<<" Algorithm::samplingRateChanged Not Yet Implemented"<<endl;}
+        virtual void AFreqChanged()							{cout<<__FILE__<<":"<<__LINE__<<" Algorithm::AFreqChanged Not Yet Implemented"<<endl;}
+        virtual void semitoneBoundsChanged()				{cout<<__FILE__<<":"<<__LINE__<<" Algorithm::semitoneBoundsChanged Not Yet Implemented"<<endl;}
 
 	  public:
 		Algorithm();

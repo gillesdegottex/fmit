@@ -26,6 +26,8 @@ using namespace Math;
 #include "SPWindow.h"
 #include "FreqAnalysis.h"
 
+#include <QTextStream>
+
 namespace Music
 {
 	CombedFT::CombedFT()
@@ -72,7 +74,7 @@ namespace Music
 		while(best_size<int(m_zp_factor*win_size))
 			best_size *= 2;
 
-		cerr << "CombedFT: INFO: window size=" << win_size << " FFT size=" << best_size << " window size factor=" << m_window_factor << " zero padding factor=" << m_zp_factor << endl;
+        cout << "CombedFT: INFO: window size=" << win_size << " FFT size=" << best_size << " window size factor=" << m_window_factor << " zero padding factor=" << m_zp_factor << endl;
 
 		m_plan.resize(best_size);
 		m_components.resize(m_plan.size()/2);
@@ -93,7 +95,7 @@ namespace Music
 
 	void CombedFT::apply(const deque<double>& buff)
 	{
-// 		cerr << getAmplitudeTreshold() << " " << getComponentTreshold() << " " << m_audib_ratio << endl;
+// 		cout << getAmplitudeTreshold() << " " << getComponentTreshold() << " " << m_audib_ratio << endl;
 
 		if(int(buff.size())<getMinSize() || m_win.empty())	return;
 
@@ -191,7 +193,7 @@ namespace Music
 	 			m_f0 /= max_index;
 		}
 
-// 		cerr << " final: " << GetSamplingRate() << ":" << m_f0 << endl;
+// 		cout << " final: " << GetSamplingRate() << ":" << m_f0 << endl;
 	}
 	CombedFT::~CombedFT()
 	{

@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="128"
+   height="128"
    id="svg2"
    version="1.1"
-   inkscape:version="0.47 r22583"
-   sodipodi:docname="fmit_icon.svg"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="fmit.svg"
    inkscape:export-filename="/home/norwin/info/music/fmit/fmit/fmit_icon.png"
    inkscape:export-xdpi="16.651907"
    inkscape:export-ydpi="16.651907">
@@ -133,18 +133,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.67162977"
-     inkscape:cx="344.77017"
-     inkscape:cy="498.51158"
+     inkscape:zoom="3.9300836"
+     inkscape:cx="97.842975"
+     inkscape:cy="65.745183"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1360"
-     inkscape:window-height="714"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1559"
+     inkscape:window-height="876"
+     inkscape:window-x="41"
+     inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -161,10 +161,14 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(0,-924.36218)">
     <g
        id="g3923"
-       transform="matrix(1.9789619,0,0,1.9789619,247.7893,-825.57289)">
+       transform="matrix(0.5703594,0,0,0.5703594,26.58056,614.68158)"
+       inkscape:export-filename="/home/degottex/Research/Perso/Code/FMIT/fmit/ui/images/fmit.png"
+       inkscape:export-xdpi="15.936898"
+       inkscape:export-ydpi="15.936898">
       <g
          transform="matrix(1.5692673,0,0,1.5692673,-796.10231,-273.34315)"
          id="g3816">
@@ -184,37 +188,44 @@
            style="fill:none;stroke:#4f4f4f;stroke-width:1.00747061;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            d="m 549.93638,538.81332 0,10.92387"
            id="path3654"
-           sodipodi:nodetypes="cc" />
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0" />
         <path
            style="fill:none;stroke:#4f4f4f;stroke-width:1.00747061;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            d="m 510.15928,550.44959 5.46193,9.02406"
            id="path3654-4"
-           sodipodi:nodetypes="cc" />
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0" />
         <path
            style="fill:none;stroke:#4f4f4f;stroke-width:1.00747061;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            d="m 588.64482,550.44959 -5.46193,9.02406"
            id="path3654-4-6"
-           sodipodi:nodetypes="cc" />
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0" />
         <path
            style="fill:none;stroke:#4f4f4f;stroke-width:1.00747061;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            d="m 607.16789,565.88548 -6.88678,7.12426"
            id="path3654-4-6-2"
-           sodipodi:nodetypes="cc" />
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0" />
         <path
            style="fill:none;stroke:#4f4f4f;stroke-width:1.00747061;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            d="m 492.11118,565.88548 6.41183,6.64931"
            id="path3654-4-6-2-5"
-           sodipodi:nodetypes="cc" />
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0" />
         <path
            style="fill:none;stroke:#4f4f4f;stroke-width:1.00747061;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            d="m 528.08865,543.08788 3.32466,9.49901"
            id="path3654-4-8"
-           sodipodi:nodetypes="cc" />
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0" />
         <path
            style="fill:none;stroke:#4f4f4f;stroke-width:1.00747061;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            d="m 571.90283,543.08788 -3.32466,9.49901"
            id="path3654-4-8-6"
-           sodipodi:nodetypes="cc" />
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0" />
       </g>
       <g
          transform="matrix(3.0114113,0,0,3.0114113,-621.22547,-364.65118)"
@@ -223,28 +234,42 @@
            style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            d="m 228.03653,365.10243 10.67554,-40.77706"
            id="path3622"
-           sodipodi:nodetypes="cc" />
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0" />
         <path
            style="fill:none;stroke:#000000;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            d="m 230.39915,356.61451 10.67554,-40.77706"
            id="path3622-0"
-           sodipodi:nodetypes="cc" />
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0" />
       </g>
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 249.97378,522.22304 c 3.99019,2.34779 6.18237,-51.0961 11.37112,-55.79198 5.18875,-4.69589 5.61698,-16.21925 8.17697,-14.5045 11.28636,-0.48673 10.818,27.5376 17.98975,24.51046 7.17175,-3.02715 19.77726,32.28321 28.58044,3.47552 1.65148,-9.66333 23.21851,-26.77768 28.28235,-25.6239 9.40232,2.33735 14.96064,51.99185 25.59072,69.55736 10.63009,17.56552 32.11666,52.44703 37.00682,36.01503 4.89016,-16.43199 -17.84477,-27.95646 -12.2405,-46.3856 5.60426,-18.42913 34.122,-31.42292 27.51608,-7.11543 -6.60592,24.30749 -23.06428,-20.42935 -15.76692,-41.36034 7.29737,-20.93099 18.24508,-16.09054 31.6034,13.96907 13.35833,30.05961 28.47442,-13.53196 40.59694,-12.36912"
+       style="fill:none;stroke:#000000;stroke-width:2.09652233;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 42.658811,1014.4626 c 0.697127,0.4102 1.080123,-8.927 1.98665,-9.7474 0.906528,-0.8205 0.981344,-2.8337 1.4286,-2.5341 1.971842,-0.085 1.890014,4.8111 3.142993,4.2822 1.252979,-0.5289 3.455289,5.6402 4.993294,0.6072 0.28853,-1.6883 4.056511,-4.6783 4.941215,-4.4768 1.642681,0.4084 2.613776,9.0836 4.470959,12.1525 1.857186,3.0688 4.915089,11.1748 6.649605,7.1722 1.734518,-4.0024 -4.819573,-7.1869 -3.840449,-10.4066 0.979121,-3.2198 8.27048,-5.0238 7.116358,-0.7771 -1.154121,4.2467 -5.835638,-5.8782 -4.560715,-9.5351 1.274924,-3.65684 4.20243,-0.3459 6.536265,4.9058 2.333836,5.2518 4.974775,-1.564 7.092696,-1.3608"
        id="path3616-2"
-       sodipodi:nodetypes="czczcczzzzzzz" />
+       sodipodi:nodetypes="czczcczzzzzzz"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/degottex/Research/Perso/Code/FMIT/fmit/ui/images/fmit.png"
+       inkscape:export-xdpi="15.936898"
+       inkscape:export-ydpi="15.936898" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 704.89908,420.12325 c -18.58407,1.61055 -13.47428,148.91884 -19.78129,158.24639 -6.30702,9.32754 -5.59863,-69.85716 -11.29991,-45.09858 -6.10253,3.67946 -5.50188,-68.8352 -13.45501,-70.40199 -7.95313,-1.56679 -15.23883,120.71026 -26.16644,96.96808 -1.82226,-10.71832 -1.27447,-19.87724 -12.78893,-14.38433 -11.51445,5.49291 2.09029,-88.30168 -22.44326,-53.12367 -12.91807,22.14629 -14.49003,-46.68469 -24.35924,-0.24617 -9.86921,46.43852 -27.12757,13.06272 -29.64385,20.24405 -2.51628,7.18133 -10.06658,-6.49876 -11.46054,-12.9608 -4.70954,-21.83224 -7.12182,-34.78388 -14.45862,-15.12341 -7.3368,19.66047 -11.30773,0.82992 -19.73662,15.7188 -8.42889,14.88888 1.1954,-32.60883 -21.35863,-33.39878"
+       style="fill:none;stroke:#000000;stroke-width:2.09652233;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 122.13889,996.62471 c -3.24683,0.28137 -2.35409,26.01769 -3.45599,27.64729 -1.1019,1.6296 -0.97814,-12.2048 -1.9742,-7.8792 -1.06618,0.6428 -0.96124,-12.0262 -2.35074,-12.3 -1.38949,-0.2737 -2.66237,21.0894 -4.57154,16.9414 -0.31836,-1.8726 -0.22266,-3.4728 -2.23436,-2.5132 -2.01169,0.9598 0.3652,-15.4271 -3.92105,-9.2812 -2.25693,3.8693 -2.53156,-8.1563 -4.255816,-0.043 -1.724243,8.1132 -4.739463,2.2822 -5.179077,3.5369 -0.439622,1.2546 -1.758739,-1.1354 -2.002275,-2.2644 -0.822809,-3.8144 -1.244258,-6.0772 -2.526068,-2.6423 -1.281818,3.4349 -1.97558,0.145 -3.448195,2.7463 -1.472607,2.6012 0.208854,-5.6971 -3.731568,-5.8351"
        id="path3616-2-8-7"
-       sodipodi:nodetypes="czczczczzszzc" />
+       sodipodi:nodetypes="czczczczzszzc"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/degottex/Research/Perso/Code/FMIT/fmit/ui/images/fmit.png"
+       inkscape:export-xdpi="15.936898"
+       inkscape:export-ydpi="15.936898" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 23.491219,568.73511 c 18.58407,-1.61055 13.47428,-148.91884 19.78129,-158.24639 6.30702,-9.32754 5.59863,69.85716 11.29991,45.09858 6.10253,-3.67946 5.50188,68.8352 13.45501,70.40199 7.95313,1.56679 15.23883,-120.71026 26.16644,-96.96808 1.82226,10.71832 1.27447,19.87724 12.788931,14.38433 11.51445,-5.49291 -2.09029,88.30168 22.44326,53.12367 12.91807,-22.14629 3.77835,55.76078 24.35924,0.24617 14.87345,-45.24739 13.00481,-20.10449 19.78009,-25.08301 6.77528,-4.97852 16.61744,-1.17584 21.3243,17.79976 4.70954,21.83224 7.12182,34.78388 14.45862,15.12341 7.3368,-19.66047 11.30772,-0.82992 19.73661,-15.7188 8.42889,-14.88888 -1.19539,32.60883 21.35864,33.39878"
+       style="fill:none;stroke:#000000;stroke-width:2.09652233;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 3.0899964,1022.5888 c 3.2468272,-0.2815 2.3540948,-26.01773 3.4559939,-27.64734 1.1019003,-1.62961 0.9781375,12.20474 1.974209,7.87914 1.0661747,-0.6428 0.9612355,12.0263 2.3507277,12.3 1.389494,0.2737 2.66238,-21.08933 4.571544,-16.94133 0.318369,1.87263 0.222664,3.47273 2.234357,2.51303 2.011692,-0.95961 -0.365195,15.4272 3.921067,9.2813 2.256918,-3.8692 0.660117,9.742 4.255808,0.043 2.598542,-7.9052 2.272072,-3.5124 3.455783,-4.3822 1.183711,-0.8698 2.903236,-0.2055 3.725573,3.1098 0.822804,3.8143 1.244254,6.0771 2.526067,2.6422 1.281815,-3.4349 1.975574,-0.145 3.448188,-2.7462 1.472612,-2.6013 -0.208847,5.6971 3.731572,5.835"
        id="path3616-2-8"
-       sodipodi:nodetypes="czczczcczczzc" />
+       sodipodi:nodetypes="czczczcczczzc"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/degottex/Research/Perso/Code/FMIT/fmit/ui/images/fmit.png"
+       inkscape:export-xdpi="15.936898"
+       inkscape:export-ydpi="15.936898" />
   </g>
 </svg>

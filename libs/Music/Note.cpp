@@ -18,10 +18,14 @@
 
 #include "Note.h"
 
+#include <limits>
+
+#include "Music/Music.h"
+
 void Note::init()
 {
-	min_err = numeric_limits<float>::max();
-	max_err = -numeric_limits<float>::max();
+    min_err = std::numeric_limits<float>::max();
+    max_err = -std::numeric_limits<float>::max();
 	avg_err = 0.0f;
 }
 Note::Note(int h)
@@ -43,7 +47,7 @@ Note::Note(int h, float cents)
 }
 QString Note::getName() const
 {
-	return Music::h2n(ht)+factor;
+    return QString(Music::h2n(ht).c_str())+factor;
 }
 void Note::addAnalysis(float err, float volume)
 {
