@@ -49,6 +49,8 @@ void AddValue2ChannelMix(CaptureThreadImpl* impl, double value, int i)
 }
 void AddValue1Channel(CaptureThreadImpl* impl, double value, int i)
 {
+    Q_UNUSED(i)
+
 	impl->m_capture_thread->m_values.push_front(value);
 }
 
@@ -156,7 +158,7 @@ void CaptureThread::selectTransport(const QString& name)
 }
 void CaptureThread::selectTransport(int index)
 {
-	assert(index>=0 && index<m_impls.size());
+    assert(index>=0 && index<int(m_impls.size()));
 
 	if(m_impls[index]==getCurrentTransport())	return;
         cout << "CaptureThread: INFO: change transport to " << m_impls[index]->getName().toStdString() << " transport" << endl;
@@ -188,7 +190,7 @@ const CaptureThreadImpl* CaptureThread::getCurrentTransport() const
 }
 int CaptureThread::getCurrentTransportIndex() const
 {
-	for(int i=0; i<m_impls.size(); i++)
+    for(size_t i=0; i<m_impls.size(); i++)
 		if(m_impls[i]==getCurrentTransport())
 			return i;
 
