@@ -17,8 +17,6 @@
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 
-// #include "config.h"
-
 #include <stdlib.h>
 #include <iostream>
 #include <cstdlib>
@@ -55,7 +53,6 @@ int main(int argc, char** argv)
     QTranslator fmitTranslator;
     QString trFile = QString("fmit_")+QLocale::system().name();
     cout << "Requested translation file: " << trFile.toLatin1().constData() << endl;
-//    QString trPath = "C:/Users/Norwin/Documents/GitHub/fmit/tr/";
 
     #ifdef Q_OS_WIN32
         QString trPath = QCoreApplication::applicationDirPath()+"/tr/";
