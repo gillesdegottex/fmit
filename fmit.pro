@@ -32,7 +32,7 @@ message(CONFIG=$$CONFIG)
 # (if fail, fall back on the version present in the README.txt file)
 FMITVERSIONGITPRO = $$system(git describe --tags --always)
 message(Version from Git: $$FMITVERSIONGITPRO)
-DEFINES += FMITVERSIONGIT=$$FMITVERSIONGITPRO)
+DEFINES += FMITVERSIONGIT=$$FMITVERSIONGITPRO
 
 # Manage Architectures
 win32:message(For Windows)
