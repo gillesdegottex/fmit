@@ -10,7 +10,6 @@ echo " "
 
 rm -fr FMIT-*-Win64bit
 mkdir $PACKAGENAME
-mkdir $PACKAGENAME/tr
 
 # Add the executable
 cp ../../build-fmit-Desktop_Qt_5_2_1_MSVC2012_OpenGL_64bit-Release/release/fmit.exe $PACKAGENAME/
@@ -27,14 +26,19 @@ echo $PATH
 C:$QTPATH/bin/windeployqt.exe --no-translations fmit.exe
 cd ..
 
+# Add the MSVC redistribution installer
+cp C:/Qt/vcredist/vcredist_sp1_x64.exe $PACKAGENAME/
+
+
 # Add the translations
+mkdir $PACKAGENAME/tr
 cp -r ../tr/fmit_*.ts $PACKAGENAME/tr/
 C:$QTPATH/bin/lrelease.exe $PACKAGENAME/tr/*
 rm -f $PACKAGENAME/tr/*.ts
 
-# Add the MSVC redistribution installer
-cp C:/Qt/vcredist/vcredist_sp1_x64.exe $PACKAGENAME/
-
+# Add the scala files
+mkdir $PACKAGENAME/scales
+cp -r ../scales/*.scl $PACKAGENAME/scales/
 
 #"C:/Program Files (x86)/Inno Setup 5/ISCC"
 
