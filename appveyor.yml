@@ -19,13 +19,7 @@ install:
 #  - ps: lib /MACHINE:X86 /def:libfftw3-3.def # Needed only for MSVC (lib is still unrecognized command)
   - ps: cd ..
 #  - ps: Get-ChildItem C:\projects\fmit\lib\fftw-3.3.4-dll32
-#  - ps: New-Item -ItemType directory -Name libsndfile-1.0.25-w32
-#  - ps: cd libsndfile-1.0.25-w32
-#  - echo %CD%
-  - appveyor DownloadFile http://gillesdegottex.eu/libsndfile-1.0.25-w32.zip
-  - ps: 7z x libsndfile-1.0.25-w32.zip -y
 #  - ps: lib /MACHINE:X86 /def:libfftw3-3.def # Needed only for MSVC (lib is still unrecognized command)
-#  - ps: Get-ChildItem C:\projects\fmit\lib\libsndfile-1.0.25-w32
   - ps: cd ..
 
 build_script:
