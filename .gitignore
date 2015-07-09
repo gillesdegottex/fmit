@@ -29,3 +29,5 @@
 /.project
 
 /build
+
+/distrib/FMIT-*
