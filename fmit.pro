@@ -129,6 +129,7 @@ INCLUDEPATH += libs
 TARGET = fmit
 TEMPLATE = app
 
+RC_ICONS = ui/images/fmit.ico
 
 SOURCES +=  src/main.cpp \
             src/CustomInstrumentTunerForm.cpp \
