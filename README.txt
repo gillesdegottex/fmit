@@ -56,9 +56,10 @@ Disclaimer
 Contributors
     Florian Hars for the tunning scales, Arnout Engelen for the JACK issues
 
-    Packagers: Toni Graffy and all the PackMan team, Ludovic Reslinger, Edward
-               Tomasz Napierala
-    Other helpful people:
-    John Anderson for the microtonal module request; Scott Bahling for the
-    request of the scales in cents; Jacob Shapiro for his help to make FMIT
-    working under Windows/Cygwin; Peter;
+    Packagers: Toni Graffy and all the PackMan team, Ludovic Reslinger,
+        Edward Tomasz Napierala, John Wright.
+    Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro (Portuguese),
+        Florian Maier (German).
+    Other helpful people: John Anderson for the microtonal module request,
+        Scott Bahling for the request of the scales in cents,
+        Jacob Shapiro for his help to make FMIT working under Windows/Cygwin, Peter.
