@@ -24,4 +24,5 @@ install:
 
 build_script:
   - qmake "FFT_LIBDIR=C:\projects\fmit\lib\fftw-3.3.4-dll64" fmit.pro
-  - make
+  - ps: Get-ChildItem .
+  - C:\Qt\Tools\QtCreator\bin\jom.exe -f Makefile.Release
