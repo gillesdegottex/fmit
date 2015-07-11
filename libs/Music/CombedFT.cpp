@@ -82,11 +82,11 @@ namespace Music
 	}
 	int CombedFT::getSampleAlgoLatency() const
 	{
-		return 1000*m_win.size()/GetSamplingRate();
+        return 1000*int(m_win.size())/GetSamplingRate();
 	}
 	int CombedFT::getMinSize() const
 	{
-		return m_win.size();
+        return int(m_win.size());
 	}
 	double CombedFT::getFondamentalFreq() const
 	{
@@ -107,7 +107,7 @@ namespace Music
 			if(abs(buff[i])>m_max_amplitude)
 				m_max_amplitude = abs(buff[i]);
 		}
-		for(int i=m_win.size(); i<m_plan.size(); i++)			// padd with zeros
+        for(int i=int(m_win.size()); i<int(m_plan.size()); i++)			// padd with zeros
 			m_plan.in[i] = 0.0;
 
 		m_plan.execute();
