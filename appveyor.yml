@@ -9,6 +9,8 @@ configuration:
 install:
   - set QTDIR=C:\Qt\5.4\msvc2013_64_opengl
   - set PATH=%PATH%;%QTDIR%\bin
+  - ps: cd "\Program Files (x86)\Microsoft Visual Studio 12.0\VC"
+  - ps: vcvarsall x64
 #  - set PATH=%PATH%;"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"
   - ps: New-Item -ItemType directory -Name lib
   - ps: cd lib
@@ -26,7 +28,7 @@ install:
 build_script:
 #  - C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\vcvars32.bat
 #  - "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\vcvarsx86_amd64.bat"
-  - C:\Program\ Files\ (x86)\Microsoft\ Visual\ Studio\ 12.0\VC\vcvarsall.bat x64
+#  - C:\Program\ Files\ (x86)\Microsoft\ Visual\ Studio\ 12.0\VC\vcvarsall.bat x64
   - qmake "FFT_LIBDIR=C:\projects\fmit\lib\fftw-3.3.4-dll64" fmit.pro
   - ps: Get-ChildItem .
   - C:\Qt\Tools\QtCreator\bin\jom.exe -f Makefile.Release
