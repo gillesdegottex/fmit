@@ -7,15 +7,15 @@ configuration:
   - Release
 
 install:
-  - set QTDIR=C:\Qt\5.4\msvc2013_opengl
-  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+  - set QTDIR=C:\Qt\5.4\msvc2013_64_opengl
+  - set PATH=%PATH%;%QTDIR%\bin
   - ps: New-Item -ItemType directory -Name lib
   - ps: cd lib
-  - ps: New-Item -ItemType directory -Name fftw-3.3.4-dll32
-  - ps: cd fftw-3.3.4-dll32
+  - ps: New-Item -ItemType directory -Name fftw-3.3.4-dll64
+  - ps: cd fftw-3.3.4-dll64
 #  - echo %CD%
-  - appveyor DownloadFile ftp://ftp.fftw.org/pub/fftw/fftw-3.3.4-dll32.zip
-  - ps: 7z x fftw-3.3.4-dll32.zip -y
+  - appveyor DownloadFile ftp://ftp.fftw.org/pub/fftw/fftw-3.3.4-dll64.zip
+  - ps: 7z x fftw-3.3.4-dll64.zip -y
 #  - ps: lib /MACHINE:X86 /def:libfftw3-3.def # Needed only for MSVC (lib is still unrecognized command)
   - ps: cd ..
 #  - ps: Get-ChildItem C:\projects\fmit\lib\fftw-3.3.4-dll32
@@ -23,5 +23,5 @@ install:
   - ps: cd ..
 
 build_script:
-  - qmake "CONFIG+=fft_fftw3 file_audio_libsndfile" "FILE_AUDIO_LIBDIR=C:\projects\fmit\lib\libsndfile-1.0.25-w32" "FFT_LIBDIR=C:\projects\fmit\lib\fftw-3.3.4-dll32" fmit.pro
-  - msvc2013-make
+  - qmake "FFT_LIBDIR=C:\projects\fmit\lib\fftw-3.3.4-dll64" fmit.pro
+  - make
