@@ -26,7 +26,7 @@ install:
 build_script:
 #  - C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\vcvars32.bat
 #  - "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\vcvarsx86_amd64.bat"
-  - "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat x64"
+  - C:\Program Files\ (x86)\Microsoft\ Visual\ Studio\ 12.0\VC\vcvarsall.bat x64
   - qmake "FFT_LIBDIR=C:\projects\fmit\lib\fftw-3.3.4-dll64" fmit.pro
   - ps: Get-ChildItem .
   - C:\Qt\Tools\QtCreator\bin\jom.exe -f Makefile.Release
