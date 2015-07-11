@@ -9,6 +9,7 @@ configuration:
 install:
   - set QTDIR=C:\Qt\5.4\msvc2013_64_opengl
   - set PATH=%PATH%;%QTDIR%\bin
+  - set PATH=%PATH%;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin
   - ps: New-Item -ItemType directory -Name lib
   - ps: cd lib
   - ps: New-Item -ItemType directory -Name fftw-3.3.4-dll64
