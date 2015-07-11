@@ -102,7 +102,7 @@ unix {
 # Open GL ----------------------------------------------------------------------
 win32 {
     isEmpty(GLUT_LIBDIR) {
-        GLUT_LIBDIR = "$$_PRO_FILE_PWD_/../lib/freeglut-MSVC-3.0.0-1.mp/freeglut"
+        GLUT_LIBDIR = "$$_PRO_FILE_PWD_/../lib/freeglut-MSVC-3.0.0-1.mp/"
     }
 
     message(GLUT_LIBDIR=$$GLUT_LIBDIR)
