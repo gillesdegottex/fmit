@@ -190,7 +190,7 @@ const CaptureThreadImpl* CaptureThread::getCurrentTransport() const
 }
 int CaptureThread::getCurrentTransportIndex() const
 {
-    for(size_t i=0; i<m_impls.size(); i++)
+    for(int i=0; i<int(m_impls.size()); i++)
 		if(m_impls[i]==getCurrentTransport())
 			return i;
 

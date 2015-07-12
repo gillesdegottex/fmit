@@ -276,20 +276,20 @@ void GLSample::paintGL()
 	if(!m_samples.empty())
 	{
 		m_max_value = 0.0;
-		for(int j=m_samples.size()-1; j>=0; j--)
+        for(int j=int(m_samples.size())-1; j>=0; j--)
 		{
 			m_max_value = max(m_max_value, abs(m_samples[j].max_value));
 			if(!setting_hasFading->isChecked())	j=-1;
 		}
 
-		for(int j=m_samples.size()-1; j>=0; j--)
+        for(int j=int(m_samples.size())-1; j>=0; j--)
 		{
 			if(m_max_value!=0.0)
 			{
 				glBegin(GL_LINE_STRIP);
 				float grey = float(j)/m_samples.size();
 				glColor3f(grey, grey, grey);
-				int size = m_samples[j].data.size();
+                int size = int(m_samples[j].data.size());
 				float step = float(width())/size;
 				for(int i=size-1; i>0; i--)
 					glVertex2i(int((size-i-1)*step), int((m_samples[j].data[i]/m_max_value)*height()/2 + height()/2));

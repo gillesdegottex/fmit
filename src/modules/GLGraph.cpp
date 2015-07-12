@@ -494,7 +494,7 @@ void GLGraph::base_paint(float graph_gray)
 		else
 		{
 			glBegin(GL_LINES);
-			for(size_t i=0; i<m_maxs.size(); i++)
+            for(int i=0; i<int(m_maxs.size()); i++)
 			{
 				int x = width-1-i;
 				int ymin = int((m_maxs[i].first*scale_factor)*height()/2 + height()/2);

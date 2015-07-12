@@ -448,7 +448,7 @@ void GLErrorHistory::paintGL()
 	{
 		int total_size = 0;
 		for(size_t i=0; i<m_notes.size(); i++)
-			total_size += m_notes[i].errors.size()-1;
+            total_size += int(m_notes[i].errors.size())-1;
 
 		float step = float(width()-ticks_size)/total_size;
 
@@ -497,7 +497,7 @@ void GLErrorHistory::paintGL()
 			}
 			glEnd();
 
-			curr_total += m_notes[i].errors.size()-1;
+            curr_total += int(m_notes[i].errors.size())-1;
 		}
 	}
 

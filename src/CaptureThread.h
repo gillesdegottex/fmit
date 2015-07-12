@@ -333,7 +333,7 @@ class CaptureThread : public QObject
 	int getSamplingRate() const;
 	int getPacketSize() const						{return m_packet_size;}
 	int getPacketSizeSinceLastLock() const			{return m_packet_size_sll;}
-	int getNbPendingData() const					{return m_values.size();}
+    int getNbPendingData() const					{return int(m_values.size());}
 	const CaptureThreadImpl* getCurrentTransport() const;
 	int getCurrentTransportIndex() const;
 	QString getCurrentTransportDescr() const;

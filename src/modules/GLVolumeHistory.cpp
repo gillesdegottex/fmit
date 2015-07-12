@@ -334,7 +334,7 @@ void GLVolumeHistory::paintGL()
 	{
 		int total_size = 0;
 		for(size_t i=0; i<m_notes.size(); i++)
-			total_size += m_notes[i].volumes.size()-1;
+            total_size += int(m_notes[i].volumes.size())-1;
 
 		float step = float(width()-s)/total_size;
 
@@ -374,7 +374,7 @@ void GLVolumeHistory::paintGL()
 				glEnd();
 			}
 
-			curr_total += m_notes[i].volumes.size()-1;
+            curr_total += int(m_notes[i].volumes.size())-1;
 		}
 	}
 

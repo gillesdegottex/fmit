@@ -52,7 +52,7 @@ protected:
 	static AutoQSettings* s_settings;
 	const QString& getName()	{return m_name;}
 
-	int getNbView() const		{return s_views.size();}
+    int getNbView() const		{return int(s_views.size());}
 
 	// settings
 	QAction* setting_show;
