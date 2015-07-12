@@ -89,7 +89,7 @@ namespace Music
 
 		double v = 0.0;
 		for(size_t i=0; i<buff.size() && v<=getAmplitudeTreshold() && i<m_diffs[0]->m_s; i++)
-			v = max(v, abs(buff[i]));
+            v = std::max(v, abs(buff[i]));
 
 		if(v>getAmplitudeTreshold())
 		{
@@ -101,7 +101,7 @@ namespace Music
 			{
 				m_diffs[ih]->receive(buff, 0);
 				m_components[ih] = m_diffs[ih]->m_error;
-				m_components_max = max(m_components_max, m_components[ih]);
+                m_components_max = std::max(m_components_max, m_components[ih]);
 			}
 
 			// test components

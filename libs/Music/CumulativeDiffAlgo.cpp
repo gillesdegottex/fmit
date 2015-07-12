@@ -72,7 +72,7 @@ namespace Music
 
 		double max_vol = 0.0;
 		for(size_t i=0; i<m_max_length; i++)
-			max_vol = max(max_vol, buff[i]);
+            max_vol = std::max(max_vol, buff[i]);
 
 		// use a relative threshold
 		double threshold = m_noise_threshold*max_vol;

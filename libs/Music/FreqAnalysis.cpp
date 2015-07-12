@@ -88,9 +88,9 @@ namespace Music
 		{
 			int c = int(h*approx_f0_rel);
 			int llimit = int((h-offset_tresh)*approx_f0_rel);
-			llimit = max(llimit, 1);
+            llimit = std::max(llimit, 1);
 			int rlimit = int((h+offset_tresh)*approx_f0_rel);
-			rlimit = min(rlimit, int(spectrum.size()/2)-1);
+            rlimit = std::min(rlimit, int(spectrum.size()/2)-1);
 			int peak_index = -1;
 
 			if(is_peak(spectrum, c))

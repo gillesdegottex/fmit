@@ -85,7 +85,7 @@ namespace Music
 			int lower_i_seek = i_seek;
 			int low_bound = ups[i] + period_low_bound;
 			int higher_i_seek = i_seek;
-			int high_bound = min(int(queue.size())-1, ups[i]+period_high_bound);
+            int high_bound = std::min(int(queue.size())-1, ups[i]+period_high_bound);
 
 // 			cout << "{" << low_bound << ":" << i_seek << ":" << high_bound << "}";
 
