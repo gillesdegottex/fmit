@@ -21,6 +21,7 @@
 
 #include <assert.h>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 using namespace Math;
 #include "Music.h"

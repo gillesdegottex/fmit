@@ -23,6 +23,7 @@
 #include <cmath>
 #include <deque>
 #include <iostream>
+#include <algorithm>
 #include <limits>
 using namespace std;
 #include <CppAddons/CAMath.h>
