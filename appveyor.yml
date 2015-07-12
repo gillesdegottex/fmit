@@ -29,7 +29,7 @@ build_script:
 #  - C:\Program\ Files\ (x86)\Microsoft\ Visual\ Studio\ 12.0\VC\vcvarsall.bat x64
   - ps: cd "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC"
   - ps: Get-ChildItem .
-  - ps: vcvarsall x64
+  - cmd: vcvarsall x64
   - ps: cd "C:\projects\fmit"
   - qmake "FFT_LIBDIR=C:\projects\fmit\lib\fftw-3.3.4-dll64" fmit.pro
   - ps: Get-ChildItem .
