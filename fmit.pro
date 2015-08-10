@@ -18,10 +18,9 @@
 
 
 # Audio Capture Systems: acs_qt, acs_alsa, acs_jack, acs_portaudio, acs_oss
+#                        (only acs_qt works on Windows)
 CONFIG += acs_qt
 
-
-unix:DEFINES += PREFIX
 
 # ------------------------------------------------------------------------------
 # (modify the following at your own risks !) -----------------------------------
@@ -34,13 +33,24 @@ FMITVERSIONGITPRO = $$system(git describe --tags --always)
 message(Version from Git: $$FMITVERSIONGITPRO)
 DEFINES += FMITVERSIONGIT=$$FMITVERSIONGITPRO
 
+# To place the application's files in the proper folder
+isEmpty(PREFIX){
+    PREFIX = /usr/local
+}
+unix:DEFINES += PREFIX=$$PREFIX
+# To place the shortcut in the proper folder
+isEmpty(PREFIXSHORTCUT){
+    PREFIXSHORTCUT = /usr
+}
+
 # Manage Architectures
-win32:message(For Windows)
 unix:message(For Linux)
+win32:message(For Windows)
 msvc:message(Using MSVC compiler)
 gcc:message(Using GCC compiler)
 contains(QT_ARCH, i386):message(For 32bits)
 contains(QT_ARCH, x86_64):message(For 64bits)
+unix:message(Installation path: $$PREFIX)
 
 # ------------------------------------------------------------------------------
 # Manage options for Audio Capture System --------------------------------------
@@ -218,3 +228,14 @@ TRANSLATIONS = tr/fmit_de.ts \
                tr/fmit_ru.ts
 
 CONFIG += embed_manifest_exe
+
+
+# Installation configurations --------------------------------------------------
+scales.path = $$PREFIX/share/fmit/scales
+scales.files = scales/*
+translations.path = $$PREFIX/share/fmit/tr
+translations.files = tr/*
+target.path = $$PREFIX/bin
+shortcut.path = $$PREFIXSHORTCUT/share/applications
+shortcut.files = distrib/fmit.desktop
+INSTALLS += target scales translations shortcut
