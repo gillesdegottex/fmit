@@ -169,6 +169,8 @@ using namespace std;
 #include <Music/Music.h>
 using namespace Music;
 
+#include "../qthelper.h"
+
 // ---------------------- MScale ------------------------------
 
 void MScale::load_scala(const QString& file_name)
@@ -387,8 +389,10 @@ void MicrotonalView::load()
 	}
 	refreshScaleList();
 
+    QString fmitprefix(STR(PREFIX));
+
 	selectScale(s_settings->value("selectedScale", "default").toString());
-	setting_lastScalesDirectory = s_settings->value("lastScalesDirectory", ".").toString();
+	setting_lastScalesDirectory = s_settings->value("lastScalesDirectory", fmitprefix+"/share/fmit/scales").toString();
 	selectRoot(s_settings->value("selectedRoot", m_roots[0]->m_ht).toInt());
 }
 void MicrotonalView::clearSettings()
