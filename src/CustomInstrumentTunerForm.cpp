@@ -1044,8 +1044,8 @@ void CustomInstrumentTunerForm::helpAbout()
     QString text;
     text = "<h2>Free Music Instrument Tuner</h2>";
 
-    QString fmitversiongit(STR(FMITVERSIONGIT));
     QString	fmitversion;
+    QString fmitversiongit(STR(FMITVERSIONGIT));
     if(fmitversiongit.length()>0) {
         fmitversion = tr("Version ") + fmitversiongit;
     }
