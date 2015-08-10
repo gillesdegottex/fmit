@@ -1057,7 +1057,7 @@ void CustomInstrumentTunerForm::helpAbout()
         readmefilestream.readLine();
         fmitversion = readmefilestream.readLine().simplified();
     }
-    text += tr("<h3>Version ")+fmitversion;
+    text += tr("<h3>")+fmitversion;
 
     text += tr(" (compiled by ")+QString(COMPILER)+tr(" for ");
     #ifdef Q_PROCESSOR_X86_32
