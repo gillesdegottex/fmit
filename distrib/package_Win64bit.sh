@@ -29,7 +29,6 @@ cd ..
 # Add the MSVC redistribution installer
 cp C:/Qt/vcredist/vcredist_sp1_x64.exe $PACKAGENAME/
 
-
 # Add the translations
 mkdir $PACKAGENAME/tr
 cp -r ../tr/fmit_*.ts $PACKAGENAME/tr/
