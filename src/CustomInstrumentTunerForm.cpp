@@ -1046,17 +1046,18 @@ void CustomInstrumentTunerForm::helpAbout()
 
     QString fmitversiongit(STR(FMITVERSIONGIT));
     QString	fmitversion;
-    if(fmitversiongit.length()>0) {
-        fmitversion = tr("Version ") + fmitversiongit;
-    }
-    else {
-        QFile readmefile(":/README.txt");
+//    if(fmitversiongit.length()>0) {
+//        fmitversion = tr("Version ") + fmitversiongit;
+//    }
+//    else {
+        QFile readmefile(":/fmit/README.txt");
         readmefile.open(QFile::ReadOnly | QFile::Text);
         QTextStream readmefilestream(&readmefile);
         readmefilestream.readLine();
         readmefilestream.readLine();
+        readmefilestream.readLine();
         fmitversion = readmefilestream.readLine().simplified();
-    }
+//    }
     text += tr("<h3>")+fmitversion;
 
     text += tr(" (compiled by ")+QString(COMPILER)+tr(" for ");
