@@ -31,8 +31,8 @@ install:
 
   - ps: New-Item -ItemType directory -Name freeglut-MSVC
   - ps: cd freeglut-MSVC
-  - appveyor DownloadFile http://files.transmissionzero.co.uk/software/development/GLUT/freeglut-MSVC-3.0.0-1.mp.zip
-  - ps: 7z x freeglut-MSVC-3.0.0-1.mp.zip -y
+  - appveyor DownloadFile http://files.transmissionzero.co.uk/software/development/GLUT/freeglut-MSVC-3.0.0-2.mp.zip
+  - ps: 7z x freeglut-MSVC-3.0.0-2.mp.zip -y
   - ps: cd ..
   
   - ps: cd ..
