@@ -242,4 +242,6 @@ iconsvg.path = $$PREFIX/share/icons/hicolor/scalable/apps
 iconsvg.files = ui/images/fmit.svg
 iconpng.path = $$PREFIX/share/icons/hicolor/128x128/apps
 iconpng.files = ui/images/fmit.png
-INSTALLS += target scales translations shortcut iconsvg iconpng
+appdata.path = $$PREFIX/share/appdata
+appdata.files = distrib/fmit.appdata.xml
+INSTALLS += target scales translations shortcut iconsvg iconpng appdata
