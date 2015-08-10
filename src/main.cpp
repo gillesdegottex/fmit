@@ -27,9 +27,10 @@ using namespace std;
 #include <qtranslator.h>
 #include <QLibraryInfo>
 #include <GL/glut.h>
-#include "qthelper.h"
 
 #include "CppAddons/CAMath.h"
+
+#include "qthelper.h"
 
 #include "CustomInstrumentTunerForm.h"
 CustomInstrumentTunerForm* g_main_form = NULL;
@@ -37,6 +38,7 @@ CustomInstrumentTunerForm* g_main_form = NULL;
 int main(int argc, char** argv)
 {
     QString fmitversiongit(STR(FMITVERSIONGIT));
+    QString fmitprefix(STR(PREFIX));
 
     cout << "Free Music Instrument Tuner (Version " << fmitversiongit.toLatin1().constData() << ")" << endl;
 
@@ -57,7 +59,7 @@ int main(int argc, char** argv)
     #ifdef Q_OS_WIN32
         QString trPath = QCoreApplication::applicationDirPath()+"/tr/";
     #else
-        QString trPath = QString(PREFIX) + QString("/share/fmit/tr");
+        QString trPath = fmitprefix + QString("/share/fmit/tr");
     #endif
 
 //    cout << "QCoreApplication::applicationDirPath(): " << trPath.toLatin1().constData() << endl;
