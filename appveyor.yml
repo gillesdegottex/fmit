@@ -27,7 +27,7 @@ install:
 #  - echo %CD%
   - ps: Invoke-WebRequest "ftp://ftp.fftw.org/pub/fftw/$libfft.zip" -OutFile "$libfft.zip"
   - ps: Get-ChildItem .
-#  - appveyor DownloadFile "ftp://ftp.fftw.org/pub/fftw/$libfftfile.zip"
+#  - appveyor DownloadFile "ftp://ftp.fftw.org/pub/fftw/$libfft.zip"
   - ps: 7z x "$libfft.zip" -y
   - ps: lib /machine:$env:platform /def:libfftw3-3.def
   - ps: Get-ChildItem .
@@ -58,8 +58,7 @@ build_script:
 # Build package
   - ps: Get-ChildItem c:\projects\fmit\lib
   - ps: Get-ChildItem c:\projects\fmit\lib\libfft
-  - ps: if ($env:platform -eq 'x64') {& '.\distrib\package_appveyor_Win64bit.ps1'}
-  - ps: if ($env:platform -eq 'x86') {& '.\distrib\package_appveyor_Win32bit.ps1'}
+  - ps: .\distrib\package_appveyor_Win64bit.ps1 $env:platform
   - ps: Move-Item distrib/FMIT-*-Win*bit.exe .
   - ps: Get-ChildItem .
   #- ps: $GITPROJECTVERSION = (git describe --tags --always) | Out-String
