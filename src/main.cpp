@@ -47,22 +47,21 @@ int main(int argc, char** argv)
 	glutInit(&argc, argv);
 
     // Load translation
-//    cout << "Language=" << QLocale::system().name().toLatin1().constData() << endl;
     QTranslator qtTranslator;
-    qtTranslator.load("qt_" + QLocale::system().name(),
-           QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    QString trFile = "qt_" + QLocale::system().name();
+    cout << "INFO: Loading Qt translation file: " << trFile.toLatin1().constData() << " in " << QLibraryInfo::location(QLibraryInfo::TranslationsPath).toLatin1().constData() << endl;
+    qtTranslator.load(trFile, QLibraryInfo::location(QLibraryInfo::TranslationsPath));
     a.installTranslator(&qtTranslator);
     QTranslator fmitTranslator;
-    QString trFile = QString("fmit_")+QLocale::system().name();
-    cout << "Requested translation file: " << trFile.toLatin1().constData() << endl;
+    trFile = QString("fmit_")+QLocale::system().name();
 
     #ifdef Q_OS_WIN32
-        QString trPath = QCoreApplication::applicationDirPath()+"/tr/";
+        QString trPath = QCoreApplication::applicationDirPath()+"/";
     #else
         QString trPath = fmitprefix + QString("/share/fmit/tr");
     #endif
 
-//    cout << "QCoreApplication::applicationDirPath(): " << trPath.toLatin1().constData() << endl;
+    cout << "INFO: Loading FMIT translation file: " << trFile.toLatin1().constData() << " in " << trPath.toLatin1().constData() << endl;
     fmitTranslator.load(trFile, trPath);
     a.installTranslator(&fmitTranslator);
 
