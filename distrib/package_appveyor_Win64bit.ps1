@@ -25,7 +25,7 @@ cd $PACKAGENAME
 #export PATH=\C$QTPATH\bin:$PATH
 #echo $PATH
 $env:Path += ";C:\$QTPATH\bin"
-& c:$QTPATH\bin\windeployqt.exe --no-translations dfasma.exe
+& c:$QTPATH\bin\windeployqt.exe --no-translations fmit.exe
 cd ..
 
 # Add the MSVC redistribution installer
@@ -40,7 +40,7 @@ cd ..
 
 #"C:/Program Files (x86)/Inno Setup 5/ISCC"
 
-& "c:\Program Files (x86)\Inno Setup 5\ISCC.exe" /o. /dMyAppVersion=$VERSION c:\projects\dfasma\distrib\DFasma_MSVC2012_Win64bit.iss
+& "c:\Program Files (x86)\Inno Setup 5\ISCC.exe" /o. /dMyAppVersion=$VERSION c:\projects\fmit\distrib\FMIT_MSVC2012_OpenGL_Win64bit.iss
 
 # Get out of distrib
 cd ..
