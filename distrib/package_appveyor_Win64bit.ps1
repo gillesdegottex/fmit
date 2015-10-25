@@ -29,13 +29,16 @@ $env:Path += ";C:\$QTPATH\bin"
 #--no-translations
 
 # Add the translations
-New-Item -ItemType directory -Name tr | Out-Null
-Copy-Item c:\projects\fmit\tr\fmit_*.ts tr\
-cd tr
-Get-ChildItem .
-& c:$QTPATH/bin/lrelease.exe *.ts
+& c:$QTPATH/bin/lrelease.exe ../fmit.pro
+#New-Item -ItemType directory -Name tr | Out-Null
+#Copy-Item c:\projects\fmit\tr\fmit_*.ts tr\
+#cd tr
+#Get-ChildItem .
+#& c:$QTPATH/bin/lrelease.exe *.ts
 Remove-Item *.ts
-cd ..
+#cd ..
+
+Get-ChildItem .
 cd ..
 
 # Add the MSVC redistribution installer
