@@ -17,7 +17,7 @@ New-Item -ItemType directory -Name $PACKAGENAME | Out-Null
 Copy-Item c:\projects\fmit\release\fmit.exe $PACKAGENAME
 
 # Add libraries
-Copy-Item c:\projects\fmit\lib\libfftfile\libfftw3-3.dll $PACKAGENAME
+Copy-Item c:\projects\fmit\lib\libfft\libfftw3-3.dll $PACKAGENAME
 
 # Add the Qt related libs
 cd $PACKAGENAME
