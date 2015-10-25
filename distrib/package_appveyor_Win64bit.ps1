@@ -30,8 +30,9 @@ $env:Path += ";C:\$QTPATH\bin"
 
 # Add the translations
 New-Item -ItemType directory -Name tr | Out-Null
-Copy-Item c:\projects\fmit\tr\fmit_*.ts tr
+Copy-Item c:\projects\fmit\tr\fmit_*.ts tr\
 cd tr
+Get-ChildItem .
 & c:$QTPATH/bin/lrelease.exe *.ts
 Remove-Item *.ts
 cd ..
