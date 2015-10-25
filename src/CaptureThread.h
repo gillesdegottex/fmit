@@ -1,4 +1,4 @@
-// Copyright 2004 "Gilles Degottex"
+﻿// Copyright 2004 "Gilles Degottex"
 
 // This file is part of "Music"
 
@@ -76,6 +76,7 @@ class CaptureThreadImpl
 	const QString& getName() const {return m_name;}
 	const QString& getDescription() const {return m_descr;}
 	const QString& getSource() const {return m_source;}
+    QString getASCIISource() const;
 
 	virtual ~CaptureThreadImpl(){}
 };

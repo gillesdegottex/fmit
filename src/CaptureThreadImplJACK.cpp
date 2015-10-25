@@ -177,12 +177,12 @@ void CaptureThreadImplJACK::capture_init()
 
 	m_jack_port = jack_port_register(m_jack_client, "input", JACK_DEFAULT_AUDIO_TYPE, JackPortIsInput,0);
 
-	if(m_source!="")
+    if(getASCIISource()!="")
     {
         QString dest = QString(jack_get_client_name(m_jack_client))+":input";
-        cout << "CaptureThread: INFO: JACK: auto-connect '" << m_source.toStdString() << "' with '" << dest.toStdString() << "'" << endl;
-        if((err=jack_connect(m_jack_client, m_source.toLatin1().constData(), dest.toLatin1().constData()))!=0)
-            m_capture_thread->emitError(QString("JACK: Invalid source '")+m_source+"'");
+        cout << "CaptureThread: INFO: JACK: auto-connect '" << getASCIISource().toStdString() << "' with '" << dest.toStdString() << "'" << endl;
+        if((err=jack_connect(m_jack_client, getASCIISource().toLatin1().constData(), dest.toLatin1().constData()))!=0)
+            m_capture_thread->emitError(QString("JACK: Invalid source '")+getASCIISource()+"'");
     }
 
 	int old_sampling_rate = m_sampling_rate;

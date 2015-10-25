@@ -170,19 +170,19 @@ void CaptureThreadImplPortAudio::set_params(bool test)
 	params.suggestedLatency = 0;
 	params.hostApiSpecificStreamInfo = NULL;
 
-	if(m_source!="default")	// TODO hum hum
+    if(getASCIISource()!="default")
 	{
 		int	numDevices = Pa_GetDeviceCount();
 		const PaDeviceInfo* deviceInfo;
 		for(int i=0; params.device==paNoDevice && i<numDevices; i++)
 		{
 			deviceInfo = Pa_GetDeviceInfo(i);
-			if(QString(deviceInfo->name)==m_source)
+            if(QString(deviceInfo->name)==getASCIISource())
 				params.device = i;
 		}
 
 		if(params.device==paNoDevice)
-            cout << "CaptureThread: INFO: PortAudio: cannot determine selected source \"" << m_source.toStdString() << "\"" << endl;
+            cout << "CaptureThread: INFO: PortAudio: cannot determine selected source \"" << getASCIISource().toStdString() << "\"" << endl;
 	}
 
 	if(!test)
@@ -190,7 +190,7 @@ void CaptureThreadImplPortAudio::set_params(bool test)
 		if(params.device==paNoDevice)
             cout << "CaptureThread: INFO: PortAudio: using default device" << endl;
 		else
-            cout << "CaptureThread: INFO: PortAudio: using \"" << m_source.toStdString() << "\"" << endl;
+            cout << "CaptureThread: INFO: PortAudio: using \"" << getASCIISource().toStdString() << "\"" << endl;
 
 		setFormatDescrsAndFns(4, true, true, 1); // TODO do something if nbchannel=1 not supported
 	}

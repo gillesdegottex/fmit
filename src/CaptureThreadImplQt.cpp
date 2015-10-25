@@ -131,9 +131,9 @@ void CaptureThreadImplQt::stopCapture()
 
 void CaptureThreadImplQt::set_params(bool test) {
     Q_UNUSED(test)
-//    cout << "CaptureThreadImplQt::set_params " << m_source.toLatin1().constData() << endl;
+//    cout << "CaptureThreadImplQt::set_params " << getASCIISource().toLatin1().constData() << endl;
 
-    if(m_source=="")
+    if(getASCIISource()=="")
         m_audioInputDevice = QAudioDeviceInfo::defaultInputDevice();
     else {
 
@@ -141,12 +141,12 @@ void CaptureThreadImplQt::set_params(bool test) {
 
         m_audioInputDevice = QAudioDeviceInfo();
         for(int i=0; m_audioInputDevice.isNull() && i<devices.count(); i++)
-            if(m_source==devices.at(i).deviceName())
+            if(getASCIISource()==devices.at(i).deviceName())
                 m_audioInputDevice = devices.at(i);
     }
 
     if(m_audioInputDevice.isNull())
-        throw QString("Qt: Cannot open device '")+m_source+"'";
+        throw QString("Qt: Cannot open device '")+getASCIISource()+"'";
 
     QAudioFormat format = m_format;
 

@@ -52,7 +52,7 @@ CaptureThreadImplOSS::CaptureThreadImplOSS(CaptureThread* capture_thread)
 
 	// 	oss_sysinfo si;	// definition ??
 // 	ioctl(m_fd_in, OSS_SYSINFO, &si);
-// 	m_fd_in = open(m_source, O_RDONLY, 0));
+// 	m_fd_in = open(getASCIISource().toLatin1().constData(), O_RDONLY, 0));
 // 	m_descr = QString("Open Sound System (")+QString::number(SOUND_VERSION, 16)+":"+si.version+")");
 // 	close(m_fd_in);
 // 	m_fd_in = 0;
@@ -69,7 +69,7 @@ bool CaptureThreadImplOSS::is_available()
 	{
 		try
 		{
-            if((m_fd_in = open (m_source.toLatin1().constData(), O_RDONLY, 0)) == -1)
+            if((m_fd_in = open (getASCIISource().toLatin1().constData(), O_RDONLY, 0)) == -1)
 				throw QString(strerror(errno));
 		}
 		catch(QString error)
@@ -112,9 +112,9 @@ void CaptureThreadImplOSS::stopCapture()
 
 void CaptureThreadImplOSS::set_params(bool test)
 {
-	if(m_source=="")
+    if(getASCIISource()=="")
 		throw QString("OSS: set the source first");
-    if((m_fd_in = open (m_source.toLatin1().constData(), O_RDONLY, 0))==-1)
+    if((m_fd_in = open (getASCIISource().toLatin1().constData(), O_RDONLY, 0))==-1)
 		throw QString("OSS: ")+QString(strerror(errno));
 
 	if(!test)

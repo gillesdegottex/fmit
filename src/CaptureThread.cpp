@@ -341,7 +341,17 @@ const QString& CaptureThreadImpl::getStatus()
 	if(m_status=="")
 		is_available();
 
-	return m_status;
+    return m_status;
+}
+
+QString CaptureThreadImpl::getASCIISource() const
+{
+    QString untranssource = m_source;
+
+    if(untranssource==QObject::tr("default"))
+        untranssource = "default";
+
+    return untranssource.toLatin1();
 }
 
 void CaptureThreadImpl::setFormatDescrsAndFns(int format_size, bool format_signed, bool format_float, int channel_count)

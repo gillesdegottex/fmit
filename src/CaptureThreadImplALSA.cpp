@@ -63,12 +63,12 @@ bool CaptureThreadImplALSA::is_available()
 		try
 		{
 			int err = -1;
-            if((err=snd_pcm_open(&m_alsa_capture_handle, m_source.toLatin1().constData(), SND_PCM_STREAM_CAPTURE, SND_PCM_NONBLOCK)) < 0)
+            if((err=snd_pcm_open(&m_alsa_capture_handle, getASCIISource().toLatin1().constData(), SND_PCM_STREAM_CAPTURE, SND_PCM_NONBLOCK)) < 0)
 			{
 				if(err==-19)	// TODO risks of changes for the error code
-					throw QString("invalid source '")+m_source+"'";
+                    throw QString("invalid source '")+getASCIISource()+"'";
 				else if(err==-16)
-					throw QString("device '")+m_source+"' busy";
+                    throw QString("device '")+getASCIISource()+"' busy";
 				else
 					throw QString("cannot open pcm: ")+QString(snd_strerror(err));
 			}
@@ -126,14 +126,14 @@ void CaptureThreadImplALSA::set_params(bool test)
 
 	if(m_source=="")
 		throw QString("ALSA: set the source first");
-    if((err=snd_pcm_open(&m_alsa_capture_handle, m_source.toLatin1().constData(), SND_PCM_STREAM_CAPTURE, SND_PCM_NONBLOCK)) < 0)
+    if((err=snd_pcm_open(&m_alsa_capture_handle, getASCIISource().toLatin1().constData(), SND_PCM_STREAM_CAPTURE, SND_PCM_NONBLOCK)) < 0)
 	{
         //					cout << "err=" << err << ":" << snd_strerror(err) << endl;
 
 		if(err==-19)	// TODO risks of changes for the error code
-			throw QString("ALSA: Invalid Source '")+m_source+"'";
+            throw QString("ALSA: Invalid Source '")+getASCIISource()+"'";
 		else if(err==-16)
-			throw QString("ALSA: Device '")+m_source+"' busy";
+            throw QString("ALSA: Device '")+getASCIISource()+"' busy";
 		else
 			throw QString("ALSA: Cannot open pcm: ")+QString(snd_strerror(err));
 	}
