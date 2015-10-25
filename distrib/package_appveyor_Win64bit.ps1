@@ -30,21 +30,10 @@ $env:Path += ";C:\$QTPATH\bin"
 
 # Add the translations
 & c:$QTPATH/bin/lrelease.exe ../../fmit.pro
-#New-Item -ItemType directory -Name tr | Out-Null
-#Copy-Item c:\projects\fmit\tr\fmit_*.ts tr\
-#cd tr
-#Get-ChildItem .
-#& c:$QTPATH/bin/lrelease.exe *.ts
-Remove-Item *.ts
-#cd ..
+Copy-Item c:\projects\fmit\tr\fmit_*.qm .
 
 Get-ChildItem .
 cd ..
-
-# Add the MSVC redistribution installer
-#Get-ChildItem c:\Qt\vcredist
-#Copy-Item c:\Qt\vcredist\vcredist_sp1_x64.exe $PACKAGENAME
-
 
 #"C:/Program Files (x86)/Inno Setup 5/ISCC"
 
