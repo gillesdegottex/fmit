@@ -29,6 +29,7 @@ Copy-Item c:\projects\fmit\release\fmit.exe $PACKAGENAME
 
 # Add external libraries
 Copy-Item c:\projects\fmit\lib\libfft\libfftw3-3.dll $PACKAGENAME
+Copy-Item c:\projects\fmit\lib\freeglut-MSVC\freeglut\bin\freeglut.dll $PACKAGENAME
 
 # Add the Qt related libs, qt translations and installer of MSVC redist.
 cd $PACKAGENAME
@@ -41,6 +42,10 @@ $env:Path += ";C:\$QTPATH\bin"
 # Add the translations
 & c:$QTPATH/bin/lrelease.exe ../../fmit.pro
 Copy-Item c:\projects\fmit\tr\fmit_*.qm .
+
+# Add the scala files
+New-Item -ItemType directory -Name scales | Out-Null
+Copy-Item c:\projects\fmit\scales\*.scl scales
 
 Get-ChildItem .
 cd ..
