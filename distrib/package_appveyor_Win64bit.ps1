@@ -25,18 +25,20 @@ cd $PACKAGENAME
 #export PATH=\C$QTPATH\bin:$PATH
 #echo $PATH
 $env:Path += ";C:\$QTPATH\bin"
-& c:$QTPATH\bin\windeployqt.exe --no-translations fmit.exe
+& c:$QTPATH\bin\windeployqt.exe fmit.exe
+#--no-translations
+
+# Add the translations
+New-Item -ItemType directory -Name tr | Out-Null
+Copy-Item c:\projects\fmit\tr\fmit_*.ts tr
+& c:$QTPATH/bin/lrelease.exe tr\*
+Remove-Item tr\*.ts
 cd ..
 
 # Add the MSVC redistribution installer
 #Get-ChildItem c:\Qt\vcredist
 #Copy-Item c:\Qt\vcredist\vcredist_sp1_x64.exe $PACKAGENAME
 
-# Add the translations
-# mkdir $PACKAGENAME/tr
-# cp -r ../tr/fmit_*.ts $PACKAGENAME/tr/
-# C:$QTPATH/bin/lrelease.exe $PACKAGENAME/tr/*
-# rm -f $PACKAGENAME/tr/*.ts
 
 #"C:/Program Files (x86)/Inno Setup 5/ISCC"
 
