@@ -18,17 +18,25 @@ install:
   - ps: New-Item -ItemType directory -Name lib
   - ps: cd lib
   
-  - ps: New-Item -ItemType directory -Name fftw-3.3.4-dll64
-  - ps: cd fftw-3.3.4-dll64
+  - ps: echo "Install FFTW3"
+  - ps: if ($env:platform -eq 'x64') {$libfft = "fftw-3.3.4-dll64"}
+  - ps: if ($env:platform -eq 'x86') {$libfft = "fftw-3.3.4-dll32"}
+  - ps: echo $libfft
+  - ps: New-Item -ItemType directory -Name $libfft | Out-Null
+  - ps: cd $libfft
 #  - echo %CD%
-  - appveyor DownloadFile ftp://ftp.fftw.org/pub/fftw/fftw-3.3.4-dll64.zip
-  - ps: 7z x fftw-3.3.4-dll64.zip -y
-  - ps: lib /machine:x64 /def:libfftw3-3.def
+  - ps: Invoke-WebRequest "ftp://ftp.fftw.org/pub/fftw/$libfft.zip" -OutFile "$libfft.zip"
+  - ps: Get-ChildItem .
+#  - appveyor DownloadFile "ftp://ftp.fftw.org/pub/fftw/$libfftfile.zip"
+  - ps: 7z x "$libfft.zip" -y
+  - ps: lib /machine:$env:platform /def:libfftw3-3.def
   - ps: Get-ChildItem .
   - ps: cd ..
-#  - ps: Get-ChildItem C:\projects\fmit\lib\fftw-3.3.4-dll32
+  - ps: Move-Item "$libfft" libfft
+#  - ps: Get-ChildItem C:\projects\dfasma\lib\fftw-3.3.4-dll32
 #  - ps: lib /MACHINE:X86 /def:libfftw3-3.def # Needed only for MSVC (lib is still unrecognized command)
 
+  - ps: echo "Install GLUT"
   - ps: New-Item -ItemType directory -Name freeglut-MSVC
   - ps: cd freeglut-MSVC
   - appveyor DownloadFile http://files.transmissionzero.co.uk/software/development/GLUT/freeglut-MSVC-3.0.0-2.mp.zip
@@ -36,9 +44,45 @@ install:
   - ps: cd ..
   
   - ps: cd ..
+  
+  - choco install -y InnoSetup
+  
+  - ps: cd "c:\projects\fmit"
 
 build_script:
-  - qmake "FFT_LIBDIR=C:\projects\fmit\lib\fftw-3.3.4-dll64" "GLUT_LIBDIR=C:\projects\fmit\lib\freeglut-MSVC\freeglut" fmit.pro
+  - qmake "FFT_LIBDIR=C:\projects\fmit\lib\libfft" "GLUT_LIBDIR=C:\projects\fmit\lib\freeglut-MSVC\freeglut" fmit.pro
 #  - ps: Get-ChildItem .
   - set PATH=%PATH%;C:\Qt\Tools\QtCreator\bin
   - C:\Qt\Tools\QtCreator\bin\jom.exe -f Makefile.Release
+
+# Build package
+  - ps: Get-ChildItem c:\projects\fmit\lib
+  - ps: Get-ChildItem c:\projects\fmit\lib\libfft
+  - ps: if ($env:platform -eq 'x64') {& '.\distrib\package_appveyor_Win64bit.ps1'}
+  - ps: if ($env:platform -eq 'x86') {& '.\distrib\package_appveyor_Win32bit.ps1'}
+  - ps: Move-Item distrib/FMIT-*-Win*bit.exe .
+  - ps: Get-ChildItem .
+  #- ps: $GITPROJECTVERSION = (git describe --tags --always) | Out-String
+  #- ps: $GITPROJECTVERSION = $GITPROJECTVERSION -replace "`n|`r"
+  #- ps: echo "Version $GITPROJECTVERSION"
+  - echo APPVEYOR_REPO_TAG_NAME %APPVEYOR_REPO_TAG_NAME%
+  - if defined APPVEYOR_REPO_TAG_NAME set RELEASEVERSION=%APPVEYOR_REPO_TAG_NAME:~1%
+  - echo Version %RELEASEVERSION%
+
+
+artifacts:
+  - path: FMIT-*-Win*bit.exe
+    name: newinstallers   # Reference used for deployment
+
+deploy:
+- provider: GitHub
+  release: Version $(releaseversion)
+  tag: $(appveyor_repo_tag_name)
+  auth_token:
+    secure: TQgRc2OQ+3qGZXRW1yf2AIuYeOAC2FeC4wgfhZv2qZr8yMZF6AST9ER9xfRMJ4Ze # your encrypted token from GitHub
+  artifact: newinstallers
+  draft: true
+  prerelease: false
+  on:
+    appveyor_repo_tag: true        # deploy on tag push only
+    #branch: /v\d+\.\d+\.\d+/      # Doesn't work anymore
