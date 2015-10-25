@@ -29,7 +29,7 @@ $env:Path += ";C:\$QTPATH\bin"
 #--no-translations
 
 # Add the translations
-& c:$QTPATH/bin/lrelease.exe ../fmit.pro
+& c:$QTPATH/bin/lrelease.exe ../../fmit.pro
 #New-Item -ItemType directory -Name tr | Out-Null
 #Copy-Item c:\projects\fmit\tr\fmit_*.ts tr\
 #cd tr
