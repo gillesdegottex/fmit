@@ -309,7 +309,7 @@ Verwenden Sie keine zu hohe Abtastrate. 22050Hz sollten in den meisten Fällen a
         <location filename="../ui/ConfigForm.ui" line="473"/>
         <location filename="../ui/ConfigForm.ui" line="700"/>
         <source>default</source>
-        <translation></translation>
+        <translation>default</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="43"/>

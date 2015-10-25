@@ -178,7 +178,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>default</translation>
     </message>
     <message>
         <source>The chosen sampling rate.

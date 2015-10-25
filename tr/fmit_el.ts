@@ -429,7 +429,7 @@ Plus petites est la valeur plus vite le program répond, mais plus la fréquence
     </message>
     <message>
         <source>default</source>
-        <translation>προκαθορισμένο</translation>
+        <translation>default</translation>
     </message>
     <message>
         <source>OSS</source>

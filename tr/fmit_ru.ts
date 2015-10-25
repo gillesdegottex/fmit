@@ -209,7 +209,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/ConfigForm.ui" line="473"/>
         <location filename="../ui/ConfigForm.ui" line="700"/>
         <source>default</source>
-        <translation>по умолчанию</translation>
+        <translation>default</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="43"/>
