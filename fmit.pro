@@ -225,6 +225,7 @@ TRANSLATIONS = tr/fmit_de.ts \
                tr/fmit_en.ts \
                tr/fmit_fr.ts \
                tr/fmit_pt.ts \
+			   tr/fmit_pt_BR.ts \
                tr/fmit_ru.ts
 
 CONFIG += embed_manifest_exe
