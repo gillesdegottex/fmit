@@ -367,7 +367,7 @@ Do not use a too big sampling rate. 22050Hz should be enough in most cases.</tra
     <message>
         <location filename="../ui/ConfigForm.ui" line="793"/>
         <source>Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="922"/>
@@ -649,50 +649,49 @@ Are you sure you want to lose all your current settings?</translation>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1050"/>
         <source>Version </source>
-        <translation type="unfinished"></translation>
+        <translation>Version</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1061"/>
         <source>&lt;h3&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h3&ht;</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1063"/>
         <source> (compiled by </source>
-        <translation type="unfinished"></translation>
+        <translation> (compiled by </translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1063"/>
         <source> for </source>
-        <translation type="unfinished"></translation>
+        <translation> for </translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1072"/>
         <source>Website: </source>
-        <translation type="unfinished"></translation>
+        <translation>Website: </translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1072"/>
         <source>Homepage: </source>
-        <translation type="unfinished"></translation>
+        <translation>Homepage: </translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1073"/>
         <source>Development site: </source>
-        <translation type="unfinished"></translation>
+        <translation>Development site: </translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1075"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>Author: </translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1078"/>
         <source>Packager: </source>
-        <translation type="unfinished"></translation>
+        <translation>Packager: </translation>
     </message>
     <message>
-        <location filename="../src/CustomInstrumentTunerForm.cpp" line="1091"/>
         <source>About Free Music Instrument Tuner</source>
         <translation>About Free Music Instrument Tuner</translation>
     </message>
@@ -869,7 +868,7 @@ Are you sure you want to lose all your current settings?</translation>
     <message>
         <location filename="../src/modules/GLSample.cpp" line="169"/>
         <source>Waveform</source>
-        <translation type="unfinished"></translation>
+        <translation>Waveform</translation>
     </message>
     <message>
         <location filename="../src/modules/GLSample.cpp" line="179"/>
@@ -1233,7 +1232,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</translation
     <message>
         <location filename="../src/CaptureThread.cpp" line="351"/>
         <source>default</source>
-        <translation type="unfinished">default</translation>
+        <translation>default</translation>
     </message>
 </context>
 </TS>
