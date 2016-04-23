@@ -1,19 +1,35 @@
 os: Windows Server 2012 R2
 
 platform:
+  - x86
   - x64
 
 configuration:
   - Release
 
+branches:
+  only:
+    - master
+
 install:
-  - set QTDIR=C:\Qt\5.4\msvc2013_64_opengl
+  - git fetch --tags
+  - echo APPVEYOR_REPO_TAG_NAME %APPVEYOR_REPO_TAG_NAME%
+  - echo APPVEYOR_REPO_TAG %APPVEYOR_REPO_TAG%
+  - echo appveyor_repo_tag_name %appveyor_repo_tag_name%
+  - echo appveyor_repo_tag %appveyor_repo_tag%
+  - ps: echo $env:platform
+  - ps: if ($env:platform -eq 'x64') {$env:QTDIR = "C:\Qt\5.4\msvc2013_64_opengl"}
+  - ps: if ($env:platform -eq 'x86') {$env:QTDIR = "C:\Qt\5.4\msvc2013_opengl"}
+  - ps: echo $env:QTDIR
+  - ps: Get-ChildItem C:\Qt\5.4
   - set PATH=%PATH%;%QTDIR%\bin
-  
+
   - ps: cd "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC"
-#  - ps: Get-ChildItem .
-  - cmd: vcvarsall amd64
+  - cmd: if "%PLATFORM%" == "x64" call vcvarsall.bat amd64
+  - cmd: if "%PLATFORM%" == "x86" call vcvarsall.bat x86
+  #- cmd: vcvarsall amd64
   - ps: cd "C:\projects\fmit"
+
 
   - ps: New-Item -ItemType directory -Name lib
   - ps: cd lib
