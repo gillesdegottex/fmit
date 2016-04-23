@@ -43,7 +43,7 @@ install:
 script:
     - echo $TRAVIS_BUILD_DIR
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then qmake fmit.pro; fi
-    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then qmake "FFT_LIBDIR=/usr/local/opt/fftw" dfasma.pro; fi
+    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then qmake "FFT_LIBDIR=/usr/local/opt/fftw" fmit.pro; fi
     - make
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then macdeployqt fmit.app -dmg; fi
     - sleep 1
