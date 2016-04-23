@@ -99,14 +99,24 @@ win32 {
             FFT_LIBDIR = "$$_PRO_FILE_PWD_/../lib/fftw-3.3.4-dll32"
         }
     }
-    message(FFT_LIBDIR=$$FFT_LIBDIR)
-    INCLUDEPATH += $$FFT_LIBDIR
-    LIBS += -L$$FFT_LIBDIR
+    !isEmpty(FFT_LIBDIR){
+        message(FFT_LIBDIR=$$FFT_LIBDIR)
+        INCLUDEPATH += $$FFT_LIBDIR
+        LIBS += -L$$FFT_LIBDIR
+    }
     msvc: LIBS += $$FFT_LIBDIR/libfftw3-3.lib
     gcc: LIBS += -lfftw3-3
+    # msvc: LIBS += $$FFT_LIBDIR/libfftw3f-3.lib
+    # gcc: LIBS += -lfftw3f-3
 }
 unix {
+    !isEmpty(FFT_LIBDIR){
+        message(FFT_LIBDIR=$$FFT_LIBDIR)
+        INCLUDEPATH += $$FFT_LIBDIR/include
+        LIBS += -L$$FFT_LIBDIR/lib
+    }
     LIBS += -lfftw3
+    # LIBS += -lfftw3f
 }
 
 
