@@ -36,13 +36,6 @@ install:
 #  - ps: Get-ChildItem C:\projects\dfasma\lib\fftw-3.3.4-dll32
 #  - ps: lib /MACHINE:X86 /def:libfftw3-3.def # Needed only for MSVC (lib is still unrecognized command)
 
-  - ps: echo "Install GLUT"
-  - ps: New-Item -ItemType directory -Name freeglut-MSVC
-  - ps: cd freeglut-MSVC
-  - appveyor DownloadFile http://files.transmissionzero.co.uk/software/development/GLUT/freeglut-MSVC-3.0.0-2.mp.zip
-  - ps: 7z x freeglut-MSVC-3.0.0-2.mp.zip -y
-  - ps: cd ..
-  
   - ps: cd ..
   
   - choco install -y InnoSetup
@@ -50,7 +43,7 @@ install:
   - ps: cd "c:\projects\fmit"
 
 build_script:
-  - qmake "FFT_LIBDIR=C:\projects\fmit\lib\libfft" "GLUT_LIBDIR=C:\projects\fmit\lib\freeglut-MSVC\freeglut" fmit.pro
+  - qmake "FFT_LIBDIR=C:\projects\fmit\lib\libfft" fmit.pro
 #  - ps: Get-ChildItem .
   - set PATH=%PATH%;C:\Qt\Tools\QtCreator\bin
   - C:\Qt\Tools\QtCreator\bin\jom.exe -f Makefile.Release
