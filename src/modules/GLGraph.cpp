@@ -197,13 +197,13 @@ using namespace std;
 #include <qimage.h>
 #include <qboxlayout.h>
 #include <qwidgetaction.h>
-#include <GL/glut.h>
 #include <Music/Music.h>
 using namespace Music;
 
 GLGraph::GLGraph(QWidget* parent)
 : QGLWidget(parent)
 , View(tr("Captured Sound"), this)
+, m_font("Helvetica")
 , m_skip(1)
 , m_new_values(false)
 {
@@ -433,11 +433,9 @@ void GLGraph::base_paint(float graph_gray)
 	int width = QGLWidget::width();
 
 	// name
-	string str = tr("Captured Sound").toStdString();
 	glColor3f(0.75,0.75,0.75);
-	glRasterPos2i(2, height()-14);
-	for(size_t i = 0; i < str.size(); i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)str[i]);
+    m_font.setPixelSize(20);
+    renderText(2, 20, tr("Captured Sound"), m_font);
 
 	if(setting_showWaveForm->isChecked() && !m_queue.empty())
 	{

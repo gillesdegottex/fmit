@@ -32,7 +32,9 @@ class GLVolumeHistory : public QGLWidget, public View
 {
 	Q_OBJECT
 
-  public:
+    QFont m_font;
+
+public:
 	GLVolumeHistory(QWidget* parent);
 
 	struct Note

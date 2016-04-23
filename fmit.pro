@@ -109,25 +109,6 @@ unix {
     LIBS += -lfftw3
 }
 
-# Open GL ----------------------------------------------------------------------
-win32 {
-    isEmpty(GLUT_LIBDIR) {
-        GLUT_LIBDIR = "$$_PRO_FILE_PWD_/../lib/freeglut-MSVC-3.0.0-1.mp/"
-    }
-
-    message(GLUT_LIBDIR=$$GLUT_LIBDIR)
-    INCLUDEPATH += $$GLUT_LIBDIR/include
-
-    contains(QMAKE_TARGET.arch, x86_64) {
-        msvc: LIBS += $$GLUT_LIBDIR/lib/x64/freeglut.lib
-    } else {
-        msvc: LIBS += $$GLUT_LIBDIR/lib/freeglut.lib
-    }
-}
-unix {
-    LIBS += -lglut -lGLU -lGL
-}
-
 
 # Common configurations --------------------------------------------------------
 

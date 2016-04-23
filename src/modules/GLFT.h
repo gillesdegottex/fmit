@@ -33,7 +33,9 @@ class GLFT : public QGLWidget, public View
 {
 	Q_OBJECT
 
-	virtual void mouseReleaseEvent(QMouseEvent* e){View::mouseReleaseEvent(e);}
+    QFont m_font;
+
+    virtual void mouseReleaseEvent(QMouseEvent* e){View::mouseReleaseEvent(e);}
 	virtual void mousePressEvent(QMouseEvent* e);
 	virtual void mouseDoubleClickEvent(QMouseEvent* e);
 	virtual void mouseMoveEvent(QMouseEvent* e);

@@ -33,7 +33,9 @@ class GLGraph : public QGLWidget, public View
 {
 	Q_OBJECT
 
-  protected:
+    QFont m_font;
+
+protected:
 	virtual void mouseReleaseEvent(QMouseEvent* e){View::mouseReleaseEvent(e);}
 
 	deque<double> m_pending_queue;

@@ -171,7 +171,6 @@ static const unsigned char g_icon_error_graph[] = {
 #include <iostream>
 #include <limits>
 using namespace std;
-#include <GL/glut.h>
 #include <qtimer.h>
 #include <qtooltip.h>
 #include <qimage.h>
@@ -223,8 +222,9 @@ void GLErrorHistory::Note::addError(float err)
 GLErrorHistory::GLErrorHistory(QWidget* parent)
 : QGLWidget(parent)
 , View(tr("Error history"), this)
+, m_font("Helvetica")
 {
-	// settings
+    // settings
 	QPixmap img;
 	img.loadFromData(g_icon_error_graph, sizeof(g_icon_error_graph), "PNG");
 	setting_show->setIcon(QIcon(img));
@@ -305,13 +305,13 @@ void GLErrorHistory::keepPreviousNotes(bool keep)
 
 void GLErrorHistory::initializeGL()
 {
-	// Set the clear color to black
-	glClearColor(1.0, 1.0, 1.0, 0.0);
+    // Set the clear color to black
+    glClearColor(1.0, 1.0, 1.0, 0.0);
 
-	// glShadeModel( GL_FLAT );
-	glShadeModel( GL_SMOOTH );
+    // glShadeModel( GL_FLAT );
+    glShadeModel( GL_SMOOTH );
 
-	glLoadIdentity();
+    glLoadIdentity();
 }
 
 void GLErrorHistory::drawTicksCent(int r, int ticks_size)
@@ -324,9 +324,9 @@ void GLErrorHistory::drawTicksCent(int r, int ticks_size)
 	{
 		for(float i=-range; i<=range; i+=r)
 		{
-			int y = int(height()*i/100.0f*scale) + height()/2;
-			glVertex2i(ticks_size,  y);
-			glVertex2i(width(),  y);
+            int y = height()/2 + int(height()*i/100.0f*scale);
+            glVertex2i(ticks_size, y);
+            glVertex2i(width(), y);
 		}
 	}
 }
@@ -335,192 +335,193 @@ void GLErrorHistory::drawTextTickCent(int r, int dy)
 	// only work within range that is a pure multiple of r
 	int range = int(setting_spinScale->value()/r)*r;
 
+    m_font.setPixelSize(14);
+    QFontMetrics fm(m_font);
+
 	float scale = 50.0f/setting_spinScale->value();
 	QString txt;
-	for(int i=-range; i<range; i+=r)
+    for(int i=-range; i<=range; i+=r)
 	{
 		txt = QString::number(i);
 		if(i>=0) txt = QString("  ")+txt;
 		if(i==0) txt = QString("  ")+txt;
-		glRasterPos2i(2, int(height()*i/100.0f*scale) + height()/2 - dy);
-		string str = txt.toStdString();
-		for(size_t i=0; i<str.length(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)str[i]);
-	}
+        int y = height()/2 - int(height()*i/100.0f*scale);
+        if(y>fm.xHeight() && y<height()-fm.xHeight())
+            renderText(2, y+ fm.xHeight()/2, txt, m_font);
+    }
 }
+
+//void GLErrorHistory::paintEvent(QPaintEvent * event){
+//    QPainter painter;
+//    painter.begin(this);
+//    QBrush background = QBrush(Qt::white);
+//    painter.fillRect(rect(), background);
+//    painter.end();
+//}
 
 void GLErrorHistory::paintGL()
 {
 // 	cout << "GLErrorHistory::paintGL " << m_notes.size() << endl;
 
-	glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT);
 
-	glLineWidth(1.0f);
+    glLineWidth(1.0f);
 
-	// name
-	string str = tr("Error").toStdString();
-	glColor3f(0.75,0.75,0.75);
-	glRasterPos2i(2, height()-20);
-	for(size_t i = 0; i < str.length(); i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, (unsigned char)str[i]);
+    // name
+    glColor3f(0.75,0.75,0.75);
+    m_font.setPixelSize(20);
+    renderText(2, 20, tr("Error"), m_font);
 
-	int char_size = 9;
-	int ticks_size = 2+3*char_size;
-	int dy = char_size/2;
+    int char_size = 9;
+    int ticks_size = 2+3*char_size;
+    int dy = char_size/2;
 
-	// horiz lines
-	if(setting_useCents->isChecked())
-	{
-		glBegin(GL_LINES);
-		float gray = 0.87;
+    // horiz lines
+    if(setting_useCents->isChecked())
+    {
+        glBegin(GL_LINES);
+        float gray = 0.87;
 // 		glColor3f(gray, gray, gray);
 // 		drawTicksCent(1, ticks_size);
-		gray = 0.875;
-		glColor3f(gray, gray, gray);
-		drawTicksCent(2, ticks_size);
-		gray = 0.75;
-		glColor3f(gray, gray, gray);
-		drawTicksCent(10, ticks_size);
-		glEnd();
-	}
-	else
-	{
-		glBegin(GL_LINES);
-			float gray = 0.5;
-			glColor3f(gray, gray, gray);
-			glVertex2i(ticks_size,  height()/2);
-			glVertex2i(width(),  height()/2);
-			gray = 0.75;
-			glColor3f(gray, gray, gray);
-			glVertex2i(ticks_size,  height()/4);
-			glVertex2i(width(),  height()/4);
-			glVertex2i(ticks_size,  3*height()/4);
-			glVertex2i(width(),  3*height()/4);
-			gray = 0.87;
-			glColor3f(gray, gray, gray);
-			glVertex2i(ticks_size,  height()/8);
-			glVertex2i(width(),  height()/8);
-			glVertex2i(ticks_size,  7*height()/8);
-			glVertex2i(width(),  7*height()/8);
-			glVertex2i(ticks_size,  3*height()/8);
-			glVertex2i(width(),  3*height()/8);
-			glVertex2i(ticks_size,  5*height()/8);
-			glVertex2i(width(),  5*height()/8);
-		glEnd();
-	}
+        gray = 0.875;
+        glColor3f(gray, gray, gray);
+        drawTicksCent(2, ticks_size);
+        gray = 0.75;
+        glColor3f(gray, gray, gray);
+        drawTicksCent(10, ticks_size);
+        glEnd();
+    }
+    else
+    {
+        glBegin(GL_LINES);
+            float gray = 0.5;
+            glColor3f(gray, gray, gray);
+            glVertex2i(ticks_size,  height()/2);
+            glVertex2i(width(),  height()/2);
+            gray = 0.75;
+            glColor3f(gray, gray, gray);
+            glVertex2i(ticks_size,  height()/4);
+            glVertex2i(width(),  height()/4);
+            glVertex2i(ticks_size,  3*height()/4);
+            glVertex2i(width(),  3*height()/4);
+            gray = 0.87;
+            glColor3f(gray, gray, gray);
+            glVertex2i(ticks_size,  height()/8);
+            glVertex2i(width(),  height()/8);
+            glVertex2i(ticks_size,  7*height()/8);
+            glVertex2i(width(),  7*height()/8);
+            glVertex2i(ticks_size,  3*height()/8);
+            glVertex2i(width(),  3*height()/8);
+            glVertex2i(ticks_size,  5*height()/8);
+            glVertex2i(width(),  5*height()/8);
+        glEnd();
+    }
 
-	// text marks
-	float gray = 0.5;
-	glColor3f(gray, gray, gray);
-	if(setting_useCents->isChecked())
-	{
-		int grad = 10;
-		if(setting_spinScale->value() <= 25) grad=5;
-		if(setting_spinScale->value() <= 10) grad=1;
-		drawTextTickCent(grad, dy);
-	}
-	else
-	{
-		string sfraq, sufraq;
-		sufraq = string("1/")+QString::number(int(50/setting_spinScale->value())*2).toStdString();
-		sfraq = string("+")+sufraq;
-		glRasterPos2i(2, 3*height()/4-dy);
-		for(size_t i = 0; i < sfraq.size(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
-		sfraq = string("-")+sufraq;
-		glRasterPos2i(2, height()/4-dy);
-		for(size_t i = 0; i < sfraq.size(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
+    // text marks
+    float gray = 0.5;
+    glColor3f(gray, gray, gray);
+    if(setting_useCents->isChecked())
+    {
+        int grad = 10;
+        if(setting_spinScale->value() <= 25) grad=5;
+        if(setting_spinScale->value() <= 10) grad=1;
+        drawTextTickCent(grad, dy);
+    }
+    else
+    {
+        m_font.setPixelSize(14);
+        QFontMetrics fm(m_font);
+        string sfraq, sufraq;
+        sufraq = string("1/")+QString::number(int(50/setting_spinScale->value())*2).toStdString();
+        sfraq = string("-")+sufraq;
+        renderText(2, 3*height()/4-dy+fm.xHeight(), QString(sfraq.c_str()), m_font);
+        sfraq = string("+")+sufraq;
+        renderText(2, height()/4-dy+fm.xHeight(), QString(sfraq.c_str()), m_font);
 
-		sufraq = string("1/")+QString::number(int(50/setting_spinScale->value())*4).toStdString();
-		sfraq = string("+")+sufraq;
-		glRasterPos2i(2, 5*height()/8-dy);
-		for(size_t i = 0; i < sfraq.size(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
-		sfraq = string("-")+sufraq;
-		glRasterPos2i(2, 3*height()/8-dy);
-		for(size_t i = 0; i < sfraq.size(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
-	}
+        sufraq = string("1/")+QString::number(int(50/setting_spinScale->value())*4).toStdString();
+        sfraq = string("-")+sufraq;
+        renderText(2, 5*height()/8-dy+fm.xHeight(), QString(sfraq.c_str()), m_font);
+        sfraq = string("+")+sufraq;
+        renderText(2, 3*height()/8-dy+fm.xHeight(), QString(sfraq.c_str()), m_font);
+    }
 
-	// errors
-	if(!m_notes.empty())
-	{
-		int total_size = 0;
-		for(size_t i=0; i<m_notes.size(); i++)
+    // errors
+    if(!m_notes.empty())
+    {
+        int total_size = 0;
+        for(size_t i=0; i<m_notes.size(); i++)
             total_size += int(m_notes[i].errors.size())-1;
 
-		float step = float(width()-ticks_size)/total_size;
+        float step = float(width()-ticks_size)/total_size;
 
 //		cout << "total_size=" << total_size << " step=" << step << endl;
 
-		int curr_total = 0;
-		for(size_t i=0; i<m_notes.size(); i++)
-		{
-			float x = ticks_size+step*curr_total;
+        int curr_total = 0;
+        for(size_t i=0; i<m_notes.size(); i++)
+        {
+            float x = ticks_size+step*curr_total;
 
-			// if it's not the first, add a separation
-			if(i>0)
-			{
-				glColor3f(0.75,0.75,0.75);
-				glLineWidth(1.0f);
-				glBegin(GL_LINES);
-				glVertex2f(x, 0);	glVertex2f(x, height());
-				glEnd();
-			}
+            // if it's not the first, add a separation
+            if(i>0)
+            {
+                glColor3f(0.75,0.75,0.75);
+                glLineWidth(1.0f);
+                glBegin(GL_LINES);
+                glVertex2f(x, 0);	glVertex2f(x, height());
+                glEnd();
+            }
 
-			// the note name
-			string str = m_notes[i].getName().toStdString();
-			glColor3f(0.0,0.0,1.0);
-			glRasterPos2f(x+2, 2);
-			for(size_t c=0; c<str.length(); c++)
-				glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)str[c]);
+            // the note name
+            string str = m_notes[i].getName().toStdString();
+            glColor3f(0.0,0.0,1.0);
+            m_font.setPixelSize(14);
+            renderText(x+2, height()-2, QString(str.c_str()), m_font);
 
-			// draw the error graph
-			glColor3f(0.0f,0.0f,0.0f);
-			glLineWidth(2.0f);
-			glBegin(GL_LINE_STRIP);
+            // draw the error graph
+            glColor3f(0.0f,0.0f,0.0f);
+            glLineWidth(2.0f);
+            glBegin(GL_LINE_STRIP);
 
-			if(setting_useCents->isChecked())
-			{
-				float scale = 50.0f/setting_spinScale->value();
-				glVertex2f(x, int(scale*m_notes[i].errors[0]*height()) + height()/2);
-				for(int j=1; j<int(m_notes[i].errors.size()); j++)
-					glVertex2f(x+j*step, scale*m_notes[i].errors[j]*height() + height()/2);
-			}
-			else
-			{
-				float scale = int(50/setting_spinScale->value());
-				glVertex2f(x, int((scale*m_notes[i].errors[0])*height()) + height()/2);
-				for(int j=1; j<int(m_notes[i].errors.size()); j++)
-					glVertex2f(x+j*step, (scale*m_notes[i].errors[j])*height() + height()/2);
-			}
-			glEnd();
+            if(setting_useCents->isChecked())
+            {
+                float scale = 50.0f/setting_spinScale->value();
+                glVertex2f(x, int(scale*m_notes[i].errors[0]*height()) + height()/2);
+                for(int j=1; j<int(m_notes[i].errors.size()); j++)
+                    glVertex2f(x+j*step, scale*m_notes[i].errors[j]*height() + height()/2);
+            }
+            else
+            {
+                float scale = int(50/setting_spinScale->value());
+                glVertex2f(x, int((scale*m_notes[i].errors[0])*height()) + height()/2);
+                for(int j=1; j<int(m_notes[i].errors.size()); j++)
+                    glVertex2f(x+j*step, (scale*m_notes[i].errors[j])*height() + height()/2);
+            }
+            glEnd();
 
             curr_total += int(m_notes[i].errors.size())-1;
-		}
-	}
+        }
+    }
 
-	glFlush();
+    glFlush();
 }
 
 void GLErrorHistory::resizeGL( int w, int h )
 {
-	// Set the new viewport size
-	glViewport(0, 0, (GLint)w, (GLint)h);
+    // Set the new viewport size
+    glViewport(0, 0, (GLint)w, (GLint)h);
 
-	// Choose the projection matrix to be the matrix
-	// manipulated by the following calls
-	glMatrixMode(GL_PROJECTION);
+    // Choose the projection matrix to be the matrix
+    // manipulated by the following calls
+    glMatrixMode(GL_PROJECTION);
 
-	// Set the projection matrix to be the identity matrix
-	glLoadIdentity();
+    // Set the projection matrix to be the identity matrix
+    glLoadIdentity();
 
-	// Define the dimensions of the Orthographic Viewing Volume
-	glOrtho(0.0, w, 0.0, h, 0.0, 1.0);
+    // Define the dimensions of the Orthographic Viewing Volume
+    glOrtho(0.0, w, 0.0, h, 0.0, 1.0);
 
-	// Choose the modelview matrix to be the matrix
-	// manipulated by further calls
-	glMatrixMode(GL_MODELVIEW);
+    // Choose the modelview matrix to be the matrix
+    // manipulated by further calls
+    glMatrixMode(GL_MODELVIEW);
 }
 

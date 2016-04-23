@@ -35,7 +35,9 @@ class GLStatistics : public QGLWidget, public View
 {
 	Q_OBJECT
 
-	virtual void mouseReleaseEvent(QMouseEvent* e){View::mouseReleaseEvent(e);}
+    QFont m_font;
+
+    virtual void mouseReleaseEvent(QMouseEvent* e){View::mouseReleaseEvent(e);}
 
 	void drawTicksCent(int r, int dx, int dy);
 	void drawTextTickCent(int r, int dx);

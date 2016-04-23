@@ -167,7 +167,6 @@ static const unsigned char g_icon_volume_graph[] = {
 
 #include <iostream>
 using namespace std;
-#include <GL/glut.h>
 #include <qtimer.h>
 #include <qimage.h>
 #include <Music/Music.h>
@@ -194,6 +193,7 @@ QString GLVolumeHistory::Note::getName() const
 GLVolumeHistory::GLVolumeHistory(QWidget* parent)
 : QGLWidget(parent)
 , View(tr("Volume history"), this)
+, m_font("Helvetica")
 {
 	QPixmap img;
 	setting_show->setCheckable(true);
@@ -269,11 +269,9 @@ void GLVolumeHistory::paintGL()
 	glLineWidth(1.0f);
 
 	// name
-	string str = tr("Volume").toStdString();
 	glColor3f(0.75,0.75,0.75);
-	glRasterPos2i(2, height()-20);
-	for(size_t i = 0; i < str.length(); i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, (unsigned char)str[i]);
+    m_font.setPixelSize(20);
+    renderText(2, 20, tr("Volume"), m_font);
 
 	int s = 2+fontMetrics().width("50%");
 
@@ -303,24 +301,18 @@ void GLVolumeHistory::paintGL()
 		glEnd();
 	}
 
-	int dy = 3;
 	glColor3f(0.5f,0.5f,0.5f);
-	string sfraq = "-10";
-	glRasterPos2i(2, height()-10*height()/50-dy);
-	for(size_t i = 0; i < sfraq.size(); i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
+    m_font.setPixelSize(14);
+    QFontMetrics fm(m_font);
+    int dy = -fm.xHeight()/2;
+    string sfraq = "-10";
+    renderText(2, 10*height()/50-dy, QString(sfraq.c_str()), m_font);
 	sfraq = "-20";
-	glRasterPos2i(2, height()-20*height()/50-dy);
-	for(size_t i = 0; i < sfraq.size(); i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
+    renderText(2, 20*height()/50-dy, QString(sfraq.c_str()), m_font);
 	sfraq = "-30";
-	glRasterPos2i(2, height()-30*height()/50-dy);
-	for(size_t i = 0; i < sfraq.size(); i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
+    renderText(2, 30*height()/50-dy, QString(sfraq.c_str()), m_font);
 	sfraq = "-40";
-	glRasterPos2i(2, height()-40*height()/50-dy);
-	for(size_t i = 0; i < sfraq.size(); i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
+    renderText(2, 40*height()/50-dy, QString(sfraq.c_str()), m_font);
 
 	glColor3f(1.0,0.5,0.5);
 	glLineWidth(2.0f);
@@ -358,9 +350,8 @@ void GLVolumeHistory::paintGL()
 			// the note name
 			string str = Music::h2n(m_notes[i].ht);
 			glColor3f(0.0,0.0,1.0);
-			glRasterPos2f(x+2, 2);
-			for(size_t c=0; c<str.length(); c++)
-				glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)str[c]);
+            m_font.setPixelSize(14);
+            renderText(x+2, height()-2, QString(str.c_str()), m_font);
 
 			// draw the volume graph
 			if(!m_notes[i].volumes.empty())

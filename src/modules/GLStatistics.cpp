@@ -174,7 +174,6 @@ static const unsigned char g_icon_statistics[] = {
 #include <iostream>
 #include <limits>
 using namespace std;
-#include <GL/glut.h>
 #include <qtimer.h>
 #include <qtooltip.h>
 #include <qimage.h>
@@ -336,6 +335,7 @@ void GLStatistics::resizeScale()
 GLStatistics::GLStatistics(QWidget* parent)
 : QGLWidget(parent)
 , View(tr("Statistics"), this)
+, m_font("Helvetica")
 {
 	// settings
 	QPixmap img;
@@ -545,6 +545,9 @@ void GLStatistics::drawTextTickCent(int r, int dy)
 	// only work within range that is a pure multiple of r
 	int range = int(setting_spinScale->value()/r)*r;
 
+    m_font.setPixelSize(14);
+    QFontMetrics fm(m_font);
+
 	float scale = 50.0f/setting_spinScale->value();
 	QString txt;
 	for(int i=-range; i<range; i+=r)
@@ -552,10 +555,7 @@ void GLStatistics::drawTextTickCent(int r, int dy)
 		txt = QString::number(i);
 		if(i>=0) txt = QString("  ")+txt;
 		if(i==0) txt = QString("  ")+txt;
-		glRasterPos2i(2, int((height()-dy)*i/100.0f*scale) + (height()-dy)/2 + dy - 4);
-		string str = txt.toStdString();
-		for(size_t i=0; i<str.length(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)str[i]);
+        renderText(2, (height()-dy)/2 - int((height()-dy)*i/100.0f*scale) +fm.xHeight()/2, txt, m_font);
 	}
 }
 
@@ -574,11 +574,9 @@ void GLStatistics::paintGL()
 		scale = int(50/setting_spinScale->value());
 
 	// name
-	string str = tr("Statistics").toStdString();
 	glColor3f(0.75,0.75,0.75);
-	glRasterPos2i(2, height()-20);
-	for(size_t i = 0; i < str.length(); i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, (unsigned char)str[i]);
+    m_font.setPixelSize(20);
+    renderText(2, 20, tr("Statistics"), m_font);
 
 	int char_size = 9;
 	int ticks_size = 2+3*char_size;
@@ -697,26 +695,19 @@ void GLStatistics::paintGL()
 	}
 	else
 	{
-		string sfraq, sufraq;
+        m_font.setPixelSize(14);
+        QFontMetrics fm(m_font);
+        string sfraq, sufraq;
 		sufraq = string("1/")+QString::number(int(50/setting_spinScale->value())*2).toStdString();
-		sfraq = string("+")+sufraq;
-		glRasterPos2i(2, 3*grid_height/4-dy+legend_height);
-		for(size_t i = 0; i < sfraq.size(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
-		sfraq = string("-")+sufraq;
-		glRasterPos2i(2, grid_height/4-dy+legend_height);
-		for(size_t i = 0; i < sfraq.size(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
-
+        sfraq = string("-")+sufraq;
+        renderText(2, 3*grid_height/4+fm.xHeight()/2, QString(sfraq.c_str()), m_font);
+        sfraq = string("+")+sufraq;
+        renderText(2, grid_height/4+fm.xHeight()/2, QString(sfraq.c_str()), m_font);
 		sufraq = string("1/")+QString::number(int(50/setting_spinScale->value())*4).toStdString();
-		sfraq = string("+")+sufraq;
-		glRasterPos2i(2, 5*grid_height/8-dy+legend_height);
-		for(size_t i = 0; i < sfraq.size(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
-		sfraq = string("-")+sufraq;
-		glRasterPos2i(2, 3*grid_height/8-dy+legend_height);
-		for(size_t i = 0; i < sfraq.size(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)sfraq[i]);
+        sfraq = string("-")+sufraq;
+        renderText(2, 5*grid_height/8+fm.xHeight()/2, QString(sfraq.c_str()), m_font);
+        sfraq = string("+")+sufraq;
+        renderText(2, 3*grid_height/8+fm.xHeight()/2, QString(sfraq.c_str()), m_font);
 	}
 
 	// vertical lines
@@ -733,14 +724,14 @@ void GLStatistics::paintGL()
 
 	// note names
 	glColor3f(0, 0, 1);
-	for(size_t i=0; i<m_avg_notes.size(); i++)
+    m_font.setPixelSize(14);
+    QFontMetrics fm(m_font);
+    for(size_t i=0; i<m_avg_notes.size(); i++)
 	{
-		string str = m_avg_notes[i].getName().toStdString();
+        QString str = m_avg_notes[i].getName();
 
-		glRasterPos2f(ticks_size+(i+0.5)*float(grid_width)/m_avg_notes.size(), 2);
-
-		for(size_t c=0; c<str.length(); c++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)str[c]);
+        QRect rect = fm.boundingRect(str);
+        renderText(ticks_size+(i+0.5)*float(grid_width)/m_avg_notes.size()-rect.width()/2, height()-4-17, str, m_font);
 	}
 
 	// sizes
@@ -749,13 +740,10 @@ void GLStatistics::paintGL()
 	{
 		if(!m_avg_notes[i].errs.empty())
 		{
+            QString str = QString::number(m_avg_notes[i].errs.size());
 
-			string str = QString::number(m_avg_notes[i].errs.size()).toStdString();
-
-			glRasterPos2f(ticks_size+(i+0.5)*float(grid_width)/m_avg_notes.size(), 4+legend_height/2);
-
-			for(size_t c=0; c<str.length(); c++)
-				glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, (unsigned char)str[c]);
+            QRect rect = fm.boundingRect(str);
+            renderText(ticks_size+(i+0.5)*float(grid_width)/m_avg_notes.size()-rect.width()/2, height()-4, str, m_font);
 		}
 	}
 

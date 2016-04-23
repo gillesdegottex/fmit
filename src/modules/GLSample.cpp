@@ -157,7 +157,6 @@ static const unsigned char g_icon_sample[] = {
 #include <cmath>
 #include <iostream>
 using namespace std;
-#include <GL/glut.h>
 #include <qtimer.h>
 #include <qtooltip.h>
 #include <qimage.h>
@@ -167,6 +166,7 @@ using namespace std;
 GLSample::GLSample(QWidget* parent)
 : QGLWidget(parent)
 , View(tr("Waveform"), this)
+, m_font("Helvetica")
 , m_max_value(1.0)
 {
 	// settings
@@ -256,11 +256,9 @@ void GLSample::paintGL()
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	// name
-	string str = tr("Wave form").toStdString();
 	glColor3f(0.75,0.75,0.75);
-	glRasterPos2i(2, height()-20);
-	for(size_t i = 0; i < str.size(); i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, (unsigned char)str[i]);
+    m_font.setPixelSize(20);
+    renderText(2, 20, tr("Waveform"), m_font);
 
 	// horiz lines
 	glBegin(GL_LINES);

@@ -32,7 +32,9 @@ class GLSample : public QGLWidget, public View
 {
 	Q_OBJECT
 
-	virtual void mouseReleaseEvent(QMouseEvent* e){View::mouseReleaseEvent(e);}
+    QFont m_font;
+
+    virtual void mouseReleaseEvent(QMouseEvent* e){View::mouseReleaseEvent(e);}
 
 	double m_max_value;
 

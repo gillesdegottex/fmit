@@ -173,7 +173,6 @@ using namespace std;
 #include <qimage.h>
 #include <qboxlayout.h>
 #include <qwidgetaction.h>
-#include <GL/glut.h>
 #include <Music/Music.h>
 using namespace Music;
 
@@ -181,6 +180,7 @@ GLFreqStruct::GLFreqStruct(QWidget* parent)
 : QGLWidget(parent)
 , View(tr("Harmonics"), this)
 , m_components_max(1.0)
+, m_font("Helvetica")
 {
 	// settings
 	QPixmap img;
@@ -251,11 +251,9 @@ void GLFreqStruct::paintGL()
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	// name
-	string str = tr("Harmonics").toStdString();
 	glColor3f(0.75,0.75,0.75);
-	glRasterPos2i(2, height()-20);
-	for(size_t i = 0; i < str.size(); i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, (unsigned char)str[i]);
+    m_font.setPixelSize(20);
+    renderText(2, 20, tr("Harmonics"), m_font);
 
 	int scale_height = 12;
 
@@ -283,17 +281,10 @@ void GLFreqStruct::paintGL()
 	glEnd();
 
 	// scale
-	glColor3f(0,0,0);
+    m_font.setPixelSize(10);
+    glColor3f(0,0,0);
 	for(size_t i=0; i<m_components.size(); i++)
-	{
-		glRasterPos2i(int((i+0.5)*step)-3, 2);
-
-//		string str = StringAddons::toString(i+1);
-		string str = QString::number(i+1).toStdString();
-
-		for(size_t i = 0; i < str.size(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_10, (unsigned char)str[i]);
-	}
+        renderText(int((i+0.5)*step)-3, height()-2, QString::number(i+1), m_font);
 
 	glFlush();
 }

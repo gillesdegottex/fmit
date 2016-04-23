@@ -37,6 +37,8 @@ class GLErrorHistory : public QGLWidget, public View
 
 	virtual void mouseReleaseEvent(QMouseEvent* e){View::mouseReleaseEvent(e);}
 
+    QFont m_font;
+
 	void drawTicksCent(int r, int ticks_size);
 	void drawTextTickCent(int r, int dy);
 
@@ -74,6 +76,7 @@ class GLErrorHistory : public QGLWidget, public View
 	void initializeGL();
 	void paintGL();
 	void resizeGL( int w, int h );
+//    void paintEvent(QPaintEvent * event);
 	void keepPreviousNotes(bool keep);
 };
 

@@ -26,7 +26,6 @@ using namespace std;
 #include <qtextcodec.h>
 #include <qtranslator.h>
 #include <QLibraryInfo>
-#include <GL/glut.h>
 
 #include "CppAddons/CAMath.h"
 
@@ -43,8 +42,6 @@ int main(int argc, char** argv)
     cout << "Free Music Instrument Tuner (Version " << fmitversiongit.toLatin1().constData() << ")" << endl;
 
 	QApplication a(argc, argv, true);
-
-	glutInit(&argc, argv);
 
     // Load translation
     QTranslator qtTranslator;

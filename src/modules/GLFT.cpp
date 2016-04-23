@@ -173,7 +173,6 @@ using namespace std;
 #include <qevent.h>
 #include <qboxlayout.h>
 #include <qwidgetaction.h>
-#include <GL/glut.h>
 #include <Music/Music.h>
 #include <Music/SPWindow.h>
 using namespace Music;
@@ -184,6 +183,7 @@ GLFT::GLFT(QWidget* parent)
 : QGLWidget(parent)
 , View(tr("Fourier Transform"), this)
 , m_components_max(1.0)
+, m_font("Helvetica")
 {
 	m_start_move_mouse = true;
 
@@ -389,11 +389,9 @@ void GLFT::paintGL()
 //		cout << m_plan.size() << endl;
 
 		// name
-		string str = tr("Fourier Transform").toStdString();
 		glColor3f(0.75,0.75,0.75);
-		glRasterPos2i(2, height()-20);
-		for(size_t i = 0; i < str.size(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, (unsigned char)str[i]);
+        m_font.setPixelSize(20);
+        renderText(2, 20, tr("Fourier Transform"), m_font);
 
 		for(int i=0; i<int(win.size()); i++)
 			m_plan.in[i] = buff[i]*win[i];
@@ -443,12 +441,9 @@ void GLFT::paintGL()
 	if(m_text.length()>0)
 	{
 		glColor3f(0,0,0);
-		glRasterPos2i(width()/2, 12);
 
-		string str = m_text.toStdString();
-
-		for(size_t i = 0; i < str.length(); i++)
-			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_10, (unsigned char)str[i]);
+        m_font.setPixelSize(14);
+        renderText(width()/2, 12, m_text, m_font);
 	}
 
 	glFlush();
