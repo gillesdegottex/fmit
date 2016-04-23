@@ -738,7 +738,7 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
 <context>
     <name>GLErrorHistory</name>
     <message>
-        <location filename="../src/modules/GLErrorHistory.cpp" line="225"/>
+        <location filename="../src/modules/GLErrorHistory.cpp" line="224"/>
         <source>Error history</source>
         <translation>Histórico de erro</translation>
     </message>
@@ -763,7 +763,7 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
         <translation>Intervalo de escala (em cents)</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLErrorHistory.cpp" line="361"/>
+        <location filename="../src/modules/GLErrorHistory.cpp" line="373"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
@@ -806,8 +806,8 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
         <translation>Frequência %1 [Hz]</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLFT.cpp" line="185"/>
-        <location filename="../src/modules/GLFT.cpp" line="392"/>
+        <location filename="../src/modules/GLFT.cpp" line="184"/>
+        <location filename="../src/modules/GLFT.cpp" line="394"/>
         <source>Fourier Transform</source>
         <translation>Transformada de Fourier</translation>
     </message>
@@ -821,8 +821,8 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
         <translation>Número de harmônicos</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLFreqStruct.cpp" line="182"/>
-        <location filename="../src/modules/GLFreqStruct.cpp" line="254"/>
+        <location filename="../src/modules/GLFreqStruct.cpp" line="181"/>
+        <location filename="../src/modules/GLFreqStruct.cpp" line="256"/>
         <source>Harmonics</source>
         <translation>Harmônicos</translation>
     </message>
@@ -858,8 +858,8 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
         <translation>Altura máxima</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLGraph.cpp" line="206"/>
-        <location filename="../src/modules/GLGraph.cpp" line="436"/>
+        <location filename="../src/modules/GLGraph.cpp" line="205"/>
+        <location filename="../src/modules/GLGraph.cpp" line="438"/>
         <source>Captured Sound</source>
         <translation>Som capturado</translation>
     </message>
@@ -867,7 +867,8 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
 <context>
     <name>GLSample</name>
     <message>
-        <location filename="../src/modules/GLSample.cpp" line="169"/>
+        <location filename="../src/modules/GLSample.cpp" line="168"/>
+        <location filename="../src/modules/GLSample.cpp" line="261"/>
         <source>Waveform</source>
         <translation>Forma de onda</translation>
     </message>
@@ -881,11 +882,6 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
         <location filename="../src/modules/GLSample.cpp" line="194"/>
         <source>Number of fading</source>
         <translation>Número de fading</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/GLSample.cpp" line="259"/>
-        <source>Wave form</source>
-        <translation>Forma de onda</translation>
     </message>
 </context>
 <context>
@@ -961,8 +957,8 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
         <translation>Intervalo de escala (em cents)</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLStatistics.cpp" line="338"/>
-        <location filename="../src/modules/GLStatistics.cpp" line="577"/>
+        <location filename="../src/modules/GLStatistics.cpp" line="337"/>
+        <location filename="../src/modules/GLStatistics.cpp" line="579"/>
         <source>Statistics</source>
         <translation>Estatísticas</translation>
     </message>
@@ -970,7 +966,7 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
 <context>
     <name>GLVolumeHistory</name>
     <message>
-        <location filename="../src/modules/GLVolumeHistory.cpp" line="196"/>
+        <location filename="../src/modules/GLVolumeHistory.cpp" line="195"/>
         <source>Volume history</source>
         <translation>Histórico de volume</translation>
     </message>
@@ -980,7 +976,7 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
         <translation>Manter notas anteriores</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLVolumeHistory.cpp" line="272"/>
+        <location filename="../src/modules/GLVolumeHistory.cpp" line="274"/>
         <source>Volume</source>
         <translation>Volume</translation>
     </message>

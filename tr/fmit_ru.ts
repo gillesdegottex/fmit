@@ -736,7 +736,7 @@ Are you sure you want to lose all your current settings ?</source>
 <context>
     <name>GLErrorHistory</name>
     <message>
-        <location filename="../src/modules/GLErrorHistory.cpp" line="225"/>
+        <location filename="../src/modules/GLErrorHistory.cpp" line="224"/>
         <source>Error history</source>
         <translation>История ошибок</translation>
     </message>
@@ -761,7 +761,7 @@ Are you sure you want to lose all your current settings ?</source>
         <translation>Диапазон строя (в центах)</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLErrorHistory.cpp" line="361"/>
+        <location filename="../src/modules/GLErrorHistory.cpp" line="373"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
@@ -804,8 +804,8 @@ Are you sure you want to lose all your current settings ?</source>
         <translation>Частота %1 [Гц]</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLFT.cpp" line="185"/>
-        <location filename="../src/modules/GLFT.cpp" line="392"/>
+        <location filename="../src/modules/GLFT.cpp" line="184"/>
+        <location filename="../src/modules/GLFT.cpp" line="394"/>
         <source>Fourier Transform</source>
         <translation>Преобразование Фурье</translation>
     </message>
@@ -819,8 +819,8 @@ Are you sure you want to lose all your current settings ?</source>
         <translation>Число гармоник</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLFreqStruct.cpp" line="182"/>
-        <location filename="../src/modules/GLFreqStruct.cpp" line="254"/>
+        <location filename="../src/modules/GLFreqStruct.cpp" line="181"/>
+        <location filename="../src/modules/GLFreqStruct.cpp" line="256"/>
         <source>Harmonics</source>
         <translation>Гармоники</translation>
     </message>
@@ -856,8 +856,8 @@ Are you sure you want to lose all your current settings ?</source>
         <translation>Максимальная высота</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLGraph.cpp" line="206"/>
-        <location filename="../src/modules/GLGraph.cpp" line="436"/>
+        <location filename="../src/modules/GLGraph.cpp" line="205"/>
+        <location filename="../src/modules/GLGraph.cpp" line="438"/>
         <source>Captured Sound</source>
         <translation>Захваченный звук</translation>
     </message>
@@ -865,7 +865,8 @@ Are you sure you want to lose all your current settings ?</source>
 <context>
     <name>GLSample</name>
     <message>
-        <location filename="../src/modules/GLSample.cpp" line="169"/>
+        <location filename="../src/modules/GLSample.cpp" line="168"/>
+        <location filename="../src/modules/GLSample.cpp" line="261"/>
         <source>Waveform</source>
         <translation type="unfinished"></translation>
     </message>
@@ -879,11 +880,6 @@ Are you sure you want to lose all your current settings ?</source>
         <location filename="../src/modules/GLSample.cpp" line="194"/>
         <source>Number of fading</source>
         <translation>Число спада</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/GLSample.cpp" line="259"/>
-        <source>Wave form</source>
-        <translation>Форма волны</translation>
     </message>
 </context>
 <context>
@@ -959,8 +955,8 @@ Are you sure you want to lose all your current settings ?</source>
         <translation>Диапазон строя (в центах)</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLStatistics.cpp" line="338"/>
-        <location filename="../src/modules/GLStatistics.cpp" line="577"/>
+        <location filename="../src/modules/GLStatistics.cpp" line="337"/>
+        <location filename="../src/modules/GLStatistics.cpp" line="579"/>
         <source>Statistics</source>
         <translation>Статистика</translation>
     </message>
@@ -968,7 +964,7 @@ Are you sure you want to lose all your current settings ?</source>
 <context>
     <name>GLVolumeHistory</name>
     <message>
-        <location filename="../src/modules/GLVolumeHistory.cpp" line="196"/>
+        <location filename="../src/modules/GLVolumeHistory.cpp" line="195"/>
         <source>Volume history</source>
         <translation>История громкости</translation>
     </message>
@@ -978,7 +974,7 @@ Are you sure you want to lose all your current settings ?</source>
         <translation>Сохранить предыдущие ноты</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLVolumeHistory.cpp" line="272"/>
+        <location filename="../src/modules/GLVolumeHistory.cpp" line="274"/>
         <source>Volume</source>
         <translation>Громкость</translation>
     </message>

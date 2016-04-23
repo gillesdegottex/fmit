@@ -738,7 +738,7 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
 <context>
     <name>GLErrorHistory</name>
     <message>
-        <location filename="../src/modules/GLErrorHistory.cpp" line="225"/>
+        <location filename="../src/modules/GLErrorHistory.cpp" line="224"/>
         <source>Error history</source>
         <translation>Fehler</translation>
     </message>
@@ -763,7 +763,7 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
         <translation>Anzeigebereich (In Cents)</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLErrorHistory.cpp" line="361"/>
+        <location filename="../src/modules/GLErrorHistory.cpp" line="373"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
@@ -806,8 +806,8 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
         <translation>Frequenz %1 [Hz]</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLFT.cpp" line="185"/>
-        <location filename="../src/modules/GLFT.cpp" line="392"/>
+        <location filename="../src/modules/GLFT.cpp" line="184"/>
+        <location filename="../src/modules/GLFT.cpp" line="394"/>
         <source>Fourier Transform</source>
         <translation>Fourieranalyse</translation>
     </message>
@@ -821,8 +821,8 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
         <translation>Anzahl Harmonische</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLFreqStruct.cpp" line="182"/>
-        <location filename="../src/modules/GLFreqStruct.cpp" line="254"/>
+        <location filename="../src/modules/GLFreqStruct.cpp" line="181"/>
+        <location filename="../src/modules/GLFreqStruct.cpp" line="256"/>
         <source>Harmonics</source>
         <translation>Harmonische</translation>
     </message>
@@ -858,8 +858,8 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
         <translation>Max. Höhe</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLGraph.cpp" line="206"/>
-        <location filename="../src/modules/GLGraph.cpp" line="436"/>
+        <location filename="../src/modules/GLGraph.cpp" line="205"/>
+        <location filename="../src/modules/GLGraph.cpp" line="438"/>
         <source>Captured Sound</source>
         <translation>Aufnahme</translation>
     </message>
@@ -867,7 +867,8 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
 <context>
     <name>GLSample</name>
     <message>
-        <location filename="../src/modules/GLSample.cpp" line="169"/>
+        <location filename="../src/modules/GLSample.cpp" line="168"/>
+        <location filename="../src/modules/GLSample.cpp" line="261"/>
         <source>Waveform</source>
         <translation type="unfinished"></translation>
     </message>
@@ -881,11 +882,6 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
         <location filename="../src/modules/GLSample.cpp" line="194"/>
         <source>Number of fading</source>
         <translation>Fadinganzahl</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/GLSample.cpp" line="259"/>
-        <source>Wave form</source>
-        <translation>Signalverlauf</translation>
     </message>
 </context>
 <context>
@@ -961,8 +957,8 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
         <translation>Skalierbereich (In Cents)</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLStatistics.cpp" line="338"/>
-        <location filename="../src/modules/GLStatistics.cpp" line="577"/>
+        <location filename="../src/modules/GLStatistics.cpp" line="337"/>
+        <location filename="../src/modules/GLStatistics.cpp" line="579"/>
         <source>Statistics</source>
         <translation>Statistik</translation>
     </message>
@@ -970,7 +966,7 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
 <context>
     <name>GLVolumeHistory</name>
     <message>
-        <location filename="../src/modules/GLVolumeHistory.cpp" line="196"/>
+        <location filename="../src/modules/GLVolumeHistory.cpp" line="195"/>
         <source>Volume history</source>
         <translation>Lautstärke</translation>
     </message>
@@ -980,7 +976,7 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
         <translation>Vorige Töne beibehalten</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLVolumeHistory.cpp" line="272"/>
+        <location filename="../src/modules/GLVolumeHistory.cpp" line="274"/>
         <source>Volume</source>
         <translation>Lautstärke</translation>
     </message>

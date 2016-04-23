@@ -654,7 +654,7 @@ Are you sure you want to lose all your current settings?</translation>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1061"/>
         <source>&lt;h3&gt;</source>
-        <translation>&lt;h3&ht;</translation>
+        <translation>&lt;h3&gt;</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1063"/>
@@ -692,6 +692,7 @@ Are you sure you want to lose all your current settings?</translation>
         <translation>Packager: </translation>
     </message>
     <message>
+        <location filename="../src/CustomInstrumentTunerForm.cpp" line="1091"/>
         <source>About Free Music Instrument Tuner</source>
         <translation>About Free Music Instrument Tuner</translation>
     </message>
@@ -737,7 +738,7 @@ Are you sure you want to lose all your current settings?</translation>
 <context>
     <name>GLErrorHistory</name>
     <message>
-        <location filename="../src/modules/GLErrorHistory.cpp" line="225"/>
+        <location filename="../src/modules/GLErrorHistory.cpp" line="224"/>
         <source>Error history</source>
         <translation>Error history</translation>
     </message>
@@ -762,7 +763,7 @@ Are you sure you want to lose all your current settings?</translation>
         <translation>Scale range (in cents)</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLErrorHistory.cpp" line="361"/>
+        <location filename="../src/modules/GLErrorHistory.cpp" line="373"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
@@ -805,8 +806,8 @@ Are you sure you want to lose all your current settings?</translation>
         <translation>Frequency %1 [Hz]</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLFT.cpp" line="185"/>
-        <location filename="../src/modules/GLFT.cpp" line="392"/>
+        <location filename="../src/modules/GLFT.cpp" line="184"/>
+        <location filename="../src/modules/GLFT.cpp" line="394"/>
         <source>Fourier Transform</source>
         <translation>Fourier Transform</translation>
     </message>
@@ -820,8 +821,8 @@ Are you sure you want to lose all your current settings?</translation>
         <translation>Number of harmonics</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLFreqStruct.cpp" line="182"/>
-        <location filename="../src/modules/GLFreqStruct.cpp" line="254"/>
+        <location filename="../src/modules/GLFreqStruct.cpp" line="181"/>
+        <location filename="../src/modules/GLFreqStruct.cpp" line="256"/>
         <source>Harmonics</source>
         <translation>Harmonics</translation>
     </message>
@@ -857,8 +858,8 @@ Are you sure you want to lose all your current settings?</translation>
         <translation>Max height</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLGraph.cpp" line="206"/>
-        <location filename="../src/modules/GLGraph.cpp" line="436"/>
+        <location filename="../src/modules/GLGraph.cpp" line="205"/>
+        <location filename="../src/modules/GLGraph.cpp" line="438"/>
         <source>Captured Sound</source>
         <translation>Captured Sound</translation>
     </message>
@@ -866,7 +867,8 @@ Are you sure you want to lose all your current settings?</translation>
 <context>
     <name>GLSample</name>
     <message>
-        <location filename="../src/modules/GLSample.cpp" line="169"/>
+        <location filename="../src/modules/GLSample.cpp" line="168"/>
+        <location filename="../src/modules/GLSample.cpp" line="261"/>
         <source>Waveform</source>
         <translation>Waveform</translation>
     </message>
@@ -880,11 +882,6 @@ Are you sure you want to lose all your current settings?</translation>
         <location filename="../src/modules/GLSample.cpp" line="194"/>
         <source>Number of fading</source>
         <translation>Number of fading</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/GLSample.cpp" line="259"/>
-        <source>Wave form</source>
-        <translation>Wave form</translation>
     </message>
 </context>
 <context>
@@ -960,8 +957,8 @@ Are you sure you want to lose all your current settings?</translation>
         <translation>Scale range (in cents)</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLStatistics.cpp" line="338"/>
-        <location filename="../src/modules/GLStatistics.cpp" line="577"/>
+        <location filename="../src/modules/GLStatistics.cpp" line="337"/>
+        <location filename="../src/modules/GLStatistics.cpp" line="579"/>
         <source>Statistics</source>
         <translation>Statistics</translation>
     </message>
@@ -969,7 +966,7 @@ Are you sure you want to lose all your current settings?</translation>
 <context>
     <name>GLVolumeHistory</name>
     <message>
-        <location filename="../src/modules/GLVolumeHistory.cpp" line="196"/>
+        <location filename="../src/modules/GLVolumeHistory.cpp" line="195"/>
         <source>Volume history</source>
         <translation>Volume history</translation>
     </message>
@@ -979,7 +976,7 @@ Are you sure you want to lose all your current settings?</translation>
         <translation>Keep previous notes</translation>
     </message>
     <message>
-        <location filename="../src/modules/GLVolumeHistory.cpp" line="272"/>
+        <location filename="../src/modules/GLVolumeHistory.cpp" line="274"/>
         <source>Volume</source>
         <translation>Volume</translation>
     </message>

@@ -607,10 +607,6 @@ Are you sure you want to lose all your current settings ?</source>
         <translation>Nombre d&apos;estompages</translation>
     </message>
     <message>
-        <source>Wave form</source>
-        <translation>Forme d&apos;onde</translation>
-    </message>
-    <message>
         <source>Waveform</source>
         <translation type="unfinished"></translation>
     </message>

@@ -608,10 +608,6 @@ Are you sure you want to lose all your current settings ?</source>
         <translation>Αριθμός εξασθένησης</translation>
     </message>
     <message>
-        <source>Wave form</source>
-        <translation>Κυματομορφή</translation>
-    </message>
-    <message>
         <source>Waveform</source>
         <translation type="unfinished"></translation>
     </message>

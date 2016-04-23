@@ -583,10 +583,6 @@ Você tem certeza que quer perder todas as configurações atuais?</translation>
 <context>
     <name>GLSample</name>
     <message>
-        <source>Wave form</source>
-        <translation>Forma de onda</translation>
-    </message>
-    <message>
         <source>Show fading</source>
         <translation>Mostrar o decaimento</translation>
     </message>
