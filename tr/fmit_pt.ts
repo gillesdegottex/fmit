@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt" sourcelanguage="en">
+<TS version="2.1" language="pt" sourcelanguage="en">
 <context>
     <name>ConfigForm</name>
     <message>
@@ -387,6 +387,10 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Qt</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CustomInstrumentTunerForm</name>
@@ -405,40 +409,48 @@ Você tem certeza que quer perder todas as configurações atuais?</translation>
         <translation>Você quer reiniciar o FMIT agora para voltar suas configurações padrões</translation>
     </message>
     <message>
-        <source>&lt;h3&gt;Version </source>
-        <translation>&lt;h3&gt;Versão </translation>
-    </message>
-    <message>
-        <source>&lt;/h3&gt;&lt;p&gt;&lt;h3&gt;Website:&lt;/h3&gt;&lt;p&gt;homepage: &lt;a href=&quot;http://home.gna.org/fmit&quot;&gt;http://home.gna.org/fmit&lt;/a&gt;</source>
-        <translation>&lt;/h3&gt;&lt;p&gt;&lt;h3&gt;Website:&lt;/h3&gt;&lt;p&gt;homepage: &lt;a href=&quot;http://home.gna.org/fmit&quot;&gt;http://home.gna.org/fmit&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;development site: &lt;a href=&quot;http://gna.org/projects/fmit&quot;&gt;http://gna.org/projects/fmit&lt;/a&gt;</source>
-        <translation>&lt;p&gt;Site de desenvolvimento: &lt;a href=&quot;http://gna.org/projects/fmit&quot;&gt;http://gna.org/projects/fmit&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;donation link: &lt;a href=&quot;http://home.gna.org/fmit/donation.html&quot;&gt;http://home.gna.org/fmit/donation.html&lt;/a&gt;</source>
-        <translation>&lt;p&gt;link para doar: &lt;a href=&quot;http://home.gna.org/fmit/donation.html&quot;&gt;http://home.gna.org/fmit/donation.html&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;&lt;h3&gt;Author:&lt;/h3&gt;&lt;p&gt;Gilles Degottex &lt;a href=&quot;mailto:gilles.degottex@gmail.com&quot;&gt;gilles.degottex@gmail.com&lt;/a&gt;</source>
-        <translation>&lt;p&gt;&lt;h3&gt;Author:&lt;/h3&gt;&lt;p&gt;Gilles Degottex &lt;a href=&quot;mailto:gilles.degottex@gmail.com&quot;&gt;gilles.degottex@gmail.com&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;&lt;h3&gt;Packager:&lt;/h3&gt;&lt;p&gt;</source>
-        <translation>&lt;p&gt;&lt;h3&gt;Packager:&lt;/h3&gt;&lt;p&gt;</translation>
-    </message>
-    <message>
-        <source>about_box</source>
-        <translation>about_box</translation>
-    </message>
-    <message>
         <source>About Free Music Instrument Tuner</source>
         <translation>Sobre o Free Music Instrument Tuner</translation>
     </message>
     <message>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <source>Version </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;h3&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> (compiled by </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> for </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Website: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Homepage: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Development site: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Author: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Packager: </source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -581,6 +593,10 @@ Você tem certeza que quer perder todas as configurações atuais?</translation>
     <message>
         <source>Number of fading</source>
         <translation>Número de decaimento</translation>
+    </message>
+    <message>
+        <source>Waveform</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -837,6 +853,10 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <source>Show &quot;%1&quot; view</source>
         <translation>Mostrar &quot;%1&quot; vista</translation>
+    </message>
+    <message>
+        <source>default</source>
+        <translation type="unfinished">default</translation>
     </message>
 </context>
 </TS>
