@@ -305,7 +305,9 @@ void GLVolumeHistory::paintGL()
     m_font.setPixelSize(14);
     QFontMetrics fm(m_font);
     int dy = -fm.xHeight()/2;
-    string sfraq = "-10";
+    string sfraq = "[dB]";
+    renderText(2, height()-2, QString(sfraq.c_str()), m_font);
+    sfraq = "-10";
     renderText(2, 10*height()/50-dy, QString(sfraq.c_str()), m_font);
 	sfraq = "-20";
     renderText(2, 20*height()/50-dy, QString(sfraq.c_str()), m_font);
