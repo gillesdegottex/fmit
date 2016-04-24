@@ -57,7 +57,7 @@ AboutBox::AboutBox(QWidget *parent) :
     txt += "<h4>Legal</h4>\
             The core of this software is under the <a href=\"http://www.gnu.org/licenses/gpl.html\">GPL License</a>.\
             All original source files of any kind (code source and any ressources) are under the same license, except\
-            the content of the \"external\" directory of the source code which contains imported source code under various licenses.\
+            the content of the \"libs\" directory, which contains imported source code under various licenses.\
             <br/><br/>\
             Copyright &copy; 2004 Gilles Degottex <a href='mailto:gilles.degottex@gmail.com'>&lt;gilles.degottex@gmail.com&gt;</a><br/>\
             <i>FMIT</i> is coded in C++/<a href='http://qt-project.org'>Qt</a>.\

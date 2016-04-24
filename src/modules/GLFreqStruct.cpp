@@ -253,9 +253,9 @@ void GLFreqStruct::paintGL()
 	int scale_height = 12;
     int s = 2+fontMetrics().width("-40dB");
 
-	double scale_factor = 1.0;
-	if(m_components_max>0.0)
-		scale_factor = 1.0/m_components_max;
+//	double scale_factor = 1.0;
+//	if(m_components_max>0.0)
+//		scale_factor = 1.0/m_components_max;
 
     // bars
 	glBegin(GL_QUADS);
@@ -327,7 +327,7 @@ void GLFreqStruct::paintGL()
     // name
     glColor3f(0.75,0.75,0.75);
     m_font.setPixelSize(20);
-    renderText(2, 20, tr("Harmonics"), m_font);
+    renderText(2, 20, tr("Harmonics' amplitude"), m_font);
 
     glFlush();
 }

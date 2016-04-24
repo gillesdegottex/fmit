@@ -146,6 +146,8 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	m_config_form.ui_grpOSS->hide();
     m_config_form.ui_grpQt->hide();
 
+    m_config_form.ui_grpRangeFiltering->hide();
+
 	ui_lblA3Offset->hide();
 	ui_spinA3Offset->hide();
 
@@ -246,6 +248,8 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 
 	if(m_config_form.ui_chkFullScreen->isChecked())
 		toggleFullScreen();
+
+    m_config_form.adjustSize();
 
 	m_time_refresh_views.start();
 	m_time_refresh.start();
