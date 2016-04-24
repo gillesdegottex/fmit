@@ -51,6 +51,8 @@ namespace Music
 
 	MultiCumulativeDiffAlgo::MultiCumulativeDiffAlgo(int latency_factor, double test_complexity)
 	{
+        (void)latency_factor;
+
 		assert(GetSamplingRate()>0);
 
 		m_test_complexity = test_complexity;
@@ -96,7 +98,7 @@ namespace Music
 		{
 			// compute all components
 			m_components_max = 0.0;
-			double min_comp = 1000000;
+//            double min_comp = 1000000;
 			double max_sum = 0.0;
 			for(int ih=int(size())-1; ih>=0; ih--)
 			{
@@ -110,7 +112,7 @@ namespace Music
 			{
 				bool ok = true;
 
-				bool crit_min = true;
+//				bool crit_min = true;
 				// criteria: the fond and his first harmonics are minimas
 				if(ok)	ok =
 							is_minima(ih) &&
@@ -118,7 +120,7 @@ namespace Music
 							(is_minima(ih-19) || is_minima(ih-19-1) || is_minima(ih-19+1)) &&
 							is_minima(ih-24);
 
-				crit_min = ok;
+//				crit_min = ok;
 
 				bool crit_small_enough = true;
 				if(ok)
@@ -200,7 +202,7 @@ namespace Music
 						if(ok)
 						{
 							max_sum = sum;
-							min_comp = m_components[ih];
+//							min_comp = m_components[ih];
 							m_first_fond = ih;
 						}
 					}

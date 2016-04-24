@@ -34,7 +34,7 @@ void DummyMonoQuantizer::quantize(double freq)
 {
 // 	cout << "DummyMonoQuantizer::quantize " << freq << endl;
 
-	double current_time = m_time.elapsed();
+//	double current_time = m_time.elapsed();
 
 	double current_center_freq = h2f(f2h(freq));
 	m_avg_freq = freq;

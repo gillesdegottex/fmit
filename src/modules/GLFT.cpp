@@ -182,8 +182,8 @@ using namespace Math;
 GLFT::GLFT(QWidget* parent)
 : QGLWidget(parent)
 , View(tr("Fourier Transform"), this)
-, m_components_max(1.0)
 , m_font("Helvetica")
+, m_components_max(1.0)
 {
 	m_start_move_mouse = true;
 
@@ -269,6 +269,8 @@ void GLFT::resetaxis()
 }
 void GLFT::dBScaleChanged(bool db)
 {
+    Q_UNUSED(db)
+
 	resetaxis();
 	update();
 }
@@ -324,6 +326,8 @@ void GLFT::mousePressEvent(QMouseEvent* e)
 }
 void GLFT::mouseDoubleClickEvent(QMouseEvent* e)
 {
+    Q_UNUSED(e)
+
 	m_start_move_mouse = true;
 	m_minf=0;
 	m_maxf=Music::GetSamplingRate()/2; // sr is surely -1 because not yet defined
@@ -407,11 +411,11 @@ void GLFT::paintGL()
 		double y;
 		glBegin(GL_LINE_STRIP);
 		glColor3f(0.4, 0.4, 0.5);
-		for(size_t x=0; x<width(); x++)
+        for(int x=0; x<width(); x++)
 		{
 			int index = int(0.5+(m_minf+(m_maxf-m_minf)*double(x)/width())*m_components.size()/(sr/2.0));
 			if(index<0) index=0;
-            else if(index>=m_components.size()) index=int(m_components.size());
+            else if(index>=int(m_components.size())) index=int(m_components.size());
 			y = m_components[index];
 			if(setting_db_scale->isChecked())
 				y = height()*(lp(y)-m_minA)/(m_maxA-m_minA);

@@ -122,7 +122,7 @@ unix {
 
 # Common configurations --------------------------------------------------------
 
-QT += core gui opengl multimedia
+QT += core gui opengl multimedia svg
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 INCLUDEPATH += libs
@@ -134,6 +134,7 @@ RC_ICONS = ui/images/fmit.ico
 
 SOURCES +=  src/main.cpp \
             src/CustomInstrumentTunerForm.cpp \
+            src/aboutbox.cpp \
             src/AutoQSettings.cpp \
             src/CaptureThread.cpp \
             src/DummyMonoQuantizer.cpp \
@@ -164,11 +165,11 @@ SOURCES +=  src/main.cpp \
             libs/Music/Note.cpp \
             libs/Music/SPWindow.cpp \
             libs/Music/TimeAnalysis.cpp \
-            libs/CppAddons/CAMath.cpp \
-            libs/CppAddons/Random.cpp
+            libs/CppAddons/CAMath.cpp
 
 
 HEADERS  += src/CustomInstrumentTunerForm.h \
+            src/aboutbox.h \
             src/AutoQSettings.h \
             src/CaptureThread.h \
             src/DummyMonoQuantizer.h \
@@ -201,13 +202,11 @@ HEADERS  += src/CustomInstrumentTunerForm.h \
             libs/Music/TimeAnalysis.h \
             libs/CppAddons/CAMath.h \
             libs/CppAddons/Fit.h \
-            libs/CppAddons/Observer.h \
-            libs/CppAddons/Random.h \
-            libs/CppAddons/Singleton.h \
             libs/CppAddons/StringAddons.h
 
 FORMS    += ui/InstrumentTunerForm.ui \
-            ui/ConfigForm.ui
+            ui/ConfigForm.ui \
+            ui/aboutbox.ui
 
 RESOURCES += fmit.qrc
 
@@ -216,7 +215,7 @@ TRANSLATIONS = tr/fmit_de.ts \
                tr/fmit_en.ts \
                tr/fmit_fr.ts \
                tr/fmit_pt.ts \
-			   tr/fmit_pt_BR.ts \
+               tr/fmit_pt_BR.ts \
                tr/fmit_ru.ts
 
 CONFIG += embed_manifest_exe

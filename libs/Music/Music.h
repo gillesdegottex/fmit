@@ -208,6 +208,8 @@ namespace Music
 	*/
 	inline string h2n(int ht, NotesName local=GetNotesName(), int tonality=GetTonality(), int tunig=GetTuning(), bool show_oct=true)
 	{
+        (void)tunig;
+
 		ht += tonality;
 
 		int oct = 4;
@@ -267,11 +269,11 @@ namespace Music
 		return "Th#1138";
 	}
 
-	inline int n2h(const std::string& note, NotesName local=LOCAL_ANGLO, int tonality=GetTonality())
-	{
-		// TODO
-		return -1;
-	}
+//	inline int n2h(const std::string& note, NotesName local=LOCAL_ANGLO, int tonality=GetTonality())
+//	{
+//		// TODO
+//		return -1;
+//	}
 
     //! convert amplitude to dB
     template<class TYPE>

@@ -1,4 +1,3 @@
-
                                    FMIT
                         Free Music Instrument Tuner
                               Version 1.0.13

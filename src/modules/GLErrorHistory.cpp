@@ -332,6 +332,8 @@ void GLErrorHistory::drawTicksCent(int r, int ticks_size)
 }
 void GLErrorHistory::drawTextTickCent(int r, int dy)
 {
+    Q_UNUSED(dy)
+
 	// only work within range that is a pure multiple of r
 	int range = int(setting_spinScale->value()/r)*r;
 

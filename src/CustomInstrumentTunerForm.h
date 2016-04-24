@@ -60,6 +60,7 @@ class CustomConfigForm : public QDialog, public Ui_ConfigForm
 public:
 	CustomConfigForm(QWidget* parent = 0)
 	{
+        Q_UNUSED(parent)
 		setupUi(this);
 	}
 };

@@ -34,14 +34,48 @@ using namespace std;
 #include "CustomInstrumentTunerForm.h"
 CustomInstrumentTunerForm* g_main_form = NULL;
 
+
+QString g_version;
+QString FMITVersion(){
+    if(!g_version.isEmpty())
+        return g_version;
+
+    QString fmitversiongit(STR(FMITVERSIONGIT));
+    QString fmitbranchgit(STR(FMITBRANCHGIT));
+
+    QString	fmitversion;
+    if(!fmitversiongit.isEmpty()) {
+        fmitversion = fmitversiongit;
+        if(fmitversiongit!="master")
+            fmitversion += "-" + fmitversiongit;
+    }
+    else {
+        QFile readmefile(":/README.txt");
+        readmefile.open(QFile::ReadOnly | QFile::Text);
+        QTextStream readmefilestream(&readmefile);
+        readmefilestream.readLine();
+        readmefilestream.readLine();
+        fmitversion = readmefilestream.readLine().simplified();
+        fmitversion = fmitversion.mid(8);
+    }
+    g_version = fmitversion;
+
+    return g_version;
+}
+
 int main(int argc, char** argv)
 {
-    QString fmitversiongit(STR(FMITVERSIONGIT));
+    std::cout << "Free Music Instrument Tuner (Version " << FMITVersion().toLatin1().constData() << ")" << std::endl;
+
     QString fmitprefix(STR(PREFIX));
 
-    cout << "Free Music Instrument Tuner (Version " << fmitversiongit.toLatin1().constData() << ")" << endl;
-
-	QApplication a(argc, argv, true);
+    QApplication a(argc, argv, true);
+    QApplication::setQuitOnLastWindowClosed(true);
+    QCoreApplication::setOrganizationName("FMIT");
+    QCoreApplication::setOrganizationDomain("gillesdegottex.eu");
+    QCoreApplication::setApplicationName("FMIT");
+    QCoreApplication::setApplicationVersion(FMITVersion());
+    a.setWindowIcon(QIcon(":/fmit/ui/images/fmit.svg"));
 
     // Load translation
     QTranslator qtTranslator;
@@ -57,15 +91,12 @@ int main(int argc, char** argv)
     #else
         QString trPath = fmitprefix + QString("/share/fmit/tr");
     #endif
-
     cout << "INFO: Loading FMIT translation file: " << trFile.toLatin1().constData() << " in " << trPath.toLatin1().constData() << endl;
     fmitTranslator.load(trFile, trPath);
     a.installTranslator(&fmitTranslator);
 
     g_main_form = new CustomInstrumentTunerForm();
-
 	g_main_form->show();
-
 	a.connect(&a, SIGNAL(lastWindowClosed()), &a, SLOT(quit()));
 	a.exec();
 

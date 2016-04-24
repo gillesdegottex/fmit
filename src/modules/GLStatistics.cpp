@@ -305,11 +305,18 @@ void GLStatistics::addNote(int ht, float err)
 }
 void GLStatistics::addNote(int ht, int num, int den, float err)
 {
-	m_current_ht = ht;
+    Q_UNUSED(num)
+    Q_UNUSED(den)
+    Q_UNUSED(err)
+
+    m_current_ht = ht;
 }
 void GLStatistics::addNote(int ht, float cents, float err)
 {
-	m_current_ht = ht;
+    Q_UNUSED(cents)
+    Q_UNUSED(err)
+
+    m_current_ht = ht;
 }
 
 void GLStatistics::resizeScale()
@@ -581,7 +588,7 @@ void GLStatistics::paintGL()
 	int char_size = 9;
 	int ticks_size = 2+3*char_size;
 	int grid_width = width()-ticks_size;
-	int dy = char_size/2;
+//	int dy = char_size/2;
 	int legend_height = 40;
 	int grid_height = height()-legend_height;
 

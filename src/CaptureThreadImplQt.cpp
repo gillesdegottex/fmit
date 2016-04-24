@@ -315,14 +315,14 @@ void CaptureThreadImplQt::audioDataReady()
         if(m_capture_thread->m_pause) {
             // Can't find a neater way to do it
             // m_audioInput->reset() blocks the input
-            for(unsigned long i=0; i<nbframes; i++) {
+            for(qint64 i=0; i<nbframes; i++) {
                 long int value = 0; // "Allocate" a "buffer"
                 m_audioInputIODevice->read((char*)&value, m_format.sampleSize()/8);
             }
         }
         else {
 
-            for(unsigned long i=0; i<nbframes; i++) {
+            for(qint64 i=0; i<nbframes; i++) {
                 long int value = 0; // "Allocate" a "buffer"
                 qint64 bytesRead = m_audioInputIODevice->read((char*)&value, m_format.sampleSize()/8);
 

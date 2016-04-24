@@ -94,5 +94,9 @@ void RangedCumulativeDiff::receive(const deque<double>& buff, size_t start)
 
 void RangedCumulativeDiff::GetMinWaveLength(double pitch_tolerance, int ht, double& error, double min_wave_length)
 {
+    (void)pitch_tolerance;
+    (void)ht;
+    (void)error;
+    (void)min_wave_length;
 }
 

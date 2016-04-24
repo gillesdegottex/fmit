@@ -179,8 +179,8 @@ using namespace Music;
 GLFreqStruct::GLFreqStruct(QWidget* parent)
 : QGLWidget(parent)
 , View(tr("Harmonics"), this)
-, m_components_max(1.0)
 , m_font("Helvetica")
+, m_components_max(1.0)
 {
 	// settings
 	QPixmap img;

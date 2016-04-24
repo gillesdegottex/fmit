@@ -66,6 +66,9 @@ vector<double> Music::fir1_highpass(int n, double cutoff)
 // cutoff in ]0;0.5[ where 0.5 is the Nyquist frequency
 vector<double> Music::fir1_bandpass(int n, double low_cutoff, double high_cutoff)
 {
+    (void)low_cutoff;
+    (void)high_cutoff;
+
     double *weights, *desired, *bands;
     double *h;
     int i;

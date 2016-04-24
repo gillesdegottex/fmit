@@ -32,12 +32,12 @@ namespace Math
 {
 	template<typename TypeData> inline TypeData sgn(TypeData a)			{return (a<0)?-1:1;}
 
-	static const double Pi = 2*acos(0);
-    static const double Pi2 = 2*Pi;
-	static const float fPi = 2*acos(0);
+    extern const double Pi;
+    extern const double Pi2;
+    extern const float fPi;
 
-	static const double E = exp(1);
-	static const float fE = exp(1);
+    extern const double E;
+    extern const float fE;
 
 	// résoud une equation du 2ème degré
 	class SolOfEq2

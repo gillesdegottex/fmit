@@ -123,10 +123,10 @@ vector<double> Music::conv(const vector<double>& u, const vector<double>& v)
 {
 	vector<double> w(v.size());
 
-	for(size_t i=0; i<w.size(); i++)
+    for(int i=0; i<int(w.size()); i++)
 	{
 		w[i]=0.0;
-		for(size_t j=0; j<u.size(); j++)
+        for(int j=0; j<int(u.size()); j++)
 			if(i-j>=0)
 				w[i] += u[j]*v[i-j];
 	}

@@ -1,5 +1,24 @@
-#ifndef QTHELPER_H
-#define QTHELPER_H
+/*
+Copyright (C) 2014  Gilles Degottex <gilles.degottex@gmail.com>
+
+This file is part of "libqaudioextra".
+
+"libqaudioextra" is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+"libqaudioextra" is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#ifndef _QAEHELPERS_H_
+#define _QAEHELPERS_H_
 
 #include <QRectF>
 
@@ -11,21 +30,55 @@
 #include <QGraphicsView>
 #include <QTextStream>
 #include <QScrollBar>
+#include <QFileInfo>
 #include <QAudioFormat>
+#include <QDir>
+#include <QDebug>
 
 #ifdef __MINGW32__
     #define COMPILER "MinGW"
 #elif (defined(__GNUC__) || defined(__GNUG__))
     #define COMPILER "GCC"
+    #define COMPILER_VERSION_MAJOR __GNUC__
+    #define COMPILER_VERSION_MINOR __GNUC_MINOR__
+    #define COMPILER_VERSION_PATCH __GNUC_PATCHLEVEL__
 #elif defined(_MSC_VER)
     #define COMPILER "MSVC"
+    #define COMPILER_VERSION_MAJOR _MSC_VER/100
+    #define COMPILER_VERSION_MINOR _MSC_VER%100
+    #if defined(_MSC_FULL_VER)
+        #if _MSC_VER >= 1400
+            /* _MSC_FULL_VER = VVRRPPPPP */
+            #define COMPILER_VERSION_PATCH _MSC_FULL_VER%100000
+        #else
+            /* _MSC_FULL_VER = VVRRPPPP */
+            #define COMPILER_VERSION_PATCH _MSC_FULL_VER%10000
+        #endif
+    #endif
 #endif
+
+inline QString getCompilerVersion(){
+    QString version;
+
+    version += QString(COMPILER);
+    #ifdef COMPILER_VERSION_MAJOR
+        version += " "+QString::number(COMPILER_VERSION_MAJOR);
+    #endif
+    #ifdef COMPILER_VERSION_MINOR
+        version += "."+QString::number(COMPILER_VERSION_MINOR);
+    #endif
+    #ifdef COMPILER_VERSION_PATCH
+        version += "."+QString::number(COMPILER_VERSION_PATCH);
+    #endif
+
+    return version;
+}
 
 
 // Check if compiling using MSVC (Microsoft compiler)
 #ifdef _MSC_VER
     // The following is necessary for MSVC 2012
-    template<class Type> inline Type log2(Type v) {return std::log(v)/std::log(2.); }
+    template<class Type> inline Type log2(Type v) {return std::log(v)/std::log(2.0); }
 #endif
 
 #define QUOTE(name) #name
@@ -36,11 +89,14 @@
 #endif
 
 
-#define COUTD std::cout << QThread::currentThreadId() << " " << QDateTime::fromMSecsSinceEpoch(QDateTime::currentMSecsSinceEpoch()).toString("hh:mm:ss.zzz             ").toLocal8Bit().constData() << " " << __FILE__ << ":" << __LINE__ << " "
+#define DCOUT std::cout << QThread::currentThreadId() << " " << QDateTime::fromMSecsSinceEpoch(QDateTime::currentMSecsSinceEpoch()).toString("hh:mm:ss.zzz             ").toLocal8Bit().constData() << " " << __FILE__ << ":" << __LINE__ << " "
 
-//#define COUTD QTextStream(stdout) << QThread::currentThreadId() << " " << QDateTime::fromMSecsSinceEpoch(QDateTime::currentMSecsSinceEpoch()).toString("hh:mm:ss.zzz             ").toLocal8Bit().constData() << " " << __FILE__ << ":" << __LINE__ << " "
+//#define DCOUT QTextStream(stdout) << QThread::currentThreadId() << " " << QDateTime::fromMSecsSinceEpoch(QDateTime::currentMSecsSinceEpoch()).toString("hh:mm:ss.zzz             ").toLocal8Bit().constData() << " " << __FILE__ << ":" << __LINE__ << " "
 
-#define FLAG COUTD << std::endl;
+#define DFLAG DCOUT << std::endl;
+
+// Log file and line automatically
+#define DLOG qDebug() << __FILE__ << ":" << __LINE__
 
 // Remove hard coded margin (Bug 11945)
 // See: https://bugreports.qt-project.org/browse/QTBUG-11945
@@ -53,6 +109,12 @@ inline QRectF removeHiddenMargin(QGraphicsView* gv, const QRectF& sceneRect){
 
 inline QTextStream& operator<<(QTextStream& stream, const QRectF& rectf) {
     stream << "[" << rectf.left() << "," << rectf.right() << "]x[" << rectf.top() << "," << rectf.bottom() << "]";
+
+    return stream;
+}
+
+inline std::ostream& operator<<(std::ostream& stream, const QString& str) {
+    stream << str.toLocal8Bit().constData();
 
     return stream;
 }
@@ -70,6 +132,12 @@ inline std::ostream& operator<<(std::ostream& stream, const QSize& size) {
 }
 
 inline std::ostream& operator<<(std::ostream& stream, const QPoint& p) {
+    stream << "(" << p.x() << "," << p.y() << ")";
+
+    return stream;
+}
+
+inline std::ostream& operator<<(std::ostream& stream, const QPointF& p) {
     stream << "(" << p.x() << "," << p.y() << ")";
 
     return stream;
@@ -154,11 +222,36 @@ public:
     }
 
     virtual void mouseMoveEvent(QMouseEvent * e) {
-        Q_UNUSED(e)
+        QScrollBar::mouseMoveEvent(e);
         setCursor(Qt::ArrowCursor);
     }
 };
 
+inline QString dropFileExtension(const QString& filepath) {
+    QFileInfo fileInfo(filepath);
+    return fileInfo.path()+QDir::separator()+fileInfo.completeBaseName();
+}
+
 //            COUTD << snd->m_dftparams.nl << " " << snd->m_dftparams.nr << " " << snd->m_dftparams.winlen << " " << snd->m_dftparams.dftlen << " " << snd->m_dftparams.ampscale << " " << snd->m_dftparams.delay << endl;
 
-#endif // QTHELPER_H
+namespace qae {
+
+inline QString humanReadableSize(float num) {
+    static QStringList list;
+    if(list.isEmpty())
+        list << "KB" << "MB" << "GB" << "TB";
+
+    QStringListIterator i(list);
+    QString unit("bytes");
+
+    while(num >= 1024.0 && i.hasNext())
+     {
+        unit = i.next();
+        num /= 1024.0;
+    }
+    return QString().setNum(num,'f',2)+""+unit;
+}
+
+};
+
+#endif // _QAEHELPERS_H_

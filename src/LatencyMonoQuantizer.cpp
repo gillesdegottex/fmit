@@ -45,7 +45,7 @@ void LatencyMonoQuantizer::quantize(double freq)
 	int max_dens = 1;
 	m_avg_freq = freq;
 	map<double,Note> densities;
-	for(int i=0; i<m_states.size(); i++)
+    for(int i=0; i<int(m_states.size()); i++)
 	{
 		double cf = f2cf(m_states[i].m_freq);
 		map<double,Note>::iterator it=densities.find(cf);

@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="../fmit.qrc">
-    <normaloff>:/fmit/ui/images/fmit.png</normaloff>:/fmit/ui/images/fmit.png</iconset>
+    <normaloff>:/fmit/ui/images/fmit.svg</normaloff>:/fmit/ui/images/fmit.svg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout">

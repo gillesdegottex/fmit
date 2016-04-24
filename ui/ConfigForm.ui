@@ -7,15 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>672</width>
-    <height>799</height>
+    <height>946</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Configuration</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/fmit/images/configForm.png</normaloff>:/fmit/images/configForm.png</iconset>
+   <iconset resource="../fmit.qrc">
+    <normaloff>:/fmit/ui/images/config.png</normaloff>:/fmit/ui/images/config.png</iconset>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
@@ -1643,7 +1643,9 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="../fmit.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonOk</sender>

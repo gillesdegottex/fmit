@@ -171,6 +171,8 @@ void DialView::setError(float error)
 
 void DialView::paintEvent(QPaintEvent* event)
 {
+    Q_UNUSED(event)
+
 	QPainter p(this);
 
 	float human_tol = Music::f2hf(441.0,440.0);			// TODO

@@ -53,14 +53,16 @@ using namespace Music;
 #include "modules/View.h"
 #include "qthelper.h"
 
+#include "aboutbox.h"
+
 CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 : m_config_form(this)
 , m_capture_thread("fmit")
-, m_timer_refresh(this)
 , m_algo_combedfft(NULL)
+, m_settings("fmit", "fmit", "009801")	// not necessarily equal to the soft version
+, m_timer_refresh(this)
 , m_range_filter(&m_dummy_range_filter)
 , m_quantizer(&m_latency_quantizer)
-, m_settings("fmit", "fmit", "009801")	// not necessarily equal to the soft version
 {
 	setupUi(this);
 
@@ -126,7 +128,7 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 
 	m_algo_combedfft = new CombedFT();
 
-	for(int i=0; i<m_capture_thread.getTransports().size(); i++)
+    for(int i=0; i<int(m_capture_thread.getTransports().size()); i++)
 		m_config_form.ui_cbTransports->addItem(m_capture_thread.getTransports()[i]->getName());
 
 	if(m_capture_thread.getTransports().empty())
@@ -405,8 +407,8 @@ void CustomInstrumentTunerForm::refresh()
 //     cout << "CustomInstrumentTunerForm::refresh locked, values to read=" << m_capture_thread.m_values.size() << endl;
 	int nb_new_data = 0;
 	while(!m_capture_thread.m_values.empty() &&
-			  (m_capture_thread.m_values.size()>m_capture_thread.getPacketSizeSinceLastLock() || nb_new_data<limit))
-	{
+              (int(m_capture_thread.m_values.size())>m_capture_thread.getPacketSizeSinceLastLock() || nb_new_data<limit))
+    {
 // 		cout << m_capture_thread.m_values.back() << " ";
 		double value = (*m_range_filter)(m_capture_thread.m_values.back());
 // 		cout << value << " ";
@@ -537,6 +539,8 @@ void CustomInstrumentTunerForm::refresh()
 
 void CustomInstrumentTunerForm::noteStarted(double freq, double dt)
 {
+    Q_UNUSED(freq)
+    Q_UNUSED(dt)
 // 	cout << "CustomInstrumentTunerForm::noteStarted " << freq << "," << dt << endl;
 
 	// set the compared freq
@@ -570,6 +574,8 @@ void CustomInstrumentTunerForm::noteStarted(double freq, double dt)
 }
 void CustomInstrumentTunerForm::noteFinished(double freq, double dt)
 {
+    Q_UNUSED(freq)
+    Q_UNUSED(dt)
 	m_compared_freq = 0.0;
 // 	cout << "CustomInstrumentTunerForm::noteFinished " << freq << "," << dt << endl;
 }
@@ -597,9 +603,9 @@ void CustomInstrumentTunerForm::refresh_data_harmonics()
 	vector<Harmonic> harms = GetHarmonicStruct(m_algo_combedfft->m_plan.out, m_freq, m_glFreqStruct->m_components.size(), m_algo_combedfft->getZeroPaddingFactor());
 
 	m_glFreqStruct->m_components_max = 0.0;
-	for(int i=0; i<harms.size(); i++)
+    for(int i=0; i<int(harms.size()); i++)
 	{
-		if(harms[i].harm_number<m_glFreqStruct->m_components.size())
+        if(harms[i].harm_number<int(m_glFreqStruct->m_components.size()))
 		{
 			m_glFreqStruct->m_components[harms[i].harm_number-1] = 20*log10(harms[i].mod/0.001);
 
@@ -649,6 +655,7 @@ void CustomInstrumentTunerForm::keyPressEvent(QKeyEvent * e)
 
 void CustomInstrumentTunerForm::resizeEvent(QResizeEvent* e)
 {
+    Q_UNUSED(e)
 	update_views();
 }
 
@@ -688,7 +695,7 @@ void CustomInstrumentTunerForm::configure()
 
 	noteRangeChanged();
 
-	if(m_capture_thread.getCurrentTransportIndex()<m_config_form.ui_cbTransports->count());
+    if(m_capture_thread.getCurrentTransportIndex()<m_config_form.ui_cbTransports->count())
 		m_config_form.ui_cbTransports->setCurrentIndex(m_capture_thread.getCurrentTransportIndex());
 
 #ifdef CAPTURE_JACK
@@ -1041,88 +1048,91 @@ void CustomInstrumentTunerForm::restoreFactorySettings()
 
 void CustomInstrumentTunerForm::helpAbout()
 {
-    QString text;
-    text = "<h2>Free Music Instrument Tuner</h2>";
+    AboutBox box(this);
+    box.exec();
 
-    QString	fmitversion;
-    QString fmitversiongit(STR(FMITVERSIONGIT));
-    if(fmitversiongit.length()>0) {
-        fmitversion = tr("Version ") + fmitversiongit;
-    }
-    else {
-        QFile readmefile(":/fmit/README.txt");
-        readmefile.open(QFile::ReadOnly | QFile::Text);
-        QTextStream readmefilestream(&readmefile);
-        readmefilestream.readLine();
-        readmefilestream.readLine();
-        readmefilestream.readLine();
-        fmitversion = readmefilestream.readLine().simplified();
-    }
-    text += tr("<h3>")+fmitversion;
+//    QString text;
+//    text = "<h2>Free Music Instrument Tuner</h2>";
 
-    text += tr(" (compiled by ")+QString(COMPILER)+tr(" for ");
-    #ifdef Q_PROCESSOR_X86_32
-      text += "32bits";
-    #endif
-    #ifdef Q_PROCESSOR_X86_64
-      text += "64bits";
-    #endif
-    text += ")";
+//    QString	fmitversion;
+//    QString fmitversiongit(STR(FMITVERSIONGIT));
+//    if(fmitversiongit.length()>0) {
+//        fmitversion = tr("Version ") + fmitversiongit;
+//    }
+//    else {
+//        QFile readmefile(":/fmit/README.txt");
+//        readmefile.open(QFile::ReadOnly | QFile::Text);
+//        QTextStream readmefilestream(&readmefile);
+//        readmefilestream.readLine();
+//        readmefilestream.readLine();
+//        readmefilestream.readLine();
+//        fmitversion = readmefilestream.readLine().simplified();
+//    }
+//    text += tr("<h3>")+fmitversion;
 
-    text += "</h3><p><h3>"+tr("Website: ")+"</h3><p>"+tr("Homepage: ")+"<a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>";
-    text += "<p>"+tr("Development site: ")+"<a href=\"http://github.com/gillesdegottex/fmit\">http://github.com/gillesdegottex/fmit</a>";
-//	text += tr("<p>donation link: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
-    text += "<p><h3>"+tr("Author: ")+"</h3><p>Gilles Degottex <a href=\"mailto:gilles.degottex@gmail.com\">gilles.degottex@gmail.com</a>";
-#ifdef PACKAGER_STRING
-	if(PACKAGER_STRING!="")
-        text += "<p><h3>"+tr("Packager: ")+"</h3><p>"+QString(PACKAGER_STRING).replace(QChar('<'),"[").replace(QChar('>'),"]");
-#endif
+//    text += tr(" (compiled by ")+QString(COMPILER)+tr(" for ");
+//    #ifdef Q_PROCESSOR_X86_32
+//      text += "32bits";
+//    #endif
+//    #ifdef Q_PROCESSOR_X86_64
+//      text += "64bits";
+//    #endif
+//    text += ")";
 
-	QDialog about_dlg(this);
+//    text += "</h3><p><h3>"+tr("Website: ")+"</h3><p>"+tr("Homepage: ")+"<a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>";
+//    text += "<p>"+tr("Development site: ")+"<a href=\"http://github.com/gillesdegottex/fmit\">http://github.com/gillesdegottex/fmit</a>";
+////	text += tr("<p>donation link: <a href=\"http://gillesdegottex.github.io/fmit/\">http://gillesdegottex.github.io/fmit/</a>");
+//    text += "<p><h3>"+tr("Author: ")+"</h3><p>Gilles Degottex <a href=\"mailto:gilles.degottex@gmail.com\">gilles.degottex@gmail.com</a>";
+//#ifdef PACKAGER_STRING
+//	if(PACKAGER_STRING!="")
+//        text += "<p><h3>"+tr("Packager: ")+"</h3><p>"+QString(PACKAGER_STRING).replace(QChar('<'),"[").replace(QChar('>'),"]");
+//#endif
 
-	QTextBrowser* textBrowser1;
-	QPushButton* pushButton1;
-	QVBoxLayout* Form2Layout;
-	QHBoxLayout* layout1;
-	QSpacerItem* spacer1;
-	QSpacerItem* spacer2;
+//	QDialog about_dlg(this);
 
-    about_dlg.setObjectName("about_box");
-	about_dlg.setWindowTitle( tr("About Free Music Instrument Tuner") );
+//	QTextBrowser* textBrowser1;
+//	QPushButton* pushButton1;
+//	QVBoxLayout* Form2Layout;
+//	QHBoxLayout* layout1;
+//	QSpacerItem* spacer1;
+//	QSpacerItem* spacer2;
 
-	Form2Layout = new QVBoxLayout( &about_dlg );
-	Form2Layout->setMargin(11);
-	Form2Layout->setSpacing(6);
-	about_dlg.setLayout( Form2Layout );
+//    about_dlg.setObjectName("about_box");
+//	about_dlg.setWindowTitle( tr("About Free Music Instrument Tuner") );
 
-	textBrowser1 = new QTextBrowser( &about_dlg );
-	textBrowser1->setHtml(text);
-	textBrowser1->setOpenExternalLinks(true);
-	textBrowser1->setWordWrapMode(QTextOption::NoWrap);
-	textBrowser1->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-	textBrowser1->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-	textBrowser1->document()->adjustSize();
-	textBrowser1->setMinimumSize(textBrowser1->document()->size().toSize() + QSize(10, 10));
-	Form2Layout->addWidget( textBrowser1 );
+//	Form2Layout = new QVBoxLayout( &about_dlg );
+//	Form2Layout->setMargin(11);
+//	Form2Layout->setSpacing(6);
+//	about_dlg.setLayout( Form2Layout );
 
-	layout1 = new QHBoxLayout();
-	layout1->setMargin(0);
-	layout1->setSpacing(6);
+//	textBrowser1 = new QTextBrowser( &about_dlg );
+//	textBrowser1->setHtml(text);
+//	textBrowser1->setOpenExternalLinks(true);
+//	textBrowser1->setWordWrapMode(QTextOption::NoWrap);
+//	textBrowser1->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+//	textBrowser1->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+//	textBrowser1->document()->adjustSize();
+//	textBrowser1->setMinimumSize(textBrowser1->document()->size().toSize() + QSize(10, 10));
+//	Form2Layout->addWidget( textBrowser1 );
 
-	spacer1 = new QSpacerItem( 40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum );
-	layout1->addItem( spacer1 );
+//	layout1 = new QHBoxLayout();
+//	layout1->setMargin(0);
+//	layout1->setSpacing(6);
 
-	pushButton1 = new QPushButton(&about_dlg);
-	pushButton1->setText( tr( "&OK" ) );
-	layout1->addWidget( pushButton1 );
-	connect(pushButton1, SIGNAL(clicked()), &about_dlg, SLOT(close()));
+//	spacer1 = new QSpacerItem( 40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum );
+//	layout1->addItem( spacer1 );
 
-	spacer2 = new QSpacerItem( 40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum );
-	layout1->addItem( spacer2 );
+//	pushButton1 = new QPushButton(&about_dlg);
+//	pushButton1->setText( tr( "&OK" ) );
+//	layout1->addWidget( pushButton1 );
+//	connect(pushButton1, SIGNAL(clicked()), &about_dlg, SLOT(close()));
 
-	Form2Layout->addLayout( layout1 );
+//	spacer2 = new QSpacerItem( 40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum );
+//	layout1->addItem( spacer2 );
 
-	about_dlg.exec();
+//	Form2Layout->addLayout( layout1 );
+
+//	about_dlg.exec();
 }
 
 CustomInstrumentTunerForm::~CustomInstrumentTunerForm()

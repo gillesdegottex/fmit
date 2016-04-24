@@ -19,6 +19,14 @@
 
 #include "CAMath.h"
 
+
+const double Math::Pi = 2*acos(0);
+const double Math::Pi2 = 2*Pi;
+const float Math::fPi = 2*acos(0);
+
+const double Math::E = exp(1);
+const float Math::fE = exp(1);
+
 double Math::SolOfEq2::getPosSol()
 {
 	if(x1<0)
