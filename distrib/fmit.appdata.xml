@@ -10,7 +10,7 @@
     <p>
       A tool to tune your musical instrument with real-time features.
     </p>
-    <p>Features include traces of frequency and volume, statistics, various scales available (Werckmeister III, Kirnberger III, Diatonic, Meantone, etc.), Microtonal tuning (with Scala file support), harmonics amplitude, wave shape, Discrete Fourier Transform (DFT).
+    <p>Features include traces of frequency and volume, statistics, various scales available (Werckmeister III, Kirnberger III, Diatonic, Meantone, etc.), Microtonal tuning (with Scala file support), harmonics' amplitude, waveform's period, Discrete Fourier Transform (DFT).
     Features are also optional and can be hidden to obtain a very simple view.
     </p>
   </description>
