@@ -258,7 +258,7 @@ void GLSample::paintGL()
 	// name
 	glColor3f(0.75,0.75,0.75);
     m_font.setPixelSize(20);
-    renderText(2, 20, tr("Waveform"), m_font);
+    renderText(2, 20, tr("Waveform's period"), m_font);
 
 	// horiz lines
 	glBegin(GL_LINES);
