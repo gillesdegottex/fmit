@@ -21,7 +21,7 @@
 
 
 const double Math::Pi = 2*acos(0);
-const double Math::Pi2 = 2*Pi;
+const double Math::Pi2 = 2*Math::Pi;
 const float Math::fPi = 2*acos(0);
 
 const double Math::E = exp(1);
