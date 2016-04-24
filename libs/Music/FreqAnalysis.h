@@ -61,7 +61,7 @@ namespace Music
 	double PeakRefinementLogParabola(const std::vector<std::complex<double> > spectrum, int peak_index);
 	double PeakRefinementLogParabolaUnbiased(const std::vector<std::complex<double> > spectrum, int peak_index, double zp);
 
-	std::vector<Harmonic> GetHarmonicStruct(const std::vector<std::complex<double> >& spectrum, double approx_f0, int nb_harm, double used_zp, double offset_tresh=0.1);
+    std::vector<Harmonic> GetHarmonicStruct(const std::vector<std::complex<double> >& spectrum, double approx_f0, int nb_harm, double used_zp, double offset_tresh=0.1, bool pick_nonpeaks=false);
 	double FundFreqRefinementOfHarmonicStruct(const std::vector<std::complex<double> >& spectrum, double approx_f0, int nb_harm, double used_zp);
 
 	/*! the simpler: only one big convolution on the whole window

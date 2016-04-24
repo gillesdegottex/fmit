@@ -78,7 +78,7 @@ namespace Music
 		return f+df2;
 	}
 
-	vector<Harmonic> GetHarmonicStruct(const vector<complex<double> >& spectrum, double approx_f0, int nb_harm, double used_zp, double offset_tresh)
+    vector<Harmonic> GetHarmonicStruct(const vector<complex<double> >& spectrum, double approx_f0, int nb_harm, double used_zp, double offset_tresh, bool pick_nonpeaks)
 	{
 		double approx_f0_rel = approx_f0*spectrum.size()/double(GetSamplingRate());
 		assert(approx_f0_rel>1 && approx_f0_rel<=spectrum.size()/2-1);
@@ -127,6 +127,14 @@ namespace Music
 				harm.harm_number = h;
 				harms.push_back(harm);
 			}
+            else if(pick_nonpeaks)
+            {
+                Harmonic harm;
+                harm.mod = mod(spectrum[c]);
+                harm.freq = c*double(GetSamplingRate())/spectrum.size();
+                harm.harm_number = h;
+                harms.push_back(harm);
+            }
 		}
 
 		return harms;
