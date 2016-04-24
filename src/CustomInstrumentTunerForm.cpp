@@ -600,14 +600,17 @@ void CustomInstrumentTunerForm::refresh_data_harmonics()
 			m_glFreqStruct->setting_show->isChecked()))
 		return;
 
-	vector<Harmonic> harms = GetHarmonicStruct(m_algo_combedfft->m_plan.out, m_freq, m_glFreqStruct->m_components.size(), m_algo_combedfft->getZeroPaddingFactor());
+    for(int i=0; i<int(m_glFreqStruct->m_components.size()); i++)
+        m_glFreqStruct->m_components[i] = -1e6;
 
-	m_glFreqStruct->m_components_max = 0.0;
+    vector<Harmonic> harms = GetHarmonicStruct(m_algo_combedfft->m_plan.out, m_freq, m_glFreqStruct->m_components.size(), m_algo_combedfft->getZeroPaddingFactor(), 0.1, true);
+
+    m_glFreqStruct->m_components_max = 0.0;
     for(int i=0; i<int(harms.size()); i++)
 	{
-        if(harms[i].harm_number<int(m_glFreqStruct->m_components.size()))
+        if(harms[i].harm_number<=int(m_glFreqStruct->m_components.size()))
 		{
-			m_glFreqStruct->m_components[harms[i].harm_number-1] = 20*log10(harms[i].mod/0.001);
+            m_glFreqStruct->m_components[harms[i].harm_number-1] = 20*log10(harms[i].mod*1000.0);
 
  			m_glFreqStruct->m_components_max = max(m_glFreqStruct->m_components_max, m_glFreqStruct->m_components[i]);
 		}
