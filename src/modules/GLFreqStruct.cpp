@@ -250,43 +250,86 @@ void GLFreqStruct::paintGL()
 
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	// name
-	glColor3f(0.75,0.75,0.75);
-    m_font.setPixelSize(20);
-    renderText(2, 20, tr("Harmonics"), m_font);
-
 	int scale_height = 12;
+    int s = 2+fontMetrics().width("-40dB");
 
 	double scale_factor = 1.0;
 	if(m_components_max>0.0)
 		scale_factor = 1.0/m_components_max;
 
-	// bars
+    // bars
 	glBegin(GL_QUADS);
-	float step = float(width())/m_components.size();
+    float step = float(width()-s)/m_components.size();
 	int space = (step>2)?1:0;
 	for(size_t i=0; i<m_components.size(); i++)
 	{
 		glColor3f(0.4, 0.4, 0.5);
-		int x = int(i*step);
-		int y = int( (scale_factor*m_components[i]) * (height()-scale_height)) + scale_height;
-		if(y>0)
+//        int y = int( (scale_factor*m_components[i]) * (height()-scale_height)) + scale_height;
+        int y = height() + int( (m_components[i]-m_components_max) * (height()-scale_height)/50);
+
+//        std::cout << i << ":" << m_components_max << " " << m_components[i] << " y=" << y << std::endl;
+
+        if(y>0)
 		{
-			glVertex2i(x, scale_height);
-			glVertex2i(x, y);
-			glVertex2i(int((i+1)*step)-space, y);
-			glVertex2i(int((i+1)*step)-space, scale_height);
+            glVertex2i(int(i*step)+s, scale_height);
+            glVertex2i(int(i*step)+s, y);
+            glVertex2i(int((i+1)*step)+s-space, y);
+            glVertex2i(int((i+1)*step)+s-space, scale_height);
 		}
 	}
 	glEnd();
 
-	// scale
+    // horiz lines
+    if(2*height()/50>2)
+    {
+        glBegin(GL_LINES);
+        float gray = 0.875;
+        glColor3f(gray, gray, gray);
+        for(int h=0; h<50; h+=2)
+        {
+            glVertex2i(s, height()-h*(height()-scale_height)/50);
+            glVertex2i(width(), height()-h*(height()-scale_height)/50);
+        }
+        glEnd();
+    }
+    if(10*height()/50>2)
+    {
+        glBegin(GL_LINES);
+        float gray = 0.75;
+        glColor3f(gray, gray, gray);
+        for(int h=0; h<50; h+=10)
+        {
+            glVertex2i(s, height()-h*(height()-scale_height)/50);
+            glVertex2i(width(), height()-h*(height()-scale_height)/50);
+        }
+        glEnd();
+    }
+
+    glColor3f(0.5f,0.5f,0.5f);
+    m_font.setPixelSize(14);
+    QFontMetrics fm(m_font);
+    int dy = -fm.xHeight()/2;
+    string sfraq = "-10dB";
+    renderText(2, 10*(height()-scale_height)/50-dy, QString(sfraq.c_str()), m_font);
+    sfraq = "-20dB";
+    renderText(2, 20*(height()-scale_height)/50-dy, QString(sfraq.c_str()), m_font);
+    sfraq = "-30dB";
+    renderText(2, 30*(height()-scale_height)/50-dy, QString(sfraq.c_str()), m_font);
+    sfraq = "-40dB";
+    renderText(2, 40*(height()-scale_height)/50-dy, QString(sfraq.c_str()), m_font);
+
+    // scale
     m_font.setPixelSize(10);
     glColor3f(0,0,0);
 	for(size_t i=0; i<m_components.size(); i++)
-        renderText(int((i+0.5)*step)-3, height()-2, QString::number(i+1), m_font);
+        renderText(int((i+0.5)*step)+s-3, height()-2, QString::number(i+1), m_font);
 
-	glFlush();
+    // name
+    glColor3f(0.75,0.75,0.75);
+    m_font.setPixelSize(20);
+    renderText(2, 20, tr("Harmonics"), m_font);
+
+    glFlush();
 }
 
 void GLFreqStruct::resizeGL( int w, int h )
