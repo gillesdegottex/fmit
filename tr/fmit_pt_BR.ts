@@ -6,22 +6,22 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="14"/>
         <source>About FMIT...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o FMIT...</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="28"/>
         <source>About</source>
-        <translation type="unfinished">Sobre</translation>
+        <translation>Sobre</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="88"/>
         <source>FMIT</source>
-        <translation type="unfinished"></translation>
+        <translation>FMIT</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="98"/>
         <source>&lt;version&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;version&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="123"/>
@@ -30,12 +30,16 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="143"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Créditos</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="158"/>
@@ -45,7 +49,12 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Most open-source softwares are infeasible without indirect contributions provided through libraries. Thus, big thanks to the following geeks:&lt;br /&gt;&lt;br /&gt;- Florian Hars for the tunning scales; Arnout Engelen for the JACK issues; John Anderson for the microtonal module idea; Scott Bahling for the scales in cents; Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome and will be rewarded by your name in this about box!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;A maioria dos softwares de código aberto não são factíveis sem contribuições indiretas na forma de bibliotecas. Portanto, muitíssimo obrigado aos seuintes geeks:&lt;br /&gt;&lt;br /&gt;- Florian Hars pelas escalas de afinação; Arnout Engelen pelos problemas com JACK; John Anderson pela ideia do módulo microtonal; Scott Bahling pelas escalas em cents; Jacob Shapiro pela ajuda para fazer o FMIT funcionar no Windows/Cygwin.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Tradutores: Omega9 (russo), skarmoutsosv (grego), Pindaro e dsboger (português and português do Brasil), Florian Maier (alemão).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Equipe FFTW3&lt;/span&gt;&lt;/a&gt; pela rápida Transformada Rápida de Fourier.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Equipe Qt&lt;/span&gt;&lt;/a&gt; pela biblioteca de interface gráfica.&lt;br /&gt;&lt;br /&gt;Quaisquer colaboradores de todo tipo são muito bem bindos e serão recompensados tendo seu nome colocado nesta caixa de sobre!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -394,7 +403,7 @@ Não use uma taxa de amostragem muito alta. 22050Hz deve ser suficiente na maior
     <message>
         <location filename="../ui/ConfigForm.ui" line="789"/>
         <source>Qt</source>
-        <translation type="unfinished">Qt</translation>
+        <translation>Qt</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="918"/>
@@ -527,7 +536,7 @@ Quanto menor o valor, mas rápido é o afinador. No entanto, ao diminuir o valor
     <message>
         <location filename="../ui/ConfigForm.ui" line="217"/>
         <source>Allows to add an offset to the reference A4</source>
-        <translation type="unfinished"></translation>
+        <translation>Permite adicionar um deslocamento em relação à referência A4</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="240"/>
@@ -536,7 +545,11 @@ Quanto menor o valor, mas rápido é o afinador. No entanto, ao diminuir o valor
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
 &lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options, right-click every view to show up their properties!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Para ver mais opções, clique com o botão direito em qualquer visualização para mostrar suas propriedades!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="949"/>
@@ -809,7 +822,7 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
     <message>
         <location filename="../src/modules/GLFreqStruct.cpp" line="330"/>
         <source>Harmonics&apos; amplitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Amplitude de harmônicos</translation>
     </message>
     <message>
         <location filename="../src/modules/GLFreqStruct.cpp" line="181"/>
@@ -875,7 +888,7 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
     <message>
         <location filename="../src/modules/GLSample.cpp" line="261"/>
         <source>Waveform&apos;s period</source>
-        <translation type="unfinished"></translation>
+        <translation>Período da forma de onda</translation>
     </message>
 </context>
 <context>
