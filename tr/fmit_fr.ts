@@ -5,19 +5,19 @@
     <name>AboutBox</name>
     <message>
         <source>About FMIT...</source>
-        <translation type="unfinished"></translation>
+        <translation>A propos de FMIT ...</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished">A propos de</translation>
+        <translation>A propos</translation>
     </message>
     <message>
         <source>FMIT</source>
-        <translation type="unfinished"></translation>
+        <translation>FMIT</translation>
     </message>
     <message>
         <source>&lt;version&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;version&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -25,11 +25,11 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Crédits</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -241,7 +241,7 @@ Latine: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>FIR filter: good precision, but more costly in CPU usage</source>
-        <translation>Filtre FIR: bonne précision, mais utilise plus de CPU.</translation>
+        <translation>Filtre FIR: bonne précision, mais utilise plus de CPU</translation>
     </message>
     <message>
         <source>Algorithm settings</source>
@@ -253,7 +253,7 @@ Latine: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Use sub-harmonic audibility threshold</source>
-        <translation>Utiliser un seuil d&apos;audibilité des sous-harmoniques.</translation>
+        <translation>Utiliser un seuil d&apos;audibilité des sous-harmoniques</translation>
     </message>
     <message>
         <source>Window size factor</source>
@@ -275,12 +275,12 @@ Choose the number of harmonics to use.</source>
     </message>
     <message>
         <source>Restore &amp;factory settings</source>
-        <translation>Restaurer la configuration de départ</translation>
+        <translation>Restaurer la con&amp;figuration de départ</translation>
     </message>
     <message>
         <source>Raise the window to the whole screen when the program is started
 (You can also use the shortcut &apos;f&apos;).</source>
-        <translation>Agrandit la fenêtre sur tout l&apos;écran lorsque le programme démarre (utilisez le raccourci &apos;f&apos;)</translation>
+        <translation>Agrandit la fenêtre sur tout l&apos;écran lorsque le programme démarre (utilisez le raccourci &apos;f&apos;).</translation>
     </message>
     <message>
         <source>Auto-save configuration and layout on exit</source>
@@ -294,8 +294,7 @@ Choose the number of harmonics to use.</source>
         <source>The used tonality.
 Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</source>
         <translation>La tonalité utilisée.
-Utile pour convertir le nom des notes dans la tonalité d&apos;un instrument.
-(ex. Mib pour le saxophone, Sib pour la trompette)</translation>
+Utile pour convertir le nom des notes dans la tonalité d&apos;un instrument (ex. Mib pour le saxophone, Sib pour la trompette).</translation>
     </message>
     <message>
         <source>Selected the capture system (e.g. JACK, ALSA, OSS, PortAudio)</source>
@@ -303,11 +302,11 @@ Utile pour convertir le nom des notes dans la tonalité d&apos;un instrument.
     </message>
     <message>
         <source>Auto detect a working capture system at FMIT startup.</source>
-        <translation>Détecter automatiquement un système de capture au démarrage</translation>
+        <translation>Détecter automatiquement un système de capture au démarrage.</translation>
     </message>
     <message>
         <source>The name of this FMIT instance in the JACK connections.</source>
-        <translation>Le nom de cette instance de FMIT dans JACK</translation>
+        <translation>Le nom de cette instance de FMIT dans JACK.</translation>
     </message>
     <message>
         <source>Automatically connect FMIT to the following source at startup (e.g. alsa_pcm:capture_1)</source>
@@ -323,7 +322,7 @@ Utile pour convertir le nom des notes dans la tonalité d&apos;un instrument.
     </message>
     <message>
         <source>The name of the ALSA device to use.</source>
-        <translation>Le nom du device ALSA</translation>
+        <translation>Le nom du device ALSA.</translation>
     </message>
     <message>
         <source>The chosen sampling rate.
@@ -375,7 +374,7 @@ Il paut être utile de mettre cette valeur en dessus de -35 pour éviter des per
         <source>Ignore all sounds with volume below this threshold [dB]
 (Shown as a red line in various views)</source>
         <translation>Ignorer tout les sons dont le volume est en dessous de ce seuil [dB].
-(Ce seuil est visible sous la forme d&apos;une ligne rouge dans les différentes vues).</translation>
+(Ce seuil est visible sous la forme d&apos;une ligne rouge dans les différentes vues)</translation>
     </message>
     <message>
         <source>Ignore weak sub-harmonics.
@@ -411,11 +410,11 @@ Plus petites est la valeur, plus vite le program répond, mais la fréquence cal
     </message>
     <message>
         <source>Use these settings and quit the configuration panel (it is required to click on the &quot;Save settings&quot; button to permanently keep these settings for each FMIT start)</source>
-        <translation>Utiliser ces réglages et quitte le paneau de configuration (Il est nécessaire de cliquer sur le bouton &quot;Sauver les réglages&quot; pour concerver les réglages de façon permanente pour chaque redémarrage de FMIT).</translation>
+        <translation>Utiliser ces réglages et quitte le paneau de configuration (Il est nécessaire de cliquer sur le bouton &quot;Sauver les réglages&quot; pour concerver les réglages de façon permanente pour chaque redémarrage de FMIT)</translation>
     </message>
     <message>
         <source>Discard any changes and quit the configuration panel</source>
-        <translation>Abandonner les modifications de réglages et quitter le panneau de configuration.</translation>
+        <translation>Abandonner les modifications de réglages et quitter le panneau de configuration</translation>
     </message>
     <message>
         <source>The capture system (e.g. JACK, ALSA, OSS, PortAudio)</source>
@@ -427,11 +426,11 @@ Plus petites est la valeur, plus vite le program répond, mais la fréquence cal
     </message>
     <message>
         <source>Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt</translation>
     </message>
     <message>
         <source>Allows to add an offset to the reference A4</source>
-        <translation type="unfinished"></translation>
+        <translation>Permettre d&apos;ajouter un biais au A4</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -439,7 +438,11 @@ Plus petites est la valeur, plus vite le program répond, mais la fréquence cal
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
 &lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options, right-click every view to show up their properties!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Pour accéder à plus d&apos;options, faites un click droit sur les vues pour faire apparaître leurs propriétés !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -560,7 +563,7 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>Harmonics&apos; amplitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Amplitudes des harmoniques</translation>
     </message>
 </context>
 <context>
@@ -602,11 +605,11 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>Waveform</source>
-        <translation type="unfinished"></translation>
+        <translation>Forme d&apos;onde</translation>
     </message>
     <message>
         <source>Waveform&apos;s period</source>
-        <translation type="unfinished"></translation>
+        <translation>Période de la forme d&apos;onde</translation>
     </message>
 </context>
 <context>
@@ -767,7 +770,7 @@ r</translation>
     </message>
     <message>
         <source>Keep the data in the error and volume views (shortcut &quot;k&quot;).</source>
-        <translation>Conserver les données dans les vues d&apos;erreurs et volumes (raccourci &apos;k&apos;)</translation>
+        <translation>Conserver les données dans les vues d&apos;erreurs et volumes (raccourci &apos;k&apos;).</translation>
     </message>
     <message>
         <source>Volume in dB.
@@ -798,7 +801,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>The frequency of the current note in Hertz.</source>
-        <translation>La fréquence de la note actuelle en Hertz</translation>
+        <translation>La fréquence de la note actuelle en Hertz.</translation>
     </message>
     <message>
         <source>The target frequency of the current note in Hertz.</source>
@@ -814,7 +817,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>Invoke the about box.</source>
-        <translation>Alazquiz abaut boxis !</translation>
+        <translation>Faire apparaître la fenêtre d&apos;A propos de ...</translation>
     </message>
 </context>
 <context>
@@ -876,7 +879,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>default</source>
-        <translation type="unfinished">default</translation>
+        <translation>default</translation>
     </message>
 </context>
 </TS>
