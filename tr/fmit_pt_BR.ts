@@ -822,7 +822,7 @@ Tem certeza de que deseja perder todas as configurações atuais?</translation>
     <message>
         <location filename="../src/modules/GLFreqStruct.cpp" line="330"/>
         <source>Harmonics&apos; amplitude</source>
-        <translation>Amplitude de harmônicos</translation>
+        <translation>Amplitude dos harmônicos</translation>
     </message>
     <message>
         <location filename="../src/modules/GLFreqStruct.cpp" line="181"/>
