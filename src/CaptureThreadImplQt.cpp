@@ -141,7 +141,8 @@ void CaptureThreadImplQt::set_params(bool test) {
 
         m_audioInputDevice = QAudioDeviceInfo();
         for(int i=0; m_audioInputDevice.isNull() && i<devices.count(); i++)
-            if(getASCIISource()==devices.at(i).deviceName())
+            if(getASCIISource()==devices.at(i).deviceName()
+                || m_source==devices.at(i).deviceName())
                 m_audioInputDevice = devices.at(i);
     }
 
