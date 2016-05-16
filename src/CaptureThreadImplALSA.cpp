@@ -150,6 +150,8 @@ void CaptureThreadImplALSA::set_params(bool test)
 	{
 		// Formats
         list<snd_pcm_format_t> formats;
+//        formats.push_back(SND_PCM_FORMAT_S24);
+//        formats.push_back(SND_PCM_FORMAT_U24);
         formats.push_back(SND_PCM_FORMAT_S16);	formats.push_back(SND_PCM_FORMAT_U16);
         formats.push_back(SND_PCM_FORMAT_S8);	formats.push_back(SND_PCM_FORMAT_U8);
 
@@ -223,7 +225,7 @@ void CaptureThreadImplALSA::set_params(bool test)
 		unsigned int rrate = m_sampling_rate;
 		if((err = snd_pcm_hw_params_set_rate_near(m_alsa_capture_handle, m_alsa_hw_params, &rrate, &dir))<0)
 			throw QString("ALSA: cannot set sampling rate (")+QString(snd_strerror(err))+")";
-		if(m_sampling_rate!=rrate)
+        if(m_sampling_rate!=int(rrate))
 			m_capture_thread->emitSamplingRateChanged();
 		m_sampling_rate = rrate;
 	}
