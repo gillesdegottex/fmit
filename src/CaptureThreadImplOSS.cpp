@@ -119,21 +119,13 @@ void CaptureThreadImplOSS::set_params(bool test)
 
 	if(!test)
 	{
-		if(m_format==-1)
-		{
-			// Formats
-			m_format = AFMT_S16_NE; /* Native 16 bits */
-			if(ioctl(m_fd_in, SNDCTL_DSP_SETFMT, &m_format)==-1)
-				throw QString("OSS: cannot set format (%1)").arg(strerror(errno));
+        // Formats
+        m_format = AFMT_S16_NE; /* Native 16 bits */
+        if(ioctl(m_fd_in, SNDCTL_DSP_SETFMT, &m_format)==-1)
+            throw QString("OSS: cannot set format (%1)").arg(strerror(errno));
 
-			if(m_format != AFMT_S16_NE)
-				throw QString("OSS: cannot set format to signed 16bits");
-		}
-		else
-		{
-			if(ioctl(m_fd_in, SNDCTL_DSP_SETFMT, &m_format)==-1)
-				throw QString("OSS: cannot set format (%1)").arg(strerror(errno));
-		}
+        if(m_format != AFMT_S16_NE)
+            throw QString("OSS: cannot set format to signed 16bits");
 
 		m_format_size = 2;
 		m_format_signed = true;

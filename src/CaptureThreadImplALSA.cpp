@@ -149,36 +149,25 @@ void CaptureThreadImplALSA::set_params(bool test)
 	if(!test)
 	{
 		// Formats
-		if(m_format==-1)
-		{
-			list<snd_pcm_format_t> formats;
-			formats.push_back(SND_PCM_FORMAT_S16);	formats.push_back(SND_PCM_FORMAT_U16);
-			formats.push_back(SND_PCM_FORMAT_S8);	formats.push_back(SND_PCM_FORMAT_U8);
+        list<snd_pcm_format_t> formats;
+        formats.push_back(SND_PCM_FORMAT_S16);	formats.push_back(SND_PCM_FORMAT_U16);
+        formats.push_back(SND_PCM_FORMAT_S8);	formats.push_back(SND_PCM_FORMAT_U8);
 
-			err = -1;
-			while(err<0)
-			{
-				if(formats.empty())
-					throw QString("ALSA: cannot set any format (")+QString(snd_strerror(err))+")";
+        err = -1;
+        while(err<0)
+        {
+            if(formats.empty())
+                throw QString("ALSA: cannot set any format (")+QString(snd_strerror(err))+")";
 
-				m_format = formats.front();
-                cout << "CaptureThread: INFO: ALSA: try to set format to " << snd_pcm_format_description(m_format) << flush;
-				err=snd_pcm_hw_params_set_format(m_alsa_capture_handle, m_alsa_hw_params, m_format);
+            m_format = formats.front();
+            cout << "CaptureThread: INFO: ALSA: try to set format to " << snd_pcm_format_description(m_format) << flush;
+            err=snd_pcm_hw_params_set_format(m_alsa_capture_handle, m_alsa_hw_params, m_format);
 
-                if(err<0)	cout << " failed" << endl;
-                else		cout << " success" << endl;
+            if(err<0)	cout << " failed" << endl;
+            else		cout << " success" << endl;
 
-				formats.pop_front();
-			}
-		}
-		else
-		{
-			if((err=snd_pcm_hw_params_set_format(m_alsa_capture_handle, m_alsa_hw_params, m_format))<0)
-			{
-				QString err_msg = QString("ALSA: cannot set format (")+QString(snd_strerror(err))+")";
-                cout << "CaptureThread: ERROR: " << err_msg.toStdString() << endl;
-			}
-		}
+            formats.pop_front();
+        }
 
 		// Channel count
 		unsigned int channel_count = 1;
