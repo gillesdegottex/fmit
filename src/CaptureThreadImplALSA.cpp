@@ -150,8 +150,8 @@ void CaptureThreadImplALSA::set_params(bool test)
 	{
 		// Formats
         list<snd_pcm_format_t> formats;
-//        formats.push_back(SND_PCM_FORMAT_S24);
-//        formats.push_back(SND_PCM_FORMAT_U24);
+        // Not a good idea to try 24b, since it is not always properly supported
+        // formats.push_back(SND_PCM_FORMAT_S24);
         formats.push_back(SND_PCM_FORMAT_S16);	formats.push_back(SND_PCM_FORMAT_U16);
         formats.push_back(SND_PCM_FORMAT_S8);	formats.push_back(SND_PCM_FORMAT_U8);
 

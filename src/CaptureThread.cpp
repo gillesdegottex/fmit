@@ -37,19 +37,17 @@ double DecodeUnsigned24BitsIn3BytesLE(void* buffer, int i) {
     quint32 lsb = ((quint8*)buffer)[3*i];
     quint32 middle1 = ((quint8*)buffer)[3*i+1];
     quint32 msb = ((quint8*)buffer)[3*i+2];
-    quint32 combined = (msb << 16) | (middle1 << 8) | lsb;
+    quint32 combined = (msb << 16) + (middle1 << 8) + lsb;
     return 2*(combined/16777216.0) - 1;
 }
 double DecodeSigned24BitsIn3BytesLE(void* buffer, int i) {
-    quint32 lsb = ((qint8*)buffer)[3*i];
-    quint32 middle1 = ((qint8*)buffer)[3*i+1];
-    qint32 msb = ((qint8*)buffer)[3*i+2];
     qint32 combined;
-    if (msb >= 0)
-        combined = (msb << 16) + (middle1 << 8) + lsb;
-    else
-        combined = - ((-msb) << 16) + (middle1 << 8) + lsb;
-    return combined/8388608.0;
+
+    combined = ((quint32) ((quint8*)buffer)[3*i+2]) << 24;
+    combined += ((quint8*)buffer)[3*i+1] << 16 ;
+    combined += ((quint8*)buffer)[3*i] << 8 ;
+
+    return combined/2147483648.0;
 }
 
 void AddValue2ChannelFirst(CaptureThreadImpl* impl, double value, int i)
@@ -380,11 +378,11 @@ void CaptureThreadImpl::setFormatDescrsAndFns(int format_size, bool format_signe
 	m_format_float = format_float;
 	m_channel_count = channel_count;
 
-//    if(m_format_size==3) // 24bits
-//    {
-//        if(m_format_signed)	decodeValue = DecodeSigned24BitsIn3BytesLE;
-//        else				decodeValue = DecodeUnsigned24BitsIn3BytesLE;
-//    }
+    if(m_format_size==3) // 24bits
+    {
+        if(m_format_signed)	decodeValue = DecodeSigned24BitsIn3BytesLE;
+        else				decodeValue = DecodeUnsigned24BitsIn3BytesLE;
+    }
     if(m_format_size==2) // 16bits
 	{
 		if(m_format_signed)	decodeValue = DecodeSigned16Bits;
