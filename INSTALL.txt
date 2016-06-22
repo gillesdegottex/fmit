@@ -3,7 +3,6 @@
 
 Necessary libraries
     Qt5 packages (e.g. qt5-default on Ubuntu)
-    GLUT (freeglut3-dev)
     FFTW3 for the FFT (libfftw3-dev)
 
 Optional libraries (under Linux only)
