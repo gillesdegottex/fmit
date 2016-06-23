@@ -38,7 +38,7 @@ And install (as root)
 Under Windows ------------------------------------------------------------------
 
 For a command line compilation, the best is to look at the Appveyor's
-configuration file appveyor.yml. It is complete and full explanatory.
+configuration file appveyor.yml. It is complete and self-explanatory.
 
 The distribution packages are built using the Inno Setup program.
 They can be built using the script files package_*.sh that runs in the
