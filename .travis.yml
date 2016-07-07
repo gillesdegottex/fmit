@@ -38,12 +38,14 @@ install:
 #    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qt5-default qttools5-dev-tools qtmobility-dev qtmultimedia5-dev libqt5svg5-dev; fi
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install libfftw3-dev libpulse-dev freeglut3-dev; fi
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install cvs libtool; fi
+    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then ls /opt/qt52; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install fftw; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install qt5; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then export PATH=/usr/local/opt/qt5/bin:$PATH; fi
 
 script:
     - echo $TRAVIS_BUILD_DIR
+    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then source /opt/qt55/bin/qt52-env.sh; fi
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then qmake fmit.pro; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then qmake "FFT_LIBDIR=/usr/local/opt/fftw" fmit.pro; fi
     - make
