@@ -32,7 +32,7 @@ before_install:
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get update -qq; fi
 
 install:
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qt52base qt52declarative wk52 qt52webkit-examples; fi
+    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qt52base qt52declarative qt52webkit-examples; fi
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qt52tools qt52multimedia qt52svg; fi
 #    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qt55base qt55declarative qt55webengine; fi
 #    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qt5-default qttools5-dev-tools qtmobility-dev qtmultimedia5-dev libqt5svg5-dev; fi
