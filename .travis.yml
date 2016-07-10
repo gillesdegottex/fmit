@@ -35,7 +35,7 @@ install:
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
          sudo apt-get install qt52base qt52declarative qt52webkit-examples
       && sudo apt-get install qt52tools qt52multimedia qt52svg
-      && sudo apt-get install libfftw3-dev libpulse-dev freeglut3-dev
+      && sudo apt-get install libfftw3-dev libpulse-dev libasound2-dev
       && sudo apt-get install cvs libtool
       ; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
