@@ -1,7 +1,6 @@
 BINFILE=$1
 
 VERSION=`git describe --tags --always |cut -c2-`-github
-ARCH=amd64
 DISTRIB=`lsb_release -d |sed 's/Description:\s//g' |sed 's/\s/_/g'`
 
 echo "Packaging FMIT "$VERSION
@@ -14,11 +13,11 @@ else
 fi
 echo "Architecture: "$ARCH
 
-PKGNAME=FMIT-$VERSION\_$ARCH
+PKGNAME=fmit_$VERSION\_$ARCH
 echo "Package name "$PKGNAME
 
-rm -fr package_deb_$PKGNAME
-mkdir -p package_deb_$PKGNAME
+rm -fr $PKGNAME
+mkdir -p $PKGNAME
 
 echo "List dependencies:"
 
@@ -28,50 +27,52 @@ for dep in $DEPS; do
     depdpkg=`echo "$deplist" |sort |uniq`
     depcurver=`dpkg -s $depdpkg |grep 'Version' |awk '{ print $2 }' |sed 's/:.*$//g' |sed 's/-.*$//g' |sed 's/+.*$//g'`
     echo "Dependency "$dep"    in package:"$depdpkg"    version:"$depcurver
-    echo $depdpkg >> package_deb_$PKGNAME/Depends
+    echo $depdpkg >> Depends_$PKGNAME
 done
-DEPENDS=`cat package_deb_$PKGNAME/Depends |sort |uniq`
+DEPENDS=`cat Depends_$PKGNAME |sort |uniq`
+rm -f Depends_$PKGNAME
 DEPENDS=`echo $DEPENDS |sed 's/ /,\ /g'`
 
-# Start to build the files tree
+
+# Build the file tree
 
 # Copy files
-mkdir -p package_deb_$PKGNAME/$PKGNAME/DEBIAN
-cp package_deb.control package_deb_$PKGNAME/$PKGNAME/DEBIAN/control
-sed -i "s/^Version:.*$/Version: $VERSION/g" package_deb_$PKGNAME/$PKGNAME/DEBIAN/control
-sed -i "s/^Architecture:.*$/Architecture: $ARCH/g" package_deb_$PKGNAME/$PKGNAME/DEBIAN/control
-sed -i "s/^Depends:.*$/Depends: $DEPENDS/g" package_deb_$PKGNAME/$PKGNAME/DEBIAN/control
+mkdir -p $PKGNAME/DEBIAN
+cp package_deb.control $PKGNAME/DEBIAN/control
+sed -i "s/^Version:.*$/Version: $VERSION/g" $PKGNAME/DEBIAN/control
+sed -i "s/^Architecture:.*$/Architecture: $ARCH/g" $PKGNAME/DEBIAN/control
+sed -i "s/^Depends:.*$/Depends: $DEPENDS/g" $PKGNAME/DEBIAN/control
 
 # The binary
-mkdir -p package_deb_$PKGNAME/$PKGNAME/usr/bin
-cp $BINFILE package_deb_$PKGNAME/$PKGNAME/usr/bin/
+mkdir -p $PKGNAME/usr/bin
+cp $BINFILE $PKGNAME/usr/bin/
 
 # Any legal txt
-mkdir -p package_deb_$PKGNAME/$PKGNAME/usr/share/doc/fmit
-cp ../COPYING_*.txt package_deb_$PKGNAME/$PKGNAME/usr/share/doc/fmit/
+mkdir -p $PKGNAME/usr/share/doc/fmit
+cp ../COPYING_*.txt $PKGNAME/usr/share/doc/fmit/
 
 # The menu related files
-mkdir -p package_deb_$PKGNAME/$PKGNAME/usr/share/appdata
-cp fmit.appdata.xml package_deb_$PKGNAME/$PKGNAME/usr/share/appdata/
-mkdir -p package_deb_$PKGNAME/$PKGNAME/usr/share/applications
-cp fmit.desktop package_deb_$PKGNAME/$PKGNAME/usr/share/applications/
-mkdir -p package_deb_$PKGNAME/$PKGNAME/usr/share/menu
-cp fmit.menu package_deb_$PKGNAME/$PKGNAME/usr/share/menu/fmit
+mkdir -p $PKGNAME/usr/share/appdata
+cp fmit.appdata.xml $PKGNAME/usr/share/appdata/
+mkdir -p $PKGNAME/usr/share/applications
+cp fmit.desktop $PKGNAME/usr/share/applications/
+mkdir -p $PKGNAME/usr/share/menu
+cp fmit.menu $PKGNAME/usr/share/menu/fmit
 
 # The icon
-mkdir -p package_deb_$PKGNAME/$PKGNAME/usr/share/icons/hicolor/scalable/apps
-cp ../ui/images/fmit.svg package_deb_$PKGNAME/$PKGNAME/usr/share/icons/hicolor/scalable/apps/
-mkdir -p package_deb_$PKGNAME/$PKGNAME/usr/share/icons/hicolor/128x128/apps
-cp ../ui/images/fmit.png package_deb_$PKGNAME/$PKGNAME/usr/share/icons/hicolor/128x128/apps/
+mkdir -p $PKGNAME/usr/share/icons/hicolor/scalable/apps
+cp ../ui/images/fmit.svg $PKGNAME/usr/share/icons/hicolor/scalable/apps/
+mkdir -p $PKGNAME/usr/share/icons/hicolor/128x128/apps
+cp ../ui/images/fmit.png $PKGNAME/usr/share/icons/hicolor/128x128/apps/
 
 # Translations *.qm in share/fmit/tr/
-mkdir -p package_deb_$PKGNAME/$PKGNAME/usr/share/fmit/tr
-cp ../tr/*.qm package_deb_$PKGNAME/$PKGNAME/usr/share/fmit/tr/
+mkdir -p $PKGNAME/usr/share/fmit/tr
+cp ../tr/*.qm $PKGNAME/usr/share/fmit/tr/
 
 # Scales
-mkdir -p package_deb_$PKGNAME/$PKGNAME/usr/share/fmit/scales
-cp ../scales/* package_deb_$PKGNAME/$PKGNAME/usr/share/fmit/scales/
+mkdir -p $PKGNAME/usr/share/fmit/scales
+cp ../scales/* $PKGNAME/usr/share/fmit/scales/
 
-dpkg-deb --build package_deb_$PKGNAME/$PKGNAME
+dpkg-deb --build $PKGNAME
 
-ls package_deb_$PKGNAME/$PKGNAME.deb
+ls $PKGNAME.deb
