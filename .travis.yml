@@ -9,8 +9,6 @@ os:
   - linux
   - osx
 
-dist: trusty
-
 branches:
   only:
   - master
