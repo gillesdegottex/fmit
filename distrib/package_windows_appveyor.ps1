@@ -29,7 +29,6 @@ Copy-Item c:\projects\fmit\release\fmit.exe $PACKAGENAME
 
 # Add external libraries
 Copy-Item c:\projects\fmit\lib\libfft\libfftw3-3.dll $PACKAGENAME
-Copy-Item c:\projects\fmit\lib\freeglut-MSVC\freeglut\bin\freeglut.dll $PACKAGENAME
 
 # Add the Qt related libs, qt translations and installer of MSVC redist.
 cd $PACKAGENAME

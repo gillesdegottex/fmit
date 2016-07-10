@@ -19,19 +19,20 @@ echo "Package name "$PKGNAME
 rm -fr $PKGNAME
 mkdir -p $PKGNAME
 
-echo "List dependencies:"
-
-DEPS=`objdump -p $BINFILE |grep NEEDED |awk '{ print $2 }'`
-for dep in $DEPS; do
-    deplist=`dpkg -S $dep |sed 's/:.*$//g'`
-    depdpkg=`echo "$deplist" |sort |uniq`
-    depcurver=`dpkg -s $depdpkg |grep 'Version' |awk '{ print $2 }' |sed 's/:.*$//g' |sed 's/-.*$//g' |sed 's/+.*$//g'`
-    echo "Dependency "$dep"    in package:"$depdpkg"    version:"$depcurver
-    echo $depdpkg >> Depends_$PKGNAME
-done
-DEPENDS=`cat Depends_$PKGNAME |sort |uniq`
-rm -f Depends_$PKGNAME
-DEPENDS=`echo $DEPENDS |sed 's/ /,\ /g'`
+# echo "List dependencies:"
+# DEPS=`objdump -p $BINFILE |grep NEEDED |awk '{ print $2 }'`
+# for dep in $DEPS; do
+#     deplist=`dpkg -S $dep |sed 's/:.*$//g'`
+#     depdpkg=`echo "$deplist" |sort |uniq`
+#     depcurver=`dpkg -s $depdpkg |grep 'Version' |awk '{ print $2 }' |sed 's/:.*$//g' |sed 's/-.*$//g' |sed 's/+.*$//g'`
+#     echo "Dependency "$dep"    in package:"$depdpkg"    version:"$depcurver
+#     echo $depdpkg >> Depends_$PKGNAME
+# done
+# DEPENDS=`cat Depends_$PKGNAME |sort |uniq`
+# rm -f Depends_$PKGNAME
+# DEPENDS=`echo $DEPENDS |sed 's/ /,\ /g'`
+# Currently cannot list the dependencies properly, so skip them ...
+DEPENDS=""
 
 
 # Build the file tree

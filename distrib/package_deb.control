@@ -6,7 +6,7 @@ Homepage: http://gillesdegottex.github.io/fmit
 Package: fmit
 Version: TOBESET
 Architecture: TOBESET
-Depends: TOBESET
+Depends:
 Conflicts: fmit
 Description: Free Music Instrument Tuner (FMIT)
  is a graphical utility for tuning your musical instruments, with error

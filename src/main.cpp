@@ -46,8 +46,8 @@ QString FMITVersion(){
     QString	fmitversion;
     if(!fmitversiongit.isEmpty()) {
         fmitversion = fmitversiongit;
-        if(fmitversiongit!="master")
-            fmitversion += "-" + fmitversiongit;
+        if(fmitbranchgit!="master")
+            fmitversion += "-" + fmitbranchgit;
     }
     else {
         QFile readmefile(":/README.txt");
