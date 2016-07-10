@@ -67,10 +67,7 @@ script:
          && export PACKAGENAME=fmit_$PROJECTGITVERSION.dmg
          && mv fmit.dmg $PACKAGENAME
       ; fi
-    - echo $PACKAGENAME
-    - echo $PWD
-    - find . -name '*.deb'
-    - find . -name '*.dmg'
+    - ls $PWD/$PACKAGENAME
 
 
 deploy:
