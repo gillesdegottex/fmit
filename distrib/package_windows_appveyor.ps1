@@ -7,12 +7,12 @@ echo "Version: $VERSION"
 
 If ($arch -eq 'x64') {
     echo "Packaging for 64bits Windows"
-    $PACKAGENAME = "FMIT-$VERSION-Win64bit"
+    $PACKAGENAME = "fmit_$VERSION_win64bit"
     $QTPATH = "\Qt\5.4\msvc2013_64_opengl"
 }
 Else {
 echo "Packaging for 32bits Windows"
-    $PACKAGENAME = "FMIT-$VERSION-Win32bit"
+    $PACKAGENAME = "fmit_$VERSION_win32bit"
     $QTPATH = "\Qt\5.4\msvc2013_opengl"
 }
 
