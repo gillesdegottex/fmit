@@ -1,0 +1,1 @@
+?package(fmit):needs="X11" section="Applications/Sound" title="fmit" command="/usr/bin/fmit"
