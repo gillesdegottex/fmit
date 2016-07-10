@@ -22,7 +22,7 @@ before_install:
     - git submodule update --init --recursive
     - git fetch --tags
     - sleep 1
-    - export PROJECTGITVERSION=`git describe --tags --always`
+    - export PROJECTGITVERSION=`git describe --tags --always |sed 's/v//'`
     - echo $PROJECTGITVERSION
     - echo $TRAVIS_OS_NAME
     - echo $TRAVIS_COMMIT
@@ -52,11 +52,11 @@ script:
     - make lrelease
     - ls tr
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then cd distrib; bash package_deb.sh ../fmit; fi
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then mv fmit.dmg FMIT-$PROJECTGITVERSION.deb; fi
 
     - if [ "`uname -m`" = "x86_64" ]; then echo "amd64"; fi
     - if [ "`uname -m`" = "x86" ]; then echo "i386"; fi
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then export PACKAGENAME=FMIT-$PROJECTGITVERSION\_$ARCH.deb; fi
+    - echo $PACKAGENAME
 
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then macdeployqt fmit.app -dmg; fi
     - sleep 1
