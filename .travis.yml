@@ -57,7 +57,8 @@ install:
 
 script:
     - echo $TRAVIS_BUILD_DIR
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then source /opt/qt52/bin/qt52-env.sh && qmake "CONFIG+=acs_alsa" fmit.pro; fi
+    #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then source /opt/qt52/bin/qt52-env.sh && qmake "CONFIG+=acs_alsa" fmit.pro; fi
+    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then qmake "CONFIG+=acs_alsa" fmit.pro; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then qmake "FFT_LIBDIR=/usr/local/opt/fftw" fmit.pro; fi
     - make
 
