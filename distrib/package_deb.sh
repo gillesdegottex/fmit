@@ -42,7 +42,7 @@ echo "Automatic detection of Depends: "$DEPENDS
 DEPENDS=`cat package_deb.Depends_$DISTRIB`
 # If cannot list the dependencies properly, skip them ...
 # DEPENDS=""
-echo "Depends: "$DEPENDS
+echo "Replaced by predefined list Depends: "$DEPENDS
 
 
 # Build the file tree
