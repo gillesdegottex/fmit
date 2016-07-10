@@ -2,7 +2,6 @@ $arch=$args[0]
 
 #http://doc.qt.io/qt-5/windows-deployment.html
 $VERSION = ((git describe --tags --always) | Out-String).Substring(1)
-echo "Version: $VERSION"
 $VERSION = $VERSION -replace "`n|`r"
 echo "Version: $VERSION"
 

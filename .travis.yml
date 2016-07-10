@@ -67,6 +67,9 @@ script:
          && export PACKAGENAME=fmit_$PROJECTGITVERSION.dmg
          && mv fmit.dmg $PACKAGENAME
       ; fi
+      
+    - echo $TRAVIS_OS_NAME
+    - echo $CC
     - ls -l $PWD/$PACKAGENAME
 
 
