@@ -26,8 +26,8 @@ mkdir -p $PKGNAME
 echo "List dependencies:"
 DEPS=`objdump -p $BINFILE |grep NEEDED |awk '{ print $2 }'`
 for dep in $DEPS; do
-    dpkg -S $dep
-    deplist=`dpkg -S $dep |sed 's/:.*$//g'`
+    dpkg -S $dep |grep -v chefdk
+    deplist=`dpkg -S $dep |grep -v chefdk |sed 's/:.*$//g'`
     depdpkg=`echo "$deplist" |sort |uniq`
     depcurver=`dpkg -s $depdpkg |grep 'Version' |awk '{ print $2 }' |sed 's/:.*$//g' |sed 's/-.*$//g' |sed 's/+.*$//g'`
     echo "Dependency "$dep"    in package:"$depdpkg"    version:"$depcurver
