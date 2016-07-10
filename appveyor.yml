@@ -68,7 +68,7 @@ build_script:
   - ps: Get-ChildItem c:\projects\fmit\lib
   - ps: Get-ChildItem c:\projects\fmit\lib\libfft
   - ps: .\distrib\package_windows_appveyor.ps1 $env:platform
-  - ps: Move-Item distrib/fmit-*-win*bit.exe .
+  - ps: Move-Item distrib/fmit_*_win*.exe .
   - ps: Get-ChildItem .
   #- ps: $GITPROJECTVERSION = (git describe --tags --always) | Out-String
   #- ps: $GITPROJECTVERSION = $GITPROJECTVERSION -replace "`n|`r"
