@@ -15,7 +15,7 @@ else
 fi
 echo "Architecture: "$ARCH
 
-PKGNAME=fmit-$VERSION-$DISTRIB
+PKGNAME=fmit-$VERSION
 
 rm -fr package_deb_$PKGNAME
 mkdir -p package_deb_$PKGNAME
