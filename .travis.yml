@@ -32,24 +32,22 @@ before_install:
     - export TRAVIS_TAG=`git describe --tags --exact-match HEAD 2>/dev/null`
     - echo $TRAVIS_TAG
     #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:beineri/opt-qt521 && sudo apt-get update -qq; fi
-
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa && sudo apt-get update -qq; fi
-
-    #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa; fi
-    #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get update -qq; fi
     
 install:
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install --yes qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev; fi
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install --yes qt5-default qttools5-dev-tools qtmobility-dev qtmultimedia5-dev libqt5svg5-dev; fi
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install --yes libfftw3-dev libpulse-dev; fi
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install --yes libasound2-dev; fi
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install --yes cvs libtool; fi
     #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then
          #sudo apt-get install qt52base qt52declarative qt52webkit-examples
       #&& sudo apt-get install qt52tools qt52multimedia qt52svg
       #&& sudo apt-get install libfftw3-dev libpulse-dev libasound2-dev
       #&& sudo apt-get install cvs libtool
       #; fi
+    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
+         sudo apt-get install --yes qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev
+      && sudo apt-get install --yes qt5-default qttools5-dev-tools qtmobility-dev qtmultimedia5-dev libqt5svg5-dev
+      && sudo apt-get install --yes libfftw3-dev libpulse-dev
+      && sudo apt-get install --yes libasound2-dev
+      && sudo apt-get install --yes cvs libtool
+      ; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
          brew install fftw
       && brew install qt5
