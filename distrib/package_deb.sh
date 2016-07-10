@@ -2,6 +2,10 @@ BINFILE=$1
 
 VERSION=`git describe --tags --always |cut -c2-`-github
 DISTRIB=`lsb_release -d |sed 's/Description:\s//g' |sed 's/\s/_/g'`
+echo "Distribution: "$DISTRIB
+if [ "${DISTRIB/Ubuntu}" != "$DISTRIB" ] ; then
+    DISTRIB=`echo $DISTRIB |sed 's/\(Ubuntu_[0-9]\+\.[0-9]\+\).*/\1/g'`
+fi
 
 echo "Packaging FMIT "$VERSION
 echo "Distribution: "$DISTRIB
@@ -19,20 +23,26 @@ echo "Package name "$PKGNAME
 rm -fr $PKGNAME
 mkdir -p $PKGNAME
 
-# echo "List dependencies:"
-# DEPS=`objdump -p $BINFILE |grep NEEDED |awk '{ print $2 }'`
-# for dep in $DEPS; do
-#     deplist=`dpkg -S $dep |sed 's/:.*$//g'`
-#     depdpkg=`echo "$deplist" |sort |uniq`
-#     depcurver=`dpkg -s $depdpkg |grep 'Version' |awk '{ print $2 }' |sed 's/:.*$//g' |sed 's/-.*$//g' |sed 's/+.*$//g'`
-#     echo "Dependency "$dep"    in package:"$depdpkg"    version:"$depcurver
-#     echo $depdpkg >> Depends_$PKGNAME
-# done
-# DEPENDS=`cat Depends_$PKGNAME |sort |uniq`
-# rm -f Depends_$PKGNAME
-# DEPENDS=`echo $DEPENDS |sed 's/ /,\ /g'`
-# Currently cannot list the dependencies properly, so skip them ...
-DEPENDS=""
+echo "List dependencies:"
+DEPS=`objdump -p $BINFILE |grep NEEDED |awk '{ print $2 }'`
+for dep in $DEPS; do
+    deplist=`dpkg -S $dep |sed 's/:.*$//g'`
+    depdpkg=`echo "$deplist" |sort |uniq`
+    depcurver=`dpkg -s $depdpkg |grep 'Version' |awk '{ print $2 }' |sed 's/:.*$//g' |sed 's/-.*$//g' |sed 's/+.*$//g'`
+    echo "Dependency "$dep"    in package:"$depdpkg"    version:"$depcurver
+    echo $depdpkg >> Depends_$PKGNAME
+done
+DEPENDS=`cat Depends_$PKGNAME |sort |uniq`
+rm -f Depends_$PKGNAME
+DEPENDS=`echo $DEPENDS |sed 's/ /,\ /g'`
+echo "Automatic detection of Depends: "$DEPENDS
+# This list if too dependent on external repo used for Travis CI ...
+# ... so let's overwrite it with a predefined list of packages
+# (http://packages.ubuntu.com/precise/allpackages can help to build it)
+DEPENDS=`cat package_deb.Depends_$DISTRIB`
+# If cannot list the dependencies properly, skip them ...
+# DEPENDS=""
+echo "Depends: "$DEPENDS
 
 
 # Build the file tree
