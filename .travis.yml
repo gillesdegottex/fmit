@@ -67,7 +67,7 @@ script:
          && export PACKAGENAME=fmit_$PROJECTGITVERSION.dmg
          && mv fmit.dmg $PACKAGENAME
       ; fi
-    - ls $PWD/$PACKAGENAME
+    - ls -l $PWD/$PACKAGENAME
 
 
 deploy:
