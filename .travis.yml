@@ -62,7 +62,7 @@ script:
       ; fi
 
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
-            macdeployqt fmit.app -dmg; fi
+            macdeployqt fmit.app -dmg
          && sleep 3
          && export PACKAGENAME=fmit_$PROJECTGITVERSION.dmg
          && mv fmit.dmg $PACKAGENAME
