@@ -63,7 +63,7 @@ script:
 
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
             macdeployqt fmit.app -dmg
-         && sleep 3
+         && sleep 10
          && export PACKAGENAME=fmit_$PROJECTGITVERSION.dmg
          && mv fmit.dmg $PACKAGENAME
       ; fi
@@ -82,16 +82,4 @@ deploy:
   on:
     repo: gillesdegottex/fmit
     tags: true
-    condition: $TRAVIS_OS_NAME = osx && $CC = gcc
-
-deploy:
-  skip_cleanup: true
-  provider: releases
-  api_key:
-    secure: K8/6nqC6MKIdijAnLVBsWHJ3WEmzuvHnRWNmvBY4p0aRMIbb0xuU6/piD6HRgJi0QXsktRLwXhM7htNP5MuURDUPBhAnsxhRsjM857gnjVqW+s34O1QL3VwpuBS4Sq4CCf3pyV2SC8mN8B+PI+pmjw7X6XN9E72fHh/uHFC0L0eWByJdlB6UU7T3N15kBjOhYz0plSGA1G2Qr511PjuHAf0Y48bfv61w6vdgMcASvGIhTVORT5YX1RqMnpo7/vy4yGN/uGKrRSuZ7wbOgjFjVTCT1jygMEJ5VsL5tIMK1YlrLvnr/qI7yZL9hmmpMS7Z483XTXAGcGrZrHBYsor9Z8FgPRqQlkdPFcM7rgR6Jp2stwZStS1DkSTSr6LE1nvXA1Ly5V/j+ua6sW8e38dXC+BUvM7MQwcxeYXH1H3ysLs3qZHRlRDS7GxV4e8ecVERGdWWzA2ShxKAkaE+JU10hU7YHv/An5vVjQld/1+ZCs+/PF9udV+oNUEh439dKlNFWM1b9oRJ1tw89Qluo54yQ1+yYTX4AOzt/7ql5TwYnOXYgGZdNVViM18ctuhzJo7pq64dliaNjJjDpbCVCg2iAxWkEzPAWCDBzkUiWC+3Ep3c/IsPBjllY2wO9d29OKfaN2u9IDCyhao4raxmSXOD0/7GyCBZTpuykmvS2aEC4Cg=
-  file: $PACKAGENAME
-  on:
-    repo: gillesdegottex/fmit
-    tags: true
-    condition: $TRAVIS_OS_NAME = linux && $CC = gcc
-
+    condition: $CC = gcc
