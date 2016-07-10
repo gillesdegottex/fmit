@@ -294,8 +294,8 @@ MicrotonalView::MicrotonalView(QWidget* parent)
 	// settings
 	QPixmap img;
 	img.loadFromData(g_icon_ji, sizeof(g_icon_ji), "PNG");
-	setting_show->setIcon(QIcon(img));
-	setting_show->setChecked(false);
+    setting_show->setIcon(QIcon(":/fmit/ui/images/module_microtonal.svg"));
+    setting_show->setChecked(false);
 	hide();
 
 	QHBoxLayout* octaveActionLayout = new QHBoxLayout(&m_popup_menu);

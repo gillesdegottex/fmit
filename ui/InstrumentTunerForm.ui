@@ -440,7 +440,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="../fmit.qrc">
+    <iconset>
      <normaloff>:/fmit/ui/images/pause.png</normaloff>:/fmit/ui/images/pause.png</iconset>
    </property>
    <property name="text">
@@ -462,7 +462,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
   <action name="configAction">
    <property name="icon">
     <iconset resource="../fmit.qrc">
-     <normaloff>:/fmit/ui/images/config.png</normaloff>:/fmit/ui/images/config.png</iconset>
+     <normaloff>:/fmit/ui/images/settings.svg</normaloff>:/fmit/ui/images/settings.svg</iconset>
    </property>
    <property name="text">
     <string>Configure</string>
@@ -473,7 +473,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
   </action>
   <action name="saveSettingsAction">
    <property name="icon">
-    <iconset resource="../fmit.qrc">
+    <iconset>
      <normaloff>:/fmit/ui/images/saveSettings.png</normaloff>:/fmit/ui/images/saveSettings.png</iconset>
    </property>
    <property name="text">
@@ -495,7 +495,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
   <action name="helpAboutAction">
    <property name="icon">
     <iconset resource="../fmit.qrc">
-     <normaloff>:/fmit/ui/images/helpAbout.png</normaloff>:/fmit/ui/images/helpAbout.png</iconset>
+     <normaloff>:/fmit/ui/images/about.svg</normaloff>:/fmit/ui/images/about.svg</iconset>
    </property>
    <property name="text">
     <string>About</string>

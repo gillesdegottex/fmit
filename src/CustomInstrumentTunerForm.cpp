@@ -70,6 +70,9 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	viewsCaption->setDefaultWidget(new QLabel(tr("Views"), ui_tbViews));
 	ui_tbViews->addAction(viewsCaption);*/
 
+    saveSettingsAction->setIcon(style()->standardIcon(QStyle::SP_DialogSaveButton));
+    pauseAction->setIcon(style()->standardIcon(QStyle::SP_MediaPause));
+
 	View::s_settings = &m_settings;
 	m_settings.add(m_config_form.ui_chkFullScreen);
 	m_settings.add(m_config_form.ui_chkAutoSaveOnExit);
