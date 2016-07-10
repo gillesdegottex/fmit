@@ -23,7 +23,6 @@ before_install:
     - git fetch --tags
     - sleep 1
     - git checkout $TRAVIS_BRANCH
-    - git branch
     - export PROJECTGITVERSION=`git describe --tags --always |sed 's/^v//'`
     - echo $PROJECTGITVERSION
     - echo $TRAVIS_OS_NAME
@@ -70,8 +69,6 @@ script:
          && mv fmit.dmg $PACKAGENAME
       ; fi
       
-    - echo $TRAVIS_OS_NAME
-    - echo $CC
     - ls -l $PWD/$PACKAGENAME
 
 
