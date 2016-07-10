@@ -22,7 +22,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 LicenseFile=..\COPYING_GPL.txt
-OutputBaseFilename=FMIT-{#MyAppVersion}-Win32bit
+OutputBaseFilename=fmit_{#MyAppVersion}_win32
 SetupIconFile=..\ui\images\fmit.ico
 Compression=lzma
 SolidCompression=yes
@@ -35,7 +35,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "FMIT-{#MyAppVersion}-Win32bit\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "fmit_{#MyAppVersion}_win32\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 ; Source: "C:\Users\Norwin\Documents\GitHub\MSVC2012_OpenGL_64bit\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
