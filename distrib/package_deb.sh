@@ -14,8 +14,7 @@ else
 fi
 echo "Architecture: "$ARCH
 
-PKGNAME=FMIT-$VERSION
-
+PKGNAME=FMIT-$VERSION\_$ARCH
 echo "Package name "$PKGNAME
 
 rm -fr package_deb_$PKGNAME
