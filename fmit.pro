@@ -218,14 +218,23 @@ TRANSLATIONS = tr/fmit_de.ts \
                tr/fmit_pt_BR.ts \
                tr/fmit_ru.ts
 
+
 CONFIG += embed_manifest_exe
 
+isEmpty(QMAKE_LRELEASE) {
+    win32|os2:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]\lrelease.exe
+    else:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]/lrelease
+}
+message(QMAKE_LRELEASE=$$QMAKE_LRELEASE)
+release.commands = $$QMAKE_LRELEASE $$_PRO_FILE_PWD_/fmit.pro
+release.depends = lrelease
+QMAKE_EXTRA_TARGETS += lrelease
 
 # Installation configurations --------------------------------------------------
 scales.path = $$PREFIX/share/fmit/scales
 scales.files = scales/*
 translations.path = $$PREFIX/share/fmit/tr
-translations.files = tr/*
+translations.files = tr/*.qm
 target.path = $$PREFIX/bin
 shortcut.path = $$PREFIXSHORTCUT/share/applications
 shortcut.files = distrib/fmit.desktop
