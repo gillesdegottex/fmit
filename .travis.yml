@@ -51,7 +51,7 @@ script:
     - make
     - make lrelease
     - ls tr
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then cd distrib; bash distrib/package_deb.sh ../fmit; fi
+    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then cd distrib; bash package_deb.sh ../fmit; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then macdeployqt fmit.app -dmg; fi
     - sleep 1
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then mv fmit.dmg FMIT-$PROJECTGITVERSION.dmg; fi
