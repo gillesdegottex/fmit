@@ -11,7 +11,7 @@ If ($arch -eq 'x64') {
     $QTPATH = "\Qt\5.4\msvc2013_64_opengl"
 }
 Else {
-echo "Packaging for 32bits Windows"
+    echo "Packaging for 32bits Windows"
     $PACKAGENAME = "fmit_$VERSION_win32bit"
     $QTPATH = "\Qt\5.4\msvc2013_opengl"
 }
