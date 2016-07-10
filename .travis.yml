@@ -59,7 +59,7 @@ script:
     - echo $PACKAGENAME
 
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then macdeployqt fmit.app -dmg; fi
-    - sleep 1
+    - sleep 3
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then mv fmit.dmg FMIT-$PROJECTGITVERSION.dmg; fi
     - find . -name '*.deb'
     - find . -name '*.dmg'
