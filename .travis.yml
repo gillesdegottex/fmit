@@ -14,7 +14,7 @@ branches:
   - master
 
 matrix:
-    distro: trusty
+    dist: trusty
     exclude:
         - compiler: clang
           os: linux
