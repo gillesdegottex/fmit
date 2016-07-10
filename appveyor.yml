@@ -79,7 +79,7 @@ build_script:
 
 
 artifacts:
-  - path: fmit-*-win*bit.exe
+  - path: fmit_*_win*.exe
     name: newinstallers   # Reference used for deployment
 
 deploy:
