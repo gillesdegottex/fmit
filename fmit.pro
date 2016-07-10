@@ -31,7 +31,7 @@ message(CONFIG=$$CONFIG)
 # (if fail, fall back on the version present in the README.txt file)
 FMITVERSIONGITPRO = $$system(git describe --tags --always)
 FMITBRANCHGITPRO = $$system(git rev-parse --abbrev-ref HEAD)
-message(Git: DFasma version: $$DFASMAVERSIONGITPRO Branch: $$FMITBRANCHGITPRO)
+message(Git: FMIT version: $$FMITVERSIONGITPRO Branch: $$FMITBRANCHGITPRO)
 DEFINES += FMITVERSIONGIT=$$FMITVERSIONGITPRO
 DEFINES += FMITBRANCHGIT=$$FMITBRANCHGITPRO
 
