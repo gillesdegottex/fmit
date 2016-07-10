@@ -226,8 +226,7 @@ isEmpty(QMAKE_LRELEASE) {
     else:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]/lrelease
 }
 message(QMAKE_LRELEASE=$$QMAKE_LRELEASE)
-release.commands = $$QMAKE_LRELEASE $$_PRO_FILE_PWD_/fmit.pro
-release.depends = lrelease
+lrelease.commands = $$QMAKE_LRELEASE $$_PRO_FILE_PWD_/fmit.pro
 QMAKE_EXTRA_TARGETS += lrelease
 
 # Installation configurations --------------------------------------------------
