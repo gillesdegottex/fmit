@@ -1,12 +1,11 @@
 BINFILE=$1
 
-VERSION=`git describe --tags --always |cut -c2-`-1github1
+VERSION=`git describe --tags --always |cut -c2-`-github
 ARCH=amd64
 DISTRIB=`lsb_release -d |sed 's/Description:\s//g' |sed 's/\s/_/g'`
 
 echo "Packaging FMIT "$VERSION
 echo "Distribution: "$DISTRIB
-echo "Package name "$PKGNAME
 BINARCH=`objdump -p $BINFILE |grep 'file format' |sed 's/^.*file format\s//g'`
 if [ "${BINARCH/elf64}" = "${BINARCH}" ] ; then
     ARCH=i386
@@ -15,7 +14,9 @@ else
 fi
 echo "Architecture: "$ARCH
 
-PKGNAME=fmit-$VERSION
+PKGNAME=FMIT-$VERSION
+
+echo "Package name "$PKGNAME
 
 rm -fr package_deb_$PKGNAME
 mkdir -p package_deb_$PKGNAME
