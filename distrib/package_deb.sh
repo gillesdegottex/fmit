@@ -59,8 +59,9 @@ sed -i "s/^Depends:.*$/Depends: $DEPENDS/g" $PKGNAME/DEBIAN/control
 mkdir -p $PKGNAME/usr/bin
 cp $BINFILE $PKGNAME/usr/bin/
 
-# Any legal txt
+# Any legal and info txt
 mkdir -p $PKGNAME/usr/share/doc/fmit
+cp ../README.txt $PKGNAME/usr/share/doc/fmit/
 cp ../COPYING_*.txt $PKGNAME/usr/share/doc/fmit/
 
 # The menu related files
