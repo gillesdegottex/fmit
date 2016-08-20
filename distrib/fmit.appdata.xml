@@ -21,5 +21,7 @@
     <screenshot width="600" height="158">http://home.gna.org/fmit/figs/statistics.png</screenshot>
 </screenshots>
   <url type="homepage">http://home.gna.org/fmit/</url>
+  <url type="translate">https://www.transifex.com/fmit/free-music-instrument-tuner-fmit/</url>
+  <url type="donation">http://www.gnome.org/friends/</url>
   <updatecontact>gilles.degottex@gmail.com</updatecontact>
 </application>
