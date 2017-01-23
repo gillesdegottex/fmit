@@ -14,7 +14,7 @@
    <string>Configuration</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../fmit.qrc">
+   <iconset>
     <normaloff>:/fmit/ui/images/config.png</normaloff>:/fmit/ui/images/config.png</iconset>
   </property>
   <property name="sizeGripEnabled">
@@ -160,6 +160,11 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
            <item>
             <property name="text">
              <string>Eb (Mib)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>F (Fa)</string>
             </property>
            </item>
           </widget>
@@ -1639,9 +1644,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="../fmit.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>buttonOk</sender>

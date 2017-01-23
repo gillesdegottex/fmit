@@ -815,9 +815,10 @@ void CustomInstrumentTunerForm::configure_ok()
 
 	if(m_config_form.ui_cbTonality->currentIndex()==0)		SetTonality(0);
 	else if(m_config_form.ui_cbTonality->currentIndex()==1)	SetTonality(+2);
-	else													SetTonality(-3);
+    else if(m_config_form.ui_cbTonality->currentIndex()==2)	SetTonality(-3);
+    else if(m_config_form.ui_cbTonality->currentIndex()==3)	SetTonality(-5);
 
-	if(m_config_form.ui_cbNotesName->currentIndex()==0)		SetNotesName(LOCAL_ANGLO);
+    if(m_config_form.ui_cbNotesName->currentIndex()==0)		SetNotesName(LOCAL_ANGLO);
 	else													SetNotesName(LOCAL_LATIN);
 	m_microtonalView->notesNameChanged();
 	m_microtonalView->setAFreq(Music::GetAFreq());
