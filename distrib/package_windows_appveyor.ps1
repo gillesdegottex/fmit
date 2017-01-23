@@ -51,8 +51,8 @@ cd ..
 
 # Run Inno setup to create the installer
 If ($arch -eq 'x64') { $INNOSCRIPT = "FMIT_MSVC2012_Win64bit.iss" }
-Else { $INNOSCRIPT = "FMIT_MSVC2012_Win32bit.iss" }
-& "c:\Program Files (x86)\Inno Setup 5\ISCC.exe" /o. /dMyAppVersion=$VERSION c:\projects\fmit\distrib\$INNOSCRIPT
+Else                 { $INNOSCRIPT = "FMIT_MSVC2012_Win32bit.iss" }
+& "c:\Program Files (x86)\Inno Setup 5\ISCC.exe" /o. /dMyAppVersion=${VERSION} c:\projects\fmit\distrib\${INNOSCRIPT}
 
 # Get out of distrib
 cd ..
