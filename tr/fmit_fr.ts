@@ -5,11 +5,11 @@
     <name>AboutBox</name>
     <message>
         <source>About FMIT...</source>
-        <translation>A propos de FMIT ...</translation>
+        <translation>À propos de FMIT ...</translation>
     </message>
     <message>
         <source>About</source>
-        <translation>A propos</translation>
+        <translation>À propos</translation>
     </message>
     <message>
         <source>FMIT</source>
@@ -101,11 +101,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Device name</source>
-        <translation>Nom du device</translation>
+        <translation>Nom du périphérique</translation>
     </message>
     <message>
         <source>default</source>
-        <translation>default</translation>
+        <translation>défaut</translation>
     </message>
     <message>
         <source>OSS</source>
@@ -117,7 +117,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Auto detect now</source>
-        <translation>Détecter maintenant</translation>
+        <translation>Détecter automatiquement maintenant</translation>
     </message>
     <message>
         <source>Algorithm</source>
@@ -125,7 +125,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Quantizer</source>
-        <translation>Quantizer</translation>
+        <translation>Quantifieur</translation>
     </message>
     <message>
         <source>Frequency refinement</source>
@@ -137,7 +137,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Maximum number of periods</source>
-        <translation>Nombre maximum de péiodes</translation>
+        <translation>Nombre maximum de périodes</translation>
     </message>
     <message>
         <source>Configuration</source>
@@ -145,7 +145,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Tuning scale</source>
-        <translation>Echelle d&apos;accordage</translation>
+        <translation>Échelle d&apos;accordage</translation>
     </message>
     <message>
         <source>Chromatic</source>
@@ -184,8 +184,8 @@ p, li { white-space: pre-wrap; }
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</source>
         <translation>Utiliser la notation anglo-saxone ou latine.
-Anglo-saxon: C D E F G A B
-Latine: Do Re Mi Fa Sol La Si</translation>
+Anglo-saxon : C D E F G A B
+Latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Note names</source>
@@ -205,7 +205,7 @@ Latine: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Auto-detect an available capture system at startup</source>
-        <translation>Détecter automatiquement un système de capture au démarrage</translation>
+        <translation>Détecter automatiquement un système de capture disponible au démarrage</translation>
     </message>
     <message>
         <source>JACK</source>
@@ -213,7 +213,7 @@ Latine: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Sampling rate of the JACK server</source>
-        <translation>Taux d&apos;échantillonnage du server JACK</translation>
+        <translation>Taux d&apos;échantillonnage du serveur JACK</translation>
     </message>
     <message>
         <source>ALSA</source>
@@ -221,15 +221,15 @@ Latine: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.</source>
-        <translation>Ne pas utiliser une fréquence d&apos;échantillonage trop élevée. 22050Hz devrait être largement suffisant dans la pluspart des cas.</translation>
+        <translation>Ne pas utiliser une fréquence d&apos;échantillonage trop élevée. 22050Hz devrait être largement suffisant dans la plupart des cas.</translation>
     </message>
     <message>
         <source>The name of the OSS device to connect to</source>
-        <translation>Le nom du device OSS</translation>
+        <translation>Le nom du périphérique OSS</translation>
     </message>
     <message>
         <source>The name of the PortAudio device to connect to</source>
-        <translation>Le nom du device PortAudio</translation>
+        <translation>Le nom du périphérique PortAudio</translation>
     </message>
     <message>
         <source> ms</source>
@@ -237,11 +237,11 @@ Latine: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Rectangular filter: bad precision, but very fast</source>
-        <translation>Filtre réctangulaire: mauvaise précision, mais utilise peu de CPU</translation>
+        <translation>Filtre rectangulaire : mauvaise précision, mais utilise peu de processeur</translation>
     </message>
     <message>
         <source>FIR filter: good precision, but more costly in CPU usage</source>
-        <translation>Filtre FIR: bonne précision, mais utilise plus de CPU</translation>
+        <translation>Filtre FIR : bonne précision, mais utilise davantage de processeur</translation>
     </message>
     <message>
         <source>Algorithm settings</source>
@@ -261,17 +261,19 @@ Latine: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Frequency refinement settings</source>
-        <translation>Réglage du rafinnage fréquenciel</translation>
+        <translation>Réglages du raffinage fréquenciel</translation>
     </message>
     <message>
         <source>Frequency domain fundamental refinement:
 mean of the fundamental relative frequencies of the harmonics.
 Choose the number of harmonics to use.</source>
-        <translation></translation>
+        <translation>Raffinage de la fondamentale du domaine fréquentiel :
+signifie les fréquences relatives à la fondamentale des harmoniques.
+Choisissez le nombre d&apos;harmoniques à utiliser.</translation>
     </message>
     <message>
         <source>Quantizer settings</source>
-        <translation>Réglage du quantizer</translation>
+        <translation>Réglage du quantifieur</translation>
     </message>
     <message>
         <source>Restore &amp;factory settings</source>
@@ -298,36 +300,36 @@ Utile pour convertir le nom des notes dans la tonalité d&apos;un instrument (ex
     </message>
     <message>
         <source>Selected the capture system (e.g. JACK, ALSA, OSS, PortAudio)</source>
-        <translation>Le système de capture sélectionné (ex. JACK, ALSA? OSS, PortAudio)</translation>
+        <translation>Le système de capture sélectionné (ex : JACK, ALSA, OSS, PortAudio)</translation>
     </message>
     <message>
         <source>Auto detect a working capture system at FMIT startup.</source>
-        <translation>Détecter automatiquement un système de capture au démarrage.</translation>
+        <translation>Détecter automatiquement un système de capture valide au démarrage.</translation>
     </message>
     <message>
         <source>The name of this FMIT instance in the JACK connections.</source>
-        <translation>Le nom de cette instance de FMIT dans JACK.</translation>
+        <translation>Le nom de cette instance de FMIT dans lrd connexions JACK.</translation>
     </message>
     <message>
         <source>Automatically connect FMIT to the following source at startup (e.g. alsa_pcm:capture_1)</source>
-        <translation>Au démarrage, connecter automatiquement FMIT à la source suivante (ex. alsa_pcm:capture_1)</translation>
+        <translation>Au démarrage, connecter automatiquement FMIT à la source suivante (ex : alsa_pcm:capture_1)</translation>
     </message>
     <message>
         <source>automaticaly connect to...</source>
-        <translation>se connecte automatiquement à ...</translation>
+        <translation>se connecter automatiquement à ...</translation>
     </message>
     <message>
         <source>JACK sampling rate</source>
-        <translation>Taux d&apos;échantillonnage du server JACK</translation>
+        <translation>Taux d&apos;échantillonnage de JACK</translation>
     </message>
     <message>
         <source>The name of the ALSA device to use.</source>
-        <translation>Le nom du device ALSA.</translation>
+        <translation>Le nom du périphérique ALSA.</translation>
     </message>
     <message>
         <source>The chosen sampling rate.
 Do not use a too big sampling rate. 22050Hz should be enough in most cases.</source>
-        <translation>Le taux d&apos;échantillonnage choisi. Ne pas utiliser une fréquence d&apos;échantillonage trop élevée. 22050Hz devrait être largement suffisant dans la pluspart des cas.</translation>
+        <translation>Le taux d&apos;échantillonnage choisi. Ne pas utiliser une fréquence d&apos;échantillonage trop élevée. 22050Hz devrait être largement suffisant dans la plupart des cas.</translation>
     </message>
     <message>
         <source>Set the sampling rate to the maximum possible value.</source>
@@ -335,7 +337,7 @@ Do not use a too big sampling rate. 22050Hz should be enough in most cases.</sou
     </message>
     <message>
         <source>Mix channels if there are multiple (if unchecked, the first channel will be used)</source>
-        <translation>Mélanger les canaux s&apos;il y en a plusieurs (sinon, utiliser le premier sinon)</translation>
+        <translation>Mélanger les canaux s&apos;il y en a plusieurs (sinon, utiliser le premier)</translation>
     </message>
     <message>
         <source>Time between each sound analysis.
@@ -346,7 +348,7 @@ Can be increased to get less CPU usage (but less temporal precision).</source>
         <source>Range of possible notes from the lowest to the highest around the A4 reference note.
 Smaller the range, smaller the CPU usage.</source>
         <translation>Fourchette des notes possibles à partir de la plus basse jusqu&apos;à la plus haute à partir du La de référence.
-Plus petite est cette fourchette, moins de CPU est nécessaire.</translation>
+Plus petite est cette fourchette, moins le processeur est nécessaire.</translation>
     </message>
     <message>
         <source>Notes range</source>
@@ -356,7 +358,7 @@ Plus petite est cette fourchette, moins de CPU est nécessaire.</translation>
         <source>Lowest semitone from the A4 reference note.
 It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
         <translation>Le plus bas demi-ton à partir du La de référence.
-Il paut être utile de mettre cette valeur en dessus de -35 pour éviter des perturbations possibles de l&apos;alimentation (~50Hz).</translation>
+Il peut être utile de mettre cette valeur en dessus de -35 pour éviter des perturbations possibles de l&apos;alimentation (~50Hz).</translation>
     </message>
     <message>
         <source>Highest semitone from the A4 reference note.</source>
@@ -364,7 +366,7 @@ Il paut être utile de mettre cette valeur en dessus de -35 pour éviter des per
     </message>
     <message>
         <source>Filter the sound below the lowest semitone and above the highest semitone to avoid artefacts and noises in all the following steps of the sound analysis.</source>
-        <translation>Filtre le son en dessous et en dessus du plus bas et du plus haut demi-ton pour éviter des artefacts et du bruit dans les étapes d&apos;annalyses suivantes.</translation>
+        <translation>Filtre le son en dessous et en dessus du plus bas et du plus haut demi-ton pour éviter des artefacts et du bruit dans les étapes d&apos;analyses suivantes.</translation>
     </message>
     <message>
         <source>Notes range filtering</source>
@@ -373,7 +375,7 @@ Il paut être utile de mettre cette valeur en dessus de -35 pour éviter des per
     <message>
         <source>Ignore all sounds with volume below this threshold [dB]
 (Shown as a red line in various views)</source>
-        <translation>Ignorer tout les sons dont le volume est en dessous de ce seuil [dB].
+        <translation>Ignorer tous les sons dont le volume est en dessous de ce seuil [dB].
 (Ce seuil est visible sous la forme d&apos;une ligne rouge dans les différentes vues)</translation>
     </message>
     <message>
@@ -381,36 +383,36 @@ Il paut être utile de mettre cette valeur en dessus de -35 pour éviter des per
 This threshold is defined between two neighbors frequency components.
 Prevents underestimation errors.</source>
         <translation>Ignorer les sous-harmoniques faibles.
-Ce seuil est définit entre deux composantes fréquencielles voisines.
-Prévient d&apos;éventuelles sous estimations.</translation>
+Ce seuil est défini entre deux composantes fréquencielles voisines.
+Empêche d&apos;éventuelles sous estimations.</translation>
     </message>
     <message>
         <source>Factor defining the window size (from the lowest possible period defined by the notes range).
 The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</source>
-        <translation>Temps de réponse du program et tolérance des trous, grésillements, etc.
-Plus petites est la valeur, plus vite le program répond, mais la fréquence calculée devient alors plus instable.</translation>
+        <translation>Temps de réponse du programme et tolérance aux trous, grésillements, etc.
+Plus petite est la valeur, plus rapide le programme répond, mais la fréquence calculée devient alors plus instable.</translation>
     </message>
     <message>
         <source>Use a refinement method in frequency domain: compute the mean of the quasi-harmonic related spectral peaks (the option allows to chose the number of harmonics to use).</source>
-        <translation>Utiliser un rafinage en domaine fréquentiel: calcul la moyenne des peaks spectrales quasi-harmoniques (l&apos;option permet de choisir le nombre de peaks à utiliser).</translation>
+        <translation>Utiliser un raffinage en domaine fréquentiel : calcul la moyenne des pics spectraix quasi-harmoniques (l&apos;option permet de choisir le nombre de pics à utiliser).</translation>
     </message>
     <message>
         <source>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</source>
-        <translation>Utiliser un rafinage en domaine temporel: calcul la moyenne des différentes périodes estimées (l&apos;option permet de choisir le nombre de périodes à utiliser).</translation>
+        <translation>Utiliser un raffinage en domaine temporel : calcule la moyenne des différentes périodes estimées (l&apos;option permet de choisir le nombre de périodes à utiliser).</translation>
     </message>
     <message>
         <source>Quantize the analysis results: ignore frequency jumps, fill gaps, ignore short notes.
 The smaller the value, the faster the tuner. However, by decreasing the value, the computed frequency will be more unstable.</source>
-        <translation>Temps de réponse du program et tolérance des trous, grésillements, etc.
-Plus petites est la valeur, plus vite le program répond, mais la fréquence calculée devient alors plus instable.</translation>
+        <translation>Temps de réponse du programme et tolérance des trous, grésillements, etc.
+Plus petite est la valeur, plus rapide le programme répond, mais la fréquence calculée devient alors plus instable.</translation>
     </message>
     <message>
         <source>Restore settings as if you just installed FMIT (requires to restart FMIT).</source>
-        <translation>Revenir à la configuration comme si le program venait d&apos;être installé (requière un redémarrage du programme).</translation>
+        <translation>Revenir à la configuration comme si le programme venait d&apos;être installé (nécessite un redémarrage du programme).</translation>
     </message>
     <message>
         <source>Use these settings and quit the configuration panel (it is required to click on the &quot;Save settings&quot; button to permanently keep these settings for each FMIT start)</source>
-        <translation>Utiliser ces réglages et quitte le paneau de configuration (Il est nécessaire de cliquer sur le bouton &quot;Sauver les réglages&quot; pour concerver les réglages de façon permanente pour chaque redémarrage de FMIT)</translation>
+        <translation>Utiliser ces réglages et quitter le paneau de configuration (il est nécessaire de cliquer sur le bouton &quot;Sauver les réglages&quot; pour conserver les réglages de façon permanente pour chaque redémarrage de FMIT)</translation>
     </message>
     <message>
         <source>Discard any changes and quit the configuration panel</source>
@@ -418,7 +420,7 @@ Plus petites est la valeur, plus vite le program répond, mais la fréquence cal
     </message>
     <message>
         <source>The capture system (e.g. JACK, ALSA, OSS, PortAudio)</source>
-        <translation>Le système de capture (ex. JACK, ALSA OSS, PortAudio)</translation>
+        <translation>Le système de capture (ex : JACK, ALSA OSS, PortAudio)</translation>
     </message>
     <message>
         <source>The capture system</source>
@@ -455,7 +457,7 @@ p, li { white-space: pre-wrap; }
         <source>This operation is NOT reversible.
 Are you sure you want to lose all your current settings ?</source>
         <translation>Cette opération n&apos;est pas réversible.
-Êtes-vous sûr de vouloir perdre votre configuration courrante ?</translation>
+Êtes-vous sûr de vouloir perdre votre configuration courante ?</translation>
     </message>
     <message>
         <source>You can now restart FMIT to get back factory settings</source>
@@ -474,7 +476,7 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>Use cents</source>
-        <translation>Utilise la mesure en cents</translation>
+        <translation>Utilise la mesure en centièmes</translation>
     </message>
     <message>
         <source>Scale range</source>
@@ -482,7 +484,7 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>Scale range (in cents)</source>
-        <translation>Échelle d&apos;étirement (en cents)</translation>
+        <translation>Échelle d&apos;étirement (en centièmes)</translation>
     </message>
     <message>
         <source>Dial</source>
@@ -497,11 +499,11 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>Keep previous notes</source>
-        <translation>Conserver les notes précédantes</translation>
+        <translation>Conserver les notes précédentes</translation>
     </message>
     <message>
         <source>Use cents</source>
-        <translation>Utiliser la mesure en cents</translation>
+        <translation>Utiliser la mesure en centièmes</translation>
     </message>
     <message>
         <source>Scale range</source>
@@ -524,7 +526,7 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>dB scale</source>
-        <translation>Echelle en dB</translation>
+        <translation>Échelle en dB</translation>
     </message>
     <message>
         <source>Size</source>
@@ -563,7 +565,7 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>Harmonics&apos; amplitude</source>
-        <translation>Amplitudes des harmoniques</translation>
+        <translation>Amplitude des harmoniques</translation>
     </message>
 </context>
 <context>
@@ -624,7 +626,7 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>Keep notes when hidden</source>
-        <translation>Concerver les notes lorsque cette vues est cachée</translation>
+        <translation>Conserver les notes lorsque cette vue est cachée</translation>
     </message>
     <message>
         <source>Keep n values</source>
@@ -632,7 +634,7 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>Keep this number of values in the computation of the statistics</source>
-        <translation>Conserver ce numbre de valeurs dans les statistiques</translation>
+        <translation>Conserver ce nombre de valeurs dans les statistiques</translation>
     </message>
     <message>
         <source>Show standard deviation</source>
@@ -664,7 +666,7 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>Use cents</source>
-        <translation>Utilise la mesure en cents</translation>
+        <translation>Utilise la mesure en centièmes</translation>
     </message>
     <message>
         <source>Scale range</source>
@@ -672,14 +674,14 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>Scale range (in cents)</source>
-        <translation>Échelle d&apos;étirement (en cents)</translation>
+        <translation>Échelle d&apos;étirement (en centièmes)</translation>
     </message>
 </context>
 <context>
     <name>GLVolumeHistory</name>
     <message>
         <source>Keep previous notes</source>
-        <translation>Conserver les notes précédantes</translation>
+        <translation>Conserver les notes précédentes</translation>
     </message>
     <message>
         <source>Volume history</source>
@@ -718,7 +720,7 @@ r</translation>
     </message>
     <message>
         <source>About</source>
-        <translation>A propos de</translation>
+        <translation>À propos de</translation>
     </message>
     <message>
         <source>Space</source>
@@ -750,7 +752,7 @@ r</translation>
     </message>
     <message>
         <source> cents</source>
-        <translation>cents</translation>
+        <translation>centièmes</translation>
     </message>
     <message>
         <source>Free Music Instrument Tuner</source>
@@ -776,8 +778,8 @@ r</translation>
         <source>Volume in dB.
 Computed in the frequency domain, from the maximum bin.
 The maximum is reached when the signal energy is maximal NOT when the sound is saturated in the time domain.</source>
-        <translation>Volume en dB. Calculé en domain fréquenciel, à partir du bin maximum.
-Le maximum de volume est atteintlorsque l&apos;energie du signal est maximal, pas lorsque la forme d&apos;onde sature dans le domaine temporel.</translation>
+        <translation>Volume en dB. Calculé en domaine fréquenciel, à partir du bin maximum.
+Le maximum de volume est atteint lorsque l&apos;énergie du signal est maximal, pas lorsque la forme d&apos;onde sature dans le domaine temporel.</translation>
     </message>
     <message>
         <source>According to the following colors:
@@ -788,7 +790,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <translation>Selon les couleurs suivantes:
 rouge    : le système de capture ne fonctionne pas.
 gris       : le système de capture est OK, mais le son n&apos;est pas assez fort.
-orange  : les conditions d&apos;analyses ne sont pas suffisantes (ex. il y a saturation).
+orange  : les conditions d&apos;analyses ne sont pas suffisantes (ex : il y a saturation).
 vert       : une note est en cours d&apos;analyse et les conditions d&apos;analyses sont OK.</translation>
     </message>
     <message>
@@ -797,7 +799,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>Offset in cents from the base tuning frequency</source>
-        <translation>Décalage en cents à partir de la fréquence d&apos;accordage de base</translation>
+        <translation>Décalage en centièmes à partir de la fréquence d&apos;accordage de base</translation>
     </message>
     <message>
         <source>The frequency of the current note in Hertz.</source>
@@ -879,7 +881,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>default</source>
-        <translation>default</translation>
+        <translation>défaut</translation>
     </message>
 </context>
 </TS>
