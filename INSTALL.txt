@@ -30,7 +30,7 @@ To compile:
     Compile:
     $ make
     
-    Build the traduction files:
+    Build the translation files:
     $ make lrelease
 
 And install (as root)
