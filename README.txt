@@ -53,7 +53,7 @@ Disclaimer
     See the GNU General Public License (LICENSE.txt) for additional details.
 
 Contributors
-    Florian Hars for the tunning scales, Arnout Engelen for the JACK issues
+    Florian Hars for the tuning scales, Arnout Engelen for the JACK issues
 
     Packagers: Toni Graffy and all the PackMan team, Ludovic Reslinger,
         Edward Tomasz Napierala, John Wright.
