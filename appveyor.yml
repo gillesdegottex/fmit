@@ -24,7 +24,7 @@ install:
   - ps: Get-ChildItem C:\Qt\5.4
   - set PATH=%PATH%;%QTDIR%\bin
 
-  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /%ARCH% /Release'
+  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /%PLATFORM% /Release'
 
 #  - ps: cd "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC"
   - echo %PLATFORM%
