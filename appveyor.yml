@@ -27,8 +27,8 @@ install:
   - ps: cd "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC"
   - echo %PLATFORM%
 #  - cmd: if "%PLATFORM%" == "x64" call vcvarsall.bat amd64
-  - if "%PLATFORM%" == "x86" vcvarsall.bat x86
-  - if "%PLATFORM%" == "x64" vcvarsall.bat amd64
+  - if "%PLATFORM%" == "x86" call vcvarsall.bat x86
+  - if "%PLATFORM%" == "x64" call vcvarsall.bat amd64
 #  - ps: if ($env:platform -eq 'x64') {.\vcvarsall.bat amd64}
 #  - ps: if ($env:platform -eq 'x86') {.\vcvarsall.bat x86}
   #- cmd: vcvarsall amd64
