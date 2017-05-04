@@ -1,4 +1,4 @@
-#os: Windows Server 2012 R2
+os: Windows Server 2012 R2
 
 platform:
   - x86
@@ -25,13 +25,13 @@ install:
   - ps: Get-ChildItem C:\Qt\5.4
   - set PATH=%PATH%;%QTDIR%\bin
 
-  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /%PLATFORM% /Release'
+#  - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /%PLATFORM% /Release'
 
 #  - ps: cd "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC"
   - echo %PLATFORM%
 #  - cmd: if "%PLATFORM%" == "x64" call vcvarsall.bat amd64
-#  - if "%PLATFORM%" == "x86" call vcvarsall.bat x86
-#  - if "%PLATFORM%" == "x64" call vcvarsall.bat amd64
+  - if "%PLATFORM%" == "x86" call vcvarsall.bat x86
+  - if "%PLATFORM%" == "x64" call vcvarsall.bat amd64
 #  - ps: if ($env:platform -eq 'x64') {.\vcvarsall.bat amd64}
 #  - ps: if ($env:platform -eq 'x86') {.\vcvarsall.bat x86}
   #- cmd: vcvarsall amd64
