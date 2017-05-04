@@ -18,6 +18,7 @@ install:
   - echo appveyor_repo_tag_name %appveyor_repo_tag_name%
   - echo appveyor_repo_tag %appveyor_repo_tag%
   - ps: echo $env:platform
+  - ps: Get-ChildItem "C:\Qt\5.4\"
   - ps: if ($env:platform -eq 'x64') {$env:QTDIR = "C:\Qt\5.4\msvc2013_64_opengl"}
   - ps: if ($env:platform -eq 'x86') {$env:QTDIR = "C:\Qt\5.4\msvc2013_opengl"}
   - ps: echo $env:QTDIR
