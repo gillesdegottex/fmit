@@ -67,6 +67,7 @@ CONFIG(acs_qt) {
 CONFIG(acs_alsa) {
     message(Audio Capture System: Request ALSA support)
     DEFINES += CAPTURE_ALSA
+    QT += multimedia
     SOURCES += src/CaptureThreadImplALSA.cpp
     LIBS += -lasound
 }
