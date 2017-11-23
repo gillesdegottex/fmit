@@ -1,0 +1,79 @@
+.\" Copyright (C) 2006 Ludovic RESLINGER <lr@cuivres.net>
+.\"
+.\" This is free documentation; you can redistribute it and/or
+.\" modify it under the terms of the GNU General Public License as
+.\" published by the Free Software Foundation; either version 2 of
+.\" the License, or (at your option) any later version.
+.\"
+.\" The GNU General Public License's references to "object code"
+.\" and "executables" are to be interpreted as the output of any
+.\" document formatting or typesetting system, including
+.\" intermediate and printed output.
+.\"
+.\" This manual is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public
+.\" License along with this manual; if not, write to the Free
+.\" Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139,
+.\" USA.
+.\"
+.TH fmit 1 "August 13, 2006"
+.SH NAME
+fmit \- Free Music Instrument Tuner
+.SH SYNOPSIS
+.B fmit
+.br
+There are no command line options.
+.SH DESCRIPTION
+The
+.B Free Music Instrument Tuner (fmit)
+is a graphical software for tuning your music instrument using
+QT as gui library.
+.br
+For the sound input library you can choose to use ALSA or JACK.
+.br
+.B fmit
+contain all features of a standard hardware instrument tuner.
+.PP
+You choose the tuning frequency corresponding at your tuning note,
+and when you play it, fmit display your error margin.
+.PP
+Other views are availables, corresponding to more advanced
+and specific features like a microtonal tuning with more precision about
+you error margin, and a view of the harmonics ratio.
+.br
+Currently 6 views are availables:
+.TS
+tab (@);
+l l.
+1@A small view of the captured sound.
+2@An history of the pitch error.
+3@An history of the sound volume.
+4@The shape of the wave-length.
+5@Harmonics ratio (the formants).
+6@A microtonal tuning view.
+.TE
+.SH BUGS
+Please report bugs via
+.B <https://github.com/gillesdegottex/fmit/issues>.
+.SH AUTHOR
+.B fmit
+is written and maintained by Gilles Degottex 
+.B <gilles.degottex@gmail.com>.
+.SH HOME PAGE
+.B fmit
+can be found at:
+.B <http://gillesdegottex.github.io/fmit/>
+.SH COPYRIGHT
+Copyright (C) 2004-2015 Gilles Degottex 
+.B <gilles.degottex@gmail.com>
+.br
+Licensed under the
+.B GNU Public License V2.
+.PP
+This manual page was written by Ludovic RESLINGER 
+.B <lr@cuivres.net>,
+for the Debian project (but may be used by others).
