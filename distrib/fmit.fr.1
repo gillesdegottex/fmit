@@ -1,0 +1,85 @@
+.\" Copyright (C) 2006 Ludovic RESLINGER <lr@cuivres.net>
+.\"
+.\" This is free documentation; you can redistribute it and/or
+.\" modify it under the terms of the GNU General Public License as
+.\" published by the Free Software Foundation; either version 2 of
+.\" the License, or (at your option) any later version.
+.\"
+.\" The GNU General Public License's references to "object code"
+.\" and "executables" are to be interpreted as the output of any
+.\" document formatting or typesetting system, including
+.\" intermediate and printed output.
+.\"
+.\" This manual is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public
+.\" License along with this manual; if not, write to the Free
+.\" Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139,
+.\" USA.
+.\"
+.TH fmit 1 "Août 13, 2006"
+.SH NOM
+fmit \- Free Music Instrument Tuner
+.SH SYNOPSIS
+.B fmit
+.br
+Il n'y a pas d'option en ligne de commande.
+.SH DESCRIPTION
+The
+.B Free Music Instrument Tuner (fmit)
+est un logiciel graphique pour accorder votre instrument de musique, utilisant
+QT en tant que bibliothèque graphique.
+.br
+En ce qui concerne la bibliothèque d'entrée-son, vous pouvez choisir d'utiliser
+ALSA ou JACK.
+.br
+.B fmit
+contient toutes les fonctionnalités d'un accordeur d'instrument matériel
+standard.
+.PP
+Vous choisissez la fréquence d'accordage correspondante à votre note d'accord,
+et lorsque vous la jouer, fmit affiche votre marge d'erreur.
+.PP
+D'autres vues sont disponibles, correspondant à des fonctionnalités plus
+spécifiques et avancées comme l'accordage microtonal avec davantage de précision
+de votre marge d'erreur, ainsi qu'une vue du ratio d'harmoniques.
+.br
+Actuellement, 6 vues sont disponibles :
+.TS
+tab (@);
+l l.
+1@Une petite vue du son capturé.
+2@Un historique de l'erreur de hauteur.
+3@Un historique du volume sonore.
+4@La forme de la longueur d'onde.
+5@Ratio d'harmoniques (les formants).
+6@Un vue d'accordage microtonal.
+.TE
+.SH BOGUES
+Veuillez rapporter les bogues via
+.B <https://github.com/gillesdegottex/fmit/issues>.
+.SH AUTEUR
+.B fmit
+est écrit et maintenu par Gilles Degottex 
+.B <gilles.degottex@gmail.com>.
+.SH PAGE D'ACCUEIL
+.B fmit
+peut être trouvé à :
+.B <http://gillesdegottex.github.io/fmit/>
+.SH COPYRIGHT
+Copyright (C) 2004-2015 Gilles Degottex 
+.B <gilles.degottex@gmail.com>
+.br
+Licencié sous la
+.B GNU Public License V2.
+.PP
+Cette page de manuel a été écrite par Ludovic RESLINGER 
+.B <lr@cuivres.net>,
+pour le projet Debian (mais peut être utilisée par d'autres).
+.PP
+Elle a été traduite en française par Olivier HUMBERT
+.B <trebmuh@tuxfamily.org>,
+pour le projet LibraZiK (mais peut être utilisée par d'autres).
