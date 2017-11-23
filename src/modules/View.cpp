@@ -83,7 +83,7 @@ View::View(const QString& name, QWidget* parent)
 	setting_show = new QAction(m_name, parent);
 	setting_show->setCheckable(true);
     parent->connect(setting_show, SIGNAL(toggled(bool)), parent, SLOT(setVisible(bool)));
-    setting_show->setToolTip(QObject::tr("%1 view").arg(m_name));
+    setting_show->setToolTip(QObject::tr("%1").arg(m_name));
 
 	parent->setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding));
 
