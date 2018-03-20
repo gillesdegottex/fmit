@@ -15,10 +15,18 @@
     </p>
   </description>
   <screenshots>
-    <screenshot width="300" height="361">http://home.gna.org/fmit/figs/simple.png</screenshot>
-    <screenshot type="default" width="600" height="417">http://home.gna.org/fmit/figs/complete.png</screenshot>
-    <screenshot width="600" height="289">http://home.gna.org/fmit/figs/microtonal.png</screenshot>
-    <screenshot width="600" height="158">http://home.gna.org/fmit/figs/statistics.png</screenshot>
+    <screenshot type="default">
+      <image width="600" height="417">http://home.gna.org/fmit/figs/complete.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="300" height="361">http://home.gna.org/fmit/figs/simple.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="600" height="289">http://home.gna.org/fmit/figs/microtonal.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="600" height="158">http://home.gna.org/fmit/figs/statistics.png</image>
+    </screenshot>
   </screenshots>
   <url type="homepage">http://home.gna.org/fmit/</url>
   <url type="translate">https://www.transifex.com/fmit/free-music-instrument-tuner-fmit/</url>
