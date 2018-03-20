@@ -17,15 +17,19 @@
   <screenshots>
     <screenshot type="default">
       <image width="600" height="417">http://gillesdegottex.github.io/fmit/figs/complete.png</image>
+      <caption>Volume view and previous notes</caption>
     </screenshot>
     <screenshot>
       <image width="300" height="361">http://gillesdegottex.github.io/fmit/figs/simple.png</image>
+      <caption>Simplest view</caption>
     </screenshot>
     <screenshot>
       <image width="600" height="289">http://gillesdegottex.github.io/fmit/figs/microtonal.png</image>
+      <caption>Microtonal view</caption>
     </screenshot>
     <screenshot>
       <image width="600" height="158">http://gillesdegottex.github.io/fmit/figs/statistics.png</image>
+      <caption>Statistics view</caption>
     </screenshot>
   </screenshots>
   <url type="homepage">http://gillesdegottex.github.io/fmit/</url>
