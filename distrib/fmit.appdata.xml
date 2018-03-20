@@ -16,21 +16,20 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image width="600" height="417">http://home.gna.org/fmit/figs/complete.png</image>
+      <image width="600" height="417">http://gillesdegottex.github.io/fmit/figs/complete.png</image>
     </screenshot>
     <screenshot>
-      <image width="300" height="361">http://home.gna.org/fmit/figs/simple.png</image>
+      <image width="300" height="361">http://gillesdegottex.github.io/fmit/figs/simple.png</image>
     </screenshot>
     <screenshot>
-      <image width="600" height="289">http://home.gna.org/fmit/figs/microtonal.png</image>
+      <image width="600" height="289">http://gillesdegottex.github.io/fmit/figs/microtonal.png</image>
     </screenshot>
     <screenshot>
-      <image width="600" height="158">http://home.gna.org/fmit/figs/statistics.png</image>
+      <image width="600" height="158">http://gillesdegottex.github.io/fmit/figs/statistics.png</image>
     </screenshot>
   </screenshots>
-  <url type="homepage">http://home.gna.org/fmit/</url>
+  <url type="homepage">http://gillesdegottex.github.io/fmit/</url>
   <url type="translate">https://www.transifex.com/fmit/free-music-instrument-tuner-fmit/</url>
-  <url type="donation">http://www.gnome.org/friends/</url>
   <updatecontact>gilles.degottex@gmail.com</updatecontact>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
