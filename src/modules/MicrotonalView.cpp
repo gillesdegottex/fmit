@@ -384,7 +384,11 @@ void MicrotonalView::load()
 		try
 		{
 			MScale* scale = new MScale(*it, MScale::SCALA);
-			setting_scales.push_back(scale);
+			bool new_one = true;
+			for(size_t i=0; new_one && i<setting_scales.size(); i++)
+				new_one = *scale != *(setting_scales[i]);
+			if (new_one)
+				setting_scales.push_back(scale);
 		}
         catch(QString error){cout << "MicrotonalView::load " << error.toStdString() << endl;}
 	}
@@ -891,7 +895,11 @@ void MicrotonalView::load_installed_scales()
 			try
 			{
 				MScale* scale = new MScale(scales_dir.absoluteFilePath(*it), MScale::SCALA);
-				setting_scales.push_back(scale);
+				bool new_one = true;
+				for(size_t i=0; new_one && i<setting_scales.size(); i++)
+					new_one = *scale != *(setting_scales[i]);
+				if (new_one)
+					setting_scales.push_back(scale);
 			}
 		    catch(QString error){cout << "MicrotonalView::load_installed_scales " << error.toStdString() << endl;}
 		}
