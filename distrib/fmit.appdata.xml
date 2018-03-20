@@ -64,4 +64,14 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
+  <releases>
+  ​  <release version="1.1.13" date="2017-07-20">
+  ​    <description>
+        <ul>
+          <li>New icons</li>
+          <li>Added F tonality</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
 </application>
