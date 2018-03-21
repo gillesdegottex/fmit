@@ -161,6 +161,7 @@ using namespace std;
 #else
 #include <qfiledialog.h>
 #endif
+#include <qdir.h>
 #include <qmessagebox.h>
 #include <qregexp.h>
 #include <qimage.h>
