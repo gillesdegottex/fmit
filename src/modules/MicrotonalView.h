@@ -99,7 +99,6 @@ class MicrotonalView : public QFrame, public View
 	float m_tuningFreq;
 
 	void load_default_scales();
-	void load_installed_scales();
 
 	vector<QRoot*> m_roots;
 	struct QScaleLabel : QLabel

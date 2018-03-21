@@ -354,7 +354,6 @@ MicrotonalView::MicrotonalView(QWidget* parent)
 	setMaximumHeight(ui_scale->maximumHeight()+ui_ratios->maximumHeight()+20);
 
 	load_default_scales();
-	load_installed_scales();
 
 	refreshScaleList();
 
@@ -384,11 +383,7 @@ void MicrotonalView::load()
 		try
 		{
 			MScale* scale = new MScale(*it, MScale::SCALA);
-			bool new_one = true;
-			for(size_t i=0; new_one && i<setting_scales.size(); i++)
-				new_one = *scale != *(setting_scales[i]);
-			if (new_one)
-				setting_scales.push_back(scale);
+			setting_scales.push_back(scale);
 		}
         catch(QString error){cout << "MicrotonalView::load " << error.toStdString() << endl;}
 	}
@@ -876,30 +871,6 @@ void MicrotonalView::load_default_scales()
 	scale->values.push_back(MScale::MValue(48,25));
 	scale->values.push_back(MScale::MValue(125,64));
 	setting_scales.push_back(scale);
-}
-
-void MicrotonalView::load_installed_scales()
-{
-	QString fmitprefix(STR(PREFIX));
-	QDir scales_dir(fmitprefix + "/share/fmit/scales");
-	
-	QStringList scales_files_list = scales_dir.entryList(QDir::Filter::Files);
-	for(QStringList::iterator it=scales_files_list.begin(); it!=scales_files_list.end(); ++it)
-	{
-		if(it->contains(QRegExp("\\.scl$")) || it->contains(QRegExp("\\.SCL$")))
-		{
-			try
-			{
-				MScale* scale = new MScale(scales_dir.absoluteFilePath(*it), MScale::SCALA);
-				bool new_one = true;
-				for(size_t i=0; new_one && i<setting_scales.size(); i++)
-					new_one = *scale != *(setting_scales[i]);
-				if (new_one)
-					setting_scales.push_back(scale);
-			}
-		    catch(QString error){cout << "MicrotonalView::load_installed_scales " << error.toStdString() << endl;}
-		}
-	}
 }
 
 // ------------------ MicrotonalView::ScalePreview --------------------
