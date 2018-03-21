@@ -884,11 +884,11 @@ void MicrotonalView::load_installed_scales()
 	QString fmitprefix(STR(PREFIX));
 	QDir scales_dir(fmitprefix + "/share/fmit/scales");
 	
-#ifdef QT3_SUPPORT
+//#ifdef QT3_SUPPORT
 	QStringList scales_files_list = scales_dir.entryList(QDir::Files);
-#else
-	QStringList scales_files_list = scales_dir.entryList(QDir::Filter::Files);
-#endif
+//#else
+//	QStringList scales_files_list = scales_dir.entryList(QDir::Filter::Files);
+//#endif
 	for(QStringList::iterator it=scales_files_list.begin(); it!=scales_files_list.end(); ++it)
 	{
 		if(it->contains(QRegExp("\\.scl$")) || it->contains(QRegExp("\\.SCL$")))
