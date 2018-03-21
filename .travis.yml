@@ -49,7 +49,8 @@ install:
       && sudo apt-get install --yes cvs libtool
       ; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
-         brew install fftw
+         brew cask uninstall oclint
+      && brew install fftw
       && brew install qt5
       && export PATH=/usr/local/opt/qt5/bin:$PATH
       ; fi
