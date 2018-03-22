@@ -65,7 +65,7 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
-    <release version="1.1.14" date="2018-03-22">
+    <release version="1.1.15" date="2018-03-22">
       <description>
         <ul>
           <li>New icons</li>
