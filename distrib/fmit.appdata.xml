@@ -16,23 +16,47 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image width="600" height="417">http://gillesdegottex.github.io/fmit/figs/complete.png</image>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/complete.png</image>
       <caption>Volume view and previous notes</caption>
     </screenshot>
     <screenshot>
-      <image width="300" height="361">http://gillesdegottex.github.io/fmit/figs/simple.png</image>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/simple-2.png</image>
       <caption>Simplest view</caption>
     </screenshot>
     <screenshot>
-      <image width="600" height="289">http://gillesdegottex.github.io/fmit/figs/microtonal.png</image>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/microtonal.png</image>
       <caption>Microtonal view</caption>
     </screenshot>
     <screenshot>
-      <image width="600" height="158">http://gillesdegottex.github.io/fmit/figs/statistics.png</image>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/statistics.png</image>
       <caption>Statistics view</caption>
     </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/sample.png</image>
+      <caption>Wave form view</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/harmonics.png</image>
+      <caption>Harmonics view</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/FFT.png</image>
+      <caption>Fourier transform view</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/settings-general.png</image>
+      <caption>General settings</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/settings-capture.png</image>
+      <caption>Capture systems settings</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/settings-analysis.png</image>
+      <caption>Sound analysis settings</caption>
+    </screenshot>
   </screenshots>
-  <url type="homepage">http://gillesdegottex.github.io/fmit/</url>
+  <url type="homepage">https://gillesdegottex.github.io/fmit/</url>
   <url type="translate">https://www.transifex.com/fmit/free-music-instrument-tuner-fmit/</url>
   <updatecontact>gilles.degottex@gmail.com</updatecontact>
   <content_rating type="oars-1.1">
