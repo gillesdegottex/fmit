@@ -430,6 +430,14 @@ p, li { white-space: pre-wrap; }
 &lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options, right-click every view to show up their properties!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>F (Fa)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CustomInstrumentTunerForm</name>
@@ -850,12 +858,12 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
 <context>
     <name>QObject</name>
     <message>
-        <source>Show &quot;%1&quot; view</source>
-        <translation>Mostrar &quot;%1&quot; vista</translation>
-    </message>
-    <message>
         <source>default</source>
         <translation type="unfinished">default</translation>
+    </message>
+    <message>
+        <source>%1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
