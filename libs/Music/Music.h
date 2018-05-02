@@ -34,7 +34,7 @@ using namespace std;
 
 namespace Music
 {
-	enum NotesName{LOCAL_ANGLO, LOCAL_LATIN};
+	enum NotesName{LOCAL_ANGLO, LOCAL_LATIN, LOCAL_GERMAN};
 	extern NotesName s_notes_name;
 	inline NotesName GetNotesName()					{return s_notes_name;}
 	inline void SetNotesName(NotesName type)		{s_notes_name = type;}
@@ -250,7 +250,7 @@ namespace Music
 			else if(ht==10)	return "G"+soct;
 			else if(ht==11)	return "G#"+soct;
 		}
-		else
+		else if(local==LOCAL_LATIN)
 		{
 			if(ht==0)	return "La"+soct;
 			else if(ht==1)	return "Sib"+soct;
@@ -264,6 +264,21 @@ namespace Music
 			else if(ht==9)	return "Fa#"+soct;
 			else if(ht==10)	return "Sol"+soct;
 			else if(ht==11)	return "Sol#"+soct;
+		}
+		else
+		{
+			if(ht==0)	return "A"+soct;
+			else if(ht==1)	return "B"+soct;
+			else if(ht==2)	return "H"+soct;
+			else if(ht==3)	return "C"+soct;
+			else if(ht==4)	return "C#"+soct;
+			else if(ht==5)	return "D"+soct;
+			else if(ht==6)	return "Eb"+soct;
+			else if(ht==7)	return "E"+soct;
+			else if(ht==8)	return "F"+soct;
+			else if(ht==9)	return "F#"+soct;
+			else if(ht==10)	return "G"+soct;
+			else if(ht==11)	return "G#"+soct;
 		}
 
 		return "Th#1138";
