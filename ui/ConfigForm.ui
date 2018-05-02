@@ -222,6 +222,11 @@ latin: Do Re Mi Fa Sol La Si</string>
              <string>Hindustani</string>
             </property>
            </item>
+           <item>
+            <property name="text">
+             <string>Byzantine</string>
+            </property>
+           </item>
           </widget>
          </item>
         </layout>

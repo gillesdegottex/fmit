@@ -822,6 +822,7 @@ void CustomInstrumentTunerForm::configure_ok()
 	if(m_config_form.ui_cbNotesName->currentIndex()==1)		SetNotesName(LOCAL_LATIN);
 	if(m_config_form.ui_cbNotesName->currentIndex()==2)		SetNotesName(LOCAL_GERMAN);
 	if(m_config_form.ui_cbNotesName->currentIndex()==3)		SetNotesName(LOCAL_HINDUSTANI);
+	if(m_config_form.ui_cbNotesName->currentIndex()==4)		SetNotesName(LOCAL_BYZANTINE);
 	m_microtonalView->notesNameChanged();
 	m_microtonalView->setAFreq(Music::GetAFreq());
 
