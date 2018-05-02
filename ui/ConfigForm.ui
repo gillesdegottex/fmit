@@ -217,6 +217,11 @@ latin: Do Re Mi Fa Sol La Si</string>
              <string>German</string>
             </property>
            </item>
+           <item>
+            <property name="text">
+             <string>Hindustani</string>
+            </property>
+           </item>
           </widget>
          </item>
         </layout>
