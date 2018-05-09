@@ -23,12 +23,12 @@
 
 #include <deque>
 using namespace std;
-#include <QGLWidget>
+#include <QOpenGLWidget>
 #include <qaction.h>
 class QTimer;
 #include "View.h"
 
-class GLVolumeHistory : public QGLWidget, public View
+class GLVolumeHistory : public QOpenGLWidget, public View
 {
 	Q_OBJECT
 

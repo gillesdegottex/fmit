@@ -22,12 +22,12 @@
 
 #include <vector>
 using namespace std;
-#include <QGLWidget>
+#include <QOpenGLWidget>
 #include <qspinbox.h>
 #include <qaction.h>
 #include "View.h"
 
-class GLFreqStruct : public QGLWidget, public View
+class GLFreqStruct : public QOpenGLWidget, public View
 {
 	Q_OBJECT
 

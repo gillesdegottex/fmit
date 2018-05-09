@@ -23,7 +23,7 @@
 
 #include <deque>
 using namespace std;
-#include <QGLWidget>
+#include <QOpenGLWidget>
 #include <qspinbox.h>
 #include <qsettings.h>
 #include <qaction.h>
@@ -31,7 +31,7 @@ class QTimer;
 #include <Music/Music.h>
 #include "View.h"
 
-class GLErrorHistory : public QGLWidget, public View
+class GLErrorHistory : public QOpenGLWidget, public View
 {
 	Q_OBJECT
 

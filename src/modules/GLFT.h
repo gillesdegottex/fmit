@@ -24,12 +24,12 @@
 using namespace std;
 #include <Music/CFFTW3.h>
 // using namespace Music;
-#include <QGLWidget>
+#include <QOpenGLWidget>
 #include <qspinbox.h>
 #include <qaction.h>
 #include "View.h"
 
-class GLFT : public QGLWidget, public View
+class GLFT : public QOpenGLWidget, public View
 {
 	Q_OBJECT
 

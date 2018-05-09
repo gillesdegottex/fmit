@@ -27,9 +27,10 @@ using namespace std;
 #include <qimage.h>
 #include <qboxlayout.h>
 #include <qwidgetaction.h>
+#include <QPainter>
 
 GLSample::GLSample(QWidget* parent)
-: QGLWidget(parent)
+: QOpenGLWidget(parent)
 , View(tr("Waveform"), this)
 , m_font("Helvetica")
 , m_max_value(1.0)
@@ -41,7 +42,7 @@ GLSample::GLSample(QWidget* parent)
 
 	setting_hasFading = new QAction(tr("Show fading"), this);
 	setting_hasFading->setCheckable(true);
-	connect(setting_hasFading, SIGNAL(toggled(bool)), this, SLOT(updateGL()));
+	connect(setting_hasFading, SIGNAL(toggled(bool)), this, SLOT(update()));
 	m_popup_menu.addAction(setting_hasFading);
 
 	QHBoxLayout* numFadingActionLayout = new QHBoxLayout(&m_popup_menu);
@@ -55,7 +56,7 @@ GLSample::GLSample(QWidget* parent)
 	setting_spinNumFading->setSingleStep(1);
 	setting_spinNumFading->setValue(20);
 	setting_spinNumFading->setToolTip(tr("Number of fading"));
-	connect(setting_spinNumFading, SIGNAL(valueChanged(int)), this, SLOT(updateGL()));
+	connect(setting_spinNumFading, SIGNAL(valueChanged(int)), this, SLOT(update()));
 	numFadingActionLayout->addWidget(setting_spinNumFading);
 
 	QWidget* numFadingActionWidget = new QWidget(&m_popup_menu);
@@ -120,8 +121,11 @@ void GLSample::paintGL()
 
 	// name
 	glColor3f(0.75,0.75,0.75);
+	QPainter painter(this);
     m_font.setPixelSize(20);
-    renderText(2, 20, tr("Waveform's period"), m_font);
+    painter.setFont(m_font);
+    painter.drawText(2, 20, tr("Waveform's period"));
+    painter.end();
 
 	// horiz lines
 	glBegin(GL_LINES);

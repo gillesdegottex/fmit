@@ -26,6 +26,7 @@ using namespace std;
 #include <qimage.h>
 #include <qwidgetaction.h>
 #include <qboxlayout.h>
+#include <QPainter>
 #include <Music/Music.h>
 
 void GLErrorHistory::Note::init()
@@ -70,7 +71,7 @@ void GLErrorHistory::Note::addError(float err)
 }
 
 GLErrorHistory::GLErrorHistory(QWidget* parent)
-: QGLWidget(parent)
+: QOpenGLWidget(parent)
 , View(tr("Error history"), this)
 , m_font("Helvetica")
 {
@@ -185,7 +186,9 @@ void GLErrorHistory::drawTextTickCent(int r, int dy)
 	// only work within range that is a pure multiple of r
 	int range = int(setting_spinScale->value()/r)*r;
 
+    QPainter painter(this);
     m_font.setPixelSize(14);
+    painter.setFont(m_font);
     QFontMetrics fm(m_font);
 
 	float scale = 50.0f/setting_spinScale->value();
@@ -197,8 +200,9 @@ void GLErrorHistory::drawTextTickCent(int r, int dy)
 		if(i==0) txt = QString("  ")+txt;
         int y = height()/2 - int(height()*i/100.0f*scale);
         if(y>fm.xHeight() && y<height()-fm.xHeight())
-            renderText(2, y+ fm.xHeight()/2, txt, m_font);
+            painter.drawText(2, y+ fm.xHeight()/2, txt);
     }
+    painter.end();
 }
 
 //void GLErrorHistory::paintEvent(QPaintEvent * event){
@@ -219,8 +223,11 @@ void GLErrorHistory::paintGL()
 
     // name
     glColor3f(0.75,0.75,0.75);
+    QPainter painter(this);
     m_font.setPixelSize(20);
-    renderText(2, 20, tr("Error"), m_font);
+    painter.setFont(m_font);
+    painter.drawText(2, 20, tr("Error"));
+    painter.end();
 
     int char_size = 9;
     int ticks_size = 2+3*char_size;
@@ -279,20 +286,23 @@ void GLErrorHistory::paintGL()
     }
     else
     {
+        painter.begin(this);
         m_font.setPixelSize(14);
+        painter.setFont(m_font);
         QFontMetrics fm(m_font);
         string sfraq, sufraq;
         sufraq = string("1/")+QString::number(int(50/setting_spinScale->value())*2).toStdString();
         sfraq = string("-")+sufraq;
-        renderText(2, 3*height()/4-dy+fm.xHeight(), QString(sfraq.c_str()), m_font);
+        painter.drawText(2, 3*height()/4-dy+fm.xHeight(), QString(sfraq.c_str()));
         sfraq = string("+")+sufraq;
-        renderText(2, height()/4-dy+fm.xHeight(), QString(sfraq.c_str()), m_font);
+        painter.drawText(2, height()/4-dy+fm.xHeight(), QString(sfraq.c_str()));
 
         sufraq = string("1/")+QString::number(int(50/setting_spinScale->value())*4).toStdString();
         sfraq = string("-")+sufraq;
-        renderText(2, 5*height()/8-dy+fm.xHeight(), QString(sfraq.c_str()), m_font);
+        painter.drawText(2, 5*height()/8-dy+fm.xHeight(), QString(sfraq.c_str()));
         sfraq = string("+")+sufraq;
-        renderText(2, 3*height()/8-dy+fm.xHeight(), QString(sfraq.c_str()), m_font);
+        painter.drawText(2, 3*height()/8-dy+fm.xHeight(), QString(sfraq.c_str()));
+        painter.end();
     }
 
     // errors
@@ -324,8 +334,11 @@ void GLErrorHistory::paintGL()
             // the note name
             string str = m_notes[i].getName().toStdString();
             glColor3f(0.0,0.0,1.0);
+            painter.begin(this);
             m_font.setPixelSize(14);
-            renderText(x+2, height()-2, QString(str.c_str()), m_font);
+            painter.setFont(m_font);
+            painter.drawText(x+2, height()-2, QString(str.c_str()));
+            painter.end();
 
             // draw the error graph
             glColor3f(0.0f,0.0f,0.0f);
