@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg4606"
+   sodipodi:docname="save.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11">
+  <metadata
+     id="metadata4610">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="836"
+     id="namedview4608"
+     showgrid="false"
+     inkscape:zoom="5"
+     inkscape:cx="-20.010989"
+     inkscape:cy="8.6006635"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4606" />
+  <defs
+     id="defs3051">
+    <style
+       type="text/css"
+       id="current-color-scheme">
+      .ColorScheme-Text {
+        color:#4d4d4d;
+      }
+      </style>
+  </defs>
+  <path
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     d="M 2 2 L 2 14 L 3 14 L 4 14 L 10 14 L 11 14 L 12 14 L 14 14 L 14 4.28125 L 11.71875 2 L 11.6875 2 L 11 2 L 4 2 L 3 2 L 2 2 z M 3 3 L 4 3 L 5 3 L 5 6 L 5 7 L 11 7 L 11 6 L 11 3 L 11.28125 3 L 13 4.71875 L 13 5 L 13 13 L 12 13 L 12 9 L 11 9 L 5 9 L 3.96875 9 L 3.96875 13 L 3 13 L 3 3 z M 6 3 L 7.90625 3 L 7.90625 6 L 6 6 L 6 3 z M 5 10 L 6 10 L 10 10 L 11 10 L 11 13 L 10 13 L 6 13 L 5 13 L 5 10 z "
+     class="ColorScheme-Text"
+     id="path4604" />
+</svg>
