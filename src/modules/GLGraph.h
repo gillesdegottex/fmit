@@ -22,14 +22,14 @@
 
 #include <deque>
 using namespace std;
-#include <QGLWidget>
+#include <QOpenGLWidget>
 #include <qaction.h>
 #include <qspinbox.h>
 class QTimer;
 #include <Music/Music.h>
 #include "View.h"
 
-class GLGraph : public QGLWidget, public View
+class GLGraph : public QOpenGLWidget, public View
 {
 	Q_OBJECT
 

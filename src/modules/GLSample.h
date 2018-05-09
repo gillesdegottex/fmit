@@ -22,13 +22,13 @@
 #include <deque>
 using namespace std;
 
-#include <QGLWidget>
+#include <QOpenGLWidget>
 #include <qaction.h>
 #include <qspinbox.h>
 class QTimer;
 #include "View.h"
 
-class GLSample : public QGLWidget, public View
+class GLSample : public QOpenGLWidget, public View
 {
 	Q_OBJECT
 

@@ -25,11 +25,12 @@ using namespace std;
 #include <qimage.h>
 #include <qboxlayout.h>
 #include <qwidgetaction.h>
+#include <QPainter>
 #include <Music/Music.h>
 using namespace Music;
 
 GLGraph::GLGraph(QWidget* parent)
-: QGLWidget(parent)
+: QOpenGLWidget(parent)
 , View(tr("Captured Sound"), this)
 , m_font("Helvetica")
 , m_skip(1)
@@ -247,7 +248,7 @@ void GLGraph::update_maxs()
 		m_maxs.push_back(make_pair(smin, smax));
 	}
 
-	updateGL();
+	update();
 }
 
 void GLGraph::base_paint(float graph_gray)
@@ -256,12 +257,15 @@ void GLGraph::base_paint(float graph_gray)
 
 // 	cout<<"m_pending_queue="<<m_pending_queue.size()<<" m_queue="<<m_queue.size()<<" m_maxs="<<m_maxs.size()<<endl;
 
-	int width = QGLWidget::width();
+	int width = QOpenGLWidget::width();
 
 	// name
 	glColor3f(0.75,0.75,0.75);
+	QPainter painter(this);
     m_font.setPixelSize(20);
-    renderText(2, 20, tr("Captured Sound"), m_font);
+    painter.setFont(m_font);
+    painter.drawText(2, 20, tr("Captured Sound"));
+    painter.end();
 
 	if(setting_showWaveForm->isChecked() && !m_queue.empty())
 	{

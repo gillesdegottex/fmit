@@ -27,6 +27,7 @@ using namespace std;
 #include <qevent.h>
 #include <qboxlayout.h>
 #include <qwidgetaction.h>
+#include <QPainter>
 #include <Music/Music.h>
 #include <Music/SPWindow.h>
 using namespace Music;
@@ -34,7 +35,7 @@ using namespace Music;
 using namespace Math;
 
 GLFT::GLFT(QWidget* parent)
-: QGLWidget(parent)
+: QOpenGLWidget(parent)
 , View(tr("Fourier Transform"), this)
 , m_font("Helvetica")
 , m_components_max(1.0)
@@ -174,7 +175,7 @@ void GLFT::mousePressEvent(QMouseEvent* e)
 
 	double f = (m_maxf-m_minf)*double(m_press_x)/width()+m_minf;
 	m_text = tr("Frequency %1 [Hz]").arg(f);
-	updateGL();
+	update();
 }
 void GLFT::mouseDoubleClickEvent(QMouseEvent* e)
 {
@@ -184,7 +185,7 @@ void GLFT::mouseDoubleClickEvent(QMouseEvent* e)
 	m_minf=0;
 	m_maxf=Music::GetSamplingRate()/2; // sr is surely -1 because not yet defined
 	resetaxis();
-	updateGL();
+	update();
 }
 void GLFT::mouseMoveEvent(QMouseEvent* e)
 {
@@ -223,7 +224,7 @@ void GLFT::mouseMoveEvent(QMouseEvent* e)
 				m_maxA -= m_maxA*double(dy)/height();
 		}
 
-		updateGL();
+		update();
 	}
 
 	old_x = e->x();
@@ -246,8 +247,11 @@ void GLFT::paintGL()
 
 		// name
 		glColor3f(0.75,0.75,0.75);
+		QPainter painter(this);
         m_font.setPixelSize(20);
-        renderText(2, 20, tr("Fourier Transform"), m_font);
+        painter.setFont(m_font);
+        painter.drawText(2, 20, tr("Fourier Transform"));
+        painter.end();
 
 		for(int i=0; i<int(win.size()); i++)
 			m_plan.in[i] = buff[i]*win[i];
@@ -298,8 +302,11 @@ void GLFT::paintGL()
 	{
 		glColor3f(0,0,0);
 
+        QPainter painter(this);
         m_font.setPixelSize(14);
-        renderText(width()/2, 12, m_text, m_font);
+        painter.setFont(m_font);
+        painter.drawText(width()/2, 12, m_text);
+        painter.end();
 	}
 
 	glFlush();

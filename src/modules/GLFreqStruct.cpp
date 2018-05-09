@@ -24,11 +24,12 @@ using namespace std;
 #include <qimage.h>
 #include <qboxlayout.h>
 #include <qwidgetaction.h>
+#include <QPainter>
 #include <Music/Music.h>
 using namespace Music;
 
 GLFreqStruct::GLFreqStruct(QWidget* parent)
-: QGLWidget(parent)
+: QOpenGLWidget(parent)
 , View(tr("Harmonics"), this)
 , m_font("Helvetica")
 , m_components_max(1.0)
@@ -155,28 +156,31 @@ void GLFreqStruct::paintGL()
     }
 
     glColor3f(0.5f,0.5f,0.5f);
+    QPainter painter(this);
     m_font.setPixelSize(14);
+    painter.setFont(m_font);
     QFontMetrics fm(m_font);
     int dy = -fm.xHeight()/2;
     string sfraq = "-10dB";
-    renderText(2, 10*(height()-scale_height)/50-dy, QString(sfraq.c_str()), m_font);
+    painter.drawText(2, 10*(height()-scale_height)/50-dy, QString(sfraq.c_str()));
     sfraq = "-20dB";
-    renderText(2, 20*(height()-scale_height)/50-dy, QString(sfraq.c_str()), m_font);
+    painter.drawText(2, 20*(height()-scale_height)/50-dy, QString(sfraq.c_str()));
     sfraq = "-30dB";
-    renderText(2, 30*(height()-scale_height)/50-dy, QString(sfraq.c_str()), m_font);
+    painter.drawText(2, 30*(height()-scale_height)/50-dy, QString(sfraq.c_str()));
     sfraq = "-40dB";
-    renderText(2, 40*(height()-scale_height)/50-dy, QString(sfraq.c_str()), m_font);
+    painter.drawText(2, 40*(height()-scale_height)/50-dy, QString(sfraq.c_str()));
 
     // scale
     m_font.setPixelSize(10);
     glColor3f(0,0,0);
 	for(size_t i=0; i<m_components.size(); i++)
-        renderText(int((i+0.5)*step)+s-3, height()-2, QString::number(i+1), m_font);
+    	painter.drawText(int((i+0.5)*step)+s-3, height()-2, QString::number(i+1));
 
     // name
     glColor3f(0.75,0.75,0.75);
     m_font.setPixelSize(20);
-    renderText(2, 20, tr("Harmonics' amplitude"), m_font);
+    painter.drawText(2, 20, tr("Harmonics' amplitude"));
+    painter.end();
 
     glFlush();
 }

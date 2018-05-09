@@ -628,31 +628,31 @@ void CustomInstrumentTunerForm::refresh_views()
 {
 // 	cout << "CustomInstrumentTunerForm::refresh_views " << endl;
 
-//	m_dialTune->repaint();
+	m_dialTune->repaint();
 
 	if(m_glGraph->setting_show->isChecked())
-		m_glGraph->updateGL();
+		m_glGraph->update();
 
 	if(m_glErrorHistory->setting_show->isChecked())
-		m_glErrorHistory->updateGL();
+		m_glErrorHistory->update();
 
 	if(m_glVolumeHistory->setting_show->isChecked())
-		m_glVolumeHistory->updateGL();
+		m_glVolumeHistory->update();
 
 	if(m_microtonalView->setting_show->isChecked())
 		m_microtonalView->update();
 
 	if(m_glSample->setting_show->isChecked())
-		m_glSample->updateGL();
+		m_glSample->update();
 
 	if(m_glFreqStruct->setting_show->isChecked())
-		m_glFreqStruct->updateGL();
+		m_glFreqStruct->update();
 
 	if(m_glFT->setting_show->isChecked())
-		m_glFT->updateGL();
+		m_glFT->update();
 
 	if(m_glStatistics->setting_show->isChecked())
-		m_glStatistics->updateGL();
+		m_glStatistics->update();
 
 	m_time_refresh_views.start();
 }

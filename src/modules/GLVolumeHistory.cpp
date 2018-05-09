@@ -22,6 +22,7 @@
 using namespace std;
 #include <qtimer.h>
 #include <qimage.h>
+#include <QPainter>
 #include <Music/Music.h>
 
 GLVolumeHistory::Note::Note(int h)
@@ -44,7 +45,7 @@ QString GLVolumeHistory::Note::getName() const
 }
 
 GLVolumeHistory::GLVolumeHistory(QWidget* parent)
-: QGLWidget(parent)
+: QOpenGLWidget(parent)
 , View(tr("Volume history"), this)
 , m_font("Helvetica")
 {
@@ -121,8 +122,11 @@ void GLVolumeHistory::paintGL()
 
 	// name
 	glColor3f(0.75,0.75,0.75);
+	QPainter painter(this);
     m_font.setPixelSize(20);
-    renderText(2, 20, tr("Volume"), m_font);
+    painter.setFont(m_font);
+    painter.drawText(2, 20, tr("Volume"));
+    painter.end();
 
 	int s = 2+fontMetrics().width("50%");
 
@@ -153,19 +157,22 @@ void GLVolumeHistory::paintGL()
 	}
 
 	glColor3f(0.5f,0.5f,0.5f);
+	painter.begin(this);
     m_font.setPixelSize(14);
+    painter.setFont(m_font);
     QFontMetrics fm(m_font);
     int dy = -fm.xHeight()/2;
     string sfraq = "[dB]";
-    renderText(2, height()-2, QString(sfraq.c_str()), m_font);
+    painter.drawText(2, height()-2, QString(sfraq.c_str()));
     sfraq = "-10";
-    renderText(2, 10*height()/50-dy, QString(sfraq.c_str()), m_font);
+    painter.drawText(2, 10*height()/50-dy, QString(sfraq.c_str()));
 	sfraq = "-20";
-    renderText(2, 20*height()/50-dy, QString(sfraq.c_str()), m_font);
+    painter.drawText(2, 20*height()/50-dy, QString(sfraq.c_str()));
 	sfraq = "-30";
-    renderText(2, 30*height()/50-dy, QString(sfraq.c_str()), m_font);
+    painter.drawText(2, 30*height()/50-dy, QString(sfraq.c_str()));
 	sfraq = "-40";
-    renderText(2, 40*height()/50-dy, QString(sfraq.c_str()), m_font);
+    painter.drawText(2, 40*height()/50-dy, QString(sfraq.c_str()));
+    painter.end();
 
 	glColor3f(1.0,0.5,0.5);
 	glLineWidth(2.0f);
@@ -203,8 +210,11 @@ void GLVolumeHistory::paintGL()
 			// the note name
 			string str = Music::h2n(m_notes[i].ht);
 			glColor3f(0.0,0.0,1.0);
+			painter.begin(this);
             m_font.setPixelSize(14);
-            renderText(x+2, height()-2, QString(str.c_str()), m_font);
+            painter.setFont(m_font);
+            painter.drawText(x+2, height()-2, QString(str.c_str()));
+            painter.end();
 
 			// draw the volume graph
 			if(!m_notes[i].volumes.empty())

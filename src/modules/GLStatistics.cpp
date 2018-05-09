@@ -26,6 +26,7 @@ using namespace std;
 #include <qimage.h>
 #include <qboxlayout.h>
 #include <qwidgetaction.h>
+#include <QPainter>
 #include <Music/Music.h>
 
 void GLStatistics::AverageNote::init()
@@ -187,7 +188,7 @@ void GLStatistics::resizeScale()
 }
 
 GLStatistics::GLStatistics(QWidget* parent)
-: QGLWidget(parent)
+: QOpenGLWidget(parent)
 , View(tr("Statistics"), this)
 , m_font("Helvetica")
 {
@@ -361,7 +362,7 @@ void GLStatistics::reset()
 		setting_scale_max->setValue(0);
 	}
 	resizeScale();
-	updateGL();
+	update();
 }
 
 void GLStatistics::initializeGL()
@@ -397,7 +398,9 @@ void GLStatistics::drawTextTickCent(int r, int dy)
 	// only work within range that is a pure multiple of r
 	int range = int(setting_spinScale->value()/r)*r;
 
+    QPainter painter(this);
     m_font.setPixelSize(14);
+    painter.setFont(m_font);
     QFontMetrics fm(m_font);
 
 	float scale = 50.0f/setting_spinScale->value();
@@ -407,8 +410,9 @@ void GLStatistics::drawTextTickCent(int r, int dy)
 		txt = QString::number(i);
 		if(i>=0) txt = QString("  ")+txt;
 		if(i==0) txt = QString("  ")+txt;
-        renderText(2, (height()-dy)/2 - int((height()-dy)*i/100.0f*scale) +fm.xHeight()/2, txt, m_font);
+        painter.drawText(2, (height()-dy)/2 - int((height()-dy)*i/100.0f*scale) +fm.xHeight()/2, txt);
 	}
+	painter.end();
 }
 
 void GLStatistics::paintGL()
@@ -427,8 +431,11 @@ void GLStatistics::paintGL()
 
 	// name
 	glColor3f(0.75,0.75,0.75);
+	QPainter painter(this);
     m_font.setPixelSize(20);
-    renderText(2, 20, tr("Statistics"), m_font);
+    painter.setFont(m_font);
+    painter.drawText(2, 20, tr("Statistics"));
+    painter.end();
 
 	int char_size = 9;
 	int ticks_size = 2+3*char_size;
@@ -547,19 +554,22 @@ void GLStatistics::paintGL()
 	}
 	else
 	{
+	    painter.begin(this);
         m_font.setPixelSize(14);
+        painter.setFont(m_font);
         QFontMetrics fm(m_font);
         string sfraq, sufraq;
 		sufraq = string("1/")+QString::number(int(50/setting_spinScale->value())*2).toStdString();
         sfraq = string("-")+sufraq;
-        renderText(2, 3*grid_height/4+fm.xHeight()/2, QString(sfraq.c_str()), m_font);
+        painter.drawText(2, 3*grid_height/4+fm.xHeight()/2, QString(sfraq.c_str()));
         sfraq = string("+")+sufraq;
-        renderText(2, grid_height/4+fm.xHeight()/2, QString(sfraq.c_str()), m_font);
+        painter.drawText(2, grid_height/4+fm.xHeight()/2, QString(sfraq.c_str()));
 		sufraq = string("1/")+QString::number(int(50/setting_spinScale->value())*4).toStdString();
         sfraq = string("-")+sufraq;
-        renderText(2, 5*grid_height/8+fm.xHeight()/2, QString(sfraq.c_str()), m_font);
+        painter.drawText(2, 5*grid_height/8+fm.xHeight()/2, QString(sfraq.c_str()));
         sfraq = string("+")+sufraq;
-        renderText(2, 3*grid_height/8+fm.xHeight()/2, QString(sfraq.c_str()), m_font);
+        painter.drawText(2, 3*grid_height/8+fm.xHeight()/2, QString(sfraq.c_str()));
+        painter.end();
 	}
 
 	// vertical lines
@@ -576,14 +586,16 @@ void GLStatistics::paintGL()
 
 	// note names
 	glColor3f(0, 0, 1);
+	painter.begin(this);
     m_font.setPixelSize(14);
+    painter.setFont(m_font);
     QFontMetrics fm(m_font);
     for(size_t i=0; i<m_avg_notes.size(); i++)
 	{
         QString str = m_avg_notes[i].getName();
 
         QRect rect = fm.boundingRect(str);
-        renderText(ticks_size+(i+0.5)*float(grid_width)/m_avg_notes.size()-rect.width()/2, height()-4-17, str, m_font);
+        painter.drawText(ticks_size+(i+0.5)*float(grid_width)/m_avg_notes.size()-rect.width()/2, height()-4-17, str);
 	}
 
 	// sizes
@@ -595,9 +607,10 @@ void GLStatistics::paintGL()
             QString str = QString::number(m_avg_notes[i].errs.size());
 
             QRect rect = fm.boundingRect(str);
-            renderText(ticks_size+(i+0.5)*float(grid_width)/m_avg_notes.size()-rect.width()/2, height()-4, str, m_font);
+            painter.drawText(ticks_size+(i+0.5)*float(grid_width)/m_avg_notes.size()-rect.width()/2, height()-4, str);
 		}
 	}
+	painter.end();
 
 	// means
 	glLineWidth(2.0f);
