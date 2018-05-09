@@ -1,6 +1,6 @@
 language: cpp
 sudo: required
-dist: trusty
+dist: xenial
 
 compiler:
 - clang
@@ -42,8 +42,8 @@ install:
       #&& sudo apt-get install cvs libtool
       #; fi
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
-         sudo apt-get install --yes qtbase54-dev qtdeclarative54-dev libqt5webkit54-dev
-      && sudo apt-get install --yes qt54-default qttools54-dev-tools qtmobility-dev qtmultimedia54-dev libqt5svg54-dev
+         sudo apt-get install --yes qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev
+      && sudo apt-get install --yes qt5-default qttools5-dev-tools qtmobility-dev qtmultimedia5-dev libqt5svg5-dev
       && sudo apt-get install --yes libfftw3-dev libpulse-dev
       && sudo apt-get install --yes libasound2-dev
       && sudo apt-get install --yes cvs libtool
