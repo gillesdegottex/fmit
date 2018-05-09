@@ -54,6 +54,7 @@ install:
       && brew install qt5
       && export PATH=/usr/local/opt/qt5/bin:$PATH
       ; fi
+    - qmake --version
 
 script:
     - echo $TRAVIS_BUILD_DIR
