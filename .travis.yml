@@ -31,6 +31,7 @@ before_install:
     - echo $TRAVIS_TAG
     - export TRAVIS_TAG=`git describe --tags --exact-match HEAD 2>/dev/null`
     - echo $TRAVIS_TAG
+    - echo $TRAVIS_BRANCH
     #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:beineri/opt-qt521 && sudo apt-get update -qq; fi
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa && sudo apt-get update -qq; fi
     
