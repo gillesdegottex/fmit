@@ -440,8 +440,8 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>:/fmit/ui/images/pause.png</normaloff>:/fmit/ui/images/pause.png</iconset>
+    <iconset resource="../fmit.qrc">
+     <normaloff>:/fmit/ui/images/pause.svg</normaloff>:/fmit/ui/images/pause.svg</iconset>
    </property>
    <property name="text">
     <string>Pause</string>
@@ -473,8 +473,8 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
   </action>
   <action name="saveSettingsAction">
    <property name="icon">
-    <iconset>
-     <normaloff>:/fmit/ui/images/saveSettings.png</normaloff>:/fmit/ui/images/saveSettings.png</iconset>
+    <iconset resource="../fmit.qrc">
+     <normaloff>:/fmit/ui/images/save.svg</normaloff>:/fmit/ui/images/save.svg</iconset>
    </property>
    <property name="text">
     <string>Save settings</string>
