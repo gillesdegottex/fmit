@@ -176,12 +176,12 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
          <item>
           <widget class="QLabel" name="textLabel3_3">
            <property name="toolTip">
-            <string>Use anglo-saxon or latin note names:
+            <string>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</string>
            </property>
            <property name="whatsThis">
-            <string>Use anglo-saxon or latin note names:
+            <string>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</string>
            </property>
@@ -193,12 +193,12 @@ latin: Do Re Mi Fa Sol La Si</string>
          <item>
           <widget class="QComboBox" name="ui_cbNotesName">
            <property name="toolTip">
-            <string>Use anglo-saxon or latin note names:
+            <string>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</string>
            </property>
            <property name="whatsThis">
-            <string>Use anglo-saxon or latin note names:
+            <string>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</string>
            </property>
