@@ -120,6 +120,9 @@ The maximum is reached when the signal energy is maximal NOT when the sound is s
           <property name="format">
            <string/>
           </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
           <property name="percentageVisible" stdset="0">
            <bool>false</bool>
           </property>
