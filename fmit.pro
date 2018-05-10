@@ -30,10 +30,8 @@ message(CONFIG=$$CONFIG)
 # Generate the version number from git
 # (if fail, fall back on the version present in the README.txt file)
 FMITVERSIONGITPRO = $$system(git describe --tags --always)
-FMITBRANCHGITPRO = $$system(git rev-parse --abbrev-ref HEAD)
-FMITBRANCH2GITPRO = $$system(git name-rev --name-only HEAD)
+FMITBRANCHGITPRO = $$system(git name-rev --name-only HEAD)
 message(Git: FMIT version: $$FMITVERSIONGITPRO Branch: $$FMITBRANCHGITPRO)
-message(Git: Branch2: $$FMITBRANCH2GITPRO)
 DEFINES += FMITVERSIONGIT=$$FMITVERSIONGITPRO
 DEFINES += FMITBRANCHGIT=$$FMITBRANCHGITPRO
 
