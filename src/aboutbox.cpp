@@ -45,6 +45,7 @@ AboutBox::AboutBox(QWidget *parent) :
     #ifdef Q_PROCESSOR_X86_64
       fullversion += "64bits";
     #endif
+    fullversion += "\nCompiled with Qt "+QString(QT_VERSION_STR)+" Running with Qt "+qVersion(); // Add Qt versions
     ui->lblVersion->setText(fullversion);
 
     QString txt = "";
