@@ -20,7 +20,6 @@
 # Audio Capture Systems: acs_qt, acs_alsa, acs_jack, acs_portaudio, acs_oss
 #                        (only acs_qt works on Windows)
 CONFIG += acs_qt
-CONFIG += acs_alsa
 
 
 # ------------------------------------------------------------------------------
