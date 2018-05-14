@@ -29,7 +29,7 @@ before_install:
     - sleep 1
     - export PROJECTGITVERSION=`git describe --tags --always |sed 's/^v//'`
     - echo $PROJECTGITVERSION
-    - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo "Building Pull Request $TRAVIS_PULL_REQUEST"; fi
+    - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo "Building Pull Request $TRAVIS_PULL_REQUEST"; export PROJECTGITVERSION=pr_$TRAVIS_PULL_REQUEST; fi
     - echo $TRAVIS_OS_NAME
     - echo $TRAVIS_COMMIT
     - echo $TRAVIS_TAG
