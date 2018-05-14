@@ -21,11 +21,16 @@ matrix:
 
 before_install:
     - git submodule update --init --recursive
+    # This checkout if for ensuring that git describe --tags --always gives a proper output
+    # otherwise only the commit's sha appear bcs Travis always checkout a commit, never a HEAD
+    - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then echo "We're on a HEAD, it's not a Pull Request"; git checkout $TRAVIS_BRANCH; fi
+    - git fetch --unshallow
     - git fetch --tags
     - sleep 1
-    # - git checkout $TRAVIS_BRANCH
     - export PROJECTGITVERSION=`git describe --tags --always |sed 's/^v//'`
+    - git describe --tags --always
     - echo $PROJECTGITVERSION
+    - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo "Building a Pull Request"; fi
     - echo $TRAVIS_OS_NAME
     - echo $TRAVIS_COMMIT
     - echo $TRAVIS_TAG
@@ -34,7 +39,7 @@ before_install:
     - echo $TRAVIS_BRANCH
     #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:beineri/opt-qt521 && sudo apt-get update -qq; fi
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa && sudo apt-get update -qq; fi
-    
+
 install:
     #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then
          #sudo apt-get install qt52base qt52declarative qt52webkit-examples
@@ -81,7 +86,7 @@ script:
          && export PACKAGENAME=fmit_$PROJECTGITVERSION.dmg
          && mv fmit.dmg $PACKAGENAME
       ; fi
-      
+
     - ls -l $PWD/$PACKAGENAME
 
 
