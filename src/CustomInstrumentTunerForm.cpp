@@ -826,6 +826,8 @@ void CustomInstrumentTunerForm::configure_ok()
 	m_microtonalView->notesNameChanged();
 	m_microtonalView->setAFreq(Music::GetAFreq());
 
+	update_localized_note_names();
+
 	SetSemitoneBounds(m_config_form.ui_spinMinHT->value(), m_config_form.ui_spinMaxHT->value());
 
     ui_spinA3Offset->setVisible(m_config_form.ui_chkShowA4Offset->isChecked());
@@ -1159,6 +1161,55 @@ CustomInstrumentTunerForm::~CustomInstrumentTunerForm()
 		m_settings.save(m_config_form.ui_chkAutoSaveOnExit);
 		m_settings.endGroup();
 	}
+}
+
+void CustomInstrumentTunerForm::update_localized_note_names()
+{
+    m_config_form.ui_cbTonality->clear();
+	m_config_form.ui_cbTonality->addItem(QString::fromStdString(h2n(3, GetNotesName(), 0, CHROMATIC, false))); // C
+	m_config_form.ui_cbTonality->addItem(QString::fromStdString(h2n(1, GetNotesName(), 0, CHROMATIC, false))); // Eb
+	m_config_form.ui_cbTonality->addItem(QString::fromStdString(h2n(6, GetNotesName(), 0, CHROMATIC, false))); // Bb
+	m_config_form.ui_cbTonality->addItem(QString::fromStdString(h2n(8, GetNotesName(), 0, CHROMATIC, false))); // F
+
+	QString tonalityToolTip = tr("The used tonality.\nUseful to convert note names to a corresponding instrument tonality (e.g. %1 for saxophone, %2 for trumpet).")
+			.arg(QString::fromStdString(h2n(1, GetNotesName(), 0, CHROMATIC, false))) // Eb
+			.arg(QString::fromStdString(h2n(6, GetNotesName(), 0, CHROMATIC, false))); // Bb
+	m_config_form.textLabel1_7->setToolTip(tonalityToolTip);
+	m_config_form.textLabel1_7->setWhatsThis(tonalityToolTip);
+	m_config_form.ui_cbTonality->setToolTip(tonalityToolTip);
+	m_config_form.ui_cbTonality->setWhatsThis(tonalityToolTip);
+
+	QString a4Name = QString::fromStdString(h2n(0, GetNotesName(), 0, CHROMATIC, true));
+
+	QString a4FreqToolTip = tr("The base tunning frequency (the %1 frequency)")
+			.arg(a4Name);
+	textLabel8->setToolTip(a4FreqToolTip);
+	textLabel8->setWhatsThis(a4FreqToolTip);
+	ui_spinAFreq->setToolTip(a4FreqToolTip);
+	ui_spinAFreq->setWhatsThis(a4FreqToolTip);
+
+	QString showA4OffsetText = tr("Allows to add an offset to the reference %1")
+			.arg(a4Name);
+	m_config_form.ui_chkShowA4Offset->setText(showA4OffsetText);
+
+	QString rangeToolTip = tr("Range of possible notes from the lowest to the highest around the %1 reference note.\nSmaller the range, smaller the CPU usage.")
+			.arg(a4Name);
+	m_config_form.textLabel7->setToolTip(rangeToolTip);
+	m_config_form.textLabel7->setWhatsThis(rangeToolTip);
+
+	QString minHTToolTip = tr("Lowest semitone from the %1 reference note.\nIt can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).")
+			.arg(a4Name);
+	m_config_form.ui_spinMinHT->setToolTip(minHTToolTip);
+	m_config_form.ui_spinMinHT->setWhatsThis(minHTToolTip);
+	m_config_form.ui_txtMinHT->setToolTip(minHTToolTip);
+	m_config_form.ui_txtMinHT->setWhatsThis(minHTToolTip);
+
+	QString maxHTToolTip = tr("Highest semitone from the %1 reference note.")
+			.arg(a4Name);
+		m_config_form.ui_spinMaxHT->setToolTip(maxHTToolTip);
+	m_config_form.ui_spinMaxHT->setWhatsThis(maxHTToolTip);
+	m_config_form.ui_txtMaxHT->setToolTip(maxHTToolTip);
+	m_config_form.ui_txtMaxHT->setWhatsThis(maxHTToolTip);
 }
 
 /*
