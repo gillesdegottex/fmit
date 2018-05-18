@@ -270,8 +270,8 @@ QRoot::QRoot(MicrotonalView* view, int ht)
 	setFlat(true);
 	setText(QString::fromStdString(h2n(ht, GetNotesName(), GetTonality(), false)));
 	setCheckable(true);
-	setSizePolicy(QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed));
-	setFixedWidth(35);		// TODO
+	setSizePolicy(QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed));
+	setMinimumWidth(55);		// TODO
 	setFocusPolicy(Qt::NoFocus);
 }
 void QRoot::clicked2()
