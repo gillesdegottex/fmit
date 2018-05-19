@@ -143,6 +143,7 @@ public slots:
 	virtual void selectTransport(const QString & name);
 	virtual void autoDetectTransport();
 	void refresh();
+	void update_localized_note_names();
 
 public:
 	~CustomInstrumentTunerForm();

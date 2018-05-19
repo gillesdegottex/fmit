@@ -188,12 +188,6 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
                 <bold>true</bold>
                </font>
               </property>
-              <property name="toolTip">
-               <string>The base tunning frequency (the A4 frequency)</string>
-              </property>
-              <property name="whatsThis">
-               <string>The base tunning frequency (the A4 frequency)</string>
-              </property>
               <property name="text">
                <string>Tuning Frequency</string>
               </property>

@@ -124,14 +124,6 @@
         <layout class="QHBoxLayout">
          <item>
           <widget class="QLabel" name="textLabel1_7">
-           <property name="toolTip">
-            <string>The used tonality.
-Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</string>
-           </property>
-           <property name="whatsThis">
-            <string>The used tonality.
-Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</string>
-           </property>
            <property name="text">
             <string>Tonality</string>
            </property>
@@ -139,34 +131,6 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
          </item>
          <item>
           <widget class="QComboBox" name="ui_cbTonality">
-           <property name="toolTip">
-            <string>The used tonality.
-Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</string>
-           </property>
-           <property name="whatsThis">
-            <string>The used tonality.
-Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</string>
-           </property>
-           <item>
-            <property name="text">
-             <string>C (Do)</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Bb (Sib)</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Eb (Mib)</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>F (Fa)</string>
-            </property>
-           </item>
           </widget>
          </item>
         </layout>
@@ -176,12 +140,12 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
          <item>
           <widget class="QLabel" name="textLabel3_3">
            <property name="toolTip">
-            <string>Use anglo-saxon or latin note names:
+            <string>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</string>
            </property>
            <property name="whatsThis">
-            <string>Use anglo-saxon or latin note names:
+            <string>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</string>
            </property>
@@ -193,12 +157,12 @@ latin: Do Re Mi Fa Sol La Si</string>
          <item>
           <widget class="QComboBox" name="ui_cbNotesName">
            <property name="toolTip">
-            <string>Use anglo-saxon or latin note names:
+            <string>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</string>
            </property>
            <property name="whatsThis">
-            <string>Use anglo-saxon or latin note names:
+            <string>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</string>
            </property>
@@ -233,9 +197,6 @@ latin: Do Re Mi Fa Sol La Si</string>
        </item>
        <item>
         <widget class="QCheckBox" name="ui_chkShowA4Offset">
-         <property name="text">
-          <string>Allows to add an offset to the reference A4</string>
-         </property>
         </widget>
        </item>
        <item>
@@ -985,14 +946,6 @@ Can be increased to get less CPU usage (but less temporal precision).</string>
         <layout class="QHBoxLayout">
          <item>
           <widget class="QLabel" name="textLabel7">
-           <property name="toolTip">
-            <string>Range of possible notes from the lowest to the highest around the A4 reference note.
-Smaller the range, smaller the CPU usage.</string>
-           </property>
-           <property name="whatsThis">
-            <string>Range of possible notes from the lowest to the highest around the A4 reference note.
-Smaller the range, smaller the CPU usage.</string>
-           </property>
            <property name="text">
             <string>Notes range</string>
            </property>
@@ -1002,14 +955,6 @@ Smaller the range, smaller the CPU usage.</string>
           <layout class="QVBoxLayout">
            <item>
             <widget class="QSpinBox" name="ui_spinMinHT">
-             <property name="toolTip">
-              <string>Lowest semitone from the A4 reference note.
-It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</string>
-             </property>
-             <property name="whatsThis">
-              <string>Lowest semitone from the A4 reference note.
-It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</string>
-             </property>
              <property name="minimum">
               <number>-96</number>
              </property>
@@ -1023,14 +968,6 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
            </item>
            <item>
             <widget class="QLabel" name="ui_txtMinHT">
-             <property name="toolTip">
-              <string>Lowest semitone from the A4 reference note.
-It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</string>
-             </property>
-             <property name="whatsThis">
-              <string>Lowest semitone from the A4 reference note.
-It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</string>
-             </property>
             </widget>
            </item>
           </layout>
@@ -1039,12 +976,6 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
           <layout class="QVBoxLayout">
            <item>
             <widget class="QSpinBox" name="ui_spinMaxHT">
-             <property name="toolTip">
-              <string>Highest semitone from the A4 reference note.</string>
-             </property>
-             <property name="whatsThis">
-              <string>Highest semitone from the A4 reference note.</string>
-             </property>
              <property name="minimum">
               <number>-96</number>
              </property>
@@ -1058,12 +989,6 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
            </item>
            <item>
             <widget class="QLabel" name="ui_txtMaxHT">
-             <property name="toolTip">
-              <string>Highest semitone from the A4 reference note.</string>
-             </property>
-             <property name="whatsThis">
-              <string>Highest semitone from the A4 reference note.</string>
-             </property>
             </widget>
            </item>
           </layout>
