@@ -5,13 +5,30 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>FMIT</name>
-  <summary>Free Musical Instrument Tuner (FMIT). Tool for tuning musical instrument</summary>
+  <summary>A tool for tuning musical instruments</summary>
   <description>
     <p>
-      A tool to tune your musical instrument with real-time features.
+      Find an estimation of the fundamental frequency (f0, not the perceived pitch) 
+      of an audio signal, in real-time, and compare it with the closest note in the 
+      scale.
     </p>
-    <p>Features include traces of frequency and volume, statistics, various scales available (Werckmeister III, Kirnberger III, Diatonic, Meantone, etc.), Microtonal tuning (with Scala file support), harmonics' amplitude, waveform's period, Discrete Fourier Transform (DFT).
-    Features are also optional and can be hidden to obtain a very simple view.
+    <p>
+      Tune your musical instruments with advanced features, including traces of 
+      frequency and volume, adjustable base tuning frequency, multiple choices of 
+      tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and 
+      meantone), microtonal tuning with Scala file (.scl) support and statistics.
+    </p>
+    <p>
+      Perform real-time sound analysis with views for waveform period, harmonics 
+      amplitude and Discrete Fourier Transform (DFT). Change various analysis 
+      parameters and tradeoff between precision and speed.
+    </p>
+    <p>
+      Choose between multiple sound capture systems, including ALSA and JACK.
+    </p>
+    <p>
+      Show or hide individual panels and go from a simple analog tuner view to an 
+      advanced real-time analysis toolset, or anywhere in between.
     </p>
   </description>
   <screenshots>
@@ -33,7 +50,7 @@
     </screenshot>
     <screenshot>
       <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/sample.png</image>
-      <caption>Wave form view</caption>
+      <caption>Waveform view</caption>
     </screenshot>
     <screenshot>
       <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/harmonics.png</image>
@@ -58,6 +75,9 @@
   </screenshots>
   <url type="homepage">https://gillesdegottex.github.io/fmit/</url>
   <url type="translate">https://www.transifex.com/fmit/free-music-instrument-tuner-fmit/</url>
+  <url type="bugtracker">https://github.com/gillesdegottex/fmit/issues</url>
+  <url type="faq">http://gillesdegottex.github.io/fmit/faq.html</url>
+  <developer_name>Gilles Degottex</developer_name>
   <updatecontact>gilles.degottex@gmail.com</updatecontact>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
@@ -89,11 +109,21 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
-    <release version="1.1.16" date="2018-03-23">
+    <release version="1.2.1" date="2018-05-14">
+      <description>
+        <ul>
+          <li>New note names: Hindustani, Byzantine</li>
+          <li>Use unicode flat and sharp signs</li>
+          <li>Use custom save settings and pause icons that better fits the other icons design</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.18" date="2018-05-09">
       <description>
         <ul>
           <li>New icons</li>
           <li>Added F tonality</li>
+          <li>Fixed graphical glitches</li>
         </ul>
       </description>
     </release>
