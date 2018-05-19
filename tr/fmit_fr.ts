@@ -38,7 +38,12 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Most open-source softwares are infeasible without indirect contributions provided through libraries. Thus, big thanks to the following geeks:&lt;br /&gt;&lt;br /&gt;- Florian Hars for the tunning scales; Arnout Engelen for the JACK issues; John Anderson for the microtonal module idea; Scott Bahling for the scales in cents; Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome and will be rewarded by your name in this about box!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La plupart des logiciels à source ouverte sont infaisables sans les contributions indirectes fournies par les bibliothèques. Alors gros mercis aux geeks suivants :&lt;br /&gt;&lt;br /&gt;- Florian Hars pour les gammes d'accordage; Arnout Engelen pour les soucis avec JACK; John Anderson pour l'idée du module microtonal; Scott Bahling pour les gammes en centième; Jacob Shapiro pour son aide pour que FMIT fonctionne sous Windows/Cygwin.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Traducteurs : Omega9 (russe), skarmoutsosv (grec), Pindaro et dsboger (portuguais et portugais brésilien), Florian Maier (allemand).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; pour la transformée de Fourier très rapide.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team pour la bibliothèque graphique.&lt;br /&gt;&lt;br /&gt;Toute sorte de contribution est vraiment la bienvenue et sera récompensée par votre nom dans cette boîte d&apos;à propos !&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -149,7 +154,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Chromatic</source>
-        <translation></translation>
+        <translation>Chromatique</translation>
     </message>
     <message>
         <source>Werckmeister III</source>
@@ -161,7 +166,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Diatonic</source>
-        <translation></translation>
+        <translation>Diatonique</translation>
     </message>
     <message>
         <source>Meantone (1/4)</source>
@@ -193,11 +198,11 @@ Latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Anglo-Saxon</source>
-        <translation></translation>
+        <translation>Anglo-saxone</translation>
     </message>
     <message>
         <source>Latin</source>
-        <translation></translation>
+        <translation>Latine</translation>
     </message>
     <message>
         <source>Capture System</source>
@@ -428,7 +433,7 @@ Plus petite est la valeur, plus rapide le programme répond, mais la fréquence 
     </message>
     <message>
         <source>Qt</source>
-        <translation>Qt</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Allows to add an offset to the reference A4</source>
@@ -448,11 +453,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>F (Fa)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Allemande</translation>
     </message>
 </context>
 <context>
@@ -889,7 +894,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>%1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 </TS>
