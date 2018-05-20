@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<its:rules
+  xmlns:its="http://www.w3.org/2005/11/its"
+  version="1.0">
+  <its:translateRule translate="no" selector="/application"/>
+  <its:translateRule translate="yes"
+    selector="/application/name | /application/summary | /application/description | /application/screenshots/screenshot/caption | /application/developer_name | /application/releases/release/description"/>
+</its:rules>

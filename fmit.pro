@@ -243,6 +243,25 @@ message(QMAKE_LRELEASE=$$QMAKE_LRELEASE)
 lrelease.commands = $$QMAKE_LRELEASE $$_PRO_FILE_PWD_/fmit.pro
 QMAKE_EXTRA_TARGETS += lrelease
 
+linux {
+    appdata_po.target = $$OUT_PWD/%.mo
+    appdata_po.depends = $$PWD/%.po
+    appdata_po.commands = $$QMAKE_MKDIR_CMD $(dir $@) && msgfmt $< -o $@
+    QMAKE_EXTRA_TARGETS += appdata_po
+
+    appdata_tr.depends = $$PWD/distrib/fmit.appdata.xml.in $(patsubst $$PWD/%.po,$$OUT_PWD/%.mo,$(wildcard $$PWD/distrib/appdata_tr/*.po))
+    appdata_tr.target = $$OUT_PWD/distrib/fmit.appdata.xml
+    appdata_tr.commands = $$sprintf($$QMAKE_MKDIR_CMD, $$OUT_PWD/distrib/) && itstool -j $$PWD/distrib/fmit.appdata.xml.in -o $@ $(wildcard $$OUT_PWD/distrib/appdata_tr/*.mo)
+    QMAKE_EXTRA_TARGETS += appdata_tr
+    PRE_TARGETDEPS += $$appdata_tr.target
+} else {
+    appdata_no_tr.depends = $$PWD/distrib/fmit.appdata.xml.in
+    appdata_no_tr.target = $$OUT_PWD/distrib/fmit.appdata.xml
+    appdata_no_tr.commands = $$sprintf($$QMAKE_MKDIR_CMD, $$system_path($$OUT_PWD/distrib/)) && $$QMAKE_COPY $$system_path($$appdata_no_tr.depends) $$system_path($$appdata_no_tr.target)
+    QMAKE_EXTRA_TARGETS += appdata_no_tr
+    PRE_TARGETDEPS += $$appdata_no_tr.target
+}
+
 # Installation configurations --------------------------------------------------
 scales.path = $$PREFIX/share/fmit/scales
 scales.files = scales/*
@@ -256,5 +275,6 @@ iconsvg.files = ui/images/fmit.svg
 iconpng.path = $$PREFIX/share/icons/hicolor/128x128/apps
 iconpng.files = ui/images/fmit.png
 appdata.path = $$PREFIX/share/appdata
-appdata.files = distrib/fmit.appdata.xml
+appdata.files = $$OUT_PWD/distrib/fmit.appdata.xml
+appdata.CONFIG += no_check_exist
 INSTALLS += target scales translations shortcut iconsvg iconpng appdata
