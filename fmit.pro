@@ -125,8 +125,15 @@ unix {
     # LIBS += -lfftw3f
 }
 
-
 # Common configurations --------------------------------------------------------
+
+win32 {
+    msvc: LIBS += opengl32.lib
+    msvc: LIBS += glu32.lib
+    gcc: LIBS += -lopengl32
+    gcc: LIBS += -glu32
+}
+
 
 QT += core gui opengl multimedia svg
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
