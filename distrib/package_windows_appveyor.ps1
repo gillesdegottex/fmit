@@ -8,12 +8,12 @@ echo "Version: ${VERSION}"
 If ($arch -eq 'x64') {
     echo "Packaging for 64bits Windows"
     $PACKAGENAME = "fmit_${VERSION}_win64"
-    $QTPATH = "\Qt\5.4\msvc2013_64_opengl"
+    $QTPATH = "\Qt\5.10\msvc2015_64"
 }
 Else {
     echo "Packaging for 32bits Windows"
     $PACKAGENAME = "fmit_${VERSION}_win32"
-    $QTPATH = "\Qt\5.4\msvc2013_opengl"
+    $QTPATH = "\Qt\5.10\msvc2015"
 }
 
 echo "Packaging ${PACKAGENAME}"
@@ -32,9 +32,6 @@ Copy-Item c:\projects\fmit\lib\libfft\libfftw3-3.dll ${PACKAGENAME}
 
 # Add the Qt related libs, qt translations and installer of MSVC redist.
 cd ${PACKAGENAME}
-#C:/Qt/5.4/msvc2013_opengl/bin/qtenv2.bat
-#export PATH=\C$QTPATH\bin:$PATH
-#echo $PATH
 $env:Path += ";C:\$QTPATH\bin"
 & c:$QTPATH\bin\windeployqt.exe fmit.exe
 
