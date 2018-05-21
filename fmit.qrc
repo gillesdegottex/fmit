@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/fmit">
         <file>ui/images/fmit.png</file>
-        <file>README.txt</file>
         <file>ui/images/fmit.svg</file>
         <file>ui/images/module_statistics.svg</file>
         <file>ui/images/module_fourier.svg</file>

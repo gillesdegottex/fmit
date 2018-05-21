@@ -27,12 +27,15 @@ CONFIG += acs_qt
 
 message(CONFIG=$$CONFIG)
 
-# Generate the version number from git
+# Retrieve the version number, first from git
 # (if fail, fall back on the version present in the README.txt file)
-FMITVERSIONGITPRO = $$system(git describe --tags --always)
-FMITBRANCHGITPRO = $$system(git name-rev --name-only HEAD)
-message(Git: FMIT version: $$FMITVERSIONGITPRO Branch: $$FMITBRANCHGITPRO)
-DEFINES += FMITVERSIONGIT=$$FMITVERSIONGITPRO
+FMITVERSIONPRO = $$system(git describe --tags --always)
+isEmpty(FMITVERSIONPRO){
+    FMITVERSIONPRO = $$system(cat README.txt |sed -n '3p' |sed 's/Version\ //')
+}
+FMITBRANCHGITPRO = $$system(git rev-parse --abbrev-ref HEAD)
+message(Git: FMIT version: $$FMITVERSIONPRO Branch: $$FMITBRANCHGITPRO)
+DEFINES += FMITVERSION=$$FMITVERSIONPRO
 DEFINES += FMITBRANCHGIT=$$FMITBRANCHGITPRO
 
 # To place the application's files in the proper folder

@@ -40,23 +40,11 @@ QString FMITVersion(){
     if(!g_version.isEmpty())
         return g_version;
 
-    QString fmitversiongit(STR(FMITVERSIONGIT));
     QString fmitbranchgit(STR(FMITBRANCHGIT));
 
-    QString	fmitversion;
-    if(!fmitversiongit.isEmpty()) {
-        fmitversion = fmitversiongit;
-        if(fmitbranchgit!="master")
-            fmitversion += "-" + fmitbranchgit;
-    }
-    else {
-        QFile readmefile(":/README.txt");
-        readmefile.open(QFile::ReadOnly | QFile::Text);
-        QTextStream readmefilestream(&readmefile);
-        readmefilestream.readLine();
-        readmefilestream.readLine();
-        fmitversion = readmefilestream.readLine().simplified();
-        fmitversion = fmitversion.mid(8);
+    QString	fmitversion(STR(FMITVERSION));
+    if(!fmitbranchgit.isEmpty() && fmitbranchgit!="master") {
+        fmitversion += "-" + fmitbranchgit;
     }
     g_version = fmitversion;
 
