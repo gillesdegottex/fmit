@@ -38,12 +38,26 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Most open-source softwares are infeasible without indirect contributions provided through libraries. Thus, big thanks to the following geeks:&lt;br /&gt;&lt;br /&gt;- Florian Hars for the tunning scales; Arnout Engelen for the JACK issues; John Anderson for the microtonal module idea; Scott Bahling for the scales in cents; Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome and will be rewarded by your name in this about box!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La plupart des logiciels à source ouverte sont infaisables sans les contributions indirectes fournies par les bibliothèques. Alors gros mercis aux geeks suivants :&lt;br /&gt;&lt;br /&gt;- Florian Hars pour les gammes d&apos;accordage; Arnout Engelen pour les soucis avec JACK; John Anderson pour l&apos;idée du module microtonal; Scott Bahling pour les gammes en centième; Jacob Shapiro pour son aide pour que FMIT fonctionne sous Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Traducteurs : Omega9 (russe), skarmoutsosv (grec), Pindaro et dsboger (portuguais et portugais brésilien), Florian Maier (allemand).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; pour la transformée de Fourier très rapide.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team pour la bibliothèque graphique.&lt;br /&gt;&lt;br /&gt;Toute sorte de contribution est vraiment la bienvenue et sera récompensée par votre nom dans cette boîte d&apos;à propos !&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Most open-source softwares are infeasible without indirect contributions provided through libraries. Thus, big thanks to the following geeks:&lt;br /&gt;&lt;br /&gt;- dsboger for so many little and usefull changes, updates, packaging, etc.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Florian Hars for the tunning scales&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Arnout Engelen for the JACK issues&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- John Anderson for the microtonal module idea&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling for the scales in cents&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -173,22 +187,10 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <source>C (Do)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Bb (Sib)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Eb (Mib)</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Use anglo-saxon or latin note names:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</source>
-        <translation>Utiliser la notation anglo-saxone ou latine.
+        <translation type="vanished">Utiliser la notation anglo-saxone ou latine.
 Anglo-saxon : C D E F G A B
 Latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
@@ -300,7 +302,7 @@ Choisissez le nombre d&apos;harmoniques à utiliser.</translation>
     <message>
         <source>The used tonality.
 Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</source>
-        <translation>La tonalité utilisée.
+        <translation type="vanished">La tonalité utilisée.
 Utile pour convertir le nom des notes dans la tonalité d&apos;un instrument (ex. Mib pour le saxophone, Sib pour la trompette).</translation>
     </message>
     <message>
@@ -352,7 +354,7 @@ Can be increased to get less CPU usage (but less temporal precision).</source>
     <message>
         <source>Range of possible notes from the lowest to the highest around the A4 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation>Fourchette des notes possibles à partir de la plus basse jusqu&apos;à la plus haute à partir du La de référence.
+        <translation type="vanished">Fourchette des notes possibles à partir de la plus basse jusqu&apos;à la plus haute à partir du La de référence.
 Plus petite est cette fourchette, moins le processeur est nécessaire.</translation>
     </message>
     <message>
@@ -362,12 +364,12 @@ Plus petite est cette fourchette, moins le processeur est nécessaire.</translat
     <message>
         <source>Lowest semitone from the A4 reference note.
 It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
-        <translation>Le plus bas demi-ton à partir du La de référence.
+        <translation type="vanished">Le plus bas demi-ton à partir du La de référence.
 Il peut être utile de mettre cette valeur en dessus de -35 pour éviter des perturbations possibles de l&apos;alimentation (~50Hz).</translation>
     </message>
     <message>
         <source>Highest semitone from the A4 reference note.</source>
-        <translation>Le plus haut demi-ton à partir du La de référence.</translation>
+        <translation type="vanished">Le plus haut demi-ton à partir du La de référence.</translation>
     </message>
     <message>
         <source>Filter the sound below the lowest semitone and above the highest semitone to avoid artefacts and noises in all the following steps of the sound analysis.</source>
@@ -437,7 +439,7 @@ Plus petite est la valeur, plus rapide le programme répond, mais la fréquence 
     </message>
     <message>
         <source>Allows to add an offset to the reference A4</source>
-        <translation>Permettre d&apos;ajouter un biais au A4</translation>
+        <translation type="vanished">Permettre d&apos;ajouter un biais au A4</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -452,12 +454,22 @@ p, li { white-space: pre-wrap; }
 &lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Pour accéder à plus d&apos;options, faites un click droit sur les vues pour faire apparaître leurs propriétés !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>F (Fa)</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>German</source>
         <translation>Allemande</translation>
+    </message>
+    <message>
+        <source>Use localized note names. e.g.:
+anglo-saxon: C D E F G A B
+latin: Do Re Mi Fa Sol La Si</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hindustani</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Byzantine</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -475,6 +487,33 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <source>You can now restart FMIT to get back factory settings</source>
         <translation>Vous pouvez maintenant redémarrer FMIT pour obtenir la configuration de départ</translation>
+    </message>
+    <message>
+        <source>The used tonality.
+Useful to convert note names to a corresponding instrument tonality (e.g. %1 for saxophone, %2 for trumpet).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The base tunning frequency (the %1 frequency)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Allows to add an offset to the reference %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Range of possible notes from the lowest to the highest around the %1 reference note.
+Smaller the range, smaller the CPU usage.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lowest semitone from the %1 reference note.
+It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highest semitone from the %1 reference note.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
