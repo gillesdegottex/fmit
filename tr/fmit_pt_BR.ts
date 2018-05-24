@@ -354,7 +354,7 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
         <location filename="../ui/ConfigForm.ui" line="300"/>
         <location filename="../ui/ConfigForm.ui" line="303"/>
         <source>Auto detect a working capture system at FMIT startup.</source>
-        <translation>Detectar um sistema de captura funcional automaticamente ao inciar FMIT</translation>
+        <translation>Detectar um sistema de captura funcional automaticamente ao inciar FMIT.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="323"/>
@@ -388,7 +388,7 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
         <location filename="../ui/ConfigForm.ui" line="453"/>
         <location filename="../ui/ConfigForm.ui" line="456"/>
         <source>The name of the ALSA device to use.</source>
-        <translation>Nome do dispositivo ALSA para usar</translation>
+        <translation>Nome do dispositivo ALSA para usar.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="470"/>
@@ -1091,7 +1091,7 @@ r</translation>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="227"/>
         <source> Hz</source>
-        <translation>Hz</translation>
+        <translation> Hz</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="256"/>
@@ -1101,7 +1101,7 @@ r</translation>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="284"/>
         <source> cents</source>
-        <translation>cents</translation>
+        <translation> cents</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="348"/>
@@ -1113,7 +1113,7 @@ r</translation>
         <location filename="../ui/InstrumentTunerForm.ui" line="49"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="52"/>
         <source>Keep the data in the error and volume views (shortcut &quot;k&quot;).</source>
-        <translation>Manter os dados nas visualizações de erro e volume (atalho &quot;k&quot;)</translation>
+        <translation>Manter os dados nas visualizações de erro e volume (atalho &quot;k&quot;).</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="111"/>
