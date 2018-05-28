@@ -240,7 +240,7 @@ Latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source> ms</source>
-        <translation>ms</translation>
+        <translation> ms</translation>
     </message>
     <message>
         <source>Rectangular filter: bad precision, but very fast</source>
@@ -256,7 +256,7 @@ Latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source> dB</source>
-        <translation>dB</translation>
+        <translation> dB</translation>
     </message>
     <message>
         <source>Use sub-harmonic audibility threshold</source>
@@ -461,15 +461,17 @@ p, li { white-space: pre-wrap; }
         <source>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser des noms de notes localisées. Exemple :
+anglo-saxonne : C D E F G A B
+latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Hindustani</source>
-        <translation type="unfinished"></translation>
+        <translation>Hindustani</translation>
     </message>
     <message>
         <source>Byzantine</source>
-        <translation type="unfinished"></translation>
+        <translation>Byzantine</translation>
     </message>
 </context>
 <context>
@@ -491,15 +493,16 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <source>The used tonality.
 Useful to convert note names to a corresponding instrument tonality (e.g. %1 for saxophone, %2 for trumpet).</source>
-        <translation type="unfinished"></translation>
+        <translation>La tonalité utilisée.
+Utile pour convertir des noms de note vers une tonalité d&apos;instrument correspondante (exemple %1 pour le saxophone, %2 pour la trompette).</translation>
     </message>
     <message>
         <source>The base tunning frequency (the %1 frequency)</source>
-        <translation type="unfinished"></translation>
+        <translation>La fréquence de base de l&apos;accordage (la fréquence %1)</translation>
     </message>
     <message>
         <source>Allows to add an offset to the reference %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Permet d&apos;ajouter un décalage à la référence %1</translation>
     </message>
     <message>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
@@ -540,7 +543,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     </message>
     <message>
         <source>Dial</source>
-        <translation></translation>
+        <translation>Cadran</translation>
     </message>
 </context>
 <context>
@@ -804,7 +807,7 @@ r</translation>
     </message>
     <message>
         <source> cents</source>
-        <translation>centièmes</translation>
+        <translation> centièmes</translation>
     </message>
     <message>
         <source>Free Music Instrument Tuner</source>
@@ -906,7 +909,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>Microtonal</source>
-        <translation>Microtonal</translation>
+        <translation>Micro-intervalle</translation>
     </message>
     <message>
         <source>Used scale</source>
@@ -914,15 +917,15 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>&lt;b&gt;name:&lt;/b&gt; </source>
-        <translation>&lt;b&gt;nom:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;nom :&lt;/b&gt; </translation>
     </message>
     <message>
         <source>&lt;b&gt;number of ratio:&lt;/b&gt; </source>
-        <translation>&lt;b&gt;nombre de valeures:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;nombre de ratio :&lt;/b&gt; </translation>
     </message>
     <message>
         <source>Invalid Scala file: </source>
-        <translation>Fichier Scala invalide:</translation>
+        <translation>Fichier Scala invalide : </translation>
     </message>
 </context>
 <context>
