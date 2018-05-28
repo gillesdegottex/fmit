@@ -52,6 +52,15 @@ Disclaimer
     OR ALGORITHMS (E.G. CONSEQUENCES OF BUGS OR ERRONEOUS IMPLEMENTATIONS).
     See the GNU General Public License (LICENSE.txt) for additional details.
 
+Translations
+	Weblate.org is the translation service used.
+	If you which to addupdate translations, please see the project page:
+	https://hosted.weblate.org/projects/fmit/#languages
+
+Distribution/Packaging
+	Please see all relevent files in the `distrib` directory.
+	Packagers will need to install `itstool` tools for packaging FMIT.
+
 Contributors
 
     - dsboger for so many little and usefull changes, updates, packaging, etc.
@@ -70,3 +79,4 @@ Contributors
     Other helpful people: John Anderson for the microtonal module request,
         Scott Bahling for the request of the scales in cents,
         Jacob Shapiro for his help to make FMIT working under Windows/Cygwin, Peter.
+
