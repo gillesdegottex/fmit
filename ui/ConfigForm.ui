@@ -125,12 +125,12 @@
          <item>
           <widget class="QLabel" name="textLabel1_7">
            <property name="text">
-            <string>Tonality</string>
+            <string>Transposition</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="ui_cbTonality">
+          <widget class="QComboBox" name="ui_cbTransposition">
           </widget>
          </item>
         </layout>

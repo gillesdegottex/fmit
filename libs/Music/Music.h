@@ -39,9 +39,9 @@ namespace Music
 	inline NotesName GetNotesName()					{return s_notes_name;}
 	inline void SetNotesName(NotesName type)		{s_notes_name = type;}
 
-	extern int s_tonality;
-	inline int GetTonality()						{return s_tonality;}
-	inline void SetTonality(int tonality)			{s_tonality = tonality;}
+	extern int s_transposition;
+	inline int GetTransposition()						{return s_transposition;}
+	inline void SetTransposition(int transposition)	    {s_transposition = transposition;}
 
 	enum Tuning{CHROMATIC,WERCKMEISTER3,KIRNBERGER3,DIATONIC,MEANTONE};
 	extern Tuning s_tuning;
@@ -206,11 +206,11 @@ namespace Music
 	* \param local
 	* \return its name (Do, Re, Mi, Fa, Sol, La, Si; with '#' or 'b' if needed)
 	*/
-	inline string h2n(int ht, NotesName local=GetNotesName(), int tonality=GetTonality(), int tunig=GetTuning(), bool show_oct=true)
+	inline string h2n(int ht, NotesName local=GetNotesName(), int transposition=GetTransposition(), int tunig=GetTuning(), bool show_oct=true)
 	{
         (void)tunig;
 
-		ht += tonality;
+		ht += transposition;
 
 		int oct = 4;
 		while(ht<0)
@@ -314,7 +314,7 @@ namespace Music
 		return "Th#1138";
 	}
 
-//	inline int n2h(const std::string& note, NotesName local=LOCAL_ANGLO, int tonality=GetTonality())
+//	inline int n2h(const std::string& note, NotesName local=LOCAL_ANGLO, int transposition=GetTransposition())
 //	{
 //		// TODO
 //		return -1;

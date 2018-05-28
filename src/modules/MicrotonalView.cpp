@@ -268,7 +268,7 @@ QRoot::QRoot(MicrotonalView* view, int ht)
 	connect(this, SIGNAL(clicked()), this, SLOT(clicked2()));
 	connect(this, SIGNAL(rootClicked(int)), view, SLOT(selectRoot(int)));
 	setFlat(true);
-	setText(QString::fromStdString(h2n(ht, GetNotesName(), GetTonality(), false)));
+	setText(QString::fromStdString(h2n(ht, GetNotesName(), GetTransposition(), false)));
 	setCheckable(true);
 	setSizePolicy(QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed));
 	setMinimumWidth(55);		// TODO
@@ -514,7 +514,7 @@ int MicrotonalView::getIndex(MScale* scale)
 void MicrotonalView::notesNameChanged()
 {
 	for(int i=0; i<13; i++)
-		m_roots[i]->setText(QString::fromStdString(h2n(m_roots[i]->m_ht, GetNotesName(), GetTonality(), false)));
+		m_roots[i]->setText(QString::fromStdString(h2n(m_roots[i]->m_ht, GetNotesName(), GetTransposition(), false)));
 }
 
 void MicrotonalView::keepRootToLeft(bool keep)
