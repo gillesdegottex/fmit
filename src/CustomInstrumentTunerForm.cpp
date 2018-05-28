@@ -79,12 +79,7 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	m_settings.add(m_config_form.ui_chkShowA4Offset);
 
 	m_settings.add(m_config_form.ui_cbTuning);
-	// must fill items before adding to settings, else previous value will be lost
-	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(3, GetNotesName(), 0, CHROMATIC, false))); // C
-	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(1, GetNotesName(), 0, CHROMATIC, false))); // Eb
-	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(6, GetNotesName(), 0, CHROMATIC, false))); // Bb
-	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(8, GetNotesName(), 0, CHROMATIC, false))); // F
-	m_settings.add(m_config_form.ui_cbTransposition);
+	m_settings.add(m_config_form.ui_spinTransposition);
 	m_settings.add(m_config_form.ui_cbNotesName);
 	m_settings.add(ui_spinAFreq);
 	m_settings.add(ui_spinA3Offset);
@@ -239,7 +234,7 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	connect(m_config_form.ui_spinMinHT, SIGNAL(valueChanged(int)), this, SLOT(noteRangeChanged()));
 	connect(m_config_form.ui_spinMaxHT, SIGNAL(valueChanged(int)), this, SLOT(noteRangeChanged()));
 	connect(m_config_form.ui_cbTuning, SIGNAL(highlighted(int)), this, SLOT(noteRangeChanged()));
-	connect(m_config_form.ui_cbTransposition, SIGNAL(highlighted(int)), this, SLOT(noteRangeChanged()));
+	connect(m_config_form.ui_spinTransposition, SIGNAL(valueChanged(int)), this, SLOT(transpositionChanged()));
 	connect(m_config_form.ui_cbNotesName, SIGNAL(highlighted(int)), this, SLOT(noteRangeChanged()));
 	connect(m_config_form.ui_btnAutoDetect, SIGNAL(clicked()), this, SLOT(autoDetectTransport()));
 	connect(m_config_form.ui_cbTransports, SIGNAL(activated(const QString&)), this, SLOT(selectTransport(const QString&)));
@@ -318,6 +313,14 @@ void CustomInstrumentTunerForm::noteRangeChanged()
 
 	m_config_form.ui_txtMinHT->setText(QString::fromStdString(h2n(m_config_form.ui_spinMinHT->value())) + " = " + QString::number(h2f(m_config_form.ui_spinMinHT->value())) + " hz");
 	m_config_form.ui_txtMaxHT->setText(QString::fromStdString(h2n(m_config_form.ui_spinMaxHT->value())) + " = " + QString::number(h2f(m_config_form.ui_spinMaxHT->value())) + " hz");
+}
+
+void CustomInstrumentTunerForm::transpositionChanged()
+{
+	m_config_form.ui_lblTransposition->setText(
+			QString::fromStdString(h2n(-9, GetNotesName(), 0, CHROMATIC, true))
+			+ " → " +
+			QString::fromStdString(h2n(-9, GetNotesName(), m_config_form.ui_spinTransposition->value(), CHROMATIC, true)));
 }
 
 void CustomInstrumentTunerForm::errorRaised(const QString& error)
@@ -709,6 +712,7 @@ void CustomInstrumentTunerForm::configure()
     m_capture_thread.stopCapture();
 
 	noteRangeChanged();
+	transpositionChanged();
 
     if(m_capture_thread.getCurrentTransportIndex()<m_config_form.ui_cbTransports->count())
 		m_config_form.ui_cbTransports->setCurrentIndex(m_capture_thread.getCurrentTransportIndex());
@@ -818,10 +822,7 @@ void CustomInstrumentTunerForm::configure_ok()
 		break;
 	}
 
-	if(m_config_form.ui_cbTransposition->currentIndex()==0)		SetTransposition(0);
-	else if(m_config_form.ui_cbTransposition->currentIndex()==1)	SetTransposition(+2);
-    else if(m_config_form.ui_cbTransposition->currentIndex()==2)	SetTransposition(-3);
-    else if(m_config_form.ui_cbTransposition->currentIndex()==3)	SetTransposition(-5);
+	SetTransposition(m_config_form.ui_spinTransposition->value());
 
 	if(m_config_form.ui_cbNotesName->currentIndex()==0)		SetNotesName(LOCAL_ANGLO);
 	if(m_config_form.ui_cbNotesName->currentIndex()==1)		SetNotesName(LOCAL_LATIN);
@@ -1170,20 +1171,16 @@ CustomInstrumentTunerForm::~CustomInstrumentTunerForm()
 
 void CustomInstrumentTunerForm::update_localized_note_names()
 {
-    //m_config_form.ui_cbTransposition->clear();
-    m_config_form.ui_cbTransposition->setItemText(0, QString::fromStdString(h2n(3, GetNotesName(), 0, CHROMATIC, false))); // C
-	m_config_form.ui_cbTransposition->setItemText(1, QString::fromStdString(h2n(1, GetNotesName(), 0, CHROMATIC, false))); // Eb
-	m_config_form.ui_cbTransposition->setItemText(2, QString::fromStdString(h2n(6, GetNotesName(), 0, CHROMATIC, false))); // Bb
-	m_config_form.ui_cbTransposition->setItemText(3, QString::fromStdString(h2n(8, GetNotesName(), 0, CHROMATIC, false))); // F
-
-	QString transpositionToolTip = tr("Transposition of %1.\nUseful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).")
-	        .arg(QString::fromStdString(h2n(3, GetNotesName(), 0, CHROMATIC, false))) // C
-			.arg(QString::fromStdString(h2n(1, GetNotesName(), 0, CHROMATIC, false))) // Eb
-			.arg(QString::fromStdString(h2n(6, GetNotesName(), 0, CHROMATIC, false))); // Bb
+	QString transpositionToolTip = tr("Transposition in number of semitones relative to %1.\nUseful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).")
+			.arg(QString::fromStdString(h2n(-9, GetNotesName(), 0, CHROMATIC, true))) // C4
+			.arg(QString::fromStdString(h2n(-18, GetNotesName(), 0, CHROMATIC, true))) // Eb3
+			.arg(QString::fromStdString(h2n(-11, GetNotesName(), 0, CHROMATIC, true))); // Bb3
 	m_config_form.textLabel1_7->setToolTip(transpositionToolTip);
 	m_config_form.textLabel1_7->setWhatsThis(transpositionToolTip);
-	m_config_form.ui_cbTransposition->setToolTip(transpositionToolTip);
-	m_config_form.ui_cbTransposition->setWhatsThis(transpositionToolTip);
+	m_config_form.ui_spinTransposition->setToolTip(transpositionToolTip);
+	m_config_form.ui_spinTransposition->setWhatsThis(transpositionToolTip);
+	m_config_form.ui_lblTransposition->setToolTip(transpositionToolTip);
+	m_config_form.ui_lblTransposition->setWhatsThis(transpositionToolTip);
 
 	QString a4Name = QString::fromStdString(h2n(0, GetNotesName(), 0, CHROMATIC, true));
 
