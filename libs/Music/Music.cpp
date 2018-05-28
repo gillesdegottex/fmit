@@ -25,7 +25,7 @@ using namespace std;
 
 Music::NotesName Music::s_notes_name = Music::LOCAL_ANGLO;
 
-int Music::s_tonality = 0;
+int Music::s_transposition = 0;
 double Music::s_semitones[13] = { 1.0000, 1.0595, 1.1225, 1.1892, 1.2599, 1.3348, 1.4142, 1.4983, 1.5874, 1.6818, 1.7818, 1.8877, 2.0000 }; // Chromatic, never used
 static double semitones_werckmeister3[] = { 1.0, 1.06425952556, 1.125, 1.19729196625, 1.26134462288, 1.33785800438, 1.41901270074, 1.5, 1.59638928833, 1.68179283051, 1.78986403988, 1.89201693432, 2.0 };
 static double semitones_kirnberger3[] = { 1.0, 1.06335913331, 1.12151158592, 1.19627902498, 1.26027749133, 1.33748060995, 1.41781217775, 1.49534878122, 1.59503869997, 1.68036998845, 1.788854382, 1.890416237, 2.0 };
