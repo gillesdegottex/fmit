@@ -19,6 +19,27 @@ matrix:
         - compiler: clang
           os: linux
 
+addons:
+    apt:
+        update: true
+        sources:
+        - ubuntu-sdk-team
+        packages:
+        - qtbase5-dev
+        - qtdeclarative5-dev
+        - libqt5webkit5-dev
+        - qt5-default
+        - qttools5-dev-tools
+        - qtmultimedia5-dev
+        - libqt5opengl5-dev
+        - libqt5svg5-dev
+        - libfftw3-dev
+        - libpulse-dev
+        - libasound2-dev
+        - cvs
+        - libtool
+        - itstool
+
 before_install:
     - git submodule update --init --recursive
     # This checkout if for ensuring that git describe --tags --always gives a proper output
@@ -27,7 +48,8 @@ before_install:
     - git fetch --unshallow
     - git fetch --tags
     - sleep 1
-    - export PROJECTGITVERSION=`git describe --tags --always |sed 's/^v//'`
+    - export GITVERSION=`git describe --tags --always |sed 's/^v//'`
+    - export PROJECTGITVERSION=$GITVERSION
     - echo $PROJECTGITVERSION
     - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo "Building Pull Request $TRAVIS_PULL_REQUEST"; export PROJECTGITVERSION=pr_$TRAVIS_PULL_REQUEST; fi
     - echo $TRAVIS_OS_NAME
@@ -37,7 +59,7 @@ before_install:
     - echo $TRAVIS_TAG
     - echo $TRAVIS_BRANCH
     #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:beineri/opt-qt521 && sudo apt-get update -qq; fi
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa && sudo apt-get update -qq; fi
+    #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa && sudo apt-get update -qq; fi
 
 install:
     #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then
@@ -46,13 +68,13 @@ install:
       #&& sudo apt-get install libfftw3-dev libpulse-dev libasound2-dev
       #&& sudo apt-get install cvs libtool
       #; fi
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
-         sudo apt-get install --yes qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev
-      && sudo apt-get install --yes qt5-default qttools5-dev-tools qtmultimedia5-dev libqt5svg5-dev
-      && sudo apt-get install --yes libfftw3-dev libpulse-dev
-      && sudo apt-get install --yes libasound2-dev
-      && sudo apt-get install --yes cvs libtool
-      ; fi
+    #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then
+         #sudo apt-get install --yes qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev
+      #&& sudo apt-get install --yes qt5-default qttools5-dev-tools qtmultimedia5-dev libqt5svg5-dev
+      #&& sudo apt-get install --yes libfftw3-dev libpulse-dev
+      #&& sudo apt-get install --yes libasound2-dev
+      #&& sudo apt-get install --yes cvs libtool itstool
+      #; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
          brew cask uninstall oclint
       && brew install fftw
@@ -76,7 +98,9 @@ script:
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
             cd distrib
          && bash package_deb.sh ../fmit
+         && export DEBNAME=fmit_$GITVERSION-github_$ARCH.deb
          && export PACKAGENAME=fmit_$PROJECTGITVERSION-github\_$ARCH.deb
+         && [ $DEBNAME == $PACKAGENAME ] || mv $DEBNAME $PACKAGENAME
       ; fi
 
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
