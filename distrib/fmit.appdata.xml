@@ -74,7 +74,7 @@
     </screenshot>
   </screenshots>
   <url type="homepage">https://gillesdegottex.github.io/fmit/</url>
-  <url type="translate">https://www.transifex.com/fmit/free-music-instrument-tuner-fmit/</url>
+  <url type="translate">https://hosted.weblate.org/projects/fmit/</url>
   <url type="bugtracker">https://github.com/gillesdegottex/fmit/issues</url>
   <url type="faq">http://gillesdegottex.github.io/fmit/faq.html</url>
   <developer_name>Gilles Degottex</developer_name>
