@@ -79,6 +79,11 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	m_settings.add(m_config_form.ui_chkShowA4Offset);
 
 	m_settings.add(m_config_form.ui_cbTuning);
+	// must fill items before adding to settings, else previous value will be lost
+	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(3, GetNotesName(), 0, CHROMATIC, false))); // C
+	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(1, GetNotesName(), 0, CHROMATIC, false))); // Eb
+	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(6, GetNotesName(), 0, CHROMATIC, false))); // Bb
+	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(8, GetNotesName(), 0, CHROMATIC, false))); // F
 	m_settings.add(m_config_form.ui_cbTransposition);
 	m_settings.add(m_config_form.ui_cbNotesName);
 	m_settings.add(ui_spinAFreq);
@@ -1165,11 +1170,11 @@ CustomInstrumentTunerForm::~CustomInstrumentTunerForm()
 
 void CustomInstrumentTunerForm::update_localized_note_names()
 {
-    m_config_form.ui_cbTransposition->clear();
-	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(3, GetNotesName(), 0, CHROMATIC, false))); // C
-	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(1, GetNotesName(), 0, CHROMATIC, false))); // Eb
-	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(6, GetNotesName(), 0, CHROMATIC, false))); // Bb
-	m_config_form.ui_cbTransposition->addItem(QString::fromStdString(h2n(8, GetNotesName(), 0, CHROMATIC, false))); // F
+    //m_config_form.ui_cbTransposition->clear();
+    m_config_form.ui_cbTransposition->setItemText(0, QString::fromStdString(h2n(3, GetNotesName(), 0, CHROMATIC, false))); // C
+	m_config_form.ui_cbTransposition->setItemText(1, QString::fromStdString(h2n(1, GetNotesName(), 0, CHROMATIC, false))); // Eb
+	m_config_form.ui_cbTransposition->setItemText(2, QString::fromStdString(h2n(6, GetNotesName(), 0, CHROMATIC, false))); // Bb
+	m_config_form.ui_cbTransposition->setItemText(3, QString::fromStdString(h2n(8, GetNotesName(), 0, CHROMATIC, false))); // F
 
 	QString transpositionToolTip = tr("Transposition of %1.\nUseful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).")
 	        .arg(QString::fromStdString(h2n(3, GetNotesName(), 0, CHROMATIC, false))) // C
