@@ -543,7 +543,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     </message>
     <message>
         <source>Dial</source>
-        <translation></translation>
+        <translation>Cadran</translation>
     </message>
 </context>
 <context>
@@ -909,7 +909,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>Microtonal</source>
-        <translation>Microtonal</translation>
+        <translation>Micro-intervalle</translation>
     </message>
     <message>
         <source>Used scale</source>
