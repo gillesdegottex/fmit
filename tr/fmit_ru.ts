@@ -264,7 +264,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="56"/>
         <source>Raise the window to the whole screen when the program is started
 (You can also use the shortcut &apos;f&apos;).</source>
-        <translation>Запускать распахнутым на весь экран (клавиша &quot;f&quot;)</translation>
+        <translation>Запускать распахнутым на весь экран (клавиша &quot;f&quot;).</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="67"/>
@@ -282,8 +282,9 @@ latin: Do Re Mi Fa Sol La Si</source>
     <message>
         <source>The used tonality.
 Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</source>
-        <translation type="vanished">Используемая тональность.
-Полезно при изменении имен нот в соответствии с тональностью инструмента (напр. Eb для саксофона, Bb для трубы)</translation>
+        <translation>Используемая тональность.
+
+Полезно при изменении имен нот в соответствии с тональностью инструмента (напр. Eb для саксофона, Bb для трубы).</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="181"/>
@@ -323,7 +324,7 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
         <location filename="../ui/ConfigForm.ui" line="300"/>
         <location filename="../ui/ConfigForm.ui" line="303"/>
         <source>Auto detect a working capture system at FMIT startup.</source>
-        <translation>Определять рабочий способ захвата звука при запуске FMIT</translation>
+        <translation>Определять рабочий способ захвата звука при запуске FMIT.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="323"/>
@@ -331,7 +332,7 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
         <location filename="../ui/ConfigForm.ui" line="345"/>
         <location filename="../ui/ConfigForm.ui" line="348"/>
         <source>The name of this FMIT instance in the JACK connections.</source>
-        <translation>Название соединения FMIT в JACK  </translation>
+        <translation>Название соединения FMIT в JACK.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="362"/>
@@ -357,7 +358,7 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
         <location filename="../ui/ConfigForm.ui" line="453"/>
         <location filename="../ui/ConfigForm.ui" line="456"/>
         <source>The name of the ALSA device to use.</source>
-        <translation>Название устройства ALSA</translation>
+        <translation>Название устройства ALSA.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="470"/>
@@ -399,7 +400,7 @@ Do not use a too big sampling rate. 22050Hz should be enough in most cases.</sou
         <location filename="../ui/ConfigForm.ui" line="742"/>
         <location filename="../ui/ConfigForm.ui" line="854"/>
         <source>set to max</source>
-        <translation>установить на макс.</translation>
+        <translation>установить на макс</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="532"/>
@@ -512,7 +513,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
         <location filename="../ui/ConfigForm.ui" line="1521"/>
         <location filename="../ui/ConfigForm.ui" line="1524"/>
         <source>Restore settings as if you just installed FMIT (requires to restart FMIT).</source>
-        <translation>Восстановить настройки так, будто вы только установили FMIT (требуется перезапуск FMIT)</translation>
+        <translation>Восстановить настройки так, будто вы только установили FMIT (требуется перезапуск FMIT).</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1550"/>
@@ -524,7 +525,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
         <location filename="../ui/ConfigForm.ui" line="1569"/>
         <location filename="../ui/ConfigForm.ui" line="1572"/>
         <source>Discard any changes and quit the configuration panel</source>
-        <translation>Отменить все изменения и покинуть окно настройки.</translation>
+        <translation>Отменить все изменения и покинуть окно настройки</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="915"/>
@@ -549,7 +550,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="1016"/>
         <source>Rectangular filter: bad precision, but very fast</source>
-        <translation>Прямоугольный фильтр: низкая точность, но очень высокая скорость обработки.</translation>
+        <translation>Прямоугольный фильтр: низкая точность, но очень высокая скорость обработки</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1029"/>
@@ -1073,7 +1074,7 @@ p</source>
         <location filename="../ui/InstrumentTunerForm.ui" line="49"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="52"/>
         <source>Keep the data in the error and volume views (shortcut &quot;k&quot;).</source>
-        <translation>Сохранить данные в режимах отображения ошибок и громкости (горячая клавиша &quot;k&quot;)</translation>
+        <translation>Сохранить данные в режимах отображения ошибок и громкости (горячая клавиша &quot;k&quot;).</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="111"/>
@@ -1111,7 +1112,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <location filename="../ui/InstrumentTunerForm.ui" line="278"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="281"/>
         <source>Offset in cents from the base tuning frequency</source>
-        <translation>Смещение от базовой частоты настройки в центах.</translation>
+        <translation>Смещение от базовой частоты настройки в центах</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="322"/>
@@ -1156,7 +1157,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <location filename="../ui/InstrumentTunerForm.ui" line="501"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="504"/>
         <source>Invoke the about box.</source>
-        <translation>Вызвать окно &quot;О программе&quot;</translation>
+        <translation>Вызвать окно &quot;О программе&quot;.</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="453"/>
