@@ -221,7 +221,7 @@ latinos: Dó Ré Mi Fá Sol Lá Si</translation>
     <message>
         <location filename="../ui/ConfigForm.ui" line="128"/>
         <source>Transposition</source>
-        <translation type="unfinished"></translation>
+        <translation>Transposição</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="160"/>
@@ -743,7 +743,8 @@ Useful to convert note names to a corresponding instrument tonality (e.g. %1 for
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1174"/>
         <source>Transposition in number of semitones relative to %1.
 Useful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).</source>
-        <translation type="unfinished"></translation>
+        <translation>Transposição em número de semitons relativos a %1.
+Útil para converter os nomes das notas conforme um instrumento transpositor (p.ex. %2 para saxofone, %3 para trompete).</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1187"/>
