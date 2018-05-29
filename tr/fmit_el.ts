@@ -62,7 +62,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Tonality</source>
-        <translation>Τονικότητα</translation>
+        <translation type="vanished">Τονικότητα</translation>
     </message>
     <message>
         <source>Latency</source>
@@ -449,6 +449,10 @@ latin: Do Re Mi Fa Sol La Si</source>
         <source>Byzantine</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Transposition</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CustomInstrumentTunerForm</name>
@@ -465,11 +469,6 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <source>You can now restart FMIT to get back factory settings</source>
         <translation>Μπορείτε τώρα να επανεκινήσετε το FMIT για να επιστρέψετε στις εργοστασιακές ρυθμίσεις</translation>
-    </message>
-    <message>
-        <source>The used tonality.
-Useful to convert note names to a corresponding instrument tonality (e.g. %1 for saxophone, %2 for trumpet).</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The base tunning frequency (the %1 frequency)</source>
@@ -491,6 +490,11 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     </message>
     <message>
         <source>Highest semitone from the %1 reference note.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transposition in number of semitones relative to %1.
+Useful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

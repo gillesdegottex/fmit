@@ -76,7 +76,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Tonality</source>
-        <translation>Tonalité</translation>
+        <translation type="vanished">Tonalité</translation>
     </message>
     <message>
         <source>Latency</source>
@@ -473,6 +473,10 @@ latine : Do Ré Mi Fa Sol La Si</translation>
         <source>Byzantine</source>
         <translation>Byzantine</translation>
     </message>
+    <message>
+        <source>Transposition</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CustomInstrumentTunerForm</name>
@@ -493,7 +497,7 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <source>The used tonality.
 Useful to convert note names to a corresponding instrument tonality (e.g. %1 for saxophone, %2 for trumpet).</source>
-        <translation>La tonalité utilisée.
+        <translation type="vanished">La tonalité utilisée.
 Utile pour convertir des noms de note vers une tonalité d&apos;instrument correspondante (exemple %1 pour le saxophone, %2 pour la trompette).</translation>
     </message>
     <message>
@@ -516,6 +520,11 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     </message>
     <message>
         <source>Highest semitone from the %1 reference note.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transposition in number of semitones relative to %1.
+Useful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
