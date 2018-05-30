@@ -6,7 +6,7 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="14"/>
         <source>About FMIT...</source>
-        <translation type="unfinished"></translation>
+        <translation>Об FMIT...</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="28"/>
@@ -16,12 +16,12 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="88"/>
         <source>FMIT</source>
-        <translation type="unfinished"></translation>
+        <translation>FMIT</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="98"/>
         <source>&lt;version&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;version&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="123"/>
@@ -35,7 +35,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/aboutbox.ui" line="143"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Список участников</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="158"/>
@@ -198,7 +198,9 @@ latin: Do Re Mi Fa Sol La Si</source>
         <source>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать локализованные имена нот. Например:
+англо-саксонские: C D E F G A B
+латинские: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="457"/>
@@ -288,17 +290,17 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
     <message>
         <location filename="../ui/ConfigForm.ui" line="198"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Немецкий</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="203"/>
         <source>Hindustani</source>
-        <translation type="unfinished"></translation>
+        <translation>Индийский</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="208"/>
         <source>Byzantine</source>
-        <translation type="unfinished"></translation>
+        <translation>Византийский</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="274"/>
@@ -412,7 +414,7 @@ Do not use a too big sampling rate. 22050Hz should be enough in most cases.</sou
     <message>
         <location filename="../ui/ConfigForm.ui" line="787"/>
         <source>Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="916"/>
@@ -534,7 +536,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
     <message>
         <location filename="../ui/ConfigForm.ui" line="128"/>
         <source>Transposition</source>
-        <translation type="unfinished"></translation>
+        <translation>Транспонирование</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="238"/>
@@ -698,34 +700,37 @@ Are you sure you want to lose all your current settings ?</source>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1174"/>
         <source>Transposition in number of semitones relative to %1.
 Useful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).</source>
-        <translation type="unfinished"></translation>
+        <translation>Транспонирование на количество полутонов относительно %1.
+Полезно для преобразования имен нот в соответствующий транспонирующий инструмент (например, %2 для саксофона, %3 для трубы).</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1187"/>
         <source>The base tunning frequency (the %1 frequency)</source>
-        <translation type="unfinished"></translation>
+        <translation>Базовая частота настройки (частота %1)</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1194"/>
         <source>Allows to add an offset to the reference %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Позволяет добавить смещение к %1</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1198"/>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation type="unfinished"></translation>
+        <translation>Диапазон возможных нот от самого низкого до самого высокого уровня вокруг %1. 
+Чем меньше диапазон, тем меньше нагрузка на ЦП.</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1203"/>
         <source>Lowest semitone from the %1 reference note.
 It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
-        <translation type="unfinished"></translation>
+        <translation>Самый низкий полутон от %1. 
+Может быть полезно поставить выше, чем -35, чтобы избежать помех от алиментации сектора (~50 Гц).</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1210"/>
         <source>Highest semitone from the %1 reference note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Самый высокий полутон от %1.</translation>
     </message>
 </context>
 <context>
@@ -849,7 +854,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLFreqStruct.cpp" line="182"/>
         <source>Harmonics&apos; amplitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Амплитуда гармоник</translation>
     </message>
     <message>
         <location filename="../src/modules/GLFreqStruct.cpp" line="33"/>
@@ -899,7 +904,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLSample.cpp" line="34"/>
         <source>Waveform</source>
-        <translation type="unfinished"></translation>
+        <translation>Форма волны</translation>
     </message>
     <message>
         <location filename="../src/modules/GLSample.cpp" line="43"/>
