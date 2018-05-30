@@ -77,7 +77,7 @@ int main(int argc, char** argv)
     #ifdef Q_OS_WIN32
         QString trPath = QCoreApplication::applicationDirPath()+"/";
     #else
-        QString trPath = fmitprefix + QString("/share/fmit/tr");
+        QString trPath = fmitprefix + QString("/share/fmit/translations");
     #endif
     cout << "INFO: Loading FMIT translation file: " << trFile.toLatin1().constData() << " in " << trPath.toLatin1().constData() << endl;
     fmitTranslator.load(trFile, trPath);

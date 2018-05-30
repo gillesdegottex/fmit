@@ -265,7 +265,7 @@ linux {
 # Installation configurations --------------------------------------------------
 scales.path = $$PREFIX/share/fmit/scales
 scales.files = scales/*
-translations.path = $$PREFIX/share/fmit/tr
+translations.path = $$PREFIX/share/fmit/translations
 translations.files = tr/*.qm
 target.path = $$PREFIX/bin
 shortcut.path = $$PREFIXSHORTCUT/share/applications
