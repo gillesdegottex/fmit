@@ -79,6 +79,7 @@
   <url type="faq">http://gillesdegottex.github.io/fmit/faq.html</url>
   <developer_name>Gilles Degottex</developer_name>
   <updatecontact>gilles.degottex@gmail.com</updatecontact>
+  <translation type="qt">fmit</translation>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>
