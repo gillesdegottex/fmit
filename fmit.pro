@@ -246,12 +246,14 @@ QMAKE_EXTRA_TARGETS += lrelease
 linux {
     appdata_po.target = $$OUT_PWD/%.mo
     appdata_po.depends = $$PWD/%.po
-    appdata_po.commands = $$QMAKE_MKDIR_CMD $(dir $@) && msgfmt $< -o $@
+    appdata_po.commands = $$sprintf($$QMAKE_MKDIR_CMD, $(dir $@)) && msgfmt $< -o $@
     QMAKE_EXTRA_TARGETS += appdata_po
 
-    appdata_tr.depends = $$PWD/distrib/fmit.appdata.xml.in $(patsubst $$PWD/%.po,$$OUT_PWD/%.mo,$(wildcard $$PWD/distrib/appdata_tr/*.po))
+    APPDATA_MO = $(patsubst $$PWD/%.po,$$OUT_PWD/%.mo,$(wildcard $$PWD/distrib/appdata_tr/*.po))
+
+    appdata_tr.depends = $$PWD/distrib/fmit.appdata.xml.in $$APPDATA_MO
     appdata_tr.target = $$OUT_PWD/distrib/fmit.appdata.xml
-    appdata_tr.commands = $$sprintf($$QMAKE_MKDIR_CMD, $$OUT_PWD/distrib/) && itstool -j $$PWD/distrib/fmit.appdata.xml.in -o $@ $(wildcard $$OUT_PWD/distrib/appdata_tr/*.mo)
+    appdata_tr.commands = $$sprintf($$QMAKE_MKDIR_CMD, $$OUT_PWD/distrib/) && itstool -j $$PWD/distrib/fmit.appdata.xml.in -o $@ $$APPDATA_MO
     QMAKE_EXTRA_TARGETS += appdata_tr
     PRE_TARGETDEPS += $$appdata_tr.target
 } else {
