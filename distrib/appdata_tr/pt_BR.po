@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-05-20 02:13-0300\n"
+"POT-Creation-Date: 2018-05-30 18:52-0300\n"
 "PO-Revision-Date: 2018-05-30 16:22+0000\n"
 "Last-Translator: Davi da Silva Böger <dsboger@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/fmit/"
@@ -20,14 +20,18 @@ msgstr "FMIT"
 
 #. (itstool) path: application/summary
 #: fmit.appdata.xml.in:8
-msgid "Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument"
+msgid ""
+"Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument"
 msgstr ""
 "Afinador de Instrumentos Musicais Livre (FMIT), uma ferramenta para afinar "
 "instrumentos musicais"
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:10
-msgid "Find an estimation of the fundamental frequency (f0, not the perceived pitch) of an audio signal, in real-time, and compare it with the closest note in the scale."
+msgid ""
+"Find an estimation of the fundamental frequency (f0, not the perceived "
+"pitch) of an audio signal, in real-time, and compare it with the closest "
+"note in the scale."
 msgstr ""
 "Descubra a frequência fundamental estimada (f0, não a altura percebida) de "
 "um sinal de áudio, em tempo real, e a comparação com a nota mais próxima da "
@@ -35,7 +39,11 @@ msgstr ""
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:15
-msgid "Tune your musical instruments with advanced features, including traces of frequency and volume, adjustable base tuning frequency, multiple choices of tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and meantone), microtonal tuning with Scala file (.scl) support and statistics."
+msgid ""
+"Tune your musical instruments with advanced features, including traces of "
+"frequency and volume, adjustable base tuning frequency, multiple choices of "
+"tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and "
+"meantone), microtonal tuning with Scala file (.scl) support and statistics."
 msgstr ""
 "Afine seus instrumentos musicais usando funções avançadas, incluindo "
 "históricos de frequência e volume, frequência base de afinação ajustável, "
@@ -45,7 +53,10 @@ msgstr ""
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:21
-msgid "Perform real-time sound analysis with views for waveform period, harmonics amplitude and Discrete Fourier Transform (DFT). Change various analysis parameters and tradeoff between precision and speed."
+msgid ""
+"Perform real-time sound analysis with views for waveform period, harmonics "
+"amplitude and Discrete Fourier Transform (DFT). Change various analysis "
+"parameters and tradeoff between precision and speed."
 msgstr ""
 "Faça análise de som em tempo real, com visualização do período de forma de "
 "onda, amplitude de harmônicos e Transformada Discreta de Fourier (DFT). "
@@ -59,7 +70,9 @@ msgstr ""
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:29
-msgid "Show or hide individual panels and go from a simple analog tuner view to an advanced real-time analysis toolset, or anywhere in between."
+msgid ""
+"Show or hide individual panels and go from a simple analog tuner view to an "
+"advanced real-time analysis toolset, or anywhere in between."
 msgstr ""
 "Mostre ou esconda painéis individuais e vá de uma visão simples de afinador "
 "analógico até um conjunto avançado de ferramentas de análise em tempo real, "
@@ -121,33 +134,56 @@ msgid "Gilles Degottex"
 msgstr "Gilles Degottex"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:115
+#: fmit.appdata.xml.in:116
 msgid "New note names: Hindustani, Byzantine"
 msgstr "Novos nomes da nota: Hindustânis, Bizantinos"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:116
+#: fmit.appdata.xml.in:117
 msgid "Use unicode flat and sharp signs"
 msgstr "Uso de sinais unicode para bemol e sustenido"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:117
-msgid "Use custom save settings and pause icons that better fits the other icons design"
+#: fmit.appdata.xml.in:118
+msgid ""
+"Use custom save settings and pause icons that better fits the other icons "
+"design"
 msgstr ""
 "Uso de ícones de salvar configurações e pausar que combina melhor com os "
 "demais ícones"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:124
+#: fmit.appdata.xml.in:119
+msgid "Flexible transposition key selection."
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:120
+msgid "Added symbolic icon for high-contrast setup."
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:121
+msgid ""
+"Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/"
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:122
+msgid "Added translation for application information."
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:129
 msgid "New icons"
 msgstr "Novos ícones"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:125
+#: fmit.appdata.xml.in:130
 msgid "Added F tonality"
 msgstr "Adicionada tonalidade em Fá"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:126
+#: fmit.appdata.xml.in:131
 msgid "Fixed graphical glitches"
 msgstr "Corrigidas anomalias gráficas"
