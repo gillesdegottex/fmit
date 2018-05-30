@@ -110,12 +110,16 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
-    <release version="1.2.1" date="2018-05-14">
+    <release version="1.2.6" date="2018-05-30">
       <description>
         <ul>
           <li>New note names: Hindustani, Byzantine</li>
           <li>Use unicode flat and sharp signs</li>
           <li>Use custom save settings and pause icons that better fits the other icons design</li>
+          <li>Flexible transposition key selection.</li>
+          <li>Added symbolic icon for high-contrast setup.</li>
+          <li>Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/</li>
+          <li>Added translation for application information.</li>
         </ul>
       </description>
     </release>

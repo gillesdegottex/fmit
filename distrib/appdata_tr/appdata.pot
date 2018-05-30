@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-05-20 02:13-0300\n"
+"POT-Creation-Date: 2018-05-30 14:56-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,32 +100,52 @@ msgid "Gilles Degottex"
 msgstr ""
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:115
+#: fmit.appdata.xml.in:116
 msgid "New note names: Hindustani, Byzantine"
 msgstr ""
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:116
+#: fmit.appdata.xml.in:117
 msgid "Use unicode flat and sharp signs"
 msgstr ""
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:117
+#: fmit.appdata.xml.in:118
 msgid "Use custom save settings and pause icons that better fits the other icons design"
 msgstr ""
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:124
+#: fmit.appdata.xml.in:119
+msgid "Flexible transposition key selection."
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:120
+msgid "Added symbolic icon for high-contrast setup."
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:121
+msgid "Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/"
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:122
+msgid "Added translation for application information."
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:129
 msgid "New icons"
 msgstr ""
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:125
+#: fmit.appdata.xml.in:130
 msgid "Added F tonality"
 msgstr ""
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:126
+#: fmit.appdata.xml.in:131
 msgid "Fixed graphical glitches"
 msgstr ""
 
