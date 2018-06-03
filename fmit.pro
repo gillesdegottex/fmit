@@ -45,7 +45,7 @@ isEmpty(PREFIX){
 unix:DEFINES += PREFIX=$$PREFIX
 # To place the shortcut in the proper folder
 isEmpty(PREFIXSHORTCUT){
-    PREFIXSHORTCUT = /usr
+    PREFIXSHORTCUT = $$PREFIX
 }
 
 # Manage Architectures
