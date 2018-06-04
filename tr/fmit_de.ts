@@ -6,22 +6,22 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="14"/>
         <source>About FMIT...</source>
-        <translation type="unfinished"></translation>
+        <translation>Über FMIT...</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="28"/>
         <source>About</source>
-        <translation type="unfinished">Über</translation>
+        <translation>Über</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="88"/>
         <source>FMIT</source>
-        <translation type="unfinished"></translation>
+        <translation>FMIT</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="98"/>
         <source>&lt;version&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;version&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="123"/>
@@ -35,7 +35,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/aboutbox.ui" line="143"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Beitragende</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="158"/>
@@ -276,7 +276,7 @@ Wird verwendet um Tonnamen auf ein bestimmtes Instrument umzusetzen (z.B. Eb fü
     <message>
         <location filename="../ui/ConfigForm.ui" line="198"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="203"/>
@@ -400,7 +400,7 @@ Verwenden Sie keine zu hohe Abtastrate. 22050Hz sollten in den meisten Fällen a
     <message>
         <location filename="../ui/ConfigForm.ui" line="787"/>
         <source>Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="916"/>
@@ -523,7 +523,7 @@ Je geringer der Wert, desto schneller das Stimmgerät. Jedoch wird die berechnet
     <message>
         <location filename="../ui/ConfigForm.ui" line="128"/>
         <source>Transposition</source>
-        <translation type="unfinished"></translation>
+        <translation>Transponierung</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="238"/>
@@ -532,7 +532,11 @@ Je geringer der Wert, desto schneller das Stimmgerät. Jedoch wird die berechnet
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
 &lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options, right-click every view to show up their properties!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Weitere Optionen sind mittels Rechtsklick zugängig!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="947"/>
@@ -687,34 +691,37 @@ Sollen Ihre aktuellen Einstellungen verworfen werden?</translation>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1174"/>
         <source>Transposition in number of semitones relative to %1.
 Useful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).</source>
-        <translation type="unfinished"></translation>
+        <translation>Transposition in Halbtönen relativ zu %1.
+Nützlich um Notennamen für ein transponierendes Instrument umzuwandeln (z.B. %2 für Saxofon, %3 für Trompete).</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1187"/>
         <source>The base tunning frequency (the %1 frequency)</source>
-        <translation type="unfinished"></translation>
+        <translation>Die grundlegende Stimmungsfrequenz (die %1 Frequenz)</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1194"/>
         <source>Allows to add an offset to the reference %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ermöglicht eine Verschiebung zur Referenz %1</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1198"/>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tonumfang von der tiefsten zur höchsten Note um die Referenznote %1.
+Je geringer der Umfang, desto geringer ist die CPU-Belastung.</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1203"/>
         <source>Lowest semitone from the %1 reference note.
 It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiefster Halbton von der Referenznote %2.
+Ein Wert oberhalb von -35 kann zur Vermeidung von Störeinflüssen aufgrund der 50Hz-Wechselstrom-Netzfrequenz hilfreich sein.</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1210"/>
         <source>Highest semitone from the %1 reference note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Höchster Halbton von der Referenznote %1 aus.</translation>
     </message>
 </context>
 <context>
@@ -838,7 +845,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLFreqStruct.cpp" line="182"/>
         <source>Harmonics&apos; amplitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Oberton-Amplitude</translation>
     </message>
     <message>
         <location filename="../src/modules/GLFreqStruct.cpp" line="33"/>
@@ -888,7 +895,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLSample.cpp" line="34"/>
         <source>Waveform</source>
-        <translation type="unfinished"></translation>
+        <translation>Wellenform</translation>
     </message>
     <message>
         <location filename="../src/modules/GLSample.cpp" line="43"/>
@@ -904,7 +911,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLSample.cpp" line="127"/>
         <source>Waveform&apos;s period</source>
-        <translation type="unfinished"></translation>
+        <translation>Wellenform-Periode</translation>
     </message>
 </context>
 <context>
@@ -1242,12 +1249,12 @@ Grün: Ein Ton wird analysiert und die Analysebedingungen sind gut.</translation
     <message>
         <location filename="../src/CaptureThread.cpp" line="368"/>
         <source>default</source>
-        <translation type="unfinished">default</translation>
+        <translation>Voreinstellung</translation>
     </message>
     <message>
         <location filename="../src/modules/View.cpp" line="86"/>
         <source>%1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1</translation>
     </message>
 </context>
 </TS>
