@@ -1,0 +1,151 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-05-30 18:52-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. (itstool) path: application/name
+#: fmit.appdata.xml.in:7
+msgid "FMIT"
+msgstr ""
+
+#. (itstool) path: application/summary
+#: fmit.appdata.xml.in:8
+msgid "Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument"
+msgstr ""
+
+#. (itstool) path: description/p
+#: fmit.appdata.xml.in:10
+msgid "Find an estimation of the fundamental frequency (f0, not the perceived pitch) of an audio signal, in real-time, and compare it with the closest note in the scale."
+msgstr ""
+
+#. (itstool) path: description/p
+#: fmit.appdata.xml.in:15
+msgid "Tune your musical instruments with advanced features, including traces of frequency and volume, adjustable base tuning frequency, multiple choices of tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and meantone), microtonal tuning with Scala file (.scl) support and statistics."
+msgstr ""
+
+#. (itstool) path: description/p
+#: fmit.appdata.xml.in:21
+msgid "Perform real-time sound analysis with views for waveform period, harmonics amplitude and Discrete Fourier Transform (DFT). Change various analysis parameters and tradeoff between precision and speed."
+msgstr ""
+
+#. (itstool) path: description/p
+#: fmit.appdata.xml.in:26
+msgid "Choose between multiple sound capture systems, including ALSA and JACK."
+msgstr ""
+
+#. (itstool) path: description/p
+#: fmit.appdata.xml.in:29
+msgid "Show or hide individual panels and go from a simple analog tuner view to an advanced real-time analysis toolset, or anywhere in between."
+msgstr ""
+
+#. (itstool) path: screenshot/caption
+#: fmit.appdata.xml.in:37
+msgid "Volume view and previous notes"
+msgstr ""
+
+#. (itstool) path: screenshot/caption
+#: fmit.appdata.xml.in:41
+msgid "Simplest view"
+msgstr ""
+
+#. (itstool) path: screenshot/caption
+#: fmit.appdata.xml.in:45
+msgid "Microtonal view"
+msgstr ""
+
+#. (itstool) path: screenshot/caption
+#: fmit.appdata.xml.in:49
+msgid "Statistics view"
+msgstr ""
+
+#. (itstool) path: screenshot/caption
+#: fmit.appdata.xml.in:53
+msgid "Waveform view"
+msgstr ""
+
+#. (itstool) path: screenshot/caption
+#: fmit.appdata.xml.in:57
+msgid "Harmonics view"
+msgstr ""
+
+#. (itstool) path: screenshot/caption
+#: fmit.appdata.xml.in:61
+msgid "Fourier transform view"
+msgstr ""
+
+#. (itstool) path: screenshot/caption
+#: fmit.appdata.xml.in:65
+msgid "General settings"
+msgstr ""
+
+#. (itstool) path: screenshot/caption
+#: fmit.appdata.xml.in:69
+msgid "Capture systems settings"
+msgstr ""
+
+#. (itstool) path: screenshot/caption
+#: fmit.appdata.xml.in:73
+msgid "Sound analysis settings"
+msgstr ""
+
+#. (itstool) path: application/developer_name
+#: fmit.appdata.xml.in:80
+msgid "Gilles Degottex"
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:116
+msgid "New note names: Hindustani, Byzantine"
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:117
+msgid "Use unicode flat and sharp signs"
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:118
+msgid "Use custom save settings and pause icons that better fits the other icons design"
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:119
+msgid "Flexible transposition key selection."
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:120
+msgid "Added symbolic icon for high-contrast setup."
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:121
+msgid "Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/"
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:122
+msgid "Added translation for application information."
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:129
+msgid "New icons"
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:130
+msgid "Added F tonality"
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:131
+msgid "Fixed graphical glitches"
+msgstr ""
