@@ -281,12 +281,12 @@ Wird verwendet um Tonnamen auf ein bestimmtes Instrument umzusetzen (z.B. Eb fü
     <message>
         <location filename="../ui/ConfigForm.ui" line="203"/>
         <source>Hindustani</source>
-        <translation type="unfinished"></translation>
+        <translation>Swara-Natation</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="208"/>
         <source>Byzantine</source>
-        <translation type="unfinished"></translation>
+        <translation>Byzantinische Notation</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="274"/>
