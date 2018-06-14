@@ -475,7 +475,7 @@ latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Transposition</source>
-        <translation type="unfinished"></translation>
+        <translation>Transposition</translation>
     </message>
 </context>
 <context>
@@ -511,21 +511,24 @@ Utile pour convertir des noms de note vers une tonalité d&apos;instrument corre
     <message>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gamme de notes possibles depuis la plus basse jusqu&apos;à la plus haute autour de la note de référence %1.
+Plus petite est la gamme, plus petite est la consommation processeur.</translation>
     </message>
     <message>
         <source>Lowest semitone from the %1 reference note.
 It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
-        <translation type="unfinished"></translation>
+        <translation>Demi-ton le plus bas à partir de la note de référence %1.
+Ça peut être utile de la mettre au dessus de -35 pour éviter un parasitage provenant de l&apos;alimentation du secteur (~50hz).</translation>
     </message>
     <message>
         <source>Highest semitone from the %1 reference note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Demi-ton le plus haut à partir de la note de référence %1.</translation>
     </message>
     <message>
         <source>Transposition in number of semitones relative to %1.
 Useful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).</source>
-        <translation type="unfinished"></translation>
+        <translation>Transposition en nombre de demi-ton relatif à %1.
+Utile pour convertir les noms de note vers une correspondance de transposition d&apos;instrument (ex : %2 pour un saxophone, %3 pour une trompette).</translation>
     </message>
 </context>
 <context>
