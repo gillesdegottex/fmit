@@ -1054,7 +1054,7 @@ p</source>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="284"/>
         <source> cents</source>
-        <translation></translation>
+        <translation> Cent</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="348"/>
