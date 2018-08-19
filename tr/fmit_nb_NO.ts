@@ -6,12 +6,12 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="14"/>
         <source>About FMIT...</source>
-        <translation></translation>
+        <translation type="unfinished">Om FMIT…</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="28"/>
         <source>About</source>
-        <translation></translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="88"/>
@@ -35,7 +35,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/aboutbox.ui" line="143"/>
         <source>Credits</source>
-        <translation></translation>
+        <translation>Bidragsytere</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="158"/>
@@ -186,7 +186,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="689"/>
         <location filename="../ui/ConfigForm.ui" line="801"/>
         <source>Device name</source>
-        <translation></translation>
+        <translation>Enhetsnavn</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="542"/>
@@ -287,7 +287,7 @@ latin: Do Re Mi Fa Sol La Si</source>
     <message>
         <location filename="../ui/ConfigForm.ui" line="280"/>
         <source>The capture system</source>
-        <translation></translation>
+        <translation>Opptakssystem</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="287"/>
@@ -335,7 +335,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="470"/>
         <location filename="../ui/ConfigForm.ui" line="473"/>
         <source>The name of the ALSA device to use.</source>
-        <translation></translation>
+        <translation>Navnet på ALSA-enheten å bruke:</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="487"/>
@@ -394,7 +394,7 @@ Do not use a too big sampling rate. 22050Hz should be enough in most cases.</sou
     <message>
         <location filename="../ui/ConfigForm.ui" line="916"/>
         <source>Sound Analysis</source>
-        <translation></translation>
+        <translation>Lydanalyse</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="924"/>
@@ -521,7 +521,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="1062"/>
         <source>Algorithm</source>
-        <translation></translation>
+        <translation>Algoritme</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1108"/>
