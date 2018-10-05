@@ -5,19 +5,19 @@
     <name>AboutBox</name>
     <message>
         <source>About FMIT...</source>
-        <translation type="unfinished"></translation>
+        <translation>Σχετικά με το FMIT...</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished">Σχετικά</translation>
+        <translation>Σχετικά</translation>
     </message>
     <message>
         <source>FMIT</source>
-        <translation type="unfinished"></translation>
+        <translation>FMIT</translation>
     </message>
     <message>
         <source>&lt;version&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;έκδοση&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -25,11 +25,15 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Έπαινοι</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -43,7 +47,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling for the scales in cents&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Τα περισσότερα λογισμικά ανοιχτού κώδικα θα ήταν ακατόρθωτα χωρίς τις έμμεσες συνεισφορές που παρέχονται μέσω των βιβλιοθηκών. Έτσι, μεγάλα ευχαριστώ στους ακόλουθους geeks:&lt;br /&gt;&lt;br /&gt;- dsboger για τις τόσο πολλές μικρές και χρήσιμες αλλαγές, ενημερώσεις, πακετάρισμα, κλπ.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Florian Hars για τις κλίμακες συντονισμού&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Arnout Engelen για θα θέματα του JACK&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- John Anderson για την ιδέα του microtonal module&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling για τις κλίμακες σε cents&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro για την βοήθεια του να μπορέσει το FMIT να λειτουργήσει κάτω από Windows/Cygwin.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Ρωσσικά), skarmoutsosv (Ελληνικά), Pindaro and dsboger (Πορτογαλικά και Πορτογαλικά Βραζιλίας), Florian Maier (Γερμανικά).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; για το Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team για την βιβλιοθήκη GUI.&lt;br /&gt;&lt;br /&gt;Οποιαδήποτε συνεισφορά οποιουδήποτε είδους είναι καλοδεχούμενη!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -162,7 +176,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Meantone (1/4)</source>
-        <translation></translation>
+        <translation>Μεσοτονικό (1/4)</translation>
     </message>
     <message>
         <source>Use anglo-saxon or latin note names:
@@ -218,7 +232,7 @@ latin: Do Re Mi Fa Sol La Si</source>
     </message>
     <message>
         <source> ms</source>
-        <translation>ms</translation>
+        <translation> ms</translation>
     </message>
     <message>
         <source>Rectangular filter: bad precision, but very fast</source>
@@ -226,7 +240,7 @@ latin: Do Re Mi Fa Sol La Si</source>
     </message>
     <message>
         <source>FIR filter: good precision, but more costly in CPU usage</source>
-        <translation>Φίλτρο FIR: καλή ακρίβεια, αλλά χρησιμοποιεί περισσότερο την CPU.</translation>
+        <translation>Φίλτρο FIR: καλή ακρίβεια, αλλά χρησιμοποιεί περισσότερο την CPU</translation>
     </message>
     <message>
         <source>Algorithm settings</source>
@@ -234,7 +248,7 @@ latin: Do Re Mi Fa Sol La Si</source>
     </message>
     <message>
         <source> dB</source>
-        <translation>dB</translation>
+        <translation> dB</translation>
     </message>
     <message>
         <source>Use sub-harmonic audibility threshold</source>
@@ -362,7 +376,8 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <source>Ignore all sounds with volume below this threshold [dB]
 (Shown as a red line in various views)</source>
-        <translation>Αγνόηση όλων των ήχων με ένταση κάτω από αυτό το κατώφλι [dB].</translation>
+        <translation>Αγνόηση όλων των ήχων με ένταση κάτω από αυτό το κατώφλι [dB].
+(Εμφανίζεται ως κόκκινη γραμμή σε διάφορες προβολές)</translation>
     </message>
     <message>
         <source>Ignore weak sub-harmonics.
@@ -383,7 +398,7 @@ The bigger this factor, the more stable the analysis. However, by increasing thi
     </message>
     <message>
         <source>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</source>
-        <translation>Χρήση μεθόδου βελτίωσης στο πεδίο χρόνου: υπολογισμός του μέσου από μήκη διαφόρων περιόδων (επιτρέπει την επιλογή του αριθμού περιόδων που θα χρησιμοποιηθούν). </translation>
+        <translation>Χρήση μεθόδου βελτίωσης στο πεδίο χρόνου: υπολογισμός του μέσου από μήκη διαφόρων περιόδων (επιτρέπει την επιλογή του αριθμού περιόδων που θα χρησιμοποιηθούν).</translation>
     </message>
     <message>
         <source>Quantize the analysis results: ignore frequency jumps, fill gaps, ignore short notes.
@@ -401,7 +416,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
     </message>
     <message>
         <source>Discard any changes and quit the configuration panel</source>
-        <translation>Απόρριψη οποιονδήποτε αλλαγών και εγκατάλειψη του παραθύρου διαμόρφωσης.</translation>
+        <translation>Απόρριψη οποιονδήποτε αλλαγών και εγκατάλειψη του παραθύρου διαμόρφωσης</translation>
     </message>
     <message>
         <source>The capture system (e.g. JACK, ALSA, OSS, PortAudio)</source>
@@ -413,15 +428,15 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
     </message>
     <message>
         <source>Chromatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρωματική</translation>
     </message>
     <message>
         <source>Diatonic</source>
-        <translation type="unfinished"></translation>
+        <translation>Διατονική</translation>
     </message>
     <message>
         <source>Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -429,29 +444,35 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
 &lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options, right-click every view to show up their properties!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Για περισσότερες επιλογές, κάντε δεξί κλικ σε κάθε προβολή για να εμφανιστούν οι ιδιότητες τους!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Γερμανικά</translation>
     </message>
     <message>
         <source>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση τοπικοποιημένων ονομάτων νοτών. π.χ.:
+αγγλο-σαξονικό: C D E F G A B
+λατινικό: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Hindustani</source>
-        <translation type="unfinished"></translation>
+        <translation>Ινδουστανική</translation>
     </message>
     <message>
         <source>Byzantine</source>
-        <translation type="unfinished"></translation>
+        <translation>Βυζαντινή</translation>
     </message>
     <message>
         <source>Transposition</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετατόπιση</translation>
     </message>
 </context>
 <context>
@@ -472,30 +493,33 @@ Are you sure you want to lose all your current settings ?</source>
     </message>
     <message>
         <source>The base tunning frequency (the %1 frequency)</source>
-        <translation type="unfinished"></translation>
+        <translation>Η βασική συχνότητα συντονισμού (η συχνότητα %1)</translation>
     </message>
     <message>
         <source>Allows to add an offset to the reference %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιτρέπει να προστεθεί μια μετατόπιση στην αναφορά %1</translation>
     </message>
     <message>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation type="unfinished"></translation>
+        <translation>Εύρος από πιθανές νότες, από την χαμηλότερη στην υψηλότερη γύρω από την νότα αναφοράς %1.
+Μικρότερο εύρος αντιστοιχεί σε μικρότερη χρήση CPU.</translation>
     </message>
     <message>
         <source>Lowest semitone from the %1 reference note.
 It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
-        <translation type="unfinished"></translation>
+        <translation>Χαμηλότερο ημιτόνιο από την νότα αναφοράς %1.
+Μπορεί να είναι χρήσιμο να είναι υψηλότερο από -35 για αποφυγή διαταραχής από τροφοδοσία τομέα (~50Hz).</translation>
     </message>
     <message>
         <source>Highest semitone from the %1 reference note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Υψηλότερο ημιτόνιο από την νότα αναφοράς %1.</translation>
     </message>
     <message>
         <source>Transposition in number of semitones relative to %1.
 Useful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετατόπιση σε αριθμό ημιτονίων σε σχέση με %1.
+Χρήσιμο για τη μετατροπή ονομάτων νοτών σε αντίστοιχο όργανο μετατόπισης (π.χ. %2 για σαξόφωνο, %3 για τρομπέτα).</translation>
     </message>
 </context>
 <context>
@@ -522,7 +546,7 @@ Useful to convert note names to a corresponding transposing instrument (e.g. %2 
     </message>
     <message>
         <source>Dial</source>
-        <translation></translation>
+        <translation>Καντράν</translation>
     </message>
 </context>
 <context>
@@ -599,7 +623,7 @@ Useful to convert note names to a corresponding transposing instrument (e.g. %2 
     </message>
     <message>
         <source>Harmonics&apos; amplitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλάτος αρμονικών</translation>
     </message>
 </context>
 <context>
@@ -641,11 +665,11 @@ Useful to convert note names to a corresponding transposing instrument (e.g. %2 
     </message>
     <message>
         <source>Waveform</source>
-        <translation type="unfinished"></translation>
+        <translation>Κυματομορφή</translation>
     </message>
     <message>
         <source>Waveform&apos;s period</source>
-        <translation type="unfinished"></translation>
+        <translation>Περίοδος κυματομορφής</translation>
     </message>
 </context>
 <context>
@@ -857,7 +881,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     </message>
     <message>
         <source>Invoke the about box.</source>
-        <translation></translation>
+        <translation>Επίκληση του παραθύρου Σχετικά.</translation>
     </message>
 </context>
 <context>
@@ -900,26 +924,26 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     </message>
     <message>
         <source>&lt;b&gt;name:&lt;/b&gt; </source>
-        <translation>&lt;b&gt;όνομα:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;όνομα:&lt;/b&gt; </translation>
     </message>
     <message>
         <source>&lt;b&gt;number of ratio:&lt;/b&gt; </source>
-        <translation>&lt;b&gt;αριμός αναλογίας:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;αριθμός αναλογίας:&lt;/b&gt; </translation>
     </message>
     <message>
         <source>Invalid Scala file: </source>
-        <translation>Άκυρο αρχείο κλίμακας:</translation>
+        <translation>Άκυρο αρχείο κλίμακας: </translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>default</source>
-        <translation type="unfinished">default</translation>
+        <translation>προκαθορισμένο</translation>
     </message>
     <message>
         <source>%1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1</translation>
     </message>
 </context>
 </TS>
