@@ -30,7 +30,11 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="143"/>
@@ -50,7 +54,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling for the scales in cents&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0///EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: Vorverpackung; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Die meisten Open-Source-Softwareprogramme sind ohne indirekte Beiträge aus Bibliotheken nicht möglich. Also, vielen Dank an die folgenden Geeks:&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;- dsboger für so viele kleine und nützliche Änderungen, Updates, Verpackungen, etc.
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Florian Hars für die Stimmskalen&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Arnout Engelen für die JACK Ausgaben&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- John Anderson für die mikrotonale Modulidee&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling für die Skalen in Cent&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro für seine Hilfe, FMIT unter Windows/Cygwin zu funktionieren.
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Übersetzer: Omega9 (russisch), skarmoutsosv (griechisch), Pindaro und dsboger (portugiesisches und brasilianisches Portugiesisch), Florian Maier (deutsch).&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; Text-Dekoration: unterstrichen; Farbe:#000000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; für die sehr schnelle Fourier-Transformation.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; Text-Dekoration: unterstrichen; Farbe:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s Team für die GUI-Bibliothek.&lt;br /&gt;&lt;br /&lt;br /&gt;&lt;br /&gt;Alle Beiträge jeglicher Art sind sehr willkommen!&lt;/p&gt;&lt;/body&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -186,7 +200,9 @@ Romanisch: Do Re Mi Fa Sol La Si</translation>
         <source>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwenden Sie lokalisierte Notennamen, z.B:
+angelsächsisch: C D E F G A B
+Latein: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="457"/>
@@ -1016,7 +1032,7 @@ Ein Wert oberhalb von -35 kann zur Vermeidung von Störeinflüssen aufgrund der 
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="14"/>
         <source>Free Music Instrument Tuner</source>
-        <translation></translation>
+        <translation>Kostenloser Musikinstrumentenstimmer</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="55"/>
@@ -1154,7 +1170,7 @@ Grün: Ein Ton wird analysiert und die Analysebedingungen sind gut.</translation
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="453"/>
         <source>Space</source>
-        <translation></translation>
+        <translation>Leertaste</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="465"/>
