@@ -73,12 +73,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Raise the window to the whole screen when the program is started
 (You can also use the shortcut &apos;f&apos;).</source>
-        <translation>Expandir a janela para ocupar a tela toda quando o programa é iniciado.
+        <translation>Expandir a janela para ocupar o ecrã todo quando o programa é iniciado.
 (Pode-se usar o atalho &apos;f&apos;).</translation>
     </message>
     <message>
         <source>Start in full-screen</source>
-        <translation>Iniciar em modo tela cheia</translation>
+        <translation>Iniciar em modo ecrã cheio</translation>
     </message>
     <message>
         <source>Auto-save configuration and layout on exit</source>
