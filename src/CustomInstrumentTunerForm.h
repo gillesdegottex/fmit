@@ -140,6 +140,7 @@ public slots:
     virtual void configure_cancel();
 	virtual void restoreFactorySettings();
 	virtual void noteRangeChanged();
+	virtual void transpositionChanged();
 	virtual void selectTransport(const QString & name);
 	virtual void autoDetectTransport();
 	void refresh();

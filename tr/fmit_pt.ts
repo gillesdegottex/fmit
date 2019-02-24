@@ -5,19 +5,19 @@
     <name>AboutBox</name>
     <message>
         <source>About FMIT...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre o FMIT...</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre</translation>
     </message>
     <message>
         <source>FMIT</source>
-        <translation type="unfinished"></translation>
+        <translation>FMIT</translation>
     </message>
     <message>
         <source>&lt;version&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;versão&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -25,11 +25,15 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Créditos</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -43,147 +47,154 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling for the scales in cents&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;A maioria do software de código aberto seria impossível sem contribuições indiretas na forma de bibliotecas. Por isso, muito obrigado aos seguintes geeks:&lt;br /&gt;&lt;br /&gt;- dsboger por tantas pequenas e úteis modificações, atualizações, empacotamento, etc.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Florian Hars pelas escalas de afinação&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Arnout Engelen pelas questões relacionadas a JACK&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- John Anderson pela ideia do módulo microtonal&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling pelas escalas em cents&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro pela ajuda em fazer o FMIT funcionar no Windows/Cygwin.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Tradutores: Omega9 (russo), skarmoutsosv (grego), Pindaro and dsboger (português de Portugal e do Brasil), Florian Maier (alemão).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Equipe FFTW3&lt;/span&gt;&lt;/a&gt; pela Transformada (muito) Rápida de Fourier.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Equipe Qt&lt;/span&gt;&lt;/a&gt; pela biblioteca de interface gráfica.&lt;br /&gt;&lt;br /&gt;Qualquer tipo de contribuição é muito bem-vinda!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>ConfigForm</name>
     <message>
         <source>Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuração</translation>
     </message>
     <message>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Geral</translation>
     </message>
     <message>
         <source>Raise the window to the whole screen when the program is started
 (You can also use the shortcut &apos;f&apos;).</source>
-        <translation type="unfinished"></translation>
+        <translation>Expandir a janela para ocupar o ecrã todo quando o programa é iniciado.
+(Pode-se usar o atalho &apos;f&apos;).</translation>
     </message>
     <message>
         <source>Start in full-screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciar em modo ecrã cheio</translation>
     </message>
     <message>
         <source>Auto-save configuration and layout on exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar configuração e layout automaticamente ao sair</translation>
     </message>
     <message>
         <source>The used tuning scale to determine note frequency values. Useful for tuning historic intruments.</source>
-        <translation type="unfinished"></translation>
+        <translation>Escala de afinação usada para determinar o valor das frequências das notas. Útil para afinar instrumentos históricos.</translation>
     </message>
     <message>
         <source>Tuning scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Escala de afinação</translation>
     </message>
     <message>
         <source>Chromatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Cromática</translation>
     </message>
     <message>
         <source>Werckmeister III</source>
-        <translation type="unfinished"></translation>
+        <translation>Werckmeister III</translation>
     </message>
     <message>
         <source>Kirnberger III</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirnberger III</translation>
     </message>
     <message>
         <source>Diatonic</source>
-        <translation type="unfinished"></translation>
+        <translation>Diatônica</translation>
     </message>
     <message>
         <source>Meantone (1/4)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tonality</source>
-        <translation type="unfinished"></translation>
+        <translation>Mesotônica (1/4)</translation>
     </message>
     <message>
         <source>Note names</source>
-        <translation type="unfinished"></translation>
+        <translation>Nomes das notas</translation>
     </message>
     <message>
         <source>Anglo-Saxon</source>
-        <translation type="unfinished"></translation>
+        <translation>Anglo-saxônicos</translation>
     </message>
     <message>
         <source>Latin</source>
-        <translation type="unfinished"></translation>
+        <translation>Latinos</translation>
     </message>
     <message>
         <source>Capture System</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistema de captura</translation>
     </message>
     <message>
         <source>The capture system (e.g. JACK, ALSA, OSS, PortAudio)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistema de captura (p.ex. JACK, ALSA, OSS, PortAudio)</translation>
     </message>
     <message>
         <source>The capture system</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistema de captura</translation>
     </message>
     <message>
         <source>Selected the capture system (e.g. JACK, ALSA, OSS, PortAudio)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistema de captura selecionado (p.ex. JACK, ALSA, OSS, PortAudio)</translation>
     </message>
     <message>
         <source>Auto detect a working capture system at FMIT startup.</source>
-        <translation type="unfinished"></translation>
+        <translation>Detectar um sistema de captura funcional automaticamente ao inciar FMIT.</translation>
     </message>
     <message>
         <source>Auto-detect an available capture system at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Detectar sistema de captura automaticamente ao inciar</translation>
     </message>
     <message>
         <source>Auto detect now</source>
-        <translation type="unfinished"></translation>
+        <translation>Detectar agora</translation>
     </message>
     <message>
         <source>JACK</source>
-        <translation type="unfinished"></translation>
+        <translation>JACK</translation>
     </message>
     <message>
         <source>The name of this FMIT instance in the JACK connections.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome dessa instância de FMIT nas conexões do JACK.</translation>
     </message>
     <message>
         <source>Client name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do cliente</translation>
     </message>
     <message>
         <source>fmit</source>
-        <translation type="unfinished"></translation>
+        <translation>fmit</translation>
     </message>
     <message>
         <source>Automatically connect FMIT to the following source at startup (e.g. alsa_pcm:capture_1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Conectar FMIT à fonte a seguir automaticamente ao iniciar (p.ex. alsa_pcm:capture_1)</translation>
     </message>
     <message>
         <source>automaticaly connect to...</source>
-        <translation type="unfinished"></translation>
+        <translation>conectar automaticamente a...</translation>
     </message>
     <message>
         <source>Sampling rate of the JACK server</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de amostragem do servidor JACK</translation>
     </message>
     <message>
         <source>JACK sampling rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de amostragem do JACK</translation>
     </message>
     <message>
         <source>ALSA</source>
-        <translation type="unfinished"></translation>
+        <translation>ALSA</translation>
     </message>
     <message>
         <source>The name of the ALSA device to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do dispositivo ALSA para usar.</translation>
     </message>
     <message>
         <source>Device name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do dispositivo</translation>
     </message>
     <message>
         <source>default</source>
@@ -192,199 +203,208 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>The chosen sampling rate.
 Do not use a too big sampling rate. 22050Hz should be enough in most cases.</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de amostragem escolhida.
+Não use uma taxa de amostragem muito alta. 22050Hz deve ser suficiente na maioria dos casos.</translation>
     </message>
     <message>
         <source>Sampling rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de amostragem</translation>
     </message>
     <message>
         <source>Set the sampling rate to the maximum possible value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajusta a taxa de amostragem para o maior valor possível.</translation>
     </message>
     <message>
         <source>set to max</source>
-        <translation type="unfinished"></translation>
+        <translation>escolher máximo</translation>
     </message>
     <message>
         <source>Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.</source>
-        <translation type="unfinished"></translation>
+        <translation>Não use uma taxa de amostragem muito alta. 22050Hz deve ser suficiente na maioria dos casos.</translation>
     </message>
     <message>
         <source>Mix channels if there are multiple (if unchecked, the first channel will be used)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mixar canais se houver múltiplos deles (se desmarcado, o primeiro canal será usado)</translation>
     </message>
     <message>
         <source>OSS</source>
-        <translation type="unfinished"></translation>
+        <translation>OSS</translation>
     </message>
     <message>
         <source>The name of the OSS device to connect to</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do dispositivo OSS para conectar</translation>
     </message>
     <message>
         <source>/dev/dsp</source>
-        <translation type="unfinished"></translation>
+        <translation>/dev/dsp</translation>
     </message>
     <message>
         <source>PortAudio</source>
-        <translation type="unfinished"></translation>
+        <translation>PortAudio</translation>
     </message>
     <message>
         <source>The name of the PortAudio device to connect to</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do dispositivo PortAudio para conectar</translation>
     </message>
     <message>
         <source>Sound Analysis</source>
-        <translation type="unfinished"></translation>
+        <translation>Análise de som</translation>
     </message>
     <message>
         <source>Time between each sound analysis.
 Can be increased to get less CPU usage (but less temporal precision).</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempo entre cada análise de som.
+Pode ser aumentado para diminuir o uso da CPU (porém com perda de precisão temporal).</translation>
     </message>
     <message>
         <source>Refresh time</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempo de atualização</translation>
     </message>
     <message>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <source>Notes range</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo de notas</translation>
     </message>
     <message>
         <source>Filter the sound below the lowest semitone and above the highest semitone to avoid artefacts and noises in all the following steps of the sound analysis.</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrar o som abaixo do semitom mais grave e acima do semitom mais agudo para evitar artefatos e ruídos em todos os passos seguintes da análise de som.</translation>
     </message>
     <message>
         <source>Notes range filtering</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtragem do intervalo de notas</translation>
     </message>
     <message>
         <source>Rectangular filter: bad precision, but very fast</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro retangular: precisão ruim, mas muito rápido</translation>
     </message>
     <message>
         <source>FIR filter: good precision, but more costly in CPU usage</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro FIR: precisão boa, porém maior consumo de CPU</translation>
     </message>
     <message>
         <source>Algorithm settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações do algoritmo</translation>
     </message>
     <message>
         <source>Algorithm</source>
-        <translation type="unfinished"></translation>
+        <translation>Algoritmo</translation>
     </message>
     <message>
         <source>Ignore all sounds with volume below this threshold [dB]
 (Shown as a red line in various views)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorar todos os sons com volume abaixo desse limiar [dB]
+(Exibido como uma linha vermelha em várias visualizações).</translation>
     </message>
     <message>
         <source> dB</source>
-        <translation type="unfinished"></translation>
+        <translation> dB</translation>
     </message>
     <message>
         <source>Ignore weak sub-harmonics.
 This threshold is defined between two neighbors frequency components.
 Prevents underestimation errors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorar subharmônicos fracos.
+Esse limiar é definido entre dois componentes de frequência vizinhos.
+Previne erros de subestimação.</translation>
     </message>
     <message>
         <source>Use sub-harmonic audibility threshold</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar limiar de audibilidade de subharmônicos</translation>
     </message>
     <message>
         <source>Factor defining the window size (from the lowest possible period defined by the notes range).
 The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fator que define o tamanho da janela (do período mais baixo possível definido no intervalo de notas).
+Quanto maior o fator, mas estável é a análise. No entanto, ao aumentar o fator, FMIT percisará de mais CPU e reagirá mais lentamente a mudanças no som.</translation>
     </message>
     <message>
         <source>Window size factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Fator de tamanho de janela</translation>
     </message>
     <message>
         <source>Volume threshold</source>
-        <translation type="unfinished"></translation>
+        <translation>Limiar de volume</translation>
     </message>
     <message>
         <source>Frequency refinement settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações do refinamento de frequência</translation>
     </message>
     <message>
         <source>Frequency refinement</source>
-        <translation type="unfinished"></translation>
+        <translation>Refinamento de frequência</translation>
     </message>
     <message>
         <source>Use a refinement method in frequency domain: compute the mean of the quasi-harmonic related spectral peaks (the option allows to chose the number of harmonics to use).</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar um método de refinamento no domínio da frequência: calcular a média dos picos espectrais quasi-harmônicos relacionados (a opção permite escolher o número de harmônicos usados).</translation>
     </message>
     <message>
         <source>Maximum number of harmonics</source>
-        <translation type="unfinished"></translation>
+        <translation>Número máximo de harmônicos</translation>
     </message>
     <message>
         <source>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar um método de refinamento no domínio do tempo: calcular a média de vários de períodos (a opção permite escolher o número de períodos usados).</translation>
     </message>
     <message>
         <source>Maximum number of periods</source>
-        <translation type="unfinished"></translation>
+        <translation>Número máximo de períodos</translation>
     </message>
     <message>
         <source>Frequency domain fundamental refinement:
 mean of the fundamental relative frequencies of the harmonics.
 Choose the number of harmonics to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Refinamento fundamental no domínio da frequência
+média das frequências fundamentais relativas dos harmônicos.
+Escolhe o número de harmônicos usados.</translation>
     </message>
     <message>
         <source>Quantizer settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações do quantizador</translation>
     </message>
     <message>
         <source>Quantizer</source>
-        <translation type="unfinished"></translation>
+        <translation>Quantizador</translation>
     </message>
     <message>
         <source>Quantize the analysis results: ignore frequency jumps, fill gaps, ignore short notes.
 The smaller the value, the faster the tuner. However, by decreasing the value, the computed frequency will be more unstable.</source>
-        <translation type="unfinished"></translation>
+        <translation>Quantizar os resultados da análise: ignorar saltos de frequência, preencher lacunas, ignorar notas curtas.
+Quanto menor o valor, mas rápido é o afinador. No entanto, ao diminuir o valor, a frequência calculada será mais instável.</translation>
     </message>
     <message>
         <source>Latency</source>
-        <translation type="unfinished"></translation>
+        <translation>Latência</translation>
     </message>
     <message>
         <source>Restore settings as if you just installed FMIT (requires to restart FMIT).</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar configurações como um FMIT recém instalado (necessita reiniciar FMIT).</translation>
     </message>
     <message>
         <source>Restore &amp;factory settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar configurações de &amp;fábrica</translation>
     </message>
     <message>
         <source>Use these settings and quit the configuration panel (it is required to click on the &quot;Save settings&quot; button to permanently keep these settings for each FMIT start)</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar opções atuais e sair do painel de configuração (é necessário clicar no botão &quot;Salvar configurações&quot; para manter essas opções permanentemente)</translation>
     </message>
     <message>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;OK</translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <source>Discard any changes and quit the configuration panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Descartar modificações e sair do painel de configurações</translation>
     </message>
     <message>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cancelar</translation>
     </message>
     <message>
         <source>Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -392,25 +412,35 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
 &lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options, right-click every view to show up their properties!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Para ver mais opções, clique com o botão direito em qualquer visualização para mostrar suas propriedades!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Alemães</translation>
     </message>
     <message>
         <source>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar nomes de notas locais. P.ex.:
+anglo-saxônicos: C D E F G A B
+latinos: Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Hindustani</source>
-        <translation type="unfinished"></translation>
+        <translation>Hindustânis</translation>
     </message>
     <message>
         <source>Byzantine</source>
-        <translation type="unfinished"></translation>
+        <translation>Bizantinos</translation>
+    </message>
+    <message>
+        <source>Transposition</source>
+        <translation>Transposição</translation>
     </message>
 </context>
 <context>
@@ -430,38 +460,41 @@ Você tem certeza que quer perder todas as configurações atuais?</translation>
         <translation>Você quer reiniciar o FMIT agora para voltar suas configurações padrões</translation>
     </message>
     <message>
-        <source>The used tonality.
-Useful to convert note names to a corresponding instrument tonality (e.g. %1 for saxophone, %2 for trumpet).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>The base tunning frequency (the %1 frequency)</source>
-        <translation type="unfinished"></translation>
+        <translation>A frequência base de afinação (%1)</translation>
     </message>
     <message>
         <source>Allows to add an offset to the reference %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Permitir adicionar um deslocamento à referência %1</translation>
     </message>
     <message>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo de de notas possíveis, do mínimo ao máximo, ao redor da referência %1.
+Quanto menor o intervalo, menor o uso da CPU.</translation>
     </message>
     <message>
         <source>Lowest semitone from the %1 reference note.
 It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
-        <translation type="unfinished"></translation>
+        <translation>Menor semitom relativo à nota de referência %1.
+Um valor maior que -35 pode ser útil para reduzir ruídos da fonte de alimentação (~50Hz).</translation>
     </message>
     <message>
         <source>Highest semitone from the %1 reference note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Maior semitom relativo à nota de referência %1.</translation>
+    </message>
+    <message>
+        <source>Transposition in number of semitones relative to %1.
+Useful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).</source>
+        <translation>Transposição em número de semitons relativos a %1.
+Útil para converter os nomes das notas conforme um instrumento transpositor (p.ex. %2 para saxofone, %3 para trompete).</translation>
     </message>
 </context>
 <context>
     <name>DialView</name>
     <message>
         <source>Dial</source>
-        <translation>Dial</translation>
+        <translation>Discagem</translation>
     </message>
     <message>
         <source>Show tolerance</source>
@@ -558,7 +591,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     </message>
     <message>
         <source>Harmonics&apos; amplitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Amplitude dos harmônicos</translation>
     </message>
 </context>
 <context>
@@ -600,11 +633,11 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     </message>
     <message>
         <source>Waveform</source>
-        <translation type="unfinished"></translation>
+        <translation>Forma de onda</translation>
     </message>
     <message>
         <source>Waveform&apos;s period</source>
-        <translation type="unfinished"></translation>
+        <translation>Período da forma de onda</translation>
     </message>
 </context>
 <context>
@@ -689,28 +722,35 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <name>InstrumentTunerForm</name>
     <message>
         <source>Free Music Instrument Tuner</source>
-        <translation type="unfinished"></translation>
+        <translation>Afinador de Instrumentos Musicais Livre</translation>
     </message>
     <message>
         <source>Keep the data in the error and volume views (shortcut &quot;k&quot;).</source>
-        <translation type="unfinished"></translation>
+        <translation>Manter os dados nas visualizações de erro e volume (atalho &quot;k&quot;).</translation>
     </message>
     <message>
         <source>K
 e
 e
 p</source>
-        <translation type="unfinished"></translation>
+        <translation>M
+a
+n
+t
+e
+r</translation>
     </message>
     <message>
         <source>K</source>
-        <translation type="unfinished"></translation>
+        <translation>K</translation>
     </message>
     <message>
         <source>Volume in dB.
 Computed in the frequency domain, from the maximum bin.
 The maximum is reached when the signal energy is maximal NOT when the sound is saturated in the time domain.</source>
-        <translation type="unfinished"></translation>
+        <translation>Volume em dB.
+Calculado no domínio da frequência, a partir do bin máximo.
+O máximo é atingido quando a energia do sinal está máxima, NÃO quando o som está saturado no domínio do tempo.</translation>
     </message>
     <message>
         <source>According to the following colors:
@@ -718,98 +758,102 @@ red       : the capture system is not working.
 grey     : the capture system is OK, but there is not enough sound.
 orange : the analysis conditions are bad (like saturation)
 green   : a note is beeing analyzed and analysis conditions are OK.</source>
-        <translation type="unfinished"></translation>
+        <translation>Segundo as seguintes cores:
+vermelho: o sistema de captura não está funcionando.
+cinza: o sistema de captura está OK, porém não há som suficiente.
+laranja: as condições de análise estão ruins (p.ex. saturação).
+verde: a nota está sendo analisada e as condições de análise estão OK.</translation>
     </message>
     <message>
         <source>Note Stability</source>
-        <translation type="unfinished"></translation>
+        <translation>Estabilidade da nota</translation>
     </message>
     <message>
         <source>The base tunning frequency (the A4 frequency)</source>
-        <translation type="unfinished"></translation>
+        <translation>Frequência base de afinação (frequência de A4)</translation>
     </message>
     <message>
         <source>Tuning Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Frequência de afinação</translation>
     </message>
     <message>
         <source> Hz</source>
-        <translation type="unfinished"></translation>
+        <translation> Hz</translation>
     </message>
     <message>
         <source>Offset in cents from the base tuning frequency</source>
-        <translation type="unfinished"></translation>
+        <translation>Distância em cents da frequência base de afinação</translation>
     </message>
     <message>
         <source>Offset</source>
-        <translation type="unfinished"></translation>
+        <translation>Distância</translation>
     </message>
     <message>
         <source> cents</source>
-        <translation type="unfinished"></translation>
+        <translation> cents</translation>
     </message>
     <message>
         <source>The frequency of the current note in Hertz.</source>
-        <translation type="unfinished"></translation>
+        <translation>Frequência da nota atual em Hertz.</translation>
     </message>
     <message>
         <source>The recognized note</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota identificada</translation>
     </message>
     <message>
         <source>The target frequency of the current note in Hertz.</source>
-        <translation type="unfinished"></translation>
+        <translation>Frequência alvo para a nota atual em Hertz.</translation>
     </message>
     <message>
         <source>Views</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizações</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações</translation>
     </message>
     <message>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausar</translation>
     </message>
     <message>
         <source>Pause: the capture, the sound analysis and all views.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausar: captura, análise de som e todas as visualizações.</translation>
     </message>
     <message>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Espaço</translation>
     </message>
     <message>
         <source>Configure</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações</translation>
     </message>
     <message>
         <source>Save settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar configurações</translation>
     </message>
     <message>
         <source>Save configuration panel settings, views settings and the window size.</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar opções do painel de configurações, visualizações e o tamanho da janela.</translation>
     </message>
     <message>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre</translation>
     </message>
     <message>
         <source>Invoke the about box.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chamar o diálogo Sobre.</translation>
     </message>
 </context>
 <context>
     <name>MicrotonalView</name>
     <message>
         <source>Unkown filename: &apos;</source>
-        <translation>Nome do arquivo desconhecido &apos;</translation>
+        <translation>Nome do ficheiro desconhecido: &apos;</translation>
     </message>
     <message>
         <source>Microtonal</source>
@@ -829,11 +873,11 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     </message>
     <message>
         <source>Load Scala file ...</source>
-        <translation>Carregar o arquivo de escala ...</translation>
+        <translation>Carregar o ficheiro de escala ...</translation>
     </message>
     <message>
         <source>Open scale file</source>
-        <translation>Abrir o arquivo de escala</translation>
+        <translation>Abrir o ficheiro de escala</translation>
     </message>
     <message>
         <source>Scale name already exist</source>
@@ -841,7 +885,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     </message>
     <message>
         <source>Invalid file content !</source>
-        <translation>Conteúdo inválido</translation>
+        <translation>Conteúdo de ficheiro inválido!</translation>
     </message>
     <message>
         <source>&lt;b&gt;name:&lt;/b&gt; </source>
@@ -853,18 +897,18 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     </message>
     <message>
         <source>Invalid Scala file: </source>
-        <translation>Arquivo de escala inválido: </translation>
+        <translation>Ficheiro de escala inválido: </translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>default</source>
-        <translation type="unfinished">default</translation>
+        <translation>default</translation>
     </message>
     <message>
         <source>%1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1</translation>
     </message>
 </context>
 </TS>

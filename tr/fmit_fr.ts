@@ -57,7 +57,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling for the scales in cents&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La plupart des logiciels à sources ouvertes sont infaisables sans des contributions indirectes fournies à travers des bibliothèques. Ainsi, un gros merci aux as de l&apos;informatique suivants :&lt;br /&gt;&lt;br /&gt;- dsboger pour tant de petites et utiles modifications, mise à jour, empaquetage,... etc.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Florian Hars pour les gammes d&apos;accordage&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Arnout Engelen pour les soucis JACK&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- John Anderson pour l&apos;idée de module microtonal&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling pour les gammes en centièmes&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro pour son aide pour faire en sorte que FMIT fonctionne sous Windows/Cygwin.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Traducteurs : Omega9 (russe), skarmoutsosv (grecque), Pindaro et dsboger (portugais et portugais du Brésil), Florian Maier (Allemand).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; pour les transformées de Fourier très rapides.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt; et son équipe pour la bibliothèque graphique.&lt;br /&gt;&lt;br /&gt;Toute contribution de toute forme est vraiment bienvenue !&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -76,7 +86,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Tonality</source>
-        <translation>Tonalité</translation>
+        <translation type="vanished">Tonalité</translation>
     </message>
     <message>
         <source>Latency</source>
@@ -240,7 +250,7 @@ Latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source> ms</source>
-        <translation>ms</translation>
+        <translation> ms</translation>
     </message>
     <message>
         <source>Rectangular filter: bad precision, but very fast</source>
@@ -256,7 +266,7 @@ Latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source> dB</source>
-        <translation>dB</translation>
+        <translation> dB</translation>
     </message>
     <message>
         <source>Use sub-harmonic audibility threshold</source>
@@ -461,15 +471,21 @@ p, li { white-space: pre-wrap; }
         <source>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser des noms de notes localisées. Exemple :
+anglo-saxonne : C D E F G A B
+latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Hindustani</source>
-        <translation type="unfinished"></translation>
+        <translation>Hindustani</translation>
     </message>
     <message>
         <source>Byzantine</source>
-        <translation type="unfinished"></translation>
+        <translation>Byzantine</translation>
+    </message>
+    <message>
+        <source>Transposition</source>
+        <translation>Transposition</translation>
     </message>
 </context>
 <context>
@@ -491,29 +507,38 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <source>The used tonality.
 Useful to convert note names to a corresponding instrument tonality (e.g. %1 for saxophone, %2 for trumpet).</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">La tonalité utilisée.
+Utile pour convertir des noms de note vers une tonalité d&apos;instrument correspondante (exemple %1 pour le saxophone, %2 pour la trompette).</translation>
     </message>
     <message>
         <source>The base tunning frequency (the %1 frequency)</source>
-        <translation type="unfinished"></translation>
+        <translation>La fréquence de base de l&apos;accordage (la fréquence %1)</translation>
     </message>
     <message>
         <source>Allows to add an offset to the reference %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Permet d&apos;ajouter un décalage à la référence %1</translation>
     </message>
     <message>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gamme de notes possibles depuis la plus basse jusqu&apos;à la plus haute autour de la note de référence %1.
+Plus petite est la gamme, plus petite est la consommation processeur.</translation>
     </message>
     <message>
         <source>Lowest semitone from the %1 reference note.
 It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
-        <translation type="unfinished"></translation>
+        <translation>Demi-ton le plus bas à partir de la note de référence %1.
+Ça peut être utile de la mettre au dessus de -35 pour éviter un parasitage provenant de l&apos;alimentation du secteur (~50hz).</translation>
     </message>
     <message>
         <source>Highest semitone from the %1 reference note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Demi-ton le plus haut à partir de la note de référence %1.</translation>
+    </message>
+    <message>
+        <source>Transposition in number of semitones relative to %1.
+Useful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).</source>
+        <translation>Transposition en nombre de demi-ton relatif à %1.
+Utile pour convertir les noms de note vers une correspondance de transposition d&apos;instrument (ex : %2 pour un saxophone, %3 pour une trompette).</translation>
     </message>
 </context>
 <context>
@@ -540,7 +565,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     </message>
     <message>
         <source>Dial</source>
-        <translation></translation>
+        <translation>Cadran</translation>
     </message>
 </context>
 <context>
@@ -804,7 +829,7 @@ r</translation>
     </message>
     <message>
         <source> cents</source>
-        <translation>centièmes</translation>
+        <translation> centièmes</translation>
     </message>
     <message>
         <source>Free Music Instrument Tuner</source>
@@ -906,7 +931,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>Microtonal</source>
-        <translation>Microtonal</translation>
+        <translation>Micro-intervalle</translation>
     </message>
     <message>
         <source>Used scale</source>
@@ -914,15 +939,15 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>&lt;b&gt;name:&lt;/b&gt; </source>
-        <translation>&lt;b&gt;nom:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;nom :&lt;/b&gt; </translation>
     </message>
     <message>
         <source>&lt;b&gt;number of ratio:&lt;/b&gt; </source>
-        <translation>&lt;b&gt;nombre de valeures:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;nombre de ratio :&lt;/b&gt; </translation>
     </message>
     <message>
         <source>Invalid Scala file: </source>
-        <translation>Fichier Scala invalide:</translation>
+        <translation>Fichier Scala invalide : </translation>
     </message>
 </context>
 <context>

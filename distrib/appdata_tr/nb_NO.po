@@ -2,27 +2,33 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-08-20 11:41+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/fmit/"
+"appdata/nb_NO/>\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.2-dev\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
 msgid "FMIT"
-msgstr ""
+msgstr "FMIT"
 
 #. (itstool) path: application/summary
 #: fmit.appdata.xml.in:8
 msgid "Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument"
 msgstr ""
+"Fri musikalsk instrumenttuner (FMIT), et verktøy for stemming av "
+"musikkinstrumenter"
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:10
 msgid "Find an estimation of the fundamental frequency (f0, not the perceived pitch) of an audio signal, in real-time, and compare it with the closest note in the scale."
-msgstr ""
+msgstr "Finn estimat av grunnfrekvens (f0, ikke"
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:15
@@ -47,12 +53,12 @@ msgstr ""
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:37
 msgid "Volume view and previous notes"
-msgstr ""
+msgstr "Lydstyrkevisning og tidligere noter"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:41
 msgid "Simplest view"
-msgstr ""
+msgstr "Enkleste visning"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:45
@@ -62,7 +68,7 @@ msgstr ""
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:49
 msgid "Statistics view"
-msgstr ""
+msgstr "Statistikkvisning"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:53
@@ -82,7 +88,7 @@ msgstr ""
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:65
 msgid "General settings"
-msgstr ""
+msgstr "Hovedinnstillinger"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:69
@@ -92,7 +98,7 @@ msgstr ""
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:73
 msgid "Sound analysis settings"
-msgstr ""
+msgstr "Lydanalyseinnstillinger"
 
 #. (itstool) path: application/developer_name
 #: fmit.appdata.xml.in:80
@@ -128,6 +134,7 @@ msgstr ""
 #: fmit.appdata.xml.in:121
 msgid "Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/"
 msgstr ""
+"Bytte til Weblate for oversettelse: https://hosted.weblate.org/projects/fmit/"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:122
@@ -137,7 +144,7 @@ msgstr ""
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:129
 msgid "New icons"
-msgstr ""
+msgstr "Nye ikoner"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:130
@@ -148,4 +155,3 @@ msgstr ""
 #: fmit.appdata.xml.in:131
 msgid "Fixed graphical glitches"
 msgstr ""
-
