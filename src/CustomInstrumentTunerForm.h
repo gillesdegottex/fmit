@@ -145,6 +145,8 @@ public slots:
 	void refresh();
 	void update_localized_note_names();
 
+    void closeEvent(QCloseEvent* event);
+
 public:
 	~CustomInstrumentTunerForm();
 };

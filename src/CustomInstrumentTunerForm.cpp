@@ -1151,6 +1151,9 @@ void CustomInstrumentTunerForm::helpAbout()
 //	about_dlg.exec();
 }
 
+void CustomInstrumentTunerForm::closeEvent( QCloseEvent* event ){
+    m_config_form.close();
+}
 CustomInstrumentTunerForm::~CustomInstrumentTunerForm()
 {
 	if(m_config_form.ui_chkAutoSaveOnExit->isChecked())
