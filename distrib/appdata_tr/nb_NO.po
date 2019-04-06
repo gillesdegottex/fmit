@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: 2018-08-20 11:41+0000\n"
+"PO-Revision-Date: 2019-04-07 15:04+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/fmit/"
 "appdata/nb_NO/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.2-dev\n"
+"X-Generator: Weblate 3.6-dev\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
@@ -63,7 +63,7 @@ msgstr "Enkleste visning"
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:45
 msgid "Microtonal view"
-msgstr ""
+msgstr "Mikronalitetsvisning"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:49
@@ -73,17 +73,17 @@ msgstr "Statistikkvisning"
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:53
 msgid "Waveform view"
-msgstr ""
+msgstr "Bølgeformsvisning"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:57
 msgid "Harmonics view"
-msgstr ""
+msgstr "Harmonisk visning"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:61
 msgid "Fourier transform view"
-msgstr ""
+msgstr "Fouriertransformasjonsvisning"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:65
