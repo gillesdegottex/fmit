@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: 2019-04-07 15:04+0000\n"
+"PO-Revision-Date: 2019-04-20 13:33+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/fmit/"
 "appdata/nb_NO/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6-dev\n"
+"X-Generator: Weblate 3.6\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
@@ -44,6 +44,7 @@ msgstr ""
 #: fmit.appdata.xml.in:26
 msgid "Choose between multiple sound capture systems, including ALSA and JACK."
 msgstr ""
+"Velg mellom flere forskjellige lydopptakssystemer, inkludert ALSA og JACK."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:29
@@ -93,7 +94,7 @@ msgstr "Hovedinnstillinger"
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:69
 msgid "Capture systems settings"
-msgstr ""
+msgstr "Opptakssysteminnstillinger"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:73
