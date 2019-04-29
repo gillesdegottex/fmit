@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: 2018-11-28 20:07+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
+"PO-Revision-Date: 2019-04-30 07:48+0000\n"
+"Last-Translator: CurlingTongs <o11577482@nwytg.net>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/fmit/appdata/de/>"
 "\n"
 "Language: de\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.3-dev\n"
+"X-Generator: Weblate 3.6.1\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
@@ -40,22 +40,22 @@ msgstr ""
 "Stimmen Sie Ihre Musikinstrumente mit erweiterten Funktionen, einschließlich "
 "Spuren von Frequenz und Lautstärke, einstellbarer Basis-Stimmfrequenz, "
 "mehrfacher Stimmtonwahl (chromatisch, Werckmeister III, Kirnberger III, "
-"diatonisch und Mitteltönig), mikrotonaler Stimmung mit Scala-Datei (.scl) "
-"Unterstützung und Statistiken."
+"diatonisch und Mitteltönig), mikrotonaler Stimmung mit Unterstützung für "
+"Scala-Dateien (.scl) und Statistiken."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:21
 msgid "Perform real-time sound analysis with views for waveform period, harmonics amplitude and Discrete Fourier Transform (DFT). Change various analysis parameters and tradeoff between precision and speed."
 msgstr ""
-"Führen Sie eine Echtzeit-Tonanalyse mit Ansichten für Wellenform-Periode, "
-"Oberwellen-Amplitude und Diskrete Fourier-Transformation (DFT) durch. Ändern "
-"Sie erschiedene Analyse-Parameter und einen Kompromiss zwischen Präzision "
+"Führen Sie eine Echtzeit-Tonanalyse mit Ansichten für Wellenformperiode, "
+"Oberwellenamplitude und Diskrete Fourier-Transformation (DFT) durch. Ändern "
+"Sie verschiedene Analyseparameter und einen Kompromiss zwischen Präzision "
 "und Geschwindigkeit."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:26
 msgid "Choose between multiple sound capture systems, including ALSA and JACK."
-msgstr "Wählen Sie zwischen mehreren Tonaufnahme-Systemen, z.B. ALSA und JACK."
+msgstr "Wählen Sie zwischen mehreren Tonaufnahme-Systemen, z. B. ALSA und JACK."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:29
