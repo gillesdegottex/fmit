@@ -1187,14 +1187,14 @@ void CustomInstrumentTunerForm::update_localized_note_names()
 
 	QString a4Name = QString::fromStdString(h2n(0, GetNotesName(), 0, CHROMATIC, true));
 
-	QString a4FreqToolTip = tr("The base tunning frequency (the %1 frequency)")
+	QString a4FreqToolTip = tr("The base tuning frequency (the %1 frequency)")
 			.arg(a4Name);
 	textLabel8->setToolTip(a4FreqToolTip);
 	textLabel8->setWhatsThis(a4FreqToolTip);
 	ui_spinAFreq->setToolTip(a4FreqToolTip);
 	ui_spinAFreq->setWhatsThis(a4FreqToolTip);
 
-	QString showA4OffsetText = tr("Allows to add an offset to the reference %1")
+	QString showA4OffsetText = tr("Allows adding an offset to the reference %1")
 			.arg(a4Name);
 	m_config_form.ui_chkShowA4Offset->setText(showA4OffsetText);
 
