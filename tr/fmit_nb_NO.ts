@@ -6,7 +6,7 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="14"/>
         <source>About FMIT...</source>
-        <translation type="unfinished">Om FMIT…</translation>
+        <translation>Om FMIT…</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="28"/>
@@ -485,7 +485,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
     <message>
         <location filename="../ui/ConfigForm.ui" line="932"/>
         <source>Refresh time</source>
-        <translation></translation>
+        <translation>Gjenoppfriskningstid</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="238"/>
@@ -516,7 +516,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/ConfigForm.ui" line="1056"/>
         <location filename="../ui/ConfigForm.ui" line="1059"/>
         <source>Algorithm settings</source>
-        <translation></translation>
+        <translation>Algoritmeinnstillinger</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1062"/>
@@ -542,7 +542,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="1286"/>
         <source>Volume threshold</source>
-        <translation></translation>
+        <translation>Lydstyrketerskel</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1296"/>
@@ -620,7 +620,7 @@ Choose the number of harmonics to use.</source>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1592"/>
         <source>&amp;Cancel</source>
-        <translation></translation>
+        <translation>&amp;Avbryt</translation>
     </message>
 </context>
 <context>
@@ -640,7 +640,7 @@ Are you sure you want to lose all your current settings ?</source>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1067"/>
         <source>You can now restart FMIT to get back factory settings</source>
-        <translation></translation>
+        <translation>Du kan nå starte FMIT på ny for å gå tilbake til fabrikkinnstillinger</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1174"/>
@@ -747,22 +747,22 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLFT.cpp" line="52"/>
         <source>dB scale</source>
-        <translation></translation>
+        <translation>dB-skala</translation>
     </message>
     <message>
         <location filename="../src/modules/GLFT.cpp" line="61"/>
         <source>Size</source>
-        <translation></translation>
+        <translation>Størrelse</translation>
     </message>
     <message>
         <location filename="../src/modules/GLFT.cpp" line="71"/>
         <source>window length</source>
-        <translation></translation>
+        <translation>vinduslengde</translation>
     </message>
     <message>
         <location filename="../src/modules/GLFT.cpp" line="83"/>
         <source>- Press left mouse button to move the view</source>
-        <translation></translation>
+        <translation>- Trykk venstre museknapp for å flytte visningen</translation>
     </message>
     <message>
         <location filename="../src/modules/GLFT.cpp" line="86"/>
@@ -772,7 +772,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLFT.cpp" line="89"/>
         <source>- Double-click to reset the view</source>
-        <translation></translation>
+        <translation>- Dobbeltklikk for å tilbakestille visningen</translation>
     </message>
     <message>
         <location filename="../src/modules/GLFT.cpp" line="177"/>
@@ -827,13 +827,13 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
         <location filename="../src/modules/GLGraph.cpp" line="78"/>
         <location filename="../src/modules/GLGraph.cpp" line="85"/>
         <source>Duration</source>
-        <translation></translation>
+        <translation>Varighet</translation>
     </message>
     <message>
         <location filename="../src/modules/GLGraph.cpp" line="99"/>
         <location filename="../src/modules/GLGraph.cpp" line="106"/>
         <source>Max height</source>
-        <translation></translation>
+        <translation>Maks. høyde</translation>
     </message>
     <message>
         <location filename="../src/modules/GLGraph.cpp" line="34"/>
@@ -871,7 +871,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="200"/>
         <source>Reset statistics</source>
-        <translation></translation>
+        <translation>Tilbakestill statistikk</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="205"/>
@@ -942,7 +942,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
         <location filename="../src/modules/GLStatistics.cpp" line="192"/>
         <location filename="../src/modules/GLStatistics.cpp" line="437"/>
         <source>Statistics</source>
-        <translation></translation>
+        <translation>Statistikk</translation>
     </message>
 </context>
 <context>
@@ -950,7 +950,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLVolumeHistory.cpp" line="49"/>
         <source>Volume history</source>
-        <translation></translation>
+        <translation>Lydstyrkehistorikk</translation>
     </message>
     <message>
         <location filename="../src/modules/GLVolumeHistory.cpp" line="59"/>
@@ -1072,7 +1072,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="422"/>
         <source>Settings</source>
-        <translation></translation>
+        <translation>Innstillinger</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="444"/>
@@ -1105,12 +1105,12 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="465"/>
         <source>Configure</source>
-        <translation></translation>
+        <translation>Sett opp</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="477"/>
         <source>Save settings</source>
-        <translation></translation>
+        <translation>Lagre innstillinger</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="486"/>
@@ -1120,7 +1120,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="498"/>
         <source>About</source>
-        <translation></translation>
+        <translation>Om</translation>
     </message>
 </context>
 <context>
