@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: 2019-04-20 13:33+0000\n"
+"PO-Revision-Date: 2019-06-18 19:06+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/fmit/"
 "appdata/nb_NO/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6\n"
+"X-Generator: Weblate 3.7\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
@@ -32,13 +32,22 @@ msgstr "Finn estimat av grunnfrekvens (f0, ikke"
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:15
+#, fuzzy
 msgid "Tune your musical instruments with advanced features, including traces of frequency and volume, adjustable base tuning frequency, multiple choices of tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and meantone), microtonal tuning with Scala file (.scl) support and statistics."
 msgstr ""
+"Stem dine musikkinstrumenter med avanserte funksjoner, inkludert kurve for "
+"frekvens og lydstyrke, justerbar grunntonefrekvens, flere valg for "
+"stemmingsskala (kromatisk, Werckmeister III, Kirnberger III, diatonisk og "
+"middeltone), mikrotonal stemming med Scala-fil (.scl).-støtte og statistikk."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:21
+#, fuzzy
 msgid "Perform real-time sound analysis with views for waveform period, harmonics amplitude and Discrete Fourier Transform (DFT). Change various analysis parameters and tradeoff between precision and speed."
 msgstr ""
+"Utfør sanntidslydanalyse med visninger for bølgeformsperiode, "
+"harmoniamplitude og diskret Fouriertransformasjon (DFT). Endre forskjellige "
+"analyseparametre og kompromiss mellom nøyaktighet og hastighet."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:26
@@ -50,6 +59,8 @@ msgstr ""
 #: fmit.appdata.xml.in:29
 msgid "Show or hide individual panels and go from a simple analog tuner view to an advanced real-time analysis toolset, or anywhere in between."
 msgstr ""
+"Vis eller skjul individuelle paneler og gå fra enkel analogtunervisning til "
+"et avansert sanntidsanalyseverktøyssett, eller uansett sted mellom dem."
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:37
@@ -104,32 +115,36 @@ msgstr "Lydanalyseinnstillinger"
 #. (itstool) path: application/developer_name
 #: fmit.appdata.xml.in:80
 msgid "Gilles Degottex"
-msgstr ""
+msgstr "Gilles Degottex"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:116
+#, fuzzy
 msgid "New note names: Hindustani, Byzantine"
-msgstr ""
+msgstr "Nye notenavn: Hindustani, Bysantinsk"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:117
+#, fuzzy
 msgid "Use unicode flat and sharp signs"
-msgstr ""
+msgstr "Bruk Unicode-tegnsetting for tonesenking og kryss"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:118
 msgid "Use custom save settings and pause icons that better fits the other icons design"
 msgstr ""
+"Bruk egendefinerte lagringsinnstillinger og pauseikoner som passer bedre med "
+"det andre ikondesignet."
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:119
 msgid "Flexible transposition key selection."
-msgstr ""
+msgstr "Fleksibelt valg av nøkkelarttransponering."
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:120
 msgid "Added symbolic icon for high-contrast setup."
-msgstr ""
+msgstr "Symbolsk ikon for høykontrastsoppsett lagt til."
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:121
@@ -140,7 +155,7 @@ msgstr ""
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:122
 msgid "Added translation for application information."
-msgstr ""
+msgstr "Oversettelse for programinformasjon lagt til."
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:129
@@ -149,10 +164,11 @@ msgstr "Nye ikoner"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:130
+#, fuzzy
 msgid "Added F tonality"
-msgstr ""
+msgstr "F-tonika lagt til"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:131
 msgid "Fixed graphical glitches"
-msgstr ""
+msgstr "Fikset grafikkproblemer"
