@@ -2,26 +2,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: 2018-10-06 17:28+0000\n"
-"Last-Translator: Vangelis Skarmoutsos <skarmoutsosv@gmail.com>\n"
+"PO-Revision-Date: 2019-06-18 19:05+0000\n"
+"Last-Translator: Panagiotis Tabakis <tabakisp@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/fmit/appdata/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.2\n"
+"X-Generator: Weblate 3.7\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
 msgid "FMIT"
-msgstr ""
+msgstr "FMIT"
 
 #. (itstool) path: application/summary
 #: fmit.appdata.xml.in:8
 msgid "Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument"
 msgstr ""
-"Free Musical Instrument Tuner (FMIT), ένα εργαλείο για συντονισμό μουσικών "
+"Free Musical Instrument Tuner (FMIT), ένα Εργαλείο για κούρδισμα μουσικών "
 "οργάνων"
 
 #. (itstool) path: description/p
@@ -29,27 +29,27 @@ msgstr ""
 msgid "Find an estimation of the fundamental frequency (f0, not the perceived pitch) of an audio signal, in real-time, and compare it with the closest note in the scale."
 msgstr ""
 "Εύρεση μιας εκτίμησης της θεμελιώδους συχνότητας (f0, όχι ο αντιληπτός τόνος)"
-" ενός ηχητικού σήματος, σε πραγματικό χρόνο, και σύγκριση της με την "
+" ενός ηχητικού σήματος, σε πραγματικό χρόνο, και σύγκρισή της με την "
 "πλησιέστερη νότα στην κλίμακα."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:15
 msgid "Tune your musical instruments with advanced features, including traces of frequency and volume, adjustable base tuning frequency, multiple choices of tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and meantone), microtonal tuning with Scala file (.scl) support and statistics."
 msgstr ""
-"Συντονίστε το μουσικό σας όργανο με προχωρημένα χαρακτηριστικά, "
-"συμπεριλαμβανομένων ιχνών συχνότητας και έντασης, προσαρμόσιμη συχνότητα "
-"βασικού συντονισμού, πολλαπλές επιλογές κλίμακας συντονισμού (χρωματική, "
-"Werckmeister III, Kirnberger III, διατονική και μεσοτονική), μικροτονικός "
-"συντονισμός με αρχεία Scala (.scl) υποστήριξη και στατιστικά."
+"Κουρδίστε τα μουσικά σας όργανα με προηγμένες λειτουργίες, "
+"συμπεριλαμβανομένων ιχνών συχνότητας και έντασης, ρυθμιζόμενη συχνότητα "
+"βασικού κουρδίσματος, πολλαπλές επιλογές κλίμακας κουρδίσματος (χρωματική, "
+"Werckmeister III, Kirnberger III, διατονική και μεσοτονική), μικροτονικό "
+"κούρδισμα με υποστήριξη για αρχεία Scala (.scl) και στατιστικά."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:21
 msgid "Perform real-time sound analysis with views for waveform period, harmonics amplitude and Discrete Fourier Transform (DFT). Change various analysis parameters and tradeoff between precision and speed."
 msgstr ""
-"Εκτέλεση ανάλυσης ήχου σε πραγματικό χρόνο με προβολές για την περίοδο "
-"κυματομορφής, πλάτους αρμονικών και διακριτό μετασχηματισμό Fourier (DFT). "
-"Αλλαγή διαφόρων παραμέτρων ανάλυσης και ρύθμιση προτεραιότητας ανάμεσα σε "
-"ακρίβεια και ταχύτητα."
+"Εκτελέστε ανάλυση ήχου σε πραγματικό χρόνο με προβολές για την περίοδο "
+"κυματομορφής, πλάτους αρμονικών και Διακριτό Μετασχηματισμό Fourier (DFT). "
+"Αλλάξτε διάφορους παραμέτρους ανάλυσης και βρείτε την χρυσή τομή μεταξύ "
+"ακρίβειας και ταχύτητας."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:26
