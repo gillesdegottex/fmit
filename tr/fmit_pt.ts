@@ -296,7 +296,7 @@ Pode ser aumentado para diminuir o uso da CPU (porém com perda de precisão tem
         <source>Ignore all sounds with volume below this threshold [dB]
 (Shown as a red line in various views)</source>
         <translation>Ignorar todos os sons com volume abaixo desse limiar [dB]
-(Exibido como uma linha vermelha em várias visualizações).</translation>
+(Exibido como uma linha vermelha em várias visualizações)</translation>
     </message>
     <message>
         <source> dB</source>
