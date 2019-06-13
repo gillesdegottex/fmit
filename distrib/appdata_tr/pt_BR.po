@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-05-30 18:52-0300\n"
+"POT-Creation-Date: 2019-06-13 15:59-0300\n"
 "PO-Revision-Date: 2018-06-01 12:49+0000\n"
 "Last-Translator: Davi da Silva Böger <dsboger@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/fmit/"
@@ -13,12 +13,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.0\n"
 
-#. (itstool) path: application/name
+#. (itstool) path: component/id
+#: fmit.appdata.xml.in:4
+msgid "fmit.desktop"
+msgstr ""
+
+#. (itstool) path: component/metadata_license
+#: fmit.appdata.xml.in:5
+msgid "CC0-1.0"
+msgstr ""
+
+#. (itstool) path: component/project_license
+#: fmit.appdata.xml.in:6
+msgid "GPL-2.0+"
+msgstr ""
+
+#. (itstool) path: component/name
 #: fmit.appdata.xml.in:7
 msgid "FMIT"
 msgstr "FMIT"
 
-#. (itstool) path: application/summary
+#. (itstool) path: component/summary
 #: fmit.appdata.xml.in:8
 msgid ""
 "Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument"
@@ -64,87 +79,143 @@ msgstr ""
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:26
-msgid "Choose between multiple sound capture systems, including ALSA and JACK."
-msgstr ""
-"Escolha um de múltiplos sistemas de captura de som, incluindo ALSA e JACK."
-
-#. (itstool) path: description/p
-#: fmit.appdata.xml.in:29
+#, fuzzy
 msgid ""
-"Show or hide individual panels and go from a simple analog tuner view to an "
+"Choose between multiple sound capture systems, including ALSA and JACK. Show "
+"or hide individual panels and go from a simple analog tuner view to an "
 "advanced real-time analysis toolset, or anywhere in between."
 msgstr ""
 "Mostre ou esconda painéis individuais e vá de uma visão simples de afinador "
 "analógico até um conjunto avançado de ferramentas de análise em tempo real, "
 "ou qualquer configuração intermediária."
 
+#. (itstool) path: screenshot/image
+#: fmit.appdata.xml.in:34
+msgid "https://gillesdegottex.github.io/fmit/figs/complete.png"
+msgstr ""
+
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:37
+#: fmit.appdata.xml.in:35
 msgid "Volume view and previous notes"
 msgstr "Visualização de volume e notas anteriores"
 
+#. (itstool) path: screenshot/image
+#: fmit.appdata.xml.in:38
+msgid "https://gillesdegottex.github.io/fmit/figs/simple-2.png"
+msgstr ""
+
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:41
+#: fmit.appdata.xml.in:39
 msgid "Simplest view"
 msgstr "Visualização mais simples"
 
+#. (itstool) path: screenshot/image
+#: fmit.appdata.xml.in:42
+msgid "https://gillesdegottex.github.io/fmit/figs/microtonal.png"
+msgstr ""
+
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:45
+#: fmit.appdata.xml.in:43
 msgid "Microtonal view"
 msgstr "Afinação microtonal"
 
+#. (itstool) path: screenshot/image
+#: fmit.appdata.xml.in:46
+msgid "https://gillesdegottex.github.io/fmit/figs/statistics.png"
+msgstr ""
+
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:49
+#: fmit.appdata.xml.in:47
 msgid "Statistics view"
 msgstr "Visualização de estatísticas"
 
+#. (itstool) path: screenshot/image
+#: fmit.appdata.xml.in:50
+msgid "https://gillesdegottex.github.io/fmit/figs/sample.png"
+msgstr ""
+
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:53
+#: fmit.appdata.xml.in:51
 msgid "Waveform view"
 msgstr "Visualização de forma de onda"
 
-#. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:57
-msgid "Harmonics view"
-msgstr "Visualização de harmônicos"
+#. (itstool) path: component/url
+#: fmit.appdata.xml.in:76
+msgid "https://gillesdegottex.github.io/fmit/"
+msgstr ""
 
-#. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:61
-msgid "Fourier transform view"
-msgstr "Visualização da Transformada de Fourier"
+#. (itstool) path: component/url
+#: fmit.appdata.xml.in:77
+#, fuzzy
+msgid "https://hosted.weblate.org/projects/fmit/"
+msgstr ""
+"Traduções movidas para o site Weblate: https://hosted.weblate.org/projects/"
+"fmit/"
 
-#. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:65
-msgid "General settings"
-msgstr "Preferências gerais"
+#. (itstool) path: component/url
+#: fmit.appdata.xml.in:78
+msgid "https://github.com/gillesdegottex/fmit/issues"
+msgstr ""
 
-#. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:69
-msgid "Capture systems settings"
-msgstr "Preferências de sistema de captura de áudio"
+#. (itstool) path: component/url
+#: fmit.appdata.xml.in:79
+msgid "http://gillesdegottex.github.io/fmit/faq.html"
+msgstr ""
 
-#. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:73
-msgid "Sound analysis settings"
-msgstr "Preferências de análise de som"
-
-#. (itstool) path: application/developer_name
+#. (itstool) path: component/developer_name
 #: fmit.appdata.xml.in:80
 msgid "Gilles Degottex"
 msgstr "Gilles Degottex"
 
+#. (itstool) path: component/update_contact
+#: fmit.appdata.xml.in:81
+#, fuzzy
+msgid "gilles.degottex@gmail.com"
+msgstr "Gilles Degottex"
+
+#. (itstool) path: component/translation
+#: fmit.appdata.xml.in:82
+msgid "fmit"
+msgstr ""
+
+#. (itstool) path: content_rating/content_attribute
+#: fmit.appdata.xml.in:84 fmit.appdata.xml.in:85 fmit.appdata.xml.in:86
+#: fmit.appdata.xml.in:87 fmit.appdata.xml.in:88 fmit.appdata.xml.in:89
+#: fmit.appdata.xml.in:90 fmit.appdata.xml.in:91 fmit.appdata.xml.in:92
+#: fmit.appdata.xml.in:93 fmit.appdata.xml.in:94 fmit.appdata.xml.in:95
+#: fmit.appdata.xml.in:96 fmit.appdata.xml.in:97 fmit.appdata.xml.in:98
+#: fmit.appdata.xml.in:99 fmit.appdata.xml.in:100 fmit.appdata.xml.in:101
+#: fmit.appdata.xml.in:102 fmit.appdata.xml.in:103 fmit.appdata.xml.in:104
+#: fmit.appdata.xml.in:105 fmit.appdata.xml.in:106 fmit.appdata.xml.in:107
+#: fmit.appdata.xml.in:108 fmit.appdata.xml.in:109 fmit.appdata.xml.in:110
+msgid "none"
+msgstr ""
+
+#. (itstool) path: description/p
+#: fmit.appdata.xml.in:115
+msgid ""
+"This release includes some notation improvements, a couple of new icons and "
+"translation improvements:"
+msgstr ""
+
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:116
+#: fmit.appdata.xml.in:117
 msgid "New note names: Hindustani, Byzantine"
 msgstr "Novos nomes da nota: Hindustânis, Bizantinos"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:117
+#: fmit.appdata.xml.in:118
 msgid "Use unicode flat and sharp signs"
 msgstr "Uso de sinais unicode para bemol e sustenido"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:118
+#: fmit.appdata.xml.in:119
+#, fuzzy
+msgid "Flexible transposition key selection"
+msgstr "Escolha mais flexível da chave de transposição."
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:120
 msgid ""
 "Use custom save settings and pause icons that better fits the other icons "
 "design"
@@ -153,39 +224,67 @@ msgstr ""
 "demais ícones"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:119
-msgid "Flexible transposition key selection."
-msgstr "Escolha mais flexível da chave de transposição."
-
-#. (itstool) path: ul/li
-#: fmit.appdata.xml.in:120
-msgid "Added symbolic icon for high-contrast setup."
+#: fmit.appdata.xml.in:121
+#, fuzzy
+msgid "Added symbolic icon for high-contrast setup"
 msgstr "Adicionado ícone simbólico para uso em temas de alto contraste."
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:121
-msgid ""
-"Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/"
+#: fmit.appdata.xml.in:122
+#, fuzzy
+msgid "Switch to Weblate for translation"
 msgstr ""
 "Traduções movidas para o site Weblate: https://hosted.weblate.org/projects/"
 "fmit/"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:122
-msgid "Added translation for application information."
+#: fmit.appdata.xml.in:123
+#, fuzzy
+msgid "Added translation for application information"
 msgstr "Adicionadas traduções para informações sobre a aplicação."
 
-#. (itstool) path: ul/li
+#. (itstool) path: description/p
 #: fmit.appdata.xml.in:129
-msgid "New icons"
-msgstr "Novos ícones"
-
-#. (itstool) path: ul/li
-#: fmit.appdata.xml.in:130
-msgid "Added F tonality"
-msgstr "Adicionada tonalidade em Fá"
+msgid ""
+"This release includes a new set of icons, support for the F tonality, and "
+"some fixes:"
+msgstr ""
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:131
+msgid "New set of icons for switching the view panels"
+msgstr ""
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:132
+#, fuzzy
+msgid "Added transposition to F tonality"
+msgstr "Adicionada tonalidade em Fá"
+
+#. (itstool) path: ul/li
+#: fmit.appdata.xml.in:133
 msgid "Fixed graphical glitches"
 msgstr "Corrigidas anomalias gráficas"
+
+#~ msgid ""
+#~ "Choose between multiple sound capture systems, including ALSA and JACK."
+#~ msgstr ""
+#~ "Escolha um de múltiplos sistemas de captura de som, incluindo ALSA e JACK."
+
+#~ msgid "Harmonics view"
+#~ msgstr "Visualização de harmônicos"
+
+#~ msgid "Fourier transform view"
+#~ msgstr "Visualização da Transformada de Fourier"
+
+#~ msgid "General settings"
+#~ msgstr "Preferências gerais"
+
+#~ msgid "Capture systems settings"
+#~ msgstr "Preferências de sistema de captura de áudio"
+
+#~ msgid "Sound analysis settings"
+#~ msgstr "Preferências de análise de som"
+
+#~ msgid "New icons"
+#~ msgstr "Novos ícones"

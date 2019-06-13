@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Gilles Degottex <gilles.degottex@gmail.com> -->
-<application>
+<component type="desktop-application">
   <id type="desktop">fmit.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
@@ -25,8 +25,6 @@
     </p>
     <p>
       Choose between multiple sound capture systems, including ALSA and JACK.
-    </p>
-    <p>
       Show or hide individual panels and go from a simple analog tuner view to an 
       advanced real-time analysis toolset, or anywhere in between.
     </p>
@@ -52,6 +50,7 @@
       <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/sample.png</image>
       <caption>Waveform view</caption>
     </screenshot>
+<!--
     <screenshot>
       <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/harmonics.png</image>
       <caption>Harmonics view</caption>
@@ -72,13 +71,14 @@
       <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/settings-analysis.png</image>
       <caption>Sound analysis settings</caption>
     </screenshot>
+-->
   </screenshots>
   <url type="homepage">https://gillesdegottex.github.io/fmit/</url>
   <url type="translate">https://hosted.weblate.org/projects/fmit/</url>
   <url type="bugtracker">https://github.com/gillesdegottex/fmit/issues</url>
   <url type="faq">http://gillesdegottex.github.io/fmit/faq.html</url>
   <developer_name>Gilles Degottex</developer_name>
-  <updatecontact>gilles.degottex@gmail.com</updatecontact>
+  <update_contact>gilles.degottex@gmail.com</update_contact>
   <translation type="qt">fmit</translation>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
@@ -112,25 +112,27 @@
   <releases>
     <release version="1.2.6" date="2018-05-30">
       <description>
+        <p>This release includes some notation improvements, a couple of new icons and translation improvements:</p>
         <ul>
           <li>New note names: Hindustani, Byzantine</li>
           <li>Use unicode flat and sharp signs</li>
+          <li>Flexible transposition key selection</li>
           <li>Use custom save settings and pause icons that better fits the other icons design</li>
-          <li>Flexible transposition key selection.</li>
-          <li>Added symbolic icon for high-contrast setup.</li>
-          <li>Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/</li>
-          <li>Added translation for application information.</li>
+          <li>Added symbolic icon for high-contrast setup</li>
+          <li>Switch to Weblate for translation</li>
+          <li>Added translation for application information</li>
         </ul>
       </description>
     </release>
     <release version="1.1.18" date="2018-05-09">
       <description>
+        <p>This release includes a new set of icons, support for the F tonality, and some fixes:</p>
         <ul>
-          <li>New icons</li>
-          <li>Added F tonality</li>
+          <li>New set of icons for switching the view panels</li>
+          <li>Added transposition to F tonality</li>
           <li>Fixed graphical glitches</li>
         </ul>
       </description>
     </release>
   </releases>
-</application>
+</component>
