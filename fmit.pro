@@ -251,14 +251,14 @@ linux {
 
     APPDATA_MO = $(patsubst $$PWD/%.po,$$OUT_PWD/%.mo,$(wildcard $$PWD/distrib/appdata_tr/*.po))
 
-    appdata_tr.depends = $$PWD/distrib/fmit.appdata.xml.in $$APPDATA_MO
-    appdata_tr.target = $$OUT_PWD/distrib/fmit.appdata.xml
-    appdata_tr.commands = $$sprintf($$QMAKE_MKDIR_CMD, $$OUT_PWD/distrib/) && itstool -j $$PWD/distrib/fmit.appdata.xml.in -o $@ $$APPDATA_MO
+    appdata_tr.depends = $$PWD/distrib/fmit.metainfo.xml.in $$APPDATA_MO
+    appdata_tr.target = $$OUT_PWD/distrib/fmit.metainfo.xml
+    appdata_tr.commands = $$sprintf($$QMAKE_MKDIR_CMD, $$OUT_PWD/distrib/) && itstool -j $$PWD/distrib/fmit.metainfo.xml.in -o $@ $$APPDATA_MO
     QMAKE_EXTRA_TARGETS += appdata_tr
     PRE_TARGETDEPS += $$appdata_tr.target
 } else {
-    appdata_no_tr.depends = $$PWD/distrib/fmit.appdata.xml.in
-    appdata_no_tr.target = $$OUT_PWD/distrib/fmit.appdata.xml
+    appdata_no_tr.depends = $$PWD/distrib/fmit.metainfo.xml.in
+    appdata_no_tr.target = $$OUT_PWD/distrib/fmit.metainfo.xml
     appdata_no_tr.commands = $$sprintf($$QMAKE_MKDIR_CMD, $$system_path($$OUT_PWD/distrib/)) && $$QMAKE_COPY $$system_path($$appdata_no_tr.depends) $$system_path($$appdata_no_tr.target)
     QMAKE_EXTRA_TARGETS += appdata_no_tr
     PRE_TARGETDEPS += $$appdata_no_tr.target
@@ -278,7 +278,7 @@ iconsym.path = $$PREFIX/share/icons/hicolor/symbolic/apps
 iconsym.files = ui/images/fmit-symbolic.svg
 iconpng.path = $$PREFIX/share/icons/hicolor/128x128/apps
 iconpng.files = ui/images/fmit.png
-appdata.path = $$PREFIX/share/appdata
-appdata.files = $$OUT_PWD/distrib/fmit.appdata.xml
+appdata.path = $$PREFIX/share/metainfo
+appdata.files = $$OUT_PWD/distrib/fmit.metainfo.xml
 appdata.CONFIG += no_check_exist
 INSTALLS += target scales translations shortcut iconsvg iconsym iconpng appdata
