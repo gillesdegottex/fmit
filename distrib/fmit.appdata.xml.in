@@ -118,7 +118,7 @@
           <li>Use custom save settings and pause icons that better fits the other icons design</li>
           <li>Flexible transposition key selection.</li>
           <li>Added symbolic icon for high-contrast setup.</li>
-          <li>Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/</li>
+          <li>Switch to Weblate for translation</li>
           <li>Added translation for application information.</li>
         </ul>
       </description>
