@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About FMIT...</string>
+   <string>About FMIT…</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../fmit.qrc">
