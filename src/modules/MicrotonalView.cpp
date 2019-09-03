@@ -327,7 +327,7 @@ MicrotonalView::MicrotonalView(QWidget* parent)
 	connect(setting_keepRootToLeft, SIGNAL(toggled(bool)), this, SLOT(keepRootToLeft(bool)));
 	m_popup_menu.addAction(setting_keepRootToLeft);
 
-	setting_loadScale = new QAction(tr("Load Scala file ..."), this);
+	setting_loadScale = new QAction(tr("Load Scala file …"), this);
 	m_popup_menu.addAction(setting_loadScale);
     connect(setting_loadScale, SIGNAL(triggered()), this, SLOT(loadScale()));
 

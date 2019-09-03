@@ -382,7 +382,7 @@ p, li { white-space: pre-wrap; }
                <string>Automatically connect FMIT to the following source at startup (e.g. alsa_pcm:capture_1)</string>
               </property>
               <property name="text">
-               <string>automaticaly connect to...</string>
+               <string>automatically connect to…</string>
               </property>
              </widget>
             </item>
