@@ -230,7 +230,8 @@ TRANSLATIONS = tr/fmit_de.ts \
                tr/fmit_fr.ts \
                tr/fmit_pt.ts \
                tr/fmit_pt_BR.ts \
-               tr/fmit_ru.ts
+               tr/fmit_ru.ts \
+               tr/fmit_nb_NO.ts
 
 
 CONFIG += embed_manifest_exe
