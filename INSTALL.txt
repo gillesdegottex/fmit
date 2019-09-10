@@ -10,6 +10,11 @@ Optional libraries (under Linux only)
     The JACK developpment library for sound input (libjack-dev)
     The Portaudio developpment library for sound input (portaudio19-dev)
 
+Deployment ---------------------------------------------------------------------
+
+    Releases have to be tagged from github.com
+    Otherwise Appveyor does not see the tag.
+
 
 Under Linux or OSX ------------------------------------------------------------
 
@@ -29,7 +34,7 @@ To compile:
 
     Compile:
     $ make
-    
+
     Build the translation files:
     $ make lrelease
 

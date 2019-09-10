@@ -43,7 +43,7 @@ install:
 
   - ps: New-Item -ItemType directory -Name lib
   - ps: cd lib
-  
+
   - ps: echo "Install FFTW3"
   - ps: if ($env:platform -eq 'x64') {$libfft = "fftw-3.3.4-dll64"}
   - ps: if ($env:platform -eq 'x86') {$libfft = "fftw-3.3.4-dll32"}
@@ -63,9 +63,9 @@ install:
 #  - ps: lib /MACHINE:X86 /def:libfftw3-3.def # Needed only for MSVC (lib is still unrecognized command)
 
   - ps: cd ..
-  
+
   - choco install -y InnoSetup
-  
+
   - ps: cd "c:\projects\fmit"
 
 build_script:
@@ -97,7 +97,7 @@ deploy:
   release: Version $(releaseversion)
   tag: $(appveyor_repo_tag_name)
   auth_token:
-    secure: TQgRc2OQ+3qGZXRW1yf2AIuYeOAC2FeC4wgfhZv2qZr8yMZF6AST9ER9xfRMJ4Ze # your encrypted token from GitHub
+    secure: $GITHUB_AUTH_TOKEN
   artifact: newinstallers
   draft: true
   prerelease: false
