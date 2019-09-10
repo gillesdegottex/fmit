@@ -97,7 +97,7 @@ deploy:
   release: Version $(releaseversion)
   tag: $(appveyor_repo_tag_name)
   auth_token:
-    secure: $GITHUB_AUTH_TOKEN
+    secure: $(GITHUB_AUTH_TOKEN)
   artifact: newinstallers
   draft: true
   prerelease: false
