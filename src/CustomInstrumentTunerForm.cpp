@@ -106,6 +106,11 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	m_settings.add(m_config_form.ui_spinPortAudioSamplingRate);
 	m_settings.add(m_config_form.ui_chkPortAudioMixMultipleChannels);
 #endif
+#ifdef CAPTURE_QT
+    m_settings.add(m_config_form.ui_chkQtSamplingRateMax);
+    m_settings.add(m_config_form.ui_spinQtSamplingRate);
+    m_settings.add(m_config_form.ui_chkQtMixMultipleChannels);
+#endif
 
 	m_settings.add(m_config_form.ui_spinRefreshTime);
 	m_settings.add(m_config_form.ui_spinMinHT);
