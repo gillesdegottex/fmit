@@ -3,16 +3,16 @@ sudo: required
 dist: xenial
 
 compiler:
-- clang
-- gcc
+    - clang
+    - gcc
 
 os:
-  - linux
-  - osx
+    - linux
+    - osx
 
 branches:
-  only:
-  - master
+    only:
+    - master
 
 matrix:
     exclude:
@@ -20,105 +20,71 @@ matrix:
           os: linux
 
 addons:
-    apt:
-        update: true
-        sources:
-        - ubuntu-sdk-team
-        packages:
-        - qtbase5-dev
-        - qtdeclarative5-dev
-        - libqt5webkit5-dev
-        - qt5-default
-        - qttools5-dev-tools
-        - qtmultimedia5-dev
-        - libqt5opengl5-dev
-        - libqt5svg5-dev
-        - libfftw3-dev
-        - libpulse-dev
-        - libasound2-dev
-        - cvs
-        - libtool
-        - itstool
+  apt:
+    update: true
+    sources:
+    - ubuntu-sdk-team
+    packages:
+    - qtbase5-dev
+    - qtdeclarative5-dev
+    - libqt5webkit5-dev
+    - qt5-default
+    - qttools5-dev-tools
+    - qtmultimedia5-dev
+    - libqt5opengl5-dev
+    - libqt5svg5-dev
+    - libfftw3-dev
+    - libpulse-dev
+    - libasound2-dev
+    - cvs
+    - libtool
+    - itstool
 
 before_install:
     - git submodule update --init --recursive
-    # This checkout if for ensuring that git describe --tags --always gives a proper output
-    # otherwise only the commit's sha appear bcs Travis always checkout a commit, never a HEAD
-    - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then echo "We're on a HEAD, it's not a Pull Request"; git checkout $TRAVIS_BRANCH; fi
+    - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then echo "We're on a HEAD, it's not a
+      Pull Request"; git checkout $TRAVIS_BRANCH; fi
     - git fetch --unshallow
     - git fetch --tags
     - sleep 1
     - export GITVERSION=`git describe --tags --always |sed 's/^v//'`
     - export PROJECTGITVERSION=$GITVERSION
     - echo $PROJECTGITVERSION
-    - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo "Building Pull Request $TRAVIS_PULL_REQUEST"; export PROJECTGITVERSION=pr_$TRAVIS_PULL_REQUEST; fi
+    - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo "Building Pull Request $TRAVIS_PULL_REQUEST";
+      export PROJECTGITVERSION=pr_$TRAVIS_PULL_REQUEST; fi
     - echo $TRAVIS_OS_NAME
     - echo $TRAVIS_COMMIT
     - echo $TRAVIS_TAG
     - export TRAVIS_TAG=`git describe --tags --exact-match HEAD 2>/dev/null`
     - echo $TRAVIS_TAG
     - echo $TRAVIS_BRANCH
-    #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:beineri/opt-qt521 && sudo apt-get update -qq; fi
-    #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa && sudo apt-get update -qq; fi
 
 install:
-    #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then
-         #sudo apt-get install qt52base qt52declarative qt52webkit-examples
-      #&& sudo apt-get install qt52tools qt52multimedia qt52svg
-      #&& sudo apt-get install libfftw3-dev libpulse-dev libasound2-dev
-      #&& sudo apt-get install cvs libtool
-      #; fi
-    #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then
-         #sudo apt-get install --yes qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev
-      #&& sudo apt-get install --yes qt5-default qttools5-dev-tools qtmultimedia5-dev libqt5svg5-dev
-      #&& sudo apt-get install --yes libfftw3-dev libpulse-dev
-      #&& sudo apt-get install --yes libasound2-dev
-      #&& sudo apt-get install --yes cvs libtool itstool
-      #; fi
-    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
-         brew install fftw
-      && brew install qt5
-      && export PATH=/usr/local/opt/qt5/bin:$PATH
-      ; fi
+    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install fftw && brew install qt5 &&
+      export PATH=/usr/local/opt/qt5/bin:$PATH ; fi
     - qmake --version
 
 script:
     - echo $TRAVIS_BUILD_DIR
-    #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then source /opt/qt52/bin/qt52-env.sh && qmake "CONFIG+=acs_alsa" fmit.pro; fi
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then qmake "CONFIG+=acs_alsa" fmit.pro; fi
-    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then qmake "FFT_LIBDIR=/usr/local/opt/fftw" fmit.pro; fi
+    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then qmake "FFT_LIBDIR=/usr/local/opt/fftw" fmit.pro;
+      fi
     - make
-
     - make lrelease
     - ls tr
-
     - if [ "`uname -m`" = "x86_64" ]; then export ARCH="amd64"; fi
     - if [ "`uname -m`" = "x86" ]; then export ARCH="i386"; fi
-    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
-            cd distrib
-         && bash package_deb.sh ../fmit
-         && export DEBNAME=fmit_$GITVERSION-github_$ARCH.deb
-         && export PACKAGENAME=fmit_$PROJECTGITVERSION-github\_$ARCH.deb
-         && [ $DEBNAME == $PACKAGENAME ] || mv $DEBNAME $PACKAGENAME
-      ; fi
-
-    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
-            macdeployqt fmit.app -dmg
-         && sleep 10
-         && export PACKAGENAME=fmit_$PROJECTGITVERSION.dmg
-         && mv fmit.dmg $PACKAGENAME
-      ; fi
-
+    - if [ "$TRAVIS_OS_NAME" = "linux" ]; then cd distrib && bash package_deb.sh ../fmit
+      && export DEBNAME=fmit_$GITVERSION-github_$ARCH.deb && export PACKAGENAME=fmit_$PROJECTGITVERSION-github\_$ARCH.deb
+      && [ $DEBNAME == $PACKAGENAME ] || mv $DEBNAME $PACKAGENAME ; fi
+    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then macdeployqt fmit.app -dmg && sleep 10 &&
+      export PACKAGENAME=fmit_$PROJECTGITVERSION.dmg && mv fmit.dmg $PACKAGENAME ; fi
     - ls -l $PWD/$PACKAGENAME
 
-
 deploy:
-  skip_cleanup: true
   provider: releases
   api_key:
-    secure: K8/6nqC6MKIdijAnLVBsWHJ3WEmzuvHnRWNmvBY4p0aRMIbb0xuU6/piD6HRgJi0QXsktRLwXhM7htNP5MuURDUPBhAnsxhRsjM857gnjVqW+s34O1QL3VwpuBS4Sq4CCf3pyV2SC8mN8B+PI+pmjw7X6XN9E72fHh/uHFC0L0eWByJdlB6UU7T3N15kBjOhYz0plSGA1G2Qr511PjuHAf0Y48bfv61w6vdgMcASvGIhTVORT5YX1RqMnpo7/vy4yGN/uGKrRSuZ7wbOgjFjVTCT1jygMEJ5VsL5tIMK1YlrLvnr/qI7yZL9hmmpMS7Z483XTXAGcGrZrHBYsor9Z8FgPRqQlkdPFcM7rgR6Jp2stwZStS1DkSTSr6LE1nvXA1Ly5V/j+ua6sW8e38dXC+BUvM7MQwcxeYXH1H3ysLs3qZHRlRDS7GxV4e8ecVERGdWWzA2ShxKAkaE+JU10hU7YHv/An5vVjQld/1+ZCs+/PF9udV+oNUEh439dKlNFWM1b9oRJ1tw89Qluo54yQ1+yYTX4AOzt/7ql5TwYnOXYgGZdNVViM18ctuhzJo7pq64dliaNjJjDpbCVCg2iAxWkEzPAWCDBzkUiWC+3Ep3c/IsPBjllY2wO9d29OKfaN2u9IDCyhao4raxmSXOD0/7GyCBZTpuykmvS2aEC4Cg=
+    secure: ZlQV7LbovRyNLTgHvqW9xMH3bD5tSKtk0LfcqI7hjBMLn00lQW5aD1RUJRhGs3dFbTeGmHw3gB3oCtQjPd28yEujP1ZaWSrBasSxdLXTHeEQgoRV2WyCwPgUnxjkboDk86A1CXJHa2R/zXwmK95c7p/KSzDBjJz1fajgvFznrDGQXPL3ZKG7xzaZfF/K6pjiIxlt7KkwrfDPALAnmLncBw18YDlWfxctjCxMmwwq4o2tTQrULJAqRoUpmL4sCCeqiX7Y++w6FGb8MoofRSsYWuHiTBTuV4jVNN6iKaUSP6e6EXinGPioar982cn/eCjYm/FjG3xBqHPZI+Hljt2gBW2ktCaFTU6UX9VkTW0jTr95NOiPndd7XAMOIZMU3Y1Rdwj/xe8mz3RSqagI7oecOOnSBUTwjfEbDCK7mGJqL5W/iTpaTJbAtR4xIoYprloCEt6k0d+SAWaNZ+FXnWJQK1oXDR4VzBqPY1LdHaOql+Nz79wgTKLPzpQ6Gx68et7Hmu2WZZnTgDBYgsv/CKP2ZgiDPyJ4kAcEZb2z+Y0HtJOCgKFcXnkTBbArjPpLw3pAf3klMiwqqTR7Rr0tpVfKkVU2gatCNBzenwqt91fOZSrY26/TENlPJb5TIMNoq2ToNb1IjCIHjC8cwimul+Chm3Thzit0i7VoVkwK1HRHRw8=
   file: $PACKAGENAME
   on:
     repo: gillesdegottex/fmit
-    tags: true
-    condition: $CC = gcc
