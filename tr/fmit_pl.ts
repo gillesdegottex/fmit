@@ -16,12 +16,12 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="88"/>
         <source>FMIT</source>
-        <translation type="unfinished"></translation>
+        <translation>FMIT</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="98"/>
         <source>&lt;version&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;wersja&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="123"/>
@@ -88,7 +88,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="106"/>
         <source>Kirnberger III</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kirnberger III</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="111"/>
