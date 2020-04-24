@@ -555,7 +555,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/ConfigForm.ui" line="947"/>
         <location filename="../ui/ConfigForm.ui" line="1495"/>
         <source> ms</source>
-        <translation>мс</translation>
+        <translation> мс</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1033"/>
@@ -582,7 +582,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/ConfigForm.ui" line="1108"/>
         <location filename="../ui/ConfigForm.ui" line="1173"/>
         <source> dB</source>
-        <translation>дБ</translation>
+        <translation> дБ</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1198"/>
