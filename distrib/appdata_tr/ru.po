@@ -2,150 +2,174 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2020-05-01 13:11+0000\n"
+"Last-Translator: Mingun <Alexander_Sergey@mail.ru>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/fmit/appdata/ru/>"
+"\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.0.2\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
 msgid "FMIT"
-msgstr ""
+msgstr "FMIT"
 
 #. (itstool) path: application/summary
 #: fmit.appdata.xml.in:8
 msgid "Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument"
 msgstr ""
+"Свободный тюнер музыкальных инструментов (Free Musical Instrument Tuner — "
+"FMIT), инструмент для настройки музыкального инструмента"
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:10
 msgid "Find an estimation of the fundamental frequency (f0, not the perceived pitch) of an audio signal, in real-time, and compare it with the closest note in the scale."
 msgstr ""
+"Находите оценку фундаментальной частоты (f0, а не воспринимаемой высоты тона)"
+" звукового сигнала в реальном времени и сравнивайте её с ближайшей нотой в "
+"гамме."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:15
 msgid "Tune your musical instruments with advanced features, including traces of frequency and volume, adjustable base tuning frequency, multiple choices of tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and meantone), microtonal tuning with Scala file (.scl) support and statistics."
 msgstr ""
+"Настраивайте музыкальные инструменты с расширенными возможностями, включая "
+"следы частоты и громкости, регулируемую базовую частоту настройки, несколько "
+"вариантов строя (хроматический, Werckmeister III, Kirnberger III, "
+"диатонический и среднетоновый), микротональную настройку с поддержкой файлов "
+"Scala (.scl) и статистики."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:21
 msgid "Perform real-time sound analysis with views for waveform period, harmonics amplitude and Discrete Fourier Transform (DFT). Change various analysis parameters and tradeoff between precision and speed."
 msgstr ""
+"Выполняйте анализ звука в реальном времени, используя просмотр периода волн, "
+"амплитуд гармоник и дискретное преобразование Фурье (ДПФ). Изменяйте "
+"различные параметры анализа, чтобы достичь компромисса между точностью и "
+"скоростью."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:26
 msgid "Choose between multiple sound capture systems, including ALSA and JACK."
 msgstr ""
+"Выбирайте между несколькими системами захвата звука, включая ALSA и JACK."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:29
 msgid "Show or hide individual panels and go from a simple analog tuner view to an advanced real-time analysis toolset, or anywhere in between."
 msgstr ""
+"Отображайте или скрывайте отдельные панели и переключайтесь с простого вида "
+"аналогового тюнера на расширенный набор инструментов для анализа звука в "
+"реальном времени, либо выберите что среднее между ними."
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:37
 msgid "Volume view and previous notes"
-msgstr ""
+msgstr "Представление громкости и предыдущих нот"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:41
 msgid "Simplest view"
-msgstr ""
+msgstr "Простейшее представление"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:45
 msgid "Microtonal view"
-msgstr ""
+msgstr "Микротоновое представление"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:49
 msgid "Statistics view"
-msgstr ""
+msgstr "Статистическое представление"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:53
 msgid "Waveform view"
-msgstr ""
+msgstr "Представление осцилограммы"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:57
 msgid "Harmonics view"
-msgstr ""
+msgstr "Представление гармоник"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:61
 msgid "Fourier transform view"
-msgstr ""
+msgstr "Представление преобразования Фурье"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:65
 msgid "General settings"
-msgstr ""
+msgstr "Общие настройки"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:69
 msgid "Capture systems settings"
-msgstr ""
+msgstr "Настройки систем захвата"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:73
 msgid "Sound analysis settings"
-msgstr ""
+msgstr "Настройки анализа звука"
 
 #. (itstool) path: application/developer_name
 #: fmit.appdata.xml.in:80
 msgid "Gilles Degottex"
-msgstr ""
+msgstr "Жиль Деготекс"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:116
 msgid "New note names: Hindustani, Byzantine"
-msgstr ""
+msgstr "Новые названия нот: хиндустани, византийский язык"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:117
 msgid "Use unicode flat and sharp signs"
-msgstr ""
+msgstr "Использовать знаки Юникода для бемоля и диеза"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:118
 msgid "Use custom save settings and pause icons that better fits the other icons design"
 msgstr ""
+"Использовать пользовательские иконки для иконок сохранения настроек и паузы, "
+"которые лучше соответствуют дизайну других иконок"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:119
 msgid "Flexible transposition key selection."
-msgstr ""
+msgstr "Гибкий выбор клавиши транспозиции."
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:120
 msgid "Added symbolic icon for high-contrast setup."
-msgstr ""
+msgstr "Добавлена символьная иконка для настройки высокого контраста."
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:121
 msgid "Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/"
-msgstr ""
+msgstr "Перенос переводов на Weblate: https://hosted.weblate.org/projects/fmit/"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:122
 msgid "Added translation for application information."
-msgstr ""
+msgstr "Добавлен перевод информации о приложении."
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:129
 msgid "New icons"
-msgstr ""
+msgstr "Новые иконки"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:130
 msgid "Added F tonality"
-msgstr ""
+msgstr "Добавлена тональность фа"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:131
 msgid "Fixed graphical glitches"
-msgstr ""
+msgstr "Исправлены графические глюки"
