@@ -6,12 +6,12 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="14"/>
         <source>About FMIT...</source>
-        <translation>Об FMIT...</translation>
+        <translation>О FMIT...</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="28"/>
         <source>About</source>
-        <translation type="unfinished">О программе</translation>
+        <translation>О программе</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="88"/>
@@ -54,7 +54,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling for the scales in cents&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Большинство программ с открытым исходным кодом не существовало бы без косвенных взносов сообщества в библиотеки, лежащие в их основе. Так что скажем огромное спасибо следующим гикам:&lt;br /&gt;&lt;br /&gt;— dsboger’у за множество мелких и полезных изменений, обновлений, создание пакета и прочие вещи.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;— Флориану Харсу за строи&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;— Арно Энгелену за замечания по JACK&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;— Джону Андерсону за идею микротонального модуля&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;— Скотту Бахлингу за строи в центах&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;— Якобу Шапиро за его помощь в налаживании работы FMIT в Windows/Cygwin.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;— Переводчикам: Omega9 (на русский), skarmoutsosv (на греческий), Pindaro и dsboger (на португальский и бразильский португальский), Флориану Майеру (на немецкий).&lt;br /&gt;&lt;br /&gt;— &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt; за очень быстрое преобразование Фурье.&lt;br /&gt;&lt;br /&gt;— команде &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt; за библиотеку для графического пользовательского интерфейса.&lt;br /&gt;&lt;br /&gt;Любой вклад любого рода очень приветствуется!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -549,7 +559,11 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
 &lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options, right-click every view to show up their properties!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Для получения дополнительных настроек представлений и просмотра их свойств, нажмите на нём правой кнопкой мыши!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="947"/>
@@ -924,7 +938,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLSample.cpp" line="127"/>
         <source>Waveform&apos;s period</source>
-        <translation type="unfinished"></translation>
+        <translation>Период волны</translation>
     </message>
 </context>
 <context>
@@ -1029,7 +1043,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="14"/>
         <source>Free Music Instrument Tuner</source>
-        <translation>Free Music Instrument Tuner</translation>
+        <translation>Свободный тюнер музыкальных инструментов</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="55"/>
@@ -1203,7 +1217,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <location filename="../src/modules/MicrotonalView.cpp" line="182"/>
         <source>Unkown filename: &apos;</source>
-        <translation>Неизвесное имя файла: &apos;</translation>
+        <translation>Неизвестное имя файла: &apos;</translation>
     </message>
     <message>
         <location filename="../src/modules/MicrotonalView.cpp" line="286"/>
@@ -1270,12 +1284,12 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <location filename="../src/CaptureThread.cpp" line="368"/>
         <source>default</source>
-        <translation type="unfinished">default</translation>
+        <translation>по умолчанию</translation>
     </message>
     <message>
         <location filename="../src/modules/View.cpp" line="86"/>
         <source>%1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1</translation>
     </message>
 </context>
 </TS>
