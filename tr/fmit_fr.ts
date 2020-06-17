@@ -299,7 +299,8 @@ Choisissez le nombre d&apos;harmoniques à utiliser.</translation>
     <message>
         <source>Raise the window to the whole screen when the program is started
 (You can also use the shortcut &apos;f&apos;).</source>
-        <translation>Agrandit la fenêtre sur tout l&apos;écran lorsque le programme démarre (utilisez le raccourci &apos;f&apos;).</translation>
+        <translation>Agrandit la fenêtre sur tout l&apos;écran lorsque le programme démarre
+(Vous pouvez également utiliser le raccourci &apos;f&apos;).</translation>
     </message>
     <message>
         <source>Auto-save configuration and layout on exit</source>
@@ -346,7 +347,8 @@ Utile pour convertir le nom des notes dans la tonalité d&apos;un instrument (ex
     <message>
         <source>The chosen sampling rate.
 Do not use a too big sampling rate. 22050Hz should be enough in most cases.</source>
-        <translation>Le taux d&apos;échantillonnage choisi. Ne pas utiliser une fréquence d&apos;échantillonage trop élevée. 22050Hz devrait être largement suffisant dans la plupart des cas.</translation>
+        <translation>Le taux d&apos;échantillonnage choisi.
+Ne pas utiliser une fréquence d’échantillonnage trop élevée. 22050Hz devrait être suffisant dans la plupart des cas.</translation>
     </message>
     <message>
         <source>Set the sampling rate to the maximum possible value.</source>
@@ -359,7 +361,8 @@ Do not use a too big sampling rate. 22050Hz should be enough in most cases.</sou
     <message>
         <source>Time between each sound analysis.
 Can be increased to get less CPU usage (but less temporal precision).</source>
-        <translation>Temps entre chaque analyse du son. Augmenter pour réduire l&apos;utilisation du processeur mais baisse la résolution temporelle.</translation>
+        <translation>Temps entre chaque analyse du son.
+Peut être augmenter pour réduire l&apos;utilisation du processeur (mais abaisse la résolution temporelle).</translation>
     </message>
     <message>
         <source>Range of possible notes from the lowest to the highest around the A4 reference note.
@@ -461,7 +464,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Pour accéder à plus d&apos;options, faites un click droit sur les vues pour faire apparaître leurs propriétés !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Pour accéder à plus d&apos;options, faites un clic-droit sur chacune des vues pour faire apparaître leurs propriétés !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>German</source>
@@ -855,8 +858,9 @@ r</translation>
         <source>Volume in dB.
 Computed in the frequency domain, from the maximum bin.
 The maximum is reached when the signal energy is maximal NOT when the sound is saturated in the time domain.</source>
-        <translation>Volume en dB. Calculé en domaine fréquenciel, à partir du bin maximum.
-Le maximum de volume est atteint lorsque l&apos;énergie du signal est maximal, pas lorsque la forme d&apos;onde sature dans le domaine temporel.</translation>
+        <translation>Volume en dB.
+Calculé en domaine fréquentiel, à partir du bin maximum.
+Le maximum est atteint lorsque l&apos;énergie du signal est maximal, PAS lorsque le son est saturé dans le domaine temporel.</translation>
     </message>
     <message>
         <source>According to the following colors:
@@ -864,7 +868,7 @@ red       : the capture system is not working.
 grey     : the capture system is OK, but there is not enough sound.
 orange : the analysis conditions are bad (like saturation)
 green   : a note is beeing analyzed and analysis conditions are OK.</source>
-        <translation>Selon les couleurs suivantes:
+        <translation>Selon les couleurs suivantes :
 rouge    : le système de capture ne fonctionne pas.
 gris       : le système de capture est OK, mais le son n&apos;est pas assez fort.
 orange  : les conditions d&apos;analyses ne sont pas suffisantes (ex : il y a saturation).
@@ -903,7 +907,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     <name>MicrotonalView</name>
     <message>
         <source>Unkown filename: &apos;</source>
-        <translation>Nom de fichier inconnu: &apos;</translation>
+        <translation>Nom de fichier inconnu : &apos;</translation>
     </message>
     <message>
         <source>Keep root to left side</source>
