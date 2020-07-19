@@ -190,11 +190,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>The name of the ALSA device to use.</source>
-        <translation>Nome do dispositivo ALSA para usar.</translation>
+        <translation>Nome do aparelho ALSA para usar.</translation>
     </message>
     <message>
         <source>Device name</source>
-        <translation>Nome do dispositivo</translation>
+        <translation>Nome do aparelho</translation>
     </message>
     <message>
         <source>default</source>
@@ -232,7 +232,7 @@ Não use uma taxa de amostragem muito alta. 22050Hz deve ser suficiente na maior
     </message>
     <message>
         <source>The name of the OSS device to connect to</source>
-        <translation>Nome do dispositivo OSS para conectar</translation>
+        <translation>Nome do aparelho OSS para conectar</translation>
     </message>
     <message>
         <source>/dev/dsp</source>
@@ -244,7 +244,7 @@ Não use uma taxa de amostragem muito alta. 22050Hz deve ser suficiente na maior
     </message>
     <message>
         <source>The name of the PortAudio device to connect to</source>
-        <translation>Nome do dispositivo PortAudio para conectar</translation>
+        <translation>Nome do aparelho PortAudio para conectar</translation>
     </message>
     <message>
         <source>Sound Analysis</source>
@@ -470,7 +470,7 @@ Você tem certeza que quer perder todas as configurações atuais?</translation>
     <message>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation>Intervalo de de notas possíveis, do mínimo ao máximo, ao redor da referência %1.
+        <translation>Intervalo de notas possíveis, do mínimo ao máximo, ao redor da referência %1.
 Quanto menor o intervalo, menor o uso da CPU.</translation>
     </message>
     <message>
