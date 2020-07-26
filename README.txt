@@ -26,14 +26,14 @@ Copyright (c) 2004 Gilles Degottex <gilles.degottex@gmail.com>
 
 
 License
-    Most of the code of this software is under the GPL (v3) License.
-    See the file COPYING_GPL.txt or http://www.gnu.org/licenses/gpl-3.0.html
+    Most of the code of this software is under the GPL (v2) License.
+    See the file COPYING_GPL.txt or http://www.gnu.org/licenses/gpl-2.0.html
 
-    Some abstract or helper classes are under LGPL (v3.0).
-    See the file COPYING_LGPL.txt or http://www.gnu.org/licenses/lgpl-3.0.html
+    Some abstract or helper classes are under LGPL (v2).
+    See the file COPYING_LGPL.txt or http://www.gnu.org/licenses/lgpl-2.0.html
 
     The internal libs of this software (see directories in libs) are also under
-    the LGPL (v3) License (see the respective directory for more details).
+    the LGPL (v2) License (see the respective directory for more details).
 
 Disclaimer
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
