@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: 2018-11-19 22:07+0000\n"
+"PO-Revision-Date: 2020-10-01 19:41+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/fmit/appdata/"
 "pt/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.3-dev\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
@@ -37,11 +37,11 @@ msgstr ""
 #: fmit.appdata.xml.in:15
 msgid "Tune your musical instruments with advanced features, including traces of frequency and volume, adjustable base tuning frequency, multiple choices of tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and meantone), microtonal tuning with Scala file (.scl) support and statistics."
 msgstr ""
-"Afine seus instrumentos musicais usando funções avançadas, incluindo "
+"Afine os seus instrumentos musicais usando funções avançadas, incluindo "
 "históricos de frequência e volume, frequência base de afinação ajustável, "
 "várias escolhas de escala de afinação (cromática, Werckmeister III, "
 "Kirnberger III, diatônica e mesotônica), afinação microtonal com suporte a "
-"aquivos Scala (.scl) e estatísticas."
+"ficheiros Scala (.scl) e estatísticas."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:21
