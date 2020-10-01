@@ -564,11 +564,11 @@ Useful to convert note names to a corresponding transposing instrument (e.g. %2 
     </message>
     <message>
         <source>- Press left mouse button to move the view</source>
-        <translation>Pressione o botão esquerdo do mouse para mover a visualização</translation>
+        <translation>Pressione o botão esquerdo do rato para mover a visualização</translation>
     </message>
     <message>
         <source>- Press SHIFT key and left mouse button to zoom in and out</source>
-        <translation>Pressione o botão SHIFT mais o botão esquerdo do mouse para aumentar ou diminuir o zoom</translation>
+        <translation>Pressione o botão SHIFT mais o botão esquerdo do rato para aumentar ou diminuir o zoom</translation>
     </message>
     <message>
         <source>- Double-click to reset the view</source>
@@ -759,10 +759,10 @@ grey     : the capture system is OK, but there is not enough sound.
 orange : the analysis conditions are bad (like saturation)
 green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <translation>Segundo as seguintes cores:
-vermelho: o sistema de captura não está funcionando.
-cinza: o sistema de captura está OK, porém não há som suficiente.
+vermelho: o sistema de captura não está a funcionar.
+cinzenta: o sistema de captura está OK, porém não há som suficiente.
 laranja: as condições de análise estão ruins (p.ex. saturação).
-verde: a nota está sendo analisada e as condições de análise estão OK.</translation>
+verde: a nota está a ser analisada e as condições de análise estão OK.</translation>
     </message>
     <message>
         <source>Note Stability</source>
