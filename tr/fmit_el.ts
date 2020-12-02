@@ -64,7 +64,7 @@ p, li { white-space: pre-wrap; }
     <name>ConfigForm</name>
     <message>
         <source>Sampling rate</source>
-        <translation>Ρυμός δειγματολειψίας</translation>
+        <translation>Ρυθμός δειγματολειψίας</translation>
     </message>
     <message>
         <source>set to max</source>
