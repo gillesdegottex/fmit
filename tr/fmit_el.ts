@@ -88,7 +88,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Cancel</source>
-        <translation>&amp;Άκυρο</translation>
+        <translation>&amp;Ακύρωση</translation>
     </message>
     <message>
         <source>General</source>
