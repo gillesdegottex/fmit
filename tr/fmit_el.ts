@@ -88,7 +88,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Cancel</source>
-        <translation>&amp;Ακύρωση</translation>
+        <translation>&amp;Άκυρο</translation>
     </message>
     <message>
         <source>General</source>
@@ -124,7 +124,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>default</source>
-        <translation>default</translation>
+        <translation>προεπιλογή</translation>
     </message>
     <message>
         <source>OSS</source>
@@ -785,7 +785,7 @@ p</source>
     </message>
     <message>
         <source>Space</source>
-        <translation>Διάστημα</translation>
+        <translation>Κενό</translation>
     </message>
     <message>
         <source>Configure</source>
@@ -939,7 +939,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <name>QObject</name>
     <message>
         <source>default</source>
-        <translation>προκαθορισμένο</translation>
+        <translation>προεπιλογή</translation>
     </message>
     <message>
         <source>%1</source>
