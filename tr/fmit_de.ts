@@ -6,7 +6,7 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="14"/>
         <source>About FMIT...</source>
-        <translation>Über FMIT...</translation>
+        <translation>Über FMIT …</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="28"/>
@@ -54,11 +54,11 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling for the scales in cents&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Die meiste Open-Source-Software ist ohne indirekte Beiträge, die über Bibliotheken bereitgestellt werden, nicht machbar. Deshalb geht ein großes Dankeschön an die folgenden Geeks:&lt;br /&gt;&lt;br /&gt;-dsboger für so viele kleine und nützliche Änderungen, Updates, Verpackungen, etc.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Die meiste quelloffenen Softwares ist ohne indirekte Beiträge, die über Bibliotheken bereitgestellt werden, nicht machbar. Deshalb geht ein großes Dankeschön an die folgenden Geeks:&lt;br /&gt;&lt;br /&gt;-dsboger für so viele kleine und nützliche Änderungen, Aktualisierungen, Verpackungen etc.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;-Florian Hars for the tunning scales&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Arnout Engelen for the JACK issues&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- John Anderson for the microtonal module idea&lt;/p&gt;
@@ -218,7 +218,7 @@ Latein: Do Re Mi Fa Sol La Si</translation>
         <location filename="../ui/ConfigForm.ui" line="770"/>
         <location filename="../ui/ConfigForm.ui" line="882"/>
         <source>Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.</source>
-        <translation>Verwenden Sie keine zu hohe Abtastrate. 22050Hz sollten in den meisten Fällen ausreichen.</translation>
+        <translation>Verwenden Sie keine zu hohe Abtastrate. 22 050 Hz sollten in den meisten Fällen ausreichen.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="559"/>
