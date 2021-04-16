@@ -5,7 +5,7 @@
     <name>AboutBox</name>
     <message>
         <source>About FMIT...</source>
-        <translation>À propos de FMIT ...</translation>
+        <translation>À propos de FMIT…</translation>
     </message>
     <message>
         <source>About</source>
@@ -238,7 +238,7 @@ Latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.</source>
-        <translation>Ne pas utiliser une fréquence d&apos;échantillonage trop élevée. 22050Hz devrait être largement suffisant dans la plupart des cas.</translation>
+        <translation>Ne pas utiliser une fréquence d&apos;échantillonage trop élevée. 22 050 Hz devrait être largement suffisant dans la plupart des cas.</translation>
     </message>
     <message>
         <source>The name of the OSS device to connect to</source>
