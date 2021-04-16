@@ -238,7 +238,7 @@ Latine : Do Ré Mi Fa Sol La Si</translation>
     </message>
     <message>
         <source>Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.</source>
-        <translation>Ne pas utiliser une fréquence d&apos;échantillonage trop élevée. 22 050 Hz devrait être largement suffisant dans la plupart des cas.</translation>
+        <translation>Ne pas utiliser une fréquence d’échantillonnage trop élevée. 22 050 Hz devrait être largement suffisant dans la plupart des cas.</translation>
     </message>
     <message>
         <source>The name of the OSS device to connect to</source>
@@ -334,7 +334,7 @@ Utile pour convertir le nom des notes dans la tonalité d&apos;un instrument (ex
     </message>
     <message>
         <source>automaticaly connect to...</source>
-        <translation>se connecter automatiquement à ...</translation>
+        <translation>se connecter automatiquement à...</translation>
     </message>
     <message>
         <source>JACK sampling rate</source>
@@ -900,7 +900,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>Invoke the about box.</source>
-        <translation>Faire apparaître la fenêtre d&apos;A propos de ...</translation>
+        <translation>Faire apparaître la fenêtre d’À propos...</translation>
     </message>
 </context>
 <context>
@@ -915,7 +915,7 @@ vert       : une note est en cours d&apos;analyse et les conditions d&apos;analy
     </message>
     <message>
         <source>Load Scala file ...</source>
-        <translation>Charger un fichier Scala ...</translation>
+        <translation>Charger un fichier Scala...</translation>
     </message>
     <message>
         <source>Open scale file</source>
