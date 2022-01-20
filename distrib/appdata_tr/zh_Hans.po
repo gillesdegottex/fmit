@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: 2019-11-18 13:04+0000\n"
-"Last-Translator: codesforu <saturnix@pm.me>\n"
+"PO-Revision-Date: 2022-01-20 07:56+0000\n"
+"Last-Translator: Tian Shixiong <tiansworld@fedoraproject.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "fmit/appdata/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
@@ -133,9 +133,7 @@ msgstr "为高对比度显示增加图标。"
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:121
 msgid "Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/"
-msgstr ""
-"翻译迁移至Weblate：\n"
-"https://hosted.weblate.org/projects/fmit/"
+msgstr "翻译迁移至 Weblate：https://hosted.weblate.org/projects/fmit/"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:122
