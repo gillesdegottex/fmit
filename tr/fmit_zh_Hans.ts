@@ -192,7 +192,9 @@ p, li { white-space: pre-wrap; }
         <source>Use localized note names. e.g.:
 anglo-saxon: C D E F G A B
 latin: Do Re Mi Fa Sol La Si</source>
-        <translation>使用本地语言化的音名</translation>
+        <translation>使用本地化的音名，比如：
+盎格鲁撒克逊式：C D E F G A B
+拉丁式：Do Re Mi Fa Sol La Si</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="457"/>
