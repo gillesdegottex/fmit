@@ -6,7 +6,7 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="14"/>
         <source>About FMIT...</source>
-        <translation>关于FMIT...</translation>
+        <translation>关于 FMIT...</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="28"/>
@@ -39,7 +39,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/aboutbox.ui" line="143"/>
         <source>Credits</source>
-        <translation>荣誉</translation>
+        <translation>致谢</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="158"/>
@@ -126,27 +126,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="188"/>
         <source>Anglo-Saxon</source>
-        <translation>盎格鲁撒克逊</translation>
+        <translation>盎格鲁撒克逊式</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="193"/>
         <source>Latin</source>
-        <translation>拉丁</translation>
+        <translation>拉丁式</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="266"/>
         <source>Capture System</source>
-        <translation>撷取系统</translation>
+        <translation>采集系统</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="307"/>
         <source>Auto-detect an available capture system at startup</source>
-        <translation>在启动时自动探测撷取系统</translation>
+        <translation>启动时自动检测可用的采集系统</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="323"/>
         <source>Auto detect now</source>
-        <translation>立即自动探测</translation>
+        <translation>立即自动检测</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="332"/>
@@ -169,7 +169,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/ConfigForm.ui" line="428"/>
         <location filename="../ui/ConfigForm.ui" line="431"/>
         <source>Sampling rate of the JACK server</source>
-        <translation>JACK服务器采样率</translation>
+        <translation>JACK 服务器采样率</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="495"/>
@@ -210,7 +210,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="770"/>
         <location filename="../ui/ConfigForm.ui" line="882"/>
         <source>Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.</source>
-        <translation>不要使用过高的采样率。大多数情况下22050Hz足矣。</translation>
+        <translation>不要使用过高的采样率。大多数情况下 22050Hz 足矣。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="559"/>
@@ -223,7 +223,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="586"/>
         <location filename="../ui/ConfigForm.ui" line="589"/>
         <source>The name of the OSS device to connect to</source>
-        <translation>要连接的OSS设备的名称</translation>
+        <translation>要连接的 OSS 设备名称</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="592"/>
@@ -245,7 +245,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="808"/>
         <location filename="../ui/ConfigForm.ui" line="811"/>
         <source>The name of the PortAudio device to connect to</source>
-        <translation>要连接的PortAudio设备的名称</translation>
+        <translation>要连接的 PortAudio 设备名称</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="476"/>
@@ -259,7 +259,8 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="56"/>
         <source>Raise the window to the whole screen when the program is started
 (You can also use the shortcut &apos;f&apos;).</source>
-        <translation>启动时最大化窗口（快捷键f）。</translation>
+        <translation>启动时最大化窗口
+（快捷键f）。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="67"/>
@@ -272,7 +273,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="89"/>
         <location filename="../ui/ConfigForm.ui" line="92"/>
         <source>The used tuning scale to determine note frequency values. Useful for tuning historic intruments.</source>
-        <translation>采用自适应音阶以确定音高频率。适用于古乐器校音。</translation>
+        <translation>采用自适应音阶以确定音高频率。适用于古乐器调音。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="128"/>
@@ -298,18 +299,18 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="274"/>
         <location filename="../ui/ConfigForm.ui" line="277"/>
         <source>The capture system (e.g. JACK, ALSA, OSS, PortAudio)</source>
-        <translation>撷取系统（JACK，ALSA，OSS，PortAudio）</translation>
+        <translation>采集系统（JACK，ALSA，OSS，PortAudio）</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="280"/>
         <source>The capture system</source>
-        <translation>撷取系统</translation>
+        <translation>采集系统</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="287"/>
         <location filename="../ui/ConfigForm.ui" line="290"/>
         <source>Selected the capture system (e.g. JACK, ALSA, OSS, PortAudio)</source>
-        <translation>选中的撷取系统（JACK，ALSA，OSS，PortAudio）</translation>
+        <translation>选中的采集系统（JACK，ALSA，OSS，PortAudio）</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="301"/>
@@ -317,7 +318,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="317"/>
         <location filename="../ui/ConfigForm.ui" line="320"/>
         <source>Auto detect a working capture system at FMIT startup.</source>
-        <translation>启动FMIT时自动选择可用的撷取系统。</translation>
+        <translation>启动 FMIT 时自动选择可用的采集系统。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="340"/>
@@ -325,7 +326,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="362"/>
         <location filename="../ui/ConfigForm.ui" line="365"/>
         <source>The name of this FMIT instance in the JACK connections.</source>
-        <translation>此FMIT进程在JACK连接中的名称。</translation>
+        <translation>此 FMIT 实例在 JACK 连接中的名称。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="379"/>
@@ -333,7 +334,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="401"/>
         <location filename="../ui/ConfigForm.ui" line="404"/>
         <source>Automatically connect FMIT to the following source at startup (e.g. alsa_pcm:capture_1)</source>
-        <translation>在FMIT启动时自动连接以下音源（如alsa_pcm:capture_1）</translation>
+        <translation>在 FMIT 启动时自动连接以下音源（如 alsa_pcm:capture_1）</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="385"/>
@@ -343,7 +344,7 @@ latin: Do Re Mi Fa Sol La Si</source>
     <message>
         <location filename="../ui/ConfigForm.ui" line="421"/>
         <source>JACK sampling rate</source>
-        <translation>JACK采样率</translation>
+        <translation>JACK 采样率</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="451"/>
@@ -351,7 +352,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="470"/>
         <location filename="../ui/ConfigForm.ui" line="473"/>
         <source>The name of the ALSA device to use.</source>
-        <translation>要使用的ALSA设备的名称。</translation>
+        <translation>要使用的 ALSA 设备名称。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="487"/>
@@ -373,7 +374,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <source>The chosen sampling rate.
 Do not use a too big sampling rate. 22050Hz should be enough in most cases.</source>
         <translation>选定的采样率。
-不要使用太高的采样率。在大多数情况下，22050Hz足矣。</translation>
+不要使用太高的采样率。在大多数情况下，22050Hz 足矣。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="525"/>
@@ -401,7 +402,7 @@ Do not use a too big sampling rate. 22050Hz should be enough in most cases.</sou
         <location filename="../ui/ConfigForm.ui" line="777"/>
         <location filename="../ui/ConfigForm.ui" line="889"/>
         <source>Mix channels if there are multiple (if unchecked, the first channel will be used)</source>
-        <translation>混合多通道（若不选则用第一通道）</translation>
+        <translation>有多个时，混合通道（若不选则用第一通道）</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="787"/>
@@ -420,7 +421,8 @@ Do not use a too big sampling rate. 22050Hz should be enough in most cases.</sou
         <location filename="../ui/ConfigForm.ui" line="943"/>
         <source>Time between each sound analysis.
 Can be increased to get less CPU usage (but less temporal precision).</source>
-        <translation>音频分析时间间隔。延长间隔可降低CPU占用，但会损失精度。</translation>
+        <translation>音频分析时间间隔。
+延长间隔可降低 CPU 占用，但会损失精度。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="967"/>
@@ -460,9 +462,9 @@ Can be increased to get less CPU usage (but less temporal precision).</source>
         <source>Ignore weak sub-harmonics.
 This threshold is defined between two neighbors frequency components.
 Prevents underestimation errors.</source>
-        <translation>忽略弱泛音。
+        <translation>忽略次谐波。
 此阈值是由两个相邻频率分量之间定义的。
-防止意外错误。</translation>
+防止出现低估错误。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1207"/>
@@ -474,7 +476,7 @@ Prevents underestimation errors.</source>
         <source>Factor defining the window size (from the lowest possible period defined by the notes range).
 The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</source>
         <translation>窗口期因子（最小值由音域决定）。
-该因子越大，音频分析越稳定，但CPU占用也越高，对切换音高的反应也越慢。</translation>
+该因子越大，音频分析越稳定，但 CPU 占用也越高，对切换音高的反应也越慢。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1472"/>
@@ -483,13 +485,14 @@ The bigger this factor, the more stable the analysis. However, by increasing thi
         <location filename="../ui/ConfigForm.ui" line="1491"/>
         <source>Quantize the analysis results: ignore frequency jumps, fill gaps, ignore short notes.
 The smaller the value, the faster the tuner. However, by decreasing the value, the computed frequency will be more unstable.</source>
-        <translation>量化分析结果：忽略跳频、填补空白、忽略短音符。值越小，校音器就越快。但是过减小该值，计算的频率将变得不稳定。</translation>
+        <translation>量化分析结果：忽略跳频、填补空白、忽略短音符。
+值越小，调音器就越快。但减小该值会让计算的频率变得更不稳定。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1538"/>
         <location filename="../ui/ConfigForm.ui" line="1541"/>
         <source>Restore settings as if you just installed FMIT (requires to restart FMIT).</source>
-        <translation>重置为初装设置（需要重启FMIT）。</translation>
+        <translation>重置为初始设置（需要重启 FMIT）。</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1567"/>
@@ -535,7 +538,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="1046"/>
         <source>FIR filter: good precision, but more costly in CPU usage</source>
-        <translation>FIR滤波器：精度高，CPU占用高</translation>
+        <translation>FIR 滤波器：精度高，CPU 占用高</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1056"/>
@@ -557,7 +560,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="1198"/>
         <source>Use sub-harmonic audibility threshold</source>
-        <translation>使用次泛音可听阈值</translation>
+        <translation>使用次谐波可听阈值</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1271"/>
@@ -637,7 +640,7 @@ Choose the number of harmonics to use.</source>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1544"/>
         <source>Restore &amp;factory settings</source>
-        <translation>出厂化设置</translation>
+        <translation>复原及初始设置</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1573"/>
@@ -656,32 +659,31 @@ Choose the number of harmonics to use.</source>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1054"/>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1067"/>
         <source>Restore Factory Settings</source>
-        <translation>出厂化设置</translation>
+        <translation>恢复初始设置</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1054"/>
         <source>This operation is NOT reversible.
 Are you sure you want to lose all your current settings ?</source>
         <translation>该操作不可逆。
-你确定要丢弃全部当前设置吗？</translation>
+您确定要丢弃当前全部设置吗？</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1067"/>
         <source>You can now restart FMIT to get back factory settings</source>
-        <translation>现在你可以重启FMIT回到出厂化的设置</translation>
+        <translation>现在您可以重启 FMIT 回到初始设置</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1174"/>
         <source>Transposition in number of semitones relative to %1.
 Useful to convert note names to a corresponding transposing instrument (e.g. %2 for saxophone, %3 for trumpet).</source>
-        <translation>以半音数量 %1 移调。
-适用于移调乐器
-（如 %2 萨克斯， %3 小号）。</translation>
+        <translation>以相对于 %1 的半音数量进行移调。
+适用于将音名转换到对应的移调乐器上（如 %2 萨克斯， %3 小号）。</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1187"/>
         <source>The base tunning frequency (the %1 frequency)</source>
-        <translation>校音基准频率（频率 %1 ）</translation>
+        <translation>调音基准频率（频率 %1 ）</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1194"/>
@@ -692,19 +694,19 @@ Useful to convert note names to a corresponding transposing instrument (e.g. %2 
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1198"/>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation>基准音高 %1 左右音高数量范围。
-范围越小，CPU占用越小。</translation>
+        <translation>基准音 %1 左右音符范围。
+范围越小，CPU 占用越小。</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1203"/>
         <source>Lowest semitone from the %1 reference note.
 It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
-        <translation>参考音 %1 到最低半音。设为-35以上可以避免干扰（~50赫兹）。</translation>
+        <translation>基准音 %1 开始向左的最低半音数量。设为 -35 以上可以避免干扰（~50赫兹）。</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1210"/>
         <source>Highest semitone from the %1 reference note.</source>
-        <translation>参考音 %1 到最高半音。</translation>
+        <translation>基准音 %1 开始向右的最高半音数量</translation>
     </message>
 </context>
 <context>
@@ -798,7 +800,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLFT.cpp" line="86"/>
         <source>- Press SHIFT key and left mouse button to zoom in and out</source>
-        <translation>- 按住Shift键单击以缩放</translation>
+        <translation>- 按住 Shift 键和鼠标左键进行缩放</translation>
     </message>
     <message>
         <location filename="../src/modules/GLFT.cpp" line="89"/>
@@ -912,7 +914,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="213"/>
         <source>Keep n values</source>
-        <translation>保持n个值</translation>
+        <translation>保持 n 个值</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="222"/>
@@ -999,7 +1001,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="14"/>
         <source>Free Music Instrument Tuner</source>
-        <translation>自由乐器校音器</translation>
+        <translation>自由乐器调音器</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="55"/>
@@ -1007,7 +1009,10 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
 e
 e
 p</source>
-        <translation>保持</translation>
+        <translation>保
+
+
+持</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="61"/>
@@ -1022,12 +1027,12 @@ p</source>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="192"/>
         <source>Tuning Frequency</source>
-        <translation>校音频率</translation>
+        <translation>调音频率</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="227"/>
         <source> Hz</source>
-        <translation> Hz</translation>
+        <translation> 赫兹</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="256"/>
@@ -1049,7 +1054,7 @@ p</source>
         <location filename="../ui/InstrumentTunerForm.ui" line="49"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="52"/>
         <source>Keep the data in the error and volume views (shortcut &quot;k&quot;).</source>
-        <translation>将数据保留在错误视图和音量视图中（快捷键k）。</translation>
+        <translation>将数据保留在错误视图和音量视图中（快捷键 k）。</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="111"/>
@@ -1070,8 +1075,8 @@ grey     : the capture system is OK, but there is not enough sound.
 orange : the analysis conditions are bad (like saturation)
 green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <translation>颜色的含义：
-红色：撷取系统不工作。
-灰色：撷取系统正常，但音量不够。
+红色：采集系统不工作。
+灰色：采集系统正常，但音量不够。
 橙色 ：分析条件差（如饱和度）。
 绿色：音高正在被分析，分析条件正常。</translation>
     </message>
@@ -1079,7 +1084,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <location filename="../ui/InstrumentTunerForm.ui" line="221"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="224"/>
         <source>The base tunning frequency (the A4 frequency)</source>
-        <translation>基准校音频率（A4 频率）</translation>
+        <translation>基准调音频率（A4 频率）</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="250"/>
@@ -1087,7 +1092,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <location filename="../ui/InstrumentTunerForm.ui" line="278"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="281"/>
         <source>Offset in cents from the base tuning frequency</source>
-        <translation>以音分表示从基准校音频率的偏置</translation>
+        <translation>以音分表示从基准调音频率的偏置</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="322"/>
@@ -1099,7 +1104,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <location filename="../ui/InstrumentTunerForm.ui" line="376"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="379"/>
         <source>The target frequency of the current note in Hertz.</source>
-        <translation>以赫兹为单位表示当前音高的目标校音频率。</translation>
+        <translation>当前音高的目标频率，单位为赫兹。</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="408"/>
@@ -1120,7 +1125,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <location filename="../ui/InstrumentTunerForm.ui" line="447"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="450"/>
         <source>Pause: the capture, the sound analysis and all views.</source>
-        <translation>暂停：撷取系统、音频分析和所有视图。</translation>
+        <translation>暂停：采集系统、音频分析和所有视图。</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="480"/>
@@ -1191,7 +1196,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <location filename="../src/modules/MicrotonalView.cpp" line="330"/>
         <source>Load Scala file ...</source>
-        <translation>加载Scala文件...</translation>
+        <translation>加载 Scala 文件...</translation>
     </message>
     <message>
         <location filename="../src/modules/MicrotonalView.cpp" line="803"/>
@@ -1199,12 +1204,12 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
         <location filename="../src/modules/MicrotonalView.cpp" line="842"/>
         <location filename="../src/modules/MicrotonalView.cpp" line="846"/>
         <source>Open scale file</source>
-        <translation>打开Scale文件</translation>
+        <translation>打开 scale 文件</translation>
     </message>
     <message>
         <location filename="../src/modules/MicrotonalView.cpp" line="842"/>
         <source>Scale name already exist</source>
-        <translation>音阶名称已经存在</translation>
+        <translation>Scale 名称已经存在</translation>
     </message>
     <message>
         <location filename="../src/modules/MicrotonalView.cpp" line="846"/>
@@ -1224,7 +1229,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <location filename="../src/modules/MicrotonalView.cpp" line="934"/>
         <source>Invalid Scala file: </source>
-        <translation>无效的Scala文件： </translation>
+        <translation>无效的 Scala 文件： </translation>
     </message>
 </context>
 <context>
