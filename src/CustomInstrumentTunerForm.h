@@ -88,6 +88,7 @@ class CustomInstrumentTunerForm : public QMainWindow, public Ui_InstrumentTunerF
 	deque<double> m_queue;
 	double m_freq;
 	double m_compared_freq;
+	double m_last_compared_freq;
 	double m_error;
 
 	QTime m_time;
@@ -120,6 +121,7 @@ class CustomInstrumentTunerForm : public QMainWindow, public Ui_InstrumentTunerF
 	virtual void refresh_views();
 	void refresh_data_sample();
 	void refresh_data_harmonics();
+	void modifyFixedNote(int delta);
 
 	// the main function
 public slots:
@@ -143,6 +145,9 @@ public slots:
 	virtual void transpositionChanged();
 	virtual void selectTransport(const QString & name);
 	virtual void autoDetectTransport();
+	virtual void forceFixedNoteChanged(bool force_fixed_note);
+	virtual void fixedNoteUp();
+	virtual void fixedNoteDown();
 	void refresh();
 	void update_localized_note_names();
 

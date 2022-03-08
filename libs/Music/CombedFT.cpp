@@ -38,6 +38,9 @@ namespace Music
 		m_zp_factor = 1.0;
 		m_window_factor = 1.0;
 
+		m_force_fixed_note = false;
+		m_fixed_note = 0;
+
 		init();
 	}
 	void CombedFT::setZeroPaddingFactor(double zp)
@@ -118,8 +121,19 @@ namespace Music
 		// compute max with respect of the bounds
 		m_components_max = 0.0;
 		int max_index = -1;
-		double fmin = h2f(GetSemitoneMin());
-		double fmax = h2f(GetSemitoneMax());
+		double fmin;
+		double fmax;
+		if(m_force_fixed_note)
+		{
+			double bin_size = double(GetSamplingRate())/m_plan.size();  // ensure at least 3 bin spacing
+			fmin = h2f(m_fixed_note - 0.5) - bin_size;
+			fmax = h2f(m_fixed_note + 0.5) + bin_size;
+		}
+		else
+		{
+			fmin = h2f(GetSemitoneMin());
+			fmax = h2f(GetSemitoneMax());
+		}
 		for(size_t i=0; i<m_components.size(); i++)
 		{
 			double fi = i*double(GetSamplingRate())/m_plan.size();
@@ -135,8 +149,10 @@ namespace Music
 
 		if(m_components_max>getComponentTreshold())
 		{
+			// this occasionally leads to higher / lower frequencies than fmin / fmax if the note is not very stable
 			m_f0 = PeakRefinementLogParabola(m_plan.out, max_index)*double(GetSamplingRate())/m_plan.size();
 
+			/*
 			// TODO TEST *win[i]; // me semble qu'une trans de harm signal n'est pas trop discontinue aux extrémités
 			m_comb.execute();
 
@@ -191,6 +207,7 @@ namespace Music
 
 			if(max_index>0)
 	 			m_f0 /= max_index;
+			*/
 		}
 
 // 		cout << " final: " << GetSamplingRate() << ":" << m_f0 << endl;
