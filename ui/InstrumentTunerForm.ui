@@ -89,6 +89,9 @@ p</string>
         <item>
          <layout class="QVBoxLayout" name="ui_FT"/>
         </item>
+        <item>
+         <layout class="QVBoxLayout" name="ui_MusicSpectrum"/>
+        </item>
        </layout>
       </item>
       <item>

@@ -152,7 +152,6 @@ namespace Music
 			// this occasionally leads to higher / lower frequencies than fmin / fmax if the note is not very stable
 			m_f0 = PeakRefinementLogParabola(m_plan.out, max_index)*double(GetSamplingRate())/m_plan.size();
 
-			/*
 			// TODO TEST *win[i]; // me semble qu'une trans de harm signal n'est pas trop discontinue aux extrémités
 			m_comb.execute();
 
@@ -207,7 +206,6 @@ namespace Music
 
 			if(max_index>0)
 	 			m_f0 /= max_index;
-			*/
 		}
 
 // 		cout << " final: " << GetSamplingRate() << ":" << m_f0 << endl;

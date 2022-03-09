@@ -51,6 +51,7 @@ using namespace Music;
 #include "modules/GLSample.h"
 #include "modules/GLFreqStruct.h"
 #include "modules/GLFT.h"
+#include "modules/GLMusicSpectrum.h"
 #include "modules/GLStatistics.h"
 
 class CustomConfigForm : public QDialog, public Ui_ConfigForm
@@ -82,6 +83,7 @@ class CustomInstrumentTunerForm : public QMainWindow, public Ui_InstrumentTunerF
 	GLSample* m_glSample;
 	GLFreqStruct* m_glFreqStruct;
 	GLFT* m_glFT;
+	GLMusicSpectrum* m_glMusicSpectrum;
 	MicrotonalView* m_microtonalView;
 	GLStatistics* m_glStatistics;
 
