@@ -18,6 +18,7 @@
 
 #include <cmath>
 #include "IIRLowPass.h"
+#include "CppAddons/CAMath.h"
 
 IIRLowPass::IIRLowPass(int order, double fC, double dt)
 {
@@ -36,7 +37,7 @@ void IIRLowPass::resetMemory()
 
 void IIRLowPass::setFC(double fC)
 {
-    m_RC = 1 / (2 * M_PI * fC);
+    m_RC = 1 / (2 * Math::Pi * fC);
 }
 
 double IIRLowPass::step(double in)

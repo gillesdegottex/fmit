@@ -591,7 +591,7 @@ void GLMusicSpectrum::recalcFTMatrix()
 	{
 		m_dft_matrix[i].resize(m_overlap_len);
 		double frequency = m_minf + (m_maxf - m_minf) * i / static_cast<double>(m_components.size());
-		double frequency_adjusted = 2 * M_PI * frequency / (Music::GetSamplingRate() / static_cast<double>(m_undersample_fac));
+		double frequency_adjusted = 2 * Math::Pi * frequency / (Music::GetSamplingRate() / static_cast<double>(m_undersample_fac));
 		for (int i_t = 0; i_t < m_overlap_len; i_t++) {
 			m_dft_matrix[i][i_t] = std::exp(std::complex<double>(0, frequency_adjusted * i_t));
 		}
