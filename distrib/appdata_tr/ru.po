@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: 2020-05-01 13:11+0000\n"
-"Last-Translator: Mingun <Alexander_Sergey@mail.ru>\n"
+"PO-Revision-Date: 2022-05-19 06:15+0000\n"
+"Last-Translator: AHOHNMYC <lqwh2h2cwa@protonmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/fmit/appdata/ru/>"
 "\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.0.2\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
@@ -41,8 +41,8 @@ msgstr ""
 "Настраивайте музыкальные инструменты с расширенными возможностями, включая "
 "следы частоты и громкости, регулируемую базовую частоту настройки, несколько "
 "вариантов строя (хроматический, Werckmeister III, Kirnberger III, "
-"диатонический и среднетоновый), микротональную настройку с поддержкой файлов "
-"Scala (.scl) и статистики."
+"диатонический и среднетоновый), микротональную настройку с использованием "
+"файлов Scala (.scl) и статистики."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:21
@@ -65,7 +65,7 @@ msgid "Show or hide individual panels and go from a simple analog tuner view to 
 msgstr ""
 "Отображайте или скрывайте отдельные панели и переключайтесь с простого вида "
 "аналогового тюнера на расширенный набор инструментов для анализа звука в "
-"реальном времени, либо выберите что среднее между ними."
+"реальном времени, или выберите что-то среднее."
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:37
@@ -166,10 +166,12 @@ msgstr "Новые иконки"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:130
+#, fuzzy
 msgid "Added F tonality"
 msgstr "Добавлена тональность фа"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:131
+#, fuzzy
 msgid "Fixed graphical glitches"
 msgstr "Исправлены графические глюки"
