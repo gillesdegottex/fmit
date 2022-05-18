@@ -292,13 +292,12 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="89"/>
         <location filename="../ui/ConfigForm.ui" line="92"/>
         <source>The used tuning scale to determine note frequency values. Useful for tuning historic intruments.</source>
-        <translation>Используемый строй для определения частоты ноты. Полезно при настройки исторических инструментов.</translation>
+        <translation>Используемый строй для определения частоты ноты. Полезно для настройки исторических инструментов.</translation>
     </message>
     <message>
         <source>The used tonality.
 Useful to convert note names to a corresponding instrument tonality (e.g. Eb for saxophone, Bb for trumpet).</source>
         <translation>Используемая тональность.
-
 Полезно при изменении имен нот в соответствии с тональностью инструмента (напр. Eb для саксофона, Bb для трубы).</translation>
     </message>
     <message>
@@ -443,7 +442,7 @@ Do not use a too big sampling rate. 22050Hz should be enough in most cases.</sou
         <source>Time between each sound analysis.
 Can be increased to get less CPU usage (but less temporal precision).</source>
         <translation>Время между каждым анализом звука.
-Может быть увеличено для меньшей нагрузки на процессор (но меньшей точностью).</translation>
+Может быть увеличено для снижения нагрузки на процессор (но точность анализа снизится).</translation>
     </message>
     <message>
         <source>Range of possible notes from the lowest to the highest around the A4 reference note.
@@ -498,9 +497,9 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
         <source>Ignore weak sub-harmonics.
 This threshold is defined between two neighbors frequency components.
 Prevents underestimation errors.</source>
-        <translation>Игнорировать слабые суб-гармоники.
+        <translation>Игнорировать слабые субгармоники.
 Этот порог определяется между двумя соседними составляющими частоты.
-Предотвращает занижение значимости ошибки.</translation>
+Предотвращает ошибки недооценки.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1207"/>
@@ -512,7 +511,7 @@ Prevents underestimation errors.</source>
         <source>Factor defining the window size (from the lowest possible period defined by the notes range).
 The bigger this factor, the more stable the analysis. However, by increasing this factor, FMIT will need more CPU and will react slower to sound changes.</source>
         <translation>Коэффициент, определяющий размер окна (от самого низкого возможного периода, определенного диапазоном нот).
-Чем больше этот коэффициент, тем более стабилен анализ. Тем не менее, за счет увеличения этого фактора, FMIT понадобится больше ресурсов процессора и реагировать изменения звука будет ниже.</translation>
+Чем больше этот коэффициент, тем более стабилен анализ. Но при его увеличении, возрастёт нагрузка на процессор, а реакция на изменения звука будет медленнее.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1472"/>
@@ -522,7 +521,7 @@ The bigger this factor, the more stable the analysis. However, by increasing thi
         <source>Quantize the analysis results: ignore frequency jumps, fill gaps, ignore short notes.
 The smaller the value, the faster the tuner. However, by decreasing the value, the computed frequency will be more unstable.</source>
         <translation>Квантование результатов анализа: игнорировать скачки частоты, заполнить пробелы, игнорировать короткие ноты.
-Чем меньше значение, тем быстрее тюнер. Тем не менее, путем уменьшения значения, вычисленные частоты будут более нестабильными.</translation>
+Чем меньше значение, тем быстрее тюнер. Но при уменьшении значения, определение частот станет менее стабильным.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1538"/>
@@ -534,7 +533,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
         <location filename="../ui/ConfigForm.ui" line="1567"/>
         <location filename="../ui/ConfigForm.ui" line="1570"/>
         <source>Use these settings and quit the configuration panel (it is required to click on the &quot;Save settings&quot; button to permanently keep these settings for each FMIT start)</source>
-        <translation>Использовать эти настройки и покинуть окно настройки (требуется нажать на кнопку &quot;Сохранить настройки&quot;, чтобы сохранить эти настройки для каждого запуска FMIT)</translation>
+        <translation type="unfinished">Использовать эти настройки и покинуть окно настройки (требуется нажать на кнопку &quot;Сохранить настройки&quot;, чтобы сохранить эти настройки для каждого запуска FMIT)</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1586"/>
@@ -559,7 +558,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
 &lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options, right-click every view to show up their properties!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
@@ -601,7 +600,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="1198"/>
         <source>Use sub-harmonic audibility threshold</source>
-        <translation>Использовать суб-гармонический порог слышимости</translation>
+        <translation>Использовать субгармонический порог слышимости</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1271"/>
@@ -630,7 +629,9 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/ConfigForm.ui" line="1396"/>
         <location filename="../ui/ConfigForm.ui" line="1399"/>
         <source>Use a refinement method in frequency domain: compute the mean of the quasi-harmonic related spectral peaks (the option allows to chose the number of harmonics to use).</source>
-        <translation>Используйте метод уточнения в области частот: вычислить среднее значение квазигармонических связанных спектральных пиков (опция позволяет выбрать количество гармоник для использования).</translation>
+        <translation>Использовать метод уточнения в области частот:
+вычислить среднее значение квазигармонических связанных спектральных пиков
+(опция позволяет выбрать количество гармоник для использования).</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1324"/>
@@ -640,7 +641,9 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/ConfigForm.ui" line="1373"/>
         <location filename="../ui/ConfigForm.ui" line="1376"/>
         <source>Use a refinement method in time domain: compute the mean of various period lengths (the option allows to chose the number of periods to use).</source>
-        <translation>Используйте метод уточнения во временной области: вычислить среднее значение различных длин периодов (опция позволяет выбрать количество периодов для использования).</translation>
+        <translation>Использовать метод уточнения во временной области:
+вычислить среднее значение различных длин периодов
+(опция позволяет выбрать количество периодов для использования).</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1427"/>
@@ -666,12 +669,12 @@ Choose the number of harmonics to use.</source>
         <location filename="../ui/ConfigForm.ui" line="1455"/>
         <location filename="../ui/ConfigForm.ui" line="1458"/>
         <source>Quantizer settings</source>
-        <translation>Настройки квантизации</translation>
+        <translation>Настройки квантования</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1461"/>
         <source>Quantizer</source>
-        <translation>Квантизация</translation>
+        <translation>Квантование</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1480"/>
@@ -735,15 +738,15 @@ Useful to convert note names to a corresponding transposing instrument (e.g. %2 
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1198"/>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation>Диапазон возможных нот от самого низкого до самого высокого уровня вокруг %1. 
-Чем меньше диапазон, тем меньше нагрузка на ЦП.</translation>
+        <translation>Диапазон возможных нот от самого низкого до самого высокого уровня вокруг %1.
+Чем меньше диапазон, тем меньше нагрузка на процессор.</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1203"/>
         <source>Lowest semitone from the %1 reference note.
 It can useful to put it higher than -35 to avoid disturbance from the sector alimentation (~50hz).</source>
-        <translation>Самый низкий полутон от %1. 
-Может быть полезно поставить выше, чем -35, чтобы избежать помех от алиментации сектора (~50 Гц).</translation>
+        <translation>Самый низкий полутон от %1.
+Может быть полезно поставить его выше -35, чтобы избежать наводок от электросети (~50 Гц).</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1210"/>
@@ -794,7 +797,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLErrorHistory.cpp" line="82"/>
         <source>Keep previous notes</source>
-        <translation>Сохранить предыдущие ноты</translation>
+        <translation>Сохранять предыдущие ноты</translation>
     </message>
     <message>
         <location filename="../src/modules/GLErrorHistory.cpp" line="88"/>
@@ -814,7 +817,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLErrorHistory.cpp" line="229"/>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>Ошибка</translation>
     </message>
 </context>
 <context>
@@ -951,17 +954,17 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="205"/>
         <source>Keep notes when hidden</source>
-        <translation>Сохранить ноты в свернутом состоянии</translation>
+        <translation type="unfinished">Сохранить ноты в свернутом состоянии</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="213"/>
         <source>Keep n values</source>
-        <translation>Сохранить значения n</translation>
+        <translation>Хранить n значений</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="222"/>
         <source>Keep this number of values in the computation of the statistics</source>
-        <translation>Сохранить этот ряд значений при расчете статистических данных</translation>
+        <translation>Хранить этот ряд значений при расчете статистических данных</translation>
     </message>
     <message>
         <location filename="../src/modules/GLStatistics.cpp" line="236"/>
@@ -1030,7 +1033,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLVolumeHistory.cpp" line="59"/>
         <source>Keep previous notes</source>
-        <translation>Сохранить предыдущие ноты</translation>
+        <translation>Сохранять предыдущие ноты</translation>
     </message>
     <message>
         <location filename="../src/modules/GLVolumeHistory.cpp" line="128"/>
@@ -1101,7 +1104,7 @@ p</source>
         <location filename="../ui/InstrumentTunerForm.ui" line="49"/>
         <location filename="../ui/InstrumentTunerForm.ui" line="52"/>
         <source>Keep the data in the error and volume views (shortcut &quot;k&quot;).</source>
-        <translation>Сохранить данные в режимах отображения ошибок и громкости (горячая клавиша &quot;k&quot;).</translation>
+        <translation>Сохранять данные в режимах отображения ошибок и громкости (горячая клавиша &quot;k&quot;).</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="111"/>
@@ -1109,7 +1112,7 @@ p</source>
         <source>Volume in dB.
 Computed in the frequency domain, from the maximum bin.
 The maximum is reached when the signal energy is maximal NOT when the sound is saturated in the time domain.</source>
-        <translation>Громкость в дБ.
+        <translation type="unfinished">Громкость в дБ.
 Вычисленная в частотной области от максимального bin.
 Максимум достигается, когда сила сигнала максимальна, а не когда звук сатурирован в области времени.</translation>
     </message>
@@ -1121,11 +1124,11 @@ red       : the capture system is not working.
 grey     : the capture system is OK, but there is not enough sound.
 orange : the analysis conditions are bad (like saturation)
 green   : a note is beeing analyzed and analysis conditions are OK.</source>
-        <translation>В соответствии со следующими цветами:
-красный     : захват звука отключен.
-серый         : захват звука производится, но сила сигнала недостаточна.
+        <translation type="unfinished">В соответствии со следующими цветами:
+красный       : захват звука отключен.
+серый           : захват звука производится, но сила сигнала недостаточна.
 оранжевый : плохие условия для анализа (напр. сатурация)
-зеленый     : нота определяется, условия анализа хорошие.</translation>
+зеленый       : нота определяется, условия анализа хорошие.</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="221"/>
