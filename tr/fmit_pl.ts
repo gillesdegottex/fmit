@@ -6,7 +6,7 @@
     <message>
         <location filename="../ui/aboutbox.ui" line="14"/>
         <source>About FMIT...</source>
-        <translation type="unfinished"></translation>
+        <translation>O FMIT...</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="28"/>
@@ -68,7 +68,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="60"/>
         <source>Start in full-screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Uruchamiaj w trybie pełnoekranowym</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="82"/>
@@ -163,7 +163,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/ConfigForm.ui" line="723"/>
         <location filename="../ui/ConfigForm.ui" line="835"/>
         <source>Sampling rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Częstotliwość próbkowania</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="443"/>
@@ -186,7 +186,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="689"/>
         <location filename="../ui/ConfigForm.ui" line="801"/>
         <source>Device name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa urządzenia</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="542"/>
@@ -194,7 +194,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="770"/>
         <location filename="../ui/ConfigForm.ui" line="882"/>
         <source>Do not use a too big sampling rate. 22050Hz should be largely enough in most cases.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie używaj zbyt wielkiej częstotliwości próbkowania. 22050Hz powinno być odpowiednie w większości przypadków.</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="559"/>
@@ -236,7 +236,7 @@ latin: Do Re Mi Fa Sol La Si</source>
         <location filename="../ui/ConfigForm.ui" line="703"/>
         <location filename="../ui/ConfigForm.ui" line="815"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślne</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="52"/>
@@ -261,12 +261,12 @@ latin: Do Re Mi Fa Sol La Si</source>
     <message>
         <location filename="../ui/ConfigForm.ui" line="128"/>
         <source>Transposition</source>
-        <translation type="unfinished"></translation>
+        <translation>Transpozycja</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="198"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Niemiecki</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="203"/>
@@ -322,12 +322,12 @@ latin: Do Re Mi Fa Sol La Si</source>
     <message>
         <location filename="../ui/ConfigForm.ui" line="385"/>
         <source>automaticaly connect to...</source>
-        <translation type="unfinished"></translation>
+        <translation>automatycznie podłącz do...</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="421"/>
         <source>JACK sampling rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Częstotliwość próbkowania JACK</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="451"/>
@@ -480,7 +480,7 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
         <location filename="../ui/ConfigForm.ui" line="1586"/>
         <location filename="../ui/ConfigForm.ui" line="1589"/>
         <source>Discard any changes and quit the configuration panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Porzuć wszystkie zmiany i zamknij panel konfiguracji</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="932"/>
