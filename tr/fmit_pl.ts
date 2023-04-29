@@ -58,12 +58,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="14"/>
         <source>Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Konfiguracja</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="46"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogólne</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="60"/>
