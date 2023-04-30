@@ -629,7 +629,7 @@ Choose the number of harmonics to use.</source>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1054"/>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1067"/>
         <source>Restore Factory Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Przywróć Ustawienia Domyślne</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1054"/>
@@ -714,7 +714,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLErrorHistory.cpp" line="75"/>
         <source>Error history</source>
-        <translation type="unfinished"></translation>
+        <translation>Historia błędów</translation>
     </message>
     <message>
         <location filename="../src/modules/GLErrorHistory.cpp" line="82"/>
@@ -739,7 +739,7 @@ It can useful to put it higher than -35 to avoid disturbance from the sector ali
     <message>
         <location filename="../src/modules/GLErrorHistory.cpp" line="229"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd</translation>
     </message>
 </context>
 <context>
