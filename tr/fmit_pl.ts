@@ -137,7 +137,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="332"/>
         <source>JACK</source>
-        <translation type="unfinished"></translation>
+        <translation>JACK</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="346"/>
@@ -168,7 +168,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/ConfigForm.ui" line="443"/>
         <source>ALSA</source>
-        <translation type="unfinished"></translation>
+        <translation>ALSA</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="160"/>
@@ -248,7 +248,7 @@ latin: Do Re Mi Fa Sol La Si</source>
     <message>
         <location filename="../ui/ConfigForm.ui" line="67"/>
         <source>Auto-save configuration and layout on exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Zachowaj konfigurację i układ po zamknięciu</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="76"/>
@@ -389,7 +389,7 @@ Do not use a too big sampling rate. 22050Hz should be enough in most cases.</sou
     <message>
         <location filename="../ui/ConfigForm.ui" line="787"/>
         <source>Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="916"/>
@@ -605,7 +605,7 @@ Choose the number of harmonics to use.</source>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1480"/>
         <source>Latency</source>
-        <translation type="unfinished"></translation>
+        <translation>Opóźnienie</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="1544"/>
@@ -1072,7 +1072,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="422"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="444"/>
@@ -1110,12 +1110,12 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="477"/>
         <source>Save settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz ustawienia</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="486"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="498"/>
@@ -1195,7 +1195,7 @@ green   : a note is beeing analyzed and analysis conditions are OK.</source>
     <message>
         <location filename="../src/CaptureThread.cpp" line="368"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślne</translation>
     </message>
     <message>
         <location filename="../src/modules/View.cpp" line="86"/>
