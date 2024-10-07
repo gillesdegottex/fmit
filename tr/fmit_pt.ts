@@ -134,7 +134,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>The capture system</source>
-        <translation>Sistema de captura</translation>
+        <translation>O sistema de captura</translation>
     </message>
     <message>
         <source>Selected the capture system (e.g. JACK, ALSA, OSS, PortAudio)</source>
@@ -606,7 +606,7 @@ Useful to convert note names to a corresponding transposing instrument (e.g. %2 
     </message>
     <message>
         <source>Auto scale</source>
-        <translation>Auto escala</translation>
+        <translation>Escala automática</translation>
     </message>
     <message>
         <source>Scale factor</source>
@@ -668,7 +668,7 @@ Useful to convert note names to a corresponding transposing instrument (e.g. %2 
     </message>
     <message>
         <source>Scale auto</source>
-        <translation>Auto escala</translation>
+        <translation>Escala automática</translation>
     </message>
     <message>
         <source>Scale min</source>
@@ -826,7 +826,7 @@ verde: a nota está a ser analisada e as condições de análise estão OK.</tra
     </message>
     <message>
         <source>Configure</source>
-        <translation>Configurações</translation>
+        <translation>Configurar</translation>
     </message>
     <message>
         <source>Save settings</source>
