@@ -85,11 +85,47 @@ GLErrorHistory::GLErrorHistory(QWidget* parent)
 	connect(setting_keep, SIGNAL(toggled(bool)), this, SLOT(keepPreviousNotes(bool)));
 	m_popup_menu.addAction(setting_keep);
 
+    
+    /* 
+     * AutoScroll
+     * If activated, only the last N errors are plotted.
+     */ 
+	setting_autoScroll = new QAction(tr("AutoScroll"), this);
+	setting_autoScroll->setCheckable(true);
+	setting_autoScroll->setChecked(false);
+	connect(setting_autoScroll, SIGNAL(toggled(bool)), this, SLOT(autoScroll(bool)));
+	m_popup_menu.addAction(setting_autoScroll);
+    
+    QHBoxLayout* autoScrollActionLayout = new QHBoxLayout(&m_popup_menu);
+
+	QLabel* autoScrollActionTitle = new QLabel(tr("AutoScroll Scale"), &m_popup_menu);
+	autoScrollActionLayout->addWidget(autoScrollActionTitle);
+
+	setting_hScale = new QSpinBox(&m_popup_menu);
+	setting_hScale->setMinimum(1);
+	setting_hScale->setMaximum(10000);
+	setting_hScale->setSingleStep(1);
+	setting_hScale->setValue(100);
+	setting_hScale->setToolTip(tr("AutoScroll Scale"));
+    setting_hScale->setEnabled(false);
+    autoScrollActionLayout->addWidget(setting_hScale);
+    
+    QWidget* autoScrollActionWidget = new QWidget(&m_popup_menu);
+    autoScrollActionWidget->setLayout(autoScrollActionLayout);
+
+    QWidgetAction* autoScrollAction = new QWidgetAction(&m_popup_menu);
+    autoScrollAction->setDefaultWidget(autoScrollActionWidget);
+    m_popup_menu.addAction(autoScrollAction);
+
+
+
+
 	setting_useCents = new QAction(tr("Use cents"), this);
 	setting_useCents->setCheckable(true);
 	setting_useCents->setChecked(true);
 	connect(setting_useCents, SIGNAL(toggled(bool)), this, SLOT(update()));
 	m_popup_menu.addAction(setting_useCents);
+
 
 	QHBoxLayout* scaleActionLayout = new QHBoxLayout(&m_popup_menu);
 
@@ -143,6 +179,24 @@ void GLErrorHistory::addNote(GLErrorHistory::Note note)
 void GLErrorHistory::addError(float err)
 {
 	m_notes.back().addError(err);
+    
+    // If AutoScroll is enabled, old errors may be deleted
+    if (setting_autoScroll->isChecked() )
+    {   
+        int size = 0;
+        for(int i = m_notes.size() - 1; i >= 0; i--)
+        {
+            size += m_notes[i].errors.size() - 1;
+            if (size > setting_hScale->value())
+            {
+                // Delete oldest error from this note
+                m_notes[i].errors.pop_front();
+                // Delete note, if it is empty
+                if (m_notes[i].errors.size() == 0)
+                    m_notes.erase(m_notes.begin() + i);
+            }
+        }
+    }
 }
 
 void GLErrorHistory::keepPreviousNotes(bool keep)
@@ -150,6 +204,12 @@ void GLErrorHistory::keepPreviousNotes(bool keep)
 	if(!keep)
 		while(m_notes.size()>1)
 			m_notes.pop_front();
+}
+
+void GLErrorHistory::autoScroll(bool autoScroll)
+{
+    // AutoScroll-Spinbox can be edited iff AutoScroll is enabled
+    setting_hScale->setEnabled(autoScroll);
 }
 
 void GLErrorHistory::initializeGL()
@@ -308,13 +368,21 @@ void GLErrorHistory::paintGL()
     // errors
     if(!m_notes.empty())
     {
-        int total_size = 0;
-        for(size_t i=0; i<m_notes.size(); i++)
-            total_size += int(m_notes[i].errors.size())-1;
-
-        float step = float(width()-ticks_size)/total_size;
+        float step; // width of one error
+        
+        if (setting_autoScroll->isChecked())
+            step = float(width() - ticks_size) / setting_hScale->value();
+        else
+        {
+            int total_size = 0;
+            for(size_t i=0; i<m_notes.size(); i++)
+               total_size += int(m_notes[i].errors.size())-1;
+            step = float(width() - ticks_size) / total_size;
+        }
 
 //		cout << "total_size=" << total_size << " step=" << step << endl;
+
+
 
         int curr_total = 0;
         for(size_t i=0; i<m_notes.size(); i++)
@@ -345,20 +413,16 @@ void GLErrorHistory::paintGL()
             glLineWidth(2.0f);
             glBegin(GL_LINE_STRIP);
 
+            float scale;
             if(setting_useCents->isChecked())
-            {
-                float scale = 50.0f/setting_spinScale->value();
-                glVertex2f(x, int(scale*m_notes[i].errors[0]*height()) + height()/2);
-                for(int j=1; j<int(m_notes[i].errors.size()); j++)
-                    glVertex2f(x+j*step, scale*m_notes[i].errors[j]*height() + height()/2);
-            }
+                scale = 50.0f/setting_spinScale->value();
             else
-            {
-                float scale = int(50/setting_spinScale->value());
-                glVertex2f(x, int((scale*m_notes[i].errors[0])*height()) + height()/2);
-                for(int j=1; j<int(m_notes[i].errors.size()); j++)
-                    glVertex2f(x+j*step, (scale*m_notes[i].errors[j])*height() + height()/2);
-            }
+                scale = int(50/setting_spinScale->value());
+
+            glVertex2f(x, int((scale*m_notes[i].errors[0])*height()) + height()/2);
+            for(int j=1; j<int(m_notes[i].errors.size()); j++)
+                glVertex2f(x+j*step, (scale*m_notes[i].errors[j])*height() + height()/2);
+
             glEnd();
 
             curr_total += int(m_notes[i].errors.size())-1;
