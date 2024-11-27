@@ -47,6 +47,8 @@ namespace Music
 			bool m_use_audibility_treshold;
 			double m_zp_factor;
 			double m_window_factor;
+			bool m_force_fixed_note;
+			int m_fixed_note;
 
 			virtual void init();
 			virtual void AFreqChanged()							{init();}
@@ -76,6 +78,11 @@ namespace Music
 			void useAudibilityRatio(bool use)					{m_use_audibility_treshold=use;}
 			void setAudibilityRatio(double audib_ratio=0.1)		{m_audib_ratio=audib_ratio;}
 			double getAudibilityRatio()							{return m_audib_ratio;}
+
+			void setForceFixedNote(bool force_fixed_note)       {m_force_fixed_note=force_fixed_note;}
+			bool getForceFixedNote()                            {return m_force_fixed_note;}
+			void setFixedNote(int fixed_note)                   {m_fixed_note=fixed_note;}
+			int getFixedNote()                                  {return m_fixed_note;}
 
 			virtual int getSampleAlgoLatency() const;
 			virtual double getFondamentalFreq() const;
