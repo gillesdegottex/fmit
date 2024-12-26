@@ -2,150 +2,168 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2018-05-30 18:52-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-12-26 16:25+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/fmit/appdata/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #. (itstool) path: application/name
 #: fmit.appdata.xml.in:7
 msgid "FMIT"
-msgstr ""
+msgstr "Fmit"
 
 #. (itstool) path: application/summary
 #: fmit.appdata.xml.in:8
 msgid "Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument"
 msgstr ""
+"இலவச இசைக்கருவி ட்யூனர் (எஃப்.எம்.ஐ.டி), இசைக்கருவியை சரிசெய்ய ஒரு கருவி"
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:10
 msgid "Find an estimation of the fundamental frequency (f0, not the perceived pitch) of an audio signal, in real-time, and compare it with the closest note in the scale."
 msgstr ""
+"ஆடியோ சிக்னலின் அடிப்படை அதிர்வெண் (F0, உணரப்பட்ட சுருதி அல்ல) மதிப்பீட்டைக் கண்டுபிடித்து"
+", நிகழ்நேரத்தில், அதை அளவில் மிக நெருக்கமான குறிப்புடன் ஒப்பிடுங்கள்."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:15
 msgid "Tune your musical instruments with advanced features, including traces of frequency and volume, adjustable base tuning frequency, multiple choices of tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and meantone), microtonal tuning with Scala file (.scl) support and statistics."
 msgstr ""
+"அதிர்வெண் மற்றும் அளவின் தடயங்கள், சரிசெய்யக்கூடிய அடிப்படை சரிப்படுத்தும் அதிர்வெண், ட்யூனிங்"
+" அளவின் பல தேர்வுகள் (குரோமடிக், வெர்க்மீச்டர் III, கிர்ன்பெர்கர் III, டையடோனிக் மற்றும் "
+"அர்த்தம்), ச்கலா கோப்பு (.scl) ஆதரவுடன் மைக்ரோடோனல் டியூனிங் புள்ளிவிவரங்கள்."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:21
 msgid "Perform real-time sound analysis with views for waveform period, harmonics amplitude and Discrete Fourier Transform (DFT). Change various analysis parameters and tradeoff between precision and speed."
 msgstr ""
+"அலைவடிவ காலம், ஆர்மோனிக்ச் அலைவீச்சு மற்றும் தனித்துவமான ஃபோரியர் டிரான்ச்ஃபார்ம் "
+"(டி.எஃப்.டி) ஆகியவற்றிற்கான பார்வைகளுடன் நிகழ்நேர ஒலி பகுப்பாய்வைச் செய்யுங்கள். "
+"துல்லியத்திற்கும் வேகத்திற்கும் இடையில் பல்வேறு பகுப்பாய்வு அளவுருக்கள் மற்றும் பரிமாற்றத்தை "
+"மாற்றவும்."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:26
 msgid "Choose between multiple sound capture systems, including ALSA and JACK."
 msgstr ""
+"அல்சா மற்றும் சாக் உள்ளிட்ட பல ஒலி பிடிப்பு அமைப்புகளுக்கு இடையே தேர்வு செய்யவும்."
 
 #. (itstool) path: description/p
 #: fmit.appdata.xml.in:29
 msgid "Show or hide individual panels and go from a simple analog tuner view to an advanced real-time analysis toolset, or anywhere in between."
 msgstr ""
+"தனிப்பட்ட பேனல்களைக் காட்டவும் அல்லது மறைக்கவும் மற்றும் ஒரு எளிய அனலாக் ட்யூனர் பார்வையில் "
+"இருந்து மேம்பட்ட நிகழ்நேர பகுப்பாய்வு கருவித்தொகுப்பு அல்லது இடையில் எங்கும் செல்லுங்கள்."
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:37
 msgid "Volume view and previous notes"
-msgstr ""
+msgstr "தொகுதி பார்வை மற்றும் முந்தைய குறிப்புகள்"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:41
 msgid "Simplest view"
-msgstr ""
+msgstr "எளிமையான பார்வை"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:45
 msgid "Microtonal view"
-msgstr ""
+msgstr "மைக்ரோடோனல் பார்வை"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:49
 msgid "Statistics view"
-msgstr ""
+msgstr "புள்ளிவிவர பார்வை"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:53
 msgid "Waveform view"
-msgstr ""
+msgstr "அலைவடிவ பார்வை"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:57
 msgid "Harmonics view"
-msgstr ""
+msgstr "ஆர்மோனிக்ச் பார்வை"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:61
 msgid "Fourier transform view"
-msgstr ""
+msgstr "ஃபோரியர் உருமாற்ற பார்வை"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:65
 msgid "General settings"
-msgstr ""
+msgstr "பொது அமைப்புகள்"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:69
 msgid "Capture systems settings"
-msgstr ""
+msgstr "அமைப்புகள் அமைப்புகளைப் பிடிக்கவும்"
 
 #. (itstool) path: screenshot/caption
 #: fmit.appdata.xml.in:73
 msgid "Sound analysis settings"
-msgstr ""
+msgstr "ஒலி பகுப்பாய்வு அமைப்புகள்"
 
 #. (itstool) path: application/developer_name
 #: fmit.appdata.xml.in:80
 msgid "Gilles Degottex"
-msgstr ""
+msgstr "கில்லச் டெகோடெக்ச்"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:116
 msgid "New note names: Hindustani, Byzantine"
-msgstr ""
+msgstr "புதிய குறிப்பு பெயர்கள்: இந்துச்தானி, பைசாண்டின்"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:117
 msgid "Use unicode flat and sharp signs"
-msgstr ""
+msgstr "யூனிகோட் பிளாட் மற்றும் கூர்மையான அறிகுறிகளைப் பயன்படுத்தவும்"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:118
 msgid "Use custom save settings and pause icons that better fits the other icons design"
 msgstr ""
+"தனிப்பயன் சேமிப்பு அமைப்புகளைப் பயன்படுத்தவும் மற்றும் மற்ற சின்னங்கள் வடிவமைப்பிற்கு மிகவும் "
+"பொருத்தமான இடைநிறுத்த ஐகான்களைப் பயன்படுத்தவும்"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:119
 msgid "Flexible transposition key selection."
-msgstr ""
+msgstr "நெகிழ்வான இடமாற்றம் விசை தேர்வு."
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:120
 msgid "Added symbolic icon for high-contrast setup."
-msgstr ""
+msgstr "உயர்-மாறுபட்ட அமைப்பிற்கு குறியீட்டு படவுரு சேர்க்கப்பட்டது."
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:121
 msgid "Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/"
 msgstr ""
+"மொழிபெயர்ப்புக்காக வெப்லேட்டுக்கு மாறவும்: https://hosted.weblate.org/projects/fmit/"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:122
 msgid "Added translation for application information."
-msgstr ""
+msgstr "பயன்பாட்டு தகவலுக்கான மொழிபெயர்ப்பு சேர்க்கப்பட்டது."
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:129
 msgid "New icons"
-msgstr ""
+msgstr "புதிய சின்னங்கள்"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:130
 msgid "Added F tonality"
-msgstr ""
+msgstr "எஃப் டோனலிட்டி சேர்க்கப்பட்டது"
 
 #. (itstool) path: ul/li
 #: fmit.appdata.xml.in:131
 msgid "Fixed graphical glitches"
-msgstr ""
+msgstr "நிலையான வரைகலை குறைபாடுகள்"
