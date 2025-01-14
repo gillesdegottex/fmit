@@ -344,7 +344,7 @@ Useful to convert note names to a corresponding instrument tonality (e.g. Eb for
     <message>
         <location filename="../ui/ConfigForm.ui" line="280"/>
         <source>The capture system</source>
-        <translation>Sistema de captura</translation>
+        <translation>O sistema de captura</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="287"/>
@@ -760,8 +760,8 @@ Useful to convert note names to a corresponding transposing instrument (e.g. %2 
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1198"/>
         <source>Range of possible notes from the lowest to the highest around the %1 reference note.
 Smaller the range, smaller the CPU usage.</source>
-        <translation>Intervalo de de notas possíveis, do mínimo ao máximo, ao redor da referência %1.
-Quanto menor o intervalo, menor o uso da CPU.</translation>
+        <translation>Gama de notas possíveis do mais baixo ao mais alto em torno da nota de referência %1.
+ Menor o alcance, menor o uso da CPU.</translation>
     </message>
     <message>
         <location filename="../src/CustomInstrumentTunerForm.cpp" line="1203"/>
@@ -1076,12 +1076,10 @@ Um valor maior que -35 pode ser útil para reduzir ruídos da fonte de alimenta�
 e
 e
 p</source>
-        <translation>M
-a
-n
-t
+        <translation>K
 e
-r</translation>
+e
+p</translation>
     </message>
     <message>
         <location filename="../ui/InstrumentTunerForm.ui" line="61"/>
