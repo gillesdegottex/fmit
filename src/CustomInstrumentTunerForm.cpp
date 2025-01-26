@@ -214,6 +214,11 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	ui_tbViews->addAction(m_glFT->setting_show);
 	ui_FT->addWidget(m_glFT);
 
+	m_glMusicSpectrum = new GLMusicSpectrum(centralWidget());
+	connect(m_glMusicSpectrum->setting_show, SIGNAL(toggled(bool)), this, SLOT(update_views()));
+	ui_tbViews->addAction(m_glMusicSpectrum->setting_show);
+	ui_MusicSpectrum->addWidget(m_glMusicSpectrum);
+
 	m_microtonalView = new MicrotonalView(centralWidget());
 	connect(m_microtonalView->setting_show, SIGNAL(toggled(bool)), this, SLOT(update_views()));
 	connect(m_microtonalView, SIGNAL(tuningFreqChanged(float)), this, SLOT(tuningFreqChanged(float)));
@@ -224,6 +229,11 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	connect(m_glStatistics->setting_show, SIGNAL(toggled(bool)), this, SLOT(update_views()));
 	ui_tbViews->addAction(m_glStatistics->setting_show);
 	ui_microtonalLayout->addWidget(m_glStatistics);
+
+	// force fixed note settings
+    connect(ui_btnForceFixedNote, SIGNAL(toggled(bool)), this, SLOT(forceFixedNoteChanged(bool)));
+	connect(ui_btnFixedNoteUp, SIGNAL(clicked()), this, SLOT(fixedNoteUp()));
+	connect(ui_btnFixedNoteDown, SIGNAL(clicked()), this, SLOT(fixedNoteDown()));
 
 	connect(m_dialTune->setting_spinScale, SIGNAL(valueChanged(int)), m_glStatistics->setting_spinScale, SLOT(setValue(int)));
 	connect(m_glStatistics->setting_spinScale, SIGNAL(valueChanged(int)), m_dialTune->setting_spinScale, SLOT(setValue(int)));
@@ -350,6 +360,8 @@ void CustomInstrumentTunerForm::samplingRateChanged(int sampling_rate)
 // 	m_rect_range_filter.reset(int(GetSamplingRate()/h2f(GetSemitoneMin())));
     m_glFT->spinWinLengthChanged(m_glFT->setting_winlen->value());
     m_glFT->setSamplingRate(sampling_rate);
+	m_glMusicSpectrum->setSamplingRate(sampling_rate);
+    m_glMusicSpectrum->spinWinLengthChanged(m_glMusicSpectrum->setting_music_bins->value());
 
 	if(m_config_form.ui_cbTransports->currentText()=="JACK")
 		m_config_form.ui_lblJACKSamplingRate->setText(QString::number(sampling_rate));
@@ -370,6 +382,55 @@ void CustomInstrumentTunerForm::ui_spinAOffset_valueChanged(int offset)
 		A = h2f(offset*1/100.0f, ui_spinAFreq->value());
 	Music::SetAFreq(A);
 //	cout << A << endl;
+}
+
+void CustomInstrumentTunerForm::forceFixedNoteChanged(bool force_fixed_note)
+{
+	if (m_last_compared_freq != 0.0f)
+		m_algo_combedfft->setFixedNote(f2h(m_last_compared_freq));
+	m_algo_combedfft->setForceFixedNote(force_fixed_note);
+}
+
+void CustomInstrumentTunerForm::fixedNoteUp()
+{
+	modifyFixedNote(1);
+}
+void CustomInstrumentTunerForm::fixedNoteDown()
+{
+	modifyFixedNote(-1);
+}
+void CustomInstrumentTunerForm::modifyFixedNote(int delta)
+{
+	int nextNote;
+
+	if (m_algo_combedfft->getForceFixedNote())
+	{
+		nextNote = m_algo_combedfft->getFixedNote() + delta;
+	}
+	else if (m_last_compared_freq == 0.0f)
+	{
+		nextNote = delta;
+	}
+	else
+	{
+		nextNote = f2h(m_last_compared_freq) + delta;
+	}
+
+	m_last_compared_freq = h2f(nextNote);
+	if (m_compared_freq != 0.0f)
+	{
+		m_compared_freq = m_last_compared_freq;
+		m_glErrorHistory->addNote(GLErrorHistory::Note(nextNote));
+		m_glVolumeHistory->addNote(GLVolumeHistory::Note(nextNote));
+	}
+
+	m_algo_combedfft->setFixedNote(nextNote);
+	m_algo_combedfft->setForceFixedNote(true);
+	ui_btnForceFixedNote->setChecked(true);
+	ui_txtNoteFreq->display(m_last_compared_freq);
+	ui_txtNote->setText(QString::fromStdString(h2n(nextNote)));
+	m_quantizer->reset();
+	m_glMusicSpectrum->newNote(m_last_compared_freq);
 }
 
 void CustomInstrumentTunerForm::tuningFreqChanged(float freq)
@@ -437,6 +498,7 @@ void CustomInstrumentTunerForm::refresh()
 		m_queue.push_front(value);
 		if(m_glGraph)	m_glGraph->addValue(value);
 		if(m_glFT)		m_glFT->buff.push_front(value);
+		if(m_glMusicSpectrum) m_glMusicSpectrum->buff.push_front(value);
 
 		nb_new_data++;
 	}
@@ -452,6 +514,7 @@ void CustomInstrumentTunerForm::refresh()
 	// refresh graph data
 	m_glGraph->refreshGraph();	// TODO refresh the view each time ??
 	m_glFT->refreshGraph();
+	m_glMusicSpectrum->refreshGraph();
 
 	// ------- Analysis stage -------
 
@@ -564,12 +627,22 @@ void CustomInstrumentTunerForm::noteStarted(double freq, double dt)
 // 	cout << "CustomInstrumentTunerForm::noteStarted " << freq << "," << dt << endl;
 
 	// set the compared freq
-	if(m_microtonalView->setting_show->isChecked() && m_microtonalView->hasTuningFreqSelected())
+	if(m_algo_combedfft->getForceFixedNote())
+		m_compared_freq = h2f(m_algo_combedfft->getFixedNote());
+	else if(m_microtonalView->setting_show->isChecked() && m_microtonalView->hasTuningFreqSelected())
 		m_compared_freq = m_microtonalView->getTuningFreq();
 	else
 		m_compared_freq = m_quantizer->getCenterFrequency();	// h2f(f2h(freq));
 
-	if(m_microtonalView->setting_show->isChecked() && m_microtonalView->hasTuningFreqSelected())
+	if(m_algo_combedfft->getForceFixedNote())
+	{
+		ui_txtNoteFreq->display(m_compared_freq);
+		ui_txtNote->setText(QString::fromStdString(h2n(f2h(m_compared_freq))));
+		m_glErrorHistory->addNote(GLErrorHistory::Note(f2h(m_compared_freq)));
+		m_glVolumeHistory->addNote(GLVolumeHistory::Note(f2h(m_compared_freq)));
+		m_glMusicSpectrum->newNote(m_compared_freq);
+	}
+	else if(m_microtonalView->setting_show->isChecked() && m_microtonalView->hasTuningFreqSelected())
 	{
 		ui_txtNoteFreq->display(int(m_microtonalView->getTuningFreq()*100)/100.0);
 		ui_txtNote->setText(m_microtonalView->getTuningNoteName());
@@ -590,7 +663,9 @@ void CustomInstrumentTunerForm::noteStarted(double freq, double dt)
 		ui_txtNote->setText(QString::fromStdString(h2n(f2h(m_compared_freq))));
 		m_glErrorHistory->addNote(GLErrorHistory::Note(f2h(m_compared_freq)));
 		m_glVolumeHistory->addNote(GLVolumeHistory::Note(f2h(m_compared_freq)));
+		m_glMusicSpectrum->newNote(m_compared_freq);
 	}
+	m_last_compared_freq = m_compared_freq;
 }
 void CustomInstrumentTunerForm::noteFinished(double freq, double dt)
 {
@@ -664,6 +739,9 @@ void CustomInstrumentTunerForm::refresh_views()
 	if(m_glFT->setting_show->isChecked())
 		m_glFT->update();
 
+	if(m_glMusicSpectrum->setting_show->isChecked())
+		m_glMusicSpectrum->update();
+
 	if(m_glStatistics->setting_show->isChecked())
 		m_glStatistics->update();
 
@@ -689,7 +767,8 @@ void CustomInstrumentTunerForm::update_views()
 		!m_glVolumeHistory->setting_show->isChecked() &&
 		!m_glSample->setting_show->isChecked() &&
 		!m_glFreqStruct->setting_show->isChecked() &&
-		!m_glFT->setting_show->isChecked())
+		!m_glFT->setting_show->isChecked() &&
+		!m_glMusicSpectrum->setting_show->isChecked())
 			m_dialTune->setMaximumWidth(size().width());
 	else
 		m_dialTune->setMaximumWidth(ui_rightLayout->minimumSize().width());
@@ -699,7 +778,8 @@ void CustomInstrumentTunerForm::update_views()
 			!m_glVolumeHistory->setting_show->isChecked() &&
 			!m_glSample->setting_show->isChecked() &&
 			!m_glFreqStruct->setting_show->isChecked() &&
-			!m_glFT->setting_show->isChecked())
+			!m_glFT->setting_show->isChecked() &&
+			!m_glMusicSpectrum->setting_show->isChecked())
 		m_glGraph->setMaximumHeight(size().height());
 	else
 		m_glGraph->setMaximumHeight(m_glGraph->setting_spinMaxHeight->value());
