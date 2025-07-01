@@ -30,11 +30,11 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;
- &lt;html&gt; &lt;head&gt; &lt;meta பெயர் = &quot;qrichtext&quot; content = &quot;1&quot; /&gt; &lt;style வகை = &quot;text /css&quot;&gt;
- பி, லி {வெள்ளை-இடம்: முன் மடக்கு; }
- &lt;/style&gt; &lt;/head&gt; &lt;body சூல் தண்டு = &quot;font-family: &apos;உபுண்டு&apos;; எழுத்துரு அளவு: 11pt; எழுத்துரு-எடை: 400; எழுத்துரு-பாணி: இயல்பானது;&quot;&gt;
- &lt;p சூல் தண்டு = &quot;-qt-materagraph-type: வெற்று; விளிம்பு-மேல்: 0px; விளிம்பு-கீழ்: 0px; விளிம்பு-இடது: 0px; விளிம்பு-வலது: 0px; : 0px;</translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+ பி, லி { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutbox.ui" line="143"/>
@@ -54,17 +54,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling for the scales in cents&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro for his help to make FMIT working under Windows/Cygwin.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; for the very Fast Fourier Transform.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;Any contribution of any sort is very welcome!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;
- &lt;html&gt; &lt;head&gt; &lt;meta பெயர் = &quot;qrichtext&quot; content = &quot;1&quot; /&gt; &lt;style வகை = &quot;text /css&quot;&gt;
- பி, லி {வெள்ளை-இடம்: முன் மடக்கு; }
- &lt;/style&gt; &lt;/head&gt; &lt;body சூல் தண்டு = &quot;font-family: &apos;உபுண்டு&apos;; எழுத்துரு அளவு: 11pt; எழுத்துரு-எடை: 400; எழுத்துரு-பாணி: இயல்பானது;&quot;&gt;
- &lt;p சூல் தண்டு = &quot;விளிம்பு-மேல்: 0px; விளிம்பு-கீழ்: 0px; விளிம்பு-இடது: 0px; விளிம்பு-வலது: 0px; நூலகங்கள் மூலம் வழங்கப்பட்ட மறைமுக பங்களிப்புகள் இல்லாமல் மென்பொருள்கள் சாத்தியமற்றது. எனவே, பின்வரும் அழகற்றவர்களுக்கு பெரிய நன்றி: &lt;br /&gt; &lt;br /&gt;- பல சிறிய மற்றும் பயனுள்ள மாற்றங்கள், புதுப்பிப்புகள், பேக்கேசிங் போன்றவற்றுக்கான dsboger. &lt; /P&gt;
- &lt;p சூல் தண்டு = &quot;margin-top: 0px; விளிம்பு-கீழ்: 0px; விளிம்பு-இடது: 0px; விளிம்பு-வலது: 0px; ட்யூனிங் செதில்கள் &lt;/p&gt;
- &lt;p சூல் தண்டு = &quot;margin-top: 0px; விளிம்பு-கீழ்: 0px; விளிம்பு-இடது: 0px; விளிம்பு-வலது: 0px; சாக் சிக்கல்கள் &lt;/p&gt;
- &lt;p சூல் தண்டு = &quot;margin-top: 0px; விளிம்பு-கீழ்: 0px; விளிம்பு-இடது: 0px; விளிம்பு-வலது: 0px; மைக்ரோடோனல் தொகுதி சிந்தனை &lt;/p&gt;
- &lt;p சூல் தண்டு = &quot;margin-top: 0px; விளிம்பு-கீழ்: 0px; விளிம்பு-இடது: 0px; விளிம்பு-வலது: 0px; சென்ட்களில் உள்ள செதில்கள் &lt;/p&gt;
- &lt;p சூல் தண்டு = &quot;margin-top: 0px; விளிம்பு-கீழ்: 0px; விளிம்பு-இடது: 0px; விளிம்பு-வலது: 0px; விண்டோச்/சைக்வின் கீழ் FMIT வேலை செய்ய அவரது உதவி. &lt;/p&gt;
- &lt;p சூல் தண்டு = &quot;விளிம்பு-மேல்: 0px; விளிம்பு-கீழ்: 0px; விளிம்பு-இடது: 0px; விளிம்பு-வலது: 0px; . .org/&quot;&gt; &lt;span சூல் தண்டு =&quot; text-degoration:#0000ff; &quot;&gt; fftw3 &lt;/span&gt; &lt;/a&gt; &apos;மிக விரைவான ஃபோரியர் உருமாற்றம் a href = &quot;http://www.qt.io/&quot; . &lt;br/&gt; &lt;br /&gt; எந்தவொரு பங்களிப்பும் மிகவும் வரவேற்கத்தக்கது!</translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; நூலகங்கள்மூலம் வழங்கப்பட்ட மறைமுக பங்களிப்புகள் இல்லாமல் மென்பொருள்கள் சாத்தியமற்றது. எனவே, பின்வரும் அழகற்றவர்களுக்கு பெரிய நன்றி:&lt;br /&gt;&lt;br /&gt;- dsboger பல சிறிய மற்றும் பயனுள்ள மாற்றங்கள், புதுப்பிப்புகள், பேக்கேசிங் போன்றவற்றுக்கானது.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Florian Hars for the ட்யூனிங் செதில்கள்&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Arnout Engelen for the சாக் சிக்கல்கள்&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- John Anderson for theமைக்ரோடோனல் தொகுதி சிந்தனை&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Scott Bahling for the சென்ட்களில் உள்ள செதில்கள்&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Jacob Shapiro for சாளரங்கள்/சைக்வின் கீழ் FMIT வேலை செய்ய அவரது உதவி.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;- Translators: Omega9 (Russian), skarmoutsosv (Greek), Pindaro and dsboger (Portuguese and Brazilian Portuguese), Florian Maier (German).&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.fftw.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;FFTW3&lt;/span&gt;&lt;/a&gt;&apos; மிக விரைவான ஃபோரியர் உருமாற்றம்.&lt;br /&gt;&lt;br /&gt;- &lt;a href=&quot;http://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Qt&lt;/span&gt;&lt;/a&gt;&apos;s team for the GUI library.&lt;br /&gt;&lt;br /&gt;எந்தவொரு பங்களிப்பும் மிகவும் வரவேற்கத்தக்கது!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -304,7 +304,7 @@ latin: Do Re Mi Fa Sol La Si</source>
     <message>
         <location filename="../ui/ConfigForm.ui" line="280"/>
         <source>The capture system</source>
-        <translation>பிடிப்பு அமைப்பு</translation>
+        <translation>அந்தப் பிடிப்பு அமைப்பு</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="287"/>
@@ -518,11 +518,11 @@ The smaller the value, the faster the tuner. However, by decreasing the value, t
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
 &lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;To get more options, right-click every view to show up their properties!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;
- &lt;html&gt; &lt;head&gt; &lt;meta பெயர் = &quot;qrichtext&quot; content = &quot;1&quot; /&gt; &lt;style வகை = &quot;text /css&quot;&gt;
- பி, லி {வெள்ளை-இடம்: முன் மடக்கு; }
- &lt;/style&gt; &lt;/head&gt; &lt;body&gt;
- &lt;p&gt; &lt;span சூல் தண்டு = &quot;எழுத்துரு-எடை: 600;&quot;&gt; கூடுதல் விருப்பங்களைப் பெற, அவற்றின் பண்புகளைக் காண்பிக்க ஒவ்வொரு பார்வையையும் வலது சொடுக்கு செய்யவும்!</translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;கூடுதல் விருப்பங்களைப் பெற, அவற்றின் பண்புகளைக் காண்பிக்க ஒவ்வொரு பார்வையையும் வலது சொடுக்கு செய்யவும்!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/ConfigForm.ui" line="947"/>
