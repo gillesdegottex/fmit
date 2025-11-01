@@ -117,11 +117,11 @@ The maximum is reached when the signal energy is maximal NOT when the sound is s
 Computed in the frequency domain, from the maximum bin.
 The maximum is reached when the signal energy is maximal NOT when the sound is saturated in the time domain.</string>
           </property>
-          <property name="format">
-           <string/>
-          </property>
           <property name="textVisible">
            <bool>false</bool>
+          </property>
+          <property name="format">
+           <string/>
           </property>
           <property name="percentageVisible" stdset="0">
            <bool>false</bool>
@@ -184,7 +184,6 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
               <property name="font">
                <font>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -210,7 +209,6 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
               <property name="font">
                <font>
                 <pointsize>14</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -610,4 +608,12 @@ green   : a note is beeing analyzed and analysis conditions are OK.</string>
    </hints>
   </connection>
  </connections>
+ <slots>
+  <slot>helpAbout()</slot>
+  <slot>configure()</slot>
+  <slot>pause(bool)</slot>
+  <slot>ui_spinAFreq_valueChanged(int)</slot>
+  <slot>saveSettings()</slot>
+  <slot>ui_spinAOffset_valueChanged(int)</slot>
+ </slots>
 </ui>

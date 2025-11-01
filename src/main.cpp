@@ -23,7 +23,7 @@
 using namespace std;
 #include <signal.h>
 #include <qapplication.h>
-#include <qtextcodec.h>
+// #include <qtextcodec.h>
 #include <qtranslator.h>
 #include <QLibraryInfo>
 

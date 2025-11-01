@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>672</width>
-    <height>946</height>
+    <height>995</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -145,8 +145,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="ui_lblTransposition">
-            </widget>
+            <widget class="QLabel" name="ui_lblTransposition"/>
            </item>
           </layout>
          </item>
@@ -213,8 +212,7 @@ latin: Do Re Mi Fa Sol La Si</string>
         </layout>
        </item>
        <item>
-        <widget class="QCheckBox" name="ui_chkShowA4Offset">
-        </widget>
+        <widget class="QCheckBox" name="ui_chkShowA4Offset"/>
        </item>
        <item>
         <spacer name="spacer5">
@@ -984,8 +982,7 @@ Can be increased to get less CPU usage (but less temporal precision).</string>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="ui_txtMinHT">
-            </widget>
+            <widget class="QLabel" name="ui_txtMinHT"/>
            </item>
           </layout>
          </item>
@@ -1005,8 +1002,7 @@ Can be increased to get less CPU usage (but less temporal precision).</string>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="ui_txtMaxHT">
-            </widget>
+            <widget class="QLabel" name="ui_txtMaxHT"/>
            </item>
           </layout>
          </item>

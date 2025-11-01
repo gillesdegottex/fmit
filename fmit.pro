@@ -19,7 +19,7 @@
 
 # Audio Capture Systems: acs_qt, acs_alsa, acs_jack, acs_portaudio, acs_oss
 #                        (only acs_qt works on Windows)
-CONFIG += acs_qt
+# CONFIG += acs_qt  # This needs solid refactoring for working with Qt6
 
 
 # ------------------------------------------------------------------------------
@@ -136,8 +136,8 @@ win32 {
     gcc: LIBS += -glu32
 }
 
-
-QT += core gui opengl multimedia svg
+# TODO remove core5compat
+QT += core gui opengl openglwidgets multimedia svg core5compat
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 macx: QT += network
 

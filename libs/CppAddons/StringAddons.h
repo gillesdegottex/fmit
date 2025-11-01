@@ -30,6 +30,12 @@
 
 namespace StringAddons
 {
+	inline std::string toString(int i)
+	{
+		std::stringstream str;
+		str << i;
+		return str.str();
+	}
 	template<typename Type> std::string toString(Type i)
 	{
 		std::stringstream str;

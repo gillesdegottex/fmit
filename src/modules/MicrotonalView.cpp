@@ -163,7 +163,9 @@ using namespace std;
 #endif
 #include <qdir.h>
 #include <qmessagebox.h>
-#include <qregexp.h>
+// #include <qregexp.h>
+#include <QActionGroup>
+#include <QRegularExpression>
 #include <qimage.h>
 #include <qevent.h>
 #include <qwidgetaction.h>
@@ -334,7 +336,8 @@ MicrotonalView::MicrotonalView(QWidget* parent)
 	m_popup_menu.addMenu(&ui_scale_menu);
 
 	QVBoxLayout* layout = new QVBoxLayout(this);
-	layout->setMargin(0);
+	// layout->setMargin(0);
+	layout->setContentsMargins(0, 0, 0, 0);
 	layout->setSpacing(0);
 	QHBoxLayout* roots_layout = new QHBoxLayout();
 	roots_layout->setSpacing(0);
@@ -887,7 +890,7 @@ void MicrotonalView::load_installed_scales()
 	QStringList scales_files_list = scales_dir.entryList(QDir::Files);
 	for(QStringList::iterator it=scales_files_list.begin(); it!=scales_files_list.end(); ++it)
 	{
-		if(it->contains(QRegExp("\\.scl$")) || it->contains(QRegExp("\\.SCL$")))
+		if(it->contains(QRegularExpression("\\.scl$")) || it->contains(QRegularExpression("\\.SCL$")))
 		{
 			try
 			{

@@ -161,21 +161,28 @@ inline QString formatToString(const QAudioFormat &format) {
 
     if (QAudioFormat() != format) {
 
-        const QString formatEndian = (format.byteOrder() == QAudioFormat::LittleEndian)
-            ?   QString("LE") : QString("BE");
+        // const QString formatEndian = (format.byteOrder() == QAudioFormat::LittleEndian)
+            // ?   QString("LE") : QString("BE");
+        const QString formatEndian = QString("Assume LE");
 
         QString formatType;
-        switch (format.sampleType()) {
-        case QAudioFormat::SignedInt:
+        switch (format.sampleFormat()) {
+        case QAudioFormat::UInt8:
+            formatType = "unsigned";
+            break;
+        case QAudioFormat::Int16:
             formatType = "signed";
             break;
-        case QAudioFormat::UnSignedInt:
-            formatType = "unsigned";
+        case QAudioFormat::Int32:
+            formatType = "signed";
             break;
         case QAudioFormat::Float:
             formatType = "float";
             break;
         case QAudioFormat::Unknown:
+            formatType = "unknown";
+            break;
+        case QAudioFormat::NSampleFormats:
             formatType = "unknown";
             break;
         }
@@ -190,9 +197,12 @@ inline QString formatToString(const QAudioFormat &format) {
             break;
         }
 
-        result = format.codec()+" "+QString("%1Hz %2bit %3 %4 %5")
+        // QString codec = format.codec();
+        QString codec = "Assume PCM";
+
+        result = codec+" "+QString("%1Hz %2bit %3 %4 %5")
             .arg(format.sampleRate())
-            .arg(format.sampleSize())
+            .arg(format.bytesPerSample()*8)
             .arg(formatType)
             .arg(formatEndian)
             .arg(formatChannels);

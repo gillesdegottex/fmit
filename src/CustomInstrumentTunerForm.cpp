@@ -24,7 +24,7 @@ using namespace std;
 #include <qstring.h>
 #include <qaction.h>
 #include <qlabel.h>
-#include <qgl.h>
+// #include <qgl.h>
 #include <qlayout.h>
 #include <qlcdnumber.h>
 #include <qdial.h>
@@ -242,7 +242,7 @@ CustomInstrumentTunerForm::CustomInstrumentTunerForm()
 	connect(m_config_form.ui_spinTransposition, SIGNAL(valueChanged(int)), this, SLOT(transpositionChanged()));
 	connect(m_config_form.ui_cbNotesName, SIGNAL(highlighted(int)), this, SLOT(noteRangeChanged()));
 	connect(m_config_form.ui_btnAutoDetect, SIGNAL(clicked()), this, SLOT(autoDetectTransport()));
-	connect(m_config_form.ui_cbTransports, SIGNAL(activated(const QString&)), this, SLOT(selectTransport(const QString&)));
+	connect(m_config_form.ui_cbTransports, SIGNAL(textActivated(const QString&)), this, SLOT(selectTransport(const QString&)));
 	connect(m_config_form.ui_chkALSAMixMultipleChannels, SIGNAL(toggled(bool)), &m_capture_thread, SLOT(setMixMultipleChannels(bool)));
 	connect(m_config_form.ui_chkOSSMixMultipleChannels, SIGNAL(toggled(bool)), &m_capture_thread, SLOT(setMixMultipleChannels(bool)));
 	connect(m_config_form.ui_chkPortAudioMixMultipleChannels, SIGNAL(toggled(bool)), &m_capture_thread, SLOT(setMixMultipleChannels(bool)));
