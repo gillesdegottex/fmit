@@ -186,8 +186,8 @@ void CaptureThreadImplQt::set_params(bool test) {
 
         sampling_rates += m_audioInputDevice.supportedSampleRates();
 
-        sampling_rates = sampling_rates.toSet().toList(); // remove duplicates
-        qSort(sampling_rates.begin(), sampling_rates.end(), qGreater<int>());
+        sampling_rates = QSet<int>(sampling_rates.begin(), sampling_rates.end()).values(); // remove duplicates
+        std::sort(sampling_rates.begin(), sampling_rates.end(), std::greater<int>());
 
 //        cout << "Number of sampling rates: " << sampling_rates.count() << endl;
 //        int sr;

@@ -128,7 +128,7 @@ void GLVolumeHistory::paintGL()
     painter.drawText(2, 20, tr("Volume"));
     painter.end();
 
-	int s = 2+fontMetrics().width("50%");
+	int s = 2+fontMetrics().horizontalAdvance("50%");
 
 	// horiz lines
 	if(2*height()/50>2)

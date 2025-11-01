@@ -36,6 +36,7 @@ using namespace std;
 
 void alsa_error_handler(const char *file, int line, const char *function, int err, const char *fmt, ...)
 {
+	(void)fmt;
     cout << "alsa_error_handler: " << file << ":" << line << " " << function << " err=" << err << endl;
 }
 

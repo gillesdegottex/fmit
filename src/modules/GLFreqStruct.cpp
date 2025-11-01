@@ -101,7 +101,7 @@ void GLFreqStruct::paintGL()
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	int scale_height = 12;
-    int s = 2+fontMetrics().width("-40dB");
+    int s = 2+fontMetrics().horizontalAdvance("-40dB");
 
 //	double scale_factor = 1.0;
 //	if(m_components_max>0.0)

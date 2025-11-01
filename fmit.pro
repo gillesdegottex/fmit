@@ -38,6 +38,8 @@ message(Git: FMIT version: $$FMITVERSIONPRO Branch: $$FMITBRANCHGITPRO)
 DEFINES += FMITVERSION=$$FMITVERSIONPRO
 DEFINES += FMITBRANCHGIT=$$FMITBRANCHGITPRO
 
+DEFINES += QT_DISABLE_DEPRECATED_UP_TO=0x050F00
+
 # To place the application's files in the proper folder
 isEmpty(PREFIX){
     PREFIX = /usr/local

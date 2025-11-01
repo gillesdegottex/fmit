@@ -90,7 +90,7 @@ class CustomInstrumentTunerForm : public QMainWindow, public Ui_InstrumentTunerF
 	double m_compared_freq;
 	double m_error;
 
-	QTime m_time;
+	QElapsedTimer m_time;
 
 	CustomInstrumentTunerForm();
 	AutoQSettings m_settings;
@@ -101,8 +101,8 @@ class CustomInstrumentTunerForm : public QMainWindow, public Ui_InstrumentTunerF
 
 	void toggleFullScreen();
 
-	QTime m_time_refresh;
-	QTime m_time_refresh_views;
+	QElapsedTimer m_time_refresh;
+	QElapsedTimer m_time_refresh_views;
 	QTimer m_timer_refresh;
 	double m_last_refresh;
 

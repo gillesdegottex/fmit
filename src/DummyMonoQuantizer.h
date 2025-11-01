@@ -31,7 +31,7 @@ using namespace Music;
 class DummyMonoQuantizer : public MonoQuantizer
 {
 	QTime m_time;
-	QTime m_duration;
+	// QElapsedTimer m_duration;
 
   public:
 	DummyMonoQuantizer();

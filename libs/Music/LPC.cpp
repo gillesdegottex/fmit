@@ -15,7 +15,7 @@ double            	    /* returns minimum mean square error    */
 	int i, j;  double r, error = ac[0];
 
 	if (ac[0] == 0) {
-		for (i = 0; i < P_MAX; i++) ref[i] = 0; return 0; }
+		for (i = 0; i < P_MAX; i++) {ref[i] = 0;} return 0; }
 
 		for (i = 0; i < P_MAX; i++) {
 

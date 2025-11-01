@@ -728,7 +728,7 @@ void MicrotonalView::QRatiosLabel::paintEvent(QPaintEvent* event)
 		if((*it).is_ratio)
 		{
 			p->drawText(x+1, y+p->fontMetrics().height(), QString::number((*it).num));
-			p->drawLine(x, y+p->fontMetrics().height()+2, x+p->fontMetrics().width(QString::number((*it).num)), y+p->fontMetrics().height()+2);
+			p->drawLine(x, y+p->fontMetrics().height()+2, x+p->fontMetrics().horizontalAdvance(QString::number((*it).num)), y+p->fontMetrics().height()+2);
 			p->drawText(x+1, y+2*p->fontMetrics().height(), QString::number((*it).den));
 		}
 		else

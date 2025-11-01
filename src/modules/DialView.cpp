@@ -102,7 +102,7 @@ void DialView::drawTextTickCent(QPainter& p, int bigw, int bigh, int r)
 		p.translate(pos.x(), pos.y());
 
 		if(height()>width())	p.rotate(90);
-		p.drawText(-p.fontMetrics().width(txt)/2,p.fontMetrics().height()/2, txt);
+		p.drawText(-p.fontMetrics().horizontalAdvance(txt)/2,p.fontMetrics().height()/2, txt);
 		if(height()>width())	p.rotate(-90);
 
 		p.translate(-pos.x(), -pos.y());
@@ -145,7 +145,7 @@ void DialView::drawTextTickFrac(QPainter& p, int bigw, int bigh, int num, int de
 	p.translate(pos.x(), pos.y());
 
 	if(height()>width())	p.rotate(90);
-	p.drawText(-p.fontMetrics().width(txt)/2,p.fontMetrics().height()/2, txt);
+	p.drawText(-p.fontMetrics().horizontalAdvance(txt)/2,p.fontMetrics().height()/2, txt);
 	if(height()>width())	p.rotate(-90);
 
 	p.translate(-pos.x(), -pos.y());
@@ -186,7 +186,7 @@ void DialView::paintEvent(QPaintEvent* event)
 	int bigh = height();
 
  	QPoint c(width()/2,height());
-	QPoint unity_center = c+QPoint(p.fontMetrics().width("cent"),0);
+	QPoint unity_center = c+QPoint(p.fontMetrics().horizontalAdvance("cent"),0);
 	QString unity;
 	if(setting_useCents->isChecked())	unity = "cents";
 	else							unity = "1/x";
@@ -195,7 +195,7 @@ void DialView::paintEvent(QPaintEvent* event)
 		c = QPoint(width(), height()/2);
 		bigw = height();
 		bigh = width();
-		unity_center = c+QPoint(-p.fontMetrics().width(unity),-p.fontMetrics().height());
+		unity_center = c+QPoint(-p.fontMetrics().horizontalAdvance(unity),-p.fontMetrics().height());
 	}
 	int ticks_size = bigh/10;
 

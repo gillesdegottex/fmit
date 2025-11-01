@@ -24,13 +24,14 @@
 using namespace std;
 #include <qobject.h>
 #include <qdatetime.h>
+#include <QElapsedTimer>
 #include <Music/Music.h>
 using namespace Music;
 #include "MonoQuantizer.h"
 
 class LatencyMonoQuantizer : public MonoQuantizer
 {
-	QTime m_time;
+	QElapsedTimer m_time;
 
 	//! in millis
 	float m_latency;
@@ -49,7 +50,7 @@ class LatencyMonoQuantizer : public MonoQuantizer
 		Note(double f) : m_dens(1), m_avg_freq(f) {}
 	};
 
-	QTime m_duration;
+	// QElapsedTimer m_duration;
 
   public:
 	LatencyMonoQuantizer();

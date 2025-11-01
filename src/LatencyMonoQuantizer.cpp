@@ -78,9 +78,9 @@ void LatencyMonoQuantizer::quantize(double freq)
 			if(current_center_freq>0.0)
 			{
 				m_current_center_freq = current_center_freq;
-				m_duration.start();
+				// m_duration.start();
 				double lag = (current_time-m_states.back().m_time)*m_min_confidence;
-				m_duration.addMSecs(int(lag));
+				// m_duration.addMSecs(int(lag));
 				emit(noteStarted(m_current_center_freq, -lag));
 			}
 		}
@@ -97,8 +97,8 @@ void LatencyMonoQuantizer::quantize(double freq)
 				double lag = (current_time-m_states.back().m_time)/2.0;	// TODO pas forcément a fait 2 ~bruit
 				emit(noteFinished(m_current_center_freq, -lag));
 				m_current_center_freq = current_center_freq;
-				m_duration.start();
-				m_duration.addMSecs(int(lag));
+				// m_duration.start();
+				// m_duration.addMSecs(int(lag));
 				emit(noteStarted(m_current_center_freq, -lag));
 			}
 		}

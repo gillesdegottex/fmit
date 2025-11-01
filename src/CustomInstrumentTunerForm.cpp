@@ -1163,6 +1163,7 @@ void CustomInstrumentTunerForm::helpAbout()
 }
 
 void CustomInstrumentTunerForm::closeEvent( QCloseEvent* event ){
+	(void)event;
     m_config_form.close();
 }
 CustomInstrumentTunerForm::~CustomInstrumentTunerForm()

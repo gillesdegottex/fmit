@@ -44,7 +44,7 @@ void DummyMonoQuantizer::quantize(double freq)
 		if(current_center_freq>0.0)
 		{
 			m_current_center_freq = current_center_freq;
-			m_duration.start();
+			// m_duration.start();
 			emit(noteStarted(m_current_center_freq, 0.0));
 		}
 	}
@@ -59,7 +59,7 @@ void DummyMonoQuantizer::quantize(double freq)
 		{
 			emit(noteFinished(m_current_center_freq, 0.0));
 			m_current_center_freq = current_center_freq;
-			m_duration.start();
+			// m_duration.start();
 			emit(noteStarted(m_current_center_freq, 0.0));
 		}
 	}
