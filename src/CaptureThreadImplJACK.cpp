@@ -75,6 +75,7 @@ bool CaptureThreadImplJACK::is_available()
 
 void CaptureThreadImplJACK::setSamplingRate(int value)
 {
+    (void)value;
     cout << "CaptureThread: ERROR: JACK: setSamplingRate not available with JACK ! change the JACK server sampling rate instead" << endl;
 }
 
@@ -145,7 +146,7 @@ int CaptureThreadImplJACK::jackProcess(jack_nframes_t nframes)
 	jack_default_audio_sample_t* in = (jack_default_audio_sample_t*)pin;
 
     int characters_written = jack_ringbuffer_write(m_ringbuffer, (const char *) ((void *) (in)), g_jack_sample_size*nframes);
-    if (characters_written < g_jack_sample_size*nframes)
+    if (characters_written < int(g_jack_sample_size*nframes))
         cout << "CaptureThreadImplJACK::jackProcess Can not write all frames: ringbuffer full?" << endl;
 
 //     int toread = jack_ringbuffer_read_space(m_ringbuffer);
@@ -216,10 +217,10 @@ void CaptureThreadImplJACK::capture_loop()
 //                 cout << "CaptureThreadImplJACK::capture_loop in deque='" << m_capture_thread->m_values.size() << "' still toread=" << toread/g_jack_sample_size << endl;
 
                 if(g_jack_sample_size==4)
-                    for(int i=0; i<(read/g_jack_sample_size); i++)
+                    for(int i=0; i<int(read/g_jack_sample_size); i++)
                         addValue(this, (double)(((float*)dest)[i]), i);
                 else if(g_jack_sample_size==8)
-                    for(int i=0; i<(read/g_jack_sample_size); i++)
+                    for(int i=0; i<int(read/g_jack_sample_size); i++)
                         addValue(this, (double)(((double*)dest)[i]), i);
 
                 m_capture_thread->m_packet_size = (read/g_jack_sample_size);
