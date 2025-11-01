@@ -67,9 +67,12 @@ int main(int argc, char** argv)
 
     // Load translation
     QTranslator qtTranslator;
+    std::cout << "INFO: QLocale::system()=" << QLocale::system().name() << std::endl;
+    std::cout << "INFO: QLibraryInfo::path(QLibraryInfo::TranslationsPath)=" << QLibraryInfo::path(QLibraryInfo::TranslationsPath).toLatin1().constData() << std::endl;
     QString trFile = "qt_" + QLocale::system().name();
-    cout << "INFO: Loading Qt translation file: " << trFile.toLatin1().constData() << " in " << QLibraryInfo::location(QLibraryInfo::TranslationsPath).toLatin1().constData() << endl;
-    qtTranslator.load(trFile, QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    if (!qtTranslator.load(trFile, QLibraryInfo::path(QLibraryInfo::TranslationsPath))) {
+        cout << "ERROR: Failed to load Qt translation file: " << trFile.toLatin1().constData() << " in " << QLibraryInfo::path(QLibraryInfo::TranslationsPath).toLatin1().constData() << endl;
+    }
     a.installTranslator(&qtTranslator);
     QTranslator fmitTranslator;
     trFile = QString("fmit_")+QLocale::system().name();
@@ -79,8 +82,10 @@ int main(int argc, char** argv)
     #else
         QString trPath = fmitprefix + QString("/share/fmit/translations");
     #endif
-    cout << "INFO: Loading FMIT translation file: " << trFile.toLatin1().constData() << " in " << trPath.toLatin1().constData() << endl;
-    fmitTranslator.load(trFile, trPath);
+    cout << "INFO: Loading FMIT translation directory: " << trFile.toLatin1().constData() << " in " << trPath.toLatin1().constData() << endl;
+    if (!fmitTranslator.load(trFile, trPath)) {
+        cout << "ERROR: Failed to load FMIT translation file: " << trFile.toLatin1().constData() << " in " << trPath.toLatin1().constData() << endl;
+    }
     a.installTranslator(&fmitTranslator);
 
     g_main_form = new CustomInstrumentTunerForm();

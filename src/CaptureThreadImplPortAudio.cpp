@@ -128,12 +128,17 @@ int CaptureThreadImplPortAudio::PortAudioCallback( const void *inputBuffer, void
 								  const PaStreamCallbackTimeInfo* timeInfo,
 								  PaStreamCallbackFlags statusFlags,
 								  void *userData )
-{return ((CaptureThreadImplPortAudio*)userData)->portAudioCallback(inputBuffer, framesPerBuffer, timeInfo, statusFlags);}
+{
+	(void)outputBuffer;
+	return ((CaptureThreadImplPortAudio*)userData)->portAudioCallback(inputBuffer, framesPerBuffer, timeInfo, statusFlags);
+}
 int CaptureThreadImplPortAudio::portAudioCallback(const void *inputBuffer,
 						unsigned long framesPerBuffer,
 						const PaStreamCallbackTimeInfo* timeInfo,
 						PaStreamCallbackFlags statusFlags)
 {
+	(void)timeInfo;
+	(void)statusFlags;
 	if(m_capture_thread->m_pause)
 		return 0;
 

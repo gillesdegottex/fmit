@@ -136,8 +136,7 @@ win32 {
     gcc: LIBS += -glu32
 }
 
-# TODO remove core5compat
-QT += core gui opengl openglwidgets multimedia svg core5compat
+QT += core gui opengl openglwidgets multimedia svg
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 macx: QT += network
 
@@ -233,6 +232,7 @@ TRANSLATIONS = tr/fmit_de.ts \
                tr/fmit_pt.ts \
                tr/fmit_pt_BR.ts \
                tr/fmit_ru.ts \
+               tr/fmit_ta.ts \
                tr/fmit_pl.ts \
                tr/fmit_zh_Hans.ts \
                tr/fmit_nb_NO.ts

@@ -168,8 +168,8 @@ void GLFT::initializeGL()
 void GLFT::mousePressEvent(QMouseEvent* e)
 {
 	m_start_move_mouse = true;
-	m_press_x = e->x();
-	m_press_y = e->y();
+	m_press_x = e->position().x();
+	m_press_y = e->position().y();
 	m_press_minf = m_minf;
 	m_press_maxf = m_maxf;
 
@@ -193,19 +193,19 @@ void GLFT::mouseMoveEvent(QMouseEvent* e)
 	static int old_y;
 	if(m_start_move_mouse)
 	{
-		old_x = e->x();
-		old_y = e->y();
+		old_x = e->position().x();
+		old_y = e->position().y();
 		m_start_move_mouse = false;
 	}
-	int dx = e->x() - old_x;
-	int dy = e->y() - old_y;
+	int dx = e->position().x() - old_x;
+	int dy = e->position().y() - old_y;
 
 	if(Qt::LeftButton & e->buttons())
 	{
 		if(Qt::ShiftModifier & e->modifiers())
 		{
 			double f = (m_maxf-m_minf)*double(m_press_x)/width()+m_minf;
-			double zx = double(m_press_x-e->x())/width();
+			double zx = double(m_press_x-e->position().x())/width();
 			zx = pow(8, zx);
 			m_minf = f - zx*(f-m_press_minf);
 			m_maxf = f + zx*(m_press_maxf-f);
@@ -227,8 +227,8 @@ void GLFT::mouseMoveEvent(QMouseEvent* e)
 		update();
 	}
 
-	old_x = e->x();
-	old_y = e->y();
+	old_x = e->position().x();
+	old_y = e->position().y();
 }
 
 void GLFT::paintGL()
