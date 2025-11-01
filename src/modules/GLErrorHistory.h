@@ -67,7 +67,9 @@ class GLErrorHistory : public QOpenGLWidget, public View
 	// settings
 	QAction* setting_keep;
 	QAction* setting_useCents;
+    QAction* setting_autoScroll;
 	QSpinBox* setting_spinScale;
+    QSpinBox* setting_hScale;
 	virtual void save();
 	virtual void load();
 	virtual void clearSettings();
@@ -78,6 +80,7 @@ class GLErrorHistory : public QOpenGLWidget, public View
 	void resizeGL( int w, int h );
 //    void paintEvent(QPaintEvent * event);
 	void keepPreviousNotes(bool keep);
+    void autoScroll(bool autoScroll);
 };
 
 #endif // _GLErrorHistory_h_
