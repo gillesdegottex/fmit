@@ -51,6 +51,7 @@ using namespace Music;
 #include "modules/GLSample.h"
 #include "modules/GLFreqStruct.h"
 #include "modules/GLFT.h"
+#include "modules/GLMusicSpectrum.h"
 #include "modules/GLStatistics.h"
 
 class CustomConfigForm : public QDialog, public Ui_ConfigForm
@@ -82,12 +83,14 @@ class CustomInstrumentTunerForm : public QMainWindow, public Ui_InstrumentTunerF
 	GLSample* m_glSample;
 	GLFreqStruct* m_glFreqStruct;
 	GLFT* m_glFT;
+	GLMusicSpectrum* m_glMusicSpectrum;
 	MicrotonalView* m_microtonalView;
 	GLStatistics* m_glStatistics;
 
 	deque<double> m_queue;
 	double m_freq;
 	double m_compared_freq;
+	double m_last_compared_freq;
 	double m_error;
 
 	QElapsedTimer m_time;
@@ -120,6 +123,7 @@ class CustomInstrumentTunerForm : public QMainWindow, public Ui_InstrumentTunerF
 	virtual void refresh_views();
 	void refresh_data_sample();
 	void refresh_data_harmonics();
+	void modifyFixedNote(int delta);
 
 	// the main function
 public slots:
@@ -143,6 +147,9 @@ public slots:
 	virtual void transpositionChanged();
 	virtual void selectTransport(const QString & name);
 	virtual void autoDetectTransport();
+	virtual void forceFixedNoteChanged(bool force_fixed_note);
+	virtual void fixedNoteUp();
+	virtual void fixedNoteDown();
 	void refresh();
 	void update_localized_note_names();
 

@@ -157,9 +157,11 @@ SOURCES +=  src/main.cpp \
             src/MonoQuantizer.cpp \
             src/modules/View.cpp \
             src/modules/DialView.cpp \
+            src/modules/IIRLowPass.cpp \
             src/modules/GLErrorHistory.cpp \
             src/modules/GLFreqStruct.cpp \
             src/modules/GLFT.cpp \
+            src/modules/GLMusicSpectrum.cpp \
             src/modules/GLGraph.cpp \
             src/modules/GLSample.cpp \
             src/modules/GLStatistics.cpp \
@@ -192,10 +194,12 @@ HEADERS  += src/CustomInstrumentTunerForm.h \
             src/MonoQuantizer.h \
             src/modules/View.h \
             src/modules/DialView.h \
+            src/modules/IIRLowPass.h \
             src/modules/GLErrorHistory.h \
             src/modules/GLFreqStruct.h \
             src/modules/GLFT.h \
             src/modules/GLGraph.h \
+            src/modules/GLMusicSpectrum.h \
             src/modules/GLSample.h \
             src/modules/GLStatistics.h \
             src/modules/GLVolumeHistory.h \
