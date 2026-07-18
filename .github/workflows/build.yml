@@ -119,11 +119,15 @@ jobs:
           fi
           qmake "FFT_LIBDIR=$FFT_PATH" fmit.pro
 
+      - name: Setup MSVC environment
+        if: matrix.platform == 'windows'
+        uses: ilammy/msvc-dev-cmd@v1
+
       - name: Configure (Windows)
         if: matrix.platform == 'windows'
         run: |
           qmake "FFT_LIBDIR=C:/vcpkg/installed/x64-windows" fmit.pro
-        shell: pwsh
+        shell: cmd
 
       - name: Build (Linux)
         if: matrix.platform == 'linux'
