@@ -45,33 +45,34 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            qtbase5-dev \
-            qtdeclarative5-dev \
-            qttools5-dev-tools \
-            qtmultimedia5-dev \
-            libqt5opengl5-dev \
-            libqt5svg5-dev \
+            qt6-base-dev \
+            qt6-declarative-dev \
+            qt6-tools-dev \
+            qt6-multimedia-dev \
+            qt6-opengl-dev \
+            qt6-svg-dev \
             libfftw3-dev \
             libpulse-dev \
             libasound2-dev \
             lsb-release \
-            itstool
+            itstool \
+            gettext
 
       - name: Install macOS dependencies
         if: matrix.platform == 'macos'
         run: |
-          brew install fftw qt@5
-          if [ -d "/usr/local/opt/qt5/bin" ]; then
-            echo "/usr/local/opt/qt5/bin" >> $GITHUB_PATH
+          brew install fftw qt
+          if [ -d "/usr/local/opt/qt/bin" ]; then
+            echo "/usr/local/opt/qt/bin" >> $GITHUB_PATH
           else
-            echo "/opt/homebrew/opt/qt5/bin" >> $GITHUB_PATH
+            echo "/opt/homebrew/opt/qt/bin" >> $GITHUB_PATH
           fi
 
       - name: Setup Qt (Windows)
         if: matrix.platform == 'windows'
         uses: jurplel/install-qt-action@v4
         with:
-          version: '5.15.2'
+          version: '6.5.3'
           host: 'windows'
           target: 'desktop'
           arch: 'win64_msvc2019_64'
@@ -97,7 +98,7 @@ jobs:
 
       - name: Configure (Linux)
         if: matrix.platform == 'linux'
-        run: qmake "CONFIG+=acs_alsa" fmit.pro
+        run: qmake6 "CONFIG+=acs_alsa" fmit.pro
 
       - name: Configure (macOS)
         if: matrix.platform == 'macos'
