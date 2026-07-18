@@ -40,10 +40,12 @@ echo "Automatic detection of Depends: "$DEPENDS
 # This list if too dependent on external repo used for Travis CI ...
 # ... so let's overwrite it with a predefined list of packages
 # (http://packages.ubuntu.com/precise/allpackages can help to build it)
-DEPENDS=`cat package_deb.Depends_$DISTRIB`
-# If cannot list the dependencies properly, skip them ...
-# DEPENDS=""
-echo "Replaced by predefined list Depends: "$DEPENDS
+if [ -f "package_deb.Depends_$DISTRIB" ]; then
+    DEPENDS=`cat package_deb.Depends_$DISTRIB`
+    echo "Replaced by predefined list Depends: "$DEPENDS
+else
+    echo "No predefined dependency list for $DISTRIB, using auto-detected dependencies"
+fi
 
 
 # Build the file tree
