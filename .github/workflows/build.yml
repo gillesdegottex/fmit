@@ -47,7 +47,6 @@ jobs:
           sudo apt-get install -y \
             qtbase5-dev \
             qtdeclarative5-dev \
-            qt5-default \
             qttools5-dev-tools \
             qtmultimedia5-dev \
             libqt5opengl5-dev \
@@ -61,14 +60,19 @@ jobs:
       - name: Install macOS dependencies
         if: matrix.platform == 'macos'
         run: |
-          brew install fftw qt@5
-          if [ -d "/usr/local/opt/qt5/bin" ]; then
-            echo "/usr/local/opt/qt5/bin" >> $GITHUB_PATH
-          else
-            echo "/opt/homebrew/opt/qt5/bin" >> $GITHUB_PATH
-          fi
+          brew install fftw
 
-      - name: Setup Qt
+      - name: Setup Qt (macOS)
+        if: matrix.platform == 'macos'
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '5.15.2'
+          host: 'mac'
+          target: 'desktop'
+          arch: 'clang_64'
+          modules: 'qtmultimedia qtsvg'
+
+      - name: Setup Qt (Windows)
         if: matrix.platform == 'windows'
         uses: jurplel/install-qt-action@v4
         with:
@@ -109,6 +113,7 @@ jobs:
           else
             FFT_PATH="/opt/homebrew/opt/fftw"
           fi
+          export PATH="$QTDIR/bin:$PATH"
           qmake "FFT_LIBDIR=$FFT_PATH" fmit.pro
 
       - name: Configure (Windows)
@@ -117,10 +122,17 @@ jobs:
           qmake "FFT_LIBDIR=$(pwd)\lib\libfft" fmit.pro
         shell: pwsh
 
-      - name: Build (Linux/macOS)
-        if: matrix.platform != 'windows'
+      - name: Build (Linux)
+        if: matrix.platform == 'linux'
         run: |
           make -j$(nproc)
+          make lrelease
+
+      - name: Build (macOS)
+        if: matrix.platform == 'macos'
+        run: |
+          export PATH="$QTDIR/bin:$PATH"
+          make -j$(sysctl -n hw.ncpu)
           make lrelease
 
       - name: Build (Windows)
@@ -143,6 +155,7 @@ jobs:
       - name: Package .dmg (macOS)
         if: matrix.platform == 'macos'
         run: |
+          export PATH="$QTDIR/bin:$PATH"
           macdeployqt fmit.app -dmg
           mv fmit.dmg "fmit_${GITVERSION}.dmg"
           ls -l "fmit_${GITVERSION}.dmg"
