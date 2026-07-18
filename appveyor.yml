@@ -68,6 +68,8 @@ install:
 
   - ps: cd "c:\projects\fmit"
 
+build: off
+
 build_script:
   - qmake "FFT_LIBDIR=C:\projects\fmit\lib\libfft" fmit.pro
 #  - ps: Get-ChildItem .
