@@ -28,8 +28,8 @@ New-Item -ItemType Directory -Name ${PACKAGENAME} -Force | Out-Null
 
 Copy-Item "$projectRoot\$BIN_DIR\fmit.exe" ${PACKAGENAME}
 
-if (Test-Path "$projectRoot\lib\libfft\libfftw3-3.dll") {
-    Copy-Item "$projectRoot\lib\libfft\libfftw3-3.dll" ${PACKAGENAME}
+if (Test-Path "C:\vcpkg\installed\x64-windows\bin\libfftw3-3.dll") {
+    Copy-Item "C:\vcpkg\installed\x64-windows\bin\libfftw3-3.dll" ${PACKAGENAME}
 }
 
 Set-Location ${PACKAGENAME}
