@@ -23,29 +23,15 @@ echo "Package name "$PKGNAME
 rm -fr $PKGNAME
 mkdir -p $PKGNAME
 
-echo "List dependencies:"
-DEPS=`objdump -p $BINFILE |grep NEEDED |awk '{ print $2 }'`
-for dep in $DEPS; do
-    dpkg -S $dep |grep -v chefdk
-    deplist=`dpkg -S $dep |grep -v chefdk |sed 's/:.*$//g'`
-    depdpkg=`echo "$deplist" |sort |uniq`
-    depcurver=`dpkg -s $depdpkg |grep 'Version' |awk '{ print $2 }' |sed 's/:.*$//g' |sed 's/-.*$//g' |sed 's/+.*$//g'`
-    echo "Dependency "$dep"    in package:"$depdpkg"    version:"$depcurver
-    echo $depdpkg >> Depends_$PKGNAME
-done
-DEPENDS=`cat Depends_$PKGNAME |sort |uniq`
-rm -f Depends_$PKGNAME
-DEPENDS=`echo $DEPENDS |sed 's/ /,\ /g'`
-echo "Automatic detection of Depends: "$DEPENDS
-# This list if too dependent on external repo used for Travis CI ...
-# ... so let's overwrite it with a predefined list of packages
-# (http://packages.ubuntu.com/precise/allpackages can help to build it)
-if [ -f "package_deb.Depends_$DISTRIB" ]; then
-    DEPENDS=`cat package_deb.Depends_$DISTRIB`
-    echo "Replaced by predefined list Depends: "$DEPENDS
-else
-    echo "No predefined dependency list for $DISTRIB, using auto-detected dependencies"
+echo "Detecting dependencies..."
+mkdir -p $PKGNAME/DEBIAN
+dpkg-shlibdeps -d$PKGNAME/usr/bin $PKGNAME/usr/bin/fmit > $PKGNAME/DEBIAN/shlibs.deps 2>/dev/null
+DEPENDS=`dpkg-shlibdeps $PKGNAME/usr/bin/fmit 2>/dev/null | grep -oP 'Depends: \K.*' | sed 's/,/ /g' | tr ' ' '\n' | sort -u | tr '\n' ',' | sed 's/,$//' | sed 's/,/, /g'`
+if [ -z "$DEPENDS" ]; then
+    echo "Warning: dpkg-shlibdeps failed, using minimal dependencies"
+    DEPENDS="libc6, libfftw3-bin"
 fi
+echo "Detected dependencies: $DEPENDS"
 
 
 # Build the file tree

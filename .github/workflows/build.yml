@@ -55,7 +55,8 @@ jobs:
             libasound2-dev \
             lsb-release \
             itstool \
-            gettext
+            gettext \
+            dpkg-dev
 
       - name: Install macOS dependencies
         if: matrix.platform == 'macos'
@@ -87,12 +88,8 @@ jobs:
         run: |
           $fftwDir = "lib/libfft"
           New-Item -ItemType Directory -Force -Path $fftwDir | Out-Null
-          $req = [System.Net.WebRequest]::Create("https://sourceforge.net/projects/fftw/files/fftw-3/3.3.10/fftw-3.3.10-dll64.zip/download")
-          $req.AllowAutoRedirect = $false
-          $resp = $req.GetResponse()
-          $redirectUrl = $resp.ResponseUri.AbsoluteUri
-          $resp.Close()
-          Invoke-WebRequest $redirectUrl -OutFile "fftw.zip"
+          $headers = @{ "User-Agent" = "Mozilla/5.0" }
+          Invoke-WebRequest "https://sourceforge.net/projects/fftw/files/fftw-3/3.3.10/fftw-3.3.10-dll64.zip/download" -Headers $headers -OutFile "fftw.zip" -MaximumRedirection 10
           Expand-Archive -Path "fftw.zip" -DestinationPath $fftwDir -Force
           # Generate .lib from .def using MSVC lib
           cmd /c "& 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat' && lib /machine:x64 /def:`"$fftwDir\libfftw3-3.def`" /out:`"$fftwDir\libfftw3-3.lib`""
