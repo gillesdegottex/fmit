@@ -103,7 +103,7 @@ jobs:
             C:\vcpkg\bootstrap-vcpkg.bat
           }
           if (-not (Test-Path "C:\vcpkg\installed\x64-windows\bin\libfftw3-3.dll")) {
-            C:\vcpkg\vcpkg install --no-download-testing fftw3:x64-windows
+            C:\vcpkg\vcpkg install fftw3:x64-windows
           }
         shell: pwsh
 
