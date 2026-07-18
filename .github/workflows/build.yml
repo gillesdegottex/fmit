@@ -49,8 +49,6 @@ jobs:
             qt6-declarative-dev \
             qt6-tools-dev \
             qt6-multimedia-dev \
-            qt6-opengl-dev \
-            qt6-svg-dev \
             libfftw3-dev \
             libpulse-dev \
             libasound2-dev \
@@ -86,14 +84,15 @@ jobs:
       - name: Setup FFTW3 (Windows)
         if: matrix.platform == 'windows'
         run: |
-          $fftwUrl = "https://fftw.org/fftw-3.3.10-dll64.zip"
+          $fftwUrl = "https://sourceforge.net/projects/fftw/files/fftw-3/3.3.10/fftw-3.3.10-dll64.zip/download"
           $fftwZip = "fftw-3.3.10-dll64.zip"
           $fftwDir = "lib/libfft"
           New-Item -ItemType Directory -Force -Path $fftwDir | Out-Null
           Invoke-WebRequest $fftwUrl -OutFile $fftwZip
           Expand-Archive -Path $fftwZip -DestinationPath $fftwDir -Force
-          # Generate .lib from .def
-          & lib /machine:x64 /def:"$fftwDir\libfftw3-3.def" /out:"$fftwDir\libfftw3-3.lib"
+          # Generate .lib from .def using MSVC lib
+          $vcVarsall = "& 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat'"
+          cmd /c "$vcVarsall && lib /machine:x64 /def:`"$fftwDir\libfftw3-3.def`" /out:`"$fftwDir\libfftw3-3.lib`""
         shell: pwsh
 
       - name: Configure (Linux)
