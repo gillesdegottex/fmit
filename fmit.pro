@@ -136,7 +136,7 @@ win32 {
     gcc: LIBS += -glu32
 }
 
-QT += core gui opengl openglwidgets multimedia svg
+QT += core gui opengl multimedia svg
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 macx: QT += network
 

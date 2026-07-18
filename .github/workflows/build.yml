@@ -21,7 +21,7 @@ jobs:
             platform: linux
           - os: macos-latest
             platform: macos
-          - os: windows-2019
+          - os: windows-2025
             platform: windows
             arch: x64
 
@@ -60,17 +60,12 @@ jobs:
       - name: Install macOS dependencies
         if: matrix.platform == 'macos'
         run: |
-          brew install fftw
-
-      - name: Setup Qt (macOS)
-        if: matrix.platform == 'macos'
-        uses: jurplel/install-qt-action@v4
-        with:
-          version: '5.15.2'
-          host: 'mac'
-          target: 'desktop'
-          arch: 'clang_64'
-          modules: 'qtmultimedia qtsvg'
+          brew install fftw qt@5
+          if [ -d "/usr/local/opt/qt5/bin" ]; then
+            echo "/usr/local/opt/qt5/bin" >> $GITHUB_PATH
+          else
+            echo "/opt/homebrew/opt/qt5/bin" >> $GITHUB_PATH
+          fi
 
       - name: Setup Qt (Windows)
         if: matrix.platform == 'windows'
@@ -80,7 +75,6 @@ jobs:
           host: 'windows'
           target: 'desktop'
           arch: 'win64_msvc2019_64'
-          modules: 'qtmultimedia qtsvg'
 
       - name: Install Windows dependencies
         if: matrix.platform == 'windows'
@@ -113,7 +107,6 @@ jobs:
           else
             FFT_PATH="/opt/homebrew/opt/fftw"
           fi
-          export PATH="$QTDIR/bin:$PATH"
           qmake "FFT_LIBDIR=$FFT_PATH" fmit.pro
 
       - name: Configure (Windows)
@@ -131,7 +124,6 @@ jobs:
       - name: Build (macOS)
         if: matrix.platform == 'macos'
         run: |
-          export PATH="$QTDIR/bin:$PATH"
           make -j$(sysctl -n hw.ncpu)
           make lrelease
 
@@ -155,7 +147,6 @@ jobs:
       - name: Package .dmg (macOS)
         if: matrix.platform == 'macos'
         run: |
-          export PATH="$QTDIR/bin:$PATH"
           macdeployqt fmit.app -dmg
           mv fmit.dmg "fmit_${GITVERSION}.dmg"
           ls -l "fmit_${GITVERSION}.dmg"
