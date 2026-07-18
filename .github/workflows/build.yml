@@ -76,6 +76,7 @@ jobs:
           host: 'windows'
           target: 'desktop'
           arch: 'win64_msvc2019_64'
+          modules: 'qtmultimedia'
 
       - name: Install Windows dependencies
         if: matrix.platform == 'windows'
@@ -88,10 +89,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            C:\vcpkg\installed
-            C:\vcpkg\packages
-            C:\vcpkg\registry
-          key: vcpkg-${{ hashFiles('**/vcpkg.json') }}-fftw3-x64-windows
+            C:\vcpkg
+            !C:\vcpkg\installed\*\debug
+          key: vcpkg-fftw3-x64-windows-v1
           restore-keys: |
             vcpkg-
 
@@ -102,7 +102,9 @@ jobs:
             git clone https://github.com/microsoft/vcpkg.git C:\vcpkg
             C:\vcpkg\bootstrap-vcpkg.bat
           }
-          C:\vcpkg\vcpkg install fftw3:x64-windows
+          if (-not (Test-Path "C:\vcpkg\installed\x64-windows\bin\libfftw3-3.dll")) {
+            C:\vcpkg\vcpkg install --no-download-testing fftw3:x64-windows
+          }
         shell: pwsh
 
       - name: Configure (Linux)
