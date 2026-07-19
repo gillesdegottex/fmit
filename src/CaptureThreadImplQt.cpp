@@ -173,16 +173,32 @@ void CaptureThreadImplQt::set_params(bool test) {
     // (it can fail when Media Foundation is broken on Windows)
     bool backendBroken = !m_audioInputDevice.isFormatSupported(preferredFormat);
     bool usePreferred = backendBroken;
+    int old_sampling_rate = m_sampling_rate;
+
+    // Determine target sampling rate for format testing
+    int targetRate;
+    if (m_sampling_rate == CaptureThread::SAMPLING_RATE_MAX || m_sampling_rate == CaptureThread::SAMPLING_RATE_UNKNOWN) {
+        targetRate = 44100; // Default for auto-detect
+    } else {
+        targetRate = m_sampling_rate; // User's explicit choice
+    }
+
     if(backendBroken) {
+        // Backend completely broken, use preferred format as-is
         cout << "CaptureThread: WARNING: Qt: isFormatSupported() unreliable, using device preferred format" << endl;
         format = preferredFormat;
         m_sampling_rate = preferredFormat.sampleRate();
     }
     else
     {
-        // Backend is reliable, try our desired format (Int16/44100/1ch)
+        // Fallback chain:
+        // 1) Int16/mono at target rate
+        // 2) Int16/stereo at target rate
+        // 3) Preferred format/channels at target rate
+        // 4) Preferred format entirely (with preferred rate)
+
         format.setSampleFormat(QAudioFormat::Int16);
-        format.setSampleRate(44100);
+        format.setSampleRate(targetRate);
         format.setChannelCount(1);
 
         bool formatSupported = m_audioInputDevice.isFormatSupported(format);
@@ -191,12 +207,18 @@ void CaptureThreadImplQt::set_params(bool test) {
             format.setChannelCount(2);
             formatSupported = m_audioInputDevice.isFormatSupported(format);
             if(!formatSupported) {
-                cout << "CaptureThread: WARNING: Qt: Int16 not supported, using device preferred format" << endl;
+                cout << "CaptureThread: WARNING: Qt: Int16 not supported, trying preferred format with target rate " << targetRate << endl;
                 format = preferredFormat;
-                m_sampling_rate = preferredFormat.sampleRate();
-                usePreferred = true;
+                format.setSampleRate(targetRate);
+                formatSupported = m_audioInputDevice.isFormatSupported(format);
+                if(!formatSupported) {
+                    cout << "CaptureThread: WARNING: Qt: Rate " << targetRate << " not supported, using preferred rate " << preferredFormat.sampleRate() << endl;
+                    format = preferredFormat;
+                    usePreferred = true;
+                }
             }
         }
+        m_sampling_rate = format.sampleRate();
     }
 
     bool isFloat = (format.sampleFormat() == QAudioFormat::Float);
@@ -204,17 +226,13 @@ void CaptureThreadImplQt::set_params(bool test) {
 
     if(usePreferred)
     {
-        // Backend is broken or Int16 not supported, use preferred format as-is
+        // Backend is broken or nothing else worked, use preferred format as-is
+        m_sampling_rate = preferredFormat.sampleRate();
+        format.setSampleRate(m_sampling_rate);
         cout << "CaptureThread: INFO: Qt: Using device preferred format" << endl;
-        if(m_sampling_rate != preferredFormat.sampleRate()) {
-            m_sampling_rate = preferredFormat.sampleRate();
-            m_capture_thread->emitSamplingRateChanged();
-        }
     }
     else if(m_sampling_rate==CaptureThread::SAMPLING_RATE_MAX || m_sampling_rate==CaptureThread::SAMPLING_RATE_UNKNOWN)
     {
-        int old_sampling_rate = m_sampling_rate;
-
         cout << "CaptureThread: INFO: Qt: sampling rate set to max or undefined, try to determine it." << endl;
 
         int minRate = m_audioInputDevice.minimumSampleRate();
@@ -253,20 +271,10 @@ void CaptureThreadImplQt::set_params(bool test) {
             format.setSampleRate(m_sampling_rate);
             cout << "CaptureThread: WARNING: Qt: Using device preferred sampling rate " << m_sampling_rate << endl;
         }
+    }
 
-        if(old_sampling_rate!=m_sampling_rate)
-            m_capture_thread->emitSamplingRateChanged();
-    }
-    else
-    {
-        format.setSampleRate(m_sampling_rate);
-        if(!m_audioInputDevice.isFormatSupported(format)) {
-            cout << "CaptureThread: WARNING: Qt: isFormatSupported() failed for rate " << m_sampling_rate
-                 << ", falling back to device preferred rate " << preferredFormat.sampleRate() << endl;
-            m_sampling_rate = preferredFormat.sampleRate();
-            format.setSampleRate(m_sampling_rate);
-        }
-    }
+    if(old_sampling_rate != m_sampling_rate && old_sampling_rate != CaptureThread::SAMPLING_RATE_UNKNOWN && old_sampling_rate != CaptureThread::SAMPLING_RATE_MAX)
+        m_capture_thread->emitSamplingRateChanged();
 
     qInfo().noquote() << "CaptureThread: Qt: Final format - rate:" << format.sampleRate()
                       << "channels:" << format.channelCount()
