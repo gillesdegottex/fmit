@@ -20,9 +20,25 @@
 #include <stdlib.h>
 #include <iostream>
 #include <cstdlib>
+#include <cstring>
 using namespace std;
 #include <signal.h>
 #include <qapplication.h>
+
+#ifdef Q_OS_WIN32
+#include <windows.h>
+#include <io.h>
+#include <fcntl.h>
+
+static void attachConsole() {
+    if (AllocConsole()) {
+        freopen("CONOUT$", "w", stdout);
+        freopen("CONOUT$", "w", stderr);
+        setmode(_fileno(stdout), _O_U16TEXT);
+        setmode(_fileno(stderr), _O_U16TEXT);
+    }
+}
+#endif
 // #include <qtextcodec.h>
 #include <qtranslator.h>
 #include <QLibraryInfo>
@@ -53,6 +69,20 @@ QString FMITVersion(){
 
 int main(int argc, char** argv)
 {
+    bool debugMode = false;
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "--debug") == 0) {
+            debugMode = true;
+            break;
+        }
+    }
+
+#ifdef Q_OS_WIN32
+    if (debugMode) attachConsole();
+#else
+    Q_UNUSED(debugMode)
+#endif
+
     std::cout << "Free Music Instrument Tuner (Version " << FMITVersion().toLatin1().constData() << ")" << std::endl;
 
     QString fmitprefix(STR(PREFIX));
