@@ -81,7 +81,7 @@ jobs:
       - name: Install Windows dependencies
         if: matrix.platform == 'windows'
         run: |
-          choco install -y innosetup
+          choco install -y innosetup jom
         shell: pwsh
 
       - name: Cache vcpkg
@@ -97,6 +97,8 @@ jobs:
 
       - name: Setup FFTW3 (Windows)
         if: matrix.platform == 'windows'
+        env:
+          VCPKG_BUILD_TYPE: release
         run: |
           if (-not (Test-Path "C:\vcpkg\vcpkg.exe")) {
             git clone https://github.com/microsoft/vcpkg.git C:\vcpkg
