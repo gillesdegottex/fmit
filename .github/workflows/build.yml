@@ -151,6 +151,15 @@ jobs:
           $ErrorActionPreference = 'Stop'
           jom -f Makefile.Release
           jom lrelease
+          if (-not (Test-Path "release\fmit.exe")) {
+            Write-Host "ERROR: release\fmit.exe not found after build!"
+            Write-Host "Contents of release/:"
+            Get-ChildItem "release\" -ErrorAction SilentlyContinue
+            Write-Host "Contents of current directory:"
+            Get-ChildItem -Filter "*.exe" -ErrorAction SilentlyContinue
+            exit 1
+          }
+          Write-Host "Build verified: release\fmit.exe exists"
         shell: pwsh
 
       - name: Package .deb (Linux)
