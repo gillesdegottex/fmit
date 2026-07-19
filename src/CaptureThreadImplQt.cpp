@@ -213,27 +213,21 @@ void CaptureThreadImplQt::set_params(bool test) {
         sampling_rates = QSet<int>(sampling_rates.begin(), sampling_rates.end()).values(); // remove duplicates
         std::sort(sampling_rates.begin(), sampling_rates.end(), std::greater<int>());
 
-        bool foundsr = false;
-        while(!foundsr)
-        {
-            if(sampling_rates.empty())
-                throw QString("Qt: Cannot set any sample rate");
-
-            m_sampling_rate = sampling_rates.front();
-            if (m_sampling_rate < minRate || m_sampling_rate > maxRate) {
-                sampling_rates.pop_front();
-                continue;
+        // Bypass isFormatSupported() - it can fail when Media Foundation is broken
+        // Pick the highest rate within device's reported range
+        for (int rate : sampling_rates) {
+            if (rate >= minRate && rate <= maxRate) {
+                m_sampling_rate = rate;
+                cout << "CaptureThread: INFO: Qt: Selected sampling rate " << m_sampling_rate << " (highest in range)" << endl;
+                format.setSampleRate(m_sampling_rate);
+                break;
             }
-            cout << "CaptureThread: INFO: Qt: Try sampling rate " << m_sampling_rate << " ..." << flush;
-
+        }
+        // Fallback to device's preferred format rate if nothing matched
+        if (m_sampling_rate == CaptureThread::SAMPLING_RATE_UNKNOWN || m_sampling_rate == CaptureThread::SAMPLING_RATE_MAX) {
+            m_sampling_rate = preferredFormat.sampleRate();
+            cout << "CaptureThread: WARNING: Qt: Using device preferred sampling rate " << m_sampling_rate << endl;
             format.setSampleRate(m_sampling_rate);
-
-            foundsr = m_audioInputDevice.isFormatSupported(format);
-
-            if(!foundsr)	cout << " failed" << endl;
-            else            cout << " success" << endl;
-
-            sampling_rates.pop_front();
         }
 
         if(old_sampling_rate!=m_sampling_rate)
@@ -242,8 +236,12 @@ void CaptureThreadImplQt::set_params(bool test) {
     else
     {
         format.setSampleRate(m_sampling_rate);
-        if(!m_audioInputDevice.isFormatSupported(format))
-            throw QString("Qt: Cannot set sampling rate");
+        if(!m_audioInputDevice.isFormatSupported(format)) {
+            cout << "CaptureThread: WARNING: Qt: isFormatSupported() failed for rate " << m_sampling_rate
+                 << ", falling back to device preferred rate " << preferredFormat.sampleRate() << endl;
+            m_sampling_rate = preferredFormat.sampleRate();
+            format.setSampleRate(m_sampling_rate);
+        }
     }
 
     qInfo().noquote() << "CaptureThread: Qt: Final format - rate:" << format.sampleRate()
