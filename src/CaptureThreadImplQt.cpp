@@ -163,17 +163,27 @@ void CaptureThreadImplQt::set_params(bool test) {
 
     QAudioFormat format = m_format;
 
-    // TODO Should list all possible parameters ...
+    // Try device's preferred format first (most likely to work)
+    QAudioFormat preferredFormat = m_audioInputDevice.preferredFormat();
+    qInfo().noquote() << "CaptureThread: Qt: Device preferred format - rate:" << preferredFormat.sampleRate()
+                      << "channels:" << preferredFormat.channelCount()
+                      << "format:" << preferredFormat.sampleFormat();
+
+    // Set our desired format, but be lenient with isFormatSupported()
+    // (it can fail when Media Foundation is broken on Windows)
     format.setSampleFormat(QAudioFormat::Int16);
-    format.setSampleRate(44100); // Try with a very common sampling rate
+    format.setSampleRate(44100);
     format.setChannelCount(1);
 
-    if(!m_audioInputDevice.isFormatSupported(format)) {
-        QString err_msg = QString("Qt: cannot set channel count to 1");
-        cout << "CaptureThread: WARNING: " << err_msg.toStdString() << endl;
+    bool formatSupported = m_audioInputDevice.isFormatSupported(format);
+    if(!formatSupported) {
+        cout << "CaptureThread: WARNING: Qt: isFormatSupported() returned false for mono, trying stereo" << endl;
         format.setChannelCount(2);
-        if(!m_audioInputDevice.isFormatSupported(format))
-            throw QString("Qt: Cannot set number of channels to 1 or 2");
+        formatSupported = m_audioInputDevice.isFormatSupported(format);
+        if(!formatSupported) {
+            cout << "CaptureThread: WARNING: Qt: isFormatSupported() returned false for stereo, trying anyway with mono" << endl;
+            format.setChannelCount(1);
+        }
     }
 
     setFormatDescrsAndFns(format.bytesPerSample(), true, false, format.channelCount());
