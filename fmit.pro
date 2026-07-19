@@ -112,7 +112,7 @@ win32 {
         INCLUDEPATH += $$FFT_LIBDIR/include
         LIBS += -L$$FFT_LIBDIR/lib
     }
-    msvc: LIBS += $$FFT_LIBDIR/lib/libfftw3-3.lib
+    msvc: LIBS += $$FFT_LIBDIR/lib/fftw3.lib
     gcc: LIBS += -lfftw3-3
     # msvc: LIBS += $$FFT_LIBDIR/libfftw3f-3.lib
     # gcc: LIBS += -lfftw3f-3
