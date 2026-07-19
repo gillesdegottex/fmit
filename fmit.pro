@@ -134,6 +134,8 @@ win32 {
     msvc: LIBS += glu32.lib
     gcc: LIBS += -lopengl32
     gcc: LIBS += -glu32
+    CONFIG += console
+    CONFIG -= app_bundle
 }
 
 QT += core gui opengl openglwidgets multimedia svg
