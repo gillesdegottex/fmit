@@ -72,10 +72,10 @@ jobs:
         if: matrix.platform == 'windows'
         uses: jurplel/install-qt-action@v4
         with:
-          version: '6.5.3'
+          version: '6.8.3'
           host: 'windows'
           target: 'desktop'
-          arch: 'win64_msvc2019_64'
+          arch: 'win64_msvc2022_64'
           modules: 'qtmultimedia'
 
       - name: Install Windows dependencies
@@ -97,14 +97,13 @@ jobs:
 
       - name: Setup FFTW3 (Windows)
         if: matrix.platform == 'windows'
-        env:
-          VCPKG_BUILD_TYPE: release
         run: |
           if (-not (Test-Path "C:\vcpkg\vcpkg.exe")) {
             git clone https://github.com/microsoft/vcpkg.git C:\vcpkg
             C:\vcpkg\bootstrap-vcpkg.bat
           }
           if (-not (Test-Path "C:\vcpkg\installed\x64-windows\bin\libfftw3-3.dll")) {
+            $env:VCPKG_BUILD_TYPE = "release"
             C:\vcpkg\vcpkg install fftw3:x64-windows
           }
         shell: pwsh
@@ -173,7 +172,7 @@ jobs:
         if: matrix.platform == 'windows'
         run: |
           powershell -ExecutionPolicy Bypass -File distrib/package_windows.ps1 x64
-          Move-Item distrib\fmit_*_win*.exe .
+          mv distrib/fmit_*_win*.exe .
         shell: bash
 
       - name: Upload Linux artifact
