@@ -73,8 +73,6 @@ bool CaptureThreadImplQt::is_available()
 
 void CaptureThreadImplQt::capture_init()
 {
-    qInfo().noquote() << "CaptureThread: Qt: capture_init()";
-
     set_params(false);
 
     if (m_audioSource) {
@@ -85,7 +83,6 @@ void CaptureThreadImplQt::capture_init()
         if (m_audioInputIODevice) {
             connect(m_audioInputIODevice, &QIODevice::readyRead,
                             this, &CaptureThreadImplQt::audioDataReady);
-            qInfo().noquote() << "CaptureThread: Qt: capture started, IODevice ready";
         } else {
             qWarning().noquote() << "CaptureThread: Qt: start() returned NULL IODevice";
         }
@@ -98,7 +95,6 @@ void CaptureThreadImplQt::capture_init()
 
 void CaptureThreadImplQt::capture_finished()
 {
-    qInfo().noquote() << "CaptureThread: Qt: capture_finished()";
     if (m_audioSource) {
         m_audioSource->stop();
         QCoreApplication::instance()->processEvents();
@@ -113,8 +109,6 @@ void CaptureThreadImplQt::capture_finished()
 
 void CaptureThreadImplQt::startCapture()
 {
-    qInfo().noquote() << "CaptureThread: Qt: startCapture()";
-
     try
     {
         capture_init();
@@ -128,8 +122,6 @@ void CaptureThreadImplQt::startCapture()
 }
 void CaptureThreadImplQt::stopCapture()
 {
-    qInfo().noquote() << "CaptureThread: Qt: stopCapture()";
-
     try
     {
         capture_finished();
@@ -143,11 +135,8 @@ void CaptureThreadImplQt::stopCapture()
 
 void CaptureThreadImplQt::set_params(bool test) {
     Q_UNUSED(test)
-    qInfo().noquote() << "CaptureThread: Qt: set_params() source='" << getASCIISource().toLatin1().constData() << "'";
-
     if(getASCIISource()=="") {
         m_audioInputDevice = QMediaDevices::defaultAudioInput();
-        qInfo().noquote() << "CaptureThread: Qt: Using default device:" << m_audioInputDevice.description();
     } else {
         m_availableAudioInputDevices = QMediaDevices::audioInputs();
 
@@ -241,11 +230,8 @@ void CaptureThreadImplQt::set_params(bool test) {
     }
     else if(m_sampling_rate==CaptureThread::SAMPLING_RATE_MAX || m_sampling_rate==CaptureThread::SAMPLING_RATE_UNKNOWN)
     {
-        cout << "CaptureThread: INFO: Qt: sampling rate set to max or undefined, try to determine it." << endl;
-
         int minRate = m_audioInputDevice.minimumSampleRate();
         int maxRate = m_audioInputDevice.maximumSampleRate();
-        qInfo().noquote() << "CaptureThread: Qt: Device sample rate range:" << minRate << "-" << maxRate;
 
         QList<int> sampling_rates;
         sampling_rates += maxRate;
@@ -269,7 +255,6 @@ void CaptureThreadImplQt::set_params(bool test) {
             m_sampling_rate = rate;
             format.setSampleRate(m_sampling_rate);
             if (m_audioInputDevice.isFormatSupported(format)) {
-                cout << "CaptureThread: INFO: Qt: Selected sampling rate " << m_sampling_rate << endl;
                 foundsr = true;
                 break;
             }
@@ -304,7 +289,6 @@ void CaptureThreadImplQt::set_params(bool test) {
             connect(m_audioSource, &QAudioSource::stateChanged,
                             this, &CaptureThreadImplQt::audioStateChanged);
             m_audioInputIODevice = NULL;
-            qInfo().noquote() << "CaptureThread: Qt: QAudioSource created successfully";
         }
     } else {
         throw QString("Qt: cannot set parameters (format not valid)");
@@ -314,8 +298,6 @@ void CaptureThreadImplQt::set_params(bool test) {
 
 void CaptureThreadImplQt::setSamplingRate(int value)
 {
-    qInfo().noquote() << "CaptureThread: Qt: setSamplingRate(" << value << ")";
-
 	assert(value>0 || value==CaptureThread::SAMPLING_RATE_MAX);
 
 	if(m_sampling_rate!=value || value==CaptureThread::SAMPLING_RATE_MAX)
@@ -349,7 +331,6 @@ void CaptureThreadImplQt::setSamplingRate(int value)
 
 void CaptureThreadImplQt::audioStateChanged(QAudio::State state) {
     Q_UNUSED(state)
-    qInfo().noquote() << "CaptureThread: Qt: audioStateChanged()";
 }
 
 void CaptureThreadImplQt::audioDataReady()
@@ -393,8 +374,6 @@ void CaptureThreadImplQt::audioDataReady()
 
 CaptureThreadImplQt::~CaptureThreadImplQt()
 {
-    qInfo().noquote() << "CaptureThread: Qt: ~CaptureThreadImplQt()";
-
 	stopCapture();
     if (m_audioSource) {
         delete m_audioSource;
