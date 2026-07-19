@@ -172,6 +172,7 @@ void CaptureThreadImplQt::set_params(bool test) {
     // Check if isFormatSupported() is reliable by testing with preferred format
     // (it can fail when Media Foundation is broken on Windows)
     bool backendBroken = !m_audioInputDevice.isFormatSupported(preferredFormat);
+    bool usePreferred = backendBroken;
     if(backendBroken) {
         cout << "CaptureThread: WARNING: Qt: isFormatSupported() unreliable, using device preferred format" << endl;
         format = preferredFormat;
@@ -179,19 +180,21 @@ void CaptureThreadImplQt::set_params(bool test) {
     }
     else
     {
-        // Backend is reliable, try our desired format
+        // Backend is reliable, try our desired format (Int16/44100/1ch)
         format.setSampleFormat(QAudioFormat::Int16);
         format.setSampleRate(44100);
         format.setChannelCount(1);
 
         bool formatSupported = m_audioInputDevice.isFormatSupported(format);
         if(!formatSupported) {
-            cout << "CaptureThread: WARNING: Qt: isFormatSupported() returned false for mono, trying stereo" << endl;
+            cout << "CaptureThread: WARNING: Qt: Int16/mono not supported, trying Int16/stereo" << endl;
             format.setChannelCount(2);
             formatSupported = m_audioInputDevice.isFormatSupported(format);
             if(!formatSupported) {
-                cout << "CaptureThread: WARNING: Qt: isFormatSupported() returned false for stereo, trying anyway with mono" << endl;
-                format.setChannelCount(1);
+                cout << "CaptureThread: WARNING: Qt: Int16 not supported, using device preferred format" << endl;
+                format = preferredFormat;
+                m_sampling_rate = preferredFormat.sampleRate();
+                usePreferred = true;
             }
         }
     }
@@ -199,10 +202,10 @@ void CaptureThreadImplQt::set_params(bool test) {
     bool isFloat = (format.sampleFormat() == QAudioFormat::Float);
     setFormatDescrsAndFns(format.bytesPerSample(), true, isFloat, format.channelCount());
 
-    if(backendBroken)
+    if(usePreferred)
     {
-        // Backend is broken, use preferred format as-is
-        cout << "CaptureThread: INFO: Qt: Using device preferred format (backend broken)" << endl;
+        // Backend is broken or Int16 not supported, use preferred format as-is
+        cout << "CaptureThread: INFO: Qt: Using device preferred format" << endl;
         if(m_sampling_rate != preferredFormat.sampleRate()) {
             m_sampling_rate = preferredFormat.sampleRate();
             m_capture_thread->emitSamplingRateChanged();
