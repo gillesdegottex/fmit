@@ -192,26 +192,30 @@ void CaptureThreadImplQt::set_params(bool test) {
     else
     {
         // Fallback chain:
-        // 1) Int16/mono at target rate
-        // 2) Int16/stereo at target rate
-        // 3) Preferred format/channels at target rate
-        // 4) Preferred format entirely (with preferred rate)
+        // 1) Float/mono @ target rate
+        // 2) Float/preferred_channels @ target rate
+        // 3) preferred_format/preferred_channels @ target rate
+        // 4) preferred_format/preferred_channels @ preferred_rate (final fallback)
 
-        format.setSampleFormat(QAudioFormat::Int16);
+        // 1) Float/mono @ target rate
+        format.setSampleFormat(QAudioFormat::Float);
         format.setSampleRate(targetRate);
         format.setChannelCount(1);
 
         bool formatSupported = m_audioInputDevice.isFormatSupported(format);
         if(!formatSupported) {
-            cout << "CaptureThread: WARNING: Qt: Int16/mono not supported, trying Int16/stereo" << endl;
-            format.setChannelCount(2);
+            // 2) Float/preferred_channels @ target rate
+            cout << "CaptureThread: WARNING: Qt: Float/mono not supported, trying Float/" << preferredFormat.channelCount() << "ch" << endl;
+            format.setChannelCount(preferredFormat.channelCount());
             formatSupported = m_audioInputDevice.isFormatSupported(format);
             if(!formatSupported) {
-                cout << "CaptureThread: WARNING: Qt: Int16 not supported, trying preferred format with target rate " << targetRate << endl;
+                // 3) preferred_format/preferred_channels @ target rate
+                cout << "CaptureThread: WARNING: Qt: Float not supported, trying preferred format (" << preferredFormat.sampleFormat() << "/" << preferredFormat.channelCount() << "ch)" << endl;
                 format = preferredFormat;
                 format.setSampleRate(targetRate);
                 formatSupported = m_audioInputDevice.isFormatSupported(format);
                 if(!formatSupported) {
+                    // 4) preferred format entirely
                     cout << "CaptureThread: WARNING: Qt: Rate " << targetRate << " not supported, using preferred rate " << preferredFormat.sampleRate() << endl;
                     format = preferredFormat;
                     usePreferred = true;
