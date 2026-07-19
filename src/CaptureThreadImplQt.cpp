@@ -230,6 +230,8 @@ void CaptureThreadImplQt::set_params(bool test) {
     }
     else if(m_sampling_rate==CaptureThread::SAMPLING_RATE_MAX || m_sampling_rate==CaptureThread::SAMPLING_RATE_UNKNOWN)
     {
+        cout << "CaptureThread: INFO: Qt: sampling rate set to max or undefined, try to determine it." << endl;
+
         int minRate = m_audioInputDevice.minimumSampleRate();
         int maxRate = m_audioInputDevice.maximumSampleRate();
 
@@ -255,6 +257,7 @@ void CaptureThreadImplQt::set_params(bool test) {
             m_sampling_rate = rate;
             format.setSampleRate(m_sampling_rate);
             if (m_audioInputDevice.isFormatSupported(format)) {
+                cout << "CaptureThread: INFO: Qt: Selected sampling rate " << m_sampling_rate << endl;
                 foundsr = true;
                 break;
             }
