@@ -84,8 +84,10 @@ class CaptureThreadImpl
 // ---------------------- the Qt implementation ---------------------
 
 #ifdef CAPTURE_QT
-#include <QAudioDeviceInfo>
-#include <QAudioInput>
+#include <QMediaDevices>
+#include <QAudioSource>
+#include <QAudioDevice>
+#include <QAudioFormat>
 class CaptureThreadImplQt : public QObject, public CaptureThreadImpl
 {
     Q_OBJECT
@@ -95,9 +97,9 @@ class CaptureThreadImplQt : public QObject, public CaptureThreadImpl
     void capture_init();
     void capture_finished();
 
-    const QList<QAudioDeviceInfo> m_availableAudioInputDevices;
-    QAudioDeviceInfo    m_audioInputDevice;
-    QAudioInput*        m_audioInput;
+    QList<QAudioDevice> m_availableAudioInputDevices;
+    QAudioDevice        m_audioInputDevice;
+    QAudioSource*       m_audioSource;
     QIODevice*          m_audioInputIODevice;
 
     QAudio::State       m_state;

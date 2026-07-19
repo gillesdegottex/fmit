@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2014 Gilles Degottex <gilles.degottex@gmail.com> -->
+<application>
+  <id type="desktop">fmit.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>FMIT</name>
+  <name xml:lang="de">FMIT</name>
+  <name xml:lang="el">FMIT</name>
+  <name xml:lang="fr">FMIT</name>
+  <name xml:lang="nb-NO">FMIT</name>
+  <name xml:lang="pt">FMIT</name>
+  <name xml:lang="pt-BR">FMIT</name>
+  <name xml:lang="ru">FMIT</name>
+  <name xml:lang="ta">Fmit</name>
+  <name xml:lang="zh-HANS">FMIT</name>
+  <summary>Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument</summary>
+  <summary xml:lang="de">Free Musical Instrument Tuner (FMIT), ein Werkzeug zum Stimmen von Musikinstrumenten</summary>
+  <summary xml:lang="el">Free Musical Instrument Tuner (FMIT), ένα Εργαλείο για κούρδισμα μουσικών οργάνων</summary>
+  <summary xml:lang="fr">Free Musical Instrument Tuner (FMIT), un outil pour accorder un instrument de musique</summary>
+  <summary xml:lang="nb-NO">Fri musikalsk instrumenttuner (FMIT), et verktøy for stemming av musikkinstrumenter</summary>
+  <summary xml:lang="pt">Afinador de Instrumentos Musicais Livre (FMIT), uma ferramenta para afinar instrumentos musicais</summary>
+  <summary xml:lang="pt-BR">Afinador de Instrumentos Musicais Livre (FMIT), uma ferramenta para afinar instrumentos musicais</summary>
+  <summary xml:lang="ru">Свободный тюнер музыкальных инструментов (Free Musical Instrument Tuner — FMIT), инструмент для настройки музыкального инструмента</summary>
+  <summary xml:lang="ta">இலவச இசைக்கருவி ட்யூனர் (எஃப்.எம்.ஐ.டி), இசைக்கருவியை சரிசெய்ய ஒரு கருவி</summary>
+  <summary xml:lang="zh-HANS">自由乐器校音器是一个用于乐器校音的工具</summary>
+  <description>
+    <p>
+      Find an estimation of the fundamental frequency (f0, not the perceived pitch) 
+      of an audio signal, in real-time, and compare it with the closest note in the 
+      scale.
+    </p>
+    <p xml:lang="de">Finden Sie eine Schätzung der Grundfrequenz (f0, nicht der wahrgenommenen Tonhöhe) eines Audiosignals in Echtzeit und vergleichen Sie sie mit der nächstgelegenen Note in der Skala.</p>
+    <p xml:lang="el">Εύρεση μιας εκτίμησης της θεμελιώδους συχνότητας (f0, όχι ο αντιληπτός τόνος) ενός ηχητικού σήματος, σε πραγματικό χρόνο, και σύγκρισή της με την πλησιέστερη νότα στην κλίμακα.</p>
+    <p xml:lang="fr">Trouvez une estimation de la fréquence fondamentale (f0, pas la hauteur perçue) d'un signal audio, en temps réel, et comparez-la à la note la plus proche dans la gamme.</p>
+    <p xml:lang="nb-NO">Finn estimat av grunnfrekvens (f0, ikke</p>
+    <p xml:lang="pt">Descubra a frequência fundamental estimada (f0, não a altura percebida) de um sinal de áudio, em tempo real, e a comparação com a nota mais próxima da escala.</p>
+    <p xml:lang="pt-BR">Descubra a frequência fundamental estimada (f0, não a altura percebida) de um sinal de áudio, em tempo real, e a comparação com a nota mais próxima da escala.</p>
+    <p xml:lang="ru">Находите оценку фундаментальной частоты (f0, а не воспринимаемой высоты тона) звукового сигнала в реальном времени и сравнивайте её с ближайшей нотой в гамме.</p>
+    <p xml:lang="ta">ஆடியோ சிக்னலின் அடிப்படை அதிர்வெண் (F0, உணரப்பட்ட சுருதி அல்ல) மதிப்பீட்டைக் கண்டுபிடித்து, நிகழ்நேரத்தில், அதை அளவில் மிக நெருக்கமான குறிப்புடன் ஒப்பிடுங்கள்.</p>
+    <p xml:lang="zh-HANS">实时查找音频信号的基频估计值（f0，而不是感知的音调），并将其与音阶中最接近的音符进行比较。</p>
+    <p>
+      Tune your musical instruments with advanced features, including traces of 
+      frequency and volume, adjustable base tuning frequency, multiple choices of 
+      tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and 
+      meantone), microtonal tuning with Scala file (.scl) support and statistics.
+    </p>
+    <p xml:lang="de">Stimmen Sie Ihre Musikinstrumente mit erweiterten Funktionen, einschließlich Spuren von Frequenz und Lautstärke, einstellbarer Basis-Stimmfrequenz, mehrfacher Stimmtonwahl (chromatisch, Werckmeister III, Kirnberger III, diatonisch und Mitteltönig), mikrotonaler Stimmung mit Unterstützung für Scala-Dateien (.scl) und Statistiken.</p>
+    <p xml:lang="el">Κουρδίστε τα μουσικά σας όργανα με προηγμένες λειτουργίες, συμπεριλαμβανομένων ιχνών συχνότητας και έντασης, ρυθμιζόμενη συχνότητα βασικού κουρδίσματος, πολλαπλές επιλογές κλίμακας κουρδίσματος (χρωματική, Werckmeister III, Kirnberger III, διατονική και μεσοτονική), μικροτονικό κούρδισμα με υποστήριξη για αρχεία Scala (.scl) και στατιστικά.</p>
+    <p xml:lang="fr">Accordez vos instruments de musique avec des fonctions avancées, y compris des traces de fréquence et de volume, une fréquence d'accord de base réglable, plusieurs choix de gammes d'accord (chromatique, Werckmeister III, Kirnberger III, diatonique et mésotonique), un accord microtonal avec support des fichiers Scala (.scl) et statistiques.</p>
+    <p xml:lang="pt">Afine os seus instrumentos musicais usando funções avançadas, incluindo históricos de frequência e volume, frequência base de afinação ajustável, várias escolhas de escala de afinação (cromática, Werckmeister III, Kirnberger III, diatônica e mesotônica), afinação microtonal com suporte a ficheiros Scala (.scl) e estatísticas.</p>
+    <p xml:lang="pt-BR">Afine seus instrumentos musicais usando funções avançadas, incluindo históricos de frequência e volume, frequência base de afinação ajustável, várias escolhas de escala de afinação (cromática, Werckmeister III, Kirnberger III, diatônica e mesotônica), afinação microtonal com suporte a aquivos Scala (.scl) e estatísticas.</p>
+    <p xml:lang="ru">Настраивайте музыкальные инструменты с расширенными возможностями, включая следы частоты и громкости, регулируемую базовую частоту настройки, несколько вариантов строя (хроматический, Werckmeister III, Kirnberger III, диатонический и среднетоновый), микротональную настройку с использованием файлов Scala (.scl) и статистики.</p>
+    <p xml:lang="ta">அதிர்வெண் மற்றும் அளவின் தடயங்கள், சரிசெய்யக்கூடிய அடிப்படை சரிப்படுத்தும் அதிர்வெண், ட்யூனிங் அளவின் பல தேர்வுகள் (குரோமடிக், வெர்க்மீச்டர் III, கிர்ன்பெர்கர் III, டையடோனிக் மற்றும் அர்த்தம்), ச்கலா கோப்பு (.scl) ஆதரவுடன் மைக்ரோடோனல் டியூனிங் புள்ளிவிவரங்கள்.</p>
+    <p xml:lang="zh-HANS">使用高级功能进行校音，包括频率和音量痕迹、可调基本调谐频率、多种调谐音阶（半音、Werckmeister III、Kirnberger III、全音与中全音）、支持Scala文件（.scl）的微调和数据。</p>
+    <p>
+      Perform real-time sound analysis with views for waveform period, harmonics 
+      amplitude and Discrete Fourier Transform (DFT). Change various analysis 
+      parameters and tradeoff between precision and speed.
+    </p>
+    <p xml:lang="de">Führen Sie eine Echtzeit-Tonanalyse mit Ansichten für Wellenformperiode, Oberwellenamplitude und Diskrete Fourier-Transformation (DFT) durch. Ändern Sie verschiedene Analyseparameter und einen Kompromiss zwischen Präzision und Geschwindigkeit.</p>
+    <p xml:lang="el">Εκτελέστε ανάλυση ήχου σε πραγματικό χρόνο με προβολές για την περίοδο κυματομορφής, πλάτους αρμονικών και Διακριτό Μετασχηματισμό Fourier (DFT). Αλλάξτε διάφορους παραμέτρους ανάλυσης και βρείτε την χρυσή τομή μεταξύ ακρίβειας και ταχύτητας.</p>
+    <p xml:lang="fr">Effectuez une analyse sonore en temps réel avec des vues pour la période de forme d'onde, l'amplitude des harmoniques et la Transformée de Fourier Discrète (DFT). Modifier divers paramètres d'analyse et faire un compromis entre la précision et la vitesse.</p>
+    <p xml:lang="pt">Faça análise de som em tempo real, com visualização do período de forma de onda, amplitude de harmônicos e Transformada Discreta de Fourier (DFT). Modifique vários parâmetros de análise e escolha entre precisão e velocidade.</p>
+    <p xml:lang="pt-BR">Faça análise de som em tempo real, com visualização do período de forma de onda, amplitude de harmônicos e Transformada Discreta de Fourier (DFT). Modifique vários parâmetros de análise e escolha entre precisão e velocidade.</p>
+    <p xml:lang="ru">Выполняйте анализ звука в реальном времени, используя просмотр периода волн, амплитуд гармоник и дискретное преобразование Фурье (ДПФ). Изменяйте различные параметры анализа, чтобы достичь компромисса между точностью и скоростью.</p>
+    <p xml:lang="ta">அலைவடிவ காலம், ஆர்மோனிக்ச் அலைவீச்சு மற்றும் தனித்துவமான ஃபோரியர் டிரான்ச்ஃபார்ம் (டி.எஃப்.டி) ஆகியவற்றிற்கான பார்வைகளுடன் நிகழ்நேர ஒலி பகுப்பாய்வைச் செய்யுங்கள். துல்லியத்திற்கும் வேகத்திற்கும் இடையில் பல்வேறு பகுப்பாய்வு அளவுருக்கள் மற்றும் பரிமாற்றத்தை மாற்றவும்.</p>
+    <p xml:lang="zh-HANS">带有波形周期、谐波幅度和离散傅里叶变换（DFT）图像的实时声音分析。改变各种分析参数，以在精度和速度之间进行权衡。</p>
+    <p>
+      Choose between multiple sound capture systems, including ALSA and JACK.
+    </p>
+    <p xml:lang="de">Wählen Sie zwischen mehreren Tonaufnahme-Systemen, z. B. ALSA und JACK.</p>
+    <p xml:lang="el">Επιλογή ανάμεσα σε πολλαπλά συστήματα σύλληψης ήχου, συμπεριλαμβανομένου του ALSA και του JACK.</p>
+    <p xml:lang="fr">Choisissez entre plusieurs systèmes de capture du son, y compris ALSA et JACK.</p>
+    <p xml:lang="nb-NO">Velg mellom flere forskjellige lydopptakssystemer, inkludert ALSA og JACK.</p>
+    <p xml:lang="pt">Escolha um de múltiplos sistemas de captura de som, incluindo ALSA e JACK.</p>
+    <p xml:lang="pt-BR">Escolha um de múltiplos sistemas de captura de som, incluindo ALSA e JACK.</p>
+    <p xml:lang="ru">Выбирайте между несколькими системами захвата звука, включая ALSA и JACK.</p>
+    <p xml:lang="ta">அல்சா மற்றும் சாக் உள்ளிட்ட பல ஒலி பிடிப்பு அமைப்புகளுக்கு இடையே தேர்வு செய்யவும்.</p>
+    <p xml:lang="zh-HANS">可在多个声音撷取系统之间进行选择，包括ALSA和JACK。</p>
+    <p>
+      Show or hide individual panels and go from a simple analog tuner view to an 
+      advanced real-time analysis toolset, or anywhere in between.
+    </p>
+    <p xml:lang="de">Zeigen oder verbergen Sie einzelne Panels und wechseln Sie von einer einfachen analogen Tuner-Ansicht zu einem erweiterten Echtzeit-Analysetoolset oder einer Einstellung dazwischen.</p>
+    <p xml:lang="el">Εμφάνιση ή απόκρυψη μεμονωμένων πάνελ και μετάβαση από ένα απλό αναλογικό συντονιστή σε ένα προχωρημένο σύνολο εργαλείων ανάλυσης πραγματικού χρόνου, ή οτιδήποτε ενδιάμεσα.</p>
+    <p xml:lang="fr">Affichez ou masquez des panneaux individuels et passez d'une simple vue d'accordeur analogique à un ensemble d'outils avancés d'analyse en temps réel, ou n'importe où entre les deux.</p>
+    <p xml:lang="nb-NO">Vis eller skjul individuelle paneler og gå fra enkel analogtunervisning til et avansert sanntidsanalyseverktøyssett, eller uansett sted mellom dem.</p>
+    <p xml:lang="pt">Mostre ou esconda painéis individuais e vá de uma visão simples de afinador analógico até um conjunto avançado de ferramentas de análise em tempo real, ou qualquer configuração intermediária.</p>
+    <p xml:lang="pt-BR">Mostre ou esconda painéis individuais e vá de uma visão simples de afinador analógico até um conjunto avançado de ferramentas de análise em tempo real, ou qualquer configuração intermediária.</p>
+    <p xml:lang="ru">Отображайте или скрывайте отдельные панели и переключайтесь с простого вида аналогового тюнера на расширенный набор инструментов для анализа звука в реальном времени, или выберите что-то среднее.</p>
+    <p xml:lang="ta">தனிப்பட்ட பேனல்களைக் காட்டவும் அல்லது மறைக்கவும் மற்றும் ஒரு எளிய அனலாக் ட்யூனர் பார்வையில் இருந்து மேம்பட்ட நிகழ்நேர பகுப்பாய்வு கருவித்தொகுப்பு அல்லது இடையில் எங்கும் செல்லுங்கள்.</p>
+    <p xml:lang="zh-HANS">自定义显示或隐藏单个面板，从简单的模拟调谐器视图到高级实时分析工具集，或介于两者之间。</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/complete.png</image>
+      <caption>Volume view and previous notes</caption>
+      <caption xml:lang="de">Lautstärkeansicht und vorherige Notizen</caption>
+      <caption xml:lang="el">Προβολή έντασης και προηγούμενων νοτών</caption>
+      <caption xml:lang="fr">Vue du volume et notes précédentes</caption>
+      <caption xml:lang="nb-NO">Lydstyrkevisning og tidligere noter</caption>
+      <caption xml:lang="pt">Visualização de volume e notas anteriores</caption>
+      <caption xml:lang="pt-BR">Visualização de volume e notas anteriores</caption>
+      <caption xml:lang="ru">Представление громкости и предыдущих нот</caption>
+      <caption xml:lang="ta">தொகுதி பார்வை மற்றும் முந்தைய குறிப்புகள்</caption>
+      <caption xml:lang="zh-HANS">显示音量和之前的音</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/simple-2.png</image>
+      <caption>Simplest view</caption>
+      <caption xml:lang="de">Einfachste Ansicht</caption>
+      <caption xml:lang="el">Απλούστερη προβολή</caption>
+      <caption xml:lang="fr">Vue la plus simple</caption>
+      <caption xml:lang="nb-NO">Enkleste visning</caption>
+      <caption xml:lang="pt">Visualização mais simples</caption>
+      <caption xml:lang="pt-BR">Visualização mais simples</caption>
+      <caption xml:lang="ru">Простейшее представление</caption>
+      <caption xml:lang="ta">எளிமையான பார்வை</caption>
+      <caption xml:lang="zh-HANS">最简视图</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/microtonal.png</image>
+      <caption>Microtonal view</caption>
+      <caption xml:lang="de">Mikrotonale Ansicht</caption>
+      <caption xml:lang="el">Μικροτονική προβολή</caption>
+      <caption xml:lang="fr">Vue micro-tonale</caption>
+      <caption xml:lang="nb-NO">Mikronalitetsvisning</caption>
+      <caption xml:lang="pt">Afinação microtonal</caption>
+      <caption xml:lang="pt-BR">Afinação microtonal</caption>
+      <caption xml:lang="ru">Микротоновое представление</caption>
+      <caption xml:lang="ta">மைக்ரோடோனல் பார்வை</caption>
+      <caption xml:lang="zh-HANS">微调视图</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/statistics.png</image>
+      <caption>Statistics view</caption>
+      <caption xml:lang="de">Statistikansicht</caption>
+      <caption xml:lang="el">Προβολή στατιστικών</caption>
+      <caption xml:lang="fr">Vue des statistiques</caption>
+      <caption xml:lang="nb-NO">Statistikkvisning</caption>
+      <caption xml:lang="pt">Visualização de estatísticas</caption>
+      <caption xml:lang="pt-BR">Visualização de estatísticas</caption>
+      <caption xml:lang="ru">Статистическое представление</caption>
+      <caption xml:lang="ta">புள்ளிவிவர பார்வை</caption>
+      <caption xml:lang="zh-HANS">数据视图</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/sample.png</image>
+      <caption>Waveform view</caption>
+      <caption xml:lang="de">Wellenformansicht</caption>
+      <caption xml:lang="el">Προβολή κυματομορφής</caption>
+      <caption xml:lang="fr">Vue de la forme d'onde</caption>
+      <caption xml:lang="nb-NO">Bølgeformsvisning</caption>
+      <caption xml:lang="pt">Visualização de forma de onda</caption>
+      <caption xml:lang="pt-BR">Visualização de forma de onda</caption>
+      <caption xml:lang="ru">Представление осцилограммы</caption>
+      <caption xml:lang="ta">அலைவடிவ பார்வை</caption>
+      <caption xml:lang="zh-HANS">波形视图</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/harmonics.png</image>
+      <caption>Harmonics view</caption>
+      <caption xml:lang="de">Harmonische Ansicht</caption>
+      <caption xml:lang="el">Προβολή αρμονικών</caption>
+      <caption xml:lang="fr">Vue des harmoniques</caption>
+      <caption xml:lang="nb-NO">Harmonisk visning</caption>
+      <caption xml:lang="pt">Visualização de harmônicos</caption>
+      <caption xml:lang="pt-BR">Visualização de harmônicos</caption>
+      <caption xml:lang="ru">Представление гармоник</caption>
+      <caption xml:lang="ta">ஆர்மோனிக்ச் பார்வை</caption>
+      <caption xml:lang="zh-HANS">泛音视图</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/FFT.png</image>
+      <caption>Fourier transform view</caption>
+      <caption xml:lang="de">Fourier-Transformations-Ansicht</caption>
+      <caption xml:lang="el">Προβολή μετασχηματισμού Fourier</caption>
+      <caption xml:lang="fr">Vue de la transformée de Fourier</caption>
+      <caption xml:lang="nb-NO">Fouriertransformasjonsvisning</caption>
+      <caption xml:lang="pt">Visualização da Transformada de Fourier</caption>
+      <caption xml:lang="pt-BR">Visualização da Transformada de Fourier</caption>
+      <caption xml:lang="ru">Представление преобразования Фурье</caption>
+      <caption xml:lang="ta">ஃபோரியர் உருமாற்ற பார்வை</caption>
+      <caption xml:lang="zh-HANS">傅里叶变换视图</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/settings-general.png</image>
+      <caption>General settings</caption>
+      <caption xml:lang="de">Allgemeine Einstellungen</caption>
+      <caption xml:lang="el">Γενικές ρυθμίσεις</caption>
+      <caption xml:lang="fr">Paramètres généraux</caption>
+      <caption xml:lang="nb-NO">Hovedinnstillinger</caption>
+      <caption xml:lang="pt">Preferências gerais</caption>
+      <caption xml:lang="pt-BR">Preferências gerais</caption>
+      <caption xml:lang="ru">Общие настройки</caption>
+      <caption xml:lang="ta">பொது அமைப்புகள்</caption>
+      <caption xml:lang="zh-HANS">通用设置</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/settings-capture.png</image>
+      <caption>Capture systems settings</caption>
+      <caption xml:lang="de">Systemeinstellungen erfassen</caption>
+      <caption xml:lang="el">Ρυθμίσεις συστημάτων σύλληψης</caption>
+      <caption xml:lang="fr">Paramètres des systèmes de capture</caption>
+      <caption xml:lang="nb-NO">Opptakssysteminnstillinger</caption>
+      <caption xml:lang="pt">Preferências de sistema de captura de áudio</caption>
+      <caption xml:lang="pt-BR">Preferências de sistema de captura de áudio</caption>
+      <caption xml:lang="ru">Настройки систем захвата</caption>
+      <caption xml:lang="ta">அமைப்புகள் அமைப்புகளைப் பிடிக்கவும்</caption>
+      <caption xml:lang="zh-HANS">声音撷取设置</caption>
+    </screenshot>
+    <screenshot>
+      <image width="1200" height="675">https://gillesdegottex.github.io/fmit/figs/settings-analysis.png</image>
+      <caption>Sound analysis settings</caption>
+      <caption xml:lang="de">Einstellungen zur Klanganalyse</caption>
+      <caption xml:lang="el">Ρυθμίσεις ανάλυσης ήχου</caption>
+      <caption xml:lang="fr">Paramètres d'analyse du son</caption>
+      <caption xml:lang="nb-NO">Lydanalyseinnstillinger</caption>
+      <caption xml:lang="pt">Preferências de análise de som</caption>
+      <caption xml:lang="pt-BR">Preferências de análise de som</caption>
+      <caption xml:lang="ru">Настройки анализа звука</caption>
+      <caption xml:lang="ta">ஒலி பகுப்பாய்வு அமைப்புகள்</caption>
+      <caption xml:lang="zh-HANS">声音分析设置</caption>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://gillesdegottex.github.io/fmit/</url>
+  <url type="translate">https://hosted.weblate.org/projects/fmit/</url>
+  <url type="bugtracker">https://github.com/gillesdegottex/fmit/issues</url>
+  <url type="faq">http://gillesdegottex.github.io/fmit/faq.html</url>
+  <developer_name>Gilles Degottex</developer_name>
+  <developer_name xml:lang="de">Gilles Degottex</developer_name>
+  <developer_name xml:lang="el">Gilles Degottex</developer_name>
+  <developer_name xml:lang="fr">Gilles Degottex</developer_name>
+  <developer_name xml:lang="nb-NO">Gilles Degottex</developer_name>
+  <developer_name xml:lang="pt">Gilles Degottex</developer_name>
+  <developer_name xml:lang="pt-BR">Gilles Degottex</developer_name>
+  <developer_name xml:lang="ru">Жиль Деготекс</developer_name>
+  <developer_name xml:lang="ta">கில்லச் டெகோடெக்ச்</developer_name>
+  <developer_name xml:lang="zh-HANS">Gilles Degottex</developer_name>
+  <updatecontact>gilles.degottex@gmail.com</updatecontact>
+  <translation type="qt">fmit</translation>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="violence-desecration">none</content_attribute>
+    <content_attribute id="violence-slavery">none</content_attribute>
+    <content_attribute id="violence-worship">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="sex-homosexuality">none</content_attribute>
+    <content_attribute id="sex-prostitution">none</content_attribute>
+    <content_attribute id="sex-adultery">none</content_attribute>
+    <content_attribute id="sex-appearance">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+  <releases>
+    <release version="1.3.3" date="2025-11-01">
+      <description>
+        <ul>
+          <li>Qt6 cleanup and compiler warning fixes</li>
+          <li xml:lang="de">Qt6-Bereinigung und Korrektur von Compiler-Warnungen</li>
+          <li xml:lang="el">Εκκαθάριση Qt6 και διορθώσεις προειδοποιήσεων μεταγλωττιστή</li>
+          <li xml:lang="fr">Nettoyage Qt6 et corrections d'avertissements du compilateur</li>
+          <li xml:lang="nb-NO">Qt6-opprydding og rettinger av kompilervarsler</li>
+          <li xml:lang="pt">Limpeza do Qt6 e correções de avisos do compilador</li>
+          <li xml:lang="pt-BR">Limpeza do Qt6 e correções de avisos do compilador</li>
+          <li xml:lang="ru">Очистка Qt6 и исправления предупреждений компилятора</li>
+          <li xml:lang="ta">Qt6 சுத்திகரிப்பு மற்றும் கம்பைலர் எச்சரிக்கை சரிசெய்தல்கள்</li>
+          <li xml:lang="zh-HANS">Qt6 清理和编译器警告修复</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.3.2" date="2025-11-01">
+      <description>
+        <ul>
+          <li>Qt6 compilation fixes</li>
+          <li xml:lang="de">Qt6-Kompilierungskorrekturen</li>
+          <li xml:lang="el">Διορθώσεις μεταγλώττισης Qt6</li>
+          <li xml:lang="fr">Corrections de compilation Qt6</li>
+          <li xml:lang="nb-NO">Qt6-kompileringsrettinger</li>
+          <li xml:lang="pt">Correções de compilação do Qt6</li>
+          <li xml:lang="pt-BR">Correções de compilação do Qt6</li>
+          <li xml:lang="ru">Исправления компиляции Qt6</li>
+          <li xml:lang="ta">Qt6 தொகுப்பு சரிசெய்தல்கள்</li>
+          <li xml:lang="zh-HANS">Qt6 编译修复</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.3.0" date="2025-11-01">
+      <description>
+        <ul>
+          <li>Qt6 compatibility migration</li>
+          <li xml:lang="de">Qt6-Kompatibilitätsmigration</li>
+          <li xml:lang="el">Μεταφορά συμβατότητας Qt6</li>
+          <li xml:lang="fr">Migration de compatibilité Qt6</li>
+          <li xml:lang="nb-NO">Qt6-kompatibilitetsmigration</li>
+          <li xml:lang="pt">Migração de compatibilidade do Qt6</li>
+          <li xml:lang="pt-BR">Migração de compatibilidade do Qt6</li>
+          <li xml:lang="ru">Миграция совместимости Qt6</li>
+          <li xml:lang="ta">Qt6 சீரமைப்பு இடப்பெயர்வு</li>
+          <li xml:lang="zh-HANS">Qt6 兼容性迁移</li>
+          <li>Cleaned compiler warnings and deprecated API usage</li>
+          <li xml:lang="de">Compiler-Warnungen und veraltete API-Nutzung bereinigt</li>
+          <li xml:lang="el">Εκκαθάριση προειδοποιήσεων μεταγλωττιστή και απαρχαιωμένης χρήσης API</li>
+          <li xml:lang="fr">Nettoyage des avertissements du compilateur et de l'utilisation d'API obsolètes</li>
+          <li xml:lang="nb-NO">Ryddet opp i kompilervarsler og forældet API-bruk</li>
+          <li xml:lang="pt">Limpeza de avisos do compilador e uso de API obsoleta</li>
+          <li xml:lang="pt-BR">Limpeza de avisos do compilador e uso de API obsoleta</li>
+          <li xml:lang="ru">Очистка предупреждений компилятора и устаревшего использования API</li>
+          <li xml:lang="ta">கம்பைலர் எச்சரிக்கைகள் மற்றும் பழைமையான API பயன்பாடு சுத்திகரிக்கப்பட்டது</li>
+          <li xml:lang="zh-HANS">清理编译器警告和已弃用的 API 使用</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2.14" date="2020-07-26">
+      <description>
+        <ul>
+          <li>Bug fixes</li>
+          <li xml:lang="de">Fehlerbehebungen</li>
+          <li xml:lang="el">Διορθώσεις σφαλμάτων</li>
+          <li xml:lang="fr">Corrections de bugs</li>
+          <li xml:lang="nb-NO">Feilrettinger</li>
+          <li xml:lang="pt">Correções de bugs</li>
+          <li xml:lang="pt-BR">Correções de bugs</li>
+          <li xml:lang="ru">Исправления ошибок</li>
+          <li xml:lang="ta">பிழை சரிசெய்தல்கள்</li>
+          <li xml:lang="zh-HANS">错误修复</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2.6" date="2018-05-30">
+      <description>
+        <ul>
+          <li>New note names: Hindustani, Byzantine</li>
+          <li xml:lang="de">Neue Notennamen: Hindustani, Byzantinisch</li>
+          <li xml:lang="el">Νέα ονόματα νοτών: Ινδουστανικά, Βυζαντινά</li>
+          <li xml:lang="fr">Nouveaux noms de notes : Hindoustani, Byzantin</li>
+          <li xml:lang="pt">Novos nomes da nota: Hindustânis, Bizantinos</li>
+          <li xml:lang="pt-BR">Novos nomes da nota: Hindustânis, Bizantinos</li>
+          <li xml:lang="ru">Новые названия нот: хиндустани, византийский язык</li>
+          <li xml:lang="ta">புதிய குறிப்பு பெயர்கள்: இந்துச்தானி, பைசாண்டின்</li>
+          <li xml:lang="zh-HANS">新的注音名：印度斯坦式、拜占庭式</li>
+          <li>Use unicode flat and sharp signs</li>
+          <li xml:lang="de">Verwenden Sie flache und scharfe Unicode-Zeichen</li>
+          <li xml:lang="el">Χρήση unicode για σύμβολα υφέσεων και διέσεων</li>
+          <li xml:lang="fr">Utiliser les signes unicode bémol et dièse</li>
+          <li xml:lang="pt">Uso de sinais unicode para bemol e sustenido</li>
+          <li xml:lang="pt-BR">Uso de sinais unicode para bemol e sustenido</li>
+          <li xml:lang="ru">Использовать знаки Юникода для бемоля и диеза</li>
+          <li xml:lang="ta">யூனிகோட் பிளாட் மற்றும் கூர்மையான அறிகுறிகளைப் பயன்படுத்தவும்</li>
+          <li xml:lang="zh-HANS">采用Unicode编码的升降号</li>
+          <li>Use custom save settings and pause icons that better fits the other icons design</li>
+          <li xml:lang="de">Verwenden Sie benutzerdefinierte Einstellungen zum Speichern und Pausensymbole, die besser zu den anderen Symbolen passen</li>
+          <li xml:lang="el">Χρήση προσαρμοσμένων ρυθμίσεων αποθήκευσης και εικονίδια παύσης που ταιριάζουν καλύτερα στην άλλη σχεδίαση εικονιδίων</li>
+          <li xml:lang="fr">Utiliser des paramètres d'enregistrement personnalisés et des icônes de pause qui s'adaptent mieux à la conception des autres icônes</li>
+          <li xml:lang="nb-NO">Bruk egendefinerte lagringsinnstillinger og pauseikoner som passer bedre med det andre ikondesignet.</li>
+          <li xml:lang="pt">Uso de ícones de salvar configurações e pausar que combina melhor com os demais ícones</li>
+          <li xml:lang="pt-BR">Uso de ícones de salvar configurações e pausar que combina melhor com os demais ícones</li>
+          <li xml:lang="ru">Использовать пользовательские иконки для иконок сохранения настроек и паузы, которые лучше соответствуют дизайну других иконок</li>
+          <li xml:lang="ta">தனிப்பயன் சேமிப்பு அமைப்புகளைப் பயன்படுத்தவும் மற்றும் மற்ற சின்னங்கள் வடிவமைப்பிற்கு மிகவும் பொருத்தமான இடைநிறுத்த ஐகான்களைப் பயன்படுத்தவும்</li>
+          <li xml:lang="zh-HANS">采用和其它按键图标更统一的配置文件保存图标和暂停图标</li>
+          <li>Flexible transposition key selection.</li>
+          <li xml:lang="de">Flexible Auswahl der Transpositionsschlüssel.</li>
+          <li xml:lang="el">Εύκαμπτη επιλογή κλειδιού μετατόπισης.</li>
+          <li xml:lang="fr">Sélection flexible des touches de transposition.</li>
+          <li xml:lang="nb-NO">Fleksibelt valg av nøkkelarttransponering.</li>
+          <li xml:lang="pt">Escolha mais flexível da chave de transposição.</li>
+          <li xml:lang="pt-BR">Escolha mais flexível da chave de transposição.</li>
+          <li xml:lang="ru">Гибкий выбор клавиши транспозиции.</li>
+          <li xml:lang="ta">நெகிழ்வான இடமாற்றம் விசை தேர்வு.</li>
+          <li xml:lang="zh-HANS">灵活的移调音选择。</li>
+          <li>Added symbolic icon for high-contrast setup.</li>
+          <li xml:lang="de">Symbolisches Icon für kontrastreiche Einstellungen hinzugefügt.</li>
+          <li xml:lang="el">Προστέθηκε συμβολικό εικονίδιο για διάταξη υψηλής αντίθεσης.</li>
+          <li xml:lang="fr">Ajout d'une icône symbolique pour une configuration à contraste élevé.</li>
+          <li xml:lang="nb-NO">Symbolsk ikon for høykontrastsoppsett lagt til.</li>
+          <li xml:lang="pt">Adicionado ícone simbólico para uso em temas de alto contraste.</li>
+          <li xml:lang="pt-BR">Adicionado ícone simbólico para uso em temas de alto contraste.</li>
+          <li xml:lang="ru">Добавлена символьная иконка для настройки высокого контраста.</li>
+          <li xml:lang="ta">உயர்-மாறுபட்ட அமைப்பிற்கு குறியீட்டு படவுரு சேர்க்கப்பட்டது.</li>
+          <li xml:lang="zh-HANS">为高对比度显示增加图标。</li>
+          <li>Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/</li>
+          <li xml:lang="de">Wechseln Sie zur Übersetzung auf Weblate: https://hosted.weblate.org/projects/fmit/</li>
+          <li xml:lang="el">Εναλλαγή στο Weblate για μετάφραση: https://hosted.weblate.org/projects/fmit/</li>
+          <li xml:lang="fr">Passage à Weblate pour la traduction : https://hosted.weblate.org/projects/fmit/</li>
+          <li xml:lang="nb-NO">Bytte til Weblate for oversettelse: https://hosted.weblate.org/projects/fmit/</li>
+          <li xml:lang="pt">Traduções movidas para o site Weblate: https://hosted.weblate.org/projects/fmit/</li>
+          <li xml:lang="pt-BR">Traduções movidas para o site Weblate: https://hosted.weblate.org/projects/fmit/</li>
+          <li xml:lang="ru">Перенос переводов на Weblate: https://hosted.weblate.org/projects/fmit/</li>
+          <li xml:lang="ta">மொழிபெயர்ப்புக்காக வெப்லேட்டுக்கு மாறவும்: https://hosted.weblate.org/projects/fmit/</li>
+          <li xml:lang="zh-HANS">翻译迁移至 Weblate：https://hosted.weblate.org/projects/fmit/</li>
+          <li>Added translation for application information.</li>
+          <li xml:lang="de">Übersetzung für Anwendungsinformationen hinzugefügt.</li>
+          <li xml:lang="el">Προστέθηκε μετάφραση για πληροφορίες εφαρμογής.</li>
+          <li xml:lang="fr">Ajout d'une traduction pour les informations relatives à l'application.</li>
+          <li xml:lang="nb-NO">Oversettelse for programinformasjon lagt til.</li>
+          <li xml:lang="pt">Adicionadas traduções para informações sobre a aplicação.</li>
+          <li xml:lang="pt-BR">Adicionadas traduções para informações sobre a aplicação.</li>
+          <li xml:lang="ru">Добавлен перевод информации о приложении.</li>
+          <li xml:lang="ta">பயன்பாட்டு தகவலுக்கான மொழிபெயர்ப்பு சேர்க்கப்பட்டது.</li>
+          <li xml:lang="zh-HANS">增加应用信息的翻译。</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.18" date="2018-05-09">
+      <description>
+        <ul>
+          <li>New icons</li>
+          <li xml:lang="de">Neue Icons</li>
+          <li xml:lang="el">Νέα εικονίδια</li>
+          <li xml:lang="fr">Nouvelles icônes</li>
+          <li xml:lang="nb-NO">Nye ikoner</li>
+          <li xml:lang="pt">Novos ícones</li>
+          <li xml:lang="pt-BR">Novos ícones</li>
+          <li xml:lang="ru">Новые иконки</li>
+          <li xml:lang="ta">புதிய சின்னங்கள்</li>
+          <li xml:lang="zh-HANS">新图标</li>
+          <li>Added F tonality</li>
+          <li xml:lang="de">F-Tonalität hinzugefügt</li>
+          <li xml:lang="el">Προστέθηκε F τονικότητα</li>
+          <li xml:lang="fr">Ajout de la tonalité de Fa</li>
+          <li xml:lang="pt">Adicionada tonalidade em Fá</li>
+          <li xml:lang="pt-BR">Adicionada tonalidade em Fá</li>
+          <li xml:lang="ru">Добавлена тональность фа</li>
+          <li xml:lang="ta">எஃப் டோனலிட்டி சேர்க்கப்பட்டது</li>
+          <li xml:lang="zh-HANS">增加F调</li>
+          <li>Fixed graphical glitches</li>
+          <li xml:lang="de">Grafikprobleme behoben</li>
+          <li xml:lang="el">Διορθώθηκαν γραφικές δυσλειτουργίες</li>
+          <li xml:lang="fr">Correction de bogues graphiques</li>
+          <li xml:lang="nb-NO">Fikset grafikkproblemer</li>
+          <li xml:lang="pt">Corrigidas anomalias gráficas</li>
+          <li xml:lang="pt-BR">Corrigidas anomalias gráficas</li>
+          <li xml:lang="ru">Исправлены проблемы с отрисовкой</li>
+          <li xml:lang="ta">நிலையான வரைகலை குறைபாடுகள்</li>
+          <li xml:lang="zh-HANS">修复显示错误</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+</application>

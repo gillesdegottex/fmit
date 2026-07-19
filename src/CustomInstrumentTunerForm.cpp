@@ -776,13 +776,13 @@ void CustomInstrumentTunerForm::configure()
         QString saved_device = m_settings.value(m_config_form.ui_cbQtDeviceName->objectName(), "default").toString();
         try
         {
-            QList<QAudioDeviceInfo> devices = QAudioDeviceInfo::availableDevices(QAudio::AudioInput);
+            QList<QAudioDevice> devices = QMediaDevices::audioInputs();
 
             int current_index = -1;
             m_config_form.ui_cbQtDeviceName->clear();
             for(int i=0; i<devices.count(); i++) {
-                m_config_form.ui_cbQtDeviceName->addItem(devices.at(i).deviceName());
-                if(devices.at(i).deviceName()==m_capture_thread.getTransport("Qt")->getSource())
+                m_config_form.ui_cbQtDeviceName->addItem(devices.at(i).description());
+                if(devices.at(i).description()==m_capture_thread.getTransport("Qt")->getSource())
                     current_index = i;
             }
             if(current_index!=-1)
@@ -1000,14 +1000,14 @@ void CustomInstrumentTunerForm::loadSettings()
         QString saved_device = m_settings.value(m_config_form.ui_cbQtDeviceName->objectName(), "default").toString();
         try
         {
-            QList<QAudioDeviceInfo> devices = QAudioDeviceInfo::availableDevices(QAudio::AudioInput);
+            QList<QAudioDevice> devices = QMediaDevices::audioInputs();
 
             int saved_index = -1;
             m_config_form.ui_cbQtDeviceName->clear();
             for(int i=0; i<devices.count(); i++)
             {
-                m_config_form.ui_cbQtDeviceName->addItem(devices.at(i).deviceName());
-                if(devices.at(i).deviceName()==saved_device)
+                m_config_form.ui_cbQtDeviceName->addItem(devices.at(i).description());
+                if(devices.at(i).description()==saved_device)
                     saved_index = i;
             }
             if(saved_index!=-1)
