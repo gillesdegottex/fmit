@@ -169,9 +169,9 @@ jobs:
       - name: Package .exe (Windows)
         if: matrix.platform == 'windows'
         run: |
-          powershell -ExecutionPolicy Bypass -File distrib/package_windows.ps1 x64
-          mv distrib/fmit_*_win*.exe .
-        shell: bash
+          pwsh -ExecutionPolicy Bypass -File distrib/package_windows.ps1 x64
+          Move-Item distrib/fmit_*_win*.exe .
+        shell: pwsh
 
       - name: Upload Linux artifact
         if: matrix.platform == 'linux'
