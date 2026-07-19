@@ -109,8 +109,8 @@ win32 {
     }
     !isEmpty(FFT_LIBDIR){
         message(FFT_LIBDIR=$$FFT_LIBDIR)
-        INCLUDEPATH += $$FFT_LIBDIR
-        LIBS += -L$$FFT_LIBDIR
+        INCLUDEPATH += $$FFT_LIBDIR/include
+        LIBS += -L$$FFT_LIBDIR/lib
     }
     msvc: LIBS += $$FFT_LIBDIR/libfftw3-3.lib
     gcc: LIBS += -lfftw3-3

@@ -102,10 +102,8 @@ jobs:
             git clone https://github.com/microsoft/vcpkg.git C:\vcpkg
             C:\vcpkg\bootstrap-vcpkg.bat
           }
-          if (-not (Test-Path "C:\vcpkg\installed\x64-windows\bin\libfftw3-3.dll")) {
-            $env:VCPKG_BUILD_TYPE = "release"
-            C:\vcpkg\vcpkg install fftw3:x64-windows
-          }
+          $env:VCPKG_BUILD_TYPE = "release"
+          C:\vcpkg\vcpkg install fftw3:x64-windows
         shell: pwsh
 
       - name: Configure (Linux)
