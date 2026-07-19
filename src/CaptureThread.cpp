@@ -33,6 +33,7 @@ double DecodeUnsigned8Bits(void* buffer, int i)	{return 2*(((unsigned char*)buff
 double DecodeSigned8Bits(void* buffer, int i)	{return (((signed char*)buffer)[i])/128.0;}
 double DecodeUnsigned16Bits(void* buffer, int i){return 2*((unsigned short*)buffer)[i]/65536.0 - 1;}
 double DecodeSigned16Bits(void* buffer, int i)	{return ((signed short*)buffer)[i]/32768.0;}
+double DecodeFloat32(void* buffer, int i)		{return ((float*)buffer)[i];}
 double DecodeUnsigned24BitsIn3BytesLE(void* buffer, int i) {
     quint32 lsb = ((quint8*)buffer)[3*i];
     quint32 middle1 = ((quint8*)buffer)[3*i+1];
@@ -378,12 +379,17 @@ void CaptureThreadImpl::setFormatDescrsAndFns(int format_size, bool format_signe
 	m_format_float = format_float;
 	m_channel_count = channel_count;
 
-    if(m_format_size==3) // 24bits
+    if(m_format_size==4) // 32bits
+    {
+        if(m_format_float)	decodeValue = DecodeFloat32;
+        else				decodeValue = DecodeSigned16Bits; // fallback
+    }
+    else if(m_format_size==3) // 24bits
     {
         if(m_format_signed)	decodeValue = DecodeSigned24BitsIn3BytesLE;
         else				decodeValue = DecodeUnsigned24BitsIn3BytesLE;
     }
-    if(m_format_size==2) // 16bits
+    else if(m_format_size==2) // 16bits
 	{
 		if(m_format_signed)	decodeValue = DecodeSigned16Bits;
 		else				decodeValue = DecodeUnsigned16Bits;
