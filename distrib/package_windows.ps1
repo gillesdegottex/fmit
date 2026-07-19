@@ -88,7 +88,7 @@ if ($LASTEXITCODE -ne 0) {
 Write-Host "windeployqt completed successfully"
 
 Write-Host "Package directory contents after windeployqt:"
-Get-ChildItem . -Recurse | ForEach-Object { Write-Host "  $($_.FullName)" )
+Get-ChildItem . -Recurse | ForEach-Object { Write-Host "  $($_.FullName)" }
 
 Write-Host "Running lrelease..."
 & "$qtBin\lrelease.exe" "$projectRoot\fmit.pro"
