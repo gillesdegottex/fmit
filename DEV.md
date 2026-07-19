@@ -1,9 +1,5 @@
 # Make a new release
 
-## Prerequisites
-- All changes for the release are merged to `master`
-- Translations are up-to-date on [Weblate](https://hosted.weblate.org/projects/fmit/)
-
 ## Steps
 
 ### 1. Update `README.txt`
@@ -54,14 +50,3 @@ The `build.yml` workflow triggers on tags (`v*`):
 - Go to GitHub → Releases
 - Review the draft release
 - Publish when ready
-
-## Version sources
-| Source | How it gets the version | Manual update needed? |
-|--------|----------------------|---------------------|
-| `.pro` file | `git describe --tags --always` (fallback: README.txt) | No |
-| `package_windows.ps1` | `git describe --tags --always` | No |
-| `package_deb.sh` | `git describe --tags --always` | No |
-| Inno Setup scripts | Passed as `/dMyAppVersion` from packaging script | No |
-| About box | Compiled from `FMITVERSION` in `.pro` | No |
-| `README.txt` | Manual | **Yes** |
-| `fmit.appdata.xml` | Manual | **Yes** |
