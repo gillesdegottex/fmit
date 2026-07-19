@@ -25,9 +25,19 @@ if ($arch -eq 'x64') {
     $BIN_DIR = "debug"
 }
 
+# Use QT_ROOT_DIR (GitHub Actions) or QTDIR (local)
+if (-not $env:QTDIR -and $env:QT_ROOT_DIR) {
+    $env:QTDIR = $env:QT_ROOT_DIR
+}
+
 Write-Host "Packaging ${PACKAGENAME}"
 Write-Host "Project root: ${projectRoot}"
 Write-Host "QTDIR: ${env:QTDIR}"
+
+if (-not $env:QTDIR) {
+    Write-Host "ERROR: QTDIR not set!"
+    exit 1
+}
 
 # Verify fmit.exe exists before copying
 $fmitExe = "$projectRoot\$BIN_DIR\fmit.exe"
