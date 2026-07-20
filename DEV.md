@@ -32,12 +32,12 @@ Add a new `<release>` entry at the top of the `<releases>` section (after line 2
 ### 3. Commit the changes
 ```bash
 git add README.txt distrib/fmit.appdata.xml
-git commit -m "Prepare for release X.Y.Z"
+git commit -m "vX.Y.Z"
 ```
 
 ### 4. Create and push the git tag
 ```bash
-git tag -a vX.Y.Z -m "Version X.Y.Z"
+git tag -a vX.Y.Z -m "vX.Y.Z"
 git push origin vX.Y.Z
 ```
 
