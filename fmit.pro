@@ -21,7 +21,6 @@
 #                        (only acs_qt works on Windows)
 CONFIG += acs_qt
 
-
 # ------------------------------------------------------------------------------
 # (modify the following at your own risks !) -----------------------------------
 
