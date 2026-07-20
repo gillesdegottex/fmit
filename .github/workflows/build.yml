@@ -109,6 +109,14 @@ jobs:
           Get-ChildItem "C:\vcpkg\installed\x64-windows\bin" -Filter "*fftw*" | ForEach-Object { Write-Host $_.Name }
         shell: pwsh
 
+      - name: Print Qt version
+        shell: bash
+        run: |
+          echo "--- qmake ---"
+          qmake --version || echo "qmake not found"
+          echo "--- qmake6 ---"
+          qmake6 --version || echo "qmake6 not found"
+
       - name: Configure (Linux)
         if: matrix.platform == 'linux'
         run: qmake6 "CONFIG+=acs_alsa" fmit.pro
