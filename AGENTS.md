@@ -1,3 +1,11 @@
+# Git
+
+Never run nor suggest `git add -A` at anytime.
+
+You are NOT allowed to add nor commit nor push on master.
+You can create a new branch prefixed with `agent/', where you can add, commit and push.
+
+
 # Make a new release
 
 ## Steps
