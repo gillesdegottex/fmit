@@ -31,6 +31,7 @@ using namespace std;
 
 #include "qthelper.h"
 
+#include "WindowsConsole.h"
 #include "CustomInstrumentTunerForm.h"
 CustomInstrumentTunerForm* g_main_form = NULL;
 
@@ -53,6 +54,7 @@ QString FMITVersion(){
 
 int main(int argc, char** argv)
 {
+    initConsoleIfAttached();
     std::cout << "Free Music Instrument Tuner (Version " << FMITVersion().toLatin1().constData() << ")" << std::endl;
 
     QString fmitprefix(STR(PREFIX));

@@ -133,9 +133,13 @@ win32 {
     msvc: LIBS += glu32.lib
     gcc: LIBS += -lopengl32
     gcc: LIBS += -glu32
-    CONFIG += console
+    CONFIG -= console
+    CONFIG += windows
     CONFIG -= app_bundle
 }
+
+SOURCES += src/WindowsConsole.cpp
+HEADERS += src/WindowsConsole.h
 
 QT += core gui opengl openglwidgets multimedia svg
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
