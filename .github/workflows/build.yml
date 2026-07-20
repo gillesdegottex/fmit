@@ -19,8 +19,8 @@ jobs:
         include:
           - os: ubuntu-24.04
             platform: linux
-          # - os: macos-latest
-          #   platform: macos
+          - os: macos-latest
+            platform: macos
           - os: windows-2025
             platform: windows
             arch: x64
