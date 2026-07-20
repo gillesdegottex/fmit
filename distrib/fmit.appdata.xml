@@ -270,7 +270,7 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
-    <release version="1.4.0" date="2026-07-20">
+    <release version="1.4.1" date="2026-07-20">
       <description>
         <ul>
           <li>Added Qt6 audio support for Windows and MacOS</li>

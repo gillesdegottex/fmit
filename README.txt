@@ -1,6 +1,6 @@
                                    FMIT
                         Free Music Instrument Tuner
-                               Version 1.4.0
+                               Version 1.4.1
                    http://gillesdegottex.github.io/fmit/
 
 FMIT is a graphical utility for tuning your musical instruments, with error

@@ -10,17 +10,9 @@ Optional libraries (under Linux only)
     The JACK developpment library for sound input (libjack-dev)
     The Portaudio developpment library for sound input (portaudio19-dev)
 
-Deployment ---------------------------------------------------------------------
-
-    Releases have to be tagged from github.com
-    Otherwise Appveyor does not see the tag.
-
-
 Under Linux or OSX ------------------------------------------------------------
 
 FMIT currently uses Qt's build system.
-You can have a look at the Travis CI's configuration file for a working
-compilation procedure.
 
 To compile:
 
@@ -44,9 +36,6 @@ And install (as root)
 
 
 Under Windows ------------------------------------------------------------------
-
-For a command line compilation, the best is to look at the Appveyor's
-configuration file appveyor.yml. It is complete and self-explanatory.
 
 The distribution packages are built using the Inno Setup program.
 They can be built using the script files package_*.sh that runs in the
