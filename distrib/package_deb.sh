@@ -53,8 +53,8 @@ cp ../README.txt $PKGNAME/usr/share/doc/fmit/
 cp ../COPYING_*.txt $PKGNAME/usr/share/doc/fmit/
 
 # The menu related files
-mkdir -p $PKGNAME/usr/share/appdata
-cp fmit.appdata.xml $PKGNAME/usr/share/appdata/
+mkdir -p $PKGNAME/usr/share/metadata
+cp fmit.appdata.xml $PKGNAME/usr/share/metadata/
 mkdir -p $PKGNAME/usr/share/applications
 cp fmit.desktop $PKGNAME/usr/share/applications/
 mkdir -p $PKGNAME/usr/share/menu
