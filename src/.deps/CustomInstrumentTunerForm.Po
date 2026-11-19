@@ -153,7 +153,7 @@ CustomInstrumentTunerForm.o: CustomInstrumentTunerForm.cpp \
  /usr/lib/qt3/include/qurl.h /usr/lib/qt3/include/qnetworkprotocol.h \
  /usr/lib/qt3/include/qurlinfo.h /usr/lib/qt3/include/qdict.h \
  /usr/lib/qt3/include/qgdict.h /usr/lib/qt3/include/qtooltip.h \
- modules/GLSample.h modules/GLFreqStruct.h modules/GLFT.h \
+ modules/GLSample.h modules/GLFreqStruct.h modules/GLFT.h modules/GLMusicSpectrum.h modules/IIRLowPass.h \
  ../libs/Music/CFFTW3.h modules/GLStatistics.h \
  /usr/include/c++/4.4/cassert /usr/lib/qt3/include/qstring.h \
  /usr/lib/qt3/include/qlayout.h /usr/lib/qt3/include/qlcdnumber.h \

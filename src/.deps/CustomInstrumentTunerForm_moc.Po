@@ -711,6 +711,10 @@ modules/GLFreqStruct.h:
 
 modules/GLFT.h:
 
+modules/GLMusicSpectrum.h:
+
+modules/IIRLowPass.h:
+
 ../libs/Music/CFFTW3.h:
 
 modules/GLStatistics.h:
