@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright 2014 Gilles Degottex <gilles.degottex@gmail.com> -->
-<application>
-  <id type="desktop">fmit.desktop</id>
+<component type="desktop-application">
+  <project_id>fmit</project_id>
+  <id>io.github.gillesdegottex.fmit.desktop</id>
+  <launchable type="desktop-id">fmit.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>FMIT</name>
@@ -227,18 +229,11 @@
   <url type="homepage">https://gillesdegottex.github.io/fmit/</url>
   <url type="translate">https://hosted.weblate.org/projects/fmit/</url>
   <url type="bugtracker">https://github.com/gillesdegottex/fmit/issues</url>
-  <url type="faq">http://gillesdegottex.github.io/fmit/faq.html</url>
-  <developer_name>Gilles Degottex</developer_name>
-  <developer_name xml:lang="de">Gilles Degottex</developer_name>
-  <developer_name xml:lang="el">Gilles Degottex</developer_name>
-  <developer_name xml:lang="fr">Gilles Degottex</developer_name>
-  <developer_name xml:lang="nb-NO">Gilles Degottex</developer_name>
-  <developer_name xml:lang="pt">Gilles Degottex</developer_name>
-  <developer_name xml:lang="pt-BR">Gilles Degottex</developer_name>
-  <developer_name xml:lang="ru">Жиль Деготекс</developer_name>
-  <developer_name xml:lang="ta">கில்லச் டெகோடெக்ச்</developer_name>
-  <developer_name xml:lang="zh-HANS">Gilles Degottex</developer_name>
-  <updatecontact>gilles.degottex@gmail.com</updatecontact>
+  <url type="faq">https://gillesdegottex.github.io/fmit/faq.html</url>
+  <developer id="io.github.gillesdegottex">
+    <name>Gilles Degottex</name>
+  </developer>
+  <update_contact>gilles.degottex@gmail.com</update_contact>
   <translation type="qt">fmit</translation>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
@@ -270,89 +265,6 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
-    <release version="1.4.6" date="2026-07-20">
-      <description>
-        <ul>
-          <li>Added Qt6 audio support for Windows and MacOS</li>
-          <li>Clearer logs in console</li>
-          <li>Moved CI to GitHub only (removed Travis and AppVeyor)</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.3.3" date="2025-11-01">
-      <description>
-        <ul>
-          <li>Qt6 cleanup and compiler warning fixes</li>
-          <li xml:lang="de">Qt6-Bereinigung und Korrektur von Compiler-Warnungen</li>
-          <li xml:lang="el">Εκκαθάριση Qt6 και διορθώσεις προειδοποιήσεων μεταγλωττιστή</li>
-          <li xml:lang="fr">Nettoyage Qt6 et corrections d'avertissements du compilateur</li>
-          <li xml:lang="nb-NO">Qt6-opprydding og rettinger av kompilervarsler</li>
-          <li xml:lang="pt">Limpeza do Qt6 e correções de avisos do compilador</li>
-          <li xml:lang="pt-BR">Limpeza do Qt6 e correções de avisos do compilador</li>
-          <li xml:lang="ru">Очистка Qt6 и исправления предупреждений компилятора</li>
-          <li xml:lang="ta">Qt6 சுத்திகரிப்பு மற்றும் கம்பைலர் எச்சரிக்கை சரிசெய்தல்கள்</li>
-          <li xml:lang="zh-HANS">Qt6 清理和编译器警告修复</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.3.2" date="2025-11-01">
-      <description>
-        <ul>
-          <li>Qt6 compilation fixes</li>
-          <li xml:lang="de">Qt6-Kompilierungskorrekturen</li>
-          <li xml:lang="el">Διορθώσεις μεταγλώττισης Qt6</li>
-          <li xml:lang="fr">Corrections de compilation Qt6</li>
-          <li xml:lang="nb-NO">Qt6-kompileringsrettinger</li>
-          <li xml:lang="pt">Correções de compilação do Qt6</li>
-          <li xml:lang="pt-BR">Correções de compilação do Qt6</li>
-          <li xml:lang="ru">Исправления компиляции Qt6</li>
-          <li xml:lang="ta">Qt6 தொகுப்பு சரிசெய்தல்கள்</li>
-          <li xml:lang="zh-HANS">Qt6 编译修复</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.3.0" date="2025-11-01">
-      <description>
-        <ul>
-          <li>Qt6 compatibility migration</li>
-          <li xml:lang="de">Qt6-Kompatibilitätsmigration</li>
-          <li xml:lang="el">Μεταφορά συμβατότητας Qt6</li>
-          <li xml:lang="fr">Migration de compatibilité Qt6</li>
-          <li xml:lang="nb-NO">Qt6-kompatibilitetsmigration</li>
-          <li xml:lang="pt">Migração de compatibilidade do Qt6</li>
-          <li xml:lang="pt-BR">Migração de compatibilidade do Qt6</li>
-          <li xml:lang="ru">Миграция совместимости Qt6</li>
-          <li xml:lang="ta">Qt6 சீரமைப்பு இடப்பெயர்வு</li>
-          <li xml:lang="zh-HANS">Qt6 兼容性迁移</li>
-          <li>Cleaned compiler warnings and deprecated API usage</li>
-          <li xml:lang="de">Compiler-Warnungen und veraltete API-Nutzung bereinigt</li>
-          <li xml:lang="el">Εκκαθάριση προειδοποιήσεων μεταγλωττιστή και απαρχαιωμένης χρήσης API</li>
-          <li xml:lang="fr">Nettoyage des avertissements du compilateur et de l'utilisation d'API obsolètes</li>
-          <li xml:lang="nb-NO">Ryddet opp i kompilervarsler og forældet API-bruk</li>
-          <li xml:lang="pt">Limpeza de avisos do compilador e uso de API obsoleta</li>
-          <li xml:lang="pt-BR">Limpeza de avisos do compilador e uso de API obsoleta</li>
-          <li xml:lang="ru">Очистка предупреждений компилятора и устаревшего использования API</li>
-          <li xml:lang="ta">கம்பைலர் எச்சரிக்கைகள் மற்றும் பழைமையான API பயன்பாடு சுத்திகரிக்கப்பட்டது</li>
-          <li xml:lang="zh-HANS">清理编译器警告和已弃用的 API 使用</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.2.14" date="2020-07-26">
-      <description>
-        <ul>
-          <li>Bug fixes</li>
-          <li xml:lang="de">Fehlerbehebungen</li>
-          <li xml:lang="el">Διορθώσεις σφαλμάτων</li>
-          <li xml:lang="fr">Corrections de bugs</li>
-          <li xml:lang="nb-NO">Feilrettinger</li>
-          <li xml:lang="pt">Correções de bugs</li>
-          <li xml:lang="pt-BR">Correções de bugs</li>
-          <li xml:lang="ru">Исправления ошибок</li>
-          <li xml:lang="ta">பிழை சரிசெய்தல்கள்</li>
-          <li xml:lang="zh-HANS">错误修复</li>
-        </ul>
-      </description>
-    </release>
     <release version="1.2.6" date="2018-05-30">
       <description>
         <ul>
@@ -404,16 +316,7 @@
           <li xml:lang="ru">Добавлена символьная иконка для настройки высокого контраста.</li>
           <li xml:lang="ta">உயர்-மாறுபட்ட அமைப்பிற்கு குறியீட்டு படவுரு சேர்க்கப்பட்டது.</li>
           <li xml:lang="zh-HANS">为高对比度显示增加图标。</li>
-          <li>Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/</li>
-          <li xml:lang="de">Wechseln Sie zur Übersetzung auf Weblate: https://hosted.weblate.org/projects/fmit/</li>
-          <li xml:lang="el">Εναλλαγή στο Weblate για μετάφραση: https://hosted.weblate.org/projects/fmit/</li>
-          <li xml:lang="fr">Passage à Weblate pour la traduction : https://hosted.weblate.org/projects/fmit/</li>
-          <li xml:lang="nb-NO">Bytte til Weblate for oversettelse: https://hosted.weblate.org/projects/fmit/</li>
-          <li xml:lang="pt">Traduções movidas para o site Weblate: https://hosted.weblate.org/projects/fmit/</li>
-          <li xml:lang="pt-BR">Traduções movidas para o site Weblate: https://hosted.weblate.org/projects/fmit/</li>
-          <li xml:lang="ru">Перенос переводов на Weblate: https://hosted.weblate.org/projects/fmit/</li>
-          <li xml:lang="ta">மொழிபெயர்ப்புக்காக வெப்லேட்டுக்கு மாறவும்: https://hosted.weblate.org/projects/fmit/</li>
-          <li xml:lang="zh-HANS">翻译迁移至 Weblate：https://hosted.weblate.org/projects/fmit/</li>
+          <li>Switch to Weblate for translation.</li>
           <li>Added translation for application information.</li>
           <li xml:lang="de">Übersetzung für Anwendungsinformationen hinzugefügt.</li>
           <li xml:lang="el">Προστέθηκε μετάφραση για πληροφορίες εφαρμογής.</li>
@@ -463,4 +366,4 @@
       </description>
     </release>
   </releases>
-</application>
+</component>

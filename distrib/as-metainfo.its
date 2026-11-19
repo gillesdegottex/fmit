@@ -2,7 +2,7 @@
 <its:rules
   xmlns:its="http://www.w3.org/2005/11/its"
   version="1.0">
-  <its:translateRule translate="no" selector="/application"/>
+  <its:translateRule translate="no" selector="/component"/>
   <its:translateRule translate="yes"
-    selector="/application/name | /application/summary | /application/description | /application/screenshots/screenshot/caption | /application/developer_name | /application/releases/release/description"/>
+    selector="/component/name | /component/summary | /component/description/p | /component/screenshots/screenshot/caption | /component/releases/release/description/ul/li"/>
 </its:rules>

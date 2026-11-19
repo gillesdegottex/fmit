@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Gilles Degottex <gilles.degottex@gmail.com> -->
-<application>
-  <id type="desktop">fmit.desktop</id>
+<component type="desktop-application">
+  <project_id>fmit</project_id>
+  <id>io.github.gillesdegottex.fmit.desktop</id>
+  <launchable type="desktop-id">fmit.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>FMIT</name>
@@ -76,9 +78,11 @@
   <url type="homepage">https://gillesdegottex.github.io/fmit/</url>
   <url type="translate">https://hosted.weblate.org/projects/fmit/</url>
   <url type="bugtracker">https://github.com/gillesdegottex/fmit/issues</url>
-  <url type="faq">http://gillesdegottex.github.io/fmit/faq.html</url>
-  <developer_name>Gilles Degottex</developer_name>
-  <updatecontact>gilles.degottex@gmail.com</updatecontact>
+  <url type="faq">https://gillesdegottex.github.io/fmit/faq.html</url>
+  <developer id="io.github.gillesdegottex">
+    <name>Gilles Degottex</name>
+  </developer>
+  <update_contact>gilles.degottex@gmail.com</update_contact>
   <translation type="qt">fmit</translation>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
@@ -118,7 +122,7 @@
           <li>Use custom save settings and pause icons that better fits the other icons design</li>
           <li>Flexible transposition key selection.</li>
           <li>Added symbolic icon for high-contrast setup.</li>
-          <li>Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/</li>
+          <li>Switch to Weblate for translation.</li>
           <li>Added translation for application information.</li>
         </ul>
       </description>
@@ -133,4 +137,4 @@
       </description>
     </release>
   </releases>
-</application>
+</component>

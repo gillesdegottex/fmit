@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-05-30 18:52-0300\n"
+"POT-Creation-Date: 2026-11-19 17:52+0100\n"
 "PO-Revision-Date: 2022-01-20 07:56+0000\n"
 "Last-Translator: Tian Shixiong <tiansworld@fedoraproject.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -13,144 +13,163 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.11-dev\n"
 
-#. (itstool) path: application/name
-#: fmit.appdata.xml.in:7
+#. (itstool) path: component/name
+#: fmit.appdata.xml.in:9
 msgid "FMIT"
 msgstr "FMIT"
 
-#. (itstool) path: application/summary
-#: fmit.appdata.xml.in:8
-msgid "Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument"
+#. (itstool) path: component/summary
+#: fmit.appdata.xml.in:10
+msgid ""
+"Free Musical Instrument Tuner (FMIT), a Tool for tuning musical instrument"
 msgstr "自由乐器校音器是一个用于乐器校音的工具"
 
 #. (itstool) path: description/p
-#: fmit.appdata.xml.in:10
-msgid "Find an estimation of the fundamental frequency (f0, not the perceived pitch) of an audio signal, in real-time, and compare it with the closest note in the scale."
-msgstr "实时查找音频信号的基频估计值（f0，而不是感知的音调），并将其与音阶中最接近的音符进行比较。"
-
-#. (itstool) path: description/p
-#: fmit.appdata.xml.in:15
-msgid "Tune your musical instruments with advanced features, including traces of frequency and volume, adjustable base tuning frequency, multiple choices of tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and meantone), microtonal tuning with Scala file (.scl) support and statistics."
+#: fmit.appdata.xml.in:12
+msgid ""
+"Find an estimation of the fundamental frequency (f0, not the perceived "
+"pitch) of an audio signal, in real-time, and compare it with the closest "
+"note in the scale."
 msgstr ""
-"使用高级功能进行校音，包括频率和音量痕迹、可调基本调谐频率、多种调谐音阶（半音、Werckmeister III、Kirnberger "
-"III、全音与中全音）、支持Scala文件（.scl）的微调和数据。"
+"实时查找音频信号的基频估计值（f0，而不是感知的音调），并将其与音阶中最接近的"
+"音符进行比较。"
 
 #. (itstool) path: description/p
-#: fmit.appdata.xml.in:21
-msgid "Perform real-time sound analysis with views for waveform period, harmonics amplitude and Discrete Fourier Transform (DFT). Change various analysis parameters and tradeoff between precision and speed."
-msgstr "带有波形周期、谐波幅度和离散傅里叶变换（DFT）图像的实时声音分析。改变各种分析参数，以在精度和速度之间进行权衡。"
+#: fmit.appdata.xml.in:17
+msgid ""
+"Tune your musical instruments with advanced features, including traces of "
+"frequency and volume, adjustable base tuning frequency, multiple choices of "
+"tuning scale (chromatic, Werckmeister III, Kirnberger III, diatonic and "
+"meantone), microtonal tuning with Scala file (.scl) support and statistics."
+msgstr ""
+"使用高级功能进行校音，包括频率和音量痕迹、可调基本调谐频率、多种调谐音阶（半"
+"音、Werckmeister III、Kirnberger III、全音与中全音）、支持Scala文件（.scl）的"
+"微调和数据。"
 
 #. (itstool) path: description/p
-#: fmit.appdata.xml.in:26
+#: fmit.appdata.xml.in:23
+msgid ""
+"Perform real-time sound analysis with views for waveform period, harmonics "
+"amplitude and Discrete Fourier Transform (DFT). Change various analysis "
+"parameters and tradeoff between precision and speed."
+msgstr ""
+"带有波形周期、谐波幅度和离散傅里叶变换（DFT）图像的实时声音分析。改变各种分析"
+"参数，以在精度和速度之间进行权衡。"
+
+#. (itstool) path: description/p
+#: fmit.appdata.xml.in:28
 msgid "Choose between multiple sound capture systems, including ALSA and JACK."
 msgstr "可在多个声音撷取系统之间进行选择，包括ALSA和JACK。"
 
 #. (itstool) path: description/p
-#: fmit.appdata.xml.in:29
-msgid "Show or hide individual panels and go from a simple analog tuner view to an advanced real-time analysis toolset, or anywhere in between."
-msgstr "自定义显示或隐藏单个面板，从简单的模拟调谐器视图到高级实时分析工具集，或介于两者之间。"
+#: fmit.appdata.xml.in:31
+msgid ""
+"Show or hide individual panels and go from a simple analog tuner view to an "
+"advanced real-time analysis toolset, or anywhere in between."
+msgstr ""
+"自定义显示或隐藏单个面板，从简单的模拟调谐器视图到高级实时分析工具集，或介于"
+"两者之间。"
 
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:37
+#: fmit.appdata.xml.in:39
 msgid "Volume view and previous notes"
 msgstr "显示音量和之前的音"
 
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:41
+#: fmit.appdata.xml.in:43
 msgid "Simplest view"
 msgstr "最简视图"
 
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:45
+#: fmit.appdata.xml.in:47
 msgid "Microtonal view"
 msgstr "微调视图"
 
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:49
+#: fmit.appdata.xml.in:51
 msgid "Statistics view"
 msgstr "数据视图"
 
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:53
+#: fmit.appdata.xml.in:55
 msgid "Waveform view"
 msgstr "波形视图"
 
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:57
+#: fmit.appdata.xml.in:59
 msgid "Harmonics view"
 msgstr "泛音视图"
 
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:61
+#: fmit.appdata.xml.in:63
 msgid "Fourier transform view"
 msgstr "傅里叶变换视图"
 
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:65
+#: fmit.appdata.xml.in:67
 msgid "General settings"
 msgstr "通用设置"
 
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:69
+#: fmit.appdata.xml.in:71
 msgid "Capture systems settings"
 msgstr "声音撷取设置"
 
 #. (itstool) path: screenshot/caption
-#: fmit.appdata.xml.in:73
+#: fmit.appdata.xml.in:75
 msgid "Sound analysis settings"
 msgstr "声音分析设置"
 
-#. (itstool) path: application/developer_name
-#: fmit.appdata.xml.in:80
-msgid "Gilles Degottex"
-msgstr "Gilles Degottex"
-
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:116
+#: fmit.appdata.xml.in:120
 msgid "New note names: Hindustani, Byzantine"
 msgstr "新的注音名：印度斯坦式、拜占庭式"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:117
+#: fmit.appdata.xml.in:121
 msgid "Use unicode flat and sharp signs"
 msgstr "采用Unicode编码的升降号"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:118
-msgid "Use custom save settings and pause icons that better fits the other icons design"
+#: fmit.appdata.xml.in:122
+msgid ""
+"Use custom save settings and pause icons that better fits the other icons "
+"design"
 msgstr "采用和其它按键图标更统一的配置文件保存图标和暂停图标"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:119
+#: fmit.appdata.xml.in:123
 msgid "Flexible transposition key selection."
 msgstr "灵活的移调音选择。"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:120
+#: fmit.appdata.xml.in:124
 msgid "Added symbolic icon for high-contrast setup."
 msgstr "为高对比度显示增加图标。"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:121
-msgid "Switch to Weblate for translation: https://hosted.weblate.org/projects/fmit/"
+#: fmit.appdata.xml.in:125
+#, fuzzy
+msgid "Switch to Weblate for translation."
 msgstr "翻译迁移至 Weblate：https://hosted.weblate.org/projects/fmit/"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:122
+#: fmit.appdata.xml.in:126
 msgid "Added translation for application information."
 msgstr "增加应用信息的翻译。"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:129
+#: fmit.appdata.xml.in:133
 msgid "New icons"
 msgstr "新图标"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:130
+#: fmit.appdata.xml.in:134
 msgid "Added F tonality"
 msgstr "增加F调"
 
 #. (itstool) path: ul/li
-#: fmit.appdata.xml.in:131
+#: fmit.appdata.xml.in:135
 msgid "Fixed graphical glitches"
 msgstr "修复显示错误"
+
